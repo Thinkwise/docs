@@ -1,84 +1,93 @@
 {
   "thinkwise_software_factory": {
-    "General": [
-      "sf/sf_general",
-      "sf/sf_dev_process",
-      "sf/sf_naming",
-      "sf/sf_conventions"
+    "Software Factory": [
+      "sf/general",
+      "sf/dev_process",
+      "sf/naming",
+      "sf/conventions"
     ],
     "Projects": [
-      "sf/sf_overview",
-      "sf/sf_full_model",
-      "sf/sf_merging",
-      "sf/sf_difference_analysis"
+      "sf/overview",
+      "sf/full_model",
+      "sf/merging",
+      "sf/difference_analysis"
     ],
     "Specification": [
-      "sf/sf_process_analysis",
-      "sf/sf_modules",
-      "sf/sf_design"
+      "sf/process_analysis",
+      "sf/modules",
+      "sf/design"
     ],
     "Data": [
-      "sf/sf_data_model",
-      "sf/sf_data_sensitivity",
-      "sf/sf_data_conversion",
-      "sf/sf_dynamic_model"
+      "sf/data_model",
+      "sf/data_sensitivity",
+      "sf/data_conversion",
+      "sf/dynamic_model"
 
     ],
     "User Interface": [
-      "sf/sf_menus",
-      "sf/sf_screen_types",
-      "sf/sf_subjects",
-      "sf/sf_cubes",
-      "sf/sf_themes",
-      "sf/sf_messages",
-      "sf/sf_translations",
-      "sf/sf_help"
+      "sf/menus",
+      "sf/screen_types",
+      "sf/subjects",
+      "sf/cubes",
+      "sf/themes",
+      "sf/messages",
+      "sf/translations",
+      "sf/help"
     ],
     "Processes": [
-      "sf/sf_tasks",
-      "sf/sf_reports",
-      "sf/sf_custom_screens",
-      "sf/sf_process_flows",
-      "sf/sf_subroutines"
+      "sf/tasks",
+      "sf/reports",
+      "sf/custom_screens",
+      "sf/process_flows",
+      "sf/subroutines"
     ],
     "Business Logic": [
-      "sf/sf_functionality",
-      "sf/sf_code_search",
-      "sf/sf_code_overview"
+      "sf/functionality",
+      "sf/code_search",
+      "sf/code_overview"
     ],
     "Quality": [
-      "sf/sf_code_review",
-      "sf/sf_test_cases",
-      "sf/sf_validation"
+      "sf/code_review",
+      "sf/test_cases",
+      "sf/validation"
     ],
     "Deployment": [
-      "sf/sf_creation",
-      "sf/sf_runtime_configuration",
-      "sf/sf_configuration_file",
-      "sf/sf_extended_properties"
+      "sf/creation",
+      "sf/runtime_configuration",
+      "sf/configuration_file",
+      "sf/extended_properties"
     ],
     "Statistics": [
-      "sf/sf_statistics"
+      "sf/statistics"
     ],
     "Miscellanious": [
-      "sf/sf_settings",
-      "sf/sf_advanced",
-      "sf/sf_service_tier",
-      "sf/sf_performance"
+      "sf/settings",
+      "sf/advanced",
+      "sf/service_tier",
+      "sf/performance"
     ]
   },
   "intelligent_application_manager": {
     "Developer Guide": [
-      "iam_dev/iam_dev"
+      "iam_dev/general",
+      "iam_dev/model",
+      "iam_dev/roles",
+      "iam_dev/applications"
     ],
     "Administrator Guide": [
-      "iam_admin/iam_admin"
+      "iam_admin/general",
+      "iam_admin/setup",
+      "iam_admin/applications",
+      "iam_admin/user_groups",
+      "iam_admin/users",
+      "iam_admin/user_preferences"
     ]
   },
   "indicium_application_tier": {
     "Indicium": [
-      "indicium/indicium_installation",
-      "indicium/indicium_api"
+      "indicium/general",
+      "indicium/installation",
+      "indicium/api"
     ]
   }
 }
