@@ -1,0 +1,84 @@
+{
+  "thinkwise_software_factory": {
+    "General": [
+      "sf/sf_general",
+      "sf/sf_dev_process",
+      "sf/sf_naming",
+      "sf/sf_conventions"
+    ],
+    "Projects": [
+      "sf/sf_overview",
+      "sf/sf_full_model",
+      "sf/sf_merging",
+      "sf/sf_difference_analysis"
+    ],
+    "Specification": [
+      "sf/sf_process_analysis",
+      "sf/sf_modules",
+      "sf/sf_design"
+    ],
+    "Data": [
+      "sf/sf_data_model",
+      "sf/sf_data_sensitivity",
+      "sf/sf_data_conversion",
+      "sf/sf_dynamic_model"
+
+    ],
+    "User Interface": [
+      "sf/sf_menus",
+      "sf/sf_screen_types",
+      "sf/sf_subjects",
+      "sf/sf_cubes",
+      "sf/sf_themes",
+      "sf/sf_messages",
+      "sf/sf_translations",
+      "sf/sf_help"
+    ],
+    "Processes": [
+      "sf/sf_tasks",
+      "sf/sf_reports",
+      "sf/sf_custom_screens",
+      "sf/sf_process_flows",
+      "sf/sf_subroutines"
+    ],
+    "Business Logic": [
+      "sf/sf_functionality",
+      "sf/sf_code_search",
+      "sf/sf_code_overview"
+    ],
+    "Quality": [
+      "sf/sf_code_review",
+      "sf/sf_test_cases",
+      "sf/sf_validation"
+    ],
+    "Deployment": [
+      "sf/sf_creation",
+      "sf/sf_runtime_configuration",
+      "sf/sf_configuration_file",
+      "sf/sf_extended_properties"
+    ],
+    "Statistics": [
+      "sf/sf_statistics"
+    ],
+    "Miscellanious": [
+      "sf/sf_settings",
+      "sf/sf_advanced",
+      "sf/sf_service_tier",
+      "sf/sf_performance"
+    ]
+  },
+  "intelligent_application_manager": {
+    "Developer Guide": [
+      "iam_dev/iam_dev"
+    ],
+    "Administrator Guide": [
+      "iam_admin/iam_admin"
+    ]
+  },
+  "indicium_application_tier": {
+    "Indicium": [
+      "indicium/indicium_installation",
+      "indicium/indicium_api"
+    ]
+  }
+}
