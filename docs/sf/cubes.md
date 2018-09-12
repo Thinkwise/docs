@@ -40,9 +40,7 @@ Figure 159: Adding Cube Fields to the 'Cube Fields' tab
 
 It is also important that the measured value(s) that are used in the cube are derived from the *Fact Table*. This is the data that provides the most detail.
 
-**Example**
-
-When an order is calculated, the order lines, which are added up in the cube, must be used and not the order itself.
+> When an order is calculated, the order lines, which are added up in the cube, must be used and not the order itself.
 
 #### Defining OLAP\[13\] Cube Fields
 
@@ -172,11 +170,9 @@ Using the cube view toolbar, the available cube views can be displayed in a bar 
 
 Each overview can be displayed graphically in a two or three-dimensional graph. Dimensions can also be linked to each other so that a hierarchy is created.
 
-**Example**
-
-Customer – Project
-
-Year – Month – Day
+> Customer – Project
+> 
+> Year – Month – Day
 
 The last example requires 3 dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
 
@@ -192,9 +188,7 @@ Figure 161: Example of a 3D graph display
 
 In order to combine different types of charts in a graph measured value can be linked to a particular type of graph. This is done by including the name of the type of graph in the name of the measured value, separated by an underscore.
 
-**Example**
-
-number of\_hours\_spline3d
+> number_of_hours_spline3d
 
 Available graph types are:
 

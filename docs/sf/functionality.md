@@ -95,9 +95,7 @@ The following context is provided when executing the Default logic:
 
 - \[Col\_id\]; All columns in the table, both input and output. Every value can therefore be modified.
 
-**Example**
-
-This Default template code ensures that the current date is set for the *activated\_date* field when the 'activated' field has just received the value 1.
+> This Default template code ensures that the current date is set for the *activated\_date* field when the 'activated' field has just received the value 1.
 
 **Note**
 
@@ -155,9 +153,7 @@ The following context is provided when executing the layout logic:
 
 The variables for type and mandatory only need to get a value if it differs from the default value of the meta-level. It is therefore not necessary to reset the value.
 
-**Example**
-
-In the following layout template code, the *activated\_date* field is made mandatory when the user is navigating around the screen and the 'activated' field has a value of 1. The *activated\_date* field is hidden outside the form when the *activated* field has a value of 0.
+> In the following layout template code, the *activated\_date* field is made mandatory when the user is navigating around the screen and the 'activated' field has a value of 1. The *activated\_date* field is hidden outside the form when the *activated* field has a value of 0.
 
 **Note**
 
@@ -207,20 +203,11 @@ The following information is given when executing the Context logic:
     
       - 2 = hidden
 
-**Example**
+> The following template disables the detail tab *inactive\_property* when the *activated* field has a value of 1.
 
-The following template disables the detail tab *inactive\_property* when the *activated* field has a value of 1.
+> The Context logic does not have the possibility to provide more access than the model and authorization settings allow. For example, when a detail tab in the model is set to hidden, the detail cannot be set to visible by means of the Context logic. The Context logic can only restrict in this instance.
 
-**  
-**
-
-**Note **
-
-The Context logic does not have the possibility to provide more access than the model and authorization settings allow. For example, when a detail tab in the model is set to hidden, the detail cannot be set to visible by means of the Context logic. The Context logic can only restrict in this instance.
-
-**Note**
-
-The Context logic should always be written in such a way that the fields are stateless. For example, when a field is hidden by the Context logic, this change applies until the next call of the Context logic. If the field in the Context logic is subsequently not explicitly set to hidden again, the availability of the field will revert back to the default setting.
+> The Context logic should always be written in such a way that the fields are stateless. For example, when a field is hidden by the Context logic, this change applies until the next call of the Context logic. If the field in the Context logic is subsequently not explicitly set to hidden again, the availability of the field will revert back to the default setting.
 
 #### Badges
 
@@ -262,9 +249,7 @@ All process flow variables marked either Process input or Process output can be 
 
 No further options are present in the context for types other than those specified in this overview. When an action has not been completed successfully, it may be that certain field values have not been filled.
 
-**Example**
-
-The following template ensures that the next step to *display\_report* is not executed when in the task process action *execute\_calculation* the parameter *calculation\_type* has the value *test\_calculation*.
+> The following template ensures that the next step to *display\_report* is not executed when in the task process action *execute\_calculation* the parameter *calculation\_type* has the value *test\_calculation*.
 
 #### Trigger/Event
 
@@ -288,8 +273,7 @@ In general, the concept can be divided into three types, with three moments per 
     
       - The field values of the record(s) to be deleted or that have been deleted.
 
-**Example**
-
+> 
 The following trigger ensures that when deleting an order, a record is written to the log.
 
 #### Other (Procedure, Function etc.)
@@ -594,9 +578,7 @@ Table 9: Overview of the various logic concepts.
 
 For each above mentioned model object/logic concept combination, the software generates so-called *program objects*. These program objects will eventually be used by the end product.
 
-**Example**
-
-For the 'Hour' table a program object is generated in combination with the default logic concept. This program object can be used to facilitate the logic.
+> For the 'Hour' table a program object is generated in combination with the default logic concept. This program object can be used to facilitate the logic.
 
 A header and footer *program object item* are added by default to make the program object executable on the end product platform.
 
@@ -604,9 +586,7 @@ A header and footer *program object item* are added by default to make the progr
 
 *Program object items* can be installed within the program objects. These program object items contain the logic code.
 
-**Example**
-
-To continue the example of the default Hour program object; application logic code can be written in the program object for filling the current date and code for assembling an address.
+> To continue the example of the default Hour program object; application logic code can be written in the program object for filling the current date and code for assembling an address.
 
 **Note**
 

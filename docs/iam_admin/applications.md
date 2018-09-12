@@ -2,7 +2,7 @@
 title: Applications
 ---
 
-An application is a combination of a project with a project version, a server and a database that will appear as a standalone application in the GUI. A project version can therefore result in several applications on different servers and/or for different databases. Each application has its own authorisation and user preferences. These applications are prepared by the Application Administrator. The responsibility of the developer stops here and the task of the IAM administrator starts.
+An application is a combination of a project with a project version, a server and a database that will appear as a standalone application in the GUI. A project version can therefore result in several applications on different servers and/or for different databases. Each application has its own authorisation and user preferences. These applications are prepared by the Application administrator. The responsibility of the developer stops here and the task of the IAM administrator starts.
 
 ## Authorisation
 
@@ -14,7 +14,7 @@ When the groups are created they appear in a list view during the authorisation 
 
 *What are roles?*
 
-Roles are created by the Head Administrator or the Project Administrator/Owner and include a set of system functions. For example, a process within an end product, such as the creation and sending of invoices can be a role. Since the roles have already been created by someone who has been involved with the development of the application it is easier for the IAM administrator to give the correct rights to a user group.
+Roles are created by the Main administrator or the Project administrator/Owner and include a set of system functions. For example, a process within an end product, such as the creation and sending of invoices can be a role. Since the roles have already been created by someone who has been involved with the development of the application it is easier for the IAM administrator to give the correct rights to a user group.
 
 The IAM administrator can quickly set up the authorisation by selecting a user group on the Authorisation screen and then checking the roles to which this user group has rights on the right of the screen.
 

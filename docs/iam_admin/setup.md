@@ -14,11 +14,11 @@ In this manual it is assumed that the IAM administrator has the rights on the fo
 
 - Application Owner
 
-- Group Administrator
+- Group administrator
 
-- Group Owner
+- Group owner
 
-- User Administrator
+- User administrator
 
 - Simulator
 
@@ -28,39 +28,39 @@ This implies that this administrator is not involved with the first four roles, 
 
 The above figure comes from the menu component 'Users' under the tab 'Administrators'. The type of administrators are here assigned to a user.
 
-### Head Administrator
+### Main administrator
 
 This type of administrator has rights on all components within the IAM. This implies that he is responsible for the synchronization of new project versions, but he can also define new roles, applications, groups and users.
 
-### Project Administrator
+### Project administrator
 
-The Project Administrator may synchronize new projects and create roles. In addition, he can also define Project Owners.
+The Project administrator may synchronize new projects and create roles. In addition, he can also define Project Owners.
 
-### Project Owner
+### Project owner
 
-The Project Owner may administer new roles for his own projects. This implies that he can create, modify and delete roles for the projects for which he is the owner.
+The Project owner may administer new roles for his own projects. This implies that he can create, modify and delete roles for the projects for which he is the owner.
 
-### Application Administrator
+### Application administrator
 
-The Application Administrator may create new applications and link the roles that have been created by the Project Owner or Administrator to groups. These groups must first have been created by the Group Administrator. In addition, he can also define Application Owners.
+The Application administrator may create new applications and link the roles that have been created by the Project owner or Administrator to groups. These groups must first have been created by the Group administrator. In addition, he can also define Application Owners.
 
 The following administrator types are available for this IAM administrator:
 
 ### Application Owner
 
-The Application Owner can link roles that have been created by the Project Owner or Administrator to groups within the application for which he is the owner. These groups must first have been created by the Group Administrator.
+The Application Owner can link roles that have been created by the Project owner or Administrator to groups within the application for which he is the owner. These groups must first have been created by the Group administrator.
 
-### Group Administrator
+### Group administrator
 
-The Group Administrator may create new groups and link users to them. These users must first be created by the User Administrator. In addition, he can also define Group Owners.
+The Group administrator may create new groups and link users to them. These users must first be created by the User administrator. In addition, he can also define Group Owners.
 
-### Group Owner
+### Group owner
 
-The Group Owner may link users to the groups for which he is the owner.
+The Group owner may link users to the groups for which he is the owner.
 
-### User Administrator
+### User administrator
 
-The User Administrator can create new users.
+The User administrator can create new users.
 
 ### Simulator
 

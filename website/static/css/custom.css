@@ -19,3 +19,10 @@ article p img {
      outline: 1px solid #dddddd;
      outline-offset: -1px;
 }
+
+input#search_input_react {
+    border-radius: 0px;
+    line-height: 31px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}

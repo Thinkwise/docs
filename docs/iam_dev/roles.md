@@ -10,7 +10,7 @@ For example 'Visitor registration', that comprises checking whether customers ar
 
 **EXAMPLE**
 
-This combination of roles and groups provides more simplicity when setting up the authorisation. There can be a user group 'HR' which includes the roles 'Hire employees', 'Approve vacation days' and 'Salary administration'. Which specific rights are assigned to which components for a role are no longer important for the application administrator. The application administrator must be able to deduce the purpose of a role from its name
+This combination of roles and groups provides more simplicity when setting up the authorisation. There can be a user group 'HR' which includes the roles 'Hire employees', 'Approve vacation days' and 'Salary administration'. Which specific rights are assigned to which components for a role are no longer important for the Application administrator. The Application administrator must be able to deduce the purpose of a role from its name
 
 Creating roles will be discussed in paragraph 3.1 'Role rights' and paragraph 3.2 'Model rights'. The difference between these paragraphs is the method of set up. For example, the set up can be done for each role, which is logical when creating new roles, but these can also be set up from the model. This is logical with an upgrade of the model, when a newly added component has to be linked to a number of existing roles. But more about this in the following paragraphs.
 

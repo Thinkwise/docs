@@ -16,7 +16,7 @@ The process flow screen is arranged in a similar manner as the data model screen
 
 Figure 185: A process flow with various process steps
 
-### Process actions
+## Process actions
 
 A process action can, for instance, be related to updating a record, executing a task, printing a report or skipping to a tab or document in the user interface.
 
@@ -36,137 +36,776 @@ Figure 187: Overview of the process actions
 
 If there is not yet a process flow running in the end application and the user completes an action that is included in a process flow immediately after the start flag, then this process flow becomes activated.
 
+All process actions will return at least the current context that is provided to the associated process procedures as output parameters.
+
 The following process actions are available:
 
-##### Manual
-
-Actions are described here that are not executed by the system, but must be carried out manually by an employee.
-
-##### Go to tab 
-
-Goes to a specific tab that is located within the context.
-
-##### Go to a document
-
-This opens a new document.
-
-##### Add record
-
-Makes it possible to add a record.
-
-##### Modify record
-
-Makes it possible to modify records in the form.
-
-##### Delete record
-
-Makes it possible to delete a record.
-
-##### Execute the task from the context 
-
-Execute a task that is within the current context. This implies that the task is on the tab on which the process flow is active at that time. The parameters are filled with the values from the table to which they are linked.
-
-##### Execute the task without context
-
-Execute a task that is independent of the current context. As if it would be opened from the menu. The parameters are not linked to anything.
-
-##### Print a report from the context 
-
-Prints a report that is within the current context. This implies that the report is on the tab on which the process flow is active at that time. The parameters are filled with the values from the table to which they are linked.
-
-##### Print a report without context
-
-Print a report that is independent of the current context. As if it would be opened from the menu. The parameters are not linked to anything.
-
-##### Start
-
-The start procedure is automatically added to a new process flow. The next step following the start is the trigger to start the process flow.
-
-##### Stop
-
-The stop procedure is automatically added and is the end of the process flow.
-
-##### Refresh
-
-This action refreshes the current record.
-
-##### Refresh all
-
-This action refreshes the current tab.
-
-##### Activate grid
-
-Makes it possible to apply modifications directly in a grid.
-
-##### Activate form
-
-Makes it possible to apply modifications directly in a form.
-
-##### Edit in grid on
-
-By turning on edit in grid it is possible to make modifications in a grid
-
-##### Edit in grid off
-
-This turns off Edit in grid, so that it is no longer possible to make modifications in the grid.
-
-##### Reset filters 
-
-Resets all deleted user filters and prefilters, for instance after the action *Remove filters* or if the GUI has removed the filters after adding or modifying a row that has fallen outside the visible set.
-
-##### Standard prefilters on
-
-Turn on all standard prefilters that are within the context.
-
-##### Remove filters
-
-Removes all user filters and non-fixed prefilters.
-
-##### To previous row
-
-Goes to the previous row in a grid.
-
-##### To next row
-
-Goes to the next row in a grid.
-
-##### To first row
-
-Goes to the first row in the grid.
-
-##### To last row
-
-Goes to the last row in the grid.
-
-##### Close document 
-
-Closes the opened document.
-
-##### Zoom in on tab
-
-Double clicking on a detail tab so that it is opened in a new screen. The benefit of this is that more data can be displayed on a screen, without tabs having to be created for this purpose.
-
-##### Go to row
-
-Go to the first row that satisfies the input parameter.
-
-##### Change filters 
-
-Change the filters according to the input parameters.
-
-##### Change prefilters 
-
-Change the prefilters to the value set in the input parameters.
-
-##### Change sorting 
-
-Sort the columns based on the input parameters.
-
-##### Activate document 
-
-Activate a document that is already opened in the flow.
-
-### Connectors
+### Activate document 
+
+An open document can be activated with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>activate_doc_doc_id</td>
+<td>The ID of the document that must be activated. Valid IDs of documents are only returned by the process actions <em>Open document</em> and <em>Zoom in on detail</em>. It is only possible to activate documents that are open within the same process flow.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (document not found)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+This process action requires no specific rights, because only documents can be activated that are opened by means of *Open document* or *Zoom in on detail*.
+
+### Go to row
+
+With this process action the GUI can be controlled to select a specific row of a specific subject, on the basis of parameters that correspond with the columns of the subject in question. It is not necessary to link variables to all PK columns of the subject. If several rows correspond with the specified column value, then the first found row will be selected. However, if there are no variables linked to all PK columns of the subject, then a warning will be given when validating.
+
+In addition, it is possible to control the way in which the row must be searched for. In general this will make no sense, but if it is known where the row is located then this can make a difference in performance for large data sets. This process action will return the value of the active row as an output parameter.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[COL]</td>
+<td>The value of a column of the subject in question. This parameter is present for every column of the subject.</td>
+</tr>
+<tr class="even">
+<td>go_to_row_try_filter_row</td>
+<td><p><strong>Optional.</strong> Indicates whether an attempt must be made to filter on the row if the row cannot be found.</p>
+<p><strong>row_try_filter_row_off (default)</strong></p>
+<p><strong>row_try_filter_row_on</strong></p></td>
+</tr>
+<tr class="odd">
+<td>go_to_row_search_mode</td>
+<td><p><strong>Optional</strong>. The manner in which the row will be searched for.</p>
+<p><strong>go_to_row_search_top_down (default)</strong> – From top to bottom</p>
+<p><strong>go_to_row_search_bot_up</strong> – From bottom to top</p>
+<p><strong>go_to_row_search_cur_down</strong> – From the current row downwards</p>
+<p><strong>go_to_row_search_cur_up</strong> – From the current row upwards</p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (row not found)</p>
+<p>-3 – Unsuccessful (navigation not permitted)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the found row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+This process action requires read and navigation rights on the subject.
+
+### Enable and disable prefilters 
+
+With this process action the prefilters on a specific subject can be enabled and disabled. This process action will replace the status of all prefilters on the subjects by the statuses that are indicated by the input parameters of the process action.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[PREFILTER]</td>
+<td><p><strong>Optional.</strong> The status of a prefilter of the subject in question. This parameter is present for all prefilters of the subject.</p>
+<p>0 = Off</p>
+<p>1 – On</p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (one or more prefilters is locked or is hidden)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+This process action requires read rights on the subject and at least one prefilter that is not locked.
+
+### Filter
+
+Filter values on columns of a specific subject can be set with this process action. It can be indicated for each column which filter condition and which filter value must be used.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[COL]</td>
+<td><strong>Optional</strong>. The filter value that must be set on the column in question as an <em>equal to</em> filter condition. This parameter is present for every column of the subject.</td>
+</tr>
+<tr class="even">
+<td>chg_filter_disable_prfltr</td>
+<td><p><strong>Optional.</strong> Indicates whether the prefilters must be disabled for this filter action.</p>
+<p><strong>filter_disable_prfltr_off (default)</strong></p>
+<p><strong>filter_disable_prfltr_on</strong></p></td>
+</tr>
+<tr class="odd">
+<td>chg_filter_case_sensitive</td>
+<td><p><strong>Optional.</strong> Indicates whether the filter conditions are case sensitive.</p>
+<p><strong>filter_case_sens_off</strong></p>
+<p><strong>filter_case_sens_on</strong></p>
+<p>The default depends on the rdbms used.</p></td>
+</tr>
+<tr class="even">
+<td>chg_filter_ignore_diacrts</td>
+<td><p><strong>Optional.</strong> Indicates whether letters with diacritics must be treated as normal letters.</p>
+<p><strong>filter_ignore_diacrts_off</strong></p>
+<p><strong>filter_ignore_diacrts_on</strong></p>
+<p>The default depends on the application settings.</p></td>
+</tr>
+<tr class="odd">
+<td>chg_filter_allow_wildcard</td>
+<td><p><strong>Optional.</strong> Indicates whether it is permitted to use wild cards in filter conditions.</p>
+<p><strong>filter_allow_wildcard_off</strong></p>
+<p><strong>filter_allow_wildcard_on</strong></p>
+<p>The default depends on the application settings.</p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+This process action requires read and filter rights on the subject and filter rights on at least one of the columns of the subject.
+
+### Sort
+
+The sorting of a specific subject can be modified with this process action. It can be indicated for each column which sorting is applied.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[COL] (sort direction)</td>
+<td><p>The sort direction that will be applied to the column. This parameter is present for every column of the subject. For every column for which this parameter is specified the sequence number must also be specified.</p>
+<p>0 – Ascending</p>
+<p>1 – Descending</p></td>
+</tr>
+<tr class="even">
+<td>[COL] (sequence number)</td>
+<td>Gives the sequence number of this column in the sort.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+This process action requires read and sorting rights on the subject and sorting rights on at least one of the columns.
+
+### Manual
+
+This process action is named for completeness, but will remain unchanged. This process action will not have any input parameters and always returns status code 0 as output, because the process action cannot fail.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p></td>
+</tr>
+</tbody>
+</table>
+
+### Open document (renamed)
+
+This process action is renamed (from *Go to a document*) because this process action will always open a new document of a specific subject. The original name would become very confusing through the new process action *Activate document*, described in chapter 0.
+
+Apart from this change of name it is also necessary that this process action returns a unique ID of the opened document as output parameter. This ensures that the new process actions for activating a document (chapter 0) and closing a document (chapter 0) can be correctly implemented. As soon as several documents of the same subject are open, it must be possible to activate or close a specific open document.
+
+This process action has no input parameters and returns the following output parameters.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p></td>
+</tr>
+<tr class="even">
+<td>open_doc_doc_id</td>
+<td>The ID of the document that is opened or NULL, if not successful.</td>
+</tr>
+<tr class="odd">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Close document
+
+An open document can be closed with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>close_doc_doc_id</td>
+<td><p><strong>Optional</strong>. The ID of the document that must be closed. If this process action is not a start action, then the value of this parameter will be used to determine which document must be closed. Valid IDs of documents are only returned by the process actions <em>Open document</em> and <em>Zoom in on detail</em>. If empty the active document will be closed, which is the same as the current behavior of this process action.</p>
+<p>This process action can only be used to close the initial document and documents that are opened within the same process flow.</p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (document not found)</p></td>
+</tr>
+<tr class="even">
+<td>close_doc_doc_id</td>
+<td>The ID of the document that is active after closing the previous document. Only filled if the active document is opened with the <em>Open document</em> or <em>Zoom in on detail</em> process actions.</td>
+</tr>
+</tbody>
+</table>
+
+### Go to detail (renamed)
+
+This process action is renamed (from *Go to tab*) to make clear that it is only possible to go to a detail tab, and not to a component tab (as is regularly requested). This process action has no input parameters and returns the following output parameters:
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (detail not found)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Zoom in on detail (renamed)
+
+This process action is renamed (from *Zoom in on tab*) to make clear that it is only possible to zoom in on a detail tab and not on other tabs.
+
+This process action has no input parameters and returns the following output parameters:
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (detail not found)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Add record
+
+This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+
+Default value Link with context Input parameters of the process action Default procedure.
+
+Finally, this process action receives an output parameter with a status code.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[COL]</td>
+<td><strong>Optional</strong>. The value of a column of the subject in question. If this process action is not a start action, then this value will be entered in the column in question. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (adding not permitted)</p>
+<p>-3 – Unsuccessful (cancelled by user)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the added row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Modify record
+
+This process action will also work in combination with modifications in the list. If this process action is not a start action, then the GUI will give preference to a form to deal with the action. If there is no form present, then the GUI will try to find a grid. If a record in the grid is modified, is successfully stored and there is a follow-up action that can be called, then a possible row switch action that handles the save of the data will be prevented.
+
+This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+
+Default value Link with context Input parameters of the process action Default procedure.
+
+Finally, this process action receives an output parameter with a status code.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[COL]</td>
+<td><strong>Optional</strong>. The value of a column of the subject in question. If this process action is not a start action, then this value will be entered in the column in question. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (modifying not permitted)</p>
+<p>-3 – Unsuccessful (cancelled by user)</p>
+<p>-4 – Unsuccessful (original row no longer exists)</p></td>
+</tr>
+<tr class="even">
+<td>[COL] (old row)</td>
+<td>The value of a column of the old row. This parameter is present for every column of the subject.</td>
+</tr>
+<tr class="odd">
+<td>[COL] (new row)</td>
+<td>The value of a column of the new row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Delete record
+
+This process action remains unchanged, but receives an output parameter including a status code.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (deleting not permitted)</p>
+<p>-3 – Unsuccessful (cancelled by user)</p>
+<p>-4 – Unsuccessful (row did not exist)</p>
+<p>-5 – Unsuccessful (current row is in edit mode and could not be stored)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the deleted row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Refresh (combined)
+
+This process action is a combination of *Refresh* and *Refresh all*, because these process actions did exactly the same. This process action remains unchanged, but receives an output parameter with a status code and output parameters that contain the values of the active row after refreshing.
+
+**  
+**
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Execute the task from within/outside the context
+
+These process actions receive input parameters to be able to control the input parameters of the task (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a task parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+
+Default value Link with column Link with process flow variable Default procedure.
+
+Finally, these process actions receive an output parameter with a status code.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[PARAM]</td>
+<td><strong>Optional</strong>. The value of a parameter of the task. If this process action is not a start action, then the value of this parameter will be filled with the associated task parameter. This parameter is present for each input parameter of the task.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (task not found)</p>
+<p>-3 – Unsuccessful (cancelled by user)</p></td>
+</tr>
+<tr class="even">
+<td>[PARAM]</td>
+<td>The value of a parameter of the task. This parameter is present for each parameter of the task, input and output.</td>
+</tr>
+</tbody>
+</table>
+
+### Open report from within/outside the context (renamed)
+
+These process actions are renamed (from *Print the report from within/outside the context*) to make clear that print not the any action is that carried out can be. For example, a report can also be exported.
+
+In addition, these process actions receive input parameters to be able to control the parameters of the report (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a report parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+
+Default value Link with column Link with process flow variable Default procedure.
+
+Finally, these process actions receive an output parameter with a status code.
+
+<table>
+<thead>
+<tr class="header">
+<th>Input parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[PARAM]</td>
+<td><strong>Optional</strong>. The value of a parameter of the report. If this process action is not a start action, then the value of this parameter will be filled with the associated report parameter. This parameter is present for every parameter of the report.</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (report not found)</p>
+<p>-3 – Unsuccessful (cancelled by user)</p></td>
+</tr>
+<tr class="even">
+<td>[PARAM]</td>
+<td>The value of a parameter of the report. This parameter is present for every parameter of the report.</td>
+</tr>
+</tbody>
+</table>
+
+### Activate grid and activate form
+
+These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Edit in grid on/off
+
+These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (not permitted to enable edit mode or not possible to disable edit mode because the row cannot be stored)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Remove filters, reset filters and default prefilters on
+
+These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+### Go to first/previous/next/last row
+
+These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
+
+<table>
+<thead>
+<tr class="header">
+<th>Output parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>status_code</td>
+<td><p>The status code of the executed action.</p>
+<p>0 – Successful</p>
+<p>-1 – Unsuccessful (unknown)</p>
+<p>-2 – Unsuccessful (navigation not permitted)</p>
+<p>-3 – Unsuccessful (the [first/last] row is already active)</p></td>
+</tr>
+<tr class="even">
+<td>[COL]</td>
+<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
+</tr>
+</tbody>
+</table>
+
+
+## Connectors
 
 Ten special process action types are available, called *connectors*. Connectors are different from the other process action types in that they do not expose GUI features for automation, but enable you to connect to other applications and media through various common protocols.
 
@@ -174,11 +813,9 @@ Ten special process action types are available, called *connectors*. Connectors 
 
 Figure 188: New connector process action type
 
-### Definitions of connectors
+The following connectors are available:
 
-In this chapter various links, called adapters, are described with external media. Particularly consider links with the network, the Internet and disks.
-
-#### HTTP(S) connector
+### HTTP(S) connector
 
 The HTTP(S) connector provides the following input options with which several properties of an http(s) request can be controlled.
 
@@ -291,7 +928,7 @@ The HTTP(S) connector provides the following input options with which several pr
 </tbody>
 </table>
 
-#### FTP(S) connector
+### FTP(S) connector
 
 The HTTP(S) connector provides the following input options with which several properties of an ftp(s) request can be controlled.
 
@@ -392,7 +1029,7 @@ The HTTP(S) connector provides the following input options with which several pr
 </tbody>
 </table>
 
-#### SMTP connector
+### SMTP connector
 
 The SMTP connector provides the following input options with which several properties of an SMTP request and an SMTP message can be controlled.
 
@@ -511,7 +1148,7 @@ The SMTP connector provides the following input options with which several prope
 </tbody>
 </table>
 
-#### Read file from disk
+### Read file from disk
 
 Files at locations within the local network can be read using this connector. This connector works on the basis of absolute, local file paths or UNC paths, and gives as output the byte-representation of the file.
 
@@ -558,7 +1195,7 @@ Files at locations within the local network can be read using this connector. Th
 </tbody>
 </table>
 
-#### Write file to disk
+### Write file to disk
 
 Files can be written to a location within the local network using this connector. This connector works on the basis of absolute, local file paths or UNC paths, and expects the data of the file in the form of text or binary data.
 
@@ -619,7 +1256,7 @@ Files can be written to a location within the local network using this connector
 </tbody>
 </table>
 
-#### Move file on disk
+### Move file on disk
 
 Files from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local file path or UNC path.
 
@@ -675,7 +1312,22 @@ Files from locations within the local network can be moved to other locations wi
 </tbody>
 </table>
 
-#### Delete file from disk
+### Copy file on disk
+
+Files from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local file path or UNC path.
+
+| Input options             |                                                                                                                                                                                                                                                                                                                |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| copy_file_con_from_path   | The path to the file that must be moved. This path must be an absolute local path or a UNC path.                                                                                                                                                                                                               |
+| copy _file_con_to_path    | The path to the location where the file must be moved to. This path must be an absolute local path or a UNC path.                                                                                                                                                                                              |
+| copy _file_con_create_dir | Indicates whether the entire folder structure of *copy_file_con_to_path* must be created, or that all higher level folders must exist. <br> *disk_create_all_dirs_off* - All higher level folders must already exist.<br> *disk_create_all_dirs_on (Default)* - The complete folder structure will be created. |
+ 
+
+| Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| status_code    | The status code of the executed action. <br> 0 – Successful <br> -1 – Unsuccessful (unknown) <br> -2 – Unsuccessful (no source path specified) <br> -3 – Unsuccessful (no target path specified) <br> -4 – Unsuccessful (one of the specified paths is too long) <br> -5 – Unsuccessful (one of the specified paths is invalid) <br> -6 – Unsuccessful (source path not found) <br> -7 – Unsuccessful (source disk not found) <br> -8 – Unsuccessful (target path not found) <br> -9 – Unsuccessful (target disk not found) <br> -10 – Unsuccessful (target file already exists) <br> -11 – Unsuccessful (access refused) |
+
+### Delete file from disk
 
 A file at a location within the local network can be deleted using this connector. The path to the file is provided by means of an input option and must have the form of an absolute, local file path or UNC path.
 
@@ -718,7 +1370,7 @@ A file at a location within the local network can be deleted using this connecto
 </tbody>
 </table>
 
-#### Create folder on disk
+### Create folder on disk
 
 A folder can be created on a location within the local network using this connector. The path to the file that must be created is provided by means of an input option and must have the form of an absolute, local file path or UNC path. In addition, it can also be indicated whether the provided folder structure must exist or may be created.
 
@@ -769,7 +1421,7 @@ A folder can be created on a location within the local network using this connec
 </tbody>
 </table>
 
-#### Move folder on disk
+### Move folder on disk
 
 Folders from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local path or UNC path.
 
@@ -825,7 +1477,24 @@ Folders from locations within the local network can be moved to other locations 
 </tbody>
 </table>
 
-#### Delete folder from disk
+### Copy folder on disk
+
+Folders from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local path or UNC path. 
+
+| Input options            |                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| copy_dir_con_from_path   | The path to the folder that must be moved. This path must be an absolute local path or a UNC path.                                                                                                                                                                                                                                            |
+| copy_dir_con_to_path     | The path to the location where the folder must be moved to. This path must be an absolute local path or a UNC path.                                                                                                                                                                                                                           |
+| copy_dir_con_create_dir  | Indicates whether the entire parent folder structure of copy_dir_con_to_path must be created, or that all higher level folders of the target path must exist.<br>*disk_create_all_dirs_off* - All higher level folders must already exist.<br>*disk_create_all_dirs_on (default)* - The complete target folder structure will be created.     |
+| copy_dir_conn_exist_file | Determines the strategy of dealing with existing files at the target location.<br>*disk_exist_skip* -  Ignore existing files in the target location <br>*disk_exist_overwrite* - Overwrite existing files in the target location<br>*disk_exist_abort (default)* -  Abort the process action if a file already exists in the target location. |
+
+| Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| status_code    | The status code of the executed action. <br>0 – Successful<br>-1 – Unsuccessful (unknown)<br>-2 – Unsuccessful (no source path specified)<br>-3 – Unsuccessful (no target path specified)<br>-4 – Unsuccessful (one of the specified paths is too long)<br>-5 – Unsuccessful (one of the specified paths is invalid)<br>-6 – Unsuccessful (source path not found)<br>-7 – Unsuccessful (source disk not found)<br>-8 – Unsuccessful (target path not found)<br>-9 – Unsuccessful (target disk not found)<br>-10 – Unsuccessful (file already exists in target folder)<br>-11 – Unsuccessful (access refused) |
+
+
+
+### Delete folder from disk
 
 A folder on a location within the local network can be deleted using this connector. The path to folder is provided by means of an input option and must have the form of an absolute, local path or UNC path.
 
@@ -876,781 +1545,7 @@ A folder on a location within the local network can be deleted using this connec
 </tbody>
 </table>
 
-### New process actions for existing GUI actions
-
-Adding the possibility to keep track of the state in a process flow also opens the door to add a number of new process actions for existing GUI actions that could previously not be controlled. A number of these process actions are explained in this chapter.
-
-#### Activate document 
-
-An open document can be activated with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>activate_doc_doc_id</td>
-<td>The ID of the document that must be activated. Valid IDs of documents are only returned by the process actions <em>Open document</em> and <em>Zoom in on detail</em>. It is only possible to activate documents that are open within the same process flow.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (document not found)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-This process action requires no specific rights, because only documents can be activated that are opened by means of *Open document* or *Zoom in on detail*.
-
-#### Go to row
-
-With this process action the GUI can be controlled to select a specific row of a specific subject, on the basis of parameters that correspond with the columns of the subject in question. It is not necessary to link variables to all PK columns of the subject. If several rows correspond with the specified column value, then the first found row will be selected. However, if there are no variables linked to all PK columns of the subject, then a warning will be given when validating.
-
-In addition, it is possible to control the way in which the row must be searched for. In general this will make no sense, but if it is known where the row is located then this can make a difference in performance for large data sets. This process action will return the value of the active row as an output parameter.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[COL]</td>
-<td>The value of a column of the subject in question. This parameter is present for every column of the subject.</td>
-</tr>
-<tr class="even">
-<td>go_to_row_try_filter_row</td>
-<td><p><strong>Optional.</strong> Indicates whether an attempt must be made to filter on the row if the row cannot be found.</p>
-<p><strong>row_try_filter_row_off (default)</strong></p>
-<p><strong>row_try_filter_row_on</strong></p></td>
-</tr>
-<tr class="odd">
-<td>go_to_row_search_mode</td>
-<td><p><strong>Optional</strong>. The manner in which the row will be searched for.</p>
-<p><strong>go_to_row_search_top_down (default)</strong> – From top to bottom</p>
-<p><strong>go_to_row_search_bot_up</strong> – From bottom to top</p>
-<p><strong>go_to_row_search_cur_down</strong> – From the current row downwards</p>
-<p><strong>go_to_row_search_cur_up</strong> – From the current row upwards</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (row not found)</p>
-<p>-3 – Unsuccessful (navigation not permitted)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the found row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-This process action requires read and navigation rights on the subject.
-
-#### Enable and disable prefilters 
-
-With this process action the prefilters on a specific subject can be enabled and disabled. This process action will replace the status of all prefilters on the subjects by the statuses that are indicated by the input parameters of the process action.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[PREFILTER]</td>
-<td><p><strong>Optional.</strong> The status of a prefilter of the subject in question. This parameter is present for all prefilters of the subject.</p>
-<p>0 = Off</p>
-<p>1 – On</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (one or more prefilters is locked or is hidden)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-This process action requires read rights on the subject and at least one prefilter that is not locked.
-
-#### Filter
-
-Filter values on columns of a specific subject can be set with this process action. It can be indicated for each column which filter condition and which filter value must be used.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[COL]</td>
-<td><strong>Optional</strong>. The filter value that must be set on the column in question as an <em>equal to</em> filter condition. This parameter is present for every column of the subject.</td>
-</tr>
-<tr class="even">
-<td>chg_filter_disable_prfltr</td>
-<td><p><strong>Optional.</strong> Indicates whether the prefilters must be disabled for this filter action.</p>
-<p><strong>filter_disable_prfltr_off (default)</strong></p>
-<p><strong>filter_disable_prfltr_on</strong></p></td>
-</tr>
-<tr class="odd">
-<td>chg_filter_case_sensitive</td>
-<td><p><strong>Optional.</strong> Indicates whether the filter conditions are case sensitive.</p>
-<p><strong>filter_case_sens_off</strong></p>
-<p><strong>filter_case_sens_on</strong></p>
-<p>The default depends on the rdbms used.</p></td>
-</tr>
-<tr class="even">
-<td>chg_filter_ignore_diacrts</td>
-<td><p><strong>Optional.</strong> Indicates whether letters with diacritics must be treated as normal letters.</p>
-<p><strong>filter_ignore_diacrts_off</strong></p>
-<p><strong>filter_ignore_diacrts_on</strong></p>
-<p>The default depends on the application settings.</p></td>
-</tr>
-<tr class="odd">
-<td>chg_filter_allow_wildcard</td>
-<td><p><strong>Optional.</strong> Indicates whether it is permitted to use wild cards in filter conditions.</p>
-<p><strong>filter_allow_wildcard_off</strong></p>
-<p><strong>filter_allow_wildcard_on</strong></p>
-<p>The default depends on the application settings.</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-This process action requires read and filter rights on the subject and filter rights on at least one of the columns of the subject.
-
-#### Sort
-
-The sorting of a specific subject can be modified with this process action. It can be indicated for each column which sorting is applied.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[COL] (sort direction)</td>
-<td><p>The sort direction that will be applied to the column. This parameter is present for every column of the subject. For every column for which this parameter is specified the sequence number must also be specified.</p>
-<p>0 – Ascending</p>
-<p>1 – Descending</p></td>
-</tr>
-<tr class="even">
-<td>[COL] (sequence number)</td>
-<td>Gives the sequence number of this column in the sort.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-This process action requires read and sorting rights on the subject and sorting rights on at least one of the columns.
-
-### Existing process actions
-
-Now that it is possible to exchange information between process actions and that several new process actions have been introduced, input and output parameters will also be added to existing process actions, to increase the possibilities. All process actions will return at least the current context that is provided to the associated process procedures as output parameters. Within the framework of backward compatibility all new input parameters will be optional and, if empty, retain the old behavior of the process action.
-
-In this chapter the definition of the input and output parameters will be given for each process action. In addition, the change of name of several process actions will be explained in more detail.
-
-#### Manual
-
-This process action is named for completeness, but will remain unchanged. This process action will not have any input parameters and always returns status code 0 as output, because the process action cannot fail.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p></td>
-</tr>
-</tbody>
-</table>
-
-#### Open document (renamed)
-
-This process action is renamed (from *Go to a document*) because this process action will always open a new document of a specific subject. The original name would become very confusing through the new process action *Activate document*, described in chapter 0.
-
-Apart from this change of name it is also necessary that this process action returns a unique ID of the opened document as output parameter. This ensures that the new process actions for activating a document (chapter 0) and closing a document (chapter 0) can be correctly implemented. As soon as several documents of the same subject are open, it must be possible to activate or close a specific open document.
-
-This process action has no input parameters and returns the following output parameters.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p></td>
-</tr>
-<tr class="even">
-<td>open_doc_doc_id</td>
-<td>The ID of the document that is opened or NULL, if not successful.</td>
-</tr>
-<tr class="odd">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Close document
-
-An open document can be closed with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>close_doc_doc_id</td>
-<td><p><strong>Optional</strong>. The ID of the document that must be closed. If this process action is not a start action, then the value of this parameter will be used to determine which document must be closed. Valid IDs of documents are only returned by the process actions <em>Open document</em> and <em>Zoom in on detail</em>. If empty the active document will be closed, which is the same as the current behavior of this process action.</p>
-<p>This process action can only be used to close the initial document and documents that are opened within the same process flow.</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (document not found)</p></td>
-</tr>
-<tr class="even">
-<td>close_doc_doc_id</td>
-<td>The ID of the document that is active after closing the previous document. Only filled if the active document is opened with the <em>Open document</em> or <em>Zoom in on detail</em> process actions.</td>
-</tr>
-</tbody>
-</table>
-
-#### Go to detail (renamed)
-
-This process action is renamed (from *Go to tab*) to make clear that it is only possible to go to a detail tab, and not to a component tab (as is regularly requested). This process action has no input parameters and returns the following output parameters:
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (detail not found)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Zoom in on detail (renamed)
-
-This process action is renamed (from *Zoom in on tab*) to make clear that it is only possible to zoom in on a detail tab and not on other tabs.
-
-This process action has no input parameters and returns the following output parameters:
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (detail not found)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Add record
-
-This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
-
-Default value Link with context Input parameters of the process action Default procedure.
-
-Finally, this process action receives an output parameter with a status code.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[COL]</td>
-<td><strong>Optional</strong>. The value of a column of the subject in question. If this process action is not a start action, then this value will be entered in the column in question. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (adding not permitted)</p>
-<p>-3 – Unsuccessful (cancelled by user)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the added row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Modify record
-
-This process action will also work in combination with modifications in the list. If this process action is not a start action, then the GUI will give preference to a form to deal with the action. If there is no form present, then the GUI will try to find a grid. If a record in the grid is modified, is successfully stored and there is a follow-up action that can be called, then a possible row switch action that handles the save of the data will be prevented.
-
-This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
-
-Default value Link with context Input parameters of the process action Default procedure.
-
-Finally, this process action receives an output parameter with a status code.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[COL]</td>
-<td><strong>Optional</strong>. The value of a column of the subject in question. If this process action is not a start action, then this value will be entered in the column in question. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (modifying not permitted)</p>
-<p>-3 – Unsuccessful (cancelled by user)</p>
-<p>-4 – Unsuccessful (original row no longer exists)</p></td>
-</tr>
-<tr class="even">
-<td>[COL] (old row)</td>
-<td>The value of a column of the old row. This parameter is present for every column of the subject.</td>
-</tr>
-<tr class="odd">
-<td>[COL] (new row)</td>
-<td>The value of a column of the new row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Delete record
-
-This process action remains unchanged, but receives an output parameter including a status code.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (deleting not permitted)</p>
-<p>-3 – Unsuccessful (cancelled by user)</p>
-<p>-4 – Unsuccessful (row did not exist)</p>
-<p>-5 – Unsuccessful (current row is in edit mode and could not be stored)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the deleted row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Refresh (combined)
-
-This process action is a combination of *Refresh* and *Refresh all*, because these process actions did exactly the same. This process action remains unchanged, but receives an output parameter with a status code and output parameters that contain the values of the active row after refreshing.
-
-**  
-**
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Execute the task from within/outside the context
-
-These process actions receive input parameters to be able to control the input parameters of the task (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a task parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
-
-Default value Link with column Link with process flow variable Default procedure.
-
-Finally, these process actions receive an output parameter with a status code.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[PARAM]</td>
-<td><strong>Optional</strong>. The value of a parameter of the task. If this process action is not a start action, then the value of this parameter will be filled with the associated task parameter. This parameter is present for each input parameter of the task.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (task not found)</p>
-<p>-3 – Unsuccessful (cancelled by user)</p></td>
-</tr>
-<tr class="even">
-<td>[PARAM]</td>
-<td>The value of a parameter of the task. This parameter is present for each parameter of the task, input and output.</td>
-</tr>
-</tbody>
-</table>
-
-#### Open report from within/outside the context (renamed)
-
-These process actions are renamed (from *Print the report from within/outside the context*) to make clear that print not the any action is that carried out can be. For example, a report can also be exported.
-
-In addition, these process actions receive input parameters to be able to control the parameters of the report (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a report parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
-
-Default value Link with column Link with process flow variable Default procedure.
-
-Finally, these process actions receive an output parameter with a status code.
-
-<table>
-<thead>
-<tr class="header">
-<th>Input parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>[PARAM]</td>
-<td><strong>Optional</strong>. The value of a parameter of the report. If this process action is not a start action, then the value of this parameter will be filled with the associated report parameter. This parameter is present for every parameter of the report.</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (report not found)</p>
-<p>-3 – Unsuccessful (cancelled by user)</p></td>
-</tr>
-<tr class="even">
-<td>[PARAM]</td>
-<td>The value of a parameter of the report. This parameter is present for every parameter of the report.</td>
-</tr>
-</tbody>
-</table>
-
-#### Activate grid and activate form
-
-These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Edit in grid on/off
-
-These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (not permitted to enable edit mode or not possible to disable edit mode because the row cannot be stored)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Remove filters, reset filters and default prefilters on
-
-These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-#### Go to first/previous/next/last row
-
-These process actions remain unchanged, but receive an output parameter with a status code and output parameters that contain the values of the active row.
-
-<table>
-<thead>
-<tr class="header">
-<th>Output parameters</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>status_code</td>
-<td><p>The status code of the executed action.</p>
-<p>0 – Successful</p>
-<p>-1 – Unsuccessful (unknown)</p>
-<p>-2 – Unsuccessful (navigation not permitted)</p>
-<p>-3 – Unsuccessful (the [first/last] row is already active)</p></td>
-</tr>
-<tr class="even">
-<td>[COL]</td>
-<td>The value of a column of the active row. This parameter is present for every column of the subject.</td>
-</tr>
-</tbody>
-</table>
-
-### Process steps
+## Process steps
 
 Actions are linked together with a process step. This has the effect in the end product that as soon as a user has completed the previous action, the system automatically starts the next action.
 
@@ -1670,11 +1565,11 @@ A process step can be modified by double clicking on the arrow.
 
 If a process action has been completed and several parallel process steps follow, then these process steps are executed based on the specified sequence number. A user completes one of the parallel steps first before starting the following step.
 
-#### Conditional process steps
+### Conditional process steps
 
 After a process action has been executed, it can be determined on the basis of a so-called process procedure which of the specified process steps must subsequently be started and in which sequence. It is not possible to start more steps than are modelled, only fewer.
 
-### Process flow start variants
+## Process flow start variants
 
 Since it is now possible to create different variants, it is possible to add a start variant. For example, you can indicate for an action that is linked to the start action (trigger) for which variants the process flow should start.
 
@@ -1692,11 +1587,11 @@ Variables can be used to store data produced by process actions and retain this 
 
 Figure 190: Process variable
 
-### Deep linking
+## Deep linking
 
 A deep link is a link which doesn't just point to the location of an application, but also to a location within that application. For instance, a deep link could direct a user to a specific subject, a specific record within that subject, and perhaps start a task or report for that record.
 
-#### Enable deep linking
+### Enable deep linking
 
 Deep linking can be turned on for any process flow by simply selecting a process flow, navigating to the 'Deep linking' tab and checking the 'Deep linking allowed' box.
 
@@ -1704,7 +1599,7 @@ Deep linking can be turned on for any process flow by simply selecting a process
 
 Figure 191: Deep linking
 
-#### Using variables in a deep link
+### Using variables in a deep link
 
 It is possible to provide values for variables in the deep link, to allow more dynamic scenarios to be implemented, such as navigating to a specific record. If the variable needs to be allowed in a deep link, simply check the 'Available in deep link' box for the variable. Or the 'Mandatory in deep link' box, if deep link needs to be mandatory for all new process flows.
 
@@ -1730,7 +1625,7 @@ The template above needs to be filled out as follows:
 
 - \<variable\> and \<value\> need to be replaced by the ID of the process variable and the value it should receive. Multiple variables can be specified in the deep link. Note that the ID of the process variable needs to be preceded by a $ sign.
 
-### New process action Show message
+## New process action Show message
 
 A frequently requested feature for process flows is the ability to show a dialog to the user with several options and base the continuation of the flow on the option chosen by the user. As of version 2017.2 of the Thinkwise Suite, we have introduced the process action 'Show message' which makes this possible.
 

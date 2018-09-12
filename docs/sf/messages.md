@@ -99,11 +99,9 @@ The following XML elements with associated attributes are recognized:
 
 Text does not have any attributes, since only plain text is placed here, which does not need to be retrieved from another location.
 
-**Example**
-
-\<text\>Welcome\</text\>
-
-\<col tabid="customer" colid="name" transl="plural"/\>
+>```xml
+><text>Welcome</text><col tabid="customer" colid="name" transl="plural"/>
+>````
 
 ##### Abort
 

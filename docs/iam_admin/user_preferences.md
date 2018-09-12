@@ -2,7 +2,7 @@
 title: User preferences
 ---
 
-This component is only available for the Head Administrator.
+This component is only available for the Main administrator.
 
 User preferences (UP) are settings to modify the application in accordance with personal preferences. These settings are registered in the Intelligent Application Manager so that they are available on all platforms.
 

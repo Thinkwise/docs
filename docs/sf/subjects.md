@@ -118,9 +118,7 @@ The navigation and update buttons in the form can be hidden with this option. Th
 
 The field that must be presented if this table is used as a lookup table can be specified for a table. This automatically applies for all target tables that refer to this source table.
 
-**Example**
-
-For example, a table *employee* has *name* as its look-up-presentation field, while the primary key is a number.
+> For example, a table *employee* has *name* as its look-up-presentation field, while the primary key is a number.
 
 ![](../assets/sf/image156.png)
 
@@ -274,9 +272,7 @@ With this field it is determined for a column whether the field is presented as:
 
 The type can be defined differently in the grid and the form. However, this can never be more freely than the definition with column.
 
-**Example**
-
-The field *added\_by* is set to read only. It is possible to hide this in the grid. It is however not possible to make this normal in the form.
+> The field *added\_by* is set to read only. It is possible to hide this in the grid. It is however not possible to make this normal in the form.
 
 ##### Use when copying
 
@@ -294,9 +290,7 @@ Figure 117: Performance settings with 'Columns'
 
 When a choice is made to use certain logic mechanisms in Settings, then all columns are automatically given as a parameter. With the performance tab it is possible to exclude certain columns if they are not required for the mechanisms.
 
-**Example**
-
-In each default the *Modified by* field is filled with the current user. However, for some tables the default is completely empty. The default cannot be turned off, because *Modified by* is then no longer filled, but the unused fields can be turned off. Less data will be transmitted during the execution, so that the performance will increase.
+> In each default the *Modified by* field is filled with the current user. However, for some tables the default is completely empty. The default cannot be turned off, because *Modified by* is then no longer filled, but the unused fields can be turned off. Less data will be transmitted during the execution, so that the performance will increase.
 
 #### Look-up 
 
@@ -378,11 +372,9 @@ Forced insertion of field and groups in a next column can also be done in the So
 
 Fields (with groups) can also be placed on a next tab. For this the check mark for *field on next tab* must be checked. The label that is used here, will be the heading of the tab page. If the data does not fit on one tab, renumbering will be applied from the new tab with the new label.
 
-**Example**
-
-In the screen shot below, the table is translated with Project version. Subsequently halfway a column is placed on the next tab with the name Default settings.
-
-![](../assets/sf/image170.png)
+> In the screen shot below, the table is translated with Project version. Subsequently halfway a column is placed on the next tab with the name Default settings.
+> 
+> ![](../assets/sf/image170.png)
 
 Figure 122: Example of tab bar with multiple tabs
 
@@ -496,9 +488,7 @@ Only separators are used in the ribbon, also for the sub-menus.
 
 It is possible to indicate for each group which icon this group should be given and whether the prefilters in this group are mutually exclusive.
 
-**Example**
-
-A user cannot simultaneously filter on *Available* and *Not available*. If *Available* and *Not available* were both a status of one record, the user would never see any data when both prefilters would be switched on.
+> A user cannot simultaneously filter on *Available* and *Not available*. If *Available* and *Not available* were both a status of one record, the user would never see any data when both prefilters would be switched on.
 
 ##### Default prefilter
 
@@ -522,9 +512,9 @@ Subsequently there is the choice of whether the prefilter should work based on a
 
 The query is placed in the where-clause by the GUI. The current table can be accessed using the alias 't1'.
 
-**Example**
-
-t1.order\_date \< getdate()
+> ```sql
+> t1.order_date < getdate()
+> ````
 
 When conditions have to be assigned to columns, this is done on the *prefilter columns* tab. The developer indicates on this tab which column ID is added to the prefilter and which condition and value the prefilter should have. This concerns the database value and not the translation.
 
@@ -616,9 +606,7 @@ The GUI will allow rows to be dropped on any component of the target subject. Ho
 
 - When drag-drop task only has one unique set of input, and the selected row will not change the input of the drag-drop task, the GUI will treat the grid or tree like any other component and will not navigate to the hovered row.
 
-**Example**
-
-A task is bound on *Sales invoice line* and has the *sales\_invoice\_id* mapped as input. This task is used as a drag-drop target task. The subject *Sales invoice line* is shown as a detail of *Sales invoice*. Since the active row in this detail will not affect the input of the task, hovering different rows during drag-drop will not cause navigation.
+> A task is bound on *Sales invoice line* and has the *sales\_invoice\_id* mapped as input. This task is used as a drag-drop target task. The subject *Sales invoice line* is shown as a detail of *Sales invoice*. Since the active row in this detail will not affect the input of the task, hovering different rows during drag-drop will not cause navigation.
 
 Context procedures are executed during the hovered navigation, after a short delay. During this time, the cursor might display a question mark.
 
@@ -634,9 +622,7 @@ Figure 138: Display of the menu item links for each table
 
 It is possible to display the same table in different ways in the Software Factory by adding a variant. This offers for example the possibility to set up different prefilters for a specific menu item without having to create a view.
 
-**Example**
-
-Along with a menu item called *Orders* in which all active orders are displayed with a grid and form, a menu item can be added based on the variant *Historical orders*. This contains only a grid with other enabled prefilters. A task-based screen can be set up quickly in this way without having to first create a view.
+> Along with a menu item called *Orders* in which all active orders are displayed with a grid and form, a menu item can be added based on the variant *Historical orders*. This contains only a grid with other enabled prefilters. A task-based screen can be set up quickly in this way without having to first create a view.
 
 It is also possible to optimize a variant for a specific platform, for example, by displaying fewer columns in the Mobile GUI than in the Windows GUI.
 
@@ -664,11 +650,9 @@ There are two options for modification:
 
 - If a setting is modified, this setting remains valid, even if the default changes. However, non-modified settings will change.
 
-**Example**
-
-The variant 'Outstanding orders' has been set so that only order number, customer and date are in the grid. If the field "total quantity" is added to the order table, it will not be added to the outstanding order variant.
-
-The new prefilter *large customers* will, however, be added to the variant because no snapshots are made of prefilters.
+> The variant 'Outstanding orders' has been set so that only order number, customer and date are in the grid. If the field "total quantity" is added to the order table, it will not be added to the outstanding order variant.
+>
+> The new prefilter *large customers* will, however, be added to the variant because no snapshots are made of prefilters.
 
 The rights for variants are always equal to or more limited than in the standard. A hidden field cannot be made visible again, but a regular field can however be hidden. This applies to add/modify/delete, whether field are mandatory and visible, and locked prefilters. Modifications to the default (for instance: 'add' is switched off) are also applied in all the variants.
 
@@ -733,9 +717,7 @@ Table 4: Overview of the possible domain controls.
 
 Control elements have to be defined when a choice is made for the *COMBO*. The user can choose from these elements for a column with this domain. The element id is the description and is used in the translation module to translate the elements. The database value is the value that is stored in the database (often numerically, but this is not mandatory).
 
-**Example**
-
-The domain *gender* has the elements *man* and *woman*. Instead of displaying this as text in a combo box, an icon of a man and woman can now be displayed in the combo box.
+> The domain *gender* has the elements *man* and *woman*. Instead of displaying this as text in a combo box, an icon of a man and woman can now be displayed in the combo box.
 
 If you select the 'IMAGE\_COMBO' control, an image must be added to the elements. This replaces the text.
 

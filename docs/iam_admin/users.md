@@ -142,7 +142,7 @@ The last heading is 'Additional information'. If the organization uses employee 
 
 ## User prefilters
 
-Two prefilters are available under the user tab that support the Application Administrator during the set up.
+Two prefilters are available under the user tab that support the Application administrator during the set up.
 
 - Users without a user group; users who are not linked to a user group
 
@@ -150,7 +150,7 @@ Two prefilters are available under the user tab that support the Application Adm
 
 ## Administrators
 
-On the Administrators tab it is indicated for each user what type of administrator they are. Furthermore a user can also be defined as an Application Manager or Group Administrator. An overview of the types of administrators is given in the introduction to chapter 2.
+On the Administrators tab it is indicated for each user what type of administrator they are. Furthermore a user can also be defined as an Application Manager or Group administrator. An overview of the types of administrators is given in the introduction to chapter 2.
 
 ## User groups
 

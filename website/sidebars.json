@@ -70,6 +70,7 @@
   "intelligent_application_manager": {
     "Developer Guide": [
       "iam_dev/general",
+      "iam_dev/administrators",
       "iam_dev/model",
       "iam_dev/roles",
       "iam_dev/applications"

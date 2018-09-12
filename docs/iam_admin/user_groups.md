@@ -74,7 +74,7 @@ When adding a user to a group the start and end date of the membership of this u
 
 ### Group Owners
 
-When several owners can administer this group, they can be added as group owner to the selected group. They may now add new users to this group.
+When several owners can administer this group, they can be added as Group owner to the selected group. They may now add new users to this group.
 
 ![](../assets/iam_admin/image14.png)
 
