@@ -4,17 +4,17 @@ title: Validation
 
 Validations are carried out on the model to check for errors. These errors are pre-defined and specified in a base project. Consider, for instance, a requirement that a primary key must always be at the top in a table and that each table must have a standard sort sequence. Thinkwise delivers a comprehensive set of validations with the Software factory, but these can be supplemented by company-specific validations.
 
-As indicated for the data model in chapter 7.1, every modeller has a *Validations* tab. The validations can be carried out here for this specific modeller. The total validation takes place before the source code is generated.
+As indicated for the data model in chapter 7.1, every modeler has a *Validations* tab. The validations can be carried out here for this specific modeler. The total validation takes place before the source code is generated.
 
 ![](../assets/sf/image96.png)
 
-Figure 199: Overview of the 'Validation' tab with executed validations
+*Overview of the 'Validation' tab with executed validations*
 
 Validations may be conducted at various levels by means of the following tasks:
 
 - > Perform all validations: performs all relevant validations;
 
-- > Perform validation group (not for modellers): performs all validations from the selected validation group;
+- > Perform validation group (not for modelers): performs all validations from the selected validation group;
 
 - > Perform selected validation: performs the selected validation;
 

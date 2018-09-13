@@ -24,5 +24,17 @@ input#search_input_react {
     border-radius: 0px;
     line-height: 31px;
     font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: inherit;
+    background-color: rgba(242, 196, 178, 0.25);
+}
+
+em {
+    font-style: italic;
+}
+
+img + em {
+    display: inherit;
+    text-align: center;
+    font-size: 80%;
+    color: #666666;
 }

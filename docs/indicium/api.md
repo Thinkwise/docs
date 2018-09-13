@@ -32,11 +32,11 @@ In this template, &lt;web\_app\_root\_url&gt; refers to the root URL of Indicium
 
 All requests that start with this base-URL will be subjected to authentication. The type of authentication used depends on the configuration of the user in question in IAM. All authentication follows the HTTP Basic authentication scheme, meaning that Indicium should only be exposed to the Internet over HTTPS.
 
-## Software Factory
+### Software Factory
 
 The Indicium API provides access to project versions in the Software Factory development environment, as long as the Software Factory itself is available through the Indicium IAM.
 
-To access a specific project version, add the segment \_sf to the Software Factory base URL, followed by the project\_id, the project\_vrs\_id and the runtime\_configuration\_id or \(default\):
+To access a specific project version, add the segment `_sf` to the Software Factory base URL, followed by the `project_id`, the `project_vrs_id` and the `runtime_configuration_id` or `(default)`:
 
 `<web_app_root_url>/api/sf/_sf/<project_id>/<project_vrs_id>/<runtime_configuration_id>`
 

@@ -34,7 +34,7 @@ To apply themes that transcend a project it is possible to import ![](../assets/
 
 ![](../assets/sf/image216.png)
 
-Figure 163: Overview of the *Themes' menu
+*Overview of the *Themes' menu*
 
 The theme has been divided as such:
 
@@ -76,7 +76,7 @@ Whenever a colour can be selected, there is always the possibility to also set u
 
 ![](../assets/sf/image217.png)
 
-Figure 164: Setting the colour gradient
+*Setting the colour gradient*
 
 #### Theme
 
@@ -88,7 +88,7 @@ When tabs are opened from the menu, they can be active (selected) or inactive (n
 
 ![](../assets/sf/image218.png)
 
-Figure 165: Tab in theme
+*Tab in theme*
 
 #### Tab
 
@@ -103,7 +103,7 @@ There can be chosen from the following options:
 
 ![](../assets/sf/image219.png)
 
-Figure 166: header method options
+*header method options*
 
 - Default – The default is unchanged.
 
@@ -113,7 +113,7 @@ Figure 166: header method options
 
 ![](../assets/sf/image220.png)
 
-Figure 167: Tab with manual height
+*Tab with manual height*
 
 **Tab lines**
 
@@ -121,7 +121,7 @@ It's possible to set the color of tab content lines and tab header lines.
 
 ![](../assets/sf/image221.png)
 
-Figure 168: Tab with transparent lines
+*Tab with transparent lines*
 
 **  
 **
@@ -132,11 +132,11 @@ Disabled tabs are styled by the GUI, by default. It*s possible to manually style
 
 ![](../assets/sf/image222.png)
 
-Figure 169: Disabled tab 'Code changelog'
+*Disabled tab 'Code changelog'*
 
 ![](../assets/sf/image223.png)
 
-Figure 170: Tab colour settings theme
+*Tab colour settings theme*
 
 The colours for the lines surrounding the tabs can be modified here. It*s for example possible to make the tab header color a dark gray, and the content border white (same as the background color). This significantly reduces the amount of lines on the screen in nested tabs.
 
@@ -146,7 +146,7 @@ The colour is set for the background of the application on the background tab. T
 
 ![](../assets/sf/image224.png)
 
-Figure 171: Add an image in the theme
+*Add an image in the theme*
 
 #### Document
 
@@ -156,7 +156,7 @@ The background colours, which are displayed when a tab is opened, can be defined
 
 ![](../assets/sf/image226.png)
 
-Figure 172: Document theme settings and the result
+*Document theme settings and the result*
 
 The splitter colour, which is visible for example between a grid and a form and an image can also be set here.
 
@@ -174,7 +174,7 @@ The colours for the top and bottom of the application can be selected for the mo
 
 ![](../assets/sf/image227.png)
 
-Figure 173: Setting the theme for mobile
+*Setting the theme for mobile*
 
 #### Application list
 
@@ -182,7 +182,7 @@ This is where the colors of the applications at the bottom of the menu are style
 
 ![](../assets/sf/image228.png)
 
-Figure 174: Application list style
+*Application list style*
 
 #### Splash screen
 
@@ -192,7 +192,7 @@ However, you can specify here which components should and should not be displaye
 
 ![](../assets/sf/image229.png)
 
-Figure 175: Setting splash theme
+*Setting splash theme*
 
 #### Badge
 
@@ -208,7 +208,7 @@ When the colours are set for the ribbon, you can choose to set a general backgro
 
 ![](../assets/sf/image230.png)
 
-Figure 176: Theme settings for the ribbon
+*Theme settings for the ribbon*
 
 **Comment**
 
@@ -236,7 +236,7 @@ The changes made in the menu component will affect the bar above the ribbon of t
 
 ![](../assets/sf/image232.png)
 
-Figure 177: Bar above the ribbon of the application
+*Bar above the ribbon of the application*
 
 ### Components
 
@@ -252,7 +252,7 @@ If transparent is chosen in the 'line' component, the rows in the grid will be c
 
 ![](../assets/sf/image233.png)
 
-Figure 178: Grid view with alternating colours
+*Grid view with alternating colours*
 
 In the following sub tabs you can specify the group colours, row colours and the focus cell colours. These can be set for the active row, the selected row and for a mouse over.
 
@@ -291,11 +291,11 @@ The figures below show an example of a strong visual theme and a minimalist them
 
 ![](../assets/sf/image237.png)
 
-Figure 182: A theme that is out of balance.
+*A theme that is out of balance.*
 
 ![](../assets/sf/image238.png)
 
-Figure 183: A minimalist theme
+*A minimalist theme*
 
 ### Colors and Fonts used
 
@@ -305,6 +305,6 @@ A color can be changed using the *Update color* task or by dragging the column t
 
 ![](../assets/sf/image239.png)![](../assets/sf/image241.png)
 
-Figure 184: Colors used in Theme
+*Colors used in Theme*
 
 The same overview is available for the fonts used.

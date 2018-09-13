@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'Thinkwise Platform' /* title for your website */,
   tagline: 'Documentation',
   url: 'https://www.thinkwisesoftware.com' /* your website url */,
-  baseUrl: '/docs/docusaurus/' /* base url for your project */,
+  baseUrl: '/docs/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -38,9 +38,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'sf/general', label: 'SF'},
+    {doc: 'sf/general', label: 'Software Factory'},
     //{doc: 'iam_general', label: 'Production'},
-    {doc: 'iam_dev/general', label: 'IAM'},
+    {doc: 'iam_dev/general', label: 'Application Manager'},
     {doc: 'indicium/general', label: 'Indicium'},
     //{page: 'help', label: 'Help'}
     //{blog: true, label: 'Updates'},
@@ -76,7 +76,10 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() + 
-    ' Thinkwise - No rights can be derived from the contents of this website. ',
+    ' Thinkwise',
+
+  rights:
+    'No rights can be derived from the contents of this website.',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks

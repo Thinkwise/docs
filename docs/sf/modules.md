@@ -6,4 +6,4 @@ A last and optional step is setting up modules. Structure can be applied in the 
 
 ![](../assets/sf/image79.png)
 
-Figure 61: Modules overview
+*Modules overview*

@@ -6,7 +6,7 @@ A task is a procedure (possibly with a number of parameters) that can be started
 
 ![](../assets/sf/image191.png)
 
-Figure 142: A task popup that may be visible in the final product if the task is executed.
+*A task popup that may be visible in the final product if the task is executed.*
 
 In addition, a reference can be established from a parameter to a look-up table. In this way a parameter gets a dropdown list and a button in order to be able to select another value in the popup.
 
@@ -40,7 +40,7 @@ Paint can be started by entering *mspaint* in the object name (Windows GUI only)
 
 ![](../assets/sf/image192.png)
 
-Figure 143: General settings when creating a task
+*General settings when creating a task*
 
 #### GUI function
 
@@ -56,7 +56,7 @@ If *Ask confirmation* is checked, it is possible to decide what type of message 
 
 ![](../assets/sf/image193.png)
 
-Figure 144: Task with confirmation message
+*Task with confirmation message*
 
 ### Task parameters
 
@@ -64,7 +64,7 @@ After specifying which variant of a task is to be created, parameters can be add
 
 ![](../assets/sf/image194.png)
 
-Figure 145: Parameter settings when creating a task
+*Parameter settings when creating a task*
 
 ##### Form
 
@@ -72,7 +72,7 @@ Task parameters can be formatted in the same way as forms of table are formatted
 
 ![](../assets/sf/image195.png)
 
-Figure 146: 'Task parameter' settings for a form in 'Tasks'
+*'Task parameter' settings for a form in 'Tasks'*
 
 ### Look-ups
 
@@ -104,7 +104,7 @@ When performing long-running tasks or tasks in combination with multi-selection,
 
 ![](../assets/sf/image196.png)
 
-Figure 147: Progress Percentage of executing a task
+*Progress Percentage of executing a task*
 
 To display the percentage, the procedure 'tsf\_send\_progress' should be called from the SQL code:
 
@@ -132,7 +132,7 @@ Tasks can take a long time to process. There are four options to give instructio
 
 ![](../assets/sf/image197.png)
 
-Figure xxx: Task with await result options
+*Task with await result options*
 
 1.  Yes – The user must wait for the result and a progress indicator is shown.
 

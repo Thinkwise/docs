@@ -126,6 +126,6 @@ The tab page 'New objects' shows the objects that are new in this project versio
 
 ![](../assets/iam_dev/image19.png)
 
-Figure 14: New objects in IAM
+*New objects in IAM*
 
 With the task \"Assign rights\" a process flow will move the focus to the object in the model tab page, so that the rights can be assigned. This only works when the screen is a detail (and not zoomed in).

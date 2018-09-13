@@ -10,7 +10,7 @@ A branch is a new project and just as with other projects can be separately star
 
 ![](../assets/sf/image39.png)
 
-Figure 30: Popup for creating a branch
+*Popup for creating a branch*
 
 Firstly it must be indicated for which project and project version a branch must be created. The name of the branch project can then be entered and a location selected for the project and the database.
 
@@ -22,7 +22,7 @@ As soon as the branch project is satisfactorily completed and tested, it can be 
 
 ![](../assets/sf/image41.png)
 
-Figure 31: Pop-up for starting a Merge session
+*Pop-up for starting a Merge session*
 
 It is indicated which branch project needs to be merged with which project. Any conflicts are identified so that a solution strategy can be defined in the following step. In this situation only a comparison is made. Because no modifications have yet taken place the user can always go back to the previous step. Only when all conflicts have been resolved, see the following paragraphs, can the ![](../assets/sf/image43.png) *Execute merge session* task be started to carry out the merge session.
 
@@ -50,7 +50,7 @@ Merge sessions have been given a *Completed* check mark. As long as a merge sess
 
 ![](../assets/sf/image44.png)
 
-Figure 32: 'Merging' indicator with project version
+*'Merging' indicator with project version*
 
 ### Conflicts
 
@@ -70,7 +70,7 @@ This type of conflict occurs if a delete in the trunk and an insert or update in
 
 ![](../assets/sf/image45.png)
 
-Figure 33: Overview of the 'Conflicts' screen with the 'Merge Sessions*
+*Overview of the 'Conflicts' screen with the 'Merge Sessions**
 
 #### Resolve conflicts
 
@@ -100,4 +100,4 @@ With the task *Compare code* it is possible to compare and merge the different v
 
 ![](../assets/sf/image51.png)
 
-Figure 34: A conflict comparison during a merge session
+*A conflict comparison during a merge session*

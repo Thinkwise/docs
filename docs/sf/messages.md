@@ -4,13 +4,13 @@ title: Messages
 
 Error messages, warnings or informational error messages are also modelled in the Software Factory, with for instance the possibility to define a translation, severity and location. This applies to both messages that are transmitted from functionality (code templates) and messages that are caused by the database, such as constraints and checks.
 
-### Modelling messages
+### Modeling messages
 
 The *Messages* screen can be found in the menu under *Development*.
 
 ![](../assets/sf/image263.png)
 
-Figure 201: Overview of the 'Messages' screen in the 'Development' component
+*Overview of the 'Messages' screen in the 'Development' component*
 
 ##### Message id
 
@@ -144,6 +144,6 @@ dbms\_output.put\_line(*\<\< \<msg id=*my\_multilang\_message\_id*\> \[parameter
 
 ![](../assets/sf/image264.png)
 
-Figure 202: Example of a message as it may appear in an end product.
+*Example of a message as it may appear in an end product.*
 
 .

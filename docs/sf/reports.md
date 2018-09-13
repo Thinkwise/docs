@@ -6,13 +6,13 @@ Reports have a similar structure to tasks, but instead of starting a task, a rep
 
 ![](../assets/sf/image199.png)
 
-Figure 149: 'Reports' tab in the 'User interface'
+*'Reports' tab in the 'User interface'*
 
 The structure of reports is analogous to that of tasks. Parameters are defined for a report and look-up functionality is provided through references.
 
 ![](../assets/sf/image200.png)
 
-Figure 150: Popup that appears in the end product when a report is generated
+*Popup that appears in the end product when a report is generated*
 
 ### Settings
 
@@ -44,7 +44,7 @@ The same as for tasks, but with the name of the parameter in the *File specifica
 
 ![](../assets/sf/image201.png)
 
-Figure 151: General settings when creating a report
+*General settings when creating a report*
 
 #### GUI function
 
@@ -96,7 +96,7 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 ![](../assets/sf/image202.png)
 
-Figure 152: Available options of macros in a drop down list
+*Available options of macros in a drop down list*
 
 - Click on the *Create* button
     
@@ -192,7 +192,7 @@ Local reports work in the same way as other report types such as Crystal Reports
 
 ![](../assets/sf/image203.png)
 
-Figure 153: Specify SSRS (local) file specification
+*Specify SSRS (local) file specification*
 
 ##### SSRS (Server)
 
@@ -204,7 +204,7 @@ Reports that are generated on a report server use the connection string that is 
 
 ![](../assets/sf/image204.png)
 
-Figure 154: Specify SSRS (Server) file specification
+*Specify SSRS (Server) file specification*
 
 *Report actions*
 
@@ -311,7 +311,7 @@ Another possibility when executing a report in the GUI is to display several par
 
 ![](../assets/sf/image205.png)
 
-Figure 155: GUI example of report parameters
+*GUI example of report parameters*
 
 Under the “Report parameters” tab under “Reports” a property can be linked to a report parameter. These report parameters can then be used in the defaults and layouts and also be placed on the right location in the correct group.
 
@@ -367,7 +367,7 @@ When the report is fully defined within the Software Factory, a preview can be v
 
 ![](../assets/sf/image206.png)
 
-Figure 156: Example of a generated report
+*Example of a generated report*
 
 ### TSFReportMailer
 

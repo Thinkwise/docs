@@ -76,13 +76,11 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('thinkwise.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('indicium_installation.html', language)}>Indicium installation</Button>
-            <Button href={docUrl('configuration_file.html', language)}>configuration file</Button>
-            <Button href={docUrl('indicium_api', language)}>API</Button>
+        
+            <Button href={docUrl('sf/general.html', language)}>Lets get started!</Button> 
           </PromoSection>
         </div>
       </SplashContainer>
@@ -100,31 +98,25 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block layout="threeColumn">
     {[
       {
-        content: 'Thinkwise Software Factory',
+        content: `Learn how to create business applications with the Thinkwise Software Factory development environment.`,
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: 'Thinkwise Software Factory',
+        title: `[Thinkwise Software Factory](${docUrl('sf/general.html', )})`,
       },
       {
-        content: 'Intelligent Application Manager',
+        content: `Manage your applications, users and preferences with the Thinkwise Intelligent Application Manager.`,
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: 'Intelligent Application Manager',
+        title: `[Intelligent Application Manager](${docUrl('iam_admin/general.html', )})`,
       },
       {
-        content: 'Indicium Application Tier',
+        content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: 'Indicium Application Tier',
-      },
-      {
-        content: 'Thinkwise User Interfaces',
-        image: imgUrl('thinkwise.svg'),
-        imageAlign: 'top',
-        title: 'Thinkwise User Interfaces',
+        title: `[Indicium Application Tier](${docUrl('indicium/general.html', )})`,
       },
     ]}
   </Block>
@@ -138,7 +130,10 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
+        <Container padding={['top', 'bottom']} background="light">
           <Features />
+        </Container>
+         
         </div>
       </div>
     );

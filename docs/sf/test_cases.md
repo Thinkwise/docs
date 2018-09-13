@@ -52,7 +52,7 @@ The last thing to be entered is a report id, table id, task id or a custom scree
 
 ![](../assets/sf/image294.png)
 
-Figure 220: Creating a test case
+*Creating a test case*
 
 *Test step*
 
@@ -62,7 +62,7 @@ When selecting an action, a number of fields that are required for this action, 
 
 ![](../assets/sf/image295.png)
 
-Figure 221: Adding test steps
+*Adding test steps*
 
 ##### Exceptions
 
@@ -121,7 +121,7 @@ The GUI tries to execute test cases as fast as possible. However, this can no lo
 
 ![](../assets/sf/image296.png)
 
-Figure 222: Overview of the test cases with the underlying test steps
+*Overview of the test cases with the underlying test steps*
 
 **Note**
 
@@ -135,7 +135,7 @@ It is also possible to generate code groups and re-execute the program objects. 
 
 ![](../assets/sf/image297.png)
 
-Figure 223: Code menu
+*Code menu*
 
 With these new screens it is possible, for instance, that:
 
@@ -147,7 +147,7 @@ With these new screens it is possible, for instance, that:
 
 ![](../assets/sf/image298.png)
 
-Figure 224: Table of program objects
+*Table of program objects*
 
 ### Data
 
@@ -167,4 +167,4 @@ Furthermore, the test coverage analysis and the test run analysis can be used to
 
 ![](../assets/sf/image299.png)
 
-Figure 225: Overview of the test run results
+*Overview of the test run results*

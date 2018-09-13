@@ -10,7 +10,7 @@ The subnames can be approved by means of a task. It is important that the subnam
 
 ![](../assets/sf/image313.png)
 
-Figure 239: Subname groups
+*Subname groups*
 
 ## Employees
 
@@ -18,7 +18,7 @@ In this component employees are registered who make use of the Software Factory.
 
 ![](../assets/sf/image314.png)
 
-Figure 240: Overview of registered employees with their role in the 'Employees' screen
+*Overview of registered employees with their role in the 'Employees' screen*
 
 ## Supplement workshop
 

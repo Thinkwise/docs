@@ -14,17 +14,17 @@ In the figure below is an example of a quick launch toolbar on the left and a tr
 
 ![](../assets/sf/image104.png) ![](../assets/sf/image105.png)
 
-Figure 82: Overview of the quick launch and tree menu structures
+*Overview of the quick launch and tree menu structures*
 
 By setting the *Show filter* checkbox in the Menu tab to true it is possible to show a filter bar on these menus. This makes it is easy to search for a desired menu item in the menu.
 
 ![](../assets/sf/image106.png)
 
-Figure 75: Setting the filter option
+*Setting the filter option*
 
 ![](../assets/sf/image107.png)
 
-Figure 83: filter in the menu
+*filter in the menu*
 
 #### Tiles menu
 
@@ -32,7 +32,7 @@ On the tiles menu, along with creating the groups with items, the size at which 
 
 ![](../assets/sf/image108.png)
 
-Figure 84: Tile styles
+*Tile styles*
 
 During set up the groups and items are created and it is indicated how large the items have to be and, in addition, a different image can be selected for each tile. This can be done add the *subject* page. Subsequently, the GUI will itself organize the items from top left to bottom right according to the room that the screen has available.
 
@@ -56,7 +56,7 @@ The platforms are initially determined in the Software Factory, but can also be 
 
 ![](../assets/sf/image109.png)
 
-Figure 85: 'Platform' screen within the 'User interface'
+*'Platform' screen within the 'User interface'*
 
 ### Accessible objects
 
@@ -64,25 +64,25 @@ Via the tab *Accessible objects* the developer can see via which routes a specif
 
 ![](../assets/sf/image110.png)
 
-Figure 86: 'Accessible objects' tab with 'Menu'
+*'Accessible objects' tab with 'Menu'*
 
 By clicking on the ![](../assets/sf/image111.png) *Investigate accessible objects…* task the popup below opens. It can be indicated here for which platform the shortest path must be determined to a table, report, task or variant.
 
 ![](../assets/sf/image112.png)
 
-Figure 87: Popup to determine the shortest path to an object
+*Popup to determine the shortest path to an object*
 
 The result then shows via which steps the object can be accessed.
 
 ![](../assets/sf/image113.png)
 
-Figure 88: Steps when determining the shortest path
+*Steps when determining the shortest path*
 
 By clicking on the table, information about this table appears on the right and this can be modified. An additional function that becomes available when this table is selected is the ![](../assets/sf/image114.png) *Expand* task. By clicking on this the following tasks, details, look-ups and reports of the selected table are displayed.
 
 ![](../assets/sf/image115.png)
 
-Figure 89: 'Footsteps' when determining a path
+*'Footsteps' when determining a path*
 
 Sometimes you know until what level you want to expend. If this is the case it is possible to insert the depth in the pop-up.
 
@@ -90,4 +90,4 @@ It is possible to expand to up to 9 levels. However, when a new level would caus
 
 ![](../assets/sf/image116.png)
 
-Figure 90: Investigate reachable objects
+*Investigate reachable objects*

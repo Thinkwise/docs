@@ -10,7 +10,7 @@ This chapter describes the settings that fall under the **Service tier** and the
 
 ![](../assets/sf/image318.png)
 
-Figure 244: Screen shot of the 'Project Version' screen for specifying the Service Tier.
+*Screen shot of the 'Project Version' screen for specifying the Service Tier.*
 
 ##### Use pooling
 
@@ -102,7 +102,7 @@ If this is present, the script can be executed so that Maven can execute a clean
 
 ![](../assets/sf/image320.png)
 
-Figure 246: Script which is executed by compiling the Java service tier
+*Script which is executed by compiling the Java service tier*
 
 #### Eclipse
 
@@ -114,25 +114,25 @@ Following the next steps ensures the same result as the build.bat script.
 
 ![](../assets/sf/image321.png)
 
-Figure 247: Eclipse
+*Eclipse*
 
 2.  Right-click on the pom.xml and go to *Run as -\> Maven build*.
 
 ![](../assets/sf/image322.png)
 
-Figure 248: Run as -\> Maven build
+*Run as -\> Maven build*
 
 3.  When this option is selected, a screen appears where the Run configuration of the project can be specified. Think of a name for the configuration and enter the value *clean package *in *Goals:*.
 
 ![](../assets/sf/image323.png)
 
-Figure 249: Run configuration of the specified project.
+*Run configuration of the specified project.*
 
 4.  When this configuration is executed, a .war archive will be created in the **target** directory, just as with the build.bat script.
 
 ![](../assets/sf/image324.png)
 
-Figure 250: Target Folder
+*Target Folder*
 
 Of course, the built.bat script can also be executed from Eclipse, on the condition that a Maven installation is available in the Path variable.
 
@@ -155,7 +155,7 @@ The templates that are added to this control procedure, can be assigned to the f
 
 ![](../assets/sf/image325.png)![](../assets/sf/image326.png)
 
-Figure 251: Screen shot of the 'Assign' tab in the 'Control procedure' screen
+*Screen shot of the 'Assign' tab in the 'Control procedure' screen*
 
 |Program object|Description|
 |--- |--- |
@@ -209,7 +209,7 @@ If version 4.5 of the .Net Framework is installed the build.bat script can be ex
 
 ![](../assets/sf/image328.png)
 
-Figure 253: Compiling the built.bat script
+*Compiling the built.bat script*
 
 #### Visual Studio
 
@@ -254,7 +254,7 @@ Templates, which can be assigned to this control procedure, are added to the fol
 
 ![](../assets/sf/image331.png)![](../assets/sf/image332.png)
 
-Figure 254: Screen shot of the 'Assign' tab in the 'Control procedure' screen
+*Screen shot of the 'Assign' tab in the 'Control procedure' screen*
 
 |Program object|Description|
 |--- |--- |
@@ -274,31 +274,31 @@ Below is an example with which the Json.NET package is added to the project.
 
 > ![](../assets/sf/image333.png)
 
-Figure 255: Visual Studio
+*Visual Studio*
 
 2.  Retrieve the reference from **\[service\_tier\_name\]\\\[service\_tier\_name\].csproj**.
 
 > ![](../assets/sf/image334.png)
 
-Figure 256: Visual Studio overview
+*Visual Studio overview*
 
 3.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp\_csproj\_references** program object.
 
 > ![](../assets/sf/image335.png)
 
-Figure 257: Weave control procedure into the Software Factory
+*Weave control procedure into the Software Factory*
 
 4.  Expand the NuGet configuration from **\[service\_tier\_name\]\\packages.config**.
 
 ![](../assets/sf/image336.png)
 
-Figure 258: NuGet configuration
+*NuGet configuration*
 
 5.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp\_nuget\_packages\_config** program object.
 
 ![](../assets/sf/image337.png)
 
-Figure 259: Weave control procedure into the Software Factory
+*Weave control procedure into the Software Factory*
 
 When the Library is part of an internal project the choice can be made to use an internal NuGet repository. This can be set up, for example, as an IIS application or on the file system of a network location. For more information about this see the NuGet documentation:
 

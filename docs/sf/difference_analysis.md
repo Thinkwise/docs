@@ -2,20 +2,19 @@
 title: Difference analysis
 ---
 
-When different versions are worked on at the same time, then a difference analysis can be carried out between these versions.
+The *Difference analysys* screen allows you to analyze the differences between multiple versions.
 
 ![](../assets/sf/image52.png)
+*Difference analysis*
 
-Figure 35: Difference analysis
+A difference analysis can be run using the *Start difference analysis* task.
 
-A difference analysis can be carried out with the help of the task ![](../assets/sf/image53.png)”Start difference analysis …”.
+![](../assets/sf/image53.png)
 
 ![](../assets/sf/image54.png)
+*Start difference analysis*
 
-Figure 36: Start difference analysis
-
-The differences can be examined under *Result* differences. Differences with associated objects can be immediately adjusted if they are incorrect. However, the analysis is static and will not assess these differences again. A new difference analysis has to be made for this.
+The differences can be examined under *Results. Differences with associated objects can be immediately adjusted if they are incorrect. However, the analysis is static and will not assess these differences again. 
 
 ![](../assets/sf/image55.png)
-
-Figure 37: Difference analysis result
+*Difference analysis result*

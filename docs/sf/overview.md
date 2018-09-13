@@ -8,7 +8,7 @@ To create a project click on the "Add" button in the ribbon on the Project Maint
 
 ![Add new project](../assets/sf/image18.png)
 
-Figure 11: Creating a new project in the 'Project Maintenance ' screen
+*Creating a new project in the 'Project Maintenance ' screen*
 
 As shown in the above figure input fields can be marked blue or white. Blue fields are required fields and white fields are optional fields. Grey fields cannot be modified by hand.
 
@@ -24,7 +24,7 @@ The following data needs to be provided to create a project. This also determine
 
 ![](../assets/sf/image19.png)
 
-Figure 12: The architecture diagram for a presentation of the two possibilities
+*The architecture diagram for a presentation of the two possibilities*
 
 > With a Database application logic layer the programming language is connected with the choice for the RDBMS. If a middle tier is chosen than the application logic will be written in C\# or Java.
 
@@ -34,7 +34,7 @@ When the project is added, a popup appears to create the first project version.
 
 ![](../assets/sf/image20.png)
 
-Figure 13: Popup for creating a project version
+*Popup for creating a project version*
 
 Files are also necessary within a project version, for instance, for reports and icons. These files are stored for each project version in a folder structure within the Project folder.
 
@@ -50,7 +50,7 @@ A service tier can make a connection with the database via the current user or v
 
 ![](../assets/sf/image21.png)
 
-Figure 14: Screen shot from the 'Full model' tab where the service tier details are entered
+*Screen shot from the 'Full model' tab where the service tier details are entered*
 
 *IAM Service tier*
 
@@ -58,13 +58,13 @@ A service tier can authorize the users via IAM. The server, database and RDBMS o
 
 ![](../assets/sf/image22.png)
 
-Figure 15: Complete the IAM Service tier
+*Complete the IAM Service tier*
 
 ##### Proxy generation
 
 As is shown in the architecture diagram (
 
-Figure 12: The architecture diagram for a presentation of the two possibilities), it is possible to store the logic in the database and then create a proxy for Mobile, so that the logic can be used by Mobile. The proxy is only used here as *conduit* for the logic.
+*The architecture diagram for a presentation of the two possibilities), it is possible to store the logic in the database and then create a proxy for Mobile, so that the logic can be used by Mobile. The proxy is only used here as *conduit* for the logic.*
 
 The selected RDBMS and application logic layer determine which base projects (see paragraph *Base projects*) are linked in as standard. When a database application logic layer is selected then a service tier base project (C\# or Java) can be linked in by hand. In that case a service tier proxy that makes use of the logic in the database is generated automatically. It is then not necessary to develop the business logic in the service tier.
 
@@ -101,13 +101,13 @@ The status *Development* ensures that all components of the Software Factory can
 
 > A project starts with an analysis of the requirements for the system to be developed. This takes place during the analysis phase.
 
-- Data modelling
+- Data modeling
 
-> When a new project version is started, a start is made with setting up the data model for this project version. The status of the project version is now set to *Data modelling*.
+> When a new project version is started, a start is made with setting up the data model for this project version. The status of the project version is now set to *Data modeling*.
 
-- GUI modelling
+- GUI modeling
 
-> As soon as the data model is complete, this is *frozen* and a start can be made with modelling the GUI. The status now needs to be set to GUI modelling. The entire user interface, including tasks, reports, business intelligence and the process flows can now be set up.
+> As soon as the data model is complete, this is *frozen* and a start can be made with modeling the GUI. The status now needs to be set to GUI modeling. The entire user interface, including tasks, reports, business intelligence and the process flows can now be set up.
 
 - Programming
 
@@ -141,7 +141,7 @@ An extra *Runtime configuration* tab has been added under project management, wi
 
 ![](../assets/sf/image23.png)
 
-Figure 16: Runtime configuration
+*Runtime configuration*
 
 The old ini-parameters are still supported in G9.8, for which a warning is given. The use of the runtime configuration will be compulsory in the next version of the Software Factory.
 
@@ -149,7 +149,7 @@ Existing ini files can be converted with the task *Convert ini file*. This task 
 
 ![](../assets/sf/image24.png)
 
-Figure 17: Convert Ini file task
+*Convert Ini file task*
 
 There is always one default configuration, containing the settings that have been entered with the project version. The other configurations as a default will take over the values and ini-parameters from this default, unless a modification is consciously made.
 
@@ -167,13 +167,13 @@ Currently, there are four main storage types available in the Software Factory. 
 
 ![](../assets/sf/image25.png)
 
-Figure 18: Storage locations
+*Storage locations*
 
 For all storage types, except database, it is possible to add subfolders on individual columns, see the next figure. The storage location itself is specified in the Domain. Thus, a column will have the main storage location from its Domain, but files can be stored in a subfolder by setting the subfolder field inside the column properties.
 
 ![C:\\Users\\nmatlung\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\subfolder.png](../assets/sf/image26.png)
 
-Figure 19: Subfolder field in column properties
+*Subfolder field in column properties*
 
 Storage locations can be set on Domains which use one of the following controls File Link, File Upload, Folder Link, Image Link, Image Upload or Signature.
 
@@ -187,7 +187,7 @@ A storage account need to be setup first for Azure file storage to work properly
 
 ![C:\\Users\\nmatlung\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\AzureStorageSettings.png](../assets/sf/image27.png)
 
-Figure 20: Azure Storage Location settings
+*Azure Storage Location settings*
 
 #### Database 
 
@@ -201,7 +201,7 @@ The path property can either be a network location or a drive. Be aware that it 
 
 ![](../assets/sf/image28.png)
 
-Figure 21: File upload with data column
+*File upload with data column*
 
 #### FTP
 
@@ -211,7 +211,7 @@ The configuration can differ for each application and application state by linki
 
 ![](../assets/sf/image29.png)
 
-Figure 22: Runtime configuration
+*Runtime configuration*
 
 ### Platforms
 
@@ -241,7 +241,7 @@ The new version automatically gets the status *Development*.
 
 ![](../assets/sf/image30.png)
 
-Figure 23: 'Right mouse button click' gives access to the overview of, for example, tasks
+*'Right mouse button click' gives access to the overview of, for example, tasks*
 
 During copying the project id and version id are replaced by the new project and version in file references to, for instance, icons and reports in the model. Do not forget to copy the old project version folder to the folder of the new version.
 
@@ -267,7 +267,7 @@ A tag is a freely definable property that can be linked to rows of a table and c
 
 ![](../assets/sf/image32.png)
 
-Figure 24: Overview of the 'Tags' tab on the 'Full model' screen
+*Overview of the 'Tags' tab on the 'Full model' screen*
 
 Self-defined tags and their intended use can be registered in the Thinkwise Community Portal, so that they can be formally included a following version.
 

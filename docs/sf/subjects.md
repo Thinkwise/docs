@@ -6,7 +6,7 @@ In the *Subjects* screen every table or view can be fully set up for the user in
 
 ![](../assets/sf/image149.png)
 
-Figure 101: Overview of the *Subjects' screen
+*Overview of the *Subjects' screen*
 
 ### Settings
 
@@ -16,7 +16,7 @@ Options that are applicable on the table itself, are specified in this tab.
 
 ![](../assets/sf/image150.png)
 
-Figure 102: General settings on the 'Subjects' screen
+*General settings on the 'Subjects' screen*
 
 ##### Icon
 
@@ -35,6 +35,8 @@ Which icon format is expected with which subject is described in the table below
 
 
 Table 3: Overview of icon formats
+
+> Thinkwise uses the Axialis Pure Flat icon set: http://www.axialis.com/
 
 ##### Start empty with filter
 
@@ -60,7 +62,7 @@ It can be indicated for each subject the maximum number of rows that the GUI mus
 
 ![](../assets/sf/image151.jpeg)
 
-Figure 103: Screen shot of 'Maximum number of records' in an end product
+*Screen shot of 'Maximum number of records' in an end product*
 
 Setting a maximum number of records for all subjects is possible via the parameter *MaxNoOfRecords* in the configuration file or in the Intelligent Application Manager. By entering 0 for a subject as the maximum number of records the parameter is generated for that subject.
 
@@ -74,7 +76,7 @@ There are two options available. *Always* and *When adding*. When the status is 
 
 ![](../assets/sf/image152.png)
 
-Figure 104: Add in grid
+*Add in grid*
 
 ##### Grouping in Grid
 
@@ -82,17 +84,17 @@ To enable grouping, check the *Group* option in the *Permissions* tab page. User
 
 ![](../assets/sf/image153.png)
 
-Figure 105: Allow group
+*Allow group*
 
 ![](../assets/sf/image154.png)
 
-Figure 106: Group settings
+*Group settings*
 
 The figure below shows an example of grouped columns in a grid.
 
 ![](../assets/sf/image155.png)
 
-Figure 107: Group in grid
+*Group in grid*
 
 ##### Number of columns fixed in a grid
 
@@ -122,7 +124,7 @@ The field that must be presented if this table is used as a lookup table can be 
 
 ![](../assets/sf/image156.png)
 
-Figure 108: Screen shot from the 'Settings' tab for 'Subjects', where the Look-up can be entered
+*Screen shot from the 'Settings' tab for 'Subjects', where the Look-up can be entered*
 
 When no presentation field is given, the last reference column is displayed. When no presentation field is entered and the source column itself is also a look-up, the presentation field of this look-up is displayed (this works recursively until an explicitly set up presentation field or modified presentation field is reached). In this way a link table is automatically correctly translated.
 
@@ -134,7 +136,7 @@ This system is known within Thinkwise as *joining through*.
 
 ![](../assets/sf/image157.png)
 
-Figure 109: Example of joining through
+*Example of joining through*
 
 It can be indicated how a look-up presentation field must be displayed:
 
@@ -158,7 +160,7 @@ Since downloading subjects costs performance it is important that only the neces
 
 ![](../assets/sf/image158.png)
 
-Figure 110: Offline details
+*Offline details*
 
 ###### Available offline
 
@@ -170,7 +172,7 @@ To ensure refreshing data runs correctly use is made of refresh groups. It can b
 
 ![](../assets/sf/image159.png)
 
-Figure 111: Offline details of refresh groups
+*Offline details of refresh groups*
 
 With non-atomic groups all tables are synchronized, irrespective of whether a (connection) fault has occurred.
 
@@ -198,7 +200,7 @@ Badges are numbers that can attract the attention of the user. Badges are displa
 
 ![](../assets/sf/image160.png)
 
-Figure 112: Example of badges
+*Example of badges*
 
 The developer can decide for himself how the number must be calculated by adding the logic for this to the Badges concept of the table or variant. An empty number or numbers below 0 are not displayed in the user interface.
 
@@ -234,7 +236,7 @@ Which actions are permitted on this table can be set with the *Allow import*, *A
 
 ![](../assets/sf/image162.png)
 
-Figure 114: Overview of the Performance options with subject settings
+*Overview of the Performance options with subject settings*
 
 Using the option in the *Performance* tab it can be indicated in detail which mechanisms and concepts are used for a subject. In this way it can be ensured that there are no unnecessary calls to the logic layer and the user interfaces are as efficient as possible.
 
@@ -248,13 +250,13 @@ The options that are applicable for a column are given below.
 
 ![](../assets/sf/image163.png)
 
-Figure 115: Overview of the 'Columns' tab on the 'Subjects' screen
+*Overview of the 'Columns' tab on the 'Subjects' screen*
 
 Column
 
 ![](../assets/sf/image164.png)
 
-Figure 116: Overview of the standard column settings
+*Overview of the standard column settings*
 
 ##### Case type
 
@@ -286,7 +288,7 @@ Performance
 
 ![](../assets/sf/image165.png)
 
-Figure 117: Performance settings with 'Columns'
+*Performance settings with 'Columns'*
 
 When a choice is made to use certain logic mechanisms in Settings, then all columns are automatically given as a parameter. With the performance tab it is possible to exclude certain columns if they are not required for the mechanisms.
 
@@ -296,7 +298,7 @@ When a choice is made to use certain logic mechanisms in Settings, then all colu
 
 ![](../assets/sf/image166.png)
 
-Figure 118: Overview of the 'Look-up' settings for the 'Tables'
+*Overview of the 'Look-up' settings for the 'Tables'*
 
 It can be indicated for each field whether a look-up must be displayed and which reference is used for this. It is indicated, as default with the look-up table, how this must be presented. It is however possible to deviate from this for each column (reference). Furthermore, it can be indicated for each field whether the look-up presentation field must be displayed with a combo box, a popup window or both. When the look-up table is displayed with a popup window, this can be the standard, but a variant can also be displayed.
 
@@ -314,7 +316,7 @@ Below you will find the options to configure the grid of a table.
 
 ![](../assets/sf/image167.png)
 
-Figure 119: Overview of a 'Grid' within 'Components' for a selected table
+*Overview of a 'Grid' within 'Components' for a selected table*
 
 ##### Sequence of fields
 
@@ -336,7 +338,7 @@ With the option *Display aggregation* and *Aggregation type* the totals in the g
 
 ![](../assets/sf/image168.png)
 
-Figure 120: Drop down list with the aggregation options
+*Drop down list with the aggregation options*
 
 #### Form
 
@@ -344,7 +346,7 @@ Below you will find the options for configuring the form for a table. These opti
 
 ![](../assets/sf/image169.png)
 
-Figure 121: Overview of a 'Form' within 'Components' for a selected table
+*Overview of a 'Form' within 'Components' for a selected table*
 
 ##### Sequence of fields
 
@@ -376,19 +378,19 @@ Fields (with groups) can also be placed on a next tab. For this the check mark f
 > 
 > ![](../assets/sf/image170.png)
 
-Figure 122: Example of tab bar with multiple tabs
+*Example of tab bar with multiple tabs*
 
 #### Card list
 
 ![](../assets/sf/image171.png)
 
-Figure 123: Overview of a 'Card list' within 'Components' for a selected table
+*Overview of a 'Card list' within 'Components' for a selected table*
 
 Mainly, but not only for Mobile, the screen type for column display is called *card list*. On the left, card list has room for data such as a photograph (see image) with three lines for extra information. This allows for more text to be displayed on a smaller area.
 
 ![Kaartlijst](../assets/sf/image172.png)
 
-Figure 124: Example of a card list screen type
+*Example of a card list screen type*
 
 #### Trees
 
@@ -400,7 +402,7 @@ Just like setting some properties for the grid or form the tree is available for
 
 ![](../assets/sf/image173.png)
 
-Figure 125: Tree properties
+*Tree properties*
 
 ##### Hierarchical
 
@@ -408,7 +410,7 @@ To create a hierarchical tree, it was previously necessary to create a self-refe
 
 ![](../assets/sf/image174.png)
 
-Figure 126: Hierarchical tree on manager\_id
+*Hierarchical tree on manager\_id*
 
 ##### Column grouping
 
@@ -416,7 +418,7 @@ If a tree is needed based on column grouping, the sorting was used to group the 
 
 ![](../assets/sf/image175.png)
 
-Figure 127: Group data in a tree
+*Group data in a tree*
 
 There are also some changes to the user interface with regard to trees. These can be found in the chapter “Graphical User Interface (GUI)”
 
@@ -432,11 +434,11 @@ In the data component it can be determined what must happen with searching, filt
 
 ![](../assets/sf/image176.png)
 
-Figure 128: Setting search values for a table in 'Data'
+*Setting search values for a table in 'Data'*
 
 ![](../assets/sf/image177.png)
 
-Figure 129: Setting filter values for a table in 'Data'
+*Setting filter values for a table in 'Data'*
 
 For filter and search the options are *Always*, *Advanced* or *Never*. The *Advanced* option affects the expansion of the search/filter screens.
 
@@ -462,7 +464,7 @@ Additionally, you can specify on which columns sorting may and may not be allowe
 
 ![](../assets/sf/image178.png)
 
-Figure 130: Setting sort values for a table in 'Data'
+*Setting sort values for a table in 'Data'*
 
 #### Prefilters
 
@@ -514,7 +516,8 @@ The query is placed in the where-clause by the GUI. The current table can be acc
 
 > ```sql
 > t1.order_date < getdate()
-> ````
+> ​````
+> ```
 
 When conditions have to be assigned to columns, this is done on the *prefilter columns* tab. The developer indicates on this tab which column ID is added to the prefilter and which condition and value the prefilter should have. This concerns the database value and not the translation.
 
@@ -526,7 +529,7 @@ If the application is started in developer mode, the result query can be viewed 
 
 ![](../assets/sf/image179.png)
 
-Figure 131: Setting a new prefilter with a query
+*Setting a new prefilter with a query*
 
 #### Conditional formatting
 
@@ -536,7 +539,7 @@ Under conditional formatting it is indicated how the cell or row will look if al
 
 ![](../assets/sf/image180.png)
 
-Figure 132: Set conditional formatting for a table in 'Data'
+*Set conditional formatting for a table in 'Data'*
 
 **Tip**
 
@@ -552,7 +555,7 @@ Recursive look-up presentation resolving is done automatically by the GUI. When 
 
 ![](../assets/sf/image181.png)
 
-Figure 133: Overview of 'Table Look-ups' in 'Links'
+*Overview of 'Table Look-ups' in 'Links'*
 
 #### Details
 
@@ -562,7 +565,7 @@ Furthermore, you can specify the tab control id. You have the choice from the ta
 
 ![](../assets/sf/image182.png)
 
-Figure 134: Overview of 'Details' in a table
+*Overview of 'Details' in a table*
 
 #### Tasks
 
@@ -570,7 +573,7 @@ This is where the tasks are linked to a table. How to create tasks is described 
 
 ![](../assets/sf/image183.png)
 
-Figure 135: Overview of the links for a task
+*Overview of the links for a task*
 
 #### Reports
 
@@ -578,7 +581,7 @@ This is where the reports are linked to a table. How to create reports is descri
 
 ![](../assets/sf/image184.png)
 
-Figure 136: Overview of report links for a table
+*Overview of report links for a table*
 
 #### Drag drop
 
@@ -598,7 +601,7 @@ The user interface normally selects multiple rows in a grid or tree when draggin
 
 ![](../assets/sf/image185.png)
 
-Figure 137: Drag & Drop
+*Drag & Drop*
 
 The GUI will allow rows to be dropped on any component of the target subject. However, when the user hovers over a multirow-component of the target subject during drag-drop, the GUI will apply one of the following behaviors:
 
@@ -616,7 +619,7 @@ This is a display of the links between tables and menu items. This displays whic
 
 ![](../assets/sf/image186.png)
 
-Figure 138: Display of the menu item links for each table
+*Display of the menu item links for each table*
 
 ### Variants
 
@@ -631,13 +634,13 @@ All GUI settings may be overwritten in a variant. Consider screen types, sorting
 There are two options for modification:
 
 - > At set level
-    
+  
       - > Applies to Grid, Form, Details, Sorting, Filtering and Searching.
-    
+        
       - > As default, these options are hidden and the default is followed. Only when they are turned on with a task, will they be applicable as a set. A *snapshot* is taken, as it were. The entire set remains as it is, even if the default changes.
-    
+  
     <!-- end list -->
-    
+  
       - > New fields will be applied automatically as little as possible in the default. For example, a new field will be automatically hidden in the form if there is a form snapshot. The same applies for a detail if there is a detail snapshot.
 
 <!-- end list -->
@@ -672,9 +675,9 @@ In domains, under the *Applied to* tab, you can see in which columns and paramet
 
 ![](../assets/sf/image187.png)
 
-Figure 139: The 'Domains' tab in 'User interface'
+*The 'Domains' tab in 'User interface'*
 
-#### Control
+#### Controls
 
 Using a control you can specify how a column should be displayed in the user interface. The following options are available for this: (See next page)
 |Control|Description|Platform|SQL|ORACLE|DB2|
@@ -689,7 +692,7 @@ Using a control you can specify how a column should be displayed in the user int
 |DATETIME|Displays a calendar for selecting the date and a time format in hours, minutes and seconds.|All|DATETIME|TIMESTAMP|TIMESTAMP|
 |EMAIL|Opening an e-mail program with e-mail address as *send to*.|All|VARCHAR|VARCHAR2|VARCHAR|
 |FILE|When entering or modifying a file location can be selected.|All|VARCHAR|VARCHAR2|VARCHAR|
-|FILE_UPLOAD[11]|Uploading and downloading a file.
+|FILE_UPLOAD|Uploading and downloading a file.
 The default value of the column is the standard file location for the Windows GUI. The File storage folder is used for the Web GUI if files are uploaded.|All|VARCHAR|VARCHAR2|VARCHAR|
 |FOLDER|Selecting and opening a folder.|Windows/Web|VARCHAR|VARCHAR2|VARCHAR|
 |FONT|Selecting a font.|Windows/Web|VARCHAR|VARCHAR2|VARCHAR|
@@ -727,7 +730,7 @@ If the password control is used, the field has not yet been encrypted. The value
 
 ![](../assets/sf/image189.png)
 
-Figure 140: An example of using images in domain elements
+*An example of using images in domain elements*
 
 ### Default settings
 
@@ -735,4 +738,4 @@ In the default settings component, the settings are as they were specified for t
 
 ![](../assets/sf/image190.png)
 
-Figure 141: 'Default settings' for the tables tab
+*'Default settings' for the tables tab*

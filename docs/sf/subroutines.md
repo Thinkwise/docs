@@ -6,7 +6,7 @@ In the subroutines component, program components, which do not appear in the use
 
 ![](../assets/sf/image262.png)
 
-Figure 200: Overview of the *Subroutines* tab.
+*Overview of the *Subroutines* tab.*
 
 The subroutines can be called both within other logic concepts and external applications.
 

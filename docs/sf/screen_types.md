@@ -26,7 +26,7 @@ All subjects get a standard screen type from the Software Factory. It is however
 
 ![](../assets/sf/image117.png)
 
-Figure 91: Assigning screen types with the 'Screen type' tab
+*Assigning screen types with the 'Screen type' tab*
 
 If a screen type is assigned to a table and this screen type is selected in the list then this is displayed in a bold font. So it can be clearly seen to which tables this screen type is assigned. Underlined screen types are explicitly set up and deviate from the standard.
 
@@ -44,7 +44,7 @@ When a new screen type is created, this can be set up on the *Design* tab. This 
 
 ![](../assets/sf/image118.png)
 
-Figure 92: An overview of the 'Design' screen with 'Screen type'
+*An overview of the 'Design' screen with 'Screen type'*
 
 1.  **Abstract components**  
     In this component an overview is presented of the available abstract screen components that can be dragged onto the work sheet.
@@ -90,13 +90,15 @@ During the design of a screen type various abstract components are available, wh
 
 Table 2: Overview of the abstract components for designing a screen type.
 
+> The maps component has a restriction of maximum of 2,500 geo locations retrievals pera customer per day.
+
 All these components can be dragged to and dropped on the work sheet to compose the required screen. When the first component is dragged onto the work sheet this will fill the complete page. When another component is subsequently dragged onto the work sheet a frame will appear at the position where this is dragged to. The components on the work space can be freely moved by dragging them.
 
 It is possible to display several button bars and the filter next to each other instead of under each other. This allows more efficient use of the available space. White space between the various components (prefilter, report, tasks and filter) is added automatically.
 
 ![](../assets/sf/image140.png)![](../assets/sf/image140.png)
 
-Figure 93: An example bar with prefilters, reports, tasks and a filter option
+*An example bar with prefilters, reports, tasks and a filter option*
 
 #### Tab container
 
@@ -108,7 +110,7 @@ The tab container has two functions:
 
 ![](../assets/sf/image141.png)
 
-Figure 94: An empty 'Design' screen with 'Screen type'
+*An empty 'Design' screen with 'Screen type'*
 
 Tabs can be added via the context menu of the tab container.
 
@@ -128,7 +130,7 @@ In the *Subjects* screen the details of subjects can be distributed across the v
 
 ![](../assets/sf/image142.png)
 
-Figure 95: The drop down menu with the tab controls
+*The drop down menu with the tab controls*
 
 #### Screen Components
 
@@ -144,7 +146,7 @@ These properties can both be set to false to hide their respective properties.
 
 ![](../assets/sf/image143.png)
 
-Figure 96: Set Show borders in screen types
+*Set Show borders in screen types*
 
 #### Preview
 
@@ -158,7 +160,7 @@ When the screen is developed according to your wishes, it is possible to display
 
 ![](../assets/sf/image145.png)
 
-Figure 97: Component from the 'Design' screen where preview tables can be selected
+*Component from the 'Design' screen where preview tables can be selected*
 
 The model is re-loaded with the *Refresh* button.
 
@@ -222,7 +224,7 @@ The scheduler component offers the possibility to compare agreements against res
 
 ![](../assets/sf/image146.png)
 
-Figure 98: Scheduler
+*Scheduler*
 
 Various colors can be assigned for different components; the resources, agreements and working hours, each of which respectively require their own view.
 
@@ -255,7 +257,7 @@ Along with the 3 required views, global settings can also be defined, such as th
 
 ![Dashboard](../assets/sf/image147.jpeg)
 
-Figure 99: Example of a dashboard component
+*Example of a dashboard component*
 
 The dashboard needs the following values in the database:
 
@@ -281,7 +283,7 @@ With the RSS component a feed can be presented, for instance, news from the comp
 
 ![RSS](../assets/sf/image148.jpeg)
 
-Figure 100: Example of RSS
+*Example of RSS*
 
 Two things are necessary in the data for RSS:
 

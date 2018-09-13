@@ -14,7 +14,7 @@ The process flow screen is arranged in a similar manner as the data model screen
 
 ![](../assets/sf/image242.png)
 
-Figure 185: A process flow with various process steps
+*A process flow with various process steps*
 
 ## Process actions
 
@@ -26,13 +26,13 @@ A process action is created by clicking on the button at the top right or via th
 
 ![](../assets/sf/image243.png)
 
-Figure 186: Screen shot of a component from the design screen in 'Process flows'
+*Screen shot of a component from the design screen in 'Process flows'*
 
 The process actions tab opens.
 
 ![](../assets/sf/image244.png)
 
-Figure 187: Overview of the process actions
+*Overview of the process actions*
 
 If there is not yet a process flow running in the end application and the user completes an action that is included in a process flow immediately after the start flag, then this process flow becomes activated.
 
@@ -811,7 +811,7 @@ Ten special process action types are available, called *connectors*. Connectors 
 
 ![](../assets/sf/image245.png)
 
-Figure 188: New connector process action type
+*New connector process action type*
 
 The following connectors are available:
 
@@ -1551,7 +1551,7 @@ Actions are linked together with a process step. This has the effect in the end 
 
 ![](../assets/sf/image246.png)
 
-Figure 189: Overview of the process steps
+*Overview of the process steps*
 
 A process step can be created via the *process step* component or by selecting with the Ctrl-key pressed and drawing lines from the previous to the next process action. There are three different types of process steps each of which are shown with their own colour:
 
@@ -1585,7 +1585,7 @@ Variables can be used to store data produced by process actions and retain this 
 
 ![](../assets/sf/image247.png)
 
-Figure 190: Process variable
+*Process variable*
 
 ## Deep linking
 
@@ -1597,7 +1597,7 @@ Deep linking can be turned on for any process flow by simply selecting a process
 
 ![Enabling deep linking for a process flow.](../assets/sf/image248.png)
 
-Figure 191: Deep linking
+*Deep linking*
 
 ### Using variables in a deep link
 
@@ -1605,7 +1605,7 @@ It is possible to provide values for variables in the deep link, to allow more d
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/deep\_link2.png](../assets/sf/image249.png)
 
-Figure 192: Process variable
+*Process variable*
 
 **Preparing and validating deep links**
 
@@ -1631,7 +1631,7 @@ A frequently requested feature for process flows is the ability to show a dialog
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message2.png](../assets/sf/image250.png)
 
-Figure 193: New process action 'Show message'
+*New process action 'Show message'*
 
 **How it works**
 
@@ -1641,13 +1641,13 @@ It is possible to add message options to a message. These options represent the 
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message5.png](../assets/sf/image251.png)
 
-Figure 194: Message option
+*Message option*
 
 will result in this dialog in the GUI:
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message1.png](../assets/sf/image252.png)
 
-Figure 195: Message with custom buttons
+*Message with custom buttons*
 
 When adding a message option to a message, the options are 'Affirmative' or 'Negative'. An affirmative message option will be given a unique status code of zero or higher, while a negative message option will be given a unique negative status code. These response types and corresponding status codes are directly related to the green and red arrows in the Process Flow Modeler. In some cases it might be necessary to have multiple affirmative and/or multiple negative message options which have different effects on the continuation of the process flow. To achieve this, the 'Status code' value of a message option will be passed as the 'Status code' output parameter of the process action.
 
@@ -1667,7 +1667,7 @@ Each process action has its own set of input and output parameters.
 
 ![](../assets/sf/image253.png)
 
-Figure 196: Input parameters
+*Input parameters*
 
 Input parameters provide a way to configure at runtime what a process action does and they can be assigned a constant value or a variable.
 
@@ -1675,5 +1675,5 @@ Output parameters provide a way to store user input and/or other data produced b
 
 ![](../assets/sf/image254.png)
 
-Figure 197: Output parameters
+*Output parameters*
 

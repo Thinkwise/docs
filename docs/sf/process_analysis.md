@@ -22,13 +22,15 @@ The components *business processes*, *requirements*, *design specifications* and
 
 The business processes are identified to arrive at a complete set of functional requirements for the system. By assuming the present (or desired) business process, it can be established with certainty whether the system contains all functions to support the business process. It is clear for each component of the business process where the system provides support. Furthermore, there are no functions added to the system that do not support the process. It is easier to go through the processes (that employees of the company carry out) with the stakeholders and to so arrive at system requirements, than to directly define the system requirements.
 
-Specifying the business processes takes place in the Software Factory by means of BPMN\[4\] models. A new model is created for which the components that can be used are available in the left hand table. The activities in these models are the user requirements. A major benefit of this integration is that requirements and models are always traceable.
+Specifying the business processes takes place in the Software Factory by means of BPMN models ([Business Process Model and Notation 2.0](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation)).
+
+A new model is created for which the components that can be used are available in the left hand table. The activities in these models are the user requirements. A major benefit of this integration is that requirements and models are always traceable.
 
 The components can be selected and added to the plan by means of drag & drop.
 
 ![](../assets/sf/image56.png)
 
-Figure 38: Overview of a business process
+*Overview of a business process*
 
 ### Set up business processes 
 
@@ -38,13 +40,15 @@ The **main process** can be specified by means of tasks. This is called *Activit
 
 ![](../assets/sf/image57.png)
 
-Figure 39: Main process
+*Main process*
 
-This primary process displays 3 Sub-processes, recognizable by the plus sign at the bottom of the task. Each Constituent Process can cover several swimming lanes\[5\] . For this reason the main process itself has no lanes. When we zoom in on one of the processes (Customer intake) then we see the first example of a lane.
+This primary process displays 3 Sub-processes, recognizable by the plus sign at the bottom of the task. Each Constituent Process can cover several swimming lanes. For this reason the main process itself has no lanes. When we zoom in on one of the processes (Customer intake) then we see the first example of a lane.
+
+> A lane is often assigned to a group or department (actor) which is responsible for the steps within the lane.
 
 ![](../assets/sf/image58.png)
 
-Figure 40: Constituent Process
+*Constituent Process*
 
 This constituent process has four tasks, **Approach prospect**, **Showcase successful project(s)*, *Service license agreement draft* and *Process SLA**, which are carried out sequentially. The lane indicates who or which group is responsible for carrying out the tasks.
 
@@ -52,19 +56,19 @@ By means of a *Black box* (indicated by *Project Management* in the example belo
 
 ![](../assets/sf/image59.png)
 
-Figure 41: Constituent Process with black box
+*Constituent Process with black box*
 
 When a group of tasks becomes too complex for one diagram then a sub-process can be introduced. This refers to an own group of tasks.
 
 ![](../assets/sf/image60.png)
 
-Figure 42: Constituent Process with a sub-process
+*Constituent Process with a sub-process*
 
 This sub-process doesn*t need to be in a lane, since it is part of the same process.
 
 ![](../assets/sf/image61.png)
 
-Figure 43: Sub-process
+*Sub-process*
 
 It is not recommended to create sub-processes in sub-processes. In general, this does not improve the overview.
 
@@ -72,7 +76,7 @@ When a sub-process is called in several diagrams it can be created as a *Call Ac
 
 ![](../assets/sf/image62.png)
 
-Figure 44: Sub-process with call activity
+*Sub-process with call activity*
 
 Entering the id number or name of the call activity is sufficient to call the reference.
 
@@ -82,25 +86,14 @@ Once the business processes have been set up it is now time to give further shap
 
 The specification of Requirements in the Software Factory is based on two standards:
 
-- IREB
-
-- IEEE 830
-
-The IREB\[6\] is the deviser for the international certification *Certified Professional for Requirements Engineering* (CPRE). It is the role of the IREB to draw up a, universally accepted, international qualification scheme, focused on Requirements Engineering for professionals, through the provision of core syllabi and through the establishment of guidelines for the accreditation and the research. The accreditation process and the certification are regulated by the IREB steering committee.
-
-IEEE 830\[7\] states that the following objectives are achieved through the drawing up of requirements:
-
-- Requirements serve as the basis for which an agreement can be reached between the customer and the software supplier about what the product must do.
-
-- Drawing up requirements reduces the effort that is involved in the development of the software, because any uncertainties are identified at an early stage.
-
-- On the basis of the requirements an estimation can be made about the magnitude of the development process.
-
-- The requirements offer a benchmark for validation and verification of the end product.
-
-- Through the platform independent nature of requirements these can be reused in other environments.
-
-- Requirements serve as a basis for modifications to the system.
+- IREB - the deviser for the international certification *Certified Professional for Requirements Engineering* (CPRE). It is the role of the IREB to draw up a, universally accepted, international qualification scheme, focused on Requirements Engineering for professionals, through the provision of core syllabi and through the establishment of guidelines for the accreditation and the research. The accreditation process and the certification are regulated by the IREB steering committee.
+- IEEE 830 - states that the following objectives are achieved through the drawing up of requirements:
+    - Requirements serve as the basis for which an agreement can be reached between the customer and the software supplier about what the product must do.
+    - Drawing up requirements reduces the effort that is involved in the development of the software, because any uncertainties are identified at an early stage.
+    - On the basis of the requirements an estimation can be made about the magnitude of the development process.
+    - The requirements offer a benchmark for validation and verification of the end product.
+    - Through the platform independent nature of requirements these can be reused in other environments.
+    - Requirements serve as a basis for modifications to the system.
 
 The manner of input and the various levels (Business Requirements, User Requirements, System Requirements) are explained in more detail in the following paragraphs.
 
@@ -108,7 +101,7 @@ The manner of input and the various levels (Business Requirements, User Requirem
 
 > A number of steps are gone through to specify the requirements.
 
-Figure 45: Schematic overview of the requirement steps
+*Schematic overview of the requirement steps*
 
 Firstly, the stakeholders are identified by the requirements analyst who will then identify the wishes and requirements of the stakeholders and translate them into requirements. As a third step a distinction is made between the types of requirements. These requirements are then submitted for approval to the stakeholders. A number of iterations can follow until the requirements are complete and approved. A baseline can be made from this set of requirements and a report printed.
 
@@ -152,7 +145,7 @@ It is possible that a functional requirement only support one of the platforms, 
 
 ![](../assets/sf/image63.png)
 
-Figure 46: Set the desired platform for a functional requirement
+*Set the desired platform for a functional requirement*
 
 ##### Non-functional system requirements
 
@@ -218,7 +211,7 @@ The requirements for the system to be developed can be entered under the require
 
 ![](../assets/sf/image64.png)
 
-Figure 47: An example of the tree diagram with requirements
+*An example of the tree diagram with requirements*
 
 These are presented in a tree structure on the left of the screen. In this way the requirements can be built up in a layered manner. The business requirements are at the highest level, with possibly several levels of user requirements below them and at the lowest level the system requirements.
 
@@ -266,7 +259,7 @@ The module to which this requirement belongs. Only visible for functional requir
 
 ![](../assets/sf/image65.png)
 
-Figure 48: Creating a new requirement
+*Creating a new requirement*
 
 ### Baselines
 
@@ -276,7 +269,7 @@ If all diagrams have not been published then the following error message will be
 
 ![](../assets/sf/image67.png)
 
-Figure 49: Error message when creating a baseline
+*Error message when creating a baseline*
 
 By enabling the *Diagrams to publish* prefilter during the process analysis, only the still to be published diagrams are displayed. The *Publish diagram* task can be run for each process diagram.
 
@@ -284,7 +277,7 @@ Now that all diagrams are published the *Create baseline* task can be started ag
 
 ![](../assets/sf/image68.png)
 
-Figure 50: Create baseline
+*Create baseline*
 
 The baseline that is created provides an overview of the status of the requirements at a specific moment in time. The *Requirements* tab contains an overview of all the requirements with the time they were created.
 
@@ -302,7 +295,7 @@ So understanding how a baseline works it makes sense that we have to approve all
 
 ![](../assets/sf/image69.png)
 
-Figure 51: Requirements in review mode
+*Requirements in review mode*
 
 **  
 **
@@ -313,7 +306,7 @@ It is possible to see the previous versions of a requirement. This overview uses
 
 ![](../assets/sf/image70.png)
 
-Figure 52: Previous version
+*Previous version*
 
 ### Requirements report
 
@@ -325,5 +318,5 @@ The report is then printed in a report viewer. A selection can be made to print 
 
 ![](../assets/sf/image71.png)
 
-Figure 53: Example of a report
+*Example of a report*
 

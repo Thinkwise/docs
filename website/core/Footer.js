@@ -94,6 +94,7 @@ class Footer extends React.Component {
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.rights}</section>
       </footer>
     );
   }

@@ -24,7 +24,7 @@ There is support for *clustered and nun-clustered indexes, full-text indexes* (S
 
 ![](../assets/sf/image338.png)
 
-Figure 260: Overview of the 'Indexing' tab in the 'Full model'
+*Overview of the 'Indexing' tab in the 'Full model'*
 
 Most database management systems have analysis tools that recommend indexes on the basis of an analyzed period. These recommended indexes can then be given within the Software Factory.
 
