@@ -48,11 +48,11 @@ Roles and rights can be implemented on the database so that they become availabl
 
 A [non] System Admin user who want to allocate the rights to the database will need some extra rights. By using the next script this is arranged:
 
-use \[master\]
+use [master]
 
 GO
 
-GRANT VIEW SERVER STATE TO \[LOGIN\_NAME\]
+GRANT VIEW SERVER STATE TO [LOGIN_NAME]
 
 GO
 

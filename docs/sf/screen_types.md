@@ -36,7 +36,7 @@ To model an own screen type a new screen type must first be created in the scree
 
 Tip
 
-Thinkwise recommends keeping the name of the screen type abstract, since it could be used in several places. Therefore not *customer* but for instance *parallel\_detail*.
+Thinkwise recommends keeping the name of the screen type abstract, since it could be used in several places. Therefore not *customer* but for instance *parallel_detail*.
 
 When a screen type is not abstract, but is especially developed for one process, then this screen is not suitable for use with other subjects. By turning off **Available for user preferences** this screen is not displayed in IAM when switching screen types with user preferences.
 
@@ -243,7 +243,7 @@ The agreements are the bars that are displayed through time. These can have thei
 
 - Double click on an empty time cell
 
-These tasks can be linked in the extender to tasks from the SF, for which a number of values (such as the appointment\_id, resource\_id or new date) can be filled.
+These tasks can be linked in the extender to tasks from the SF, for which a number of values (such as the appointment_id, resource_id or new date) can be filled.
 
 Working hours  
 The working hours are beginning and end dates that are linked to a resource, and can have a color. This color is used in the scheduler to give color to the background color of a time cell, with which for instance the working hours of an employee or the duration of a project can be visualized.

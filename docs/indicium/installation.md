@@ -77,7 +77,7 @@ To enable the reset password feature, add the following template to the appsetti
 
 Now that the server has been configured, you can start a Mobile GUI against it \(provided that the targeted IAM database contains applications that are available for Mobile\).
 
-If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is ‘iam’, but it’s best to double check this by querying the gui\_appl table.
+If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is ‘iam’, but it’s best to double check this by querying the gui_appl table.
 
 ![Mobile GUI IAM meta source](../assets/indicium/image%20%2811%29.png)
 

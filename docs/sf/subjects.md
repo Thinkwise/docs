@@ -130,7 +130,7 @@ When no presentation field is given, the last reference column is displayed. Whe
 
 Example
 
-If for planning the field employee\_id has a look-up to sub\_project\_employee and the associated presentation field is empty, the translation of employee\_id with sub\_project\_employee is applied. This draws from the employee table, from which the name is chosen. You can see in planning the name from employee, but the available grid is limited to data in sub\_project\_employee.
+If for planning the field employee_id has a look-up to sub_project_employee and the associated presentation field is empty, the translation of employee_id with sub_project_employee is applied. This draws from the employee table, from which the name is chosen. You can see in planning the name from employee, but the available grid is limited to data in sub_project_employee.
 
 This system is known within Thinkwise as *joining through*.
 
@@ -208,9 +208,9 @@ Set up Badges
 
 To use a Badge the check mark Display Badge must be checked with subjects, tasks or reports. This can be done for the default and/or for the variant. Subsequently an interval can be specified in seconds. If no value is entered then the Badge interval for the project version is used, this default is set to 300 seconds. Note that the performance can deteriorate when there are too many badges or when the badges are refreshed too often.
 
-The Badge logic must then be developed. A new logic concept has been introduced for this, comparable with defaults and layouts (these concepts will be explained in more detail in chapter 8). A badge procedure has a variant\_id as parameter, a badge value and the foreign-key-columns of all references to the table. In this way a different badge value can be calculated for each detail and variant.
+The Badge logic must then be developed. A new logic concept has been introduced for this, comparable with defaults and layouts (these concepts will be explained in more detail in chapter 8). A badge procedure has a variant_id as parameter, a badge value and the foreign-key-columns of all references to the table. In this way a different badge value can be calculated for each detail and variant.
 
-The value that is entered for badge\_value will be displayed on the badge. When the badge\_value is NULL, then the badge will not be displayed.
+The value that is entered for badge_value will be displayed on the badge. When the badge_value is NULL, then the badge will not be displayed.
 
 #### Rights
 
@@ -274,7 +274,7 @@ With this field it is determined for a column whether the field is presented as:
 
 The type can be defined differently in the grid and the form. However, this can never be more freely than the definition with column.
 
-> The field *added\_by* is set to read only. It is possible to hide this in the grid. It is however not possible to make this normal in the form.
+> The field *added_by* is set to read only. It is possible to hide this in the grid. It is however not possible to make this normal in the form.
 
 ##### Use when copying
 
@@ -410,7 +410,7 @@ To create a hierarchical tree, it was previously necessary to create a self-refe
 
 ![](../assets/sf/image174.png)
 
-*Hierarchical tree on manager\_id*
+*Hierarchical tree on manager_id*
 
 ##### Column grouping
 
@@ -609,7 +609,7 @@ The GUI will allow rows to be dropped on any component of the target subject. Ho
 
 - When drag-drop task only has one unique set of input, and the selected row will not change the input of the drag-drop task, the GUI will treat the grid or tree like any other component and will not navigate to the hovered row.
 
-> A task is bound on *Sales invoice line* and has the *sales\_invoice\_id* mapped as input. This task is used as a drag-drop target task. The subject *Sales invoice line* is shown as a detail of *Sales invoice*. Since the active row in this detail will not affect the input of the task, hovering different rows during drag-drop will not cause navigation.
+> A task is bound on *Sales invoice line* and has the *sales_invoice_id* mapped as input. This task is used as a drag-drop target task. The subject *Sales invoice line* is shown as a detail of *Sales invoice*. Since the active row in this detail will not affect the input of the task, hovering different rows during drag-drop will not cause navigation.
 
 Context procedures are executed during the hovered navigation, after a short delay. During this time, the cursor might display a question mark.
 
@@ -722,7 +722,7 @@ Control elements have to be defined when a choice is made for the *COMBO*. The u
 
 > The domain *gender* has the elements *man* and *woman*. Instead of displaying this as text in a combo box, an icon of a man and woman can now be displayed in the combo box.
 
-If you select the 'IMAGE\_COMBO' control, an image must be added to the elements. This replaces the text.
+If you select the 'IMAGE_COMBO' control, an image must be added to the elements. This replaces the text.
 
 **Note**
 

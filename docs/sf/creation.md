@@ -54,9 +54,9 @@ After the definition has been generated and validated, the actual source code ca
 
 The composite code is stored in the Software Factory. The code can also be written to disk, which is important when generating a C\# or Java service layer.
 
-- When *Write program objects to disk* is enabled, the composite program objects are placed in the folder *.\\Source\_code\\Program\_objects*.
+- When *Write program objects to disk* is enabled, the composite program objects are placed in the folder *.\\Source_code\\Program_objects*.
 
-- When *Write code files to disk* is enabled, the code files are written to the *.\\Source\_code\\Group* folder. The C\# service tier is placed in .\\Source\_code\\CSharp and the Java service tier in .\\Source\_code\\Java.
+- When *Write code files to disk* is enabled, the code files are written to the *.\\Source_code\\Group* folder. The C\# service tier is placed in .\\Source_code\\CSharp and the Java service tier in .\\Source_code\\Java.
 
 ### Generation method
 
@@ -122,7 +122,7 @@ When the model of a table is changed, the old table will be renamed and a new ta
 
 When the generation has been carried out and all code has been executed and/or compiled, the end product is ready to be used. For this, the ini must be modified so that it uses the new project version and the status of the project version can be set to Production.
 
-When an existing database is upgraded, it is possible that not all data conforms to the (new) checks and constraints. To check the database, the base project SQLSERVER\_VERIFICATION, DB2\_VERIFICATION or ORACLE\_VERIFICATION can be linked. After having carried out all the steps again, an extra code file with controls will have been generated, which can be executed on the database.
+When an existing database is upgraded, it is possible that not all data conforms to the (new) checks and constraints. To check the database, the base project SQLSERVER_VERIFICATION, DB2_VERIFICATION or ORACLE_VERIFICATION can be linked. After having carried out all the steps again, an extra code file with controls will have been generated, which can be executed on the database.
 
 It is also possible to implement offline logic. Modifications in JavaScript templates have no effect until these actions are executed. When implementing offline logic the JavaScript code is retained as it was at the moment of execution.
 

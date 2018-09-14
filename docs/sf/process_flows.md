@@ -42,7 +42,7 @@ The following process actions are available:
 
 ### Activate document 
 
-An open document can be activated with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
+An open document can be activated with this process action. Since *tab_id* and *tab_variant_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
 
 <table>
 <thead>
@@ -357,7 +357,7 @@ This process action has no input parameters and returns the following output par
 
 ### Close document
 
-An open document can be closed with this process action. Since *tab\_id* and *tab\_variant\_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
+An open document can be closed with this process action. Since *tab_id* and *tab_variant_id* are not sufficient to identify a document, this process action works on the basis of a document ID that is returned by the *Document open* and *Zoom in on detail* process actions, described in chapter 0 and chapter 0.
 
 <table>
 <thead>
@@ -1603,7 +1603,7 @@ Deep linking can be turned on for any process flow by simply selecting a process
 
 It is possible to provide values for variables in the deep link, to allow more dynamic scenarios to be implemented, such as navigating to a specific record. If the variable needs to be allowed in a deep link, simply check the 'Available in deep link' box for the variable. Or the 'Mandatory in deep link' box, if deep link needs to be mandatory for all new process flows.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/deep\_link2.png](../assets/sf/image249.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/deep_link2.png](../assets/sf/image249.png)
 
 *Process variable*
 
@@ -1615,13 +1615,13 @@ When a deep link is started, it might be necessary to validate or prepare some t
 
 Once a process flow for deep linking is configured, the link itself needs to be created in order to send it to someone or use it in an e-mail or report template. The format of a deep link URL is as follows:
 
-https://\<server\>/\<web\_application\>/DeeplinkHandler.ashx?guiApplAlias=**\<**gui\_appl\_alias\>\&processFlowID=\<process\_flow\_id\>&$\<variable1\>**=**\<value1\>&$\<variable2\>**=**\<value2\>
+https://\<server\>/\<web_application\>/DeeplinkHandler.ashx?guiApplAlias=**\<**gui_appl_alias\>\&processFlowID=\<process_flow_id\>&$\<variable1\>**=**\<value1\>&$\<variable2\>**=**\<value2\>
 
 The template above needs to be filled out as follows:
 
-- \<gui\_appl\_alias\> needs to be replaced with the alias of the application in IAM. When starting the GUI with an SF metasource, this parameter can be removed from the URL.
+- \<gui_appl_alias\> needs to be replaced with the alias of the application in IAM. When starting the GUI with an SF metasource, this parameter can be removed from the URL.
 
-- \<process\_flow\_id\> needs to be replaced with the ID of the process flow which needs to be started by the deep link.
+- \<process_flow_id\> needs to be replaced with the ID of the process flow which needs to be started by the deep link.
 
 - \<variable\> and \<value\> need to be replaced by the ID of the process variable and the value it should receive. Multiple variables can be specified in the deep link. Note that the ID of the process variable needs to be preceded by a $ sign.
 
@@ -1629,23 +1629,23 @@ The template above needs to be filled out as follows:
 
 A frequently requested feature for process flows is the ability to show a dialog to the user with several options and base the continuation of the flow on the option chosen by the user. As of version 2017.2 of the Thinkwise Suite, we have introduced the process action 'Show message' which makes this possible.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message2.png](../assets/sf/image250.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message2.png](../assets/sf/image250.png)
 
 *New process action 'Show message'*
 
 **How it works**
 
-The process action 'Show message' works with the existing messages in the Software Factory. When creating a process action of the type 'Show message', it is necessary to choose a predefined message. Messages which are used in process flows can contain parameters in their translation which correspond to the IDs of the variables in the process flow. The GUI will replace these parameters with the current value of the corresponding variable. For example: *"The value of variable\_1 is: {variable\_1}."*.
+The process action 'Show message' works with the existing messages in the Software Factory. When creating a process action of the type 'Show message', it is necessary to choose a predefined message. Messages which are used in process flows can contain parameters in their translation which correspond to the IDs of the variables in the process flow. The GUI will replace these parameters with the current value of the corresponding variable. For example: *"The value of variable_1 is: {variable_1}."*.
 
 It is possible to add message options to a message. These options represent the choices a user can make when presented with the message. For example, this configuration in the Software Factory:
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message5.png](../assets/sf/image251.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message5.png](../assets/sf/image251.png)
 
 *Message option*
 
 will result in this dialog in the GUI:
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show\_message1.png](../assets/sf/image252.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message1.png](../assets/sf/image252.png)
 
 *Message with custom buttons*
 

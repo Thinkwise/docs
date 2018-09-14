@@ -6,7 +6,7 @@ The menu is displayed on the left-hand side of the end product, except the tile 
 
 There are three different kinds of menus available, a quick launch toolbar, a tree structure and a tiles menu.
 
-The differences between the quick launch toolbar and tree structure toolbar: Where a quick launch toolbar only goes one level deep, a tree structure can have several levels. When a new menu is created, menu groups must first be created within this menu. These groups work as headings for the underlying menu items. These groups are filled with menu-items which refer to a specific table (variant), task (version), report (version) or customized screen\[8\].
+The differences between the quick launch toolbar and tree structure toolbar: Where a quick launch toolbar only goes one level deep, a tree structure can have several levels. When a new menu is created, menu groups must first be created within this menu. These groups work as headings for the underlying menu items. These groups are filled with menu-items which refer to a specific table (variant), task (version), report (version) or customized screen[8].
 
 It can be indicated in the layout settings whether the icons of the items must also be displayed in the menu or only in the document tabs.
 

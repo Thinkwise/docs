@@ -44,6 +44,7 @@
       "sf/subroutines"
     ],
     "Business Logic": [
+      "sf/business_logic",
       "sf/functionality",
       "sf/code_search",
       "sf/code_overview"

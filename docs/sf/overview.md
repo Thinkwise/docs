@@ -18,7 +18,7 @@ The following data needs to be provided to create a project. This also determine
 
 - The language is specified for the requirements and the application logic.
 
-- A choice has to be made for an RDBMS\[3\] (database platform).
+- A choice has to be made for an RDBMS[3] (database platform).
 
 - The application logic layer determines where the application logic is stored and in which programming language this takes place. In fact this determines the architecture of the application. A choice can be made from two forms, with the functionality on the database, or a structure for which the functionality is on a middle tier.
 
@@ -191,7 +191,7 @@ A storage account need to be setup first for Azure file storage to work properly
 
 #### Database 
 
-Database storage will store the bytes directly in a storage column on the database. The field to select the storage column becomes visible when a column is set to have a database storage location. The storage column needs to be a column with the VARBINARY\_MAX datatype.
+Database storage will store the bytes directly in a storage column on the database. The field to select the storage column becomes visible when a column is set to have a database storage location. The storage column needs to be a column with the VARBINARY_MAX datatype.
 
 Take into account that Filestream storage only available is when using a SQL server database. To use filestream storage, the storage column will need the datatype FILESTREAM. In addition, the database requires a table with a filestream column to have a ROWGUID column as well.
 
@@ -247,7 +247,7 @@ During copying the project id and version id are replaced by the new project and
 
 ### Base projects
 
-It is possible to indicate whether a project is a base project. This is a project which will be used in several other projects. The base project contains certain details that are necessary for the correct operation of a project, a supplement or an addition, such as a standard lay-out or a requirements model. When this check mark is checked it is possible to opt for immediate copying, this ensures that the data in the base project is immediately copied to a new work project. Furthermore, it can be indicated whether the base project must be linked as standard in all new projects.
+It is possible to indicate whether a project is a base project. This is a project which will be used in several other projects. The base project contains certain details that are necessary for the correct operation of a project, a supplement or an addition, such as a standard layout or a requirements model. When this check mark is checked it is possible to opt for immediate copying, this ensures that the data in the base project is immediately copied to a new work project. Furthermore, it can be indicated whether the base project must be linked as standard in all new projects.
 
 Bear in mind that only base projects with the status *In production* are copied.
 

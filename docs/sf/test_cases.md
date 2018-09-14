@@ -44,7 +44,7 @@ When the test is complete, it can be stored, so that it can be fed back to the S
 
 #### Creating test cases manually.
 
-When creating a test case you have to enter a test case id. For example, if the test case adds a customer, then 'add\_customer" would be a logical name.
+When creating a test case you have to enter a test case id. For example, if the test case adds a customer, then 'add_customer" would be a logical name.
 
 The sequence number which is entered for the test case is relative in all test cases, that are not in a test suite. A distinction is made later in the use interface between individual test cases and test cases in a test suite.
 
@@ -70,7 +70,7 @@ The following input values can be selected for the user action *Modify report ex
 
 A § (paragraph) separated input value can be entered for the user action *Go to row*. The paragraph sign serves as a separator to specify a composite primary key. For example: 10§2
 
-All entered queries are executed scalar. This means that the query only returns the value of the first cell of the first row. In the queries you can make use of square brackets \[...\] containing the id of the column. In this way the value of the column in the active row can be included in the query,
+All entered queries are executed scalar. This means that the query only returns the value of the first cell of the first row. In the queries you can make use of square brackets [...] containing the id of the column. In this way the value of the column in the active row can be included in the query,
 
 **Example**
 
@@ -97,7 +97,7 @@ For the control type Message, the expected type of message can be specified as t
 
 #### Generate test cases
 
-Apart from manually entering and recording test cases, test cases can also be generated automatically. By adding the basic project DEFAULT\_TESTCASES to the project, a number of test cases are already generated as default, including:
+Apart from manually entering and recording test cases, test cases can also be generated automatically. By adding the basic project DEFAULT_TESTCASES to the project, a number of test cases are already generated as default, including:
 
 - Add and cancel rows; in each table with defaults or layouts, add and cancel is pressed. The defaults and layouts are executed and superficial errors are immediately identified.
 

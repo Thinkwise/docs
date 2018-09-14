@@ -90,7 +90,7 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 - Select your document under *View Macros*
 
-- Type the text field under *macro name* TSFReport\_+ your report\_id
+- Type the text field under *macro name* TSFReport_+ your report_id
 
 - Select the correct document to which the Macro must be linked:
 
@@ -128,7 +128,7 @@ Macro code:
 > 
 > *' Use your folder name...*
 > 
-> *strFolder = *C:\\your\_folder\\Reports\\**
+> *strFolder = *C:\\your_folder\\Reports\\**
 > 
 > *' Use your .odc name...*
 > 
@@ -140,11 +140,11 @@ Macro code:
 > 
 > *' your ADO connection string*
 > 
-> *strConnection = Environ(*TSFTOWORD\_CONN*)*
+> *strConnection = Environ(*TSFTOWORD_CONN*)*
 > 
 > *' Build the Query string*
 > 
-> *strQuery = *SELECT \* FROM **your\_table** where * + Environ(*TSFTOWORD\_SQL*)*
+> *strQuery = *SELECT \* FROM **your_table** where * + Environ(*TSFTOWORD_SQL*)*
 > 
 > *' Open the data source*
 > 
@@ -154,11 +154,11 @@ Macro code:
 > 
 > *.MainDocumentType = wdFormLetters*
 > 
-> *.OpenDataSource \_*
+> *.OpenDataSource _*
 > 
-> *Name:=strODCFile, \_*
+> *Name:=strODCFile, _*
 > 
-> *Connection:=strConnection, \_*
+> *Connection:=strConnection, _*
 > 
 > *SQLStatement:=strQuery*
 > 
@@ -421,39 +421,39 @@ To generate a report in PDF format with the TSFReportMailer, at least the follow
 
 ##### Mandatory
 
-- report\_id
+- report_id
 
-- export\_file\_spec
+- export_file_spec
 
 ##### Optional
 
-- overwrite\_old
+- overwrite_old
 
-- export\_file\_extension (default *pdf*)
+- export_file_extension (default *pdf*)
 
 #### Email via Outlook
 
-To send an email with Outlook via the TSFReportMailer, at least the following parameters must be entered and the parameter *send\_mail* should be set to *true*, which is the default value.
+To send an email with Outlook via the TSFReportMailer, at least the following parameters must be entered and the parameter *send_mail* should be set to *true*, which is the default value.
 
 ##### Settings
 
-- send\_mail = true
+- send_mail = true
 
 ##### Mandatory
 
 - e-mail
 
-**Note**: this is not mandatory if the parameter *open\_in\_outlook* is set to *true*, the default value of this is *false*.
+**Note**: this is not mandatory if the parameter *open_in_outlook* is set to *true*, the default value of this is *false*.
 
 ##### Optional
 
-- smtp\_only
+- smtp_only
 
-- send\_mail
+- send_mail
 
-- open\_in\_outlook
+- open_in_outlook
 
-- save\_mail
+- save_mail
 
 - html
 
@@ -469,15 +469,15 @@ To send an email with Outlook via the TSFReportMailer, at least the following pa
 
 - subject
 
-- use\_signature
+- use_signature
 
-- signature\_text
+- signature_text
 
-- signature\_image
+- signature_image
 
 - account
 
-- extra\_attachments
+- extra_attachments
 
 #### Email via SMTP
 
@@ -485,28 +485,28 @@ The TSFReportMailer tries as much as possible to revert to SMTP as it would othe
 
 ##### Settings
 
-- send\_mail = true
+- send_mail = true
 
-- smtp\_only = true
+- smtp_only = true
 
 ##### Required fields
 
-- smtp\_username
+- smtp_username
 
-- smtp\_password
+- smtp_password
 
-- smtp\_host
+- smtp_host
 
-- smtp\_from\_mail
+- smtp_from_mail
 
 - e-mail
 
 ##### Optional fields
 
-- smtp\_port
+- smtp_port
 
-- smtp\_from\_displayname
+- smtp_from_displayname
 
-- smtp\_use\_ssl
+- smtp_use_ssl
 
 It is also possible to specify (part of) the SMTP settings using parameters in the configuration file, so that these are the same for all users.

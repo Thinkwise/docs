@@ -6,7 +6,7 @@ With the introduction of Europe's *General Data Protection Regulation*, it is mo
 
 Using the *Data sensitivity* screen, it is possible to set the sensitivity for each data column of the application. View-columns, calculated fields, and identity fields are not data columns and therefore are not shown. A prefilter is provided to suggest which columns are sensitive, based on keywords or because columns with the same name or domain are also marked sensitive.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/Data\_sensitive\_screen3.png](../assets/sf/image97.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/Data_sensitive_screen3.png](../assets/sf/image97.png)
 
 *Data sensitivity*
 
@@ -20,7 +20,7 @@ For sensitive columns, it is mandatory to select an anonymization type. There ar
 
 Foreign key columns are automatically anonymized based on the settings of the source column. They can be recognized by the icon as shown in below figure and are hidden by the “undecided columns” prefilter.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/ak\_icon.png](../assets/sf/image98.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/ak_icon.png](../assets/sf/image98.png)
 
 *Foreign key columns*
 
@@ -34,7 +34,7 @@ When this option is used to anonymize the data, a random value is generated that
 
 #### Expression
 
-In certain cases, a value dependents on the value of other columns or has to meet specific requirements. In that case, the option “Expression” can be used. For instance, if *end\_date *is mandatory when *is\_ended* is true, then a random *end\_date *can be generated with the following query:
+In certain cases, a value dependents on the value of other columns or has to meet specific requirements. In that case, the option “Expression” can be used. For instance, if *end_date *is mandatory when *is_ended* is true, then a random *end_date *can be generated with the following query:
 
 ```sql
 case
@@ -67,7 +67,7 @@ To prevent mistakes there are two checks:
 
 Based on the data sensitivity-settings, the Software Factory will generate two stored procedures:
 
-1.  Stored procedure *tsf\_test\_data\_anonymization* to test the data sensitivity-settings and sample data
+1.  Stored procedure *tsf_test_data_anonymization* to test the data sensitivity-settings and sample data
 
     ```sql
     -- Use this statement to test the data sensitivity settings
@@ -75,7 +75,7 @@ Based on the data sensitivity-settings, the Software Factory will generate two s
     go
     ```
 
-2.  Stored procedure *tsf\_anonymize\_data* to actually anonymize the data
+2.  Stored procedure *tsf_anonymize_data* to actually anonymize the data
 
     ```sql
     -- Use this statement to anonymize the data

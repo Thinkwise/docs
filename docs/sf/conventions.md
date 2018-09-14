@@ -30,4 +30,4 @@ For example, specify choices for:
 
 - Style
   
-  - House style, color schemes and icon set\[2\] for tables, tasks, reports and prefilters
+  - House style, color schemes and icon set[2] for tables, tasks, reports and prefilters

@@ -31,7 +31,7 @@ It is also important that the measured value(s) that are used in the cube are de
 
 #### Defining OLAP Cube Fields
 
-In contrast to cubes where the source data is derived from a table or view, the source data here comes from various tables. Since it is not possible to change the table name in the cube fields, a special syntax has to be entered in the cube field id in order to still be able to select the data from multiple tables. The syntax is as follows: **table\_name.column\_id*.*
+In contrast to cubes where the source data is derived from a table or view, the source data here comes from various tables. Since it is not possible to change the table name in the cube fields, a special syntax has to be entered in the cube field id in order to still be able to select the data from multiple tables. The syntax is as follows: **table_name.column_id*.*
 
 Configuration requirements:
 
@@ -198,6 +198,6 @@ Available graph types are:
 
 ##### Areas in graphs
 
-To model an area in a graph, you can use a constant line, the name of which starts with *area\_*. The minimum value can be specified with the *Value* field and the height or width of the area with *Thickness*.
+To model an area in a graph, you can use a constant line, the name of which starts with *area_*. The minimum value can be specified with the *Value* field and the height or width of the area with *Thickness*.
 
 > It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique, since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.

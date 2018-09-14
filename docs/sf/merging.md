@@ -42,7 +42,7 @@ When a branch is merged with the trunk, then the generated objects of this trunk
 
 #### Base versions
 
-When creating a branch a base project version is automatically created. This base version is henceforth prefixed with the project version of the trunk. E.g. *1.10\_BASE* to indicate on the basis of which version it has been created.
+When creating a branch a base project version is automatically created. This base version is henceforth prefixed with the project version of the trunk. E.g. *1.10_BASE* to indicate on the basis of which version it has been created.
 
 #### Active merge sessions
 
@@ -78,19 +78,19 @@ After the conflicts are detected they can be resolved one by one. It is also pos
 
 1.  Only carry out the trunk action: Only the parent and children of the trunk are included.
 
-![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\only\_trunk.bmp](../assets/sf/image47.jpeg)
+![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\only_trunk.bmp](../assets/sf/image47.jpeg)
 
 2.  Only carry out the branch action: Only the parent and children of the branch are included.
 
-![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\only\_branch.bmp](../assets/sf/image48.jpeg)
+![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\only_branch.bmp](../assets/sf/image48.jpeg)
 
 3.  Carry out trunk actions with dependent branch actions: The parent and children of the trunk plus the children of the branch are included.
 
-![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\trunk\_with\_dependant\_branch.bmp](../assets/sf/image49.jpeg)
+![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\trunk_with_dependant_branch.bmp](../assets/sf/image49.jpeg)
 
 4.  Carry out branch actions with dependent trunk actions: The parent and children of the branch plus the children of the branch are included.
 
-> ![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\branch\_with\_dependant\_trunk.bmp](../assets/sf/image50.jpeg)
+> ![C:\\Users\\gtimmers\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\branch_with_dependant_trunk.bmp](../assets/sf/image50.jpeg)
 
 **NOTE**
 

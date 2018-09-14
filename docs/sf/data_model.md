@@ -196,7 +196,7 @@ All columns are available for copying to the created view in the *copy columns* 
 ![](../assets/sf/image92.png)
 *A view with the option to copy columns*
 
-When this takes place, a popup screen appears with the option to enter a prefix. This prefix is placed before the name of the copied column. For example, the name column can be copied from the employee table with the prefix *employee*. *Name* is now displayed in the view as *employee\_name*. When the column name starts with the prefix then the prefix is not added for a second time.
+When this takes place, a popup screen appears with the option to enter a prefix. This prefix is placed before the name of the copied column. For example, the name column can be copied from the employee table with the prefix *employee*. *Name* is now displayed in the view as *employee_name*. When the column name starts with the prefix then the prefix is not added for a second time.
 
 ![](../assets/sf/image93.png)
 *Popup that appears when tables are copied*

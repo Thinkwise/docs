@@ -14,7 +14,7 @@ The data conversion screen has four tasks:
 
 - Delete data conversion – deletes all data conversions between two versions
 
-The first step is to check the selected previous version. This ensures that the new version is created from the correct version. That the data is converted to the new version on the basis of the correct version. When work is carried out with various branches and/ or several versions, it can be confusing which version is the correct version to use to create a new version. With the sf\_product\_info table in the database it can be checked which version is correct.
+The first step is to check the selected previous version. This ensures that the new version is created from the correct version. That the data is converted to the new version on the basis of the correct version. When work is carried out with various branches and/ or several versions, it can be confusing which version is the correct version to use to create a new version. With the sf_product_info table in the database it can be checked which version is correct.
 
 Through the use of the *Update previous version* task, the previous project version and data conversion mapping can be converted. It is possible to define a ​mapping for various earlier project versions, but as default only the mapping for the current previous version is shown.
 

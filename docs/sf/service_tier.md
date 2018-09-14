@@ -205,7 +205,7 @@ At least .NET Framework v4.5 is required to compile the C\# service tier.
 
 #### Build.bat
 
-If version 4.5 of the .Net Framework is installed the build.bat script can be executed. All required packages will be downloaded by NuGet and the solution is built with MSBuild. When this is completed successfully the required components to deploy the service tier on IIS are copied to a folder named **service\_tier**.
+If version 4.5 of the .Net Framework is installed the build.bat script can be executed. All required packages will be downloaded by NuGet and the solution is built with MSBuild. When this is completed successfully the required components to deploy the service tier on IIS are copied to a folder named **service_tier**.
 
 ![](../assets/sf/image328.png)
 
@@ -276,25 +276,25 @@ Below is an example with which the Json.NET package is added to the project.
 
 *Visual Studio*
 
-2.  Retrieve the reference from **\[service\_tier\_name\]\\\[service\_tier\_name\].csproj**.
+2.  Retrieve the reference from **[service_tier_name]\\[service_tier_name].csproj**.
 
 > ![](../assets/sf/image334.png)
 
 *Visual Studio overview*
 
-3.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp\_csproj\_references** program object.
+3.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp_csproj_references** program object.
 
 > ![](../assets/sf/image335.png)
 
 *Weave control procedure into the Software Factory*
 
-4.  Expand the NuGet configuration from **\[service\_tier\_name\]\\packages.config**.
+4.  Expand the NuGet configuration from **[service_tier_name]\\packages.config**.
 
 ![](../assets/sf/image336.png)
 
 *NuGet configuration*
 
-5.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp\_nuget\_packages\_config** program object.
+5.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp_nuget_packages_config** program object.
 
 ![](../assets/sf/image337.png)
 
@@ -304,9 +304,9 @@ When the Library is part of an internal project the choice can be made to use an
 
 - <http://docs.nuget.org/create/hosting-your-own-nuget-feeds>
 
-The location of this repository must be woven into the **csharp\_NuGet\_targets\_repositories** program object to be able to use it in the service tier.
+The location of this repository must be woven into the **csharp_NuGet_targets_repositories** program object to be able to use it in the service tier.
 
-Libraries, which are not distributed via NuGet, can also be added. In this case the reference must be added to the generated project via Visual Studio. Afterwards, just as in the explanation above, the reference from the csproj file must be woven into the **csharp\_csproj\_reference** program object via a template.
+Libraries, which are not distributed via NuGet, can also be added. In this case the reference must be added to the generated project via Visual Studio. Afterwards, just as in the explanation above, the reference from the csproj file must be woven into the **csharp_csproj_reference** program object via a template.
 
 ## Synchronize offline changes after an upgrade
 
@@ -320,15 +320,15 @@ When setting up the stale sync service layer we assume in the manual that there 
 
 To obtain a stale sync:
 
-- The user links for project version 2.00 the base project CSHARP\_SERVICE\_TIER\_UG.
+- The user links for project version 2.00 the base project CSHARP_SERVICE_TIER_UG.
 
 - After that the definition and source code have to be generated and the build.bat has to be run.
 
-This results in the folder service\_tier\_stale\_sync, which is written to the same location where the service\_tier folder also resides.
+This results in the folder service_tier_stale_sync, which is written to the same location where the service_tier folder also resides.
 
-The service\_tier\_stale\_sync is a replacement for the old service layer of version 1.00. This should then therefore run on the old web address as this is known in IAM.
+The service_tier_stale_sync is a replacement for the old service layer of version 1.00. This should then therefore run on the old web address as this is known in IAM.
 
-The service\_tier of 2.00 must run on another address. This must therefore also be registered in IAM. Mobile always sends the 1.00 data for the stale sync mechanism to the address where 1.00 ran.
+The service_tier of 2.00 must run on another address. This must therefore also be registered in IAM. Mobile always sends the 1.00 data for the stale sync mechanism to the address where 1.00 ran.
 
 The stale sync service layer can receive messages directed to version 1.00, transform them and execute them on the 2.00 database. The web.config of the stale sync service layer therefore also refers to 2.00. The default transformation takes place on the basis of version management and on the basis of nomenclature. How this is regulated is shown in the table below.
 
@@ -351,13 +351,13 @@ The stale sync service layer can receive messages directed to version 1.00, tran
 ||Delete|Selects, as default, the table in 2.00 on the basis of table nomenclature.<br>Transforms, as default, the 1.00 primary key to a 2.00 primary key on the basis of column nomenclature.<br>Executes a 2.00 delete.|
 
 
-This means that the target entities must be present in the 2.00 service layer, otherwise the stale sync service layer has no back-end to react against. To offer this it is possible to manually tag the target tables that are still necessary in version 2.00 with PROXY\_REQUIRED.
+This means that the target entities must be present in the 2.00 service layer, otherwise the stale sync service layer has no back-end to react against. To offer this it is possible to manually tag the target tables that are still necessary in version 2.00 with PROXY_REQUIRED.
 
 If the 1.00 entity cannot be found in 2.00 (e.g. a table is deleted or a task is renamed) an error message is displayed. If a 1.00 column or parameter cannot be found in 2.00, then this is ignored.
 
 Messages from the 2.00 service layer (triggers, defaults) are possibly not correctly picked up by the GUI because the message ID is possibly not yet known.
 
-It is possible to personally intervene on the transformation, overwrite the default transformation. This concerns the choice for the target entity, the transformation of a record from 1.00 to 2.00, the transformation of a primary key from 1.00 to 2.00 and the transformation of the primary key back from 2.00 to 1.00 (with identity, for detail records). This is C\# code and can be woven via the CSHARP\_TRANSFORMATION code group. When making assignments the *Exclude framework* prefilter needs to be disabled.
+It is possible to personally intervene on the transformation, overwrite the default transformation. This concerns the choice for the target entity, the transformation of a record from 1.00 to 2.00, the transformation of a primary key from 1.00 to 2.00 and the transformation of the primary key back from 2.00 to 1.00 (with identity, for detail records). This is C\# code and can be woven via the CSHARP_TRANSFORMATION code group. When making assignments the *Exclude framework* prefilter needs to be disabled.
 
 StaleSync is activated during sign in:
 

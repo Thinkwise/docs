@@ -8,7 +8,7 @@ Every name of for instance a table, column or reference is built up from sub-nam
 
 **Example**
 
-The *sales order* object is written in the Software Factory as *sales\_order* and consists of the sub-names *sales* and *order*.
+The *sales order* object is written in the Software Factory as *sales_order* and consists of the sub-names *sales* and *order*.
 
 It is agreed within the project that *commission* is always used and never *fee*; *fee* is therefore a rejected sub-name. The plural *orders* is also a rejected sub-name, since the singular *order* always needs to be used.
 
@@ -19,7 +19,7 @@ Instructions that must be observed within the Software Factory to come to an acc
 - Names of tables must always be defined in the singular.
 - Defining tables in plural and columns in the singular leads to a needlessly larger set of sub-names and translation objects.
 
-- All id-columns need to be written in small letters (except for project\_id, for instance *PROJECT\_PORTAL*).
+- All id-columns need to be written in small letters (except for project_id, for instance *PROJECT_PORTAL*).
 
 - Composite words always need to be written separately with an underscore character between them. Do not use spaces in the names.
 

@@ -104,7 +104,7 @@ When the mobile device is lost, it is possible to disconnect this device with th
 
 ## User preferences sets
 
-To give the users the option of storing their user preferences a configuration must be selected under 'Configuration id' within the form group \'User preferences\'. Five configurations are provided as default: None, Resize, Move, On\_Off, Complete. These configurations succeed each other with regard to the possibilities that the user has.
+To give the users the option of storing their user preferences a configuration must be selected under 'Configuration id' within the form group \'User preferences\'. Five configurations are provided as default: None, Resize, Move, On_Off, Complete. These configurations succeed each other with regard to the possibilities that the user has.
 
 ![](../assets/iam_admin/image17.png)
 
@@ -120,7 +120,7 @@ Users can collapse and expand their menu and ribbon. Furthermore they can change
 
 The user has the same possibilities as in the 'Resize' configuration plus the possibility to determine their own start objects and set the sort sequence of all components.
 
-### On\_Off
+### On_Off
 
 With this option the user has all options available, including changing the application language. The only option that is not available, is changing his screen types.
 

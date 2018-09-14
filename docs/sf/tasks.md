@@ -16,7 +16,7 @@ If a confirmation must be requested when executing a task, the *Request confirma
 
 **Tip**
 
-The translation of the confirmation can be modified by creating a translation object with id *gui\_confirmexecutetask\_* + task\_id
+The translation of the confirmation can be modified by creating a translation object with id *gui_confirmexecutetask_* + task_id
 
 ### Settings
 
@@ -32,7 +32,7 @@ When creating a new task you have to select the type of task to be created. The 
 
 Tasks can be used to call an external program or to open a network or web address. The location of the external program or the network or web address must be entered in the *Object name* field. Any parameters that are added to the task, will be passed on to the call of the external program. However, this only works with external programs and not with network or web addresses.
 
-With the use of parameters it is also possible to create dynamic external program tasks. This can be used in situations, in which the external program, network or web address to be opened is not always the same, but changes depending on the situation. In these cases a parameter must be added to the task with the location of the external program or network or web address. The *task parameter id* of this parameter must subsequently be specified between square brackets in the *Object name* field of the task (e.g. \[URL\]). For dynamic external program tasks, all other parameters are ignored.
+With the use of parameters it is also possible to create dynamic external program tasks. This can be used in situations, in which the external program, network or web address to be opened is not always the same, but changes depending on the situation. In these cases a parameter must be added to the task with the location of the external program or network or web address. The *task parameter id* of this parameter must subsequently be specified between square brackets in the *Object name* field of the task (e.g. [URL]). For dynamic external program tasks, all other parameters are ignored.
 
 **Example**
 
@@ -106,21 +106,21 @@ When performing long-running tasks or tasks in combination with multi-selection,
 
 *Progress Percentage of executing a task*
 
-To display the percentage, the procedure 'tsf\_send\_progress' should be called from the SQL code:
+To display the percentage, the procedure 'tsf_send_progress' should be called from the SQL code:
 
-tsf\_send\_progress *\[message id\], \[parameterstring\], \[percentage\]*
+tsf_send_progress *[message id], [parameterstring], [percentage]*
 
 ##### Message id
 
-Optional parameter with which text above the progress bar (default *Run task ...*) can be changed by the translation of a message\_id.
+Optional parameter with which text above the progress bar (default *Run task ...*) can be changed by the translation of a message_id.
 
 ##### Parameter string
 
-Optional parameter with which parameters in the translation can be filled when use is made of a specific message\_id. It is also possible to use translations of model objects, such as columns or tables. For more information see paragraph 8.2.
+Optional parameter with which parameters in the translation can be filled when use is made of a specific message_id. It is also possible to use translations of model objects, such as columns or tables. For more information see paragraph 8.2.
 
 For example for SQL Server:
 
-> exec tsf\_send\_progress 'copy\_customer', '\<text\>Thinkwise\</text\>', 82;
+> exec tsf_send_progress 'copy_customer', '\<text\>Thinkwise\</text\>', 82;
 
 ##### Percentage
 
@@ -138,7 +138,7 @@ Tasks can take a long time to process. There are four options to give instructio
 
 2.  Yes (no progress indicator) – The user must wait for the result (de GUI freezes and hourglass is shown).
 
-3.  No – The action is executed in background and the user can continue working.\[12\]
+3.  No – The action is executed in background and the user can continue working.[12]
 
 4.  Optional – The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog (TODO screenshot…).
 
