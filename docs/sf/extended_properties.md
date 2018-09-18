@@ -4,7 +4,7 @@ title: Extended properties
 
 ## Extended properties
 
-Extended properties are used to control new features of the user interfaces and application tier, while the settings for those features have not yet been formalized in the Software Factory model. 
+Extended properties are used to control new features of the user interfaces and application tier, while the settings for those features have not yet been formalized in the Software Factory model.
 
 The parameters below can be used as extended properties in the SF and IAM. An asterix indicates that a parameter is application specific in IAM. Application specific parameters can also be used in the global configuration for all applications.
 
@@ -49,7 +49,6 @@ The parameters below can be used as extended properties in the SF and IAM. An as
 | DisableFilterOnDetails*                             | Disable the option to filter on details in the Combined Filter. | Yes<br>**No**                                                |                                                              |
 | DisableKeyColumns* <br> (obsolete)                  |                                                              | Yes<br>No                                                    |                                                              |
 | DisableZoomIn                                       | When 'yes', disables zooming in by double clicking on a tab header or grid row. | Yes<br>**No**                                                |                                                              |
-| DisposeHiddenTabPages                               | Specifies whether to dispose controls on hidden tab pages to free the GDI and user objects which are in use by those controls. | Yes<br>**No**                                                |                                                              |
 | EmbedImagesInHtml*                                  | Embed images in the HTML control, using Base64 encoding.     | **Yes**<br>No                                                |                                                              |
 | EmptyLayoutsContexts* <br> (obsolete)               | Use layout and context mechanism for empty sets              | **Yes**<br>No                                                |                                                              |
 | EnableDetail- <br> StartEmptyWithFilter*            |                                                              |                                                              |                                                              |
