@@ -130,7 +130,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-        <Container padding={['top', 'bottom']} background="light">
+        <Container padding={['top']} background="light">
           <Features />
         </Container>
          

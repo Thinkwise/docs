@@ -6,57 +6,55 @@ The *Creation* screen allows you to easily deploy a new or updated version of yo
 
 
 
-## Generate definition
+## 1. Generate definition
 
 The first step is to generate the definition of your application. During this step, the application model is composed and extended using the defined generic concepts (for example for trace functionality and logging) and the platform specific definition is created. 
 
 The following options can be set for the generation:
 
-##### Include control procedures in development
+#### Include control procedures in development
 
 Disable this option if control procedures that are not yet completed, do not need to be included. 
 
-##### Delete generated specifications
+#### Delete generated specifications
 
 Some objects (such as columns, tables, tasks) have generated a check mark. These object are deleted during the generation process and re-created. In addition, the program objects with items and parameters are deleted and created again.
 
-##### Copy base projects
+#### Copy base projects
 
 The data and information from the base projects will be copied into the current project.
 
-##### Generate specifications
+#### Generate specifications
 
 After the base projects have been copied, the dynamic and static control procedures are executed. 
 
-![](../assets/sf/image305.png)
-
-*Generate definition*
-
-![](../assets/sf/image306.png)*Generation result*
+![1537187079301](../assets/sf/1537187079301.png)
+*Generation definition*
 
 Only one generation for each project version can be carried out at the same time. This avoids conflicts during the generation. If during a generation a second generation is started, a message is displayed that the generation of the respective project version is locked.
 
-If desired, the project version lock can be removed via the *reset lock* task in the ribbon or via the context menu.
+If desired, the project version lock can be removed via the *Reset lock* task in the ribbon or via the context menu.
 
 ![](../assets/sf/image307.png)
 
-## Validate definition
+## 2. Validate definition
 
-After the generation, the definition must be validated. It is important that all validation messages of the type 'Error' are resolved before the source code is generated. If this requires modifications to the model, the definition generation must be executed again.
+After the generation, the definition must be validated. It is important that all validation messages of type *Error* are resolved before the source code is generated. If this requires modifications to the model, the definition generation must be executed again.
 
 See [Validation](validation.html) for more information about the validation.
 
-## Generate source code
+## 3. Generate source code
 
 After the definition has been generated and validated, the actual source code can be generated.
 
 ![](../assets/sf/image308.png)*Generate source code*
 
-The composite code is stored in the Software Factory. The code can also be written to disk, which is important when generating a C\# or Java service layer.
+The generated code is stored in the Software Factory. The code can also be written to disk:
 
-- When *Write program objects to disk* is enabled, the composite program objects are placed in the folder *.\\Source_code\\Program_objects*.
+- *Write program objects to disk* - The generated program objects are placed in the `.\Source_code\Program_objects` folder.
+- *Write code files to disk* - The code files are written to the `\Source_code\Groups` folder. 
 
-- When *Write code files to disk* is enabled, the code files are written to the *.\\Source_code\\Group* folder. The C\# service tier is placed in .\\Source_code\\CSharp and the Java service tier in .\\Source_code\\Java.
+> The code on the disk is **not** used when executing code files on the database from this screen. Changes to the code files on disk have no effect!
 
 ### Generation method
 
@@ -98,34 +96,30 @@ It is possible to group the tree with program objects for each model object. In 
 
 When performing a manual upgrade of an individual table, pay attention to the program objects in “Other” such as deleting dependent objects or renaming the old table.
 
-## Execute source code
+## 4. Execute source code
 
 When all source code is generated, it must be deployed to the database. This is done in the *Execute source code* tab page. It is recommended to always make a backup of the end product before this step is executed.
 
 To execute the code:
 
 1.  Connect to the server with the *Connect* button at the top right.
-
 2.  The required code files are checked by default after connecting. It is optionally possible to uncheck code files.
 
-    - The *db* and *create* code files are automatically checked if the database does not yet exist.
-
+    - The *db* code file is automatically checked if the database does not yet exist.
+    - The *create* code file is checked if the database does not exists or is empty. For example when you connect to a manually created database on *Azure SQL Database*. 
     - The *upgrade* code file is automatically checked when the database exists and the product information in this database indicates that an upgrade should take place.
-
 3.  Execute the code by clicking the *Execute* button.
+4.  In order to effect any offline (JavaScript) logic, press the *Offline logic* button at the bottom.
 
-![](../assets/sf/image310.png)*Execute source code* 
+![1537187969469](../assets/sf/1537187969469.png)
+*Execute source code*
 
-Code files can be written to the disk while generating the source code. However, the code on the disk is **not** used when executing code files on the database from this screen. Changes to the code files on disk have no effect!
+When the generation has been executed out and all code has been executed and/or compiled, the end product is ready to be used. 
+
+After the database has been created no more data model modifications should be done in the current project version. A new version will have to be made for this.
+
+### Upgrade an existing database
 
 When the model of a table is changed, the old table will be renamed and a new table will be created. The upgrade script ensures that the data is imported from the renamed table to the new table. Lastly, the (now superfluous) renamed table is deleted. Next, the business functionality is applied again immediately.
 
-When the generation has been carried out and all code has been executed and/or compiled, the end product is ready to be used. For this, the ini must be modified so that it uses the new project version and the status of the project version can be set to Production.
-
 When an existing database is upgraded, it is possible that not all data conforms to the (new) checks and constraints. To check the database, the base project SQLSERVER_VERIFICATION, DB2_VERIFICATION or ORACLE_VERIFICATION can be linked. After having carried out all the steps again, an extra code file with controls will have been generated, which can be executed on the database.
-
-It is also possible to implement offline logic. Modifications in JavaScript templates have no effect until these actions are executed. When implementing offline logic the JavaScript code is retained as it was at the moment of execution.
-
-> After the database has been created no more data model modifications can be carried out in the current project version. A new version will have to be made for this.
-
-

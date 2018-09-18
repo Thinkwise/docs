@@ -78,7 +78,7 @@ begin
 
   /* Business logic to fill trace columns */
 
-  if @default_mode = 0
+  if @default_mode = 0 /* New record */
   begin
     set @insert_user = dbo.tsf_user();
     set @insert_date_time = getdate();

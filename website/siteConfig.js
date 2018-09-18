@@ -42,8 +42,9 @@ const siteConfig = {
     //{doc: 'iam_general', label: 'Production'},
     {doc: 'iam_dev/general', label: 'Application Manager'},
     {doc: 'indicium/general', label: 'Indicium'},
+    {doc: 'kb/general', label: 'Knowledge base'},
     //{page: 'help', label: 'Help'}
-    //{blog: true, label: 'Updates'},
+    {blog: true, label: 'Releases'},
   ],
 
   // If you have users set above, you add it here:

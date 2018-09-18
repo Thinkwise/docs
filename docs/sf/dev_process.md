@@ -24,6 +24,8 @@ Help functionality that supports the developer with the development of a project
 
 ## Projects
 
+Application development in the Software Factory is done on a project basis, with every project containing one ore more project versions. 
+
 The *Projects* menu contains information about all available projects, versions and branches.
 
 The *Overview* screen contains all projects that have been produced in the Software Factory. New projects are also created here. Along with the basic information about the project, the versions and branches of the projects can also be viewed here. *Full model* gives access to the complete model of a specific project version. With *Merging* branches can be created, conflicts between branches analyzed and resolved and it is possible to remerge broken branches. The last component within administration is the component on *Difference analysis*. This displays the differences between different project versions.

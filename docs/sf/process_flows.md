@@ -930,7 +930,7 @@ The HTTP(S) connector provides the following input options with which several pr
 
 ### FTP(S) connector
 
-The HTTP(S) connector provides the following input options with which several properties of an ftp(s) request can be controlled.
+The FTP(S) connector provides the following input options with which several properties of an ftp(s) request can be controlled.
 
 <table>
 <thead>
@@ -1321,7 +1321,7 @@ Files from locations within the local network can be copied to other locations w
 | copy_file_con_from_path   | The path to the file that must be moved. This path must be an absolute local path or a UNC path.                                                                                                                                                                                                               |
 | copy _file_con_to_path    | The path to the location where the file must be moved to. This path must be an absolute local path or a UNC path.                                                                                                                                                                                              |
 | copy _file_con_create_dir | Indicates whether the entire folder structure of *copy_file_con_to_path* must be created, or that all higher level folders must exist. <br> *disk_create_all_dirs_off* - All higher level folders must already exist.<br> *disk_create_all_dirs_on (Default)* - The complete folder structure will be created. |
- 
+
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
