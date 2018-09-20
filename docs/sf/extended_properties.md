@@ -2,8 +2,6 @@
 title: Extended properties
 ---
 
-## Extended properties
-
 Extended properties are used to control new features of the user interfaces and application tier, while the settings for those features have not yet been formalized in the Software Factory model.
 
 The parameters below can be used as extended properties in the SF and IAM. An asterix indicates that a parameter is application specific in IAM. Application specific parameters can also be used in the global configuration for all applications.

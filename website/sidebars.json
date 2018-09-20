@@ -94,5 +94,11 @@
       "indicium/installation",
       "indicium/api"
     ]
+  },
+  "knowledge_base": {
+    "Knowledge base": [
+      "kb/general",
+      "kb/lifecycle_policy"
+    ]
   }
 }

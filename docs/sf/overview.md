@@ -2,7 +2,7 @@
 title: Project overview
 ---
 
-The *Project overview* screen shows a list of all projects in the Software Factory development environment and allows you to update the project settings and create new projects. The *Project versions* tab page lists all versions of the selected project and allows you to modify the generic settings for these versions. The *Branches* tab page shows all branches of the selected project. 
+The *Project overview* screen shows a list of all projects in the Software Factory development environment and allows you create new projects and project versions. The *Project versions* tab page lists all versions of the selected project and allows you to modify the generic settings for these versions. The *Branches* tab page shows all branches of the selected project. 
 
 ## Create a new project
 
@@ -35,24 +35,15 @@ After clicking *Save*, a popup appears to create the first project version for y
 
 * Selecting a *Sub name group* is optional. If no sub name group is selected, a new sub name group will be created for this project. For more information on sub names, see [Naming](naming). 
 
-## Create a new project version
+## Create a next project version
 
-After deploying a project version, further development is done in a new project version. This enables the Software Factory to analyze the differences between these versions and perform an automatic upgrade to the new version.
+After deploying a project version, further development is always done in a new project version. This enables the Software Factory to analyze the differences between these versions and perform an automatic upgrade to the new version.
 
-To copy a project version, the current version must be copied to the new version in the project version screen with the task *Copy project version* in the context menu. The new version is now exactly the same as the old version.
+To create the next project version, the current version must be copied to the new version in the project version screen with the task *Copy project version* in the context menu. The new version is now exactly the same as the old version.
 
-Give the old project version the status *In production*. This is the meta level that normally speaking controls the production environment, while development continues in the new version.
+The *Copy project version* task allows you to update the status of the previous project version. The new version is created with status *Development*.
 
-The old version is now no longer displayed because production versions fall outside the prefilter. Of course, production versions may not be modified anymore.
-
-The new version automatically gets the status *Development*.
-
-![](../assets/sf/image30.png)
-
-*'Right mouse button click' gives access to the overview of, for example, tasks*
-
-During copying the project id and version id are replaced by the new project and version in file references to, for instance, icons and reports in the model. Do not forget to copy the old project version folder to the folder of the new version.
-
+When copying a project version, any references to the project and version id in files and folders, for example icons and reports, are replaced with the new project and project version id and the files and folders are copied to the new location. 
 
 ## Project versions
 
