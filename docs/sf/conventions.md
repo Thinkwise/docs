@@ -8,9 +8,9 @@ For example, specify choices for:
 
 - Language to be used
   
-  - Requirements; which language best guarantees the clarity of the requirements?
+  - Requirements - which language best guarantees the clarity of the requirements?
   
-  - Data model; important because, for instance, reports can be directly created on the database.
+  - Data model - important because, for instance, reports can be directly created on the database.
 
 - Screen resolution
   

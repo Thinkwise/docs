@@ -2,28 +2,17 @@
 title: Settings
 ---
 
-## Subname groups
+## Configuration
 
-All Subname Groups are displayed in the *Subname Groups* component. The corresponding subnames can be found under each subname group. By default only the unapproved subnames are displayed.
+Contains a number of default settings for new projects and project versions, such as the database, application logic layer, folder and sub name group. Here you can also specify which platforms must be available by default and which languages must be added to new project versions. 
 
-The subnames can be approved by means of a task. It is important that the subnames are carefully checked for inconsistencies and possible typing errors.
+![1537784382122](../assets/sf/1537784382122.png)
+*Default settings for new projects*
 
-![](../assets/sf/image313.png)
+## Users
 
-*Subname groups*
-
-## Employees
-
-In this component employees are registered who make use of the Software Factory. The last project and the last project version used is saved for each employee. This is used in the project version selector. In addition to their details, their roles in the process can also be specified here. When an employee is a developer and logs in with the correct RDBMS user, the correct name will be automatically entered when creating control procedures.
-
-![](../assets/sf/image314.png)
-
-*Overview of registered employees with their role in the 'Employees' screen*
+Provides an overview of the registered users of the Software Factory development environment, including their roles (*Analyst, Designer, Developer, Reviewer, Tester*). Users are added automatically on first login. 
 
 ## Supplement workshop
 
-This component is intended for training purposes.
-
-## Optimize indexes
-
-Using this task, the indexes and statistics in the Software Factory database can be optimized if it appears that the performance of the Software Factory is no longer optimal. Thinkwise recommends doing this periodically, for instance every night, through an SQL Server Maintenance Plan.
+This *Supplement workshop* tasks is intended for training purposes only.

@@ -2,13 +2,7 @@
 title: Code search
 ---
 
-The code search screen allows you to search for keywords throughout the code of your application. It will search in:
+The code search screen allows you to search for keywords throughout the code of your application. It will search in control procedures, templates, prefilters, calculated fields and validations
 
-- Control procedures
-- Templates
-- Prefilters
-- Calculated fields
-- Validations
-
-![1537183094439](../assets/sf/1537183094439.png)
+![1537455919119](../assets/sf/1537455919119.png)
 *Code search*

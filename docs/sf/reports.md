@@ -5,8 +5,7 @@ title: Reports
 Reports have a similar structure to tasks, but instead of starting a task, a report is printed or displayed on the screen (preview). The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, AIA ITP, SQL Server Reporting Services (SSRS) or Word.
 
 ![](../assets/sf/image199.png)
-
-*'Reports' tab in the 'User interface'*
+*Reports screen*
 
 The structure of reports is analogous to that of tasks. Parameters are defined for a report and look-up functionality is provided through references.
 
@@ -99,15 +98,15 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 *Available options of macros in a drop down list*
 
 - Click on the *Create* button
-    
+  
       - The Visual Basic editor will open.
 
 - Copy and paste the macro code as displayed on the next page to the Visual Basic editor.
 
 - Modify the macro with respect to the following points
-    
+  
       - strFolder
-    
+        
       - strQuery
 
 - Close the Visual Basic editor by pressing the X button.

@@ -4,7 +4,7 @@ title: Cubes
 
 The user interface provides business intelligence features, called *cubes*, which allows you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and graphically (using a chart).
 
-### Creating a Cube
+## Creating a Cube
 
 Creating a cube is done with the *Create cube* task. This task automatically adds values and dimensions and the screen type is changed to *cube*.
 
@@ -116,9 +116,9 @@ Create a cube view by adding it. Specify a cube view id and optionally a group. 
 - Display totals
 
 - Default view
-  
+
   - Cube
-  
+
   - Graph
 
 - Labels
@@ -146,7 +146,7 @@ The last settings that can be added relate to:
 - Totals
 
 - Expand
-  
+
   - For example, for dates (year/month/day)
 
 Once the cube view has been created and the fields have been added, they are available in the cube of the final product After this, the cube can be further embellished with constant lines, filters, totals, and conditional formatting.
@@ -157,9 +157,9 @@ Using the cube view toolbar, the available cube views can be displayed in a bar 
 
 Each overview can be displayed graphically in a two or three-dimensional graph. Dimensions can also be linked to each other so that a hierarchy is created.
 
-> Customer – Project
-> 
-> Year – Month – Day
+> Customer - Project
+>
+> Year - Month - Day
 
 The last example requires 3 dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
 

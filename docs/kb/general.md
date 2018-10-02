@@ -1,5 +1,5 @@
 ---
-title: Knowledge base
+title: General
 ---
 
-> Work in progress
+Select an article on the left.

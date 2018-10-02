@@ -2,64 +2,28 @@
 title: Help
 ---
 
-
-
-
-
-
-
->
-
-
-
-## Documentation
-
-The *help* screen appears by pressing F1. Help information about the tab or about the current field can be found here. The help function is not just available during development, but can also be made available in the end product with standard and company specific help texts.
-
-A help text can be entered with the translation for each component.
+Pressing the F1 key in a Thinkwise user interface opens the application's *Help* dialog, where information about the current subject or field can be found. A user can only access the help text for objects he is able to access in the application. 
 
 ![](../assets/sf/image16.png)
+*Help dialog of the Software Factory application*
 
-*A screen shot of the help document that is opened with the F1 function key*
+## Creating help texts
 
+The help text for a an object, like a table, task, report, column or parameter, can be specified at the translation of the object to which this help text applies. The user interfaces automatically combine the help text of for instance the columns of a table to create the table's help text.
 
+![1537880754985](../assets/sf/1537880754985.png)
+*Providing help text in English for the *project* table*
 
->
-
-
-
-
-
-
-
-
-
-The Software Factory also generates Microsoft HTML Help. This ensures that users and developers can make use of help documentation in both the Software Factory and the end product. This is called up with the F1 key.
-
-![](../assets/sf/image300.png)
-
-*Example of the help function by pressing the F1 key*
-
-Since the help functionality is generated at the moment when it is called, it will be controlled via the Intelligent Application Manager, just as the model itself. The advantage of this is that authorization rights are also being used. If an employee has no rights to a particular table, he will not be able to access the corresponding help text.
-
-#### Creating help texts
-
-Help texts are written on the translation tab in the table, task or report to which this help text applies. A help text therefore consists of short paragraphs of text, instead of long passages of text.
-
-![](../assets/sf/image301.png)
-
-*Adding help texts for a specific table in 'Subjects'.*
-
-The input fields of the help texts is a *rich text* data type, providing the possibly to use formatting options such as **bold**, *italic* and <span class="underline">underlined</span>. But adding colour, hyperlinks (including links to other components in the help document) and images is also possible. Images will be stored in the text. Various types of fonts are not supported. The Software Factory will automatically adjust all font types to a standard size.
+The input fields of the help texts is a *rich text* data type, providing the possibly to use formatting options such as **bold**, *italic* and <span class="underline">underlined</span>. It is also possible to add images, which are stored in the HTML. 
 
 ![](../assets/sf/image302.png)
-
 *An example of a help text*
 
-When the help texts have been filled for all tables, tasks and reports, the help documents can be created on the *Help* tab in *Documentation*, which is available via the menu.
+## Creating the table of contents
 
-The creation of his document is built as a tree structure. Headings can be added manually and provided with text. Adding texts from the tables, tasks and reports can be done by adding a new component and then ticking the *Dynamic* checkbox. The option whether to add tables, tasks or reports will then appear. By pressing a button, a help document can be generated for all tables, tasks or reports.
+The table of contents of the help is built as a tree structure. Help pages can be added manually and provided with text. 
+
+References to tables, tasks and reports can be added by creating a new page and checking the *Dynamic* option. The option whether to add tables, tasks or reports will then appear. The user interfaces will automatically add all tables, reports or tasks in the table of contents. 
 
 ![](../assets/sf/image303.png)
-
-*Creating a dynamic help document for 'Documentation'*
+*Dynamic reference to tables*

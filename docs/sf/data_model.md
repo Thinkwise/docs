@@ -167,6 +167,12 @@ The columns on which the expression is dependent are shown on the *Expression de
 ![](../assets/sf/image91.png)
 *Calculated field with a Query*
 
+### Indexes
+
+The Software Factory automatically creates indexes for foreign keys and sort sequences. To optimize performance, it might be necessary to add additional indexes to a table. Indexes can be created in the *Indexes* tab page.
+
+The Thinkwise platform supports *clustered* and *non-clustered indexes*, *full-text indexes* (SQL Server) and *Encoded Vector indexes* (DB2). It can also be indicated whether an index must be unique.
+
 ## Views
 
 A view is a logical table that is composed from fields from other tables. The data in a view is not stored in the database, but composed at runtime on the basis of a query.

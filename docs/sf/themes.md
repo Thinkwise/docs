@@ -39,31 +39,31 @@ To apply themes that transcend a project it is possible to import ![](../assets/
 The theme has been divided as such:
 
 - General
-    
+
       - General (theme id)
-    
+
       - Tabs
-    
+
       - Background
 
 - Navigation
-    
+
       - Ribbon
-    
+
       - Quickbar
-    
+
       - Tree
-    
+
       - Tiles
-    
+
       - Title bar
 
 - Components
-    
+
       - Grid
-    
+
       - Form
-    
+
       - Cube
 
 These sections will be explained further in the remainder of this chapter.
@@ -94,7 +94,7 @@ When tabs are opened from the menu, they can be active (selected) or inactive (n
 
 Where in the document component, the tab colour can be set for colours opened from the menu, the colours for the background of the tabs within these main tabs are set here. Shown in turquoise in the figure below.
 
-**  
+**
 **
 
 **Tab header height**
@@ -105,7 +105,7 @@ There can be chosen from the following options:
 
 *header method options*
 
-- Default – The default is unchanged.
+- Default - The default is unchanged.
 
 - Spacious - Extra padding based on font size.
 
@@ -123,7 +123,7 @@ It's possible to set the color of tab content lines and tab header lines.
 
 *Tab with transparent lines*
 
-**  
+**
 **
 
 **Disabled tabs**
@@ -256,7 +256,7 @@ If transparent is chosen in the 'line' component, the rows in the grid will be c
 
 In the following sub tabs you can specify the group colours, row colours and the focus cell colours. These can be set for the active row, the selected row and for a mouse over.
 
-**  
+**
 **
 
 **Grid aggregation style**

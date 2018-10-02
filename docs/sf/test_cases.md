@@ -119,9 +119,7 @@ Just as with recording, the end product should be started in developer mode. The
 The GUI tries to execute test cases as fast as possible. However, this can no longer be followed by eye. It is therefore possible to follow the waiting times between the steps via the test console settings. In this way, the tester can monitor the progress of the test. Additionally, you can indicate which messages should be captured. The test results are fed back by default to the Software Factory; this can be disabled manually.
 
 ![](../assets/sf/image296.png)
-*Overview of the test cases with the underlying test steps*
-
->  During the execution of the test the user should have no interaction with the end product, as this may interfere with the testing process.
+*Overview of test cases with the underlying test steps*
 
 ### Results
 

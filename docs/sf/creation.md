@@ -4,8 +4,6 @@ title: Creation
 
 The *Creation* screen allows you to easily deploy a new or updated version of your application. Creating and deploying an application requires a number of steps that are explained in the following paragraphs.
 
-
-
 ## 1. Generate definition
 
 The first step is to generate the definition of your application. During this step, the application model is composed and extended using the defined generic concepts (for example for trace functionality and logging) and the platform specific definition is created. 

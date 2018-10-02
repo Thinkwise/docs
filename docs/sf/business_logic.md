@@ -31,13 +31,15 @@ The following options can be set within a Default:
 
 The following context is provided when executing the Default logic:
 
-- `default_mode` - Indicates whether it concerns an insert (0) or an update (1)
-- `Import_mode` - Indicates whether it concerns an import or synchronization action
-- `cursor_from_col_id` - The field that the user has left. The value is null immediately after adding or modifying
-- `cursor_to_col_id` - The field where the cursor must move to, after leaving the default procedure
-- `[col_id]` - All columns in the table, both input and output. Every value can therefore be modified
+| Parameter          |                                                                                           |
+| ------------------ | ----------------------------------------------------------------------------------------- |
+| default_mode       | Indicates whether it concerns an insert (0) or an update (1)                              |
+| Import_mode        | Indicates whether it concerns an import or synchronization action                         |
+| cursor_from_col_id | The field that the user has left. The value is null immediately after adding or modifying |
+| cursor_to_col_id   | The field where the cursor must move to, after leaving the default procedure              |
+| [col_id]           | All columns in the table, both input and output. Every value can therefore be modified    |
 
-This Default template code ensures that the current date is set for the *activated_date* field when the 'activated' field has just received the value 1.
+This Default template code ensures that the current date is set for the *activated_date* field when the *activated* field has just received the value 1.
 
 ```sql
 if (@cursor_from_col_id = 'activated' and @activated = 1)
@@ -58,34 +60,21 @@ A layout can be used to disable fields and operations, depending on the context.
 
 The following context is provided when executing the layout logic:
 
-- `layout_mode` - Indicates whether it concerns an insert (0) or an update (1)
-- `import_mode` - Indicates whether it concerns an import or synchronization action
-- `add_button_type`, `update_button_type`, `delete_button_type`, `confirm_button_type`, `cancel_button_type` - Indicates how the corresponding button should be displayed:
-  - 0 = enabled
-
-  - 1 = disabled
-
-  - 2 = hidden
-- `[col_id]` - All columns of a table. These values can be used to make decisions about the behaviour
-- `[col_id]_type` - The type can be modified for each field:
-  - 0 = normal
-
-  - 1 = read only
-
-  - 2 = hidden within the form (space remains reserved)
-
-  - 3 = hidden outside the form
-- `[col_id]_mand` - Whether fields are mandatory can be set for each field:
-  - 0 = optional
-
-  - 1 = mandatory
+| Parameter                                                                                                |                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| layout_mode                                                                                              | Indicates whether it concerns an insert (0) or an update (1)                                                                                                          |
+| import_mode                                                                                              | Indicates whether it concerns an import or synchronization action                                                                                                     |
+| add_button_type<br>update_button_type<br>delete_button_type<br>confirm_button_type<br>cancel_button_type | Indicates how the corresponding button should be displayed:<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden                                                        |
+| [col_id]                                                                                                 | All columns of a table. These values can be used to make decisions about the behaviour                                                                                |
+| [col_id]_type                                                                                            | The type can be modified for each field:<br>- 0 = normal<br>- 1 = read only<br>- 2 = hidden within the form (space remains reserved)<br>- 3 = hidden outside the form |
+| [col_id]_mand                                                                                            | Whether fields are mandatory can be set for each field:<br>- 0 = optional<br>- 1 = mandatory                                                                          |
 
 The variables for type and mandatory only need to get a value if it differs from the default value of the meta-level. It is therefore not necessary to reset the value.
 
 In the following layout template code, the *activated_date* field is made mandatory when the user is navigating around the screen and the `activated` field has a value of 1. The *activated_date* field is hidden outside the form when the *activated* field has a value of 0.
 
 ```sql
-if (@layout_mode = 1 /* update */ and @activated = 1) 
+if (@layout_mode = 1 /* update */ and @activated = 1)
 begin
   set @activated_date_mand = 1; /* mandatory */
 end
@@ -93,7 +82,7 @@ end
 if @activated = 0
 begin
   set @activated_data_type = 3; /* hidden outside form */
-end  
+end
 ```
 
 The layout logic should always be written in such a way that the fields are stateless. For example, when a field is made mandatory by the layout logic, this change applies only until the next call of the layout logic. If the field in the layout logic is subsequently not explicitly set to mandatory again, the status of the field will revert back to the default setting.
@@ -110,26 +99,13 @@ A context procedure offers the following options:
 
 The following information is given when executing the context logic:
 
-- `active _ref_id` - Displays the name of the active reference tab
-- `[col_id]` - All columns of a table. These values can be used to make decisions about the behavior
-- `[ref_id]_type` - Indicates whether a reference tab should be displayed:
-  - 0 = enabled
-
-  - 1 = disabled
-
-  - 2 = hidden
-- `[task_id]_type` - Indicates whether a task must be displayed:
-  - 0 = enabled
-
-  - 1 = disabled
-
-  - 2 = hidden
-- `[report_id]_type` - Indicates whether a report must be displayed:
-  - 0 = enabled
-
-  - 1 = disabled
-
-  - 2 = hidden
+| Parameter        |                                                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------- |
+| active _ref_id   | Displays the name of the active reference tab                                                            |
+| [col_id]         | All columns of a table. These values can be used to make decisions about the behavior                    |
+| [ref_id]_type    | Indicates whether a reference tab should be displayed<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden |
+| [task_id]_type   | Indicates whether a task must be displayed:<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden           |
+| [report_id]_type | Indicates whether a report must be displayed:<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden         |
 
 The following template disables the detail tab *inactive_property* when the *activated* field has a value of 1.
 
@@ -150,9 +126,12 @@ Badges can be used to indicate to the user that there are still open tasks or th
 
 The following information is available when executing the badge logic:
 
-- `variant_id` - The variant the badge is executed for. The badge concept is the only variant specific concept. The reason for this is that the badge value is often dependent of the default prefilters, which can deviate per variant.
-- `badge_value` - The value that is to be displayed by the GUI. Currently only an integer can be used with a value between 0 and 99. 
-- `col_id` -  All column values of the table, task or report.
+
+| Parameter   |                                                                                                                                                                                                                         |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| variant_id  | The variant the badge is executed for. The badge concept is the only variant specific concept. The reason for this is that the badge value is often dependent of the default prefilters, which can deviate per variant. |
+| badge_value | The value that is to be displayed by the GUI. Currently only an integer can be used with a value between 0 and 99.                                                                                                      |
+| col_id      | All column values of the table, task or report.                                                                                                                                                                         |
 
 The following template fills the badge value with the number of validation messages, or empty when 0.
 
@@ -177,9 +156,10 @@ A process procedure offers the possibility to influence the further course of a 
 The initial status of the subsequent steps is available in all Process logic. This status is determined by the way in which the executed process action has been completed. When unsuccessfully, the subsequent steps for a successful execution are disabled. When successfully completed, the subsequent steps for an unsuccessful execution are disabled. The sequence of the remaining subsequent steps is determined by the settings in the model.
 
 The following information is available when executing the process logic:
-
-* `[col_id]` - All column values of the table, task or report.
-* `[follow_up_process_action_id]` - All follow up process actions.  A value of null, 0 or a negative value means the process action will not be executed.
+| Parameter                     |                                                                                                                       |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [col_id]                      | All column values of the table, task or report.                                                                       |
+| [follow_up_process_action_id] | All follow up process actions.  A value of null, 0 or a negative value means the process action will not be executed. |
 
 Whether or not a process action has been successfully completed, is shown by the status of the subsequent steps, which represent successful and unsuccessful completion.
 
@@ -200,33 +180,31 @@ end
 
 Trigger or Event based logic is performed around the data manipulation. This logic concept is highly platform dependent. This logic concept offers the following possibilities:
 
-- Perform actions as a result of (attempted) changes in data.
+- Perform actions as a result of (attempted) changes in data
 
-- > Prevent/undo changes in data (control)
+- Prevent or undo changes in data (control)
 
 In general, the concept can be divided into three types, with three moments per type. The available context is different for each type.
 
-- Instead of / before / after performing an add action
+- Instead of / before / after performing a **create** action - The field values of the record(s) to be added or that have been added.
 
-  ```
-  - The field values of the record(s) to be added or that have been added.
-  ```
+- Instead of / before / after performing an **update** action - The old and new field values of the record(s) to be changed or that have been changed.
 
-- Instead of / before / after performing a modification action.
+- Instead of / before / after performing a **delete** action - The field values of the record(s) to be deleted or that have been deleted.
 
-  ```
-  - The old and new field values of the record(s) to be changed or that have been changed.
-  ```
 
-- Instead of / before / after performing a delete action.
+The following trigger ensures that when deleting an order, a record is written to the log:
 
-  ```
-  - The field values of the record(s) to be deleted or that have been deleted.
-  ```
+```sql
+insert into deleted_order_log
+select 
+    d.order_id as order_id, 
+    getdate()  as deleted_date
+from deleted d
 
-> The following trigger ensures that when deleting an order, a record is written to the log.
+```
 
-### Other (Procedure, Function etc.)
+### Other
 
 In addition to the logic concepts above, there are platform-specific concepts that are often defined on the basis of a subroutine. These logic concepts can be used in other logic components. Consider, for instance, database functions: the context of this logic is generally consistent with the parameters defined for a subroutine.
 
@@ -245,7 +223,7 @@ select
   h.description,
   e.name as employee_name
 from hour h
-join employee e 
+join employee e
   on e.employee_id = h.employee_id
 ```
 
@@ -255,19 +233,8 @@ With offline functionality, which is written in JavaScript, it is possible to al
 
 In order to get this functionality available the base project `JAVASCRIPT` must be added to the project.
 
-To update *volatile* data on the mobile clients before it is synchronized to the service tier, extra logic concepts have been added for JavaScript logic. These are: *JavaScript Tasks*, *Before Task* event, *After Task* event and *JavaScript Before / After / Delete Triggers*. 
+To update *volatile* data on the mobile clients before it is synchronized to the service tier, extra logic concepts have been added for JavaScript logic. These are: *JavaScript Tasks*, *Before Task* event, *After Task* event and *JavaScript Before / After / Delete Triggers*.
 
 By defining subroutines of the *JavaScript Function* type you can add generic functions to the offline JavaScript.
 
 Offline logic needs to be deployed before it has an effect in Mobile. This is explained in [Creation](creation). The effects of synchronizing offline modifications following an upgrade are described [here](service_tier#synchronize-offline-changes-after-an-upgrade).
-
-#### Debugging offline code
-
-In order to debug the offline functionality the following steps can be executed. This makes it possible to identify possible errors before they manifest in the user interface.
-
-* Generate the offline code, writing it to disk
-
-- Install [nodejs]([*https://nodejs.org/en/*](https://nodejs.org/en/))
-- Install eslint using the command `npm install -g eslint`
-- Then go to the folder in which the offline code is generated (`[project_folder]\Source_code\JavaScript)`)
-- Execute `eslint .` and resolve any error messages

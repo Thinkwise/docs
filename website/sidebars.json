@@ -62,30 +62,30 @@
       "sf/developer_mode"
     ],
     "Statistics": [
-      "sf/statistics"
+      "sf/statistics",
+      "sf/function_points"
     ],
     "Miscellanious": [
       "sf/settings",
-      "sf/advanced",
-      "sf/service_tier",
-      "sf/performance"
+      "sf/advanced"
     ]
   },
   "intelligent_application_manager": {
-    "Developer Guide": [
-      "iam_dev/general",
-      "iam_dev/administrators",
+    "Intelligent Application Manager": [
+      "iam/general",
+      "iam/administrators",
+      "iam/user_simulation"
+    ],
+    "Administrator's guide": [
       "iam_dev/model",
       "iam_dev/roles",
       "iam_dev/applications"
     ],
-    "Administrator Guide": [
-      "iam_admin/general",
-      "iam_admin/setup",
+    "Manager's guide": [
       "iam_admin/applications",
       "iam_admin/user_groups",
-      "iam_admin/users",
-      "iam_admin/user_preferences"
+      "iam_admin/group_preferences",
+      "iam_admin/users"
     ]
   },
   "indicium_application_tier": {
@@ -98,7 +98,11 @@
   "knowledge_base": {
     "Knowledge base": [
       "kb/general",
-      "kb/lifecycle_policy"
+      "kb/lifecycle_policy",
+      "kb/tags",
+      "kb/file_storage",
+      "kb/deep_links",
+      "kb/performance"
     ]
   }
 }

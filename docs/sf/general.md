@@ -11,7 +11,7 @@ The Thinkwise Platform consists of four components:
 - Thinkwise Software Factory (SF)
 - Intelligent Application Manager (IAM)
 - Thinkwise Application Tier (Indicium)
-- Thinkwise Graphical User Interfaces (GUI)
+- Thinkwise Graphical User Interfaces (GUIs)
 
 The Thinkwise Software Factory is used during the development, test and acceptance phases to develop an end product. The GUIs read in the model so that the user can work with the end product.
 

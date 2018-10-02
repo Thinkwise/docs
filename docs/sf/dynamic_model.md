@@ -13,8 +13,6 @@ Using dynamic model concepts you can for example:
 - Create archiving tables and functionality
 - Add authorization prefilters to all tables
 
-And much more.
-
 Meta control procedures use queries to enrich the model of the Software Factory on the database. Please contact your Thinkwise representative if you want more information on writing queries for dynamic model concepts. 
 
 ![](../assets/sf/image255.png)

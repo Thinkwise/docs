@@ -4,11 +4,13 @@ title: Lifecycle policy
 
 The Thinkwise Lifecycle Policy provides consistent and predictable guidelines for the availability of support throughout the lifecycle of a product.
 
-Thinkwise reserves the right to adjust this lifecycle policy if necessary. The availability of support is subject to technical and economic feasibility. 
+Thinkwise reserves the right to adjust this lifecycle policy if necessary. The availability of support is subject to technical and economic feasibility.
 
 ## Thinkwise Platform
 
-Support for a version of the Thinkwise Platform ends **18 months** after the next release. The Thinkwise Software Factory and Intelligent Application Manager have a release cycle of approximately 3 to 6 months. 
+Support for a version of the Thinkwise Platform ends **18 months** after the next release. The Thinkwise Software Factory and Intelligent Application Manager have a release cycle of approximately 3 to 6 months.
+
+Critical hotfixes are provided for all supported versions. Non-critical hotfixes are provided for the current version only.
 
 | **SF and IAM version** | **Lifecycle Start Date** | **Support End Date** |
 | :--------------------: | :----------------------: | :------------------: |
@@ -19,23 +21,23 @@ Support for a version of the Thinkwise Platform ends **18 months** after the nex
 |         2018.1         |         Jan-2018         |       Nov-2019       |
 |         2018.2         |         May-2018         |                      |
 
-Critical hotfixes are provided for all supported versions. Non-critical hotfixes are provided for the current version only.
-
 ### Runtime components
 
-The runtime components of the Thinkwise Platform (user interfaces and application tier) have a release cycle of two to four weeks. Every release is compatible with the supported Platform versions and technologies (see below) at the time of release. 
+The runtime components of the Thinkwise Platform (user interfaces and application tier) have a release cycle of two to four weeks. Every release is compatible with the supported Platform versions and technologies (see below) at the time of release.
 
-Due to technical limitations, newly introduced features may deviate from this by only offering support for recent versions and technologies.
+Due to technical limitations, newly introduced features may deviate from this by only offering support for more recent versions and technologies.
 
 ## Supported technologies
 
-When a technology reaches end of the support, it does not necessarily mean that updates of the Thinkwise Platform no longer work for this technology. Thinkwise will timely inform its customers when a technology is actually no longer supported. 
-
 ### Database management systems
 
-The Thinkwise Platform conforms to the **mainstream** or **premier** support period of the compatible database management systems, as defined by their suppliers. 
+Support for a database management system version is provided for at least as long as the **mainstream** or **premier** support period as defined by the supplier of the database management system.
 
-#### SQL Server
+Thinkwise will timely inform its customers when a database management system version is no longer supported.
+
+#### Microsoft SQL Server
+
+(Source: [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy))
 
 | **SQL Server version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :--------------------: | :----------------------: | :------------------: | :---------------------------: |
@@ -45,27 +47,33 @@ The Thinkwise Platform conforms to the **mainstream** or **premier** support per
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
 
- #### DB2 for IBM i
+#### DB2 for IBM i
+
+(Source: [IBM Software Lifecycle](https://www-01.ibm.com/software/support/lifecycleapp/PLCSearch.wss?q=%22ibm+i%22))
 
 | **DB2 for IBM i version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :-----------------------: | :----------------------: | :------------------: | :---------------------------: |
-|            6.1            |         Mar-2008         |       Sep-2015       |                               |
 |            7.1            |         Apr-2010         |       Apr-2018       |                               |
 |            7.2            |         May-2014         |                      |                               |
 |            7.3            |         Apr-2016         |                      |                               |
 
 #### Oracle Database
 
+(Source: [Oracle Lifetime Support](http://www.oracle.com/us/support/library/lsp-tech-chart-069290.pdf))
+
 | **Oracle Database version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :-------------------------: | :----------------------: | :------------------: | :---------------------------: |
-|            11.2             |         Sep-2009         |       Jan-2015       |                               |
 |            12.1             |         Jul-2013         |       Jul-2018       |                               |
 |            12.2             |         Sep-2016         |       Mar-2022       |                               |
 |             18c             |         Feb-2018         |                      |                               |
 
 ### .NET Framework
 
-Support for a version of the .NET Framework, required by the Thinkwise Windows and Web user interfaces and the Indicium Application Tier, ends **18 months** after the next release.
+Support for a version of the .NET Framework, required by the Thinkwise Windows and Web user interfaces and the Indicium Application Tier, ends at least **18 months** after the next .NET Framework release.
+
+Thinkwise will timely inform its customers when a .NET Framework version is no longer supported.
+
+(Source: [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy))
 
 | **.NET Framework version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :------------------------: | :----------------------: | :------------------: | :---------------------------: |
@@ -73,9 +81,13 @@ Support for a version of the .NET Framework, required by the Thinkwise Windows a
 |            4.6             |         Jul-2015         |       Oct-2018       |           Oct-2018            |
 |            4.7             |         Apr-2017         |                      |                               |
 
-### IIS
+### Internet Information Services
 
-Support for an IIS version is available while Microsoft provides **mainstream** support for that version.
+Support for an Internet Information Services version is available at least as long as Microsoft provides **mainstream** support for that version.
+
+Thinkwise will timely inform its customers when an Internet Information Services version is no longer supported.
+
+(Source: [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy))
 
 | **IIS (Windows Server) version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :------------------------------: | :----------------------: | :------------------: | :---------------------------: |
@@ -87,7 +99,9 @@ Support for an IIS version is available while Microsoft provides **mainstream** 
 
 ### Browsers
 
-The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more. (Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201808-201808-bar))
+The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more. 
+
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201808-201808-bar))
 
 | **Browser version** | **Market share** |
 | :-----------------: | :--------------: |
@@ -100,7 +114,9 @@ The Thinkwise Web user interface supports browser versions with a **market share
 
 ### Mobile Operating Systems
 
-The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more. (Source: [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [iOS](http://gs.statcounter.com/ios-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [Android](http://gs.statcounter.com/android-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar))
+The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more. 
+
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [iOS](http://gs.statcounter.com/ios-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [Android](http://gs.statcounter.com/android-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar))
 
 | **Mobile OS version** | **Market share**  |
 | :-------------------: | :---------------: |

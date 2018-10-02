@@ -40,7 +40,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'sf/general', label: 'Software Factory'},
     //{doc: 'iam_general', label: 'Production'},
-    {doc: 'iam_dev/general', label: 'Application Manager'},
+    {doc: 'iam/general', label: 'Application Manager'},
     {doc: 'indicium/general', label: 'Indicium'},
     {doc: 'kb/general', label: 'Knowledge base'},
     //{page: 'help', label: 'Help'}
@@ -76,7 +76,7 @@ const siteConfig = {
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
     'Copyright © ' +
-    new Date().getFullYear() + 
+    new Date().getFullYear() +
     ' Thinkwise',
 
   rights:
@@ -107,7 +107,7 @@ const siteConfig = {
     indexName: 'thinkwise'
   },
 
-  blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },  
+  blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },
 };
 
 module.exports = siteConfig;

@@ -24,6 +24,3 @@ Some fields are always readonly, used only to show data. The *Show action button
 
 ![](../assets/sf/image87.png)
 *Control with action button Always*
-
-![](../assets/sf/image88.png)
-*Show action button*

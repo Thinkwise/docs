@@ -42,6 +42,19 @@ Paint can be started by entering *mspaint* in the object name (Windows GUI only)
 
 *General settings when creating a task*
 
+**Example 2**
+
+By choosing Task type 'External program' it is possible to open programs, files or URL's using tasks. Parameters of the task will be used as parameters for the program.
+
+Using batch files for instance, it is possible to print PDF documents:
+
+```
+printpdf.bat:
+@CALL START /MIN AcroRd32.exe /N /T %1
+```
+
+To open a dynamic URL without knowing the default browser you can trick the task by using a 'http:' as Object name and set the first parameter to the URL to be opened. The same goes for other URI schemes like '<mailto:'>.
+
 #### GUI function
 
 This options allows *custom C\# tasks*, such as the TSFReportMailer, to be linked in. The name of the custom task should be entered in the *Object id* field.
@@ -134,13 +147,13 @@ Tasks can take a long time to process. There are four options to give instructio
 
 *Task with await result options*
 
-1.  Yes – The user must wait for the result and a progress indicator is shown.
+1.  Yes - The user must wait for the result and a progress indicator is shown.
 
-2.  Yes (no progress indicator) – The user must wait for the result (de GUI freezes and hourglass is shown).
+2.  Yes (no progress indicator) - The user must wait for the result (de GUI freezes and hourglass is shown).
 
-3.  No – The action is executed in background and the user can continue working.[12]
+3.  No - The action is executed in background and the user can continue working.[12]
 
-4.  Optional – The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog (TODO screenshot…).
+4.  Optional - The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog (TODO screenshot…).
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
 
