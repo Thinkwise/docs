@@ -86,7 +86,7 @@ Test cases only need entering once and can subsequently be executed automaticall
 This phase of the project consists of writing source code templates with business rules. These templates are woven into the correct position in the end product on the basis of definitions from the model.
 
 ![](../assets/sf/image14.png)
-*An overview of a completed template on the 'Functionality' screen.*
+*An overview of a completed template on the Functionality screen.*
 
 ## Creation
 

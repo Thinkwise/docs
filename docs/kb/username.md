@@ -1,8 +1,12 @@
+---
+title: Username
+---
+
 When using connection pooling or IAM authentication, the IAM user ID can't be retrieved on the RDBMS using database functions like `user_name()`, `system_user` or `USER`.
 
 Because the user ID is often used in queries (e.g. to fill trace columns or filter data), the user interfaces and service tiers use platform specific methods to provide the username in the context of every database connection.
 
-The function `tsf_user()` is provided to retrieve the correct username from SQL logic.
+The `tsf_user()` function is provided to retrieve the correct username from SQL logic.
 
 > The username is not available in connections made by Crystal Reports or other reporting tools that setup their own connection. You can provide the user ID to the report by using the input parameters. You can fill the correct user ID in the parameter values using default logic.
 
@@ -11,7 +15,7 @@ The function `tsf_user()` is provided to retrieve the correct username from SQL 
 The [CONTEXT_INFO](http://technet.microsoft.com/en-us/library/ms180125.aspx) is set for the current session or batch by using the following command:
 
 ```sql
-declare @binvar varbinary(128); 
+declare @binvar varbinary(128);
 set @binvar = cast(@username as varbinary(128));
 set context_info @binvar;
 ```
@@ -24,7 +28,7 @@ select dbo.tsf_user();
 
 ## IBM i DB2
 
-On DB2, the [client user ID](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.adonet.ref.doc/doc/r0057221.html) is set in the opened connection: 
+On DB2, the [client user ID](https://www.ibm.com/support/knowledgecenter/en/SSEPGG_11.1.0/com.ibm.swg.im.dbclient.adonet.ref.doc/doc/r0057221.html) is set in the opened connection:
 
 ```csharp
 connection.SetClientUserID(UserId);

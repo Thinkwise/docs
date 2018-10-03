@@ -98,15 +98,14 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 *Available options of macros in a drop down list*
 
 - Click on the *Create* button
-  
       - The Visual Basic editor will open.
 
 - Copy and paste the macro code as displayed on the next page to the Visual Basic editor.
 
 - Modify the macro with respect to the following points
-  
+
       - strFolder
-        
+
       - strQuery
 
 - Close the Visual Basic editor by pressing the X button.
@@ -120,55 +119,55 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 Macro code:
 
 > *Dim strODCFile As String*
-> 
+>
 > *Dim strConnection As String*
-> 
+>
 > *Dim strQuery As String*
-> 
+>
 > *' Use your folder name...*
-> 
+>
 > *strFolder = *C:\\your_folder\\Reports\\**
-> 
+>
 > *' Use your .odc name...*
-> 
+>
 > *strODCFile = strFolder & *thinkwise.odc**
-> 
+>
 > *' Build the connection string*
-> 
+>
 > *' You may well need moe here, but I am following*
-> 
+>
 > *' your ADO connection string*
-> 
+>
 > *strConnection = Environ(*TSFTOWORD_CONN*)*
-> 
+>
 > *' Build the Query string*
-> 
+>
 > *strQuery = *SELECT \* FROM **your_table** where * + Environ(*TSFTOWORD_SQL*)*
-> 
+>
 > *' Open the data source*
-> 
+>
 > *With ActiveDocument.MailMerge*
-> 
+>
 > *'.MainDocumentType = wdNotAMergeDocument*
-> 
+>
 > *.MainDocumentType = wdFormLetters*
-> 
+>
 > *.OpenDataSource _*
-> 
+>
 > *Name:=strODCFile, _*
-> 
+>
 > *Connection:=strConnection, _*
-> 
+>
 > *SQLStatement:=strQuery*
-> 
+>
 > *'ActiveDocument.ResetFormFields*
-> 
+>
 > *End With*
-> 
+>
 > *ActiveWindow.Visible = False*
-> 
+>
 > *ActiveDocument.MailMerge.Execute*
-> 
+>
 > *Application.Quit (False)*
 
 #### SSRS
@@ -233,10 +232,10 @@ Local SSRS reports in an SF application support the following report (export) ac
 
 To use reports that are created for SSRS using the Thinkwise Software Factory with a GUI version 2017.1.11 or lower, the following software must be installed on the computer of the user for the Windows GUI or the webserver on which the ASP GUI runs:
 
-- Microsoft SQL Server CLR Types (SQLSysClrTypes.msi)  
+- Microsoft SQL Server CLR Types (SQLSysClrTypes.msi)
     <https://www.microsoft.com/en-us/download/details.aspx?id=42295>
 
-- Microsoft Report Viewer 2015 Runtime  
+- Microsoft Report Viewer 2015 Runtime
     <https://www.microsoft.com/en-us/download/details.aspx?id=45496>
 
 The SQLSysClrTypes installer needs to be implemented before the report viewer runtime is run. If the computer on which the work is done contains its own SQL Server instance the CLR types can be omitted.
@@ -251,9 +250,7 @@ Reports made with SSRS can also retrieve data from Oracle and DB2 databases, pro
 
 For Oracle connections the Oracle Client needs to be present on the system.
 
-**NOTE**
-
-When using the Oracle Client together with the Microsoft SQL Server Report Builder it is necessary to have the 32 bit version of the Oracle Client installed. The 64 bit version will unfortunately not work, because the report Builder itself is a 32 bit application. Use can be made of the 64 bit Oracle Client for end applications.
+> When using the Oracle Client together with the Microsoft SQL Server Report Builder it is necessary to have the 32 bit version of the Oracle Client installed. The 64 bit version will unfortunately not work, because the report Builder itself is a 32 bit application. Use can be made of the 64 bit Oracle Client for end applications.
 
 *DB2 *
 
@@ -325,7 +322,7 @@ A choice can be made from the following properties within Windows:
 |Number of copies|The number of copies to be printed can be specified here.|Integer|
 |Compress|This indicates whether the file must be compressed or not.|Boolean|
 |Open after export|This indicates whether the file must be opened after export.|Boolean|
-|Export location|This is the location where the file is stored when the choice is made for the action 'export to…'|String|
+|Export location|This is the location where the file is stored when the choice is made for the action 'Export to'|String|
 
 
 The web only supports the *Action* and *Compress* properties.
@@ -442,7 +439,7 @@ To send an email with Outlook via the TSFReportMailer, at least the following pa
 
 - e-mail
 
-**Note**: this is not mandatory if the parameter *open_in_outlook* is set to *true*, the default value of this is *false*.
+> This is not mandatory if the parameter *open_in_outlook* is set to *true*, the default value of this is *false*.
 
 ##### Optional
 

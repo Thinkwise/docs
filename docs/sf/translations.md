@@ -4,7 +4,7 @@ title: Translations
 
 ![](../assets/sf/image213.png)
 
-*'Translations' tab in the 'User interface'*
+*Translations tab*
 
 For all terms that appear in the user interfaces, such as labels, buttons, tables and columns, so-called *translation objects* are generated for which a translation can be entered via the *Translations* screen. After expansion of the model, any new translation objects can be created with the task *Generate translation objects* ![](../assets/sf/image214.png).
 

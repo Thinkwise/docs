@@ -10,7 +10,7 @@ This chapter describes the settings that fall under the **Service tier** and the
 
 ![](../assets/sf/image318.png)
 
-*Screen shot of the 'Project Version' screen for specifying the Service Tier.*
+*Screen shot of the Project Version screen for specifying the Service Tier.*
 
 ##### Use pooling
 
@@ -24,9 +24,7 @@ This is the user name for the user that is used to establish a connection from t
 
 This is the password specified for this Pool User account.
 
-**Note**
-
-This password is placed unencrypted in the SF development database.
+> This password is placed unencrypted in the SF development database.
 
 IAM authentication
 
@@ -56,11 +54,9 @@ IAM Pool password
 
 This is the password specified for this Pool User account.
 
-**Note**
+> This password is placed unencrypted in the SF development database.
 
-This password is placed unencrypted in the SF development database.
-
-## Java service tier 
+## Java service tier
 
 The Java service tier consists of a Java JAX-WS Web Service and is built using the Apache Maven project management system. The project can be imported with an Eclipse IDE that is compatible for Java EE.
 
@@ -155,7 +151,7 @@ The templates that are added to this control procedure, can be assigned to the f
 
 ![](../assets/sf/image325.png)![](../assets/sf/image326.png)
 
-*Screen shot of the 'Assign' tab in the 'Control procedure' screen*
+*Screen shot of the Assign tab in the Control procedure screen*
 
 |Program object|Description|
 |--- |--- |
@@ -226,13 +222,13 @@ If the build.bat script does not work, the choice can be made to build the servi
 ![](../assets/sf/image330.png)
 
 4.  Copy the following files to another directory:
-    
+
     1.  Global.asax.
-    
+
     2.  Web.config.
-    
+
     3.  Index.html.
-    
+
     4.  The dll files in bin\\Release must be placed in a bin sub-folder.
 
 ### Custom libraries
@@ -254,7 +250,7 @@ Templates, which can be assigned to this control procedure, are added to the fol
 
 ![](../assets/sf/image331.png)![](../assets/sf/image332.png)
 
-*Screen shot of the 'Assign' tab in the 'Control procedure' screen*
+*Screen shot of the Assign tab in the Control procedure screen*
 
 |Program object|Description|
 |--- |--- |

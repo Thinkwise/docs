@@ -14,9 +14,7 @@ A task has a default and a layout mechanism, just as a table or a view. A shortc
 
 If a confirmation must be requested when executing a task, the *Request confirmation* option can be checked.
 
-**Tip**
-
-The translation of the confirmation can be modified by creating a translation object with id *gui_confirmexecutetask_* + task_id
+> The translation of the confirmation can be modified by creating a translation object with id *gui_confirmexecutetask_* + task_id
 
 ### Settings
 
@@ -85,7 +83,7 @@ Task parameters can be formatted in the same way as forms of table are formatted
 
 ![](../assets/sf/image195.png)
 
-*'Task parameter' settings for a form in 'Tasks'*
+*Task parameter settings*
 
 ### Look-ups
 
@@ -153,7 +151,7 @@ Tasks can take a long time to process. There are four options to give instructio
 
 3.  No - The action is executed in background and the user can continue working.[12]
 
-4.  Optional - The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog (TODO screenshot…).
+4.  Optional - The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog.
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
 

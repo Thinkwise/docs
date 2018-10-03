@@ -45,7 +45,7 @@ File system storage stores the files in the specified path. The path property ca
 
 ### FTP
 
-To use FTP storage, fill in the serrver name with the FTP server address, for example `ftp://ftp.thinkwisesoftware.com`. Notice that opposed to Filesystem storage the Path property must be relative from the server address, for example `files/`.
+To use FTP storage, fill in the serrver name with the FTP server address, for example `ftp://ftp.thinkwisesoftware.com`. Notice that opposed to Filesystem storage the *Path* property must be relative from the server address, for example `files/`.
 
 ## Runtime configurations
 

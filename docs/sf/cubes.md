@@ -2,7 +2,7 @@
 title: Cubes
 ---
 
-The user interface provides business intelligence features, called *cubes*, which allows you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and graphically (using a chart).
+The user interface provides business intelligence features, called *cubes*, which allows you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and chartically (using a chart).
 
 ## Creating a Cube
 
@@ -12,6 +12,8 @@ Creating a cube is done with the *Create cube* task. This task automatically add
 *Task to create a cube*
 
 If the data source is an OLAP cube, the *OLAP connection* check mark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
+
+For more information on OLAP cubes, see [OLAP](../kb/olap).
 
 ### Cube Fields
 
@@ -26,32 +28,6 @@ The task with which a cube can be created makes the best possible proposal, but 
 ![](../assets/sf/image210.png)*Adding Cube Fields to the 'Cube Fields' tab*
 
 It is also important that the measured value(s) that are used in the cube are derived from the *Fact Table*. This is the data that provides the most detail.
-
-> When an order is calculated, the order lines, which are added up in the cube, must be used and not the order itself.
-
-#### Defining OLAP Cube Fields
-
-In contrast to cubes where the source data is derived from a table or view, the source data here comes from various tables. Since it is not possible to change the table name in the cube fields, a special syntax has to be entered in the cube field id in order to still be able to select the data from multiple tables. The syntax is as follows: **table_name.column_id*.*
-
-Configuration requirements:
-
-- All tables used in the cube have to be available in the model.
-
-- If the box *OLAP connection* is checked, the *table id* is hidden. This happens because this field is not required from a technical point of view. However, when the OLAP cube is being used as a detail screen, it is convenient to use a dummy table. The dummy table must contain every primary key of every table that is used by the cube. After this the references can be drawn between the tables from the cube and the dummy table. The table id of the cube must be entered before the *OLAP connection* box is checked.
-
-- Every primary key column of the source tables of the cube (the above-mentioned dummy table) must have a cube field in the cube definition. The table id must refer to the dummy table and the column id must refer to the column in the dummy table.
-
-Technical requirements/points of attention:
-
-- The Microsoft Analysis Services OLE DB Provider must be installed on the client computer to communicate with OLAP cubes.
-
-- Only cubes created with Microsoft Analysis Services are supported by the GUI.
-
-- Only OLE DB Data Provider is supported to retrieve data from the OLAP cube.
-
-- Calculated fields are not supported in an OLAP cube.
-
-- Group interval fields are not supported in an OLAP cube.
 
 #### Cube field grouping
 
@@ -119,7 +95,7 @@ Create a cube view by adding it. Specify a cube view id and optionally a group. 
 
   - Cube
 
-  - Graph
+  - Chart
 
 - Labels
 
@@ -151,11 +127,11 @@ The last settings that can be added relate to:
 
 Once the cube view has been created and the fields have been added, they are available in the cube of the final product After this, the cube can be further embellished with constant lines, filters, totals, and conditional formatting.
 
-Using the cube view toolbar, the available cube views can be displayed in a bar on the screen, in the same way as prefilters, tasks and reports. In combination with the new cube components, screens can be developed for example with only graphs and a toolbar to select the view.
+Using the cube view toolbar, the available cube views can be displayed in a bar on the screen, in the same way as prefilters, tasks and reports. In combination with the new cube components, screens can be developed for example with only charts and a toolbar to select the view.
 
-### Graphs
+### charts
 
-Each overview can be displayed graphically in a two or three-dimensional graph. Dimensions can also be linked to each other so that a hierarchy is created.
+Each overview can be displayed chartically in a two or three-dimensional chart. Dimensions can also be linked to each other so that a hierarchy is created.
 
 > Customer - Project
 >
@@ -163,18 +139,18 @@ Each overview can be displayed graphically in a two or three-dimensional graph. 
 
 The last example requires 3 dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
 
-![](../assets/sf/image211.png)*Example of a graph*
+![](../assets/sf/image211.png)*Example of a chart*
 
 ![](../assets/sf/image212.png)
-*Example of a 3D graph display*
+*Example of a 3D chart display*
 
-##### Graph type per measured value
+#### Chart type per measured value
 
-In order to combine different types of charts in a graph measured value can be linked to a particular type of graph. This is done by including the name of the type of graph in the name of the measured value, separated by an underscore, for instance: `number_of_hours_spline3d`.
+In order to combine different types of charts in a chart measured value can be linked to a particular type of chart. This is done by including the name of the type of chart in the name of the measured value, separated by an underscore, for instance: `number_of_hours_spline3d`.
 
-Available graph types are:
+Available chart types are:
 
-||||
+|List of chart types|||
 |--- |--- |--- |
 |Area2D|CandleStick2D|RangeArea2D|
 |Area3D|Doughnut2D|RangeArea3D|
@@ -196,8 +172,10 @@ Available graph types are:
 |Bubble2D|RadarPoint2D|Stock2D|
 |||SwiftPlot2D|
 
-##### Areas in graphs
+#### Areas in charts
 
-To model an area in a graph, you can use a constant line, the name of which starts with *area_*. The minimum value can be specified with the *Value* field and the height or width of the area with *Thickness*.
+To model an area in a chart, you can use a constant line, the name of which starts with *area_*. The minimum value can be specified with the *Value* field and the height or width of the area with *Thickness*.
 
-> It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique, since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.
+### Executing tasks
+
+It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique, since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.

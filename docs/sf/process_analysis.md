@@ -18,7 +18,7 @@ Thinkwise recommends the following procedure when setting up a new analysis:
 
 The components *business processes*, *requirements*, *design specifications* and *modules* are explained in the following paragraphs.
 
-## Business processes 
+## Business processes
 
 The business processes are identified to arrive at a complete set of functional requirements for the system. By assuming the present (or desired) business process, it can be established with certainty whether the system contains all functions to support the business process. It is clear for each component of the business process where the system provides support. Furthermore, there are no functions added to the system that do not support the process. It is easier to go through the processes (that employees of the company carry out) with the stakeholders and to so arrive at system requirements, than to directly define the system requirements.
 
@@ -29,17 +29,15 @@ A new model is created for which the components that can be used are available i
 The components can be selected and added to the plan by means of drag & drop.
 
 ![](../assets/sf/image56.png)
-
 *Overview of a business process*
 
-### Set up business processes 
+### Set up business processes
 
 To clearly explain how a business process can be set up we make use of an example.
 
 The **main process** can be specified by means of tasks. This is called *Activity* and *Call Activity* within the Software Factory. These are dragged into the diagram and connected with an arrow. Ensure that the BPM guidelines are applied with regard to the set up. A task can be given a name by clicking on it.
 
 ![](../assets/sf/image57.png)
-
 *Main process*
 
 This primary process displays 3 Sub-processes, recognizable by the plus sign at the bottom of the task. Each Constituent Process can cover several swimming lanes. For this reason the main process itself has no lanes. When we zoom in on one of the processes (Customer intake) then we see the first example of a lane.
@@ -47,7 +45,6 @@ This primary process displays 3 Sub-processes, recognizable by the plus sign at 
 > A lane is often assigned to a group or department (actor) which is responsible for the steps within the lane.
 
 ![](../assets/sf/image58.png)
-
 *Constituent Process*
 
 This constituent process has four tasks, **Approach prospect**, **Showcase successful project(s)*, *Service license agreement draft* and *Process SLA**, which are carried out sequentially. The lane indicates who or which group is responsible for carrying out the tasks.
@@ -55,19 +52,16 @@ This constituent process has four tasks, **Approach prospect**, **Showcase succ
 By means of a *Black box* (indicated by *Project Management* in the example below) it can be indicated what the subsequent steps are after carrying out the tasks in the current lane.
 
 ![](../assets/sf/image59.png)
-
 *Constituent Process with black box*
 
 When a group of tasks becomes too complex for one diagram then a sub-process can be introduced. This refers to an own group of tasks.
 
 ![](../assets/sf/image60.png)
-
 *Constituent Process with a sub-process*
 
 This sub-process doesn*t need to be in a lane, since it is part of the same process.
 
 ![](../assets/sf/image61.png)
-
 *Sub-process*
 
 It is not recommended to create sub-processes in sub-processes. In general, this does not improve the overview.
@@ -75,7 +69,6 @@ It is not recommended to create sub-processes in sub-processes. In general, this
 When a sub-process is called in several diagrams it can be created as a *Call Activity*. These are recognizable by their thick edge and plus sign at the bottom.
 
 ![](../assets/sf/image62.png)
-
 *Sub-process with call activity*
 
 Entering the id number or name of the call activity is sufficient to call the reference.
@@ -99,8 +92,9 @@ The manner of input and the various levels (Business Requirements, User Requirem
 
 ### Specifying requirements
 
-> A number of steps are gone through to specify the requirements.
+A number of steps are gone through to specify the requirements.
 
+![1538566609968](../assets/sf/1538566609968.png)
 *Schematic overview of the requirement steps*
 
 Firstly, the stakeholders are identified by the requirements analyst who will then identify the wishes and requirements of the stakeholders and translate them into requirements. As a third step a distinction is made between the types of requirements. These requirements are then submitted for approval to the stakeholders. A number of iterations can follow until the requirements are complete and approved. A baseline can be made from this set of requirements and a report printed.
@@ -144,7 +138,6 @@ Functional requirements can be realized by the addition of model objects and log
 It is possible that a functional requirement only support one of the platforms, like mobile. It is possible within the program to dedicate a requirement to a specific platform use the related checkboxes.
 
 ![](../assets/sf/image63.png)
-
 *Set the desired platform for a functional requirement*
 
 ##### Non-functional system requirements
@@ -157,7 +150,7 @@ Due to the critical positioning of requirements in the software development proc
 
 #### Uniquely identifiable
 
-A requirement is given a unique number or reference code. This code may not subsequently be changed. The code is used to be able to refer to this requirement. The structure of these references is determined in the requirements model. 
+A requirement is given a unique number or reference code. This code may not subsequently be changed. The code is used to be able to refer to this requirement. The structure of these references is determined in the requirements model.
 
 #### Atomic
 
@@ -168,9 +161,7 @@ A functional requirement may not include more than one requirement or possibilit
 It must only be possible to interpret a requirement in one way. This is a rule for which the measurability is sometimes difficult to determine. The following rules of thumb can be considered:
 
 - Do not use wording that leaves matters open;
-
 - Do not use terms that have more than one meaning;
-
 - Always describe who will carry out an action
 
 It is also recommended to avoid negations. **The system will not store any address details of a customer** offers infinitely many possibilities for what will be stored in the system.
@@ -210,14 +201,13 @@ This contains an ambiguous expression: perhaps. When? For a certain amount? Afte
 The requirements for the system to be developed can be entered under the requirements tab.
 
 ![](../assets/sf/image64.png)
-
 *An example of the tree diagram with requirements*
 
 These are presented in a tree structure on the left of the screen. In this way the requirements can be built up in a layered manner. The business requirements are at the highest level, with possibly several levels of user requirements below them and at the lowest level the system requirements.
 
 For each requirement the requirements type is selected whereupon a number of fields appear that need to be completed.
 
-- Requirement id:
+- Requirement id
 
 A unique id is assigned to each requirement. This ensures that the requirement is unique.
 
@@ -258,17 +248,15 @@ Who has been assigned to develop the requirement. Only visible for functional re
 The module to which this requirement belongs. Only visible for functional requirements.
 
 ![](../assets/sf/image65.png)
-
 *Creating a new requirement*
 
 ### Baselines
 
-A baseline is an overview of the requirements at a certain moment. This can be created at any required moment on the process analysis screen by publishing all diagrams and starting the *Create baseline …* ![](../assets/sf/image66.png) task.
+A baseline is an overview of the requirements at a certain moment. This can be created at any required moment on the process analysis screen by publishing all diagrams and starting the *Create baseline* ![](../assets/sf/image66.png) task.
 
 If all diagrams have not been published then the following error message will be displayed.
 
 ![](../assets/sf/image67.png)
-
 *Error message when creating a baseline*
 
 By enabling the *Diagrams to publish* prefilter during the process analysis, only the still to be published diagrams are displayed. The *Publish diagram* task can be run for each process diagram.
@@ -276,7 +264,6 @@ By enabling the *Diagrams to publish* prefilter during the process analysis, onl
 Now that all diagrams are published the *Create baseline* task can be started again.
 
 ![](../assets/sf/image68.png)
-
 *Create baseline*
 
 The baseline that is created provides an overview of the status of the requirements at a specific moment in time. The *Requirements* tab contains an overview of all the requirements with the time they were created.
@@ -284,28 +271,20 @@ The baseline that is created provides an overview of the status of the requireme
 Baselines are intended to map out a list of changes of the requirements when milestones are reached in a project. This includes for instance:
 
 - End of a certain phase
-
 - An approval round of the stakeholders
-
 - A steering committee consultation
-
 - Etc.
 
 So understanding how a baseline works it makes sense that we have to approve all requirements first. To do this the developer can activate the review mode. No every requirement shows the state it is in. With the two tasks it is possible to change the state to in approval or approved.
 
 ![](../assets/sf/image69.png)
-
 *Requirements in review mode*
-
-**  
-**
 
 **Previous versions**
 
 It is possible to see the previous versions of a requirement. This overview uses the requirements history stored in the baselines.
 
 ![](../assets/sf/image70.png)
-
 *Previous version*
 
 ### Requirements report
@@ -317,6 +296,5 @@ In order to amend the report to the wishes of the user parts of the process can 
 The report is then printed in a report viewer. A selection can be made to print this document or to save it as an Excel, PDF or Word document.
 
 ![](../assets/sf/image71.png)
-
 *Example of a report*
 

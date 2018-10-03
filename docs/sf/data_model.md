@@ -2,7 +2,7 @@
 title: Data model
 ---
 
-The data model screen allows you to visually design the data model of your application. A data model consists of tables, containing columns, and references, to create relations between tables. 
+The data model screen allows you to visually design the data model of your application. A data model consists of tables, containing columns, and references, to create relations between tables.
 
 Rows (records) can be stored in a table. Each row consists of fields (columns). **Views** can also be included in a data model along with physical tables. A view gives a runtime presentation of data from one or more tables in one concentrated overview and is therefore always up-to-date. There are no rows stored in a view. It is also possible to create a **Snapshot** . In a snapshot, just as in a view, data from one or more tables can be combined, but in a snapshot this data is actually saved. This can considerably improve performance. The RDBMS has provisions to easily refresh the data in a snapshot (sometimes even automatically).
 
@@ -79,14 +79,12 @@ An overview of all tables is accessible via the *Tables* tab page.
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
 ![](../assets/sf/image90.png)
-*'Columns' tab within 'Tables'*
+*Columns tab page*
 
 ### General
 
 - Project id - of the current project.
-
 - Version id - of the current project version.
-
 - Table id - the table within which the column is created.
 
 ### Description
@@ -106,9 +104,9 @@ The columns are defined within a table under the *columns* tab. A column has the
 - Case type - determines whether this field is only filled with upper case letters, lower case letters or a combination of both.
 
 - Identity - the database will automatically issue a number for this field
-  
+
   - Seed - begin value of the number.
-  
+
   - Increment - steps with which the number is increased.
 
 - Primary key - indicates whether the field is part of the primary key.
@@ -124,20 +122,16 @@ The columns are defined within a table under the *columns* tab. A column has the
 ### Calculated field
 
 - Type of calculation - indicates with which calculation the field is filled. A choice can be made from
-  
+
   - None - the user enters a value himself
-  
+
   - Expression - the GUI executes the calculations. This is not stored in the database. The column itself is also not stored in the database -
-  
+
   - Calculated column - the database executes the calculation and stores this in the table.
-  
+
   - Calculated column (function) - the database executes the calculation with the help of a function.
 
-- Query calculated field - in which a query can be specified to have a value in this field calculated by the GUI or database, for instance *price \* quantity*. This value is not stored in the database.
-
-### Other options
-
-- Alias - used in DB2 and Oracle to provide a short name for a table.
+- Calculated field query - in which a query can be specified to have a value in this field calculated by the GUI or database, for instance *t1.price \* t1.quantity*. This value is not stored in the database.
 
 ### Expression dependencies
 
@@ -155,7 +149,7 @@ The query that is provided with expression fields will be added to the select cl
 select 
 t1.[customer_id], 
 t1.[customer_naam], 
-(  select t1.street + t1.number_number + c.name
+(  select t1.street + ' ' + t1.number_number + ', ' + c.name
    from country c 
    where c.country_id = t1.country_id
 ) as t1.[address]
@@ -207,14 +201,14 @@ When this takes place, a popup screen appears with the option to enter a prefix.
 ![](../assets/sf/image93.png)
 *Popup that appears when tables are copied*
 
-After all columns are defined and/or copied and *Automatic* or *Modifiable* is chosen for the view option then the *from clause* of the view can be constructed by executing the *Generate view from clause* task. 
+After all columns are defined and/or copied and *Automatic* or *Modifiable* is chosen for the view option then the *from clause* of the view can be constructed by executing the *Generate view from clause* task.
 
 ## References
 
 A reference is a relation between two tables. The target table has one or more fields (the foreign key) of which the combined values must appear as the primary key in the source table. This column comparison is specified in the reference columns.
 
 ![](../assets/sf/image94.png)
-*Tables and views in the 'Design' tab without references*
+*Tables and views*
 
 References can be created by means of *drag & drop* in the *Reference* status. In the *Normal* status the *Reference* status can be temporarily activated by holding down the Ctrl key. This makes it possible to create a reference by dragging with the mouse from the source to the target table. A popup then appears in which the column comparison is presented.
 
@@ -238,9 +232,9 @@ Validating the data model is possible in the *Validation* tab. Through this erro
 
 ### Starting the application
 
-When the data model is completed the database can be created, this is described in [Creation](creation.html). Since there is still no user interface set up there is nothing visible in the end product. The tables are accessible after the menu has been set up. 
+When the data model is completed the database can be created, this is described in [Creation](creation.html). Since there is still no user interface set up there is nothing visible in the end product. The tables are accessible after the menu has been set up.
 
-Starting the user interface is possible once the database has been created, or by using the *Mock Database Provider* to display a preview without an end product database. 
+Starting the user interface is possible once the database has been created, or by using the *Mock Database Provider* to display a preview without an end product database.
 
 
 

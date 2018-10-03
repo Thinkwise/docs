@@ -5,7 +5,7 @@ title: Full model
 The *Full model* screen provides acces to the entire model of a project version. It is advised, however, to use the specific modelers instead. The full model is intended for reference and for the advanced user.
 
 ![](../assets/sf/image33.png)
-*Overview of the 'Full model' screen*
+*Overview of the Full model screen*
 
 Like all other modelers, the *Full model* screen is linked to the *project version selector* in the *Project* ribbon tab page. Using the *project version selector* you can select or switch to the the project version you want to work in when opening a modeler.
 

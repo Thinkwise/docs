@@ -109,7 +109,7 @@ Most procedures have one template for weaving. Hence, the template id and descri
 The source code is subsequently defined in the Code tab of the form.
 
 ![](../assets/sf/image271.png)
-*Adding code to the 'Template' tab*
+*Adding code to the Template tab*
 
 The code can be written directly in the Template tab and will be displayed as is usual with an editor such as Notepad++ or SQL Server Management Studio. If the preference is to work directly in the editor itself, you can click on the button next to the code template. A linked editor will open. Changes to the file are automatically reported back to the Software Factory.
 

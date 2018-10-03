@@ -7,9 +7,7 @@ The *Difference analysys* screen allows you to analyze the differences between m
 ![](../assets/sf/image52.png)
 *Difference analysis*
 
-A difference analysis can be run using the *Start difference analysis* task.
-
-![](../assets/sf/image53.png)
+A difference analysis can be run using the *Start difference analysis* ![](../assets/sf/image53.png) task.
 
 ![](../assets/sf/image54.png)
 *Start difference analysis*

@@ -15,11 +15,6 @@
 @media only screen and (min-width: 1500px) {
 }
 
-article p img {
-     outline: 1px solid #dddddd;
-     outline-offset: -1px;
-}
-
 input#search_input_react {
     border-radius: 0px;
     line-height: 31px;
@@ -28,13 +23,26 @@ input#search_input_react {
     background-color: rgba(242, 196, 178, 0.25);
 }
 
-em {
-    font-style: italic;
+article p img:first-child {
+     outline: 1px solid #dddddd;
+     outline-offset: -1px;
+     display: block;
 }
 
-img + em {
+article p img:first-child + em {
     display: inherit;
     text-align: center;
     font-size: 80%;
     color: #666666;
 }
+
+article p img:not(:first-child) {
+    display: inline;
+    vertical-align: text-bottom;
+    max-height: 24px;
+}
+
+article em {
+    font-style: italic;
+}
+

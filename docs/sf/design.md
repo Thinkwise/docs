@@ -2,7 +2,7 @@
 title: Design
 ---
 
-Now the business processes and requirements are complete there is a clear overview of the processes to be developed. The target group for requirements is the business. However, the functional requirements must be implemented. The translation of functional descriptions to the technical implementation is achieved through design specifications. Where in the functional requirements terms such as table, column and button may not be used, the design specifications focus exactly on these items. The target group of design specifications is therefore the developers. The design specifications therefore constitute the actual to-do list for the developers.
+Now the business processes and requirements are complete there is a clear overview of the processes to be developed. The translation of functional descriptions to the technical implementation is achieved through *Design specifications*. Where in the functional requirements terms such as table, column and button may not be used, the design specifications focus exactly on these items. The target group of design specifications is therefore the developers. The design specifications constitute the actual to-do list for the developers.
 
 ![](../assets/sf/image72.png)
 *Specification text*
@@ -45,5 +45,5 @@ As soon as a design specification is selected then all additions and modificatio
 The registration of updates can be paused using the pause button.
 
 ![](../assets/sf/image78.png)
-*Overview of the 'Project ribbon' with the requirements*
+*Design specifications in the Project ribbon tab page*
 

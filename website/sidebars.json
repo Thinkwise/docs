@@ -98,11 +98,16 @@
   "knowledge_base": {
     "Knowledge base": [
       "kb/general",
-      "kb/lifecycle_policy",
-      "kb/tags",
-      "kb/file_storage",
       "kb/deep_links",
-      "kb/performance"
+      "kb/file_storage",
+      "kb/icons",
+      "kb/lifecycle_policy",
+      "kb/maps",
+      "kb/olap",
+      "kb/performance",
+      "kb/screenshots",
+      "kb/tags",
+      "kb/username"
     ]
   }
 }
