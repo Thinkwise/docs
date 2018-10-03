@@ -276,6 +276,10 @@ The type can be defined differently in the grid and the form. However, this can 
 
 > The field *added_by* is set to read only. It is possible to hide this in the grid. It is however not possible to make this normal in the form.
 
+##### Use when inserting
+
+When a new row has to be added to a certain position in the grid, this row must know information about the current row and sorting. For example, if the grid is sorted by the column order_no, the new row must know the order_no of the current row. This value is then given to the default procedure so that the new order_no can be determined.
+
 ##### Use when copying
 
 A record can be easily copied with (Ctrl+Alt+Plus), only this is sometimes not desired for all fields. For example with identity fields, status fields and trace columns. It can be indicated with this option which fields are transferred when copying a row.
