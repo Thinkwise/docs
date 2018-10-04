@@ -110,10 +110,9 @@ const siteConfig = {
 
   blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },
 
-  // editUrl: 'https://github.com/facebook/docusaurus/edit/master/docs/',
-  editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
+  //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
   enableUpdateTime: true,
-  cleanUrl: true,
+  // cleanUrl: true, // This breaks relative urls like ../assets/sf/image.png
   scrollToTop: true,
   scrollToTopOptions: {
     zIndex: 100,
