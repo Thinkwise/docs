@@ -29,6 +29,7 @@
       "sf/menus",
       "sf/screen_types",
       "sf/subjects",
+      "sf/variants",
       "sf/cubes",
       "sf/themes",
       "sf/messages",
@@ -105,6 +106,7 @@
       "kb/maps",
       "kb/olap",
       "kb/performance",
+      "kb/report_mailer",
       "kb/screenshots",
       "kb/tags",
       "kb/username"

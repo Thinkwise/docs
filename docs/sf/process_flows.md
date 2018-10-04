@@ -320,17 +320,7 @@ These process actions receive an output parameter with a status code and output 
 
 This process action shows a predefined message to the user. Messages used in process flows can contain parameters in their translation which correspond to the IDs of the variables in the process flow. The user interface will replace these parameters with the current value of the corresponding Variable. For example: *The value of variable_1 is: {variable_1}*.
 
-It is possible to add message options to a message. These options represent the choices a user can make when presented with the message. For example, this configuration in the Software Factory:
-
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message5.png](../assets/sf/image251.png)
-
-will result in this dialog in the GUI:
-
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message1.png](../assets/sf/image252.png)
-
-An affirmative message option will be given a unique status code of zero or higher, while a negative message option will be given a unique negative status code. These response types and corresponding status codes are directly related to the green and red arrows in the process flow. In some cases it might be necessary to have multiple affirmative and/or multiple negative message options which have different effects on the continuation of the process flow. To achieve this, the *Status code* value of a message option will be passed as the *Status code* output parameter of the process action.
-
-Icons are optional and the sequence number of the message option (\#) determines the order of the buttons on the dialog.
+The value of the selected [Message option](messages#message-options) is return as the status code of the process action.
 
 ## Connectors
 

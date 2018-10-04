@@ -24,7 +24,7 @@ When tabs are opened from the menu, they can be active (selected) or inactive (n
 
 Where in the document component, the tab color can be set for colors opened from the menu, the colors for the background of the tabs within these main tabs are set here. Shown in turquoise in the figure below.
 
-**Tab header height**
+#### Tab header height
 
 There can be chosen from the following options:
 
@@ -40,14 +40,14 @@ There can be chosen from the following options:
 ![](../assets/sf/image220.png)
 *Tab with manual height*
 
-**Tab lines**
+#### Tab lines
 
 It's possible to set the color of tab content lines and tab header lines.
 
 ![](../assets/sf/image221.png)
 *Tab with transparent lines*
 
-**Disabled tabs**
+#### Disabled tabs
 
 Disabled tabs are styled by the GUI, by default. It*s possible to manually style these tabs in the SF.
 
@@ -123,9 +123,7 @@ When the colors are set for the ribbon, you can choose to set a general backgrou
 ![](../assets/sf/image230.png)
 *Theme settings for the ribbon*
 
-**Comment**
-
-The color that is selected for the ribbon will appear behind an icon of a task, pre-filter, etc. in the ribbon within the work area.
+> The color that is selected for the ribbon will appear behind an icon of a task, pre-filter, etc. in the ribbon within the work area.
 
 ![](../assets/sf/image231.png)
 
@@ -161,12 +159,11 @@ When setting up the grid, various components can be modified for a grid view. Fo
 > If transparent is chosen in the 'line' component, the rows in the grid will be colored alternately in the color of the background and in a shade darker.
 
 ![](../assets/sf/image233.png)
-
 *Grid view with alternating colors*
 
 In the following sub tabs you can specify the group colors, row colors and the focus cell colors. These can be set for the active row, the selected row and for a mouse over.
 
-**Grid aggregation style**
+#### Grid aggregation style
 
 It is possible to style the grid aggregation (summary), for example:
 
@@ -184,9 +181,9 @@ It is possible to set border color, background color and font color of form fiel
 
 In the field component, the settings can be changed for the color of the mandatory, editable and read-only field. If the application is not in a modify or add mode, all fields will adopt the color of the read-only fields.
 
-**Show buttons on hover**
+#### Show buttons on hover
 
-An option to only show form buttons when hovering over the form with the mouse has been added.
+An option to only show form buttons when hovering over the form with the mouse.
 
 ### Cube
 
@@ -216,5 +213,3 @@ A color can be changed using the *Update color* task or by dragging the column t
 
 ![](../assets/sf/image241.png)
 *Fonts and colors used in a Theme*
-
-

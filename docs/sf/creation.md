@@ -6,13 +6,13 @@ The *Creation* screen allows you to easily deploy a new or updated version of yo
 
 ## 1. Generate definition
 
-The first step is to generate the definition of your application. During this step, the application model is composed and extended using the defined generic concepts (for example for trace functionality and logging) and the platform specific definition is created. 
+The first step is to generate the definition of your application. During this step, the application model is composed and extended using the defined generic concepts (for example for trace functionality and logging) and the platform specific definition is created.
 
 The following options can be set for the generation:
 
 #### Include control procedures in development
 
-Disable this option if control procedures that are not yet completed, do not need to be included. 
+Disable this option if control procedures that are not yet completed, do not need to be included.
 
 #### Delete generated specifications
 
@@ -24,7 +24,7 @@ The data and information from the base projects will be copied into the current 
 
 #### Generate specifications
 
-After the base projects have been copied, the dynamic and static control procedures are executed. 
+After the base projects have been copied, the dynamic and static control procedures are executed.
 
 ![1537187079301](../assets/sf/1537187079301.png)
 *Generation definition*
@@ -50,7 +50,7 @@ After the definition has been generated and validated, the actual source code ca
 The generated code is stored in the Software Factory. The code can also be written to disk:
 
 - *Write program objects to disk* - The generated program objects are placed in the `.\Source_code\Program_objects` folder.
-- *Write code files to disk* - The code files are written to the `\Source_code\Groups` folder. 
+- *Write code files to disk* - The code files are written to the `\Source_code\Groups` folder.
 
 > The code on the disk is **not** used when executing code files on the database from this screen. Changes to the code files on disk have no effect!
 
@@ -88,7 +88,8 @@ It is possible to use the *Smart* generation first and subsequently expand or re
 
 The filters at the program objects determine the level of detail where you can view and enable or disable the code. The most detailed level might cost some time to load, depending on the size of the model.
 
-![](../assets/sf/image309.png)*Checking and unchecking components on manual generation*
+![](../assets/sf/image309.png)
+*Checking and unchecking components on manual generation*
 
 It is possible to group the tree with program objects for each model object. In this way all code of a view or a table can be quickly executed.
 
@@ -104,7 +105,7 @@ To execute the code:
 2.  The required code files are checked by default after connecting. It is optionally possible to uncheck code files.
 
     - The *db* code file is automatically checked if the database does not yet exist.
-    - The *create* code file is checked if the database does not exists or is empty. For example when you connect to a manually created database on *Azure SQL Database*. 
+    - The *create* code file is checked if the database does not exists or is empty. For example when you connect to a manually created database on *Azure SQL Database*.
     - The *upgrade* code file is automatically checked when the database exists and the product information in this database indicates that an upgrade should take place.
 3.  Execute the code by clicking the *Execute* button.
 4.  In order to effect any offline (JavaScript) logic, press the *Offline logic* button at the bottom.
@@ -112,7 +113,7 @@ To execute the code:
 ![1537187969469](../assets/sf/1537187969469.png)
 *Execute source code*
 
-When the generation has been executed out and all code has been executed and/or compiled, the end product is ready to be used. 
+When the generation has been executed out and all code has been executed and/or compiled, the end product is ready to be used.
 
 After the database has been created no more data model modifications should be done in the current project version. A new version will have to be made for this.
 

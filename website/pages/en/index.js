@@ -79,8 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-        
-            <Button href={docUrl('sf/general.html', language)}>Lets get started!</Button> 
+
+            <Button href={docUrl('sf/general.html', language)}>Get started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -130,10 +130,10 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-        <Container padding={['top']} background="light">
+        <Container padding={['']} background="light">
           <Features />
         </Container>
-         
+
         </div>
       </div>
     );

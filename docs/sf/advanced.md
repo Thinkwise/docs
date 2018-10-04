@@ -13,7 +13,7 @@ The *Project management* menu group gives Overview of several subjects, like tab
 
 ## Master data
 
-The *Master data* menu group provides access to Software Factory master data. 
+The *Master data* menu group provides access to Software Factory master data.
 
 ### Software Factory
 
@@ -37,7 +37,7 @@ Maintenance task to optimize SQL Server indexes and statistics.
 
 #### Application languages
 
-This screen provides Overview of the languages that are available within the Software Factory. 
+This screen provides Overview of the languages that are available within the Software Factory.
 
 #### Controls
 
@@ -65,11 +65,11 @@ Here are the report types that are currently supported in the Software Factory. 
 
 #### Screen component types
 
-This component provides Overview of all the available screen component types in the Software Factory. It is visible for each screen component in which screen type this component will be used.
+This screen provides an overview of all the available screen component types in the Software Factory. It is visible for each screen component in which screen type this component will be used.
 
 #### Conflict types
 
-The conflict types that can be recognized from a merge session are displayed in this component.
+The conflict types that can be recognized from a merge session are displayed in this screen.
 
 #### Extender types
 
@@ -87,15 +87,15 @@ This screen provides Overview of the currently available database management sys
 
 #### Programming languages
 
-This component provides Overview of the available programming languages. This is also where programming languages may be added.
+This screen provides an overview of the available programming languages. This is also where programming languages may be added.
 
 #### Data types
 
-This component provides Overview of the possible data types and the domains in which they are used. A conversion can also be done from and to another programming language for each data type.
+This screen provides an overview of the possible data types and the domains in which they are used. A conversion can also be done from and to another programming language for each data type.
 
 #### Data type conversions
 
-Overview of the conversions between data types from one programming language to another. 
+Overview of the conversions between data types from one programming language to another.
 
 #### Program object types
 

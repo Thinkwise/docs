@@ -1,5 +1,5 @@
 ---
-title: Concepts
+title: Logic concepts
 ---
 
 Business logic of the application that cannot be modeled can be added using code. This business logic not only comprises traditional [business rules](https://en.wikipedia.org/wiki/Business_rule) but also the logic to control the user interfaces, process flows and messages.
@@ -197,8 +197,8 @@ The following trigger ensures that when deleting an order, a record is written t
 
 ```sql
 insert into deleted_order_log
-select 
-    d.order_id as order_id, 
+select
+    d.order_id as order_id,
     getdate()  as deleted_date
 from deleted d
 
@@ -212,7 +212,7 @@ In addition to the logic concepts above, there are platform-specific concepts th
 
 View and Snapshot logic determines the contents of a view or snapshot respectively. This logic can only be applied in template-based views and snapshots. In the template the complete query is defined for the data that will be displayed by means of the view or snapshot.
 
-When modeling a view the developer provides the columns which must be available in the view. This is explained under the data modeling component. These columns become available when writing the functionality as parameters. All these parameters must also be used in the code.
+When modeling a view the developer provides the columns which must be available in the view. These columns become available when writing the functionality as parameters. All these parameters must also be used in the code.
 
 Template code for a view could then look as follows:
 
@@ -233,7 +233,7 @@ With offline functionality, which is written in JavaScript, it is possible to al
 
 In order to get this functionality available the base project `JAVASCRIPT` must be added to the project.
 
-To update *volatile* data on the mobile clients before it is synchronized to the service tier, extra logic concepts have been added for JavaScript logic. These are: *JavaScript Tasks*, *Before Task* event, *After Task* event and *JavaScript Before / After / Delete Triggers*.
+To update *volatile* data on the mobile clients before it is synchronized to the service tier, extra logic concepts are available for JavaScript logic. These are: *JavaScript Tasks*, *Before Task* event, *After Task* event and *JavaScript Before / After / Delete Triggers*.
 
 By defining subroutines of the *JavaScript Function* type you can add generic functions to the offline JavaScript.
 

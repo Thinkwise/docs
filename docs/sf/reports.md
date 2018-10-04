@@ -2,7 +2,7 @@
 title: Reports
 ---
 
-Reports have a similar structure to tasks, but instead of starting a task, a report is printed or displayed on the screen (preview). The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, AIA ITP, SQL Server Reporting Services (SSRS) or Word.
+Reports have a similar structure to tasks, but instead of starting a task, a report is printed, previewed or exported. The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, i-net Clear Reports, SQL Server Reporting Services (SSRS) or Word.
 
 ![](../assets/sf/image199.png)
 *Reports screen*
@@ -10,23 +10,18 @@ Reports have a similar structure to tasks, but instead of starting a task, a rep
 The structure of reports is analogous to that of tasks. Parameters are defined for a report and look-up functionality is provided through references.
 
 ![](../assets/sf/image200.png)
+*Example report popup*
 
-*Popup that appears in the end product when a report is generated*
-
-### Settings
+## Creating a report
 
 The basic data for a report can be entered in the settings, such as the type of report that is used. The following types are supported by the Software Factory.
 
 - Crystal Reports
-
 - DevExpress Reports
-
 - SQL Server Reports
-
-- External program
-
-- GUI function
-
+- i-net Clear Reports
+- Windows command
+- GUI code
 - Microsoft Word
 
 #### Crystal Reports
@@ -37,23 +32,22 @@ A report in Crystal Reports can make use of views, but SQL queries can also be s
 
 DevExpress Reports can display any styled and formatted text, such as RTF and HTML, from your end product. The DevExpress Report Designer is free of charge and can be downloaded from TCP.
 
-#### External program
+#### Windows command
 
-The same as for tasks, but with the name of the parameter in the *File specification* field. For example to link in an existing pdf as a report.
+The same as for [tasks](tasks#windows-command), but with the name of the parameter in the *File specification* field. For example to link in an existing pdf as a report.
 
 ![](../assets/sf/image201.png)
-
 *General settings when creating a report*
 
-#### GUI function
+#### GUI code
 
-This options allows *custom tasks*, such as the TSFReportMailer, to be linked in as a report. The name of the custom task should be entered in the *File specification* field.
+This options allows *custom tasks*, such as the [TSFReportMailer](../kb/report_mailer), to be linked in as a report. The name of the custom task should be entered in the *File specification* field.
 
 #### Microsoft Word
 
 To generate reports in Word, a macro and a template have to be created in Word. Word does not work in web and is not always reliable because of the macros.
 
-*Creating a template:*
+##### Create a template
 
 - Open Microsoft Word
 
@@ -81,7 +75,7 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 - Click *Normal Word Document*
 
-*Create macro:*
+##### Create a macro:
 
 - Go to the *View* tab
 
@@ -94,19 +88,18 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 - Select the correct document to which the Macro must be linked:
 
 ![](../assets/sf/image202.png)
-
 *Available options of macros in a drop down list*
 
 - Click on the *Create* button
-      - The Visual Basic editor will open.
+  - The Visual Basic editor will open.
 
 - Copy and paste the macro code as displayed on the next page to the Visual Basic editor.
 
 - Modify the macro with respect to the following points
 
-      - strFolder
-
-      - strQuery
+  - strFolder
+  
+  - strQuery
 
 - Close the Visual Basic editor by pressing the X button.
 
@@ -118,61 +111,38 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 Macro code:
 
-> *Dim strODCFile As String*
->
-> *Dim strConnection As String*
->
-> *Dim strQuery As String*
->
-> *' Use your folder name...*
->
-> *strFolder = *C:\\your_folder\\Reports\\**
->
-> *' Use your .odc name...*
->
-> *strODCFile = strFolder & *thinkwise.odc**
->
-> *' Build the connection string*
->
-> *' You may well need moe here, but I am following*
->
-> *' your ADO connection string*
->
-> *strConnection = Environ(*TSFTOWORD_CONN*)*
->
-> *' Build the Query string*
->
-> *strQuery = *SELECT \* FROM **your_table** where * + Environ(*TSFTOWORD_SQL*)*
->
-> *' Open the data source*
->
-> *With ActiveDocument.MailMerge*
->
-> *'.MainDocumentType = wdNotAMergeDocument*
->
-> *.MainDocumentType = wdFormLetters*
->
-> *.OpenDataSource _*
->
-> *Name:=strODCFile, _*
->
-> *Connection:=strConnection, _*
->
-> *SQLStatement:=strQuery*
->
-> *'ActiveDocument.ResetFormFields*
->
-> *End With*
->
-> *ActiveWindow.Visible = False*
->
-> *ActiveDocument.MailMerge.Execute*
->
-> *Application.Quit (False)*
+```vb
+Dim strODCFile As String
+Dim strConnection As String
+Dim strQuery As String
+' Use your folder name...
+strFolder = C:\\your_folder\\Reports\\
+' Use your .odc name...
+strODCFile = strFolder & thinkwise.odc
+' Build the connection string
+' You may well need more here, but I am following
+' your ADO connection string
+strConnection = Environ(TSFTOWORD_CONN)
+' Build the Query string
+strQuery = SELECT \ FROM your_table where  + Environ(TSFTOWORD_SQL)
+' Open the data source
+With ActiveDocument.MailMerge
+'.MainDocumentType = wdNotAMergeDocument
+.MainDocumentType = wdFormLetters
+.OpenDataSource _
+Name:=strODCFile, _
+Connection:=strConnection, _
+SQLStatement:=strQuery
+'ActiveDocument.ResetFormFields
+End With
+ActiveWindow.Visible = False
+ActiveDocument.MailMerge.Execute
+Application.Quit (False)
+```
 
 #### SSRS
 
-SSRS stands for “SQL Server Reporting Services” and is a (server-based) report generation system of Microsoft SQL Server. Reports can be drawn up with this system so that information from tables from one or more databases can be presented in an orderly fashion.
+SSRS stands for SQL Server Reporting Services and is a (server-based) report generation system of Microsoft SQL Server. Reports can be drawn up with this system so that information from tables from one or more databases can be presented in an orderly fashion.
 
 Reports are described in the Report Definition Language (RDL). This is a file format that is built up in XML. RDL reports can be created with the SQL Server Report Builder application.
 
@@ -189,7 +159,6 @@ Depending on the environment in which the reports are generated, these can be ex
 Local reports work in the same way as other report types such as Crystal Reports. The report is generated on the basis of the RDL file that is specified for the report in the file specification field, for which use is made of the end application database connection. This means that the connection string that is specified as Datasource for any Data Sets is ignored in the RDL file.
 
 ![](../assets/sf/image203.png)
-
 *Specify SSRS (local) file specification*
 
 ##### SSRS (Server)
@@ -201,10 +170,7 @@ The report server can run in *native mode* or *SharePoint*. Native mode is the d
 Reports that are generated on a report server use the connection string that is assigned for each Datasource to retrieve the Data Seta. Ensure that the reports that are used in a test environment have the correct connection string when this is rolled out to the live environment.
 
 ![](../assets/sf/image204.png)
-
 *Specify SSRS (Server) file specification*
-
-*Report actions*
 
 Local SSRS reports in an SF application support the following report (export) actions:
 
@@ -246,13 +212,9 @@ The above is not necessary when use is made of a GUI with version 2017.1.12 or h
 
 Reports made with SSRS can also retrieve data from Oracle and DB2 databases, provided that the correct software is available for this on the system on which the report is generated.
 
-*Oracle*
-
 For Oracle connections the Oracle Client needs to be present on the system.
 
 > When using the Oracle Client together with the Microsoft SQL Server Report Builder it is necessary to have the 32 bit version of the Oracle Client installed. The 64 bit version will unfortunately not work, because the report Builder itself is a 32 bit application. Use can be made of the 64 bit Oracle Client for end applications.
-
-*DB2 *
 
 Connections to DB2 databases are created in SSRS via OLE DB. The ADO.NET bindings, which can be installed via the IBM Client Access, are required for this.
 
@@ -273,236 +235,63 @@ The Microsoft SQL Server Report Builder software to develop reports can be downl
 
 A report consists of the following basic components:
 
-### Report parameters
+## Report parameters
 
-Creating report parameters works the same as creating task parameters. See paragraph 0.
-
-### Report look-ups
-
-A report reference defines the look-up table of a particular parameter
-
-The underlying column comparison (Report reference columns) is created automatically.
-
-### Conditional formatting
-
-Just as with columns, the task parameters can be given a background color or a different font. Since a task does not have a grid, this will only be applied to form parameters.
-
-### Table reports
-
-The report can be linked to one or more tables. The report is displayed in the context menu for these tables. Columns in the table can also be linked to parameters of the report. The value of the field of the active record is passed on to the parameter as a default value.
-
-*Grouping of reports*
-
-Reports within a table can be grouped together to display them logically. Both the groups and the reports within a group can be sorted sequentially. This works the same as grouping tasks.
-
-### Quick launch toolbar items and Tree structure items
-
-A report can be included in several menus. If a report is linked to a table, it appears in the ribbon and the context menu of this table. A report can also be included in the menu. This way the user can print the report directly without having to first open a window.
-
-### Report parameters
-
-Creating report parameters works the same as creating task parameters. See paragraph 0.
-
-Another possibility when executing a report in the GUI is to display several parameters to specify the properties of the report (for instance the action, printer and export location).
+Creating report parameters works the same as creating task parameters. An additional feature for reports is to link parameters to properties of the report (for instance the *action*, *printer* and *export location*).
 
 ![](../assets/sf/image205.png)
+*Example of report parameters*
 
-*GUI example of report parameters*
-
-Under the “Report parameters” tab under “Reports” a property can be linked to a report parameter. These report parameters can then be used in the defaults and layouts and also be placed on the right location in the correct group.
+By linking a report parameter to a report property, these properties can be used in defaults and layouts and also be placed on the right location in the correct group.
 
 A choice can be made from the following properties within Windows:
 
-|Property|Description|Domain|
-|--- |--- |--- |
-|Action|This is the default action that must be carried out for the report, e.g. print preview or export to pdf. These parameters receive as default the value as specified with the report.|Integer|
-|File specification|A report can even be specified with this. So, for example, in the default, depending on the current row, another report can be opened.|String|
-|Printer name|The printer name can be filled automatically here.|String|
-|Paper tray name|Paper tray name can be filled automatically here.|String|
-|Number of copies|The number of copies to be printed can be specified here.|Integer|
-|Compress|This indicates whether the file must be compressed or not.|Boolean|
-|Open after export|This indicates whether the file must be opened after export.|Boolean|
-|Export location|This is the location where the file is stored when the choice is made for the action 'Export to'|String|
-
+| Property           | Description                                                  | Domain  |
+| ------------------ | ------------------------------------------------------------ | ------- |
+| Action             | This is the default action that must be carried out for the report, e.g. print preview or export to pdf. These parameters receive as default the value as specified with the report. | Integer |
+| File specification | A report can even be specified with this. So, for example, in the default, depending on the current row, another report can be opened. | String  |
+| Printer name       | The printer name can be filled automatically here.           | String  |
+| Paper tray name    | Paper tray name can be filled automatically here.            | String  |
+| Number of copies   | The number of copies to be printed can be specified here.    | Integer |
+| Compress           | This indicates whether the file must be compressed or not.   | Boolean |
+| Open after export  | This indicates whether the file must be opened after export. | Boolean |
+| Export location    | This is the location where the file is stored when the choice is made for the action 'Export to' | String  |
 
 The web only supports the *Action* and *Compress* properties.
 
-When a report does not have any property parameters, then all properties will be displayed as this was also the case in previous versions. When at least 1 property parameter is modeled, then only the modeled properties will be displayed. The others are hidden.
+When a report does not have any property parameters, then all properties will be displayed as this was also the case in previous versions. When at least one property parameter is modeled, then only the modeled properties will be displayed. The others are hidden.
 
-For “action”, “printer name” and “paper tray name” the control of the domain is ignored and the control will be used that belongs with the property.
+For *action*, *printer name* and *paper tray name* the control of the domain is ignored and the control will be used that belongs with the property.
 
-TIP
+> Look in the end product under the default properties for filling the default value of printer and paper tray name.
 
-Look in the end product under the default properties for filling the default value of printer and paper tray name.
-
-### Report look-ups
+## Report look-ups
 
 A report reference defines the look-up table of a particular parameter
 
 The underlying column comparison (Report reference columns) is created automatically.
 
-### Conditional formatting
+## Conditional formatting
 
 Just as with columns, the task parameters can be given a background color or a different font. Since a task does not have a grid, this will only be applied to form parameters.
 
-### Table reports
+## Table reports
 
 The report can be linked to one or more tables. The report is displayed in the context menu for these tables. Columns in the table can also be linked to parameters of the report. The value of the field of the active record is passed on to the parameter as a default value.
 
-*Grouping of reports*
+### Grouping of reports
 
 Reports within a table can be grouped together to display them logically. Both the groups and the reports within a group can be sorted sequentially. This works the same as grouping tasks.
 
-### Menu items
+## Menu
 
-A report can be included in several menus. If a report is linked to a table, it appears in the ribbon and the context menu of this table. A report can also be included in the menu. In this way the user can print the report directly without having to first open a window.
+A report can be included in several menus. If a report is linked to a table, it appears in the ribbon and the context menu of this table. A report can also be included in the menu. This way the user can print the report directly without having to first open a window.
 
-### Printing a report
+## Printing a report
 
 When the report is fully defined within the Software Factory, a preview can be viewed on the screen in the user interface.
 
 ![](../assets/sf/image206.png)
-
-*Example of a generated report*
-
-### TSFReportMailer
-
-Thanks to the TSFReportMailer, delivered with the Software Factory, it is possible to export reports and/or send e-mails from the Software Factory.
-
-It is produced by creating a task that has *Function* as a type. The Object name must be entered with *TSFReportMailer*. Use can be made of the following table for creating parameters.
-
-#### Parameters
-
-An overview of the parameters that can be used is given on the following page.
-
-|Parameter|Default Value|Data type|Description|
-|--- |--- |--- |--- |
-|report_id||string|Name of the report|
-|export_file_spec||string|Export file name (for example to be filled from a default)|
-|export_file_extension|pdf|string|With this parameter, the file format can be selected of the report that will be generated. The parameter value is not case sensitive.<br>Possible values;<br><br>rtf<br>csv<br>xml<br>xls<br>xls_data<br>xlsx_data<br>doc<br>word_rtf<br>pdf|
-|overwrite_old|false|boolean|Overwrites the file if it already exists and if this parameter is set to true.|
-|send_mail|true|boolean|Tries to send an email if this parameter is set to true .|
-|open_in_outlook|false|boolean|Tries to open the email if this parameter is set to true .|
-|save_mail|false|boolean|Tries to save the email in the Drafts folder if this parameter is set to true .<br>NOTE: If open_in_outlook is also set to true then this parameter will be ignored!|
-|html|false|boolean|This parameter converts the format of the email to HTML if it is set to true.|
-|priority|1|integer|This parameter indicates the urgency of the email.<br>Possible values: 0 = low urgency, 1 = normal urgency, 2 high urgency.|
-|e-mail||string|Email address to which the email must be sent. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.)|
-|cc||string|CC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.)|
-|bcc||string|BCC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.)|
-|body||string|If HTML tags are used for the actual message of the email, then the html parameter must be set to true.|
-|subject||string|The subject of the email.|
-|use_signature|false|boolean|If this parameter is set to true, the standard signature is used that is configured in Outlook.|
-|signature_text||string|Set this parameter if you want to use a different signature text.|
-|signature_image||string|Set the parameter if you want to use an image in the signature of the email.|
-|account||string|Set this parameter if the email should be sent from a different account than the default account that is installed on the PC.|
-|delete_file|false|boolean|Set this parameter to true if the report, which is used as an attachment should be deleted after sending the email.|
-|smtp_only|false|boolean|Set this parameter to true if you just want to mail with SMTP and do not want to mail with Outlook.|
-|smtp_username||string|User name of the SMTP.|
-|smtp_password||string|Password of the SMTP.|
-|smtp_host||string|Host address of the SMTP|
-|smtp_port|0|integer|The port to which the SMTP server listens. If this is not set, port 465 will be used for SSL, without SSL port 25 will be used|
-|smtp_from_mail||string|Email address where the email comes from.|
-|smtp_use_ssl|false|boolean|Set this parameter to true if the SMTP server expects an SSL connection.|
-|extra_attachments||string|This can be used to add extra attachments to the email. If more than one file is to be added, they must be separated by means of a semicolon.<br>For example: C:/mijn-bestand.txt;C:/mijn-andere-bestand.txt|
-|smtp_from_displayname||string|With this parameter the display of the sender's name in an email can be modified. This parameter is optional.|
+*Example of a report preview*
 
 
-Table 5: Report parameters
-
-If no values are entered, these fields are considered to be empty text fields and will be treated as such in the GUI. Initially all parameters are optional, however, some of them are linked to each other.
-
-#### Reports
-
-To generate a report in PDF format with the TSFReportMailer, at least the following parameters must be entered.
-
-##### Mandatory
-
-- report_id
-
-- export_file_spec
-
-##### Optional
-
-- overwrite_old
-
-- export_file_extension (default *pdf*)
-
-#### Email via Outlook
-
-To send an email with Outlook via the TSFReportMailer, at least the following parameters must be entered and the parameter *send_mail* should be set to *true*, which is the default value.
-
-##### Settings
-
-- send_mail = true
-
-##### Mandatory
-
-- e-mail
-
-> This is not mandatory if the parameter *open_in_outlook* is set to *true*, the default value of this is *false*.
-
-##### Optional
-
-- smtp_only
-
-- send_mail
-
-- open_in_outlook
-
-- save_mail
-
-- html
-
-- priority
-
-- e-mail
-
-- cc
-
-- bcc
-
-- body
-
-- subject
-
-- use_signature
-
-- signature_text
-
-- signature_image
-
-- account
-
-- extra_attachments
-
-#### Email via SMTP
-
-The TSFReportMailer tries as much as possible to revert to SMTP as it would otherwise become too much for the server. If this requires an alternative configuration, at least the mandatory parameters should be entered, otherwise the SMTP parameters will be ignored.
-
-##### Settings
-
-- send_mail = true
-
-- smtp_only = true
-
-##### Required fields
-
-- smtp_username
-
-- smtp_password
-
-- smtp_host
-
-- smtp_from_mail
-
-- e-mail
-
-##### Optional fields
-
-- smtp_port
-
-- smtp_from_displayname
-
-- smtp_use_ssl
-
-It is also possible to specify (part of) the SMTP settings using parameters in the configuration file, so that these are the same for all users.

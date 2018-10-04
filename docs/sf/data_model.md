@@ -225,7 +225,7 @@ Incidentally, just the integrity between tables can be checked. When the source 
 
 ## Validation
 
-Validating the data model is possible in the *Validation* tab. Through this errors can already be identified at an early stage. The *Validation* component is explained in more detail in paragraph 7.13.
+Validating the data model is possible in the *Validation* tab. Through this errors can already be identified at an early stage. *Validation* is explained in more detail [here](validation).
 
 ![](../assets/sf/image96.png)
 *Example of the validation screen*

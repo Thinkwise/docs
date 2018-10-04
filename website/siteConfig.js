@@ -84,7 +84,8 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: 'monokai-sublime',
+    defaultLang: 'sql'
   },
 
   // Add custom scripts here that would be placed in <script> tags
@@ -95,8 +96,8 @@ const siteConfig = {
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  // ogImage: 'img/docusaurus.png',
+  // twitterImage: 'img/docusaurus.png',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
@@ -108,6 +109,15 @@ const siteConfig = {
   },
 
   blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },
+
+  // editUrl: 'https://github.com/facebook/docusaurus/edit/master/docs/',
+  editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
+  enableUpdateTime: true,
+  cleanUrl: true,
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 };
 
 module.exports = siteConfig;

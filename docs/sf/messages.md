@@ -2,146 +2,111 @@
 title: Messages
 ---
 
-Error messages, warnings or informational error messages are also modelled in the Software Factory, with for instance the possibility to define a translation, severity and location. This applies to both messages that are transmitted from functionality (code templates) and messages that are caused by the database, such as constraints and checks.
+Error messages, warnings or informational error messages are also modelled in the Software Factory, with  the possibility to define a translation, severity, location and more. This applies to both messages that are sent from functionality (code templates) and messages that are caused by the database, such as constraints and checks.
 
-### Modeling messages
+![1538638669734](../assets/sf/1538638669734.png)
+*Example of a message as it may appear in an end product.*
 
-The *Messages* screen can be found in the menu under *Development*.
+## Modeling messages
 
-![](../assets/sf/image263.png)
+The *Messages* screen can be found in the menu under *User Interface*.
 
-*Overview of the Messages*
+![1538638866903](../assets/sf/1538638866903.png)
+*Overview of messages*
 
-##### Message id
+The *Message id* is used to reference the message from the business logic. This id is translated in the *Translations* tab page.
 
-The message is given a name in the Message id field.
+A brief description of the purpose of the message is given in the *Descriptions* tab.
 
-It is possible to clear the Info Panel with the default messages *clear_panel* and *add_separator*.
+### Message location 
 
-##### Message description
+The *Message location* indicates how the message should be displayed: in a *popup*, in a *panel* at the bottom of the screen, or *none (suppress)*, used to suppress database messages.
 
-A brief description of the purpose of the message is given in the 'Descriptions' tab.
+> It is possible to clear the *panel* with the message *clear_panel* or add a separator line to the *panel* by sending the *add_separator* message.
 
-##### Message location id
+### Severity
 
-##### It is indicated in this field how the message should be displayed. A panel (a bar at the bottom of the screen) or a popup can be selected.
+The severity of the message is determined here. This may be an informational message, a warning or an error message. The severity determines how the user interfaces and the Indicium application tier handle the action that caused the message. Only for errors, the action is canceled. 
 
-##### Severity
+### Message options
 
-The severity of the message is determined here. This may be an informational message, a warning or an error message.
+It is possible to add message options to a message. These options represent the choices a user can make when presented with the message when used in a [process flow](process_flows#show-message). For example, this configuration in the Software Factory:
 
-#### Translations
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message5.png](../assets/sf/image251.png)
 
-In the Translations tab of the message, a translation can be specified in which parameters are defined with \\ {0 } \\ {1 } etc. Later on in this paragraph it will be explained how these parameters can be filled, for example, with a table or column name or with free text.
+will result in this dialog in the GUI:
 
-### Generating Messages
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message1.png](../assets/sf/image252.png)
 
-To generate a message from an SQL template for RDBMS projects use can be made of the *tsf_send_message* procedure.
+An affirmative message option will be given a unique status code of zero or higher, while a negative message option will be given a unique negative status code. These response types and corresponding status codes are directly related to the green and red arrows in the process flow. In some cases it might be necessary to have multiple affirmative and/or multiple negative message options which have different effects on the continuation of the process flow. To achieve this, the *Status code* value of a message option will be passed as the *Status code* output parameter of the process action.
 
-tsf_send_message **message id*, [parameter string], [abort]*
+Icons are optional and the sequence number of the message option (\#) determines the order of the buttons on the dialog.
 
-##### Parameter string
+### Translations
+
+In the *Translations* tab page, a translation can be specified in which parameters are defined with {0}, {1} etcetera.
+
+## Sending messages
+
+To send a message from a SQL template use can be made of the *tsf_send_message* procedure:
+
+```sql
+tsf_send_message [message id], [parameter string], [abort]
+```
+
+### Parameter string
 
 Optional parameter string with which parameters in the translation can be filled. This is an XML string in which the various parameters are given. It is also possible to use translations of model objects, such as columns or tables.
 
+An example parameter string, which specifies the text *Welcome* for parameter {0} and the plural translation of column *name* of the *customer* table for parameter {1}:
+
+```xml
+<text>Welcome</text><col tabid="customer" colid="name" transl="plural"/>
+```
+
 The following XML elements with associated attributes are recognized:
 
-- text
+```xml
+<text>Text to display</text>
 
-- tab
+<tab tabid="tab_id" transl="standard, form, grid, plural"></tab>
 
-      - tabid
+<col tabid="tab_id" colid="col_id" transl=""></col>
 
-      - transl (**standard**, form, grid, plural)
+<domelement domid="dom_id" elementid="element_id" transl=""></domelement>
 
-- col
+<task taskid="task_id" transl=""></task>
 
-      - colid
+<taskparam taskid="task_id" taskparam="task_parmtr_id" transl=""></task>
 
-      - transl
+<report reportid="report_id" transl=""></report>
 
-- domelement
+<reportparam reportid="report_id" reportparam="report_parmtr_id" transl=""></report>
+```
 
-      - domid
 
-      - elementid
 
-      - transl
+For example, for message *duplicate_customer* with translation *'Note, {0} already exists as a {1}'*:
 
-- task
+```xml
+exec tsf_send_message 'duplicate_customer', 
+  '<text>Thinkwise</text><tab tabid="customer" transl="standard"/>', 1;
+```
 
-      - taskid
+Results in *'Note, Thinkwise already exists as a Customer'*.
 
-      - transl
+### Abort
 
-      -
-- taskparam
+Indicates the *database* severity level.
 
-      - taskid
+For SQL Server, specifying *0* results in a database message with severity *9* and *1* results in a database message with severity *16*. Because SQL Server does not do a rollback automatically, a rollback and return have to be explicitly executed to abort a transaction. For example:
 
-      - taskparmtrid
+```sql
+exec tsf_send_message 'duplicate_customer', null, 1;
+rollback;
+return;
+```
 
-      - transl
+For Oracle, specifying *true* results in a raise_application_error which will abort the transaction and *false* results in a *dbms_output.put_line*.
 
-- report
-
-      - reportid
-
-      - transl
-
-- reportparam
-
-      - reportid
-
-      - reportparamid
-
-      - transl
-
-Text does not have any attributes, since only plain text is placed here, which does not need to be retrieved from another location.
-
->```xml
-><text>Welcome</text><col tabid="customer" colid="name" transl="plural"/>
->````
-
-##### Abort
-
-Indicates to the GUI whether the transaction should be aborted or not. This parameter determines whether the GUI, for example when saving a row, regards this row as stored and closes the edit mode, or whether the form remains in edit mode.
-
-For example for SQL Server:
-
-Message_id: duplicate_customer
-
-Translation: Note, {0} already exists in {1}.
-
-> exec tsf_send_message 'duplicate_customer', '\<text\>''Thinkwise''\</text\>
-> \<tab tabid=”customer” transl=”plural”/\>', 1;
-
-Result: Note, *Thinkwise* already exists in *Customers*.
-
-> It is also possible to use the XML string that is generated by the *tsf_send_message* procedure directly in a raiserror or signal, for instance:
-
-exec raiserror('\<msg id=”duplicate”\>\</msg\>', 16, 1);
-
-### Transactions
-
-For SQL Server a rollback and return have to be performed to abort a transaction. This always occurs for DB2 and Oracle and therefore no informative messages can be given.
-
-Example:
-
-> exec tsf_send_message 'duplicate_customer', null, 1;
->
-> rollback;
->
-> return;
-
-In order to still provide informational messages on DB2 in defaults (and layouts?): v_message_text + example
-
-For Oracle the *put_line* function can be used to give informational messages. The PL-SQL code looks as follows:
-
-dbms_output.put_line(*\<\< \<msg id=*my_multilang_message_id*\> [parameter_string]\</msg\> \>\>*);
-
-![](../assets/sf/image264.png)
-
-*Example of a message as it may appear in an end product.*
-
-.
+For DB2, the abort parameter is ignored as a transaction is always aborted when a message is sent. In order to still provide informational messages on DB2 in defaults and layouts, these logic concepts have an extra parameter *v_message_text* that can be set to show in informational message.

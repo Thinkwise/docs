@@ -67,7 +67,7 @@ The possible group interval types are:
 
 - Day age - see year age, but then for the age in days.
 
-### Cube displays
+## Cube views
 
 Apart from defining cubes, which the user can work with, the cube views can also be specified in the Software Factory. These can be accessed by the user through the context menu, the ribbon or the cube view bar. A cube view is essentially a predefined format, which the user can adapt to his own wishes for personal use.
 
@@ -129,7 +129,7 @@ Once the cube view has been created and the fields have been added, they are ava
 
 Using the cube view toolbar, the available cube views can be displayed in a bar on the screen, in the same way as prefilters, tasks and reports. In combination with the new cube components, screens can be developed for example with only charts and a toolbar to select the view.
 
-### charts
+## Charts
 
 Each overview can be displayed chartically in a two or three-dimensional chart. Dimensions can also be linked to each other so that a hierarchy is created.
 
@@ -144,7 +144,7 @@ The last example requires 3 dimensions that are linked via the same date field. 
 ![](../assets/sf/image212.png)
 *Example of a 3D chart display*
 
-#### Chart type per measured value
+### Chart type per measured value
 
 In order to combine different types of charts in a chart measured value can be linked to a particular type of chart. This is done by including the name of the type of chart in the name of the measured value, separated by an underscore, for instance: `number_of_hours_spline3d`.
 
@@ -172,10 +172,10 @@ Available chart types are:
 |Bubble2D|RadarPoint2D|Stock2D|
 |||SwiftPlot2D|
 
-#### Areas in charts
+### Areas in charts
 
 To model an area in a chart, you can use a constant line, the name of which starts with *area_*. The minimum value can be specified with the *Value* field and the height or width of the area with *Thickness*.
 
-### Executing tasks
+## Executing tasks
 
 It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique, since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.

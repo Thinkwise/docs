@@ -113,7 +113,7 @@ The source code is subsequently defined in the Code tab of the form.
 
 The code can be written directly in the Template tab and will be displayed as is usual with an editor such as Notepad++ or SQL Server Management Studio. If the preference is to work directly in the editor itself, you can click on the button next to the code template. A linked editor will open. Changes to the file are automatically reported back to the Software Factory.
 
-When the control procedures or templates are modified, the history is stored in the Software Factory. Several tasks have been added to compare these templates and control procedures with the history. This makes comparisons between new and old code more transparent and easier.
+When the control procedures or templates are modified, the history is stored in the Software Factory. Several tasks are available to compare these templates and control procedures with the history.
 
 It is also recorded when a template is modified and when the source code was last generated. After the development is finished, the control procedure should receive the status *Completed*. This is done by calling the *Complete control procedure* task. It must be indicated in the pop-up what must be included in the change log.
 
