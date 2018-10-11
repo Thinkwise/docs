@@ -4,13 +4,11 @@ This project contains all platform related documentation, a knowledge base and i
 
 ## Build status
 
-[![Build status](../assets/Documentation-CI.svg)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=57)
+[![Build status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Documentation-CI)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=57)
 
 ## Code style
 
 Please use the [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint) extension.
-
-[![js-standard-style](../assets/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64652532307374796c652d7374616e646172642d627269676874677265656e2e7376673f7374796c653d666c6174.svg)]()
 
 ## Framework
 
@@ -22,14 +20,14 @@ For detailed requirements and instructions, see the [Docusaurus docs](https://do
 
 1. Install Docusaurus
 
-   ```
+   ```sh
    cd website
    npm install
    ```
 
 2. Start the website
 
-   ```
+   ```sh
    npm start
    ```
 
@@ -49,7 +47,7 @@ title: Title of the page
 ---
 ```
 
-Start with level two `##` heading and always increment headings by one level. 
+Start with level two `##` heading and always increment headings by one level.
 
 ### Images
 

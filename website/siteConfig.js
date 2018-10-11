@@ -112,7 +112,7 @@ const siteConfig = {
 
   //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
   enableUpdateTime: true,
-  // cleanUrl: true, // This breaks relative urls like ../assets/sf/image.png
+  cleanUrl: false, // Setting this to True breaks relative urls like ../assets/sf/image.png
   scrollToTop: true,
   scrollToTopOptions: {
     zIndex: 100,
