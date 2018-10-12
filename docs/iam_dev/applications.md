@@ -12,7 +12,7 @@ A new application can be created via the applications screen.
 
 *Create an application*
 
-The *Sequence number* determines the order in which the applications are listed in the user interfaces. An application will only show if the *Active* option is checked. Only activate an application after it has been completely set up.
+The *Sequence number* determines the order in which the applications are listed in the user interfaces. An application will only show if the *Active* option is checked. Only activate an application after it has been set up completely.
 
 The *Environment* group shows for which platforms the application is available and the alias used for the Indicium OData API.
 
@@ -30,7 +30,7 @@ Tasks are available to apply the required rights to the databases:
 | ![1537863886902](../assets/sf/1537863886902.png) Apply user rights | Creates the users and user groups on the application database |
 | ![1537863897038](../assets/sf/1537863897038.png) Apply user rights to IAM | Creates the users on the IAM database                        |
 
-To be able to apply the rights to a SQL Server database, an IAM administrator that is not a database system administrator needs additional database rights. This can be done using the following code snippet:
+To be able to apply the rights to an SQL Server database, an IAM administrator who is not a database system administrator needs additional database rights. This can be done using the following code snippet:
 ```sql
 use master
 go
@@ -41,11 +41,11 @@ go
 
 ### Translations
 
-In the *Translations* tab page it is possible to provide a translation and a tooltip for every application language.
+In the *Translations* tab page, it is possible to provide a translation and a tooltip for every application language.
 
 ## Copy an application
 
-It is also possible to copy an existing application, including it's translations, settings, user preferences and authorization, using the *Copy application* task.
+It is also possible to copy an existing application, including its translations, settings, user preferences and authorization using the *Copy application* task.
 
 ![1537863288816](../assets/sf/1537863288816.png)
 *Copy application task*

@@ -2,18 +2,18 @@
 title: Tasks
 ---
 
-A task represents business logic that can be executed manually by the user. A task can be linked to one or more tables, and will be displayed in the ribbon, the context menu and possibly in the task bar. Columns of a table can be linked to the parameters of the task. The values of the linked columns of the active record are then passed on to the relevant parameters.
+A task represents business logic that can be executed manually by the user. A task can be linked to one or more tables and will be displayed in the ribbon, the context menu and possibly in the task bar. Columns of the table can be linked to the parameters of the task. The values of the linked columns of the active record are then passed on to the relevant parameters.
 
 ![](../assets/sf/image191.png)
 *An example task popup*
 
-In addition, a reference can be established from a parameter to a look-up table. In this way a parameter gets a dropdown list and a button in order to be able to select another value in the popup.
+In addition, a reference can be established from a parameter to a look-up table. In this way, a parameter gets a drop-down list and a button in order to be able to select another value in the pop-up.
 
-A task has a default and a layout mechanism, just like tables. A shortcut combination can also be defined with which the task can be started using the keyboard.
+A task has a default and a layout mechanism, just as a table. A shortcut combination can also be defined with which the task can be started using the keyboard.
 
 ## Creating a task
 
-When creating a new task you have to select the type of task to be created. The following types are supported in the Software Factory.
+When creating a new task, you have to select the type of task to be created. The following types are supported in the Software Factory:
 
 - Template
 - Windows command
@@ -26,7 +26,7 @@ This is the default value, which creates a stored procedure on the database.
 
 #### Windows command
 
-Tasks can be used to call an external program or to open a network or web address. The location of the external program or the network or web address must be entered in the *Object name* field. Any parameters that are added to the task, will be passed on to the call of the external program. 
+Tasks can be used to call an external program or to open a network or web address. The location of the external program, the network or web address have to be entered in the *Object name* field. Any parameters that are added to the task will be passed on to the call of the external program. However, this only works with external programs and not with network or web addresses.
 
 To start Paint for example, enter the program name *mspaint.exe* in the object name and add a *filename* parameter to open that file.
 
@@ -36,13 +36,13 @@ Or create your own batch file to print a PDF document:
 @CALL START /MIN AcroRd32.exe /N /T %1
 ```
 
-With the use of parameters it is also possible to create dynamic external program tasks. This can be used in situations, in which the external program, network or web address to be opened is not always the same, but changes depending on the situation. In these cases a parameter must be added to the task with the location of the external program or network or web address. The *task parameter id* of this parameter must subsequently be specified between square brackets in the *Object name* field of the task (e.g. [URL]). For dynamic external program tasks, all other parameters are ignored.
+With the use of parameters, it is also possible to create dynamic external program tasks. This can be used in situations in which the external program, network or web address to be opened is not always the same but changes depending on the situation. In these cases, a parameter has to be added to the task with the location of the external program or network or web address. The *task parameter ID* of this parameter has to subsequently be specified between square brackets in the *Object name* field of the task (e.g., [URL]). For dynamic external program tasks, all other parameters are ignored.
 
-To open a dynamic URL without knowing the default browser you can trick the task by using a 'http:' as Object name and set the first parameter to the URL to be opened. The same goes for other URI schemes like 'mailto:'.
+To open a dynamic URL without knowing the default browser, you can trick the task by using 'http:' as Object name and set the first parameter to the URL to be opened. The same goes for other URI schemes like 'mailto:'.
 
 #### GUI code
 
-This options allows *custom C\# tasks*, such as the TSFReportMailer, to be linked in. The name of the custom task should be entered in the *Object id* field.
+This options allows *custom C\# tasks*, such as the TSFReportMailer, to be linked in. The name of the custom task should be entered in the *Object ID* field.
 
 #### None
 
@@ -50,7 +50,7 @@ Represents a dummy task, which can be used to in a process flow or to display a 
 
 ### Task confirmation
 
-When the Ask confirmation* option is checked, a [message](messages#message-options) can be selected that is displayed before executing the task. The task is executed when a message option with a status code of zero or higher is chosen.
+If *Ask confirmation* is checked, a [message](messages#message-options) can be selected that is displayed before executing the task. The task is executed when a message option with a status code of zero or higher is chosen.
 
 ![](../assets/sf/image193.png)
 *Task with confirmation message*
@@ -66,15 +66,15 @@ To display the percentage, the procedure 'tsf_send_progress' should be called fr
 
 tsf_send_progress *[message id], [parameterstring], [percentage]*
 
-##### Message id
+##### Message ID
 
 Optional parameter with which text above the progress bar (default *Run task ...*) can be changed by the translation of a message_id.
 
 ##### Parameter string
 
-Optional parameter with which parameters in the translation can be filled when use is made of a specific message_id. It is also possible to use translations of model objects, such as columns or tables. For more information see paragraph 8.2.
+Optional parameter with which parameters in the translation can be filled when use is made of a specific message_id. It is also possible to use translations of model objects, such as columns or tables. For more information, see paragraph 8.2.
 
-For example for SQL Server:
+For example, for SQL Server:
 
 > exec tsf_send_progress 'copy_customer', '\<text\>Thinkwise\</text\>', 82;
 
@@ -89,10 +89,10 @@ Tasks can take a long time to process. There are four options to give instructio
 ![](../assets/sf/image197.png)
 *Task with await result options*
 
-1. Yes - The user must wait for the result and a progress indicator is shown.
-1. Yes (no progress indicator) - The user must wait for the result (de GUI freezes and hourglass is shown).
-1. No - The action is executed in background and the user can continue working.[12]
-1. Optional - The user must wait (option 1), but has the possibility to continue the action in background (option 3).<sup>1</sup> Reports executed in background could be monitored in a new “Async action” dialog.
+1.  Yes - The user has to wait for the result and a progress indicator is shown.
+2.  Yes (no progress indicator) - The user has to wait for the result (the GUI freezes and hourglass is shown).
+3.  No - The action is executed in the background and the user can continue working.[12]
+4.  Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).<sup>1</sup> Reports executed in the background could be monitored in a new “Async action” dialog.
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
 
@@ -103,7 +103,7 @@ After creating a task, parameters can be added to the task that define the input
 ![](../assets/sf/image194.png)
 *Parameter settings when creating a task*
 
-Task parameters can be formatted in the same way as forms of table are formatted. Column type, sequence number, label width, field width, field height, number of positions further, field in next group, field in next column and field in next tab are available for this. 
+Task parameters can be formatted in the same way as forms of tables are formatted. Column type, sequence number, label width, field width, field height, number of positions further, field in next group, field in next column and field in next tab are available for this. 
 
 ![](../assets/sf/image195.png)
 
@@ -115,23 +115,24 @@ By specifying a task reference (between task and table and corresponding column 
 
 ## Conditional formatting
 
-Just as with columns, the task parameters can be given a background colour or a different font. Since a task does not have a grid, this will only be applied to form parameters.
+Just as with columns, the task parameters can be given a background color or a different font. Since a task does not have a grid, this will only be applied to form parameters.
 
 ## Table tasks
 
-A task can be linked to one or more tables. In these tables the task will be displayed in the ribbon, the context menu and possibly the task bar. Columns in the table can also be linked to parameters of the task. The value of the field of the active record is passed on to the parameter as a default value.
+A task can be linked to one or more tables. In these tables, the task will be displayed in the ribbon, the context menu and possibly the task bar. Columns in the table can also be linked to parameters of the task. The value of the field of the active record is passed on to the parameter as a default value.
 
 ### Grouping of tasks
 
 Tasks within a table can be grouped together to display them logically. Both the groups and the tasks within a group can be put in a sequence. When tasks are grouped, they can be displayed in two ways in the context menu:
 
-- Through a submenu
+- Through a sub-menu
 
 - Separated by separators
 
 ## Menu
 
-A task can be included in several menus. If a task is linked to a table, it will appear in the ribbon and the context menu of this table. A task can also be included in the quick launch bar, a the tree view or a tiles menu. In this way the user can immediately start the task without first having to open a screen.
+A task can be included in several menus. If a task is linked to a table, it will appear in the ribbon and the context menu of this table. A task can also be included in the quick launch bar, a tree view or a tiles menu. In this way, the user can immediately start the task without first having to open a screen.
+
 
 ## Functionality
 

@@ -2,13 +2,13 @@
 title: Username
 ---
 
-When using connection pooling or IAM authentication, the IAM user ID can't be retrieved on the RDBMS using database functions like `user_name()`, `system_user` or `USER`.
+When using connection pooling or IAM authentication, the IAM user ID cannot be retrieved on the RDBMS using database functions like `user_name()`, `system_user` or `USER`.
 
-Because the user ID is often used in queries (e.g. to fill trace columns or filter data), the user interfaces and service tiers use platform specific methods to provide the username in the context of every database connection.
+Because the user ID is often used in queries (e.g., to fill trace columns or filter data), the user interfaces and service tiers use platform specific methods to provide the username in the context of every database connection.
 
 The `tsf_user()` function is provided to retrieve the correct username from SQL logic.
 
-> The username is not available in connections made by Crystal Reports or other reporting tools that setup their own connection. You can provide the user ID to the report by using the input parameters. You can fill the correct user ID in the parameter values using default logic.
+> The username is not available in connections made by Crystal Reports or other reporting tools that set up their own connection. You can provide the user ID to the report by using the input parameters. You can fill the correct user ID into the parameter values using default logic.
 
 ## SQL Server
 

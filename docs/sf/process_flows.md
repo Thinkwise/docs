@@ -4,7 +4,7 @@ title: Process flows
 
 Process flows can be defined to automatically guide the user to the following action. A process flow consists of a number of process actions, which are linked together by process steps, so that the actions follow each other. Process steps can also be made conditional, so that these are or are not started depending on specific conditions.
 
-A process action can, for instance, be related to updating a record, executing a task, printing a report or skipping to a tab or document in the user interface. Manual actions can also be defined. These have no effect on the user interface, but present procedural actions that must be carried out by users in the organization, such as sending a particular letter.
+A process action can, for instance, be related to updating a record, executing a task, printing a report or skipping to a tab or document in the user interface. Manual actions can also be defined. These have no effect on the user interface but present procedural actions that must be carried out by users in the organization, such as sending a particular letter.
 
 A process flow will start if the user completes an action that is linked to the start action and no other process flow is active within the same screen.
 
@@ -18,13 +18,13 @@ Variables can be used to store data produced by process actions and retain this 
 
 ### Process actions
 
-A new process action is created by clicking on the button at the top right or via the context menu.
+A new process action is created by clicking on the button in the top right or via the context menu.
 
 ![](../assets/sf/image243.png)
 
 After clicking the button, the *Process actions* tab opens to create the new process action.
 
-Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does and they can be assigned a constant value or a Variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
+Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does, and they can be assigned a constant value or a Variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
 
 ![](../assets/sf/image254.png)
 *Output parameters*
@@ -71,9 +71,9 @@ This process action requires no specific rights, because only documents can be a
 
 ### Go to row
 
-With this process action the GUI can be controlled to select a specific row of a specific subject, on the basis of parameters that correspond with the columns of the subject in question. It is not necessary to link variables to all PK columns of the subject. If several rows correspond with the specified column value, then the first found row will be selected. However, if there are no variables linked to all PK columns of the subject, then a warning will be given when validating.
+With this process action, the GUI can be controlled to select a specific row of a specific subject on the basis of parameters that correspond with the columns of the subject in question. It is not necessary to link variables to all PK columns of the subject. If several rows correspond with the specified column value, then the first found row will be selected. However, if there are no variables linked to all PK columns of the subject, then a warning will be given when validating.
 
-In addition, it is possible to control the way in which the row must be searched for. In general this will make no sense, but if it is known where the row is located then this can make a difference in performance for large data sets. This process action will return the value of the active row as an output parameter.
+In addition, it is possible to control the way in which the row has to be searched for. In general, this will make no sense, but if it is known where the row is located, then this can make a difference in performance for large data sets. This process action will return the value of the active row as an output parameter.
 
 | Input parameters             |                                                              |
 | ---------------------------- | ------------------------------------------------------------ |
@@ -90,7 +90,7 @@ This process action requires read and navigation rights on the subject.
 
 ### Enable and disable prefilters
 
-With this process action the prefilters on a specific subject can be enabled and disabled. This process action will replace the status of all prefilters on the subjects by the statuses that are indicated by the input parameters of the process action.
+With this process action, the prefilters on a specific subject can be enabled and disabled. This process action will replace the status of all prefilters on the subjects by the statuses that are indicated by the input parameters of the process action.
 
 | Input parameters |                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ The sorting of a specific subject can be modified with this process action. It c
 
 | Input parameters        |                                                                                                                                                                                                                                                         |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [COL] (sort direction)  | The sort direction that will be applied to the column. This parameter is present for every column of the subject. For every column for which this parameter is specified the sequence number must also be specified.<br>0 - Ascending<br>1 - Descending |
+| [COL] (sort direction)  | The sort direction that will be applied to the column. This parameter is present for every column of the subject. For every column for which this parameter is specified, the sequence number must also be specified.<br>0 - Ascending<br>1 - Descending |
 | [COL] (sequence number) | Gives the sequence number of this column in the sort.                                                                                                                                                                                                   |
 
 | Output parameters |                                                                                                     |
@@ -140,7 +140,7 @@ This process action requires read and sorting rights on the subject and sorting 
 
 ### Manual
 
-This process action is named for completeness, but will remain unchanged. This process action will not have any input parameters and always returns status code 0 as output, because the process action cannot fail.
+This process action is named for completeness but will remain unchanged. This process action will not have any input parameters and always returns status code 0 as output because the process action cannot fail.
 
 | Output parameters |                                                           |
 | ----------------- | --------------------------------------------------------- |
@@ -155,7 +155,7 @@ This process action has no input parameters and returns the following output par
 | Output parameters |                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)            |
-| Document          | The ID of the document that is opened or NULL, if not successful.                                   |
+| Document          | The ID of the document that is opened or NULL if not successful.                                   |
 | [COL]             | The value of a column of the active row. This parameter is present for every column of the subject. |
 
 ### Close document
@@ -164,7 +164,7 @@ An open document can be closed with this process action. Since *tab_id* and *tab
 
 | Input parameters |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Document         | Optional. The ID of the document that must be closed. If this process action is not a start action, then the value of this parameter will be used to determine which document must be closed. Valid IDs of documents are only returned by the process actions *Open document* and *Zoom in on detail*. If empty the active document will be closed, which is the same as the current behavior of this process action.<br>This process action can only be used to close the initial document and documents that are opened within the same process flow. |
+| Document         | Optional. The ID of the document that has to be closed. If this process action is not a start action, then the value of this parameter will be used to determine which document must be closed. Valid IDs of documents are only returned by the process actions *Open document* and *Zoom in on detail*. If empty, the active document will be closed, which is the same as the current behavior of this process action.<br>This process action can only be used to close the initial document and documents that are opened within the same process flow. |
 
 | Output parameters |                                                                                                                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -191,7 +191,7 @@ This process action has no input parameters and returns the following output par
 
 ### Add record
 
-This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways, it is important to apply clear priorities. The value needs to be applied in the following sequence:
 
 Default value Link with context Input parameters of the process action Default procedure.
 
@@ -210,7 +210,7 @@ Finally, this process action receives an output parameter with a status code.
 
 This process action will also work in combination with modifications in the list. If this process action is not a start action, then the GUI will give preference to a form to deal with the action. If there is no form present, then the GUI will try to find a grid. If a record in the grid is modified, is successfully stored and there is a follow-up action that can be called, then a possible row switch action that handles the save of the data will be prevented.
 
-This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+This process action receives input parameters to assign values to the columns of the subject (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a column can be set in different ways, it is important to apply clear priorities. The value needs to be applied in the following sequence:
 
 Default value Link with context Input parameters of the process action Default procedure.
 
@@ -228,7 +228,7 @@ Finally, this process action receives an output parameter with a status code.
 
 ### Delete record
 
-This process action remains unchanged, but receives an output parameter including a status code.
+This process action remains unchanged but receives an output parameter including a status code.
 
 | Output parameters |                                                                                                                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -237,7 +237,7 @@ This process action remains unchanged, but receives an output parameter includin
 
 ### Refresh
 
-This process action is a combination of *Refresh* and *Refresh all*, because these process actions did exactly the same. This process action remains unchanged, but receives an output parameter with a status code and output parameters that contain the values of the active row after refreshing.
+This process action is a combination of *Refresh* and *Refresh all*, because these process actions do the exact same thing. This process action remains unchanged but receives an output parameter with a status code and output parameters that contain the values of the active row after refreshing.
 
 ** **
 
@@ -248,7 +248,7 @@ This process action is a combination of *Refresh* and *Refresh all*, because the
 
 ### Execute the task from within/outside the context
 
-These process actions receive input parameters to be able to control the input parameters of the task (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a task parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+These process actions receive input parameters to be able to control the input parameters of the task (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a task parameter can be set in different ways, it is important to apply clear priorities. The value needs to be applied in the following sequence:
 
 Default value Link with column Link with process flow Variable Default procedure.
 
@@ -265,7 +265,7 @@ Finally, these process actions receive an output parameter with a status code.
 
 ### Open report from within/outside the context
 
-These process actions receive input parameters to be able to control the parameters of the report (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a report parameter can be set in different ways it is important to apply clear priorities. The value needs to be applied in the following sequence:
+These process actions receive input parameters to be able to control the parameters of the report (comparable with a default procedure). These input values have no effect if this process action is used as a start action. Since the value of a report parameter can be set in different ways, it is important to apply clear priorities. The value needs to be applied in the following sequence:
 
 Default value Link with column Link with process flow Variable Default procedure.
 
@@ -282,7 +282,7 @@ Finally, these process actions receive an output parameter with a status code.
 
 ### Activate grid and activate form
 
-These process actions but receive an output parameter with a status code and output parameters that contain the values of the active row.
+These process actions receive an output parameter with a status code and output parameters that contain the values of the active row.
 
 | Output parameters |                                                                                                                                            |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -324,7 +324,7 @@ The value of the selected [Message option](messages#message-options) is return a
 
 ## Connectors
 
-Ten special process action types are available, called *connectors*. Connectors are different from the other process action types in that they do not expose GUI features for automation, but enable you to connect to other applications, services and media through various common protocols.
+Ten special process action types are available, called *connectors*. Connectors are different from the other process action types in that they do not expose GUI features for automation but enable you to connect to other applications, services and media through various common protocols.
 
 ![img](../assets/sf/image245-1537449569876.png)
 *Connector process action type*
@@ -352,7 +352,7 @@ The HTTP(S) connector provides the following input options with which several pr
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Status code         | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (invalid URL)<br>-3 - Unsuccessful (invalid HTTP method)<br>-4 - Unsuccessful (invalid headers)<br>-5 - Unsuccessful (invalid cookie) |
 | HTTP status code    | The HTTP status code of the response. For example 200, 403, 404, 500, etc.                                                                                                                                                                          |
-| Headers             | The headers of the response. The headers will be mutually separated by semi-colons. For each header the key and the value will be separated by a colon.                                                                                             |
+| Headers             | The headers of the response. The headers will be mutually separated by semi-colons. For each header, the key and the value will be separated by a colon.                                                                                             |
 | Set-Cookie          | The HTTP Cookie that possibly returns with the response.                                                                                                                                                                                            |
 | Content-Type        | The MIME type for the content that was returned with the response.                                                                                                                                                                                  |
 | Content encoding    | The encoding that is used for the content in the response.                                                                                                                                                                                          |
@@ -368,9 +368,9 @@ The FTP(S) connector provides the following input options with which several pro
 | ------------------- | ------------------------------------------------------------ |
 | URL                 | The complete URL that will be used for the request.          |
 | FTP method          | The FTP method that will be used for the request. For example, UploadFile, DownloadFile, DeleteFile, etc.<br>Complete list of options:<br><https://msdn.microsoft.com/en-us/library/system.net.webrequestmethods.ftp(v=vs.110).aspx> |
-| New file name       | Optional. In the case of a RenameFile action this input option can be used to provide the new name for the file. |
+| New file name       | Optional. In the case of a RenameFile action, this input option can be used to provide the new name for the file. |
 | File data           | Optional. The content that will be sent with the request, for example, with an UploadFile action. |
-| Use SSL             | Optional. Indicates whether SSL must be used for the request.<br>Possible values:<br>**Yes**<br>**No (default)** |
+| Use SSL             | Optional. Indicates whether SSL has to be used for the request.<br>Possible values:<br>**Yes**<br>**No (default)** |
 | Authentication type | Optional. The authentication type that will be used for the request.<br>**None (default)** - No authentication<br>**Basic** - Basic authentication |
 | Username            | Optional. The user name that will be used for the authentication, if applicable. |
 | Password            | Optional. The password that will be used for the authentication, if applicable. |
@@ -392,24 +392,24 @@ The SMTP connector provides the following input options with which several prope
 
 | Input options         |                                                              |
 | --------------------- | ------------------------------------------------------------ |
-| SMTP server address   | The host name or the IP address of the SMTP server with which the mail will be sent. |
+| SMTP server address   | The host name or the IP address of the SMTP server with which the email will be sent. |
 | SMTP server port      | The port to which the SMTP server listens.                   |
 | Use SSL               | Optional. Whether SSL must be used for the connection.<br>**No (default)**<br>**Yes** |
 | smtp_con_username     | Optional. The user name that will be used for the authentication. |
 | Password              | Optional. The password that will be used for the authentication. |
-| From address          | The e-mail address that will be used as sender of the e-mail. |
-| From name             | Optional. The display of the sender of the e-mail. If not specified this will be equal to *From address*. |
-| To recipients         | Optional. A list of email addresses separated by semi-colons. These addresses appear in the TO field of the e-mail. |
-| CC recipients         | Optional. A list of email addresses separated by semi-colons. These addresses appear in the CC field of the e-mail. |
-| BCC recipients        | Optional. A list of email addresses separated by semi-colons. These addresses appear in the BCC field of the e-mail. |
-| Subject               | The subject with which the e-mail will be sent.              |
-| Message               | Optional. The message of the e-mail.                         |
-| Message encoding      | Optional. The encoding for the message of the e-mail.<br>**ASCII**<br>**UTF8 (default)**<br>**UTF16**<br>**UTF32** |
+| From address          | The email address that will be used as sender of the email. |
+| From name             | Optional. The display of the sender of the email. If not specified, this will be equal to *From address*. |
+| To recipients         | Optional. A list of email addresses separated by semi-colons. These addresses appear in the TO field of the email. |
+| CC recipients         | Optional. A list of email addresses separated by semi-colons. These addresses appear in the CC field of the email. |
+| BCC recipients        | Optional. A list of email addresses separated by semi-colons. These addresses appear in the BCC field of the email. |
+| Subject               | The subject with which the email will be sent.              |
+| Message               | Optional. The message of the email.                         |
+| Message encoding      | Optional. The encoding for the message of the email.<br>**ASCII**<br>**UTF8 (default)**<br>**UTF16**<br>**UTF32** |
 | Allow HTML            | Optional. Indicates whether the content of the message can be interpreted as HTML.<br>**No (default)**<br>**Yes** |
-| Attachments           | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the e-mail. |
-| Deletable attachments | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the e-mail. These files will be deleted after transmission of the e-mail. |
-| Priority              | Optional. Gives the priority of the e-mail to be sent.<br>**Low**<br>**Normal (default)**<br>**High** |
-| Signature             | Optional. The signature that is placed under the e-mail to be sent. |
+| Attachments           | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. |
+| Deletable attachments | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. These files will be deleted after transmission of the email. |
+| Priority              | Optional. Gives the priority of the email to be sent.<br>**Low**<br>**Normal (default)**<br>**High** |
+| Signature             | Optional. The signature that is placed under the email to be sent. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                               |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -417,7 +417,7 @@ The SMTP connector provides the following input options with which several prope
 
 ### Read file from disk
 
-Files at locations within the local network can be read using this connector. This connector works on the basis of absolute, local file paths or UNC paths, and gives as output the byte-representation of the file.
+Files at locations within the local network can be read using this connector. This connector works on the basis of absolute, local file paths or UNC paths and gives as output the byte-representation of the file.
 
 | Input options |                                                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------- |
@@ -437,7 +437,7 @@ Files can be written to a location within the local network using this connector
 | File location             | The path to the file that must be created. The path must be an absolute local path or a UNC path. |
 | File data                 | The binary data (bytes) of the file.                         |
 | Write mode                | The mode that determines how certain situations must be dealt with:<br>**New file (default)** - There may not be a file present at the specified location.<br>**Overwrite file** - There may be a file present at the specified location, this will be overwritten.<br>**Append file** - There must be a file present at the specified location, this will be extended. |
-| Create all subdirectories | Indicates whether the entire folder structure of must be created, or that all higher level folders must exist.<br>**No** - All higher level folders must already exist.<br>**Yes (default)** - The complete folder structure will be created. |
+| Create all subdirectories | Indicates whether the entire folder structure has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
 | Encoding                  | Indicates the encoding to use.                               |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -446,13 +446,13 @@ Files can be written to a location within the local network using this connector
 
 ### Move file on disk
 
-Files from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local file path or UNC path.
+Files from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
 
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
-| From file location        | The path to the file that must be moved. This path must be an absolute local path or a UNC path. |
-| To file location          | The path to the location where the file must be moved to. This path must be an absolute local path or a UNC path. |
-| Create all subdirectories | Indicates whether the entire folder structure of *To file location* must be created, or that all higher level folders must exist.<br>**No** - All higher level folders must already exist.<br>**Yes (default)** - The complete folder structure will be created. |
+| From file location        | The path to the file that has to be moved. This path has to be an absolute local path or a UNC path. |
+| To file location          | The path to the location the file has to be moved to. This path has to be an absolute local path or a UNC path. |
+| Create all subdirectories | Indicates whether the entire folder structure of *To file location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -460,13 +460,13 @@ Files from locations within the local network can be moved to other locations wi
 
 ### Copy file on disk
 
-Files from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local file path or UNC path.
+Files from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
-| From file location      | The path to the file that must be moved. This path must be an absolute local path or a UNC path. |
-| To file location        | The path to the location where the file must be moved to. This path must be an absolute local path or a UNC path. |
-| Create target directory | Indicates whether the entire folder structure of *To file location* must be created, or that all higher level folders must exist. <br>**No** - All higher level folders must already exist.<br>**Yes (default)** - The complete folder structure will be created. |
+| From file location      | The path to the file that has to be moved. This path has to be an absolute local path or a UNC path. |
+| To file location        | The path to the location the file has to be moved to. This path has to be an absolute local path or a UNC path. |
+| Create target directory | Indicates whether the entire folder structure of *To file location* has to be created or that all higher level folders have to exist. <br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
 
 | Output options |                                                              |
 | -------------- | ------------------------------------------------------------ |
@@ -474,11 +474,11 @@ Files from locations within the local network can be copied to other locations w
 
 ### Delete file from disk
 
-A file at a location within the local network can be deleted using this connector. The path to the file is provided by means of an input option and must have the form of an absolute, local file path or UNC path.
+A file at a location within the local network can be deleted using this connector. The path to the file is provided by means of an input option and has to have the form of an absolute, local file path or UNC path.
 
 | Input options |                                                                                                    |
 | ------------- | -------------------------------------------------------------------------------------------------- |
-| File location | The path to the file that must be deleted. This path must be an absolute local path or a UNC path. |
+| File location | The path to the file that has to be deleted. This path has to be an absolute local path or a UNC path. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -486,12 +486,12 @@ A file at a location within the local network can be deleted using this connecto
 
 ### Create folder on disk
 
-A folder can be created on a location within the local network using this connector. The path to the file that must be created is provided by means of an input option and must have the form of an absolute, local file path or UNC path. In addition, it can also be indicated whether the provided folder structure must exist or may be created.
+A folder can be created on a location within the local network using this connector. The path to the file that has to be created is provided by means of an input option and has to have the form of an absolute, local file path or UNC path. In addition, it can also be indicated whether the provided folder structure has to exist or may be created.
 
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
-| Directory location        | The path to the folder that must be created. This path must be an absolute local path or a UNC path. |
-| Create all subdirectories | Indicates whether the entire folder structure from *Directory location* must be created, or that all higher level folders must exist.<br>**No** - All higher level folders must already exist.<br>**Yes (default)** - The complete folder structure will be created. |
+| Directory location        | The path to the folder that has to be created. This path has to be an absolute local path or a UNC path. |
+| Create all subdirectories | Indicates whether the entire folder structure from *Directory location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -499,13 +499,13 @@ A folder can be created on a location within the local network using this connec
 
 ### Move folder on disk
 
-Folders from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local path or UNC path.
+Folders from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
-| From folder location    | The path to the folder that must be moved. This path must be an absolute local path or a UNC path. |
-| To folder location      | The path to the location where the folder must be moved to. This path must be an absolute local path or a UNC path. |
-| Create target directory | Indicates whether the entire folder structure of *To folder location* must be created, or that all higher level folders must exist.<br>**No** - All higher level folders must already exist.<br>**Yes (default)** - The complete folder structure will be created. |
+| From folder location    | The path to the folder that has to be moved. This path has to be an absolute local path or a UNC path. |
+| To folder location      | The path to the location the folder has to be moved to. This path has to be an absolute local path or a UNC path. |
+| Create target directory | Indicates whether the entire folder structure of *To folder location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -513,13 +513,13 @@ Folders from locations within the local network can be moved to other locations 
 
 ### Copy folder on disk
 
-Folders from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and must have the form of an absolute, local path or UNC path.
+Folders from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
-| From folder location    | The path to the folder that must be moved. This path must be an absolute local path or a UNC path. |
-| To folder location      | The path to the location where the folder must be moved to. This path must be an absolute local path or a UNC path. |
-| Create target directory | Indicates whether the entire parent folder structure of *To folder location* must be created, or that all higher level folders of the target path must exist. <br>**No**  - All higher level folders must already exist. <br>**Yes (default)** - The complete target folder structure will be created. |
+| From folder location    | The path to the folder that has to be moved. This path has to be an absolute local path or a UNC path. |
+| To folder location      | The path to the location the folder has to be moved to. This path has to be an absolute local path or a UNC path. |
+| Create target directory | Indicates whether the entire parent folder structure of *To folder location* has to be created or that all higher level folders of the target path have to exist. <br>**No**  - All higher level folders have to exist already. <br>**Yes (default)** - The complete target folder structure will be created. |
 | Existing file strategy  | Determines the strategy of dealing with existing files at the target location. <br>**Skip existing files** - Ignore existing files in the target location <br>**Overwrite existing files** - Overwrite existing files in the target location<br>**Abort action (default)** - Abort the process action if a file already exists in the target location. |
 
 | Output options |                                                              |
@@ -528,13 +528,13 @@ Folders from locations within the local network can be copied to other locations
 
 ### Delete folder from disk
 
-A folder on a location within the local network can be deleted using this connector. The path to folder is provided by means of an input option and must have the form of an absolute, local path or UNC path.
+A folder on a location within the local network can be deleted using this connector. The path to folder is provided by means of an input option and has to have the form of an absolute, local path or UNC path.
 
 | Input options                 |                                                              |
 | ----------------------------- | ------------------------------------------------------------ |
-| Folder location               | The path to the folder that must be deleted. This path must be an absolute local path or a UNC path. |
-| Delete all directory contents | Indicates whether the process action may or may not delete sub-folders within the specified path.<br>**No (default)** - All higher level folders must already exist.<br>**Yes** - The complete folder structure will be created. |
+| Folder location               | The path to the folder that has to be deleted. This path has to be an absolute local path or a UNC path. |
+| Delete all directory contents | Indicates whether the process action may or may not delete sub-folders within the specified path.<br>**No (default)** - All higher level folders have to exist already.<br>**Yes** - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status code    | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (no path specified)<br>-3 - Unsuccessful (the specified path is too long)<br>-4 - Unsuccessful (the specified path is invalid)<br>-5 - Unsuccessful (the specified disk could not be found)<br>-6 - Unsuccessful (one or more sub-folders could not be found)<br>-7 - Unsuccessful (access refused)<br>-8 - Unsuccessful (the specified path is ambiguous, there is a folder and a file with the same name)<br>-9 - Unsuccessful (the specified folder is in use, read only, or contains sub-folders)<br>-10 - Unsuccessful (the specified folder is in use or contains sub-folders) |
+| Status code    | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (no path specified)<br>-3 - Unsuccessful (the specified path is too long)<br>-4 - Unsuccessful (the specified path is invalid)<br>-5 - Unsuccessful (the specified disk could not be found)<br>-6 - Unsuccessful (one or more sub-folders could not be found)<br>-7 - Unsuccessful (access refused)<br>-8 - Unsuccessful (the specified path is ambiguous, there is a folder and a file with the same name)<br>-9 - Unsuccessful (the specified folder is in use, read only or contains sub-folders)<br>-10 - Unsuccessful (the specified folder is in use or contains sub-folders) |

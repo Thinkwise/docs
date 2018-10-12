@@ -29,7 +29,7 @@ Tasks are available to apply the required rights to the databases:
 | ![1537863886902](../assets/sf/1537863886902.png) Apply user rights | Creates the users and user groups on the application database |
 | ![1537863897038](../assets/sf/1537863897038.png) Apply user rights to IAM | Creates the users on the IAM database                        |
 
-To be able to apply the rights to a SQL Server database, an application manager that is not a database system administrator needs additional database rights. This can be done using the following code snippet:
+To be able to apply the rights to an SQL Server database, an application manager who is not a database system administrator needs additional database rights. This can be done using the following code snippet:
 
 ```sql
 use [iam_database]

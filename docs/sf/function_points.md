@@ -4,7 +4,7 @@ title: Function point analysis
 
 
 
-With the Thinkwise platform it is possible to automatically calculate the number of function points of your application. A function point is a unit of measurement to express the amount of business functionality an information system provides to a user. Function points are used to compute a functional size measurement of software. (Source: [wikipedia](https://en.wikipedia.org/wiki/Function_point))
+With the Thinkwise platform, it is possible to automatically calculate the number of function points of your application. A function point is a unit of measurement to express the amount of business functionality an information system provides to a user. Function points are used to compute a functional size measurement of software. (Source: [wikipedia](https://en.wikipedia.org/wiki/Function_point))
 
 The automated function point calculation of the Thinkwise Platform has been developed in collaboration with and verified by [QSM](http://www.qsm.com/), the leading authority on Quantitative Software Management. It satisfies the [Nesma](https://nesma.org/) counting practices at a global level.
 

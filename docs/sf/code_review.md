@@ -4,11 +4,11 @@ title: Code review
 
 The *Code review* screen shows the control procedures and templates marked for review.
 
-The *Changes* tab page shows the control procedure code and/or template code that has changed. Using the *Compare control procedure* and *Compare template* tasks you can preview the changes using an external compare tool like *WinMerge*.
+The *Changes* tab page shows the control procedure code and/or template code that has changed. Using the *Compare control procedure* and *Compare template* tasks, you can preview the changes using an external compare tool like *WinMerge*.
 
 You can add comments to inform the developer of any errors or possible optimizations in the code.
 
-Tasks are available to approve or disapprove the changes. When approved, the control procedure will be set to completed. When disapproved, a comment will be required as review feedback and the control procedure will be set back to development.
+Tasks are available to approve or disapprove the changes. When approved, the control procedure will be set to completed. When disapproved, a comment will be required as review feedback, and the control procedure will be set back to development.
 
 ![1536918582963](../assets/sf/1536918582963.png)
 *Code review*
@@ -34,12 +34,12 @@ Any comments made by the reviewer are also available in the *Functionality scree
 
 The *Code analysis* tab page allows you to perform an automated static code analysis on the generated T-SQL code.
 
-After running the Code Analysis task for a specific control procedure, icons show whether there are any warnings or errors for every program object. At the moment, any issues that have to be resolved before code changes are approved are to be manually added to the code review comments. The analysis capabilities will be extended in future versions of the Software Factory.
+After running the Code Analysis task for a specific control procedure, icons show whether there are any warnings or errors for each program object. At the moment, any issues that have to be resolved before code changes are approved are to be manually added to the code review comments. The analysis capabilities will be extended in future versions of the Software Factory.
 
 ![](../assets/sf/image292.png)
 *Code analysis*
 
-The code analysis will check over 60 rules, covering for instance:
+The code analysis will check over 60 rules covering, for instance:
 
 - Type checking
 - Use of patterns in LIKE predicates

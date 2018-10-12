@@ -2,12 +2,12 @@
 title: Reports
 ---
 
-Reports have a similar structure to tasks, but instead of starting a task, a report is printed, previewed or exported. The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, i-net Clear Reports, SQL Server Reporting Services (SSRS) or Word.
+Reports have a similar structure to tasks but instead of starting a task, a report is printed, previewed or exported. The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, i-net Clear Reports, SQL Server Reporting Services (SSRS) or Word.
 
 ![](../assets/sf/image199.png)
 *Reports screen*
 
-The structure of reports is analogous to that of tasks. Parameters are defined for a report and look-up functionality is provided through references.
+The structure of reports is analogous to that of tasks. Parameters are defined for a report, and look-up functionality is provided through references.
 
 ![](../assets/sf/image200.png)
 *Example report popup*
@@ -34,14 +34,14 @@ DevExpress Reports can display any styled and formatted text, such as RTF and HT
 
 #### Windows command
 
-The same as for [tasks](tasks#windows-command), but with the name of the parameter in the *File specification* field. For example to link in an existing pdf as a report.
+The same as for [tasks](tasks#windows-command) but with the name of the parameter in the *File specification* field. For example, to link in an existing pdf as a report.
 
 ![](../assets/sf/image201.png)
 *General settings when creating a report*
 
 #### GUI code
 
-This options allows *custom tasks*, such as the [TSFReportMailer](../kb/report_mailer), to be linked in as a report. The name of the custom task should be entered in the *File specification* field.
+This option allows *custom tasks*, such as the [TSFReportMailer](../kb/report_mailer), to be linked in as a report. The name of the custom task should be entered in the *File specification* field.
 
 #### Microsoft Word
 
@@ -156,16 +156,16 @@ Depending on the environment in which the reports are generated, these can be ex
 
 ##### SSRS (Local)
 
-Local reports work in the same way as other report types such as Crystal Reports. The report is generated on the basis of the RDL file that is specified for the report in the file specification field, for which use is made of the end application database connection. This means that the connection string that is specified as Datasource for any Data Sets is ignored in the RDL file.
+Local reports work in the same way as other report types, such as Crystal Reports. The report is generated on the basis of the RDL file that is specified for the report in the file specification field, for which use is made of the end application database connection. This means that the connection string that is specified as Datasource for any Data Sets is ignored in the RDL file.
 
 ![](../assets/sf/image203.png)
 *Specify SSRS (local) file specification*
 
 ##### SSRS (Server)
 
-In this variant the reports are generated on a report server. The relative path to the report on the server must be specified in the file specification field. The location of the report server must be passed on to the GUI via the INI parameter “ssrsreportserver”.
+In this variant, the reports are generated on a report server. The relative path to the report on the server must be specified in the file specification field. The location of the report server must be passed on to the GUI via the INI parameter “ssrsreportserver”.
 
-The report server can run in *native mode* or *SharePoint*. Native mode is the default for this. These default models have been tested by Thinkwise, those for SharePoint not yet, in the current release. For now it is therefore expected that the report server is in native mode.
+The report server can run in *native mode* or *SharePoint*. Native mode is the default for this. These default models have been tested by Thinkwise (though those for SharePoint have not yet been tested) in the current release. For now, it is therefore expected that the report server be in native mode.
 
 Reports that are generated on a report server use the connection string that is assigned for each Datasource to retrieve the Data Seta. Ensure that the reports that are used in a test environment have the correct connection string when this is rolled out to the live environment.
 
@@ -204,17 +204,17 @@ To use reports that are created for SSRS using the Thinkwise Software Factory wi
 - Microsoft Report Viewer 2015 Runtime
     <https://www.microsoft.com/en-us/download/details.aspx?id=45496>
 
-The SQLSysClrTypes installer needs to be implemented before the report viewer runtime is run. If the computer on which the work is done contains its own SQL Server instance the CLR types can be omitted.
+The SQLSysClrTypes installer needs to be implemented before the report viewer runtime is run. If the computer on which the work is done contains its own SQL Server instance, the CLR types can be omitted.
 
-The above is not necessary when use is made of a GUI with version 2017.1.12 or higher. With these versions the runtime for SSRS is included as default with the GUI itself.
+The above is not necessary when use is made of a GUI with version 2017.1.12 or higher. With these versions, the runtime for SSRS is included as default with the GUI itself.
 
 ##### Oracle and DB2
 
 Reports made with SSRS can also retrieve data from Oracle and DB2 databases, provided that the correct software is available for this on the system on which the report is generated.
 
-For Oracle connections the Oracle Client needs to be present on the system.
+For Oracle connections, the Oracle Client needs to be present on the system.
 
-> When using the Oracle Client together with the Microsoft SQL Server Report Builder it is necessary to have the 32 bit version of the Oracle Client installed. The 64 bit version will unfortunately not work, because the report Builder itself is a 32 bit application. Use can be made of the 64 bit Oracle Client for end applications.
+> When using the Oracle Client together with the Microsoft SQL Server Report Builder, it is necessary to have the 32 bit version of the Oracle Client installed. The 64 bit version will unfortunately not work because the report Builder itself is a 32 bit application. Use can be made of the 64 bit Oracle Client for end applications.
 
 Connections to DB2 databases are created in SSRS via OLE DB. The ADO.NET bindings, which can be installed via the IBM Client Access, are required for this.
 
@@ -226,18 +226,18 @@ The Microsoft SQL Server Report Builder software to develop reports can be downl
 
 |Component|Description|
 |--- |--- |
-|Built-in Fields|A number of pre-defined calculated fields such as the current page number or the user that has called the report.|
+|Built-in Fields|A number of pre-defined calculated fields, such as the current page number or the user that has called the report.|
 |Parameters|Parameters within the report that can be used when retrieving a Data Set or the calculation of an expression.<br>Depending on the type of connection that is used, this is generated by the Report Builder or this must be added manually.|
 |Images|Illustrations that can be used within the report.|
-|Data sources|A Data source describes a connection to a database. A connection string can even be typed in or one can be built via a dialogue. Furthermore, for example, an inlog method can be selected to be used when setting up the connection.|
-|Data Sets|A Data Set contains the resulting set of a query or stored procedure on a Data source.<br>These can be used, for instance, to fill tables and graphs within the report.<br>When using a stored procedure parameters are automatically added to the report for both SQL Server and Oracle and DB2 connections.<br>For a query within the Data Set itself a parameter name with the correct prefix (“@”/”:”) can be indicated with SQL Server and Oracle connections. During the testing of the query the Report Builder will automatically add these parameters to the report.<br>With DB2, use is made of an OLE DB connection. Therefore, the user must mark parameters in the query with a question mark. This must then be assigned to a parameter within the report on the Parameters screen of the Data Set.|
+|Data sources|A Data source describes a connection to a database. A connection string can even be typed in or one can be built via a dialogue. Furthermore, for example, a login method can be selected to be used when setting up the connection.|
+|Data Sets|A Data Set contains the resulting set of a query or stored procedure on a Data source.<br>These can be used, for instance, to fill tables and graphs within the report.<br>When using a stored procedure, parameters are automatically added to the report for both SQL Server and Oracle and DB2 connections.<br>For a query within the Data Set itself, a parameter name with the correct prefix (“@”/”:”) can be indicated with SQL Server and Oracle connections. During the testing of the query, the Report Builder will automatically add these parameters to the report.<br>With DB2, use is made of an OLE DB connection. Therefore, the user must mark parameters in the query with a question mark. This must then be assigned to a parameter within the report on the Parameters screen of the Data Set.|
 
 
 A report consists of the following basic components:
 
 ## Report parameters
 
-Creating report parameters works the same as creating task parameters. An additional feature for reports is to link parameters to properties of the report (for instance the *action*, *printer* and *export location*).
+Creating report parameters works in the same way as creating task parameters. An additional feature for reports is to link parameters to properties of the report (for instance the *action*, *printer* and *export location*).
 
 ![](../assets/sf/image205.png)
 *Example of report parameters*
@@ -246,24 +246,25 @@ By linking a report parameter to a report property, these properties can be used
 
 A choice can be made from the following properties within Windows:
 
-| Property           | Description                                                  | Domain  |
-| ------------------ | ------------------------------------------------------------ | ------- |
-| Action             | This is the default action that must be carried out for the report, e.g. print preview or export to pdf. These parameters receive as default the value as specified with the report. | Integer |
-| File specification | A report can even be specified with this. So, for example, in the default, depending on the current row, another report can be opened. | String  |
-| Printer name       | The printer name can be filled automatically here.           | String  |
-| Paper tray name    | Paper tray name can be filled automatically here.            | String  |
-| Number of copies   | The number of copies to be printed can be specified here.    | Integer |
-| Compress           | This indicates whether the file must be compressed or not.   | Boolean |
-| Open after export  | This indicates whether the file must be opened after export. | Boolean |
-| Export location    | This is the location where the file is stored when the choice is made for the action 'Export to' | String  |
+|Property|Description|Domain|
+|--- |--- |--- |
+|Action|This is the default action that has to be carried out for the report, e.g., print preview or export to pdf. These parameters receive as default the value as specified with the report.|Integer|
+|File specification|A report can even be specified with this. So, for example, in the default, depending on the current row, another report can be opened.|String|
+|Printer name|The printer name can be filled automatically here.|String|
+|Paper tray name|Paper tray name can be filled automatically here.|String|
+|Number of copies|The number of copies to be printed can be specified here.|Integer|
+|Compress|This indicates whether the file has to be compressed or not.|Boolean|
+|Open after export|This indicates whether the file has to be opened after export.|Boolean|
+|Export location|This is the location where the file is stored when the choice is made for the action 'Export to'|String|
+
 
 The web only supports the *Action* and *Compress* properties.
 
-When a report does not have any property parameters, then all properties will be displayed as this was also the case in previous versions. When at least one property parameter is modeled, then only the modeled properties will be displayed. The others are hidden.
+If a report does not have any property parameters, then all properties will be displayed (as was also the case in previous versions). If at least 1 property parameter is modeled, then only the modeled properties will be displayed. The others will be hidden.
 
-For *action*, *printer name* and *paper tray name* the control of the domain is ignored and the control will be used that belongs with the property.
+For *action*, *printer name* and *paper tray name*, the control of the domain is ignored and the control will be used that belongs with the property.
 
-> Look in the end product under the default properties for filling the default value of printer and paper tray name.
+> Look in the end product under the default properties to fill in the default value of printer and paper tray name.
 
 ## Report look-ups
 
@@ -281,11 +282,11 @@ The report can be linked to one or more tables. The report is displayed in the c
 
 ### Grouping of reports
 
-Reports within a table can be grouped together to display them logically. Both the groups and the reports within a group can be sorted sequentially. This works the same as grouping tasks.
+Reports within a table can be grouped together to display them logically. Both the groups and the reports within a group can be sorted sequentially. This works in the same way as grouping tasks.
 
 ## Menu
 
-A report can be included in several menus. If a report is linked to a table, it appears in the ribbon and the context menu of this table. A report can also be included in the menu. This way the user can print the report directly without having to first open a window.
+A report can be included in several menus. If a report is linked to a table, it appears in the ribbon and the context menu of this table. A report can also be included in the menu. In this way, the user can print the report directly without having to first open a window.
 
 ## Printing a report
 

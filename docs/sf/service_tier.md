@@ -10,7 +10,7 @@ This chapter describes the settings that fall under the **Service tier** and the
 
 ![](../assets/sf/image318.png)
 
-*Screen shot of the Project Version screen for specifying the Service Tier.*
+*Screenshot of the Project Version screen for specifying the Service Tier.*
 
 ##### Use pooling
 
@@ -18,7 +18,7 @@ When this is checked, connection will be made between the service tier and the d
 
 ##### Pool user
 
-This is the user name for the user that is used to establish a connection from the service tier to the database, when it is chosen to do this via a central account.
+This is the user name for the user that is used to establish a connection from the service tier to the database when it is chosen to do this via a central account.
 
 ##### Pool password
 
@@ -38,9 +38,9 @@ IAM Database name
 
 This is the database name of the IAM. The IAM will use the service tier to authenticate users.
 
-IAM RDBMS id
+IAM RDBMS ID
 
-This is the RDBMS id of the IAM. The IAM will use the service tier to authenticate users.
+This is the RDBMS ID of the IAM. The IAM will use the service tier to authenticate users.
 
 Use pooling
 
@@ -48,7 +48,7 @@ When this is checked, connection will be made between the service tier and the I
 
 IAM Pool User
 
-This is the user name for the user that is used to establish a connection from the service tier to the IAM database, when the choice is made to do this via a central account.
+This is the user name for the user that is used to establish a connection from the service tier to the IAM database when the choice is made to do this via a central account.
 
 IAM Pool password
 
@@ -72,17 +72,17 @@ The Java directory contains the Java code files (contracts, entities, services, 
 
 ##### Resources
 
-The other files required by the source code to function, are in the resources directory. This includes, for instance, the persistence.xml file that Hibernate needs to establish a connection with the database.
+The other files required by the source code to function are in the resources directory. This includes, for instance, the persistence.xml file that Hibernate needs to establish a connection with the database.
 
 ##### Webapp
 
-The webapp directory contains the files that describe how the web service should be deployed on the web server. For the service tier these are the web.xml and sun-jaxws.xml files containing information about the servlet configuration for the services.
+The webapp directory contains the files that describe how the web service should be deployed on the web server. For the service tier, these are the web.xml and sun-jaxws.xml files containing information about the servlet configuration for the services.
 
-When the project is opened in Eclipse, **.\\src\\main\\java** and **.\\src\\main\\resources** on **Java Resources** and **.\\src\\main\\webapp** fall under **Deployed Resources**.
+If the project is opened in Eclipse, **.\\src\\main\\java** and **.\\src\\main\\resources** on **Java Resources** and **.\\src\\main\\webapp** fall under **Deployed Resources**.
 
 The pom.xml file describes for Maven how the project should be built. This includes, for instance, the libraries on which the project is dependent and from where these must be retrieved.
 
-The directory called **target** is the default location where Maven places its results. Here you will find the .war archive of the Java service tier, after building the structure.
+The directory called **target** is the default location where Maven places its results. Here, you will find the .war archive of the Java service tier after building the structure.
 
 The built.bat is a batch script for Maven to execute a clean and package of the project. As a result, it is not necessary that Eclipse is installed to build the service tier.
 
@@ -104,7 +104,7 @@ If this is present, the script can be executed so that Maven can execute a clean
 
 No separate Maven installation is required to develop with Eclipse. However, the m2e plug-in must be present. This is included with the Eclipse IDE for Java EE applications.
 
-Following the next steps ensures the same result as the build.bat script.
+Following the next few steps ensures the same result as the build.bat script.
 
 1.  Import the project into Eclipse.
 
@@ -118,7 +118,7 @@ Following the next steps ensures the same result as the build.bat script.
 
 *Run as -\> Maven build*
 
-3.  When this option is selected, a screen appears where the Run configuration of the project can be specified. Think of a name for the configuration and enter the value *clean package *in *Goals:*.
+3.  When this option is selected, a screen will appear where the Run configuration of the project can be specified. Think of a name for the configuration and enter the value *clean package *in *Goals:*.
 
 ![](../assets/sf/image323.png)
 
@@ -130,7 +130,7 @@ Following the next steps ensures the same result as the build.bat script.
 
 *Target Folder*
 
-Of course, the built.bat script can also be executed from Eclipse, on the condition that a Maven installation is available in the Path variable.
+Of course, the built.bat script can also be executed from Eclipse on the condition that a Maven installation is available in the Path variable.
 
 ### Custom libraries
 
@@ -147,7 +147,7 @@ When creating control procedures, select the following values:
 
 Table 10: Custom library values in Java.
 
-The templates that are added to this control procedure, can be assigned to the following program objects:
+The templates that are added to this control procedure can be assigned to the following program objects:
 
 ![](../assets/sf/image325.png)![](../assets/sf/image326.png)
 
@@ -161,7 +161,7 @@ The templates that are added to this control procedure, can be assigned to the f
 
 Table 11: Program object possibilities in Java.
 
-Maven repositories can be placed in several ways and at different locations. This could be somewhere on a web server, but also, for example, on a network. For more information see the Maven documentation on dependencies and repositories:
+Maven repositories can be placed in several ways and at different locations. This could be somewhere on a web server, but also, for example, on a network. For more information, see the Maven documentation on dependencies and repositories:
 
 - <https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html>
 
@@ -185,15 +185,15 @@ The following can be found in the root of the C\# service tier folder generated 
 
 - A build.bat batch script to build the service tier, without opening Visual Studio.
 
-When the solution is opened (with administrative rights) in Visual Studio, the project will look as follows
+When the solution is opened (with administrative rights) in Visual Studio, the project will look as follows:
 
 - ![](../assets/sf/image327.png)The solution has an ASP.NET project with the specified service tier name.
 
 - Within this project there are various folders with the C\# source code files of the WCF web service.
 
-For example: Contracts contains all the data contracts, Services contains all the services with end points and Persistence contains the Fluent NHibernate entities and database mapping of the project.
+For example: Contracts contains all the data contracts; Services contains all the services with end points; and Persistence contains the Fluent NHibernate entities and database mapping of the project.
 
-- The root of the project contains the Global.asax where among other things are registered the services on URL paths, the packages.config, so that NuGet knows which packages it must retrieve and the Web.config with among other things the information that needs to be used to establish a connection with the end database.
+- The root of the project contains the Global.asax where the services on URL paths (and much more), the packages.config, are registered so that NuGet knows which packages it has to retrieve and the Web.config (and much more) with the information that needs to be used to establish a connection with the end database.
 
 ### Compile
 
@@ -201,7 +201,7 @@ At least .NET Framework v4.5 is required to compile the C\# service tier.
 
 #### Build.bat
 
-If version 4.5 of the .Net Framework is installed the build.bat script can be executed. All required packages will be downloaded by NuGet and the solution is built with MSBuild. When this is completed successfully the required components to deploy the service tier on IIS are copied to a folder named **service_tier**.
+If version 4.5 of the .Net Framework is installed, the build.bat script can be executed. All required packages will be downloaded by NuGet and the solution is built with MSBuild. When this is completed successfully, the required components to deploy the service tier on IIS are copied to a folder named **service_tier**.
 
 ![](../assets/sf/image328.png)
 
@@ -229,7 +229,7 @@ If the build.bat script does not work, the choice can be made to build the servi
 
     3.  Index.html.
 
-    4.  The dll files in bin\\Release must be placed in a bin sub-folder.
+    4.  The dll files in bin\\Release have to be placed in a bin sub-folder.
 
 ### Custom libraries
 
@@ -254,11 +254,11 @@ Templates, which can be assigned to this control procedure, are added to the fol
 
 |Program object|Description|
 |--- |--- |
-|Csharp_csproj_references|The templates that are woven into this, are placed in the block with project references of the service tier csproj.
-NuGet packages can add references to the project. For this reason, custom libraries must be added to this program object to be able to use any libraries in the csproj.|
-|Csharp_nuget_packages_config|The templates that are woven into this, are placed in the packages.config file of the csproj van de service tier.
-This file keeps track for NuGet of the packages that need to be included for the project.|
-|Csharp_nuget_targets_repositories|The templates that are woven into this, are placed in the block with repositories in the nuget.targets file of the service tier.
+|Csharp_csproj_references|The templates that are woven into this are placed in the block with project references of the service tier csproj.
+NuGet packages can add references to the project. For this reason, custom libraries have to be added to this program object to be able to use any libraries in the csproj.|
+|Csharp_nuget_packages_config|The templates that are woven into this are placed in the packages.config file of the csproj van de service tier.
+This file keeps track of the packages that need to be included for the project for NuGet.|
+|Csharp_nuget_targets_repositories|The templates that are woven into this are placed in the block with repositories in the nuget.targets file of the service tier.
 The repositories that NuGet uses can be specified here.|
 
 
@@ -296,35 +296,35 @@ Below is an example with which the Json.NET package is added to the project.
 
 *Weave control procedure into the Software Factory*
 
-When the Library is part of an internal project the choice can be made to use an internal NuGet repository. This can be set up, for example, as an IIS application or on the file system of a network location. For more information about this see the NuGet documentation:
+When the Library is part of an internal project, the choice can be made to use an internal NuGet repository. This can be set up, for example, as an IIS application or on the file system of a network location. For more information about this, see the NuGet documentation:
 
 - <http://docs.nuget.org/create/hosting-your-own-nuget-feeds>
 
-The location of this repository must be woven into the **csharp_NuGet_targets_repositories** program object to be able to use it in the service tier.
+The location of this repository has to be woven into the **csharp_NuGet_targets_repositories** program object to be able to use it in the service tier.
 
-Libraries, which are not distributed via NuGet, can also be added. In this case the reference must be added to the generated project via Visual Studio. Afterwards, just as in the explanation above, the reference from the csproj file must be woven into the **csharp_csproj_reference** program object via a template.
+Libraries, which are not distributed via NuGet, can also be added. In this case, the reference has to be added to the generated project via Visual Studio. Afterwards, just as in the explanation above, the reference from the csproj file must be woven into the **csharp_csproj_reference** program object via a template.
 
 ## Synchronize offline changes after an upgrade
 
-To ensure that following an upgrade any open offline modifications can still be synchronized it is possible to generate an extra service layer from the new project version that is compatible with the previous version (based on version management). We call this a *stale sync* service layer.
+To ensure that following an upgrade any open offline modifications can still be synchronized, it is possible to generate an extra service layer from the new project version that is compatible with the previous version (based on version management). We call this a *stale sync* service layer.
 
 The Mobile GUI, as soon as it signals that an application has been modified or has become inactive, will first attempt to synchronize the offline modifications to the old address before the new application is loaded. The *stale sync* service layer transforms these modifications to the new data model and implements them on the database.
 
 ### Set up
 
-When setting up the stale sync service layer we assume in the manual that there is a project version 1.00 and project version 2.00.
+When setting up the stale sync service layer, we assume in the manual that there is a project version 1.00 and project version 2.00.
 
 To obtain a stale sync:
 
 - The user links for project version 2.00 the base project CSHARP_SERVICE_TIER_UG.
 
-- After that the definition and source code have to be generated and the build.bat has to be run.
+- After that, the definition and source code have to be generated and the build.bat has to be run.
 
 This results in the folder service_tier_stale_sync, which is written to the same location where the service_tier folder also resides.
 
-The service_tier_stale_sync is a replacement for the old service layer of version 1.00. This should then therefore run on the old web address as this is known in IAM.
+The service_tier_stale_sync is a replacement for the old service layer of version 1.00. This should, therefore, then run on the old web address as this is known in IAM.
 
-The service_tier of 2.00 must run on another address. This must therefore also be registered in IAM. Mobile always sends the 1.00 data for the stale sync mechanism to the address where 1.00 ran.
+The service_tier of 2.00 must run on another address. This has to therefore also be registered in IAM. Mobile always sends the 1.00 data for the stale sync mechanism to the address where 1.00 ran.
 
 The stale sync service layer can receive messages directed to version 1.00, transform them and execute them on the 2.00 database. The web.config of the stale sync service layer therefore also refers to 2.00. The default transformation takes place on the basis of version management and on the basis of nomenclature. How this is regulated is shown in the table below.
 
@@ -347,13 +347,13 @@ The stale sync service layer can receive messages directed to version 1.00, tran
 ||Delete|Selects, as default, the table in 2.00 on the basis of table nomenclature.<br>Transforms, as default, the 1.00 primary key to a 2.00 primary key on the basis of column nomenclature.<br>Executes a 2.00 delete.|
 
 
-This means that the target entities must be present in the 2.00 service layer, otherwise the stale sync service layer has no back-end to react against. To offer this it is possible to manually tag the target tables that are still necessary in version 2.00 with PROXY_REQUIRED.
+This means that the target entities must be present in the 2.00 service layer, otherwise the stale sync service layer has no back-end to react against. To offer this, it is possible to manually tag the target tables that are still necessary in version 2.00 with PROXY_REQUIRED.
 
-If the 1.00 entity cannot be found in 2.00 (e.g. a table is deleted or a task is renamed) an error message is displayed. If a 1.00 column or parameter cannot be found in 2.00, then this is ignored.
+If the 1.00 entity cannot be found in 2.00 (e.g., a table is deleted or a task is renamed), an error message is displayed. If a 1.00 column or parameter cannot be found in 2.00, then this is ignored.
 
-Messages from the 2.00 service layer (triggers, defaults) are possibly not correctly picked up by the GUI because the message ID is possibly not yet known.
+Messages from the 2.00 service layer (triggers, defaults) will possibly not be correctly picked up by the GUI because the message ID is possibly not yet known.
 
-It is possible to personally intervene on the transformation, overwrite the default transformation. This concerns the choice for the target entity, the transformation of a record from 1.00 to 2.00, the transformation of a primary key from 1.00 to 2.00 and the transformation of the primary key back from 2.00 to 1.00 (with identity, for detail records). This is C\# code and can be woven via the CSHARP_TRANSFORMATION code group. When making assignments the *Exclude framework* prefilter needs to be disabled.
+It is possible to personally intervene on the transformation, by overwriting the default transformation. This concerns the choice for the target entity, the transformation of a record from 1.00 to 2.00, the transformation of a primary key from 1.00 to 2.00 and the transformation of the primary key back from 2.00 to 1.00 (with identity, for detail records). This is C\# code and can be woven via the CSHARP_TRANSFORMATION code group. When making assignments, the *Exclude framework* prefilter needs to be disabled.
 
 StaleSync is activated during sign in:
 

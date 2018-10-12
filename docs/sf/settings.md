@@ -15,4 +15,4 @@ Provides an overview of the registered users of the Software Factory development
 
 ## Supplement workshop
 
-This *Supplement workshop* tasks is intended for training purposes only.
+These *Supplement workshop* tasks are intended for training purposes only.

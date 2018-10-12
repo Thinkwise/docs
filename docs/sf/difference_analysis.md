@@ -2,7 +2,7 @@
 title: Difference analysis
 ---
 
-The *Difference analysys* screen allows you to analyze the differences between multiple versions.
+The *Difference analysis* screen allows you to analyze the differences between multiple versions.
 
 ![](../assets/sf/image52.png)
 *Difference analysis*

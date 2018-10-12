@@ -13,7 +13,7 @@ The *Project management* menu group gives Overview of several subjects, like tab
 
 ## Master data
 
-The *Master data* menu group provides access to Software Factory master data.
+The *Master data* menu group provides access to Software Factory master data. 
 
 ### Software Factory
 
@@ -37,7 +37,7 @@ Maintenance task to optimize SQL Server indexes and statistics.
 
 #### Application languages
 
-This screen provides Overview of the languages that are available within the Software Factory.
+This screen provides Overview of the languages that are available within the Software Factory. 
 
 #### Controls
 
@@ -53,23 +53,23 @@ This is Overview of the ASCII codes that are available for defining key combinat
 
 #### Font faces
 
-Here are the font faces that can be used in the layout of the application. Additional font faces can be added here. Make sure these fonts are available in the operating systems.
+These are the font faces that can be used in the layout of the application. Additional font faces can be added here. Make sure these fonts are available in the operating systems.
 
 #### Task types
 
-The task types that are currently supported within the Software Factory, are stored here. All tasks that are linked to this can be viewed for each task type.
+The task types that are currently supported within the Software Factory are stored here. All tasks that are linked to this can be viewed for each task type.
 
 #### Report types
 
-Here are the report types that are currently supported in the Software Factory. Which reports are linked to this type is specified for each report type.
+These are the report types that are currently supported in the Software Factory. Which reports are linked to this type is specified for each report type.
 
 #### Screen component types
 
-This screen provides an overview of all the available screen component types in the Software Factory. It is visible for each screen component in which screen type this component will be used.
+This component provides Overview of all the available screen component types in the Software Factory. It is visible for each screen component in which screen type this component will be used.
 
 #### Conflict types
 
-The conflict types that can be recognized from a merge session are displayed in this screen.
+The conflict types that can be recognized from a merge session are displayed in this component.
 
 #### Extender types
 
@@ -87,15 +87,15 @@ This screen provides Overview of the currently available database management sys
 
 #### Programming languages
 
-This screen provides an overview of the available programming languages. This is also where programming languages may be added.
+This component provides Overview of the available programming languages. This is also where programming languages may be added.
 
 #### Data types
 
-This screen provides an overview of the possible data types and the domains in which they are used. A conversion can also be done from and to another programming language for each data type.
+This component provides Overview of the possible data types and the domains in which they are used. A conversion can also be done from and to another programming language for each data type.
 
 #### Data type conversions
 
-Overview of the conversions between data types from one programming language to another.
+Overview of the conversions between data types from one programming language to another. 
 
 #### Program object types
 

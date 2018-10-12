@@ -2,16 +2,16 @@
 title: Cubes
 ---
 
-The user interface provides business intelligence features, called *cubes*, which allows you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and chartically (using a chart).
+The user interface provides business intelligence features, called *cubes*, which allow you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and chartically (using a chart).
 
 ## Creating a Cube
 
-Creating a cube is done with the *Create cube* task. This task automatically adds values and dimensions and the screen type is changed to *cube*.
+Creating a cube is done with the *Create cube* task. This task automatically adds values and dimensions, and the screen type is changed to *cube*.
 
 ![](../assets/sf/image209.png)
 *Task to create a cube*
 
-If the data source is an OLAP cube, the *OLAP connection* check mark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
+If the data source is an OLAP cube, the *OLAP connection* checkmark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
 
 For more information on OLAP cubes, see [OLAP](../kb/olap).
 
@@ -23,7 +23,7 @@ A cube is made up of cube fields that can be applied by the user. There are two 
 
 - Dimension - fields for which the values can be plotted on the axes and on which can be filtered.
 
-The task with which a cube can be created makes the best possible proposal, but the field definitions will still need to be verified. In any case, all id columns that have no semantic value for the user, must be removed from the cube. They then just provide the connection to the other subjects.
+The task with which a cube can be created makes the best possible proposal, but the field definitions will still need to be verified. In any case, all ID columns that have no semantic value for the user must be removed from the cube. They then just provide the connection to the other subjects.
 
 ![](../assets/sf/image210.png)*Adding Cube Fields to the 'Cube Fields' tab*
 
@@ -59,7 +59,7 @@ The possible group interval types are:
 
 - Day of the month - the day of the month for a date or timestamp
 
-- Year age - age in years based on the current date. For this purpose the numerical range can be used, for instance an age group per year of per 10 years (0-9, 10-19 etc.).
+- Year age - age in years based on the current date. For this purpose the numerical range can be used, for instance an age group per year or per 10 years (0-9, 10-19 etc.).
 
 - Month age - see year age, but then for the age in months.
 
@@ -69,7 +69,7 @@ The possible group interval types are:
 
 ## Cube views
 
-Apart from defining cubes, which the user can work with, the cube views can also be specified in the Software Factory. These can be accessed by the user through the context menu, the ribbon or the cube view bar. A cube view is essentially a predefined format, which the user can adapt to his own wishes for personal use.
+Apart from defining cubes, which the user can work with, the cube views can also be specified in the Software Factory. These can be accessed by the user through the context menu, the ribbon or the cube view bar. A cube view is essentially a predefined format which the user can adapt to their own wishes for personal use.
 
 A cube view consists of a number of mandatory and optional components.
 
@@ -85,7 +85,7 @@ A cube view consists of a number of mandatory and optional components.
 
 - Conditional formatting (optional)
 
-Create a cube view by adding it. Specify a cube view id and optionally a group. Subsequently you can specify a number of things that determine the appearance of the view.
+Create a cube view by adding it. Specify a cube view ID and optionally a group. Subsequently, you can specify a number of things that determine the appearance of the view.
 
 - Icon
 
@@ -101,7 +101,7 @@ Create a cube view by adding it. Specify a cube view id and optionally a group. 
 
 - Legend
 
-Fields can then be added to the cube view. it can be specified for each field in which area in the cube it should appear.
+Fields can then be added to the cube view. It can be specified for each field in which area in the cube it should appear.
 
 - Values
 
@@ -125,9 +125,9 @@ The last settings that can be added relate to:
 
   - For example, for dates (year/month/day)
 
-Once the cube view has been created and the fields have been added, they are available in the cube of the final product After this, the cube can be further embellished with constant lines, filters, totals, and conditional formatting.
+Once the cube view has been created and the fields have been added, they are available in the cube of the final product. After this, the cube can be further embellished with constant lines, filters, totals, and conditional formatting.
 
-Using the cube view toolbar, the available cube views can be displayed in a bar on the screen, in the same way as prefilters, tasks and reports. In combination with the new cube components, screens can be developed for example with only charts and a toolbar to select the view.
+Using the cube view toolbar, the available cube views can be displayed in a bar on the screen, in the same way as prefilters, tasks and reports. In combination with the new cube components, screens can be developed, for example, with only charts and a toolbar to select the view.
 
 ## Charts
 
@@ -137,7 +137,7 @@ Each overview can be displayed chartically in a two or three-dimensional chart. 
 >
 > Year - Month - Day
 
-The last example requires 3 dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
+The last example requires three dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
 
 ![](../assets/sf/image211.png)*Example of a chart*
 
@@ -146,7 +146,7 @@ The last example requires 3 dimensions that are linked via the same date field. 
 
 ### Chart type per measured value
 
-In order to combine different types of charts in a chart measured value can be linked to a particular type of chart. This is done by including the name of the type of chart in the name of the measured value, separated by an underscore, for instance: `number_of_hours_spline3d`.
+In order to combine different types of charts in a chart, measured value can be linked to a particular type of chart. This is done by including the name of the type of chart in the name of the measured value, separated by an underscore, for instance: `number_of_hours_spline3d`.
 
 Available chart types are:
 
@@ -178,4 +178,4 @@ To model an area in a chart, you can use a constant line, the name of which star
 
 ## Executing tasks
 
-It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique, since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.
+It is also possible to link tasks to a cube table. In that case, it is important that the PK of the table is unique since the GUI uses this to identify the rows in the pivot table. Even if a view is being used, the PK should be set as a unique key.

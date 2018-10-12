@@ -27,6 +27,6 @@ Untranslated objects can be translated semi-automatically with the *Translate un
 
 ## Link tables
 
-With link tables that are displayed as detail it is often desirable, depending on the context, to display another translation. This is possible by including the plural translations of both master subjects, separated by a forward slash (*/*), in the plural translation of the linking table. The GUI will show the part of the translation that is not equal to that of the current master table.
+With link tables that are displayed as detail, it is often desirable, depending on the context, to display another translation. This is possible by including the plural translations of both master subjects, separated by a forward slash (*/*), in the plural translation of the linking table. The GUI will show the part of the translation that is not equal to that of the current master table.
 
-For example, by giving the linked table between *person* and *company* the translation *Persons/Companies* the table will have the translation *Companies* under *person* and *Persons* under *company*.
+For example, by giving the linked table between *person* and *company* the translation *Persons/Companies*, the table will have the translation *Companies* under *person* and *Persons* under *company*.

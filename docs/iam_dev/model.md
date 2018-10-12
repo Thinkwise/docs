@@ -2,7 +2,7 @@
 title: Model
 ---
 
-To make an application available in IAM, the model of the application must be synchronized from the Software Factory. On synchronization, the Intelligent Application Manager retrieves a copy of the model from the Software Factory database. 
+To make an application available in IAM, the model of the application must be synchronized from the Software Factory. Upon synchronization, the Intelligent Application Manager retrieves a copy of the model from the Software Factory database. 
 
 After synchronization, roles need to be created for the project version and one or more applications need to be set up.
 
@@ -14,7 +14,7 @@ To synchronize a project version, start the *Synchronize* task from the *Model* 
 ![](../assets/iam_dev/image7.png)
 *Synchronize*
 
-The following popup is shown. Click the *Connect* button to establish a connection with the Software Factory in which the project that has to be synchronized is located.
+The following pop-up is shown. Click the *Connect* button to establish a connection with the Software Factory in which the project that has to be synchronized is located.
 
 After the connection has been established, select the required project and project version.
 
@@ -27,18 +27,18 @@ By default, the synchronization will be applied to the current Intelligent Appli
 
 ### Validation
 
-Click the *Synchronize* button to start the synchronization. The Intelligent Application Manager will perform a full validation of the project version before it is synchronized, to check the integrity and quality of the project version.
+Click the *Synchronize* button to start the synchronization. The Intelligent Application Manager will perform a full validation of the project version before it is synchronized to check the integrity and quality of the project version.
 
 Any error messages must be resolved before it is allowed to synchronize the project version.
 
 ![](../assets/iam_dev/image10.png)
 *Validation*
 
-> Only use the Force synchronization* option when you know what you're doing.
+> Only use the Force synchronization* option when you know what you are doing.
 
 ### Result
 
-As soon as the project version is synchronized the model is available in the Intelligent Application Manager. An application can now be created for this, which can subsequently be configured and authorised.
+As soon as the project version is synchronized, the model is available in the Intelligent Application Manager. An application can now be created for this which can subsequently be configured and authorized.
 
 Projects
 --------

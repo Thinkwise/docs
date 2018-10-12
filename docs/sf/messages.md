@@ -2,7 +2,7 @@
 title: Messages
 ---
 
-Error messages, warnings or informational error messages are also modelled in the Software Factory, with  the possibility to define a translation, severity, location and more. This applies to both messages that are sent from functionality (code templates) and messages that are caused by the database, such as constraints and checks.
+Error messages, warnings or informational error messages are also modelled in the Software Factory, with the possibility to define a translation, severity and location. This applies to both messages that are sent from functionality (code templates) and messages that are caused by the database, such as constraints and checks.
 
 ![1538638669734](../assets/sf/1538638669734.png)
 *Example of a message as it may appear in an end product.*

@@ -10,7 +10,7 @@ For example, specify choices for:
   
   - Requirements - which language best guarantees the clarity of the requirements?
   
-  - Data model - important because, for instance, reports can be directly created on the database.
+  - Data model - important because reports can be directly created on the database, for instance.
 
 - Screen resolution
   
@@ -18,7 +18,7 @@ For example, specify choices for:
 
 - Use of one sub-name group for all projects
   
-  - A sub-name group (list with used terms) is useful if there are different applications with the same topics. In that case can a company standard can be established.
+  - A sub-name group (list with used terms) is useful if there are different applications with the same topics. In that case, a company standard can be established.
 
 - Use of shortcuts for tasks, reports and filters
   

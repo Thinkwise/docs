@@ -2,24 +2,24 @@
 title: Branching and merging
 ---
 
-When several developers or teams work on different features of an application, then branches of a project version can be made for these features via the *Project overview* screen. Each feature can be further developed separately and as soon as a feature is completed it can be combined (merged) with the main project version (trunk) via the *Merging* screen. This way, a new feature can be developed and tested entirely in separation from the rest of the project.
+When several developers or teams work on different features of an application, branches of a project version can be made for these features via the *Project overview* screen. Each feature can be further developed separately and, as soon as a feature is completed, it can be combined (merged) with the main project version (trunk) via the *Merging* screen. This way, a new feature can be developed and tested entirely independently from the rest of the project.
 
 ## Creating a branch
 
-A branch can be created in the *Project overview* screen using the ![](../assets/sf/image38.png) *Create Branch* task.
+A branch can be created in the *Project overview* screen using the ![](../assets/sf/image38.png)*Create Branch* task.
 
-This task opens the following popup.
+This task opens the following pop-up.
 
 ![](../assets/sf/image39.png)
-*Popup for creating a branch*
+*Pop-up for creating a branch*
 
-It must be indicated for which project and project version a branch must be created. The name of the branch project can then be entered and a location selected for the project and the database.
+It must be indicated for which project and project version a branch has to be created. The name of the branch project can then be entered and a location selected for the project and the database.
 
-When the branch is created it can be developed like a regular project. To do this select the correct project and the associated project version on the project screen.
+When the branch is created, it can be developed like a regular project. To do this, select the correct project and the associated project version on the project screen.
 
 ### Base versions
 
-When creating a branch, a base project version is automatically created. This base version is prefixed with the project version of the trunk. E.g. *1.10_BASE* to indicate on the basis of which version it has been created.
+When creating a branch, a base project version is automatically created. This base version is prefixed with the project version of the trunk. For instance, *1.10_BASE* to indicate on the basis of which version it has been created.
 
 ## Creating a merge session
 
@@ -28,9 +28,9 @@ As soon as the branch project is satisfactorily completed and tested, it can be 
 ![](../assets/sf/image41.png)
 *Pop-up for starting a Merge session*
 
-Select the trunk and branch project version to merge. Any conflicts are identified so that a solution strategy can be defined in the following step. In this situation only a comparison is made. Because no modifications have yet taken place the user can always go back to the previous step. 
+Select the trunk and branch project version to merge. Any conflicts are identified so that a solution strategy can be defined in the following step. In this situation, only a comparison is made. Because no modifications have yet taken place, the user can always go back to the previous step. 
 
-As long as a merge session is not completed, the indication *merging* will be added to the project version, to indicate that a merge session is running. Modifications in a project version with the status merging may be lost when the merge session is carried out.
+As long as a merge session is not completed, the indication *merging* will be added to the project version to indicate that a merge session is running. Modifications in a project version with the status merging may be lost when the merge session is carried out.
 
 ![](../assets/sf/image44.png)
 *Merging indicator with project version*
@@ -39,15 +39,15 @@ It is also possible to merge modifications from the trunk into a branch. It can 
 
 ## Conflicts
 
-Conflicts are presented in the *Conflicts* tab. When the merge session is started three kinds of conflicts can occur.
+Conflicts are presented in the *Conflicts* tab. When the merge session is started, three kinds of conflicts can occur.
 
 #### Static conflicts
 
-Static conflicts only occur when the branch is started with an empty project or a (sub) application and an object is created in the branch which already exists in the trunk.
+Static conflicts only occur when the branch is started with an empty project or a (sub) application, and an object is created in the branch which already exists in the trunk.
 
 #### Dynamic direct conflicts
 
-This type of conflict occurs when there is a double insert or update or when on the one hand a delete and on the other hand an update is carried out, such as deleting a table compared to adding columns to this table.
+This type of conflict occurs when there is a double insert or update, or when a delete on one branch and an update on another branch are carried out, such as deleting a table compared to adding columns to this table.
 
 #### Dynamic indirect conflicts
 
@@ -58,7 +58,7 @@ This type of conflict occurs if a delete in the trunk and an insert or update in
 
 ### Resolving conflicts
 
-After the conflicts are detected they can be resolved one by one. It is also possible to resolve several conflicts simultaneously with the help of the *Resolve conflict* ![](../assets/sf/image46.png) task. 
+After the conflicts are detected, they can be resolved one-by-one. It is also possible to resolve several conflicts simultaneously with the help of the *Resolve conflict* ![](../assets/sf/image46.png)task.
 
 This enables the modifications from the branch or from the trunk to be carried out. There are four options available:
 
@@ -75,14 +75,14 @@ This enables the modifications from the branch or from the trunk to be carried o
 
 ### Comparing code
 
-With the task *Compare code* it is possible to compare and merge the different values of a column for the conflicts *Dual change* and *Dual addition* with an external comparison table (WinMerge or KDiff3). After saving the file in the comparison tool the merged text is transferred in the pop-up. By clicking on *OK* the value is stored with the branch and the processing set to *Only carry out branch*.
+With the task *Compare code*, it is possible to compare and merge the different values of a column for the conflicts *Dual change* and *Dual addition* with an external comparison table (WinMerge or KDiff3). After saving the file in the comparison tool, the merged text is transferred to the pop-up. By clicking on *OK*, the value is stored with the branch and the processing set to *Only carry out branch*.
 
 ![](../assets/sf/image51.png)
 *A conflict comparison during a merge session*
 
 ## Execute merge session
 
-Only when all conflicts have been resolved, the *Execute merge session* ![](../assets/sf/image43.png) task can be started to perform the actual merge.
+Only when all conflicts have been resolved, can the *Execute merge session* ![](../assets/sf/image43.png) task be started to perform the actual merge.
 
 After the merge, a new project version is created in the target project and the merged project versions are deactivated.
 

@@ -2,12 +2,12 @@
 title: Roles
 ---
 
-Roles can be regarded as distinct tasks or activities of an application. It is important for the developer to closely assess these features, so that there is no overlap in rights between different roles. Furthermore the nomenclature of the roles must be clear for IAM administrators responsible for setting up the authorization of an application using these roles. They have no knowledge of the functionality and therefore have to deduce the purpose of the roles from the role names. Roles are often named after the corresponding activity, like *Approve hours* or *Report a ticket*.
+Roles can be regarded as distinct tasks or activities of an application. It is important for the developer to closely assess these features so that there is no overlap in rights between different roles. Furthermore, the nomenclature of the roles must be clear for IAM administrators responsible for setting up the authorization of an application using these roles. They have no knowledge of the functionality and therefore have to deduce the purpose of the roles from the role names. Roles are often named after the corresponding activity, such as *Approve hours* or *Report a ticket*.
 
 Role rights
 -----------
 
-Roles can be added or modified using the *Role rights* screen. After selecting a project version, it is possible to create new roles or to copy existing roles from a previous project version or import roles from another Intelligent Application Manager, for example to copy role rights from an acceptance environment to the production environment.
+Roles can be added or modified using the *Role rights* screen. After selecting a project version, it is possible to create new roles or to copy existing roles from a previous project version or import roles from another Intelligent Application Manager (e.g., to copy role rights from an acceptance environment to the production environment).
 
 ### Copy roles
 
@@ -24,7 +24,7 @@ When use is made of different IAMs, for example for a DTAP environment, it is po
 
 ### Create roles
 
-To create a new role, click the *Add* button on the *Role*s tab page. Add a name and description to the role and click *Save*. 
+To create a new role, click the *Add* button on the *Role*'s tab page. Add a name and description to the role and click *Save*. 
 
 Only use the *All rights* option for the administrator role. All other roles should provide a minimum set of rights required for the corresponding task or feature.
 
@@ -33,14 +33,14 @@ Only use the *All rights* option for the administrator role. All other roles sho
 
 #### Setup
 
-Once a role has been created then it can be set up using the tab pages on the right. 
+Once a role has been created, it can be set up using the tab pages on the right. 
 
 ![](../assets/iam_dev/image15.png)
 *Role rights*
 
 To assign rights to a role, select the required objects and click the *Assign rights* task. Select a preset or check the rights you want to assign to the object. 
 
-The *Assign rights* task also provides the option to assign rights to any child objects, for example the columns and details of a table, and to the parent objects required for this object, for example a task for it's task parameters. 
+The *Assign rights* task also provides the option to assign rights to any child objects, for example the columns and details of a table, and to the parent objects required for this object, for example a task for its task parameters. 
 
 ![](../assets/iam_dev/image17.png)
 *Assign rights task*
@@ -49,12 +49,12 @@ The *Available* checkbox, visible in the grid for certain objects, indicates if 
 
 ### Apply roles to the database
 
-After modifying roles, execute the *Apply roles to database* task on the *Project version* tab page to creates the defined roles on the database. This is only required for users with database or Windows authentication.
+After modifying roles, execute the *Apply roles to database* task on the *Project version* tab page to create the defined roles on the database. This is only required for users with database or Windows authentication.
 
 Model rights
 ------------
 
-The *Model rights* screen also allows for right to be assigned to roles, but from a model perspective. Using the *Model* tab page you can select a model object and grant rights for this object to multiple roles.
+The *Model rights* screen also allows for rights to be assigned to roles from a model perspective. Using the *Model* tab page you can select a model object and grant rights for this object to multiple roles.
 
 ![](../assets/iam_dev/image18.png)
 *Model rights*

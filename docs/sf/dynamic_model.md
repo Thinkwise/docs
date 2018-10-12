@@ -2,9 +2,9 @@
 title: Dynamic model
 ---
 
-Using the Dynamic model screen, the model of an application can be modified via so-calles *Meta control procedures* containing SQL code. The entire model can be expanded with specific functionality or concepts without this having to be set up for each table separately, and the model will automatically be kept consistent with these concepts.
+Using the Dynamic model screen, the model of an application can be modified via so-called *Meta control procedures* containing SQL code. The entire model can be expanded with specific functionality or concepts without this having to be set up for each table separately, and the model will automatically be kept consistent with these concepts.
 
-Using dynamic model concepts you can for example:
+Using dynamic model concepts, you can, for example:
 
 - Add trace columns to all current and future tables, including the functionality to update those columns
 - Add an update counter column to tables 

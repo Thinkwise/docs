@@ -8,7 +8,7 @@ Thinkwise reserves the right to adjust this lifecycle policy if necessary. The a
 
 ## Thinkwise Platform
 
-Support for a version of the Thinkwise Platform ends **18 months** after the next release. The Thinkwise Software Factory and Intelligent Application Manager have a release cycle of approximately 3 to 6 months.
+Support for a version of the Thinkwise Platform ends **18 months** after the next release. The Thinkwise Software Factory and Intelligent Application Manager have a release cycle of approximately three to six months.
 
 Critical hotfixes are provided for all supported versions. Non-critical hotfixes are provided for the current version only.
 
@@ -33,7 +33,7 @@ Due to technical limitations, newly introduced features may deviate from this by
 
 Support for a database management system version is provided for at least as long as the **mainstream** or **premier** support period as defined by the supplier of the database management system.
 
-Thinkwise will timely inform its customers when a database management system version is no longer supported.
+Thinkwise will inform its customers when a database management system version is no longer supported in due course.
 
 #### Microsoft SQL Server
 
@@ -69,9 +69,9 @@ Thinkwise will timely inform its customers when a database management system ver
 
 ### .NET Framework
 
-Support for a version of the .NET Framework, required by the Thinkwise Windows and Web user interfaces and the Indicium Application Tier, ends at least **18 months** after the next .NET Framework release.
+Support for a version of the .NET Framework, required by the Thinkwise Windows, Web user interfaces and the Indicium Application Tier, ends at least **18 months** after the next .NET Framework release.
 
-Thinkwise will timely inform its customers when a .NET Framework version is no longer supported.
+Thinkwise will inform its customers when a .NET Framework version is no longer supported in due course.
 
 (Source: [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy))
 
@@ -85,7 +85,7 @@ Thinkwise will timely inform its customers when a .NET Framework version is no l
 
 Support for an Internet Information Services version is available at least as long as Microsoft provides **mainstream** support for that version.
 
-Thinkwise will timely inform its customers when an Internet Information Services version is no longer supported.
+Thinkwise will inform its customers when an Internet Information Services version is no longer supported in due course.
 
 (Source: [Microsoft Lifecycle Policy](https://support.microsoft.com/en-us/hub/4095338/microsoft-lifecycle-policy))
 

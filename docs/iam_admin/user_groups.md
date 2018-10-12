@@ -24,18 +24,18 @@ After creating a Windows domain user group, execute the task *Update Active Dire
 
 ### Authorization
 
-The *Authorization* tab page of the *User groups* screen shows an overview of all applications and their roles. To grant a user group access to an application, select the application from the list and check the roles to which this user group needs access on the right of the screen. 
+The *Authorization* tab page of the *User groups* screen shows an overview of all applications and their roles. To grant a user group access to an application, select the application from the list and check the roles of which this user group needs access on the right of the screen. 
 
-A checkboxes next to the application indicates if any roles are assigned to the user group.
+A checkbox next to the application indicates if any roles are assigned to the user group.
 
 ![](../assets/iam_admin/image12.png)
 *Linking roles to user groups*
 
 ### Users
 
-The *Users* tab page shows a list of all users that are member of the selected user group. To create users, see [users](users). 
+The *Users* tab page shows a list of all users that are members of the selected user group. To create users, see [users](users). 
 
-When adding a user to a group it is possible to define the start and end date of the group membership. The user will only be granted the user group rights while the current date is within the membership period.
+When adding a user to a group, it is possible to define the start and end date of the group membership. The user will only be granted the user group rights while the current date is within the membership period.
 
 ![](../assets/iam_admin/image13.png)
 *User group user*
