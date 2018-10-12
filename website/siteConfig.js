@@ -30,7 +30,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'Thinkwise Platform',
+  projectName: 'Thinkwise Docs',
   organizationName: 'Thinkwise',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -75,9 +75,7 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
-    'Copyright © ' +
-    new Date().getFullYear() +
-    ' Thinkwise',
+    'Copyright © ' + new Date().getFullYear() + ' Thinkwise',
 
   rights:
     'No rights can be derived from the contents of this website.',
@@ -111,12 +109,12 @@ const siteConfig = {
   blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },
 
   //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
-  enableUpdateTime: true,
+  enableUpdateTime: false,
   cleanUrl: false, // Setting this to True breaks relative urls like ../assets/sf/image.png
   scrollToTop: true,
   scrollToTopOptions: {
     zIndex: 100,
-  },
+  }
 };
 
 module.exports = siteConfig;

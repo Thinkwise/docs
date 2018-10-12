@@ -1,35 +1,107 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-}
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
 
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
 
-@media only screen and (max-width: 1023px) {
-}
+@media only screen and (max-width: 1023px) {}
 
-@media only screen and (min-width: 1400px) {
-}
+@media only screen and (min-width: 1400px) {}
 
-@media only screen and (min-width: 1500px) {
-}
+@media only screen and (min-width: 1500px) {}
 
-input#search_input_react {
+/* Search box */
+
+.reactNavSearchWrapper input#search_input_react {
     border-radius: 0px;
     line-height: 31px;
-    font-size: 14px;
-    font-family: inherit;
-    background-color: rgba(242, 196, 178, 0.25);
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-variant-caps: all-small-caps;
+    color: #F9F4F4;
+    background-color: #1C86B3;
 }
+
+@media only screen and (max-width: 1024px) {
+    .navSearchWrapper {
+        top: 8px;
+    }
+}
+
+/* Search icon */
+
+.navSearchWrapper:before {
+    border: 2px solid #F9F4F4;
+    border-radius: 50%;
+    content: ' ';
+    display: block;
+    height: 6px;
+    left: 17px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-58%);
+    width: 6px;
+    z-index: 1;
+}
+
+.navSearchWrapper:after {
+    background: #F9F4F4;
+    content: ' ';
+    height: 7px;
+    left: 26px;
+    position: absolute;
+    top: 55%;
+    transform: rotate(-45deg);
+    width: 2px;
+    z-index: 1;
+}
+
+/* Navigation */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_bZF3gnD_g.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.navigationSlider .slidingNav ul li a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    color: #FFFFFF;
+}
+
+.navigationSlider .slidingNav ul li a {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    font-variant-caps: all-small-caps;
+    color: #F9F4F4;
+    background: #23A8E0;
+}
+
+.nav-footer {
+    background: #000000;
+}
+
+/* Images and captions */
 
 article p img:first-child {
-     outline: 1px solid #dddddd;
-     outline-offset: -1px;
-     display: block;
+    outline: 1px solid #dddddd;
+    outline-offset: -1px;
+    display: block;
 }
 
-article p img:first-child + em {
+article p img:first-child+em {
     display: inherit;
     text-align: center;
     font-size: 80%;
@@ -45,4 +117,3 @@ article p img:not(:first-child) {
 article em {
     font-style: italic;
 }
-

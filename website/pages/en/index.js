@@ -110,7 +110,7 @@ const Features = props => (
         content: `Manage your applications, users and preferences with the Thinkwise Intelligent Application Manager.`,
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: `[Intelligent Application Manager](${docUrl('iam_admin/general.html', )})`,
+        title: `[Intelligent Application Manager](${docUrl('iam/general.html', )})`,
       },
       {
         content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
