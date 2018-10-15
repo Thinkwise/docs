@@ -83,7 +83,7 @@
       "iam_dev/applications"
     ],
     "Manager's guide": [
-      "iam_admin/applications",
+      "iam_admin/admin_applications",
       "iam_admin/user_groups",
       "iam_admin/group_preferences",
       "iam_admin/users"

@@ -82,7 +82,7 @@
       "version-2018.2-iam_dev/applications"
     ],
     "Manager's guide": [
-      "version-2018.2-iam_admin/applications",
+      "version-2018.2-iam_admin/admin_applications",
       "version-2018.2-iam_admin/user_groups",
       "version-2018.2-iam_admin/group_preferences",
       "version-2018.2-iam_admin/users"

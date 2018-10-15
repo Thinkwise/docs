@@ -1,14 +1,14 @@
 ---
 title: Applications
-id: version-2018.2-applications
-original_id: applications
+id: version-2018.2-admin_applications
+original_id: admin_applications
 ---
 
-An application in the Intelligent Application Manager is a combination of a project version, a server and a database that will appear as a standalone application in the user interfaces. A project version can therefore result in several applications on different servers and/or for different databases. Each application has its own authorization and user preferences. 
+An application in the Intelligent Application Manager is a combination of a project version, a server and a database that will appear as a standalone application in the user interfaces. A project version can therefore result in several applications on different servers and/or for different databases. Each application has its own authorization and user preferences.
 
 Roles are distinct tasks or activities within an application. They are often named after the corresponding activity, like *Approve hours* or *Report a ticket*.
 
-Applications and roles are created by the application **administrator**. The application **manager** is responsible for granting users access to those applications, by creating users and user groups and assigning roles for specific applications to those user groups. 
+Applications and roles are created by the application **administrator**. The application **manager** is responsible for granting users access to those applications, by creating users and user groups and assigning roles for specific applications to those user groups.
 
 ![1537868299574](../assets/sf/1537868299574.png)
 *Authorization overview*
@@ -17,7 +17,7 @@ Applications and roles are created by the application **administrator**. The app
 
 User groups are linked to roles on the *Authorization* tab page of the *Applications* screen. Checkboxes next to the user group indicate if any roles are assigned to the user group.
 
-To grant a user group access to the application, select a user group from the list and then check the roles to which this user group needs access on the right of the screen. 
+To grant a user group access to the application, select a user group from the list and then check the roles to which this user group needs access on the right of the screen.
 
 ![1537869015632](../assets/sf/1537869015632.png)
 *Linking roles to user groups*
