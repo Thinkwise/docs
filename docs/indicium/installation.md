@@ -42,9 +42,9 @@ After creating the Application Pool, it is necessary to open the settings of the
 
 Copy the Indicium binaries and other files to the desired location on the web server. Typically, this location will be something like C:\inetpub\wwwroot\indicium. Next, open the appsettings.json file with a text editor \(as Administrator\) to configure the connection to the IAM database.
 
-Indicium handles authentication and authorization internally and will perform all database traffic with a single user, the Database Pool User. If you do not want the Database Pool User to be the same as the Application Pool user in IIS, then you can choose to override it by means of the PoolUserName and PoolPassword properties in the appsettings.json file.
+Indicium handles authentication and authorization internally and will perform all database traffic with a single user, the Database Pool user. If you do not want the Database Pool User to be the same as the Application Pool user in IIS, then you can choose to override it by means of the PoolUserName and PoolPassword properties in the appsettings.json file.
 
-The Database Pool User needs to be configured as a **Main administrator** in the Intelligent Application Manager. Furthermore, it needs to be assigned **All rights** for all applications that need to be accessible through Indicium. The users connecting to Indicium \(the End Users\) do not have to be Main administrators and can be given selective permissions to the applications as you see fit. Furthermore, End Users do not require any physical permissions on the database, unless they use RDBMS authentication in which case they only need to be able to open a connection to the database.
+Contrary to versions 2018.2 and earlier, the Database Pool user does **not** need to be created as a user in IAM. The Database Pool user only needs full access to all the databases present in IAM, including the IAM database itself. None of the end users accessing the applications require any physical permissions on any database. Users using RDBMS authentication do need to be created since they will be authenticated by attempting to open a connection to the meta-database. 
 
 > Double quotes \( " \) and backslashes \( \\ \)  in the appsettings.json file, for instance in usernames or the server address, need to be escaped by an extra backslash. 
 > For example: `server\instance` should be `server\\instance`.
@@ -101,9 +101,7 @@ If you want to be certain that the JSON is valid, then you can use this website 
 
 #### Connection
 
-Ensure that the information in the appsettings.json is correct. Double-check the server address and the database, and ensure that the Database Pool User has access to the configured IAM database. Also, ensure that the pool user is a user in IAM, that its authentication method is correct and that the user is a Main administrator in IAM.
-
-Furthermore, the permissions for this user should be applied to the IAM database as well. See [Creating the Web Application](installation.md#creating-the-web-application) for more information.
+Ensure that the information in the appsettings.json is correct. Double-check the server address and the database, and ensure that the Database Pool User has access to the configured IAM database and product databases.
 
 #### Prerequisites 
 
@@ -119,7 +117,7 @@ If you are getting "401 - Unauthorized" results for a user \(i.e., if the browse
 
 ### 402 - Application not found
 
-If an application URL \(e.g., [https://server/indicium/api/myAppl](https://server/indicium/api/myAppl)\) gives the result “402 - Application not found” and you are certain that the URL is correct, please ensure that both the Database Pool User and the user that you are using to log in as have access to the application in IAM. Note that the Database Pool User also requires permissions on the database itself.
+If an application URL \(e.g., [https://server/indicium/api/myAppl](https://server/indicium/api/myAppl)\) gives the result “402 - Application not found”, and you are certain that the URL is correct, please ensure that the user that you are using to log in as has access to the application in IAM.
 
 ## Running Indicium in Development mode
 
