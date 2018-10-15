@@ -1,0 +1,115 @@
+{
+  "version-2018.2-sf": {
+    "Software Factory": [
+      "version-2018.2-sf/sf_general",
+      "version-2018.2-sf/dev_process",
+      "version-2018.2-sf/naming",
+      "version-2018.2-sf/conventions"
+    ],
+    "Projects": [
+      "version-2018.2-sf/overview",
+      "version-2018.2-sf/full_model",
+      "version-2018.2-sf/merging",
+      "version-2018.2-sf/difference_analysis"
+    ],
+    "Specification": [
+      "version-2018.2-sf/process_analysis",
+      "version-2018.2-sf/modules",
+      "version-2018.2-sf/design"
+    ],
+    "Data": [
+      "version-2018.2-sf/domains",
+      "version-2018.2-sf/data_model",
+      "version-2018.2-sf/data_sensitivity",
+      "version-2018.2-sf/data_conversion",
+      "version-2018.2-sf/dynamic_model"
+    ],
+    "User Interface": [
+      "version-2018.2-sf/menus",
+      "version-2018.2-sf/screen_types",
+      "version-2018.2-sf/subjects",
+      "version-2018.2-sf/variants",
+      "version-2018.2-sf/cubes",
+      "version-2018.2-sf/themes",
+      "version-2018.2-sf/messages",
+      "version-2018.2-sf/translations",
+      "version-2018.2-sf/help",
+      "version-2018.2-sf/extenders"
+    ],
+    "Processes": [
+      "version-2018.2-sf/tasks",
+      "version-2018.2-sf/reports",
+      "version-2018.2-sf/custom_screens",
+      "version-2018.2-sf/process_flows",
+      "version-2018.2-sf/subroutines"
+    ],
+    "Business Logic": [
+      "version-2018.2-sf/business_logic",
+      "version-2018.2-sf/functionality",
+      "version-2018.2-sf/code_search",
+      "version-2018.2-sf/code_overview"
+    ],
+    "Quality": [
+      "version-2018.2-sf/code_review",
+      "version-2018.2-sf/test_cases",
+      "version-2018.2-sf/validation"
+    ],
+    "Deployment": [
+      "version-2018.2-sf/creation",
+      "version-2018.2-sf/runtime_configuration",
+      "version-2018.2-sf/configuration_file",
+      "version-2018.2-sf/extended_properties",
+      "version-2018.2-sf/developer_mode"
+    ],
+    "Statistics": [
+      "version-2018.2-sf/statistics",
+      "version-2018.2-sf/function_points"
+    ],
+    "Miscellanious": [
+      "version-2018.2-sf/settings",
+      "version-2018.2-sf/advanced"
+    ]
+  },
+  "version-2018.2-iam": {
+    "Intelligent Application Manager": [
+      "version-2018.2-iam/iam_general",
+      "version-2018.2-iam/administrators",
+      "version-2018.2-iam/user_simulation"
+    ],
+    "Administrator's guide": [
+      "version-2018.2-iam_dev/model",
+      "version-2018.2-iam_dev/roles",
+      "version-2018.2-iam_dev/applications"
+    ],
+    "Manager's guide": [
+      "version-2018.2-iam_admin/applications",
+      "version-2018.2-iam_admin/user_groups",
+      "version-2018.2-iam_admin/group_preferences",
+      "version-2018.2-iam_admin/users"
+    ]
+  },
+  "version-2018.2-indicium": {
+    "Indicium": [
+      "version-2018.2-indicium/indicium_general",
+      "version-2018.2-indicium/installation",
+      "version-2018.2-indicium/api"
+    ]
+  },
+  "version-2018.2-kb": {
+    "Knowledge base": [
+      "version-2018.2-kb/kb_general",
+      "version-2018.2-kb/deep_links",
+      "version-2018.2-kb/exchange",
+      "version-2018.2-kb/file_storage",
+      "version-2018.2-kb/icons",
+      "version-2018.2-kb/lifecycle_policy",
+      "version-2018.2-kb/maps",
+      "version-2018.2-kb/olap",
+      "version-2018.2-kb/performance",
+      "version-2018.2-kb/report_mailer",
+      "version-2018.2-kb/screenshots",
+      "version-2018.2-kb/tags",
+      "version-2018.2-kb/username"
+    ]
+  }
+}

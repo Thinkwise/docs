@@ -38,11 +38,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'sf/general', label: 'Software Factory'},
-    //{doc: 'iam_general', label: 'Production'},
-    {doc: 'iam/general', label: 'Application Manager'},
-    {doc: 'indicium/general', label: 'Indicium'},
-    {doc: 'kb/general', label: 'Knowledge base'},
+    {doc: 'sf/sf_general', label: 'SF'},
+    {doc: 'iam/iam_general', label: 'IAM'},
+    {doc: 'indicium/indicium_general', label: 'Indicium'},
+    {doc: 'kb/kb_general', label: 'Knowledge base'},
     //{page: 'help', label: 'Help'}
     {blog: true, label: 'Releases'},
   ],

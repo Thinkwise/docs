@@ -1,7 +1,7 @@
 {
-  "thinkwise_software_factory": {
+  "sf": {
     "Software Factory": [
-      "sf/general",
+      "sf/sf_general",
       "sf/dev_process",
       "sf/naming",
       "sf/conventions"
@@ -71,9 +71,9 @@
       "sf/advanced"
     ]
   },
-  "intelligent_application_manager": {
+  "iam": {
     "Intelligent Application Manager": [
-      "iam/general",
+      "iam/iam_general",
       "iam/administrators",
       "iam/user_simulation"
     ],
@@ -89,16 +89,16 @@
       "iam_admin/users"
     ]
   },
-  "indicium_application_tier": {
+  "indicium": {
     "Indicium": [
-      "indicium/general",
+      "indicium/indicium_general",
       "indicium/installation",
       "indicium/api"
     ]
   },
-  "knowledge_base": {
+  "kb": {
     "Knowledge base": [
-      "kb/general",
+      "kb/kb_general",
       "kb/deep_links",
       "kb/exchange",
       "kb/file_storage",

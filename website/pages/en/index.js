@@ -80,7 +80,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
 
-            <Button href={docUrl('sf/general.html', language)}>Get started</Button>
+            <Button href={docUrl('sf/sf_general.html', language)}>Get started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -104,19 +104,19 @@ const Features = props => (
         content: `Learn how to create business applications with the Thinkwise Software Factory development environment.`,
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: `[Thinkwise Software Factory](${docUrl('sf/general.html', )})`,
+        title: `[Thinkwise Software Factory](${docUrl('sf/sf_general.html', )})`,
       },
       {
         content: `Manage your applications, users and preferences with the Thinkwise Intelligent Application Manager.`,
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: `[Intelligent Application Manager](${docUrl('iam/general.html', )})`,
+        title: `[Intelligent Application Manager](${docUrl('iam/iam_general.html', )})`,
       },
       {
         content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
         image: imgUrl('thinkwise.svg'),
         imageAlign: 'top',
-        title: `[Indicium Application Tier](${docUrl('indicium/general.html', )})`,
+        title: `[Indicium Application Tier](${docUrl('indicium/indicium_general.html', )})`,
       },
     ]}
   </Block>
