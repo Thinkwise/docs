@@ -96,6 +96,10 @@ Tasks can take a long time to process. There are four options to give instructio
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
 
+### Atomic transaction
+
+Template-based tasks can be set to run as an atomic transaction. See [Subroutine - Atomic transaction](subroutines#atomic-transaction) for more info.
+
 ## Task parameters
 
 After creating a task, parameters can be added to the task that define the input values for the task. Parameters are in a specific sequence and are linked to a domain for the data type and the control.
@@ -136,7 +140,7 @@ A task can be included in several menus. If a task is linked to a table, it will
 
 ## Functionality
 
-When generating, a program object is created for the task. The associated default and layout program objects are also created. The application logic can be modelled and described in the [Functionality screen](functionality). 
+When generating, a program object is created for template-typed tasks. The associated default and layout program objects are also created. The application logic can be modelled and described in the [Functionality screen](functionality). 
 
 ## Variants
 
