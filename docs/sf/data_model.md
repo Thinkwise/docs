@@ -167,6 +167,8 @@ The Software Factory automatically creates indexes for foreign keys and sort seq
 
 The Thinkwise platform supports *clustered* and *non-clustered indexes*, *full-text indexes* (SQL Server) and *Encoded Vector indexes* (DB2). It can also be indicated whether an index has to be unique.
 
+Unique indexes can be marked to exclude null-values. When marked to exclude null-values, if any of the indexed columns of the row contains a null-value, this row will not be checked by the unique index.
+
 ## Views
 
 A view is a logical table that is composed from fields from other tables. The data in a view is not stored in the database but composed at runtime on the basis of a query.
