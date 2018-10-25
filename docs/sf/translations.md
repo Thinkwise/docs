@@ -12,9 +12,9 @@ To manually generate translation objects for new objects, execute the *Generate 
 
 A translation can be specified for each application language defined for the project. Additional languages can be added using the [Advanced menu](advanced#model). The user interface can therefore be provided in any language or dialect. Of course, Unicode is fully supported, which means that languages such as Polish, Frisian or Chinese are all possible.
 
->  When an additional language is added, all the GUI objects must also be translated along with the own objects.
+>  When an additional language is added, all the GUI objects have to be translated along with the own objects, too.
 
-An object contains at most the following translations, depending on the type of translation object:
+An object contains, at most, the following translations, depending on the type of translation object:
 
 - (Single) translation
 - Translation form

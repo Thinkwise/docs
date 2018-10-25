@@ -5,7 +5,7 @@ title: Tasks
 A task represents business logic that can be executed manually by the user. A task can be linked to one or more tables and will be displayed in the ribbon, the context menu and possibly in the task bar. Columns of the table can be linked to the parameters of the task. The values of the linked columns of the active record are then passed on to the relevant parameters.
 
 ![](../assets/sf/image191.png)
-*An example task popup*
+*An example task pop-up*
 
 In addition, a reference can be established from a parameter to a look-up table. In this way, a parameter gets a drop-down list and a button in order to be able to select another value in the pop-up.
 
@@ -36,7 +36,7 @@ Or create your own batch file to print a PDF document:
 @CALL START /MIN AcroRd32.exe /N /T %1
 ```
 
-With the use of parameters, it is also possible to create dynamic external program tasks. This can be used in situations in which the external program, network or web address to be opened is not always the same but changes depending on the situation. In these cases, a parameter has to be added to the task with the location of the external program or network or web address. The *task parameter ID* of this parameter has to subsequently be specified between square brackets in the *Object name* field of the task (e.g., [URL]). For dynamic external program tasks, all other parameters are ignored.
+With the use of parameters, it is also possible to create dynamic external program tasks. This can be used in situations in which the external program, network or web address to be opened is not always the same but changes depending on the situation. In these cases, a parameter has to be added to the task with the location of the external program, network or web address. The *task parameter ID* of this parameter has to subsequently be specified between square brackets in the *Object name* field of the task (e.g., [URL]). For dynamic external program tasks, all other parameters are ignored.
 
 To open a dynamic URL without knowing the default browser, you can trick the task by using 'http:' as Object name and set the first parameter to the URL to be opened. The same goes for other URI schemes like 'mailto:'.
 
@@ -46,7 +46,7 @@ This options allows *custom C\# tasks*, such as the TSFReportMailer, to be linke
 
 #### None
 
-Represents a dummy task, which can be used to in a process flow or to display a form.
+Represents a dummy task which can be used in a process flow or to display a form.
 
 ### Task confirmation
 
@@ -68,7 +68,7 @@ tsf_send_progress *[message id], [parameterstring], [percentage]*
 
 ##### Message ID
 
-Optional parameter with which text above the progress bar (default *Run task ...*) can be changed by the translation of a message_id.
+Optional parameter with which text above the progress bar (default *Run task...*) can be changed by the translation of a message_id.
 
 ##### Parameter string
 
@@ -115,7 +115,7 @@ Task parameters can be formatted in the same way as forms of tables are formatte
 
 ## Look-ups
 
-By specifying a task reference (between task and table and corresponding column comparison) it can be determined in which table the value for a field should be looked-up and entered.
+By specifying a task reference (between task and table and corresponding column comparison), it can be determined in which table the value for a field should be looked-up and entered.
 
 ## Conditional formatting
 

@@ -14,19 +14,19 @@ The *Messages* screen can be found in the menu under *User Interface*.
 ![1538638866903](../assets/sf/1538638866903.png)
 *Overview of messages*
 
-The *Message id* is used to reference the message from the business logic. This id is translated in the *Translations* tab page.
+The *Message id* is used to reference the message from the business logic. This ID is translated in the *Translations* tab page.
 
 A brief description of the purpose of the message is given in the *Descriptions* tab.
 
 ### Message location 
 
-The *Message location* indicates how the message should be displayed: in a *popup*, in a *panel* at the bottom of the screen, or *none (suppress)*, used to suppress database messages.
+The *Message location* indicates how the message should be displayed: in a *pop-up*, in a *panel* at the bottom of the screen, or *none (suppress)*, used to suppress database messages.
 
 > It is possible to clear the *panel* with the message *clear_panel* or add a separator line to the *panel* by sending the *add_separator* message.
 
 ### Severity
 
-The severity of the message is determined here. This may be an informational message, a warning or an error message. The severity determines how the user interfaces and the Indicium application tier handle the action that caused the message. Only for errors, the action is canceled. 
+The severity of the message is determined here. This may be an informational message, a warning or an error message. The severity determines how the user interfaces and the Indicium application tier handle the action that caused the message. The action is only canceled for errors.
 
 ### Message options
 
@@ -38,7 +38,7 @@ will result in this dialog in the GUI:
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/show_message1.png](../assets/sf/image252.png)
 
-An affirmative message option will be given a unique status code of zero or higher, while a negative message option will be given a unique negative status code. These response types and corresponding status codes are directly related to the green and red arrows in the process flow. In some cases it might be necessary to have multiple affirmative and/or multiple negative message options which have different effects on the continuation of the process flow. To achieve this, the *Status code* value of a message option will be passed as the *Status code* output parameter of the process action.
+An affirmative message option will be given a unique status code of zero or higher, while a negative message option will be given a unique negative status code. These response types and corresponding status codes are directly related to the green and red arrows in the process flow. In some cases, it might be necessary to have multiple affirmative and/or multiple negative message options which have different effects on the continuation of the process flow. To achieve this, the *Status code* value of a message option will be passed as the *Status code* output parameter of the process action.
 
 Icons are optional and the sequence number of the message option (\#) determines the order of the buttons on the dialog.
 
@@ -48,7 +48,7 @@ In the *Translations* tab page, a translation can be specified in which paramete
 
 ## Sending messages
 
-To send a message from a SQL template use can be made of the *tsf_send_message* procedure:
+To send a message from an SQL template, use can be made of the *tsf_send_message* procedure:
 
 ```sql
 tsf_send_message [message id], [parameter string], [abort]
@@ -99,7 +99,7 @@ Results in *'Note, Thinkwise already exists as a Customer'*.
 
 Indicates the *database* severity level.
 
-For SQL Server, specifying *0* results in a database message with severity *9* and *1* results in a database message with severity *16*. Because SQL Server does not do a rollback automatically, a rollback and return have to be explicitly executed to abort a transaction. For example:
+For SQL Server, specifying *0* results in a database message with severity *9*, and *1* results in a database message with severity *16*. Because SQL Server does not do a rollback automatically, a rollback and return have to be explicitly executed to abort a transaction. For example:
 
 ```sql
 exec tsf_send_message 'duplicate_customer', null, 1;
@@ -109,4 +109,4 @@ return;
 
 For Oracle, specifying *true* results in a raise_application_error which will abort the transaction and *false* results in a *dbms_output.put_line*.
 
-For DB2, the abort parameter is ignored as a transaction is always aborted when a message is sent. In order to still provide informational messages on DB2 in defaults and layouts, these logic concepts have an extra parameter *v_message_text* that can be set to show in informational message.
+For DB2, the abort parameter is ignored as a transaction and is always aborted when a message is sent. In order to still provide informational messages on DB2 in defaults and layouts, these logic concepts have an extra parameter *v_message_text* that can be set to show in an informational message.

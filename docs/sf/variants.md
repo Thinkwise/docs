@@ -4,7 +4,7 @@ title: Variants
 
 It is possible to display the same table in different ways in the Software Factory by adding a variant. This offers, for example, the possibility to set up different prefilters for a specific menu item without having to create a view.
 
-> Along with a menu item called *Orders* in which all active orders are displayed with a grid and form, a menu item can be added based on the variant *Historical orders*. This only contains a grid with other enabled prefilters. A task-based screen can be set up quickly in this way without having to first create a view.
+> Along with a menu item called *Orders*, in which all active orders are displayed with a grid and form, a menu item can be added based on the variant *Historical orders*. This only contains a grid with other enabled prefilters. A task-based screen can be set up quickly in this way without having to first create a view.
 
 It is also possible to optimize a variant for a specific platform, for example, by displaying fewer columns in the Mobile GUI than in the Windows GUI.
 
