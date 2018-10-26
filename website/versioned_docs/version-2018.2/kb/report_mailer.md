@@ -6,7 +6,7 @@ original_id: report_mailer
 
 
 
-Using the *TSFReportMailer* custom task, delivered with the Software Factory, it is possible to export reports and/or send e-mails from the Software Factory.
+Using the *TSFReportMailer* custom task, delivered with the Software Factory, it is possible to export reports and/or send emails from the Software Factory.
 
 It is produced by creating a *GUI code* [task](../sf/tasks#gui-code) or [report](../sf/reports#gui-code). The Object name must be entered with *TSFReportMailer*. Use can be made of the following table for creating parameters.
 
@@ -25,7 +25,7 @@ An overview of the parameters that can be used:
 | save_mail             | false         | boolean   | Tries to save the email in the Drafts folder if this parameter is set to true .<br>NOTE: If open_in_outlook is also set to true then this parameter will be ignored! |
 | html                  | false         | boolean   | This parameter converts the format of the email to HTML if it is set to true. |
 | priority              | 1             | integer   | This parameter indicates the urgency of the email.<br>Possible values:<br> 0 = low urgency<br/>1 = normal urgency<br/>2 high urgency. |
-| e-mail                |               | string    | Email address to which the email must be sent. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
+| email                 |               | string    | Email address to which the email must be sent. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | cc                    |               | string    | CC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | bcc                   |               | string    | BCC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | body                  |               | string    | If HTML tags are used for the actual message of the email, then the html parameter must be set to true. |
@@ -71,7 +71,7 @@ To send an email with Outlook via the TSFReportMailer, at least the following pa
 
 ##### Mandatory
 
-- e-mail
+- email
 
 > This is not mandatory if the parameter *open_in_outlook* is set to *true*, the default value of this is *false*.
 
@@ -83,7 +83,7 @@ To send an email with Outlook via the TSFReportMailer, at least the following pa
 - save_mail
 - html
 - priority
-- e-mail
+- email
 - cc
 - bcc
 - body
@@ -109,7 +109,7 @@ The TSFReportMailer tries as much as possible to revert to SMTP as it would othe
 - smtp_password
 - smtp_host
 - smtp_from_mail
-- e-mail
+- email
 
 ##### Optional fields
 

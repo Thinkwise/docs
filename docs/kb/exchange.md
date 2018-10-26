@@ -1,5 +1,5 @@
 ---
-title: Exchange Connector
+title: Exchange connector
 ---
 
 The Thinkwise Exchange Connector is a Windows service application that provides the synchronization of emails, appointments, contacts and tasks between a Thinkwise database and Exchange.
@@ -14,7 +14,7 @@ It is possible to monitor the Exchange Connector by connecting Telnet to the Thi
 
 ## Architecture
 
-With the Thinkwise Exchange Connector, it is possible to synchronize e-mails, contacts, tasks and appointments between Exchange and your Thinkwise application. For each user who uses the Thinkwise application, it is possible to set which parts have to be synchronized.
+With the Thinkwise Exchange Connector, it is possible to synchronize emails, contacts, tasks and appointments between Exchange and your Thinkwise application. For each user who uses the Thinkwise application, it is possible to set which parts have to be synchronized.
 
 The Thinkwise Exchange Connector works for both SQL Server and DB2 Thinkwise applications. The necessary tables for the Thinkwise Exchange Connector are added to the Thinkwise application with the aid of a base project. More information about base projects is described in the Thinkwise Software Factory manual. With the aid of these tables, all set items are synchronized with the Thinkwise application. Items that are adapted in the Thinkwise application can also be synchronized back to the Exchange server (e.g., appointments).
 
@@ -29,7 +29,7 @@ Synchronizing the various items of the Exchange server to the Thinkwise applicat
 
 Synchronizing the Thinkwise application database to Exchange uses CLR or Java procedures on the database, which send the correct data via JSON over TCP to the Thinkwise Exchange Connector. From the Thinkwise Exchange Connector, data is forwarded to the Exchange Server through SOAP web services.
 
-The base project for the Exchange Connector contains a Stored Procedure called `exh_get_users` to retrieve users who need to be synchronized. There is also a Stored procedure called `exh_sync_users` that makes it possible to re-register the users with the Thinkwise Exchange Connector, for example if a new user has been added. 
+The base project for the Exchange Connector contains a Stored Procedure called `exh_get_users` to retrieve users who need to be synchronized. There is also a Stored procedure called `exh_sync_users` that makes it possible to re-register the users with the Thinkwise Exchange Connector, for example if a new user has been added.
 
 Finally, it is possible to log the activities of the Thinkwise Exchange Connector with, for example, Telnet. This is particularly useful for detecting errors. The Thinkwise Exchange Connector has an automatic error recovery mechanism, which means that the synchronization of items will always continue.
 
@@ -56,8 +56,9 @@ Below are the features of the Thinkwise Exchange Connector:
   - Items can not be synchronized due to connection loss, new users or other causes, this is always possible manually afterwards.
 
 Restrictions:
+
 - Updating a calendar item in a Thinkwise application can only be done by its organizer.
-- Sending e-mails via the Exchange Connector from a Thinkwise application is not possible.
+- Sending emails via the Exchange Connector from a Thinkwise application is not possible.
 
 #### Exchange 365
 
@@ -87,7 +88,7 @@ The Exchange Connector works as follows:
 
 1. At startup, the configuration file is read out to retrieve the settings, such as database server, schema name, etc.
 2. After this, a connection is made with the database server and the settings in `exh_set_up` are updated (IP address and port of the Thinkwise Exchange Connector).
-3. The Exchange Connector then calls the [stored procedure `exh_get_users`](#get-users) to request the users for the emails, appointments, contacts or tasks that have to be synchronized.  
+3. The Exchange Connector then calls the [stored procedure `exh_get_users`](#get-users) to request the users for the emails, appointments, contacts or tasks that have to be synchronized.
 4. For each user, the correct Exchange server is retrieved with the AutoDiscover service, after which a push subscription for the user is requested.
 5. Based on the watermark saved per user in the `exh_watermark` table, it is checked whether there are new or changed items in Exchange that have not yet been synchronized to the database; these items will still be synchronized.
 6. If the Exchange Connector cannot connect to the database, all subscriptions are stopped. The Exchange Connector then attempts to set up a connection to the database every five minutes. If this succeeds, the process will be resumed from Step 2 onwards.
@@ -139,7 +140,7 @@ declare @return_value int;
 declare @exh_return_value exh_return_value;
 
 exec @return_value = [exh_sync_item]
-    @exh_sync_direction = 0, 
+    @exh_sync_direction = 0,
     @exh_user = 'user@mycompany.com',
     @exh_item = 3, /* tasks */
     @exh_add = 1,
@@ -167,7 +168,7 @@ The following components are required before the Thinkwise Exchange Connector ca
   - AutoDiscovery (Service Connection Point lookup)
   - A user with impersonation rights
 - Windows server on which the Thinkwise Exchange Connector can run that:
-  - Contains the .Net Framework 
+  - Contains the .Net Framework
   - Can connect with Exchange (via EWS) and with the database of the Thinkwise application
   - Runs the service under the aforementioned account with impersonation rights
   - Has firewall exceptions configured for the used ports:
@@ -176,7 +177,6 @@ The following components are required before the Thinkwise Exchange Connector ca
     - Telnet logging: 8888
 
 ![1539086840478](../assets/1539086840478.png)
-
 
 ## Installation
 
@@ -189,7 +189,7 @@ A number of components are required for the installation of the Thinkwise Exchan
 
 The installation of each part is explained in the chapters below.
 
-###  Assemblies (SQL Server)
+### Assemblies (SQL Server)
 
 Two assemblies have to be installed on the database using an asymmetric key and a login on the database server. The required files are:
 
@@ -235,7 +235,7 @@ Now create the assembly with external access permission. Make sure that the DLL 
 USE [project_database]
 GO
 
-ALTER DATABASE [project_database] SET TRUSTWORHTY ON
+ALTER DATABASE [project_database] SET TRUSTWORTHY ON
 GO
 
 USE [project_database]
@@ -271,23 +271,26 @@ To install the jar files, perform the steps in the example below. In this exampl
 1. Copy the jar-files to the database server (for example  `Root/home/EXH_300`).
 2. Open a SQL window to execute queries.
 3. Call the `sqlj.install_jar` procedure to install the jar-files in the schema.
+
    ```sql
    call sqlj.install_jar('file:/home/EXH_300/TCPExhItemSender.jar',
                          'EXH_300.TCPExhItemSender', 0);
-                         
-   call sqlj.install_jar('file:/home/EXH_300/gson-2.7.jar', 
+
+   call sqlj.install_jar('file:/home/EXH_300/gson-2.7.jar',
                          'EXH_300.Gson', 0);
-   
+
    commit;
    ```
+
 4. Check if the QSYS2.SYSJAROBJECTS-table contains both of the jar files for the schema.
+
    ```sql
    select * from QSYS2.SYSJAROBJECTS;
    ```
 
 After performing these steps, a TCPEXHITEMSENDER.jar and GSON.jar will have been placed in the following folder:
 
-```
+```sh
 Root/QIBM/UserData/OS400/SQLLib/Function/jar/EXH_300
 ```
 
@@ -326,18 +329,18 @@ The Exchange Connector is installed with the MSI setup file supplied by Thinkwis
 The credentials of the impersonation user have to be entered to install the service. The service is also started later with the same user.
 
 ![1539086958513](../assets/1539086958513.png)
-*Set Service Login*   
+*Set Service Login*
 
 The service can be installed multiple times on the same server to monitor different databases. To do this, make a copy of the installation folder and adjust the configuration. With the following command, the service can be installed under a different name (as administrator):
 
-```
+```sh
 sc.exe create SecondExchangeService
   binpath=c:\ExchangeSyncService\ExchangeSyncService.exe
 ```
 
 To delete the service:
 
-```
+```sh
 sc.exe delete SecondExchangeService
 ```
 
@@ -348,7 +351,7 @@ The Thinkwise Exchange Connector is configured using the `ExchangeSyncService.ex
 ##### Mandatory settings
 
 - LogPort
-  - Port on which a Telnet connection can be made to view the log feed. 
+  - Port on which a Telnet connection can be made to view the log feed.
 - DatabaseListenPort
   - Port on which the database creates TCP connections to pass updates.
 - DatabaseType
@@ -364,11 +367,11 @@ The Thinkwise Exchange Connector is configured using the `ExchangeSyncService.ex
   - Use SCP to locate the AutoDiscover URL, true/false
 - ExchangeTimeout
   - Timeout in milliseconds
-- <connectionStrings>
-   <add name="connString" connectionString="...">
-     - Connectionstring to use to connect to the database. For DB2 databases, add the following parameters to the connectionString to prevent communication errors:
-      - `CheckConnectionOnOpen=true`
-      - `EnablePreFetch=false`
+- `<connectionStrings>`
+  - Connectionstring to use to connect to the database.
+  - For DB2 databases, add the following parameters to the connectionString to prevent communication errors:
+    - `CheckConnectionOnOpen=true`
+    - `EnablePreFetch=false`
 
 ##### Optional settings
 
@@ -383,12 +386,12 @@ The Thinkwise Exchange Connector is configured using the `ExchangeSyncService.ex
 - MeetingRequestsResponses
   - To sync emails for meeting requests and responses, true/false
 
-####  Monitoring
+#### Monitoring
 
 The Exchange Connector can be monitored with Telnet. To do this, set up a connection with the Exchange Connector server to the port specified at installation or in the configuration file:
 
 ![1539086983584](../assets/1539086983584.png)
-*Setup a Telnet connection*   
+*Setup a Telnet connection*
 
 With more advanced Telnet applications, such as PuTTy, this logging can also be written to a file.
 
@@ -406,10 +409,7 @@ If after testing it appears that everything is functioning properly, the Thinkwi
 
 The Thinkwise Exchange service can also be executed as a console application. This means that a command prompt opens and all actions that the Connector does are followed. This can be done by running `ExchangeSync.exe` under the account that has impersonation rights. However, it is necessary to set up the file `ExchangeSync.exe.config` correctly. These settings can be copied from the file `ExchangeSyncService.exe.config`
 
-
-
 ![1539087005067](../assets/1539087005067.png)
-
 *Starting a console application with impersonation*
 
 ## Business logic
@@ -454,7 +454,7 @@ left join exh_watermark w
 
 ### From Exchange to the database
 
-The Exchange Connector calls the `exh_from_exh` stored procedures for new or changed items. 
+The Exchange Connector calls the `exh_from_exh` stored procedures for new or changed items.
 
 #### Create and update
 
@@ -463,20 +463,20 @@ if exists (
     select 1
     from [my_calendar_table]
     where @exh_user = exh_user
-      and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id) 
-           or (exh_item_id is null and exh_app_item_id = @exh_app_item_id)) 
+      and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id)
+           or (exh_item_id is null and exh_app_item_id = @exh_app_item_id))
 )
 begin
     update [my_calendar_table]
-    set 
+    set
         exh_item_id = @exh_item_id,
         exh_user = @exh_user,
         exh_subject = @exh_subject,
         ...
         exh_attachments = @exh_attachments
     where @exh_user = exh_user
-      and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id) 
-           or (exh_item_id is null and exh_app_item_id = @exh_app_item_id)) 
+      and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id)
+           or (exh_item_id is null and exh_app_item_id = @exh_app_item_id))
 end
 else
 begin
@@ -504,7 +504,7 @@ end
  ```sql
 delete from [my_calendar_table]
 where @exh_user = exh_user
-  and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id) 
+  and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id)
        or (exh_item_id is null and exh_app_item_id = @exh_app_item_id))
  ```
 
@@ -520,24 +520,24 @@ declare @error_message varchar(500);
 declare @message varchar(1000);
 
 declare @_exh_app_item_id exh_app_item_id;
-declare @_exh_item_id exh_item_id;    
-declare @_exh_user exh_user;    
-declare @_exh_subject exh_subject;    
-...   
-declare @_exh_attachments exh_attachment_info;    
+declare @_exh_item_id exh_item_id;
+declare @_exh_user exh_user;
+declare @_exh_subject exh_subject;
+...
+declare @_exh_attachments exh_attachment_info;
 
-declare trigger_cursor cursor for 
-select 
+declare trigger_cursor cursor for
+select
     exh_app_item_id,
     exh_item_id,
     exh_user,
     exh_subject,
     ...
     exh_attachments
-from inserted 
+from inserted
 
 open trigger_cursor
-fetch next from trigger_cursor into 
+fetch next from trigger_cursor into
     @_exh_app_item_id,
     @_exh_item_id,
     @_exh_user,
@@ -549,9 +549,9 @@ while (@@fetch_status = 0)
 begin
         execute @exit_code = exh_to_exh_chg_calendar
             @_exh_app_item_id,
-            @_exh_item_id,        
-            @_exh_user,        
-            @_exh_subject,   
+            @_exh_item_id,
+            @_exh_user,
+            @_exh_subject,
             ...
             @_exh_attachments,
             null,
@@ -565,7 +565,7 @@ begin
            return;
         end
 
-    fetch next from trigger_cursor into 
+    fetch next from trigger_cursor into
         @_exh_app_item_id,
         @_exh_item_id,
         @_exh_user,
@@ -612,8 +612,8 @@ set @exchange_ip_address_port = (
 declare @exh_attachment_id exh_item_id
 declare @exh_attachment_name exh_information
 
-declare attachment_cursor cursor for 
-select exh_attachment_id, exh_attachment_name 
+declare attachment_cursor cursor for
+select exh_attachment_id, exh_attachment_name
 from exh_split_attachment_info(@exh_attachments)
 
 open attachment_cursor
@@ -622,12 +622,12 @@ fetch next from attachment_cursor into @exh_attachment_id, @exh_attachment_name
 while (@@fetch_status = 0)
 begin
     exec @exit_code = sendGetAttachment @exchange_ip_address,
-        @exchange_ip_address_port, @exh_item_id, @exh_attachment_id, 
+        @exchange_ip_address_port, @exh_item_id, @exh_attachment_id,
         @exh_user, @byte_array output, @error_message output
 
     if (@exit_code = 0)
     begin
-        exec saveAttachment @save_directory, @exh_attachment_name, 
+        exec saveAttachment @save_directory, @exh_attachment_name,
             @byte_array, @overwrite, null
     end
     else
@@ -655,7 +655,7 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 
 - The Thinkwise Exchange Connector does not work with aliases, only with original accounts.
 
-- To test the AutoDiscover and impersonation account, use this online Microsoft tool: https://www.testexchangeconnectivity.com/
+- To test the AutoDiscover and impersonation account, use this online Microsoft tool: <https://www.testexchangeconnectivity.com/>
 
 - When viewing the log feed via the console or via a TCP connection, filters can be placed on the type of message by typing the letters of the required messages:
   - **E**rrors
@@ -669,7 +669,7 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 
 - The log is not written to a file by default. Putty can be configured to write the output of a Telnet session to a file.
 
-- In the event of a crash or a crash of the Exchange Connector, create a memory dump of the ExchangeSyncService process (via the task manager) to assist Thinkwise in debugging the error. 
+- In the event of a crash or a crash of the Exchange Connector, create a memory dump of the ExchangeSyncService process (via the task manager) to assist Thinkwise in debugging the error.
 
 - The Exchange Connector distinguishes between NULL and an empty string:
 
@@ -689,24 +689,24 @@ If there are problems with the Thinkwise Exchange Connector, there may be a numb
 Verify that the ExhangeSyncService runs under Windows Services. If this is not the case, it can be (re)started using Windows Services or via the procedure described [here](#restart-the-connector).
 
 ![1539087067418](../assets/1539087067418.png)
-*ExchangeSyncService*   
+*ExchangeSyncService*
 
 ### Access Denied Exception
 
 If the following Access Denied Exception occurs, the *http-service endpoint* is not correctly registered:
 
-```
+```sh
 An unhandled exception of type System.ServiceModel.AddressAccessDeniedException
 occurred in System.ServiceModel.dll
 
-Additional information: HTTP could not register URL http://+:9008/Notification/. 
+Additional information: HTTP could not register URL http://+:9008/Notification/.
 Your process does not have access rights to this namespace (see
 http://go.microsoft.com/fwlink/?LinkId=70353 for details).
 ```
 
 This can be solved by executing the following command in an Administrator console:
 
-```bat
+```sh
 netsh.exe http add urlacl url=http://+:8100/ExchangeSync user=domain\username
 ```
 
@@ -716,8 +716,8 @@ The Thinkwise Exchange service can also be executed as a console application. Th
 
 During the execution of the work, any errors are shown in the console window which may explain the problem. Some known error messages are described in the table below. For an overview of all possible Exchange Web Services error messages, see:
 
-* [Exchange Webservice ServiceErrors](https://msdn.microsoft.com/en-us/library/microsoft.exchange.webservices.data.serviceerror.aspx)
-* [Exchange Webservice ResponseCodes](https://docs.microsoft.com/en-us/exchange/client-developer/web-service-reference/responsecode)
+- [Exchange Webservice ServiceErrors](https://msdn.microsoft.com/en-us/library/microsoft.exchange.webservices.data.serviceerror.aspx)
+- [Exchange Webservice ResponseCodes](https://docs.microsoft.com/en-us/exchange/client-developer/web-service-reference/responsecode)
 
 | Error                                                        | Cause/solution                                               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -728,7 +728,7 @@ During the execution of the work, any errors are shown in the console window whi
 | DBHandler.ProcessItem: CHG/ADD/DEL Shared.CalendarItem       | The appointment cannot be saved or deleted. The complete error provides more information about the cause, for example, if the table is locked. |
 | ExchangeHandler.ProcessItem: CHG Shared.ContactItem 1881 The Id is invalid. | The contacts are not yet synchronized with the Exchange servers, so the IDs are incorrect. This message can be ignored. |
 | Failed to resubscribe user.                                  | The user cannot be logged on to Exchange. Check that the Exchange server is online, the user's email address is correct and restart the Exchange link. |
-| No user was specified for add/chg/del action ...¦               | Exchange tries to modify an item without the user being specified. |
+| No user was specified for add/chg/del action ...             | Exchange tries to modify an item without the user being specified. |
 | Unknown user.                                                | The user is not known to Exchange. Check the email address and restart the Exchange Connector. |
 | Mailbox move in progress. Try again later.                   | A mailbox move is in progress. Wait until the move is completed and try again. |
 | Object cannot be deleted.                                    | The item cannot be deleted. This message can be ignored.    |
@@ -739,7 +739,7 @@ During the execution of the work, any errors are shown in the console window whi
 | The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. | There is a problem with the network, for example the certificates. Restore this and restart the Exchange Connector. |
 | Too many automatic redirections were attempted.              | There is a problem with the network, for example the load balancing. Restore this and restart the Exchange Connector. |
 
-###  File not found (DB2)
+### File not found (DB2)
 
 If the `TCPExhItemSender.class` does not work, it may be compiled with a different Java version than the version on the server.
 
@@ -747,10 +747,8 @@ In this case, the original `TCPExhItemSender.java` file needs to be compiled via
 
 1. Place the `.java` file in the same folder as the `.class` file: `Root/QIBM/UserData/OS400/SQLLib/Function`
 1. Delete the `.class` file but keep the `JSON.rar` file.
-
-3. In a session window, start the QSH Command Entry program via Programmer Menu > Run a Command > Program Commands > Java Commands > QShell Interpreter Commands > Start QSH > QSH Command Entry
-
-4. Compile the `.java` file using the following command:
+1. In a session window, start the QSH Command Entry program via Programmer Menu > Run a Command > Program Commands > Java Commands > QShell Interpreter Commands > Start QSH > QSH Command Entry
+1. Compile the `.java` file using the following command:
 
    ```java
    javac TCPExhItemSender.java -classpath JSON.jar
@@ -758,7 +756,7 @@ In this case, the original `TCPExhItemSender.java` file needs to be compiled via
 
 After this, the file will be compiled and there will then be a new `.class` file which is compiled with the Java version of the server.
 
->  The execute rights have to be set for this new file.
+> The execute rights have to be set for this new file.
 
 ### AutoDiscover does not work
 
@@ -783,4 +781,3 @@ If the problems with the Connector do not occur to all users, it may be sufficie
 #### Resync the items
 
 If the Exchange service has not worked for a period of time, it is possible to synchronize the items that have been sent in the meantime. This is possible with the task `exh_sync_items`.
-

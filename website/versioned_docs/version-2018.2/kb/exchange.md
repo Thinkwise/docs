@@ -16,7 +16,7 @@ It is possible to monitor the Exchange Connector by connecting Telnet to the Thi
 
 ## Architecture
 
-With the Thinkwise Exchange Connector it is possible to synchronize e-mails, contacts, tasks and appointments between Exchange and your Thinkwise application. For each user who uses the Thinkwise application, it can be set which parts must be synchronized.
+With the Thinkwise Exchange Connector it is possible to synchronize emails, contacts, tasks and appointments between Exchange and your Thinkwise application. For each user who uses the Thinkwise application, it can be set which parts must be synchronized.
 
 The Thinkwise Exchange Connector works for both SQL Server and DB2 Thinkwise applications. The necessary tables for the Thinkwise Exchange Connector are added to the Thinkwise application with the aid of a base project. More information about base projects is described in the Thinkwise Software Factory manual. With the aid of these tables all set items are synchronized with the Thinkwise application. Items that are adapted in the Thinkwise application can also be synchronized back to the Exchange server (eg appointments).
 
@@ -39,12 +39,7 @@ Finally, it is possible to log the activities of the Thinkwise Exchange Connecto
 
 Below are the features of the Thinkwise Exchange Connector:
 
-- You can specify for each user what needs to be synchronized:
-  - E-mails
-  - Appointments
-  - Tasks
-  - Contacts
-- Synchronization of e-mail
+- Synchronization of email
   - Both incoming and outgoing mail.
 - Synchronization of appointments
   - Appointments are synchronized to both the organizer and all participants.
@@ -59,7 +54,7 @@ Below are the features of the Thinkwise Exchange Connector:
 
 Restrictions:
 - Updating a calendar item in a Thinkwise application can only be done by its organizer.
-- Sending e-mails via the Exchange Connector from a Thinkwise application is not possible.
+- Sending emails via the Exchange Connector from a Thinkwise application is not possible.
 
 #### Exchange 365
 
@@ -132,7 +127,7 @@ end
 
 With the `exh_sync_item` stored procedure it is possible to re-synchronize (part of) the Exchange items to the database, for example, after long-term disruptions or for new users. . 
 
-This stored procedure can be given a user name for which the items must be synchronized. It can also be indicated which items should be synchronized; Agenda items (0), contacts (1), e-mails (2) or tasks (3). In addition, it can be indicated between which dates these items should fall and whether additional, modified  or removed items have to be included.
+This stored procedure can be given a user name for which the items must be synchronized. It can also be indicated which items should be synchronized; Agenda items (0), contacts (1), emails (2) or tasks (3). In addition, it can be indicated between which dates these items should fall and whether additional, modified  or removed items have to be included.
 
 For example:
 
@@ -737,7 +732,7 @@ During the execution of the work, any errors are shown in the console window whi
 | The Autodiscover service couldn't be located.                | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector. |
 | The Autodiscover service returned an error.                  | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector. |
 | The operation has timed out.                                 | Cannot connect to the Exchange server. Check the Exchange Server and restart the Exchange Connector. |
-| The specified object was not found in the store.             | The appointment, e-mail or contact person has been removed again after adding or changing. This message can be ignored. |
+| The specified object was not found in the store.             | The appointment, email or contact person has been removed again after adding or changing. This message can be ignored. |
 | The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. | There is a problem with the network, for example the certificates. Restore this and restart the Exchange Connector. |
 | Too many automatic redirections were attempted.              | There is a problem with the network, for example the load balancing. Restore this and restart the Exchange Connector. |
 

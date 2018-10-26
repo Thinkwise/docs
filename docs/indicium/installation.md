@@ -10,7 +10,7 @@ There are a couple of prerequisites that need to be met before Indicium can be i
 
 ### .NET Framework
 
-Indicium is built with version 4.6.1 of the .NET Framework. As such, this is the minimum version of the .NET Framework that needs to be installed on the web server. If the web server has a lower version of the .NET Framework, or none at all, then use the following link to install the latest version of the .NET Framework: [https://www.microsoft.com/net/download/thank-you/net472](https://www.microsoft.com/net/download/thank-you/net472)
+Indicium is built with version 4.7.2 of the .NET Framework. As such, this is the minimum version of the .NET Framework that needs to be installed on the web server. If the web server has a lower version of the .NET Framework, or none at all, then use the following link to install the latest version of the .NET Framework: [https://www.microsoft.com/net/download/thank-you/net472](https://www.microsoft.com/net/download/thank-you/net472)
 
 ### .NET Core Windows Server Hosting Module
 
@@ -18,7 +18,8 @@ To facilitate the integration of Indicium in IIS, it is necessary to install Mic
 
 ![AspNetCoreModule](../assets/indicium/image%20%285%29.png)
 
-If the module has not been installed yet, then use this link to install it: [https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.2-windows-hosting-bundle-installer](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.2-windows-hosting-bundle-installer)
+If the module has not been installed yet, then use this link to install it:
+<https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.5-windows-hosting-bundle-installer>
 
 ### URL Rewrite Module
 
@@ -44,9 +45,9 @@ Copy the Indicium binaries and other files to the desired location on the web se
 
 Indicium handles authentication and authorization internally and will perform all database traffic with a single user, the Database Pool user. If you do not want the Database Pool User to be the same as the Application Pool user in IIS, then you can choose to override it by means of the PoolUserName and PoolPassword properties in the appsettings.json file.
 
-Contrary to versions 2018.2 and earlier, the Database Pool user does **not** need to be created as a user in IAM. The Database Pool user only needs full access to all the databases present in IAM, including the IAM database itself. None of the end users accessing the applications require any physical permissions on any database. Users using RDBMS authentication do need to be created since they will be authenticated by attempting to open a connection to the meta-database. 
+Contrary to versions 2018.2 and earlier, the Database Pool user does **not** need to be created as a user in IAM. The Database Pool user only needs full access to all the databases present in IAM, including the IAM database itself. None of the end users accessing the applications require any physical permissions on any database. Users using RDBMS authentication do need to be created since they will be authenticated by attempting to open a connection to the meta-database.
 
-> Double quotes \( " \) and backslashes \( \\ \)  in the appsettings.json file, for instance in usernames or the server address, need to be escaped by an extra backslash. 
+> Double quotes \( " \) and backslashes \( \\ \)  in the appsettings.json file, for instance in usernames or the server address, need to be escaped by an extra backslash.
 > For example: `server\instance` should be `server\\instance`.
 
 ![Appsettings.json](../assets/indicium/image%20%2810%29.png)
@@ -61,7 +62,7 @@ When done, the Web Application can be started. Open a browser and navigate to [h
 
 ![Check if Indicium is running](../assets/indicium/image%20%287%29.png)
 
-If you do not get a result like the image above, then please refer to [Troubleshooting ](installation.md#troubleshooting-issues) below for steps to resolve your problem.
+If you do not get a result like the image above, then please refer to [Troubleshooting](installation.md#troubleshooting-issues) below for steps to resolve your problem.
 
 ## Enable changing and resetting passwords
 
@@ -103,7 +104,7 @@ If you want to be certain that the JSON is valid, then you can use this website 
 
 Ensure that the information in the appsettings.json is correct. Double-check the server address and the database, and ensure that the Database Pool User has access to the configured IAM database and product databases.
 
-#### Prerequisites 
+#### Prerequisites
 
 Double-check if the server has met the prerequisites mentioned in [Prerequisites](installation.md#prerequisites). Missing either of these would also cause this start up error.
 
@@ -131,5 +132,5 @@ If you want to run Indicium in Development mode, then you need to make the follo
 
 ![Configuring Development mode in the Web.config file](../assets/indicium/image%20%283%29.png)
 
-> As convenient as it may seem to always run all instances of Indicium in Development mode, please do not do this. 
+> As convenient as it may seem to always run all instances of Indicium in Development mode, please do not do this.
 > Only run Indicium in Development mode when you are actually developing and debugging problems or if Indicium is only accessible by trustworthy users.
