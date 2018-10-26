@@ -79,6 +79,23 @@ The *Allow change* option indicates whether users are allowed to change their pa
 
 The system keeps track of how often a password is changed or reset. This number is incremented every time the user requests a new password or changes their password, and when the password is changed by the administrator.
 
+### Password strength
+
+The minimum password strength for IAM authenticated users can be set in the global settings. 
+
+The following calculation is used to determine the password strength:
+- The total password length gives up to 3 points (at 10 characters)
+- Two uppercase characters and two lowercase characters gives 0.6 points
+- Two numbers gives 0.6 points
+- Two symbols gives 0.8 points
+
+Setting the minimum password strength to 5 will require the user to match all the password requirements.
+Setting the minimum password strength to 4 allows the user to skip either symbols, numbers or varying casing.
+
+When the user attempts a password change and the password strength is insufficient, the user will be notified of the shortcomings of the desired password.
+
+Password strength requirements for RDBMS accounts or Windows accounts is delegated to the database server or active directory.
+
 ### User preferences
 
 Here you can specify the default language for the user and which level of user preferences are available to the user. 

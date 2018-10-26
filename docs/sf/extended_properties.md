@@ -78,7 +78,6 @@ The parameters below can be used as extended properties in the Software Factory 
 | MapQuestApiUri*                                     | Licence Uri to be able to use the Maps component.            | Request a key here: [MapQuest Developer](https://developer.mapquest.com/) |
 | MaxNoOfRecords*                                     | Maximum number of records to display.                        | 250                                                          |
 | MergedMenus                                         |                                                              |                                                              |
-| MinPasswordStrength                                 | Minimum password strength when setting or changing passwords.<br>Only supported for 2018.2 or lower. | **0** to 5                                                   |
 | MonitorProcess                                      | Forces a memory flush after starting up the GUI and closing a screen to decrease apparent memory usage in the Windows Task Manager. |                                                              |
 | MSWordConnVarName*                                  | Connection variable name for Word reports                    | TSFTOWORD_CONN                                               |
 | MSWordMacroName*                                    | Macro to run for Word reports                                | /mTSFReport_{0}                                              |
