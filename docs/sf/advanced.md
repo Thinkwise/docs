@@ -8,7 +8,7 @@ The *Advanced menu* (right click on the menu and select *Advanced menu* to open)
 
 The *Project management* menu group gives Overview of several subjects, like tables, columns and prefilters, outside the context of projects and versions. This can be helpful to, for example, compare different versions of your application.
 
-![](../assets/sf/image315.png)
+![](../assets/sf/advanced_2.png)
 *Prefilters accessed from the Advanced menu*
 
 ## Master data
@@ -20,6 +20,10 @@ The *Master data* menu group provides access to Software Factory master data.
 #### Version info
 
 Contains information about the Software Factory version and when it was created.
+
+#### Software Factory - Upgrade report
+
+Shows the errors, warnings and informational messages that need to be fixed after a suite upgrade.
 
 #### Hotfixes
 
@@ -37,23 +41,27 @@ Maintenance task to optimize SQL Server indexes and statistics.
 
 #### Application languages
 
-This screen provides Overview of the languages that are available within the Software Factory. 
+This screen provides an overview of the languages that are available within the Software Factory. 
 
 #### Controls
 
-This screen provides Overview of the Controls that are available within the Software Factory.
+This screen provides an overview of the controls that are available within the Software Factory.
 
 #### Shift codes
 
-This is Overview of the shift codes that are available for defining key combinations.
+This is an overview of the shift codes that are available for defining key combinations.
 
 #### ASCII codes
 
-This is Overview of the ASCII codes that are available for defining key combinations.
+This is an overview of the ASCII codes that are available for defining key combinations.
 
 #### Font faces
 
 These are the font faces that can be used in the layout of the application. Additional font faces can be added here. Make sure these fonts are available in the operating systems.
+
+#### Colors
+
+This is an overview of colors with their name and where they are used.
 
 #### Task types
 
@@ -122,3 +130,13 @@ Overview of the available printers. These may, for instance, be used as default 
 #### Printer types
 
 Overview of the available printer types.
+
+### Log
+
+#### Control proc log
+
+Overview with control procedures and the duration to generate them. If generation is slow, this can be used to find the slowed control procedures and try to increase their performance.
+
+### Validation log
+
+Overview with validations and the duration to execute them. If validation is slow, this can be used to find the slowed validation and try to increase their performance.
