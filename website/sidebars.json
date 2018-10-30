@@ -62,8 +62,8 @@
       "sf/extended_properties",
       "sf/developer_mode"
     ],
-    "Statistics": [
-      "sf/statistics",
+    "Analysis": [
+      "sf/analysis",
       "sf/function_points"
     ],
     "Miscellaneous": [
