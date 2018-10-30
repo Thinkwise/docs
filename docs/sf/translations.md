@@ -6,7 +6,7 @@ All strings that are used in the user interfaces can be translated, such as labe
 
 To manually generate translation objects for new objects, execute the *Generate translation objects* ![](../assets/sf/image214.png)task.
 
-![](../assets/sf/image213.png)
+![](../assets/sf/translations.png)
 
 *Translations screen*
 
