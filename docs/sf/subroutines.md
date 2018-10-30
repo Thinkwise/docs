@@ -8,14 +8,14 @@ Subroutines are used to define business logic that is not used directly by the u
 
 Different types of subroutines are available, depending on the application platform.
 
-|Type|Description|Platform|
-|--- |--- |--- |
-|CLR procedure|Common Language Runtime|SQL Server|
-|DLL assembly|Assembly Library|SQL Server|
-|Function|SQL function|SQL|
-|Operation|WebService|Java/C#|
-|Procedure|SQL stored procedure|SQL|
-|Static method|Static method|Java/C#|
+|Type|Description|Platform|Can be an API|
+|--- |--- |--- |--- |
+|CLR procedure|Common Language Runtime|SQL Server|No|
+|DLL assembly|Assembly Library|SQL Server|No|
+|Function|SQL function|SQL|Yes|
+|Operation|WebService|Java/C#|Always|
+|Procedure|SQL stored procedure|SQL|Yes|
+|Static method|Static method|Java/C#|No|
 
 Depending on the selected subroutine, the following result values can be specified:
 
@@ -23,9 +23,17 @@ Depending on the selected subroutine, the following result values can be specifi
 
 - Scalar - The result is a single value. If you select this, the column *Return scalar domain* is displayed. A domain can be selected that determines the characteristics of the result value.
 
-- Table - The result is a table containing multiple rows. If this option is selected, then in the *Interface result columns* tab, the columns can be named. This will be displayed as the result in the table. These columns also refer to a domain.
+- Table - The result is a table containing multiple rows. If this option is selected, then in the *Subroutine return columns* tab, the columns can be named. This will be displayed as the result in the table. These columns also refer to a domain.
 
 The result values are not applicable for every program object.
+
+Virtually every subroutine type has input parameters. These input parameters can be provided in the *Subroutine parameters* tab.
+
+## API
+
+Subroutines are generally used internally by the application and will not be accessible directly using Indicium. If a function or procedure has to be called by an external caller using Indicium, it can be marked as an API. Indicium will expose the procedure or function as a web service.
+
+Operation-typed subroutines are always exposed as web services, not through Indicium but through a generated Java or C# SOAP service tier.
 
 ## Atomic transaction
 
@@ -39,3 +47,10 @@ When a stored procedure doesn't run in a transaction, data changes by each indiv
 Not running a transaction is generally more performant since the database engine doesn't have to keep track of the data changes while the transaction is active. The data that's being tracked can also cause deadlocks as other transactions can be waiting to use this data. However, not running in a transaction can cause data corruption depending on the way the code is written.
 
 It's always possible to start and complete transactions manually in code. Using this setting provides a generic solution with nested transaction support and proper error handling.
+
+## Subroutine options
+
+Depending on the type of subroutine and the platform of the subroutine, various options are available to change the behaviour of the subroutine.
+
+![1538567977479](../assets/sf/subroutine_option.png)
+*A procedure on SQL Server using a subroutine option to always execute as a system administrator*
