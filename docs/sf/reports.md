@@ -4,7 +4,7 @@ title: Reports
 
 Reports have a similar structure to tasks but instead of starting a task, a report is printed, previewed or exported. The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, i-net Clear Reports, SQL Server Reporting Services (SSRS) or Word.
 
-![](../assets/sf/image199.png)
+![](../assets/sf/report.png)
 *Reports screen*
 
 The structure of reports is analogous to that of tasks. Parameters are defined for a report, and look-up functionality is provided through references.
@@ -295,4 +295,15 @@ When the report is fully defined within the Software Factory, a preview can be v
 ![](../assets/sf/image206.png)
 *Example of a report preview*
 
+### Await result
 
+Reports can take a while to process. There are four options to give instructions about what to do with these reports.
+
+1. Yes - The user has to wait for the result and a progress indicator is shown.
+2. Yes (no progress indicator) - The user has to wait for the result (the GUI freezes and hourglass is shown).
+3. No - The action is executed in the background and the user can continue working.[12]
+4. Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).<sup>1</sup> Reports executed in the background could be monitored in a new “Async action” dialog.
+
+For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
+
+The display parameter can be used to distinguish between multiple instances of a report in the async action dialog.

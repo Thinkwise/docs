@@ -86,7 +86,7 @@ The progress in percentages. By setting the percentage to *-1*, the progress bar
 
 Tasks can take a long time to process. There are four options to give instructions about what to do with these tasks.
 
-![](../assets/sf/image197.png)
+![await_result](../assets/sf/await_result.png)
 *Task with await result options*
 
 1.  Yes - The user has to wait for the result and a progress indicator is shown.
@@ -95,6 +95,8 @@ Tasks can take a long time to process. There are four options to give instructio
 4.  Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).<sup>1</sup> Reports executed in the background could be monitored in a new “Async action” dialog.
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
+
+The display parameter can be used to distinguish between multiple instances of a task in the async action dialog.
 
 ### Atomic transaction
 
