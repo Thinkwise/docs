@@ -4,8 +4,8 @@ title: Subjects
 
 In the *Subjects* screen, every table or view can be fully set up for the user interface. These settings are specified on various tabs that are described in the following paragraphs.
 
-![](../assets/sf/image149.png)
-*Overview of the *Subjects screen*
+![](../assets/sf/subjects.png)
+*Overview of the Subjects screen*
 
 ## Settings
 
@@ -205,10 +205,18 @@ Which actions are permitted on this table can be set with the *Allow import*, *A
 
 ### Performance
 
-![](../assets/sf/image162.png)
+![](../assets/sf/subjects_performance.png)
 *Overview of the Performance options with subject settings*
 
-Using the option in the *Performance* tab, it can be indicated in detail which mechanisms and concepts are used for a subject. In this way, it can be ensured that there are no unnecessary calls to the logic layer, and the user interfaces are as efficient as possible.
+On the *Performance* tab, it can be indicated which mechanisms and concepts are enabled for a subject.
+Deselect unused logic concepts to prevent unnecessary calls to the logic layer.
+
+To further control the performance, it is possible to to configure the refresh behavior after specific actions:
+
+- None - the user interface will not refresh any data.
+- Row - the user interface will only refresh the current row.
+- Subject - the user interface will refresh the current subject including look-ups and details.
+- Document - the user interface will refresh the main subject including all look-ups and details.
 
 ### Auto refresh
 
@@ -281,22 +289,26 @@ The settings for the grid, form and card list can be changed in the components s
 
 Below, you will find the options to configure the grid of a table.
 
-![](../assets/sf/image167.png)
+![](../assets/sf/components_grid.png)
 *Overview of a Grid within Components for a selected table*
 
-#### Sequence of fields
+#### Field order
 
-The sequence of the fields may differ from the physical definition. For each grid, a different sequence can be defined by placing them in sequence by means of the tasks on the side of the screen. If the sequence has to be the same as the table or the form view, this can also be set with the task at the side of the screen.
+The order of the fields may differ from the table definition. For each grid, a different order can be defined using the task at the side of the screen.
 
 #### Grid column type
 
-This option determines whether a column in the grid is normal, read only or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
+This option determines whether a column in the grid is regular, read only or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
 
 In addition, this option can never be set more freely than the definition in the column itself. For an example, see column type in columns.
 
 #### Grid column width
 
 In principle, the column width is automatically determined by the Thinkwise list component. However, this width can also be adjusted manually by checking the *manual column width* box and specifying the width in pixels.
+
+#### Header group
+
+Fields that logically belong together can be grouped on the grid header by checking the *Next group* option for the first field of the group. This group can subsequently be given a label.
 
 #### Aggregation
 
@@ -314,7 +326,7 @@ Below, you will find the options for configuring the form for a table. These opt
 
 #### Sequence of fields
 
-Just as in the grid view, the sequence of the fields can be entered by means of the tasks at the side of the screen.
+Just as in the grid view, the order of the fields can be entered by means of the tasks at the side of the screen.
 
 #### Form field type
 
@@ -473,7 +485,7 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 >  If the application is started in developer mode, the resulting query can be viewed in the debug screen.
 
-![](../assets/sf/image179.png)
+![](../assets/sf/prefilter.png)
 *Setting a new prefilter with a query*
 
 ### Conditional formatting
@@ -559,5 +571,5 @@ This is a display of the links between tables and menu items. This displays whic
 
 In the *Default settings* tab page, the default project version level settings are displayed.
 
-![](../assets/sf/image190.png)
+![](../assets/sf/default_settings.png)
 *Default settings for the tables tab*

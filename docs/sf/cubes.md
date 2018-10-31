@@ -2,16 +2,16 @@
 title: Cubes
 ---
 
-The user interface provides business intelligence features, called *cubes*, which allow you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and chartically (using a chart).
+The user interface provides business intelligence features, called *cubes*, which allow you to do online and interactive analyses. These can be presented both numerically (using a pivot table) and chartically (using a chart). A cube is always based on a subject.
 
 ## Creating a Cube
 
-Creating a cube is done with the *Create cube* task. This task automatically adds values and dimensions, and the screen type is changed to *cube*.
+Creating a cube is done with the *Create cube* task. This task automatically adds a cube component definition, including values and dimensions, and changes the screen type to *cube*.
 
 ![](../assets/sf/image209.png)
 *Task to create a cube*
 
-If the data source is an OLAP cube, the *OLAP connection* checkmark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
+If the data source is an OLAP cube, the *OLAP connection* check mark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
 
 For more information on OLAP cubes, see [OLAP](../kb/olap).
 
