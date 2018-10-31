@@ -42,3 +42,29 @@ When making a lot of small changes in different project versions, it can be desi
 *Squash data conversions*
 
 Consider the following example: In version 1.10, column x is renamed to y. In version 1.40, the same column is renamed to z. By squashing the data conversion between 1.00 and 1.40, the Software Factory will automatically rename column x to z.
+
+## Manual data conversion
+
+The data conversion settings are intended for simple scenarios, where records are moved from one table to another or columns are filled using default values.
+
+More advanced default values can be set using an expression. The default value of the column in version control must be set to =*expression*, for instance =*dateadd(year, 2, getdate())*.
+
+For more complex scenarios, i.e. merging tables, changing primary keys, normalizing or denormalizing, manual scripts can be inserted into the upgrade process. This can be done using a control procedure with code group *UPGRADE*. There are various stages within the upgrade process where custom scripts can be placed. The stage depends on the program object a template is assigned to.
+| Program object                      | Stage                                                                                                |
+|-------------------------------------|------------------------------------------------------------------------------------------------------|
+| `ug_before_upgrade_from_[x]_to_[y]` | Before any upgrade code from version [x] to [y] has been executed                                    |
+| `ug_during_upgrade_from_[x]_to_[y]` | After the data migration from version [x] to [y] has been done but before the old tables are dropped |
+| `ug_after_upgrade_from_[x]_to_[y]`  | After the old tables from version [x] have been dropped when upgrading to version [y]                |
+
+Versions [x] and [y] in the name of the program object correspond to the configured version control base version and the current version.
+Because of this, the template will only have effect for this specific upgrade.
+
+If there is manual code that needs to be run before, during or after every single upgrade, use one of the following program objects instead:
+
+| Program object             | Stage                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| `ug_before_upgrade_always` | Before any upgrade code has been executed                                    |
+| `ug_during_upgrade_always` | After the data migration has been done but before the old tables are dropped |
+| `ug_after_upgrade_always`  | After the old tables have been dropped                                       |
+
+When using a manual template _during_ the upgrade, you can refer to the old tables using `__[tab_id]__`.
