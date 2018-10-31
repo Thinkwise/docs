@@ -4,17 +4,16 @@ title: Development process
 
 The process of development with the Thinkwise Software Factory consists of the following phases, which are explained in more detail in the following pages:
 
-- [Project management](overview.html) - creating a project or project version
+- [Projects](overview.html) - creating a project or project version
 - [Specification](process_analysis) - drawing up requirements and modeling the business process
-- [Modeling](data_model.html) - for instance, the [data model](data_model.html), [user interface](menus.html) and [processes](process_flows.html)
-- [Documentation](help.html) - drawing up help documentation
-- [Business logic](functionality.html) - creating the required functionality 
-- [Quality control](code_review.html) - by [validating](validation.html) and [testing](test_cases.html) the model and business logic
+- [Data](data_model.html) - modeling the [domains](domains.html), [data model](data_model.html) and [data conversion](data_conversion.html)
+- [User interface](menus.html) - setting up the user interface of the application
+- [Processes](tasks.html) - features to support the processes of your business
+- [Business logic](functionality.html) - creating the required functionality
+- [Quality control](code_review.html) - [review](code_review.html), [test](test_cases.html) and [validate](validation.html) the model and business logic
 - [Deployment](creation.html) - putting the end product into production
 
 The menu within the Software Factory is built up in the same manner and therefore corresponds with the structure of the manual.
-
-The final chapters include other information about the Software Factory that, by definition, is not necessary for the development of an end product. To create an optimal end product, Thinkwise recommends reading these chapters prior to starting development with the Software Factory.
 
 One characteristic of developing an application with the Thinkwise Software Factory is that after completing the modeling phase, a working prototype of the application can already be demonstrated. This is due to the phased structure of the development process and because no lines of code need to be written for the prototype. The stakeholders can therefore already see a working end product at an early stage, and they acquire a good idea about where the product is going.
 
@@ -24,47 +23,67 @@ Help functionality that supports the developer with the development of a project
 
 ## Projects
 
-Application development in the Software Factory is done on a project basis, with every project containing one or more project versions. 
+Application development in the Software Factory is done on a project basis, with every project containing one or more project versions.
 
 The *Projects* menu contains information about all available projects, versions and branches.
 
-The *Overview* screen contains all projects that have been produced in the Software Factory. New projects are also created here. Along with the basic information about the project, the versions and branches of the projects can also be viewed here. *Full model* gives access to the complete model of a specific project version. With *Merging*, branches can be created, conflicts between branches analyzed and resolved, and it is possible to remerge broken branches. The last component within administration is the component on *Difference analysis*. This displays the differences between different project versions.
+The *Overview* screen contains all projects that have been produced in the Software Factory. New projects are also created here. Along with the basic information about the project, the versions and branches of the projects can also be created and viewed here. *Full model* gives access to the complete model of a specific project version. With *Merging*, conflicts between branches can be analyzed and resolved before a branch is merged. The *Difference analysis* provides an overview of all the differences between two project versions.
 
-![](../assets/sf/image9.png)*An overview of the *Projects* screen*
+![](../assets/sf/image9.png)
+*Project overview screen*
 
 ## Specification
 
-The business processes and requirements are specified during the analysis phase. This describes exactly which requirements and wishes are placed on the system. The business processes indicate in a diagram which processes need to be produced in the project. The requirements can be seen as a contract with the business with which the scope of the project can be continuously monitored. In addition, the requirements provide a to-do list for the modeling phase and the Software Factory automatically maintains the traceability between the requirements and the model. It is therefore strongly recommended to specify the requirements within the Software Factory, even though this is not compulsory. The business processes and requirements can be linked to each other so that both change with each other when something changes in either one of them.
+The business processes and requirements are specified during the analysis phase, using the *Process analysis* screen.
+
+The requirements are used to continuously monitor the scope of the project. The *Design specifications* provide a to-do list for the modeling phase. The Software Factory automatically maintains the traceability between the requirements and the model. It is therefore strongly recommended to specify the requirements within the Software Factory, even though this is not compulsory.
 
 ![](../assets/sf/image10.png)
-*Overview of the *Requirements* tab*
+*Process analysis - Requirements*
 
 ![](../assets/sf/image11.png)
-*Overview of a business process*
+*Process analysis - BPMN diagram*
 
-## Modeling 
+## Data
 
-The following components are specified during the modeling phase:
+The following components are specified during the data modeling phase:
 
+- Domains
 - Data model
-- User interface
-- Help
-- Processes
+- Data conversion (for new versions)
 - Dynamic model (expert mode)
 
-These components form the basis for the end product without it being necessary to program them. Only the model has to be completed. This takes place on the basis of the requirements as drawn up in the previous phase. On the basis of the completed model, a demo can be given to the business to demonstrate at an early stage what the end product will look like and how it will work. A bridge is built between business and IT with the help of this demo.
+These components form the basis for the database without it being necessary to program them.
 
 ![](../assets/sf/image12.png)
-*A completed diagram in the *Data model* tab*
+*Data model design*
+
+## User interface
+
+During this phase the user interface of the application is modeled. A demo can be given to the business to demonstrate at an early stage what the end product will look like and how it will work.
+
+## Processes
+
+In this phase, process flows are added to guide the users through the applications' processes. Tasks can be created to automate user actions and custom designed reports can be added to generate, print and email documents.
+
+![process_flow](../assets/sf/process_flow.png)
+*Process flow diagram*
+
+## Business logic
+
+This phase of the project consists of defining the business logic. Business logic that can't be modelled is created using source code templates. These templates are woven into the logic concepts in the end product based on the model definitions.
+
+![](../assets/sf/image14.png)
+*Business logic code template*
 
 ## Quality control
 
-### Validation
+### Review
 
-The project can be validated completely or per component with the Validator. The Software Factory is delivered with hundreds of standard validations, however, company specific validations can also be added. Executing the validations automatically guarantees the quality of the models.
+The programmed templates can be reviewed by a co-developer to ensure a high quality.
 
-![](../assets/sf/image13.png)
-*Validations executed for one of the modelers*
+![code review](../assets/sf/code_review.png)
+*Code review*
 
 ### Test cases
 
@@ -81,14 +100,14 @@ Test cases only need entering once and can subsequently be executed automaticall
 ![](../assets/sf/image15.png)
 *Overview of the Test cases screen with a number of test suites*
 
-## Business logic
+### Validation
 
-This phase of the project consists of writing source code templates with business rules. These templates are woven into the correct position in the end product on the basis of definitions from the model.
+The project can be validated completely or per component with the Validator. The Software Factory is delivered with hundreds of standard validations, however, company specific validations can also be added. Executing the validations automatically guarantees the quality of the models.
 
-![](../assets/sf/image14.png)
-*An overview of a completed template on the Functionality screen.*
+![](../assets/sf/image13.png)
+*Validations executed for one of the modelers*
 
-## Creation
+## Deployment
 
 The end product is taken into use during this phase. This phase has a special place within the entire project. Where logically the creation phase would be the last phase, since the end product is taken into production during this phase, this does not have to be the last phase with the Software Factory. An application can already be created after modeling and validating the data model.
 
