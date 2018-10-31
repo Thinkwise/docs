@@ -8,7 +8,7 @@ Rows (records) can be stored in a table. Each row consists of fields (columns). 
 
 A reference is a relation between tables. The integrity between these tables is automatically guaranteed on the basis of a column comparison. A reference consists of a target and source table. The source table is the lookup table.
 
-![](../assets/sf/image80.png)
+![](../assets/sf/image80_2018_3.png)
 *The Data model screen*
 
 ## Diagrams
@@ -19,7 +19,7 @@ Since a data model can consist of many tables with columns, an overview can quic
 
 Diagrams, and therefore the data model, can be designed graphically via the *Design* tab
 
-![](../assets/sf/image81.png)
+![](../assets/sf/image81_2018_3.png)
 *Tables and views in the Design tab page*
 
 This screen has a number of functions that help when designing the data model. A list is visible in the left hand column with all the tables and views. Besides this, there is a similar list with all the references. These can be checked and unchecked to use them within the diagram.
@@ -66,7 +66,7 @@ The context menu (right-hand mouse button in the work sheet) offers the followin
 
 - Delete - delete a table or reference from the diagram and/or model. With delete table, the table is not deleted but only removed from the data model. With delete reference, there is a choice between removing the reference just from the diagram or also from the model.
 
-Adding new domains, tables and views is available in the tabs behind the subject field but can also be easily done via the buttons in the diagram.
+Adding new tables, views and snapshots can be done using the tab *Tables* next to *Design* but can also be accessed easily via the buttons in the diagram.
 
 ![](../assets/sf/image84.png)
 
@@ -74,7 +74,7 @@ Adding new domains, tables and views is available in the tabs behind the subject
 
 An overview of all tables is accessible via the *Tables* tab page.
 
-![](../assets/sf/image89.png)*Overview of the 'Tables' tab*
+![](../assets/sf/image89_2018_3.png)*Overview of the 'Tables' tab*
 
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
@@ -195,7 +195,7 @@ The *Template* option provides the freedom to use the most complex selection str
 
 All columns are available for copying to the created view in the *copy columns* tab. The selected columns are copied to the view using the *Copy* button.
 
-![](../assets/sf/image92.png)
+![](../assets/sf/image92_2018_3.png)
 *A view with the option to copy columns*
 
 When this takes place, a pop-up screen appears with the option to enter a prefix. This prefix is placed before the name of the copied column. For example, the name column can be copied from the employee table with the prefix *employee*. *Name* is now displayed in the view as *employee_name*. When the column name starts with the prefix, then the prefix is not added for a second time.
@@ -209,7 +209,7 @@ After all columns are defined and/or copied and *Automatic* or *Modifiable* is c
 
 A reference is a relation between two tables. The target table has one or more fields (the foreign key) of which the combined values have to appear as the primary key in the source table. This column comparison is specified in the reference columns.
 
-![](../assets/sf/image94.png)
+![](../assets/sf/image94_2018_3.png)
 *Tables and views*
 
 References can be created by means of *drag & drop* in the *Reference* status. In the *Normal* status, the *Reference* status can be temporarily activated by holding down the Ctrl key. This makes it possible to create a reference by dragging with the mouse from the source to the target table. A pop-up then appears in which the column comparison is presented.
