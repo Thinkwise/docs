@@ -10,3 +10,8 @@ Runtime configurations can have different [extended properties](extended_propert
 
 ![1537777102204](../assets/sf/1537777102204.png)
 *Runtime configuration overview*
+
+The Windows, Web and Mobile user interface only load one runtime configuration. The Universal user interface provides the option to switch between active runtime configurations using the application selector.
+
+![1537777102204](../assets/sf/user_runtime_configurations.png)
+*Active runtime configurations per user*
