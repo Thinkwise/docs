@@ -191,6 +191,21 @@ The installation of each part is explained in the chapters below.
 
 ### Assemblies (SQL Server)
 
+The Exchange connector uses CLR procedures to communicate with the database. The CLR integration feature of SQL Server is off by default, and must be enabled first using the following command:
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'clr enabled', 1;
+GO
+RECONFIGURE;
+GO
+```
+
+> To enable CLR integration, you must have ALTER SETTINGS server level permission, which is implicitly held by members of the sysadmin and serveradmin fixed server roles.
+
 Two assemblies have to be installed on the database using an asymmetric key and a login on the database server. The required files are:
 
 ![1539086818018](../assets/1539086818018.png)
