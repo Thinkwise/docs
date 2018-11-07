@@ -58,6 +58,7 @@ The parameters below can be used as extended properties in the Software Factory 
 | ExportCopyTo- <br> ClipboardOnly*                   | Only export columns with CopyToClipboard = true by default. The user is able to select additional fields using the advanced export. | **Yes**<br>No                                                |
 | ExportFilenameFormat*                               | Sets the default filename (optional extension) for export files. | Use {0} for the plural translation and {1} for the current DateTime, e.g.: {0} - {1:yyyyMMdd}<br>Default: **{0}.xls**<br>See: [string format](https://docs.microsoft.com/en-us/dotnet/api/system.string.format) |
 | ExportIDDefault                                     | Sets the initial state for exporting to datavalues instead of displayvalues | Yes<br>No                                                    |
+| FloatingDocumentSize                                | Sets the start size for floating documents                   | The default size is 900 x 700                                |
 | FocusableFormButtons                                |                                                              |                                                              |
 | FocusCombinedFilter- <br> OnStartEmptyWithFilter    |                                                              |                                                              |
 | FocusSelectedField*                                 | When opening the filterform, this determines wheter the focus is set to the selectedIndex of the form you came from or to the first editable field. | **Yes**<br>No                                                |
@@ -74,6 +75,7 @@ The parameters below can be used as extended properties in the Software Factory 
 | LogoffUrl                                           | URL to go to after logoff                                    |                                                              |
 | LogUserActions                                      |                                                              |                                                              |
 | LookupDialogModal                                   | If 'no', then the lookup dialog won't block the UI when the source of the lookup dialog is not in edit mode. | **Yes**<br>No                                                |
+| LookupDialogSize                                    | Sets the default size for all lookup dialogs                 | The default size is 900 x 480                                |
 | LookupsDataDisplay- <br>OneToOne* (obsolete)        | If 'yes', then 'equal to' filters will use the data field instead of the presentation field | Yes<br>**No**                                                |
 | MapQuestApiUri*                                     | Licence Uri to be able to use the Maps component.            | Request a key here: [MapQuest Developer](https://developer.mapquest.com/) |
 | MaxNoOfRecords*                                     | Maximum number of records to display.                        | 250                                                          |
