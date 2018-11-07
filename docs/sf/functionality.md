@@ -18,7 +18,7 @@ The functionality screen consists of six components:
 
 - Validation - This tab shows any validation messages regarding the selected business logic. 
 
-![](../assets/sf/image265.png)
+![](../assets/sf/functionality.png)
 *Functionality*
 
 ## Definitions
@@ -188,7 +188,7 @@ After clicking *Execute*, the Software Factory will parse the program object and
 
 After creating or modifying business logic, the control procedure can be marked for review using the *Ready for review* task. 
 
-![](../assets/sf/image282.png)
+![](../assets/sf/ready_for_review.png)
 *Ready for review task*
 
 This will set the status of the control procedure to *Review* and create a changelog record. The code changelogs, including the code changes, can be found in the *Code changelog* tab page. 
