@@ -42,7 +42,7 @@ To assign rights to a role, select the required objects and click the *Assign ri
 
 The *Assign rights* task also provides the option to assign rights to any child objects, for example the columns and details of a table, and to the parent objects required for this object, for example a task for its task parameters. 
 
-![](../assets/iam_dev/image17.png)
+![](../assets/iam_dev/assign_rights.png)
 *Assign rights task*
 
 The *Available* checkbox, visible in the grid for certain objects, indicates if the rights are granted to the required parent objects. The green, yellow and red icons indicate the *resolved* rights of an object, based on the granted rights and the availability.
