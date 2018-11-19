@@ -21,7 +21,6 @@ For detailed requirements and instructions, see the [Docusaurus docs](https://do
 1. Install Docusaurus
 
    ```sh
-   cd website
    npm install
    ```
 
