@@ -50,11 +50,35 @@ Start with level two `##` heading and always increment headings by one level.
 
 ### Images
 
-Images are stored in the `/docs/assets` folder and must be referenced like this: `assets\image.png`.
+Images are stored in the `/docs/assets` folder and must be referenced like this: `assets/image.png`.
+Bug for blog posts: <https://github.com/facebook/Docusaurus/issues/1114>
 
-Using a relative path, e.g. `..\assets\image.png` can also work but might break when the current documentation is versioned using docusaurus.
-Versioning moves a snapshot of the documentation to a versioned subdirectory which would mean that all relative links to images need to be updated to, for example, `..\..\assets\image.png`.
+Using a relative path, e.g. `../assets/image.png` can also work but might break when the current documentation is versioned using docusaurus.
 
 See the [Docusaurus documentation](https://docusaurus.io/docs/en/doc-markdown#linking-to-images-and-other-assets) for more information.
 
 Use Visual Studio Code with the [vscode-markdown-paste-image](https://github.com/telesoho/vscode-markdown-paste-image) exension or [Typora](https://typora.io/) to auto copy images on paste.
+
+## Converting Word documents
+
+### Pandoc
+
+Convert Word to Markdown:
+
+```bash
+for file in *.docx; do echo $file; pandoc -s "$file" --extract-media="./${file%.*}/" -o "$file.md" -t gfm --columns=120; done
+```
+
+Generate hashes for image filenames, convert the converted markdown one more time:
+
+```bash
+for file in *.md; do echo $file; pandoc -s "$file" --extract-media=./images -o "$file 2.md" -t gfm --columns=120; done
+```
+
+Find and replace the following strings to cleanup the output:
+
+```
+|$\n  - |- |
+|$\n      - |  - |
+|^\s*\d*\.\s*\#|#|
+```

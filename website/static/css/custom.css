@@ -15,9 +15,8 @@
 .reactNavSearchWrapper input#search_input_react {
     border-radius: 0px;
     line-height: 31px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Montserrat';
-    font-variant-caps: all-small-caps;
     color: #F9F4F4;
     background-color: #1C86B3;
 }
@@ -94,13 +93,15 @@
 }
 
 /* Images and captions */
-
+.post p img:first-child,
 article p img:first-child {
     outline: 1px solid #dddddd;
     outline-offset: -1px;
     display: block;
+    margin: auto;
 }
 
+.post p img:first-child+em,
 article p img:first-child+em {
     display: inherit;
     text-align: center;
@@ -108,12 +109,14 @@ article p img:first-child+em {
     color: #666666;
 }
 
+.post p img:not(:first-child),
 article p img:not(:first-child) {
     display: inline;
     vertical-align: text-bottom;
     max-height: 24px;
 }
 
+.post em,
 article em {
     font-style: italic;
 }

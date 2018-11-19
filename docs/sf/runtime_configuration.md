@@ -11,7 +11,16 @@ Runtime configurations can have different [extended properties](extended_propert
 ![1537777102204](assets/sf/1537777102204.png)
 *Runtime configuration overview*
 
-The Windows, Web and Mobile user interface only load one runtime configuration. The Universal user interface provides the option to switch between active runtime configurations using the application selector.
+## Application ID and Alias
+
+The Windows, Web and Mobile user interface only load one runtime configuration. To connect to a 2018.3 Indicium application tier, the Mobile user interface needs to provide the *Application ID* or *Application Alias* of the runtime configuration:
+
+![1541682414945](assets/sf/1541683324242.png)
+*Setting the runtime configurations' application ID or alias*
+
+## Active runtime configurations per user
+
+For the Universal user interface and the Indicium application tier, runtime configurations need to be activated per user. The Universal user interface provides the option to switch between active runtime configurations using the application selector.
 
 ![1537777102204](assets/sf/user_runtime_configurations.png)
 *Active runtime configurations per user*

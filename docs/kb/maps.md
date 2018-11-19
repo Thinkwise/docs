@@ -16,5 +16,4 @@ To complement the point above, to prevent reaching the request limit of the GeoC
 - When using a view, it may be necessary to write an update-trigger which will channel the coordinates to the correct location.
 - An update-trigger should be written on the table which contains the address. This trigger should clear the coordinates if the address is updated.
 
-
 It is strongly recommended to add columns for the coordinates when using a GUI which supports the features above, especially in situations with more than a hundred addresses.

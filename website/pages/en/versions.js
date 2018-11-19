@@ -37,6 +37,9 @@ function Versions() {
                 <td>
                   <a href="docs/sf/sf_general.html">Documentation</a>
                 </td>
+                <td>
+                  <a href="blog">Release notes</a>
+                </td>
               </tr>
             </tbody>
           </table>
