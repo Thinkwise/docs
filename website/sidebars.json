@@ -103,6 +103,7 @@
       "kb/exchange",
       "kb/file_storage",
       "kb/icons",
+      "kb/iis_admin_api",
       "kb/lifecycle_policy",
       "kb/maps",
       "kb/olap",
