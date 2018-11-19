@@ -8,11 +8,11 @@ When several developers or teams work on different features of an application, b
 
 ## Creating a branch
 
-A branch can be created in the *Project overview* screen using the ![](../assets/sf/image38.png)*Create Branch* task.
+A branch can be created in the *Project overview* screen using the ![](assets/sf/image38.png)*Create Branch* task.
 
 This task opens the following pop-up.
 
-![](../assets/sf/image39.png)
+![](assets/sf/image39.png)
 *Pop-up for creating a branch*
 
 It must be indicated for which project and project version a branch has to be created. The name of the branch project can then be entered and a location selected for the project and the database.
@@ -27,14 +27,14 @@ When creating a branch, a base project version is automatically created. This ba
 
 As soon as the branch project is satisfactorily completed and tested, it can be combined again with the trunk. This can be done in the *Merging* screen. A merge can be started with the help of the *Start merge session* task.
 
-![](../assets/sf/image41.png)
+![](assets/sf/image41.png)
 *Pop-up for starting a Merge session*
 
 Select the trunk and branch project version to merge. Any conflicts are identified so that a solution strategy can be defined in the following step. In this situation, only a comparison is made. Because no modifications have yet taken place, the user can always go back to the previous step. 
 
 As long as a merge session is not completed, the indication *merging* will be added to the project version to indicate that a merge session is running. Modifications in a project version with the status merging may be lost when the merge session is carried out.
 
-![](../assets/sf/image44.png)
+![](assets/sf/image44.png)
 *Merging indicator with project version*
 
 It is also possible to merge modifications from the trunk into a branch. It can then first be tested whether the new version works correctly, before the trunk is updated.
@@ -55,23 +55,23 @@ This type of conflict occurs when there is a double insert or update, or when a 
 
 This type of conflict occurs if a delete in the trunk and an insert or update in the branch takes place at the reference level.
 
-![](../assets/sf/image45.png)
+![](assets/sf/image45.png)
 *Overview of the conflicts*
 
 ### Resolving conflicts
 
-After the conflicts are detected, they can be resolved one-by-one. It is also possible to resolve several conflicts simultaneously with the help of the *Resolve conflict* ![](../assets/sf/image46.png)task.
+After the conflicts are detected, they can be resolved one-by-one. It is also possible to resolve several conflicts simultaneously with the help of the *Resolve conflict* ![](assets/sf/image46.png)task.
 
 This enables the modifications from the branch or from the trunk to be carried out. There are four options available:
 
 1. Only carry out the trunk action - Only the parent and children of the trunk are included.
-   ![](../assets/sf/image47.jpeg)
+   ![](assets/sf/image47.jpeg)
 1. Only carry out the branch action - Only the parent and children of the branch are included.
-   ![](../assets/sf/image48.jpeg)
+   ![](assets/sf/image48.jpeg)
 1. Carry out trunk actions with dependent branch actions - The parent and children of the trunk plus the children of the branch are included.
-   ![](../assets/sf/image49.jpeg)
+   ![](assets/sf/image49.jpeg)
 1. Carry out branch actions with dependent trunk actions - The parent and children of the branch plus the children of the branch are included.
-   ![](../assets/sf/image50.jpeg)
+   ![](assets/sf/image50.jpeg)
 
 > Options 3 and 4 can lead to new conflicts between the children of the trunk and the branch. These will then have to be resolved.
 
@@ -79,12 +79,12 @@ This enables the modifications from the branch or from the trunk to be carried o
 
 With the task *Compare code*, it is possible to compare and merge the different values of a column for the conflicts *Dual change* and *Dual addition* with an external comparison table (WinMerge or KDiff3). After saving the file in the comparison tool, the merged text is transferred to the pop-up. By clicking on *OK*, the value is stored with the branch and the processing set to *Only carry out branch*.
 
-![](../assets/sf/image51.png)
+![](assets/sf/image51.png)
 *A conflict comparison during a merge session*
 
 ## Execute merge session
 
-Only when all conflicts have been resolved, can the *Execute merge session* ![](../assets/sf/image43.png) task be started to perform the actual merge.
+Only when all conflicts have been resolved, can the *Execute merge session* ![](assets/sf/image43.png) task be started to perform the actual merge.
 
 After the merge, a new project version is created in the target project and the merged project versions are deactivated.
 

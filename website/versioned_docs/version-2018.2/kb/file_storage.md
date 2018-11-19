@@ -15,7 +15,7 @@ File storage locations can be configured in the *File storage locations* tab pag
 
 File storage locations can be linked to domains with *File*, *Image* (including *Signature*) and *Folder* controls. All storage types except *Database* are specified as an additional subfolder within the file storage location per column. Thus, a column inherits the main storage location from its domain, but files can be stored in a subfolder by setting the subfolder column property.
 
-![C:\\Users\\nmatlung\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\subfolder.png](../assets/sf/image26.png)
+![C:\\Users\\nmatlung\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.Word\\subfolder.png](assets/sf/image26.png)
 *Subfolder column property*
 
 ## File storage types
@@ -26,19 +26,19 @@ Azure files works with Microsofts [Azure File Storage](https://azure.microsoft.c
 
 To create an account for Azure file storage, log in to <https://portal.azure.com.> Select the *Storage Account* service and add or use an existing storage account. To find the login settings to be used in the Software Factory, select the storage account and click on *Access Keys*. The *storage account name* and *key 1* values need to be set within the Software Factory as *Username / Account name* and *Password / Access token* respectively.
 
-![1537446420348](../assets/sf/1537446420348.png)
+![1537446420348](assets/sf/1537446420348.png)
 *Azure storage location*
 
 ### Database
 
 Database storage will store the data in a column on the database. Database storage needs two fields: a field to save the file name of the uploaded file, and a field to store the contents of the file. The storage column needs to be a large enough (unicode) text or binary field, for example *nvarchar(max)* or *nvarbinary(max)* on SQL Server.
 
-![1537447075470](../assets/sf/1537447075470.png)
+![1537447075470](assets/sf/1537447075470.png)
 *A database file column definition*
 
 SQL Server provides an additional way to store files in the database using [FileStreams](https://docs.microsoft.com/en-us/sql/relational-databases/blob/filestream-sql-server?view=sql-server-2017). To use filestream storage, the storage column needs to have a domain with datatype *FILESTREAM*. In addition, the database requires the table to have a *ROWGUID* column as well.
 
-![1537446952772](../assets/sf/1537446952772.png)
+![1537446952772](assets/sf/1537446952772.png)
 *Required column datatypes for FileStreams*
 
 ### File system

@@ -17,7 +17,7 @@ Using dynamic model concepts, you can, for example:
 
 Meta control procedures use queries to enrich the model of the Software Factory on the database. Please contact your Thinkwise representative if you want more information on writing queries for dynamic model concepts. 
 
-![](../assets/sf/image255.png)
+![](assets/sf/image255.png)
 *Control procedure in the Dynamic model screen*
 
 

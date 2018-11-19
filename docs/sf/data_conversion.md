@@ -38,7 +38,7 @@ After the tables and columns are matched, it is possible to set a default value 
 
 When making a lot of small changes in different project versions, it can be desirable to combine these project versions into one version before upgrading to one new version. There is a task available to squash these changes in the data conversions.
 
-![](../assets/sf/image304.png)
+![](assets/sf/image304.png)
 *Squash data conversions*
 
 Consider the following example: In version 1.10, column x is renamed to y. In version 1.40, the same column is renamed to z. By squashing the data conversion between 1.00 and 1.40, the Software Factory will automatically rename column x to z.

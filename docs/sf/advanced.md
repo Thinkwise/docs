@@ -8,7 +8,7 @@ The *Advanced menu* (right click on the menu and select *Advanced menu* to open)
 
 The *Project management* menu group gives Overview of several subjects, like tables, columns and prefilters, outside the context of projects and versions. This can be helpful to, for example, compare different versions of your application.
 
-![](../assets/sf/advanced_2.png)
+![](assets/sf/advanced_2.png)
 *Prefilters accessed from the Advanced menu*
 
 ## Master data

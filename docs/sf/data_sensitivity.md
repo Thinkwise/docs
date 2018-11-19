@@ -6,7 +6,7 @@ With the introduction of Europe's *General Data Protection Regulation*, it is mo
 
 Using the *Data sensitivity* screen, it is possible to set the sensitivity for each data column of the application. View-columns, calculated fields and identity fields are not data columns and are therefore not shown. A prefilter is provided to suggest which columns are sensitive, based on keywords or because columns with the same name or domain are also marked sensitive.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/Data_sensitive_screen3.png](../assets/sf/image97.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/Data_sensitive_screen3.png](assets/sf/image97.png)
 
 *Data sensitivity*
 
@@ -20,7 +20,7 @@ For sensitive columns, it is mandatory to select an anonymization type. There ar
 
 Foreign key columns are automatically anonymized based on the settings of the source column. They can be recognized by the icon as shown below and are hidden by the “undecided columns” prefilter.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/ak_icon.png](../assets/sf/image98.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/ak_icon.png](assets/sf/image98.png)
 
 *Foreign key columns*
 
@@ -49,7 +49,7 @@ When the expression is dependent on a column that needs to be anonymized first, 
 t1.user_id + "@thinkwisesoftware.com"
 ```
 
-![](../assets/sf/image101.png)
+![](assets/sf/image101.png)
 
 *Delayed expression*
 

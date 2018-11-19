@@ -22,13 +22,13 @@ Variables can be used to store data produced by process actions and retain this 
 
 A new process action is created by clicking on the button in the top right or via the context menu.
 
-![](../assets/sf/image243.png)
+![](assets/sf/image243.png)
 
 After clicking the button, the *Process actions* tab opens to create the new process action.
 
 Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does, and they can be assigned a constant value or a Variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
 
-![](../assets/sf/image254.png)
+![](assets/sf/image254.png)
 *Output parameters*
 
 ### Process steps
@@ -45,7 +45,7 @@ Using the [process concept](business_logic) it is also possible to conditionally
 
 If a process action has been completed and several parallel process steps follow, then these process steps are executed based on the specified sequence number. Subsequent actions are executed after the user completes the entire parallel flow.
 
-![](../assets/sf/image242.png)
+![](assets/sf/image242.png)
 *A process flow with various process steps*
 
 ### Starting points
@@ -328,7 +328,7 @@ The value of the selected [Message option](messages#message-options) is return a
 
 Ten special process action types are available, called *connectors*. Connectors are different from the other process action types in that they do not expose GUI features for automation but enable you to connect to other applications, services and media through various common protocols.
 
-![img](../assets/sf/image245-1537449569876.png)
+![img](assets/sf/image245-1537449569876.png)
 *Connector process action type*
 
 The following connectors are available:

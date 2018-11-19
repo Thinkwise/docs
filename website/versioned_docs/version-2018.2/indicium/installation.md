@@ -18,7 +18,7 @@ Indicium is built with version 4.6.1 of the .NET Framework. As such, this is the
 
 To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open ‘Modules’ on a website in the IIS Manager.
 
-![AspNetCoreModule](../assets/indicium/image%20%285%29.png)
+![AspNetCoreModule](assets/indicium/image%20%285%29.png)
 
 If the module has not been installed yet, then use this link to install it: [https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.2-windows-hosting-bundle-installer](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.2-windows-hosting-bundle-installer)
 
@@ -26,7 +26,7 @@ If the module has not been installed yet, then use this link to install it: [htt
 
 Finally, it is necessary to install Microsoft’s URL Rewrite Module for IIS. URL rewriting is a feature that is not available in IIS by default, though it is necessary to facilitate the integration of Indicium. The availability of this module can also be checked in the IIS Manager, much like the previous module.
 
-![RewriteModule](../assets/indicium/image%20%288%29.png)
+![RewriteModule](assets/indicium/image%20%288%29.png)
 
 If the URL Rewrite module has not been installed yet, then use the link below to install it: [https://www.iis.net/downloads/microsoft/url-rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)
 
@@ -34,11 +34,11 @@ If the URL Rewrite module has not been installed yet, then use the link below to
 
 As stated earlier, Indicium is capable of hosting itself and IIS is merely used as a proxy to expose Indicium to the network and/or the internet. As such, all the heavy lifting is performed by Indicium’s own web server and the Application Pool in IIS does not even need to initialize a .NET runtime. Because of this, it is wise to select ‘No Managed Code’ when creating an Application Pool for Indicium, as it will positively affect the start up time.
 
-![Add Application Pool](../assets/indicium/image%20%289%29.png)
+![Add Application Pool](assets/indicium/image%20%289%29.png)
 
 After creating the Application Pool, it is necessary to open the settings of the Application Pool and configure an Identity which has sufficient permissions to read/write from/to all the relevant disk locations. What these disk locations are depends on where the application stores its images and other files, and to which locations the application can upload files.
 
-![Advanced Settings](../assets/indicium/image%20%286%29.png)
+![Advanced Settings](assets/indicium/image%20%286%29.png)
 
 ## Creating the Web Application
 
@@ -51,17 +51,17 @@ The Database Pool User needs to be configured as a **Main administrator** in the
 > Double quotes \( " \) and backslashes \( \\ \)  in the appsettings.json file, for instance in usernames or the server address, need to be escaped by an extra backslash. 
 > For example: `server\instance` should be `server\\instance`.
 
-![Appsettings.json](../assets/indicium/image%20%2810%29.png)
+![Appsettings.json](assets/indicium/image%20%2810%29.png)
 
 Finally, create a new Web Application in the IIS Manager and choose an alias, the created Application Pool and the physical path to Indicium.
 
-![Add Application](../assets/indicium/image%20%281%29.png)
+![Add Application](assets/indicium/image%20%281%29.png)
 
 The Web Application will attempt to listen on port 80 by default. If this port is already in use, then it is necessary to choose another port.
 
 When done, the Web Application can be started. Open a browser and navigate to [https://server/indicium/api](https://server/indicium/api) to verify that Indicium is running and configured correctly.
 
-![Check if Indicium is running](../assets/indicium/image%20%287%29.png)
+![Check if Indicium is running](assets/indicium/image%20%287%29.png)
 
 If you do not get a result like the image above, then please refer to [Troubleshooting ](installation.md#troubleshooting-issues) below for steps to resolve your problem.
 
@@ -71,7 +71,7 @@ As of version 2018.2.1, Indicium supports changing and resetting passwords for u
 
 To enable the reset password feature, add the following template to the appsettings.json file and fill it out.
 
-![Email settings template](../assets/indicium/image%20%284%29.png)
+![Email settings template](assets/indicium/image%20%284%29.png)
 
 > The reset password feature also requires the email address of users to be configured in IAM.
 
@@ -81,11 +81,11 @@ Now that the server has been configured, you can start a Mobile GUI against it \
 
 If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is ‘iam’, but it is best to double-check this by querying the gui_appl table.
 
-![Mobile GUI IAM meta source](../assets/indicium/image%20%2811%29.png)
+![Mobile GUI IAM meta source](assets/indicium/image%20%2811%29.png)
 
 Targeting an SF meta source works the same but you need to specify the root URL of the SF application as the meta server URL. Additionally, you will need to specify the project, project version and, if applicable, the runtime configuration.
 
-![Mobile GUI SF meta source](../assets/indicium/image.png)
+![Mobile GUI SF meta source](assets/indicium/image.png)
 
 ## Troubleshooting issues
 
@@ -97,7 +97,7 @@ If the root URL of Indicium \(e.g. [https://server/indicium/](https://server/ind
 
 Ensure that the JSON in the appsettings.json is valid. The most common mistakes are forgetting to **escape backslashes**, either in the server address or the pool username, or forgetting **a comma after a property** which is not the last one.
 
-![Invalid JSON](../assets/indicium/image%20%282%29.png)
+![Invalid JSON](assets/indicium/image%20%282%29.png)
 
 If you want to be certain that the JSON is valid, then you can use this website to validate it (though it would be wise to clear any sensitive information first): [https://jsonlint.com](https://jsonlint.com/)
 
@@ -133,7 +133,7 @@ Production mode does not influence the amount of information that is logged to d
 
 If you want to run Indicium in Development mode, then you need to make the following changes to the Web.config file in the root of Indicium:
 
-![Configuring Development mode in the Web.config file](../assets/indicium/image%20%283%29.png)
+![Configuring Development mode in the Web.config file](assets/indicium/image%20%283%29.png)
 
 > As convenient as it may seem to always run all instances of Indicium in Development mode, please do not do this. 
 > Only run Indicium in Development mode when you are actually developing and debugging problems or if Indicium is only accessible by trustworthy users.

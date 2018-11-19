@@ -10,7 +10,7 @@ Rows (records) can be stored in a table. Each row consists of fields (columns). 
 
 A reference is a relation between tables. The integrity between these tables is automatically guaranteed on the basis of a column comparison. A reference consists of a target and source table. The source table is the lookup table.
 
-![](../assets/sf/image80.png)
+![](assets/sf/image80.png)
 *The Data model screen*
 
 ## Diagrams
@@ -21,7 +21,7 @@ Since a data model can consist of many tables with columns, an overview can quic
 
 Diagrams, and therefore the data model, can be designed graphically via the *Design* tab
 
-![](../assets/sf/image81.png)
+![](assets/sf/image81.png)
 *Tables and views in the Design tab page*
 
 This screen has a number of functions that help when designing the data model. A list is visible in the left hand column with all the tables and views. Besides this, there is a similar list with all the references. These can be checked and unchecked to use them within the diagram.
@@ -34,13 +34,13 @@ The *One level deeper* and *One level higher* tasks select all linked tables abo
 
 The *Link table* task automatically creates a link table between two tables. It can be indicated in the pop-up which table is the main table and which is the subordinate.
 
-![](../assets/sf/image82.png)
+![](assets/sf/image82.png)
 
 To create a link table between two tables, both tables have to have a primary key
 
 ### Diagram options
 
-![](../assets/sf/image83.png)
+![](assets/sf/image83.png)
 
 The context menu (right-hand mouse button in the work sheet) offers the following options:
 
@@ -70,17 +70,17 @@ The context menu (right-hand mouse button in the work sheet) offers the followin
 
 Adding new domains, tables and views is available in the tabs behind the subject field but can also be easily done via the buttons in the diagram.
 
-![](../assets/sf/image84.png)
+![](assets/sf/image84.png)
 
 ## Tables
 
 An overview of all tables is accessible via the *Tables* tab page.
 
-![](../assets/sf/image89.png)*Overview of the 'Tables' tab*
+![](assets/sf/image89.png)*Overview of the 'Tables' tab*
 
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
-![](../assets/sf/image90.png)
+![](assets/sf/image90.png)
 *Columns tab page*
 
 ### General
@@ -160,7 +160,7 @@ from customer t1 
 
 The columns on which the expression is dependent are shown on the *Expression dependencies* tab. If one of these columns changes in the end application, then the expression field will also be updated. If, for instance, *street* changes, then the composite address has to use the new street.
 
-![](../assets/sf/image91.png)
+![](assets/sf/image91.png)
 *Calculated field with a Query*
 
 ### Indexes
@@ -195,12 +195,12 @@ The *Template* option provides the freedom to use the most complex selection str
 
 All columns are available for copying to the created view in the *copy columns* tab. The selected columns are copied to the view using the *Copy* button.
 
-![](../assets/sf/image92.png)
+![](assets/sf/image92.png)
 *A view with the option to copy columns*
 
 When this takes place, a pop-up screen appears with the option to enter a prefix. This prefix is placed before the name of the copied column. For example, the name column can be copied from the employee table with the prefix *employee*. *Name* is now displayed in the view as *employee_name*. When the column name starts with the prefix, then the prefix is not added for a second time.
 
-![](../assets/sf/image93.png)
+![](assets/sf/image93.png)
 *Pop-up that appears when tables are copied*
 
 After all columns are defined and/or copied and *Automatic* or *Modifiable* is chosen for the view option, then the *from clause* of the view can be constructed by executing the *Generate view from clause* task.
@@ -209,7 +209,7 @@ After all columns are defined and/or copied and *Automatic* or *Modifiable* is c
 
 A reference is a relation between two tables. The target table has one or more fields (the foreign key) of which the combined values have to appear as the primary key in the source table. This column comparison is specified in the reference columns.
 
-![](../assets/sf/image94.png)
+![](assets/sf/image94.png)
 *Tables and views*
 
 References can be created by means of *drag & drop* in the *Reference* status. In the *Normal* status, the *Reference* status can be temporarily activated by holding down the Ctrl key. This makes it possible to create a reference by dragging with the mouse from the source to the target table. A pop-up then appears in which the column comparison is presented.
@@ -218,7 +218,7 @@ The column comparison is based on the primary key of the source table, which the
 
 When adding or modifying a reference, it can also be indicated whether the reference has to be used as detail and/or as look-up.
 
-![](../assets/sf/image95.png)
+![](assets/sf/image95.png)
 *Pop-up for creating references*
 
 It is possible to switch off the integrity check of the reference by the RDBMS by unchecking the checkmark next to *Check integrity*. The reference then only serves to display details or look-ups in the user interfaces.
@@ -229,7 +229,7 @@ Incidentally, just the integrity between tables can be checked. When the source 
 
 Validating the data model is possible in the *Validation* tab. Through this, errors can already be identified at an early stage. The *Validation* component is explained in more detail [here](validation).
 
-![](../assets/sf/image96.png)
+![](assets/sf/image96.png)
 *Example of the validation screen*
 
 ### Starting the application

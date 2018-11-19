@@ -24,9 +24,9 @@ To assign a screen type to a subject, follow these steps:
 
 2.  Select the relevant table(s) and variant(s) in the *Assign to subjects* tab to which this screen type has to be assigned.
 
-3.  Use the *Assign screen type* ![1538568797238](../assets/sf/1538568797238.png) tasks to assign the selected screen type to the desired screen type levels of the selected subjects. 
+3.  Use the *Assign screen type* ![1538568797238](assets/sf/1538568797238.png) tasks to assign the selected screen type to the desired screen type levels of the selected subjects. 
 
-![](../assets/sf/image117.png)
+![](assets/sf/image117.png)
 *Assigning screen types*
 
 If a selected screen type is used by a subject, then the name of the screen type is highlighted in bold. Underlined screen types are explicitly set up to deviate from the standard screen types defined at the project version.
@@ -41,7 +41,7 @@ When a screen type is especially developed for one process, then this screen is 
 
 When a new screen type is created, it can be designed on the *Design* tab. This tab consists of a number of parts which are explained in more detail in the table below.
 
-![1538569206287](../assets/sf/1538569206287.png)
+![1538569206287](assets/sf/1538569206287.png)
 *Designing a screen type*
 
 1.  **Abstract components** - In this component, an overview is presented of the available abstract screen components that can be dragged onto the work sheet.
@@ -54,27 +54,27 @@ During the design of a screen type, various abstract components are available wh
 
 |                       Icon                       |   Component    | Explanatio                                                   |
 | :----------------------------------------------: | :------------: | :----------------------------------------------------------- |
-| ![1538569785356](../assets/sf/1538569785356.png) | Tab container  | The tab container ensures that several tabs can be used under which the details or other components can be classified. Empty tabs are removed by the user interface. |
-| ![1538569788467](../assets/sf/1538569788467.png) |      Grid      | The data are displayed under each other in the grid and can be selected. The user interface will remove the grid if there can only be at most one line. |
-| ![1538569791943](../assets/sf/1538569791943.png) |      Form      | Data from one row can be presented and modified in the form. |
-| ![1538569999226](../assets/sf/1538569999226.png) |   Form list    | This component displays a form without tab pages for every row in the grid. All the forms will be stacked and a scrollbar will be created when it exceeds the screen. |
-| ![1538569977412](../assets/sf/1538569977412.png) |  Search form   | The search form provides an overview of the (limited) search set on the screen. |
-| ![1538569970140](../assets/sf/1538569970140.png) |  Filter form   | The filter form provides an overview of the (limited) filter set on the screen. |
-| ![1538569972738](../assets/sf/1538569972738.png) | Prefilter bar  | A button for all prefilters is displayed in this bar. The user interface will remove this component if there are no (visible) prefilters. |
-| ![1538569967206](../assets/sf/1538569967206.png) | Cube view bar  | A button for all cube views is displayed in this bar. The user interface will remove this component if there are no cube views. |
-| ![1538569960171](../assets/sf/1538569960171.png) |    Task bar    | A button for all tasks is displayed in this bar. The user interface will remove this component if there are no tasks. |
-| ![1538569957452](../assets/sf/1538569957452.png) |  Reports bar   | A button for all reports is displayed in this bar. The user interface will remove this component if there are no reports. |
-| ![1538569955237](../assets/sf/1538569955237.png) | Tree structure | Displays a tree structure. The user interface will remove the structure if there can only be at most one row. |
-| ![1538569952715](../assets/sf/1538569952715.png) |     Filter     | The filter can be used for quick filtering on several columns. |
-| ![1538569950297](../assets/sf/1538569950297.png) |   Dashboard    | Displays the data in a Dashboard form. The user interface will remove the component if there is no maps definition for the table. At the time of writing, this can only be created with an object model extender. |
-| ![1538569945424](../assets/sf/1538569945424.png) |      Maps      | The Maps component displays a folder in which data can be viewed. The user interface will remove the component if there is no maps definition for the table. At the time of writing, this can only be created with an object model extender. |
-| ![1538569940146](../assets/sf/1538569940146.png) | RSS                      | Displays an overview in which RSS feeds can be   presented. The user interface will remove the component if  there is no RSS definition for the table. At the time of writing, this can only be created with an object model extender. |
-| ![1538569937836](../assets/sf/1538569937836.png) | Preview              | Displays the first column of a table that contains a   path (for instance URL or file upload control). |
-| ![1538569935273](../assets/sf/1538569935273.png) | Pivot table          | Provides the   possibility to display a pivot table. The user interface will remove the pivot table if there is no cube   definition for the table. |
-| ![1538569928651](../assets/sf/1538569928651.png) | Pivot table   fields | Provides the   possibility to display fields that can be dragged and dropped in a pivot   table. The user interface will   remove the pivot table fields if there is no cube definition for the table. |
-| ![1538569925810](../assets/sf/1538569925810.png) | Graph                | Displays a   graph on the screen. The user   interface will remove the pivot table if there is no cube definition with a   graph for the table. |
-| ![1538569922879](../assets/sf/1538569922879.png) | Scheduler            | The scheduler displays a graphical planning. The user interface will remove the component   if there is no scheduler definition for   the table. At the time of writing, this can only be created with an object   model extender. |
-| ![1538569919152](../assets/sf/1538569919152.png) | Detail tiles         | This component   shows the details of a subject in tiles. Clicking on a tile will open a new   document. |
+| ![1538569785356](assets/sf/1538569785356.png) | Tab container  | The tab container ensures that several tabs can be used under which the details or other components can be classified. Empty tabs are removed by the user interface. |
+| ![1538569788467](assets/sf/1538569788467.png) |      Grid      | The data are displayed under each other in the grid and can be selected. The user interface will remove the grid if there can only be at most one line. |
+| ![1538569791943](assets/sf/1538569791943.png) |      Form      | Data from one row can be presented and modified in the form. |
+| ![1538569999226](assets/sf/1538569999226.png) |   Form list    | This component displays a form without tab pages for every row in the grid. All the forms will be stacked and a scrollbar will be created when it exceeds the screen. |
+| ![1538569977412](assets/sf/1538569977412.png) |  Search form   | The search form provides an overview of the (limited) search set on the screen. |
+| ![1538569970140](assets/sf/1538569970140.png) |  Filter form   | The filter form provides an overview of the (limited) filter set on the screen. |
+| ![1538569972738](assets/sf/1538569972738.png) | Prefilter bar  | A button for all prefilters is displayed in this bar. The user interface will remove this component if there are no (visible) prefilters. |
+| ![1538569967206](assets/sf/1538569967206.png) | Cube view bar  | A button for all cube views is displayed in this bar. The user interface will remove this component if there are no cube views. |
+| ![1538569960171](assets/sf/1538569960171.png) |    Task bar    | A button for all tasks is displayed in this bar. The user interface will remove this component if there are no tasks. |
+| ![1538569957452](assets/sf/1538569957452.png) |  Reports bar   | A button for all reports is displayed in this bar. The user interface will remove this component if there are no reports. |
+| ![1538569955237](assets/sf/1538569955237.png) | Tree structure | Displays a tree structure. The user interface will remove the structure if there can only be at most one row. |
+| ![1538569952715](assets/sf/1538569952715.png) |     Filter     | The filter can be used for quick filtering on several columns. |
+| ![1538569950297](assets/sf/1538569950297.png) |   Dashboard    | Displays the data in a Dashboard form. The user interface will remove the component if there is no maps definition for the table. At the time of writing, this can only be created with an object model extender. |
+| ![1538569945424](assets/sf/1538569945424.png) |      Maps      | The Maps component displays a folder in which data can be viewed. The user interface will remove the component if there is no maps definition for the table. At the time of writing, this can only be created with an object model extender. |
+| ![1538569940146](assets/sf/1538569940146.png) | RSS                      | Displays an overview in which RSS feeds can be   presented. The user interface will remove the component if  there is no RSS definition for the table. At the time of writing, this can only be created with an object model extender. |
+| ![1538569937836](assets/sf/1538569937836.png) | Preview              | Displays the first column of a table that contains a   path (for instance URL or file upload control). |
+| ![1538569935273](assets/sf/1538569935273.png) | Pivot table          | Provides the   possibility to display a pivot table. The user interface will remove the pivot table if there is no cube   definition for the table. |
+| ![1538569928651](assets/sf/1538569928651.png) | Pivot table   fields | Provides the   possibility to display fields that can be dragged and dropped in a pivot   table. The user interface will   remove the pivot table fields if there is no cube definition for the table. |
+| ![1538569925810](assets/sf/1538569925810.png) | Graph                | Displays a   graph on the screen. The user   interface will remove the pivot table if there is no cube definition with a   graph for the table. |
+| ![1538569922879](assets/sf/1538569922879.png) | Scheduler            | The scheduler displays a graphical planning. The user interface will remove the component   if there is no scheduler definition for   the table. At the time of writing, this can only be created with an object   model extender. |
+| ![1538569919152](assets/sf/1538569919152.png) | Detail tiles         | This component   shows the details of a subject in tiles. Clicking on a tile will open a new   document. |
 
 
 
@@ -92,7 +92,7 @@ The tab page container has two functions:
 
 - Tab pages for details
 
-![](../assets/sf/image141.png)
+![](assets/sf/image141.png)
 *An empty tab page container*
 
 Tabs can be added via the context menu of the tab container.
@@ -111,7 +111,7 @@ As standard, there is a choice from the options *A*, *B* and *C*, but new *detai
 
 In the *Subjects* screen, the details of subjects can be distributed across the various detail tabs that are present in a screen. If a set tab control is not present on the chosen screen type, then the detail is placed on the first detail tab.
 
-![1538569570256](../assets/sf/1538569570256.png)
+![1538569570256](assets/sf/1538569570256.png)
 *Detail tab page groups*
 
 #### Hiding tab headers and lines in the screen type modeler
@@ -124,16 +124,16 @@ This option enables the user to hide the tab header completely or only hide the 
 
 These properties can both be set to false to hide their respective properties.
 
-![](../assets/sf/image143.png)
+![](assets/sf/image143.png)
 *Tab page properties*
 
 ### Preview
 
 When the screen is developed according to your wishes, it is possible to display a preview of the screen in the Software Factory.
 
-First, connect to an end product by clicking the *Connect* ![1538570361509](../assets/sf/1538570361509.png) button. Then select the table which it needs to be connected to and click the *Preview* ![1538570462066](../assets/sf/1538570462066.png) button. A new document will open inside the Software Factory developent environment, showing the screen type applied to the selected subject.
+First, connect to an end product by clicking the *Connect* ![1538570361509](assets/sf/1538570361509.png) button. Then select the table which it needs to be connected to and click the *Preview* ![1538570462066](assets/sf/1538570462066.png) button. A new document will open inside the Software Factory developent environment, showing the screen type applied to the selected subject.
 
-![](../assets/sf/image144.png)
+![](assets/sf/image144.png)
 
 The model is re-loaded with the *Refresh* button.
 

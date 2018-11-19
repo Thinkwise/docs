@@ -50,8 +50,11 @@ Start with level two `##` heading and always increment headings by one level.
 
 ### Images
 
-Images are stored in the `/docs/assets` folder and referenced using a relative path, e.g. `..\assets\image.png`.
+Images are stored in the `/docs/assets` folder and must be referenced like this: `assets\image.png`.
+
+Using a relative path, e.g. `..\assets\image.png` can also work but might break when the current documentation is versioned using docusaurus.
+Versioning moves a snapshot of the documentation to a versioned subdirectory which would mean that all relative links to images need to be updated to, for example, `..\..\assets\image.png`.
+
+See the [Docusaurus documentation](https://docusaurus.io/docs/en/doc-markdown#linking-to-images-and-other-assets) for more information.
 
 Use Visual Studio Code with the [vscode-markdown-paste-image](https://github.com/telesoho/vscode-markdown-paste-image) exension or [Typora](https://typora.io/) to auto copy images on paste.
-
-![1538725116127](../assets/1538725116127.png)

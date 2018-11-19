@@ -12,14 +12,14 @@ OLAP stands for Online Analytical Processing and is a method for obtaining multi
 
 ### Configuring the connection to an OLAP cube
 
-![File:OLAP cube conn config.png](../assets/sf/688px-OLAP_cube_conn_config.png)
+![File:OLAP cube conn config.png](assets/sf/688px-OLAP_cube_conn_config.png)
 *OLAP cube connection configuration*
 
 If you want to point a cube in the Software Factory to an OLAP cube instead of a view, then tick the checkbox for *Use OLAP connection*. Three new fields will appear for the *OLAP server name*, the *OLAP database name* and the *OLAP cube name*. The first field should point to the SQL Server instance on which Microsoft Analysis Services is running. The value of the second field should be the name of your OLAP database. In the Business Intelligence Development Studio, this is the name of your Analysis Services Project. The value of the third field should be the name of your OLAP cube within your project. The image on the right provides an example of an OLAP connection configuration.
 
 ### Configuring cube fields for OLAP cubes
 
-![img](../assets/sf/OLAP_cube_config.png)
+![img](assets/sf/OLAP_cube_config.png)
 *Example - OLAP cube field configuration*
 
 Traditionally, cubes are pointed to views on the relational database system. Therefore, all fields which are defined for the cube will map to columns of one and the same view. In the context of the Thinkwise Software Factory, this is the main point where OLAP cubes differ from traditional cubes. An OLAP cube is not pointed to a view but rather to each table from which you want to retrieve data. For this reason, it is important to understand that the cube fields which you are defining in the Software Factory can map to a column of any table in the definition of your OLAP cube.

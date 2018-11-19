@@ -10,7 +10,7 @@ The user interface provides business intelligence features, called *cubes*, whic
 
 Creating a cube is done with the *Create cube* task. This task automatically adds values and dimensions, and the screen type is changed to *cube*.
 
-![](../assets/sf/image209.png)
+![](assets/sf/image209.png)
 *Task to create a cube*
 
 If the data source is an OLAP cube, the *OLAP connection* checkmark must be checked on the form after creating the cube. Three new fields will appear: *OLAP server name*, *OLAP database name* and *OLAP cube name*. The first field refers to the SQL Server instance on which Analysis Services runs. The OLAP database name should be entered in the second field. The third field is the name of the OLAP cube.
@@ -27,7 +27,7 @@ A cube is made up of cube fields that can be applied by the user. There are two 
 
 The task with which a cube can be created makes the best possible proposal, but the field definitions will still need to be verified. In any case, all ID columns that have no semantic value for the user must be removed from the cube. They then just provide the connection to the other subjects.
 
-![](../assets/sf/image210.png)*Adding Cube Fields to the 'Cube Fields' tab*
+![](assets/sf/image210.png)*Adding Cube Fields to the 'Cube Fields' tab*
 
 It is also important that the measured value(s) that are used in the cube are derived from the *Fact Table*. This is the data that provides the most detail.
 
@@ -141,9 +141,9 @@ Each overview can be displayed chartically in a two or three-dimensional chart. 
 
 The last example requires three dimensions that are linked via the same date field. Such a field is defined as a group interval with the respective type. This is done automatically for dates.
 
-![](../assets/sf/image211.png)*Example of a chart*
+![](assets/sf/image211.png)*Example of a chart*
 
-![](../assets/sf/image212.png)
+![](assets/sf/image212.png)
 *Example of a 3D chart display*
 
 ### Chart type per measured value

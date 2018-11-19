@@ -8,7 +8,7 @@ The *Users* screen contains an overview of all users and user-related informatio
 
 New users can be added from the *Form* tab page in the *Users* screen. 
 
-![1537874917089](../assets/iam_admin/new_user.png)
+![1537874917089](assets/iam_admin/new_user.png)
 *Add a new user*
 
 ### General
@@ -110,7 +110,7 @@ Select one of the predefined User preferences configurations or create a new con
 * OnOff - All options except for changing screen types.
 * Complete - All user preferences options are available to the user.
 
-![](../assets/iam_admin/image18.png)
+![](assets/iam_admin/image18.png)
 *User preferences configuration*
 
 ### Period
@@ -129,7 +129,7 @@ Contains the stored user preferences of the selected user.
 
 > The *User preferences* tab page in the *Users* screen is only available to Main administrators.
 
-![](../assets/iam_admin/image20.png)
+![](assets/iam_admin/image20.png)
 *User preferences*
 
 ### Administrators

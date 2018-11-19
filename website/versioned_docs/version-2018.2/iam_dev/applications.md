@@ -10,7 +10,7 @@ An application in the Intelligent Application Manager is a combination of a proj
 
 A new application can be created via the applications screen.
 
-![1537862515112](../assets/sf/1537862515112.png)
+![1537862515112](assets/sf/1537862515112.png)
 
 *Create an application*
 
@@ -28,9 +28,9 @@ Tasks are available to apply the required rights to the databases:
 
 | Task                                                         |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![1537863838509](../assets/sf/1537863838509.png) Apply roles | Creates the roles on the application database                |
-| ![1537863886902](../assets/sf/1537863886902.png) Apply user rights | Creates the users and user groups on the application database |
-| ![1537863897038](../assets/sf/1537863897038.png) Apply user rights to IAM | Creates the users on the IAM database                        |
+| ![1537863838509](assets/sf/1537863838509.png) Apply roles | Creates the roles on the application database                |
+| ![1537863886902](assets/sf/1537863886902.png) Apply user rights | Creates the users and user groups on the application database |
+| ![1537863897038](assets/sf/1537863897038.png) Apply user rights to IAM | Creates the users on the IAM database                        |
 
 To be able to apply the rights to an SQL Server database, an IAM administrator who is not a database system administrator needs additional database rights. This can be done using the following code snippet:
 ```sql
@@ -49,5 +49,5 @@ In the *Translations* tab page, it is possible to provide a translation and a to
 
 It is also possible to copy an existing application, including its translations, settings, user preferences and authorization using the *Copy application* task.
 
-![1537863288816](../assets/sf/1537863288816.png)
+![1537863288816](assets/sf/1537863288816.png)
 *Copy application task*

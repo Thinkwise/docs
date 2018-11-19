@@ -8,10 +8,10 @@ A runtime configuration provides the environment in which an application is star
 
 Runtime configurations can have different [extended properties](extended_properties) and [file storage locations](../kb/file_storage) than the default configuration. Settings that deviate from the default configuration are shown in bold.
 
-![1537777102204](../assets/sf/1537777102204.png)
+![1537777102204](assets/sf/1537777102204.png)
 *Runtime configuration overview*
 
 The Windows, Web and Mobile user interface only load one runtime configuration. The Universal user interface provides the option to switch between active runtime configurations using the application selector.
 
-![1537777102204](../assets/sf/user_runtime_configurations.png)
+![1537777102204](assets/sf/user_runtime_configurations.png)
 *Active runtime configurations per user*

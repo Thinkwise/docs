@@ -8,7 +8,7 @@ The *Project overview* screen shows a list of all projects in the Software Facto
 
 To create a project, click on the *Add* button in the ribbon or on the form. The following screen will then appear:
 
-![1537192957680](../assets/sf/1537192957680.png)
+![1537192957680](assets/sf/1537192957680.png)
 *Add a new project*
 
 The following information needs to be provided to create a project. Blue fields are required fields and white fields are optional fields. Gray fields cannot be modified by hand.
@@ -33,7 +33,7 @@ The following information needs to be provided to create a project. Blue fields 
 
 After clicking *Save*, a pop-up appears in order to create the first project version of your project.
 
-![1537193284966](../assets/sf/1537193284966.png)
+![1537193284966](assets/sf/1537193284966.png)
 *Create project version*
 
 * The *Project folder* determines the location on disk where files, for example reports and icons, are stored. 
@@ -63,7 +63,7 @@ The following statuses are available:
 
 Lists the available platforms (Windows, Web and Mobile) for this project and the default theme and menu per platform.
 
-![1537439487199](../assets/sf/1537439487199.png)
+![1537439487199](assets/sf/1537439487199.png)
 
 ### Application languages
 

@@ -6,7 +6,7 @@ original_id: subjects
 
 In the *Subjects* screen, every table or view can be fully set up for the user interface. These settings are specified on various tabs that are described in the following paragraphs.
 
-![](../assets/sf/image149.png)
+![](assets/sf/image149.png)
 *Overview of the *Subjects screen*
 
 ## Settings
@@ -15,7 +15,7 @@ Options that are applicable on the table itself are specified in this tab.
 
 ### General
 
-![](../assets/sf/image150.png)
+![](assets/sf/image150.png)
 *General settings on the Subjects screen*
 
 #### Icon
@@ -46,7 +46,7 @@ The Web GUI uses pagination for the retrieval of data from the database. In cont
 
 The maximum number of rows that the GUI has to retrieve from the database can be indicated for each subject. When a subject contains more records than the specified limit, this is displayed to the user with an icon on the left at the top of the grid.
 
-![](../assets/sf/image151.jpeg)
+![](assets/sf/image151.jpeg)
 *Screenshot of Maximum number of records in an end product*
 
 Setting a maximum number of records for all subjects is possible via the parameter *MaxNoOfRecords* in the configuration file or in the Intelligent Application Manager. By entering 0 for a subject as the maximum number of records, the parameter is generated for that subject.
@@ -59,22 +59,22 @@ When this box is checked, it is possible to add new records in the grid.
 
 There are two options available. *Always* and *When adding*. When the status is *Always*, the add in grid row is always visible. When the status is *When adding*, this row is only visible when the GUI is in edit mode.
 
-![](../assets/sf/image152.png)
+![](assets/sf/image152.png)
 *Add in grid*
 
 #### Grouping in Grid
 
 To enable grouping, check the *Group* option in the *Permissions* tab page. Users can group columns using the grid column menu, the sort dialog or by dragging columns to the group box. The visibility of the group box can be modified using the *Group box visibility* grid setting.
 
-![](../assets/sf/image153.png)
+![](assets/sf/image153.png)
 *Allow group*
 
-![](../assets/sf/image154.png)
+![](assets/sf/image154.png)
 *Group settings*
 
 The figure below shows an example of grouped columns in a grid.
 
-![](../assets/sf/image155.png)
+![](assets/sf/image155.png)
 *Group in grid*
 
 #### Number of columns fixed in a grid
@@ -103,7 +103,7 @@ The field that has to be presented if this table is used as a look-up table can 
 
 For example, a table *employee* has *name* as its look-up-presentation field, while the primary key is a number.
 
-![](../assets/sf/image156.png)
+![](assets/sf/image156.png)
 *Screenshot from the Settings tab for Subjects, where the Look-up can be entered*
 
 When no presentation field is given, the last reference column is displayed. When no presentation field is entered and the source column itself is also a look-up, the presentation field of this look-up is displayed (this works recursively until an explicitly set up presentation field or modified presentation field is reached). In this way, a link table is automatically correctly translated.
@@ -112,7 +112,7 @@ If, for example, the field *employee_id* in *sub_project* has a look-up to *sub_
 
 This system is known within Thinkwise as *deep joining*.
 
-![](../assets/sf/image157.png)
+![](assets/sf/image157.png)
 *Example of deep joining*
 
 It can be indicated by how a look-up presentation field has to be displayed:
@@ -135,7 +135,7 @@ When a user with Mobile goes offline, the online functionality and data are no l
 
 Since downloading subjects costs performance, it is important that only the necessary subjects are available offline. For this reason, when modeling, a number of things can be provided for each table.
 
-![](../assets/sf/image158.png)
+![](assets/sf/image158.png)
 *Offline details*
 
 #### Available offline
@@ -146,7 +146,7 @@ This indicates whether the table or one of the variants can be available offline
 
 To ensure refreshing data runs correctly, use is made of refresh groups. It can be indicated for each group when this has to be refreshed and whether this group is atomic. With atomic groups, changes in the offline details are only carried out if the synchronization of all tables in the group is successful. If, for instance, a (connection) fault occurs during the synchronization of an order, then it makes no sense to synchronize the order lines.
 
-![](../assets/sf/image159.png)
+![](assets/sf/image159.png)
 *Offline details of refresh groups*
 
 With non-atomic groups, all tables are synchronized, irrespective of whether a (connection) fault has occurred.
@@ -173,7 +173,7 @@ When creating prefilters, it can be indicated with the Filter for the offline da
 
 Badges are numbers that can attract the attention of the user. Badges are displayed in the menu and on tabs.
 
-![](../assets/sf/image160.png)
+![](assets/sf/image160.png)
 *Example of badges*
 
 The developer can decide for themselves how the number must be calculated by adding the logic for this to the Badges concept of the table or variant. An empty number or numbers below 0 are not displayed in the user interface.
@@ -188,7 +188,7 @@ The value that is entered for badge_value will be displayed on the badge. When t
 
 ### Permissions
 
-![](../assets/sf/image161.png)
+![](assets/sf/image161.png)
 *Overview of the Permissions tab with subject settings*
 
 #### Adding/copying/modifying/deleting
@@ -207,7 +207,7 @@ Which actions are permitted on this table can be set with the *Allow import*, *A
 
 ### Performance
 
-![](../assets/sf/image162.png)
+![](assets/sf/image162.png)
 *Overview of the Performance options with subject settings*
 
 Using the option in the *Performance* tab, it can be indicated in detail which mechanisms and concepts are used for a subject. In this way, it can be ensured that there are no unnecessary calls to the logic layer, and the user interfaces are as efficient as possible.
@@ -220,12 +220,12 @@ Auto-refresh activates the ability to automatically refresh the subjects and var
 
 The options that are applicable for a column are given below.
 
-![](../assets/sf/image163.png)
+![](assets/sf/image163.png)
 *Overview of the Columns tab on the Subjects screen*
 
 Column
 
-![](../assets/sf/image164.png)
+![](assets/sf/image164.png)
 *Overview of the standard column settings*
 
 #### Case type
@@ -259,7 +259,7 @@ A record can easily be copied with (Ctrl+Alt+Plus), only this is sometimes not d
 When copying rows from the grid with Ctrl+C, only columns are copied for which this option is turned on. Also, as a standard, when exporting data, only the columns for which this option is turned on will be exported.
 
 Performance
-![](../assets/sf/image165.png)
+![](assets/sf/image165.png)
 *Performance settings with Columns*
 
 When a choice is made to use certain logic mechanisms in Settings,  all columns are automatically given as a parameter. With the performance tab, it is possible to exclude certain columns if they are not required for the mechanisms.
@@ -268,7 +268,7 @@ When a choice is made to use certain logic mechanisms in Settings,  all columns 
 
 ### Look-up
 
-![](../assets/sf/image166.png)
+![](assets/sf/image166.png)
 *Overview of the Look-up settings for the Tables*
 
 It can be indicated for each field whether a look-up has to be displayed and which reference is used for this. It is indicated, as default with the look-up table, how this has to be presented. It is, however, possible to deviate from this for each column (reference). Furthermore, it can be indicated for each field whether the look-up presentation field has to be displayed with a combo box, a pop-up window or both. When the look-up table is displayed with a pop-up window, this can be the standard, but a variant can also be displayed.
@@ -283,7 +283,7 @@ The settings for the grid, form and card list can be changed in the components s
 
 Below, you will find the options to configure the grid of a table.
 
-![](../assets/sf/image167.png)
+![](assets/sf/image167.png)
 *Overview of a Grid within Components for a selected table*
 
 #### Sequence of fields
@@ -304,14 +304,14 @@ In principle, the column width is automatically determined by the Thinkwise list
 
 With the option *Display aggregation* and *Aggregation type* the totals in the grid can be displayed, such as the number of rows, minimum and maximum values and the sum or average of a column. These will be displayed in the end product under the corresponding list.
 
-![](../assets/sf/image168.png)
+![](assets/sf/image168.png)
 *Drop down list with the aggregation options*
 
 ### Form
 
 Below, you will find the options for configuring the form for a table. These options are also available when looking at the FromList, except the ones about the tab pages.
 
-![](../assets/sf/image169.png)
+![](assets/sf/image169.png)
 *Overview of a Form within Components for a selected table*
 
 #### Sequence of fields
@@ -342,17 +342,17 @@ Fields (with groups) can also be placed on a next tab. For this, the checkmark f
 
 > In the screenshot below, the table is translated with Project version. Subsequently, a column is placed on the next tab with the name Default settings.
 >
-> ![](../assets/sf/image170.png)
+> ![](assets/sf/image170.png)
 > *Example of tab bar with multiple tabs*
 
 ### Card list
 
-![](../assets/sf/image171.png)
+![](assets/sf/image171.png)
 *Overview of a Card list within Components for a selected table*
 
 Mainly, but not only, for Mobile, the screen type for column display is called *card list*. On the left, card list has room for data such as a photograph (see image) with three lines for extra information. This allows for more text to be displayed on a smaller area.
 
-![Kaartlijst](../assets/sf/image172.png)
+![Kaartlijst](assets/sf/image172.png)
 *Example of a card list screen type*
 
 ### Tree
@@ -363,21 +363,21 @@ A tree view can be created just by using a screen type which contains a TreeView
 
 Just like setting some properties for the grid or form, the tree is available for some modifications. The tree display column is the text presentation for the tree. When leaving blank, the look-up display column will be shown and the icon column will present the icon in front of the display column. There are two types to choose for the tree type, hierarchical and column, which will be explained later. A new feature is the default expanded property: the tree will automatically expand to the provided level of nodes.
 
-![](../assets/sf/image173.png)
+![](assets/sf/image173.png)
 *Tree properties*
 
 #### Hierarchy
 
 To create a hierarchical tree, it was previously necessary to create a self-reference which included all primary key values. The self-reference is no longer necessary and the only thing to do now is specify the parent column as seen in the next figure.
 
-![](../assets/sf/image174.png)
+![](assets/sf/image174.png)
 *Hierarchical tree on manager_id*
 
 #### Column grouping
 
 If a tree is needed based on column grouping, the sorting used to group the data on the sorted columns to create a tree. In the new version, it is possible to model on which sorted columns the tree has to group, which is done in the sorting modeler. A checkbox Group can be checked on a sorted column and all underlying sorted columns including the checked one will be grouped.
 
-![](../assets/sf/image175.png)
+![](assets/sf/image175.png)
 *Group data in a tree*
 
 There are also some changes to the user interface with regard to trees. These can be found in the chapter “Graphical User Interface (GUI)”
@@ -392,10 +392,10 @@ In the data component, it can be determined what has to happen with searching, f
 
 ### Filter and Search
 
-![](../assets/sf/image176.png)
+![](assets/sf/image176.png)
 *Setting search values for a table in Data*
 
-![](../assets/sf/image177.png)
+![](assets/sf/image177.png)
 *Setting filter values for a table in Data*
 
 For filter and search, the options are *Always*, *Advanced* or *Never*. The *Advanced* option affects the expansion of the search/filter screens.
@@ -416,7 +416,7 @@ A default sort can be specified for each table. You can sort on one or more colu
 
 Additionally, you can specify on which columns sorting may and may not be allowed. For example, because it concerns a large text column for which no index is defined.
 
-![](../assets/sf/image178.png)
+![](assets/sf/image178.png)
 *Setting sort values for a table in Data*
 
 ### Prefilters
@@ -475,7 +475,7 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 >  If the application is started in developer mode, the resulting query can be viewed in the debug screen.
 
-![](../assets/sf/image179.png)
+![](assets/sf/image179.png)
 *Setting a new prefilter with a query*
 
 ### Conditional formatting
@@ -484,7 +484,7 @@ In the grid and the form, the format of a cell or a row may be affected by speci
 
 Under conditional formatting, it is indicated by how the cell or row will look if all conditions are met. You can choose to modify the background color and/or the font. The definitions then still need to be configured.
 
-![](../assets/sf/image180.png)
+![](assets/sf/image180.png)
 *Set conditional formatting for a table in Data*
 
 > Expression fields can be used to model conditional formatting based on queries, for example by checking whether a date has expired.
@@ -497,7 +497,7 @@ You can indicate for each reference whether it may or may not be used as a look-
 
 Recursive look-up presentation resolving is done automatically by the GUI. When the last reference field in the look-up table itself has a look-up and the previous reference field is left blank, the presentation field of this field is used (recursive).
 
-![](../assets/sf/image181.png)
+![](assets/sf/image181.png)
 *Overview of Table Look-ups in Links*
 
 ### Details
@@ -506,21 +506,21 @@ Detail tabs for references can be turned on and off with the following screen. T
 
 Furthermore, you can specify the tab control ID. You have the choice from the tab controls that are specified in screen type.
 
-![](../assets/sf/image182.png)
+![](assets/sf/image182.png)
 *Overview of Details in a table*
 
 ### Tasks
 
 This is where the tasks are linked to a table. How to create tasks is described in paragraph 0.
 
-![](../assets/sf/image183.png)
+![](assets/sf/image183.png)
 *Overview of the links for a task*
 
 ### Reports
 
 This is where the reports are linked to a table. How to create reports is described in paragraph 7.7.
 
-![](../assets/sf/image184.png)
+![](assets/sf/image184.png)
 *Overview of report links for a table*
 
 ### Drag drop
@@ -537,7 +537,7 @@ By default, the drag-drop link is <span class="underline">not active</span>. The
 
 The user interface normally selects multiple rows in a grid or tree when dragging over the component. To change this behavior, a context-menu option is available to enable drag-drop. Drag-drop can be enabled by default in the model at the from-table or from-variant.
 
-![](../assets/sf/image185.png)
+![](assets/sf/image185.png)
 *Drag & Drop*
 
 The GUI will allow rows to be dropped on any component of the target subject. However, when the user hovers over a multirow-component of the target subject during drag-drop, the GUI will apply one of the following behaviors:
@@ -554,12 +554,12 @@ Context procedures are executed during the hovered navigation, after a short del
 
 This is a display of the links between tables and menu items. This displays which menu items are linked to a table. It is possible to modify this.
 
-![](../assets/sf/image186.png)
+![](assets/sf/image186.png)
 *Display of the menu item links for each table*
 
 ## Default settings
 
 In the *Default settings* tab page, the default project version level settings are displayed.
 
-![](../assets/sf/image190.png)
+![](assets/sf/image190.png)
 *Default settings for the tables tab*

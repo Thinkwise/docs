@@ -8,7 +8,7 @@ title: Service tiers
 
 This chapter describes the settings that fall under the **Service tier** and the **IAM Service tier** groups in the project version of a work project.
 
-![](../assets/sf/image318.png)
+![](assets/sf/image318.png)
 
 *Screenshot of the Project Version screen for specifying the Service Tier.*
 
@@ -62,7 +62,7 @@ The Java service tier consists of a Java JAX-WS Web Service and is built using t
 
 The Hibernate persistence framework is used for communication from the Web service to the database.
 
-### ![](../assets/sf/image319.png)Project layout
+### ![](assets/sf/image319.png)Project layout
 
 The default directory structure in a Maven project is that all source files should fall under the **.\\src\\main** directory. This directory has the following structure for the service tier project:
 
@@ -96,7 +96,7 @@ To build using the build.bat batch script, a Maven installation must be availabl
 
 If this is present, the script can be executed so that Maven can execute a clean and package. After a successful execution, the .war archive of the service tier, for instance for Tomcat, can be found in the **target** folder.
 
-![](../assets/sf/image320.png)
+![](assets/sf/image320.png)
 
 *Script which is executed by compiling the Java service tier*
 
@@ -108,25 +108,25 @@ Following the next few steps ensures the same result as the build.bat script.
 
 1.  Import the project into Eclipse.
 
-![](../assets/sf/image321.png)
+![](assets/sf/image321.png)
 
 *Eclipse*
 
 2.  Right-click on the pom.xml and go to *Run as -\> Maven build*.
 
-![](../assets/sf/image322.png)
+![](assets/sf/image322.png)
 
 *Run as -\> Maven build*
 
 3.  When this option is selected, a screen will appear where the Run configuration of the project can be specified. Think of a name for the configuration and enter the value *clean package *in *Goals:*.
 
-![](../assets/sf/image323.png)
+![](assets/sf/image323.png)
 
 *Run configuration of the specified project.*
 
 4.  When this configuration is executed, a .war archive will be created in the **target** directory, just as with the build.bat script.
 
-![](../assets/sf/image324.png)
+![](assets/sf/image324.png)
 
 *Target Folder*
 
@@ -149,7 +149,7 @@ Table 10: Custom library values in Java.
 
 The templates that are added to this control procedure can be assigned to the following program objects:
 
-![](../assets/sf/image325.png)![](../assets/sf/image326.png)
+![](assets/sf/image325.png)![](assets/sf/image326.png)
 
 *Screen shot of the Assign tab in the Control procedure screen*
 
@@ -187,7 +187,7 @@ The following can be found in the root of the C\# service tier folder generated 
 
 When the solution is opened (with administrative rights) in Visual Studio, the project will look as follows:
 
-- ![](../assets/sf/image327.png)The solution has an ASP.NET project with the specified service tier name.
+- ![](assets/sf/image327.png)The solution has an ASP.NET project with the specified service tier name.
 
 - Within this project there are various folders with the C\# source code files of the WCF web service.
 
@@ -203,7 +203,7 @@ At least .NET Framework v4.5 is required to compile the C\# service tier.
 
 If version 4.5 of the .Net Framework is installed, the build.bat script can be executed. All required packages will be downloaded by NuGet and the solution is built with MSBuild. When this is completed successfully, the required components to deploy the service tier on IIS are copied to a folder named **service_tier**.
 
-![](../assets/sf/image328.png)
+![](assets/sf/image328.png)
 
 *Compiling the built.bat script*
 
@@ -215,11 +215,11 @@ If the build.bat script does not work, the choice can be made to build the servi
 
 2.  Change the **Solution Configuration** to **Release**.
 
-![](../assets/sf/image329.png)
+![](assets/sf/image329.png)
 
 3.  Build the solution.
 
-![](../assets/sf/image330.png)
+![](assets/sf/image330.png)
 
 4.  Copy the following files to another directory:
 
@@ -248,7 +248,7 @@ Table 12: Custom library values in C\#.
 
 Templates, which can be assigned to this control procedure, are added to the following program objects:
 
-![](../assets/sf/image331.png)![](../assets/sf/image332.png)
+![](assets/sf/image331.png)![](assets/sf/image332.png)
 
 *Screen shot of the Assign tab in the Control procedure screen*
 
@@ -268,31 +268,31 @@ Below is an example with which the Json.NET package is added to the project.
 
 1.  Install the package in Visual Studio via the **Manage NuGet Packages screen** (to be accessed via the context menu of the service tier project in the solution explorer).
 
-> ![](../assets/sf/image333.png)
+> ![](assets/sf/image333.png)
 
 *Visual Studio*
 
 2.  Retrieve the reference from **[service_tier_name]\\[service_tier_name].csproj**.
 
-> ![](../assets/sf/image334.png)
+> ![](assets/sf/image334.png)
 
 *Visual Studio overview*
 
 3.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp_csproj_references** program object.
 
-> ![](../assets/sf/image335.png)
+> ![](assets/sf/image335.png)
 
 *Weave control procedure into the Software Factory*
 
 4.  Expand the NuGet configuration from **[service_tier_name]\\packages.config**.
 
-![](../assets/sf/image336.png)
+![](assets/sf/image336.png)
 
 *NuGet configuration*
 
 5.  Weave this information via a control procedure template in the functionality screen of the Software Factory in the **csharp_nuget_packages_config** program object.
 
-![](../assets/sf/image337.png)
+![](assets/sf/image337.png)
 
 *Weave control procedure into the Software Factory*
 

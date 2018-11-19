@@ -18,7 +18,7 @@ The functionality screen consists of six components:
 
 - Validation - This tab shows any validation messages regarding the selected business logic. 
 
-![](../assets/sf/functionality.png)
+![](assets/sf/functionality.png)
 *Functionality*
 
 ## Definitions
@@ -108,7 +108,7 @@ Most procedures have one template for weaving. Hence, the template ID and descri
 
 The source code is subsequently defined in the Code tab of the form.
 
-![](../assets/sf/image271.png)
+![](assets/sf/image271.png)
 *Adding code to the Template tab*
 
 The code can be written directly in the Template tab and will be displayed as is usual with an editor such as Notepad++ or SQL Server Management Studio. If the preference is to work directly in the editor itself, you can click on the button next to the code template. A linked editor will open. Changes to the file are automatically reported back to the Software Factory.
@@ -144,31 +144,31 @@ A parameter value can also be empty and by checking the *Ignore if empty* check 
 
 Templates can be assigned to one or more logic concepts in the *Assigning* tab page. The left column shows all the program objects available for the selected concept. After selecting a program object, the contents of the program object (*program object items*) are displayed on the bottom right. By using the arrow down button, the template can be woven into the program object.
 
- ![](../assets/sf/image274.png) 
+ ![](assets/sf/image274.png) 
 
 Logic concepts can be disabled through the settings found in tables, tasks, reports and process actions. This applies for default, layout, context and process program objects.
 
 Disabled concepts are displayed in italics. No code is generated for disabled logic concepts and they are not used in the end product. When assigning a template to a disabled concept, this concept will be automatically enabled.
 
-![](../assets/sf/image275.png)
+![](assets/sf/image275.png)
 *Assigning control procedure templates*
 
 A template can be assigned to the same program object item more than once. To do this, the program object item ID of the existing assignment first has to be modified. This can be done in the list of program object items. Also, the sequence of the templates can be changed here by changing the sequence number.
 
 If a template has parameters, these are automatically created on the *Parameters* tab. An icon on the tab indicates that there are still parameters without a value. If these are not automatically generated, they can still be generated with the *Generate parameters* task.
 
-![](../assets/sf/image277.png)
+![](assets/sf/image277.png)
 *Parameter values required*
 
 > When editing templates with an external editor, selecting a different template will disconnect the temporary file that is created from the Software Factory and add the message `This file is disconnected` to the top of the file. Trying to import template code containing this message will display an error:
 >
-> ![](../assets/sf/image278.png)
+> ![](assets/sf/image278.png)
 
 ### 4. Apply the functionality
 
 If a new template has been woven or the template source code has been changed, then the source code of the program objects have to be regenerated. This can be done by clicking on the *Generate code* button in the *Result* tab page.
 
-![](../assets/sf/image279.png)
+![](assets/sf/image279.png)
 *Result tab page*
 
 The generated program objects can subsequently be deployed to the database by clicking the *Execute* button. 
@@ -179,7 +179,7 @@ Using the *Open* and *Import* buttons, it is easy to modify an assigned template
 
 When importing a modified program object, a pop-up dialog clearly shows the changes.
 
-![](../assets/sf/image280.png)
+![](assets/sf/image280.png)
 *Import a program object*
 
 After clicking *Execute*, the Software Factory will parse the program object and update the modified templates automatically.
@@ -188,12 +188,12 @@ After clicking *Execute*, the Software Factory will parse the program object and
 
 After creating or modifying business logic, the control procedure can be marked for review using the *Ready for review* task. 
 
-![](../assets/sf/ready_for_review.png)
+![](assets/sf/ready_for_review.png)
 *Ready for review task*
 
 This will set the status of the control procedure to *Review* and create a changelog record. The code changelogs, including the code changes, can be found in the *Code changelog* tab page. 
 
-![](../assets/sf/image283.png)
+![](assets/sf/image283.png)
 
 The control procedure will show up in the [*Code review*](code_review) screen, ready to be reviewed. 
 

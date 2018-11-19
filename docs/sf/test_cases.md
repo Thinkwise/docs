@@ -38,7 +38,7 @@ By grouping test cases in a test suite for each process or module, it can quickl
 
 ### Record test cases
 
-![](../assets/sf/image293.png)
+![](assets/sf/image293.png)
 
 Test cases can be easily created by recording the tests in the end product. The recording of user actions is done in the end product in the developer mode. The *Test case recorder* button can be found in the *Developer* tab of the ribbon. 
 
@@ -56,7 +56,7 @@ Next, select the table, task or report you want to perform the test on. This ent
 
 The default active checkmark can be enabled if it is required that the test case is enabled by default in the test console.
 
-![](../assets/sf/image294.png)
+![](assets/sf/image294.png)
 *Creating a test case*
 
 #### Test steps
@@ -65,7 +65,7 @@ A number of test steps can be carried out for each test case. Test steps represe
 
 When selecting an action, a number of fields that are required for this action will become available. If the input values are optional and are left empty, the user interface will enter an empty value.
 
-![](../assets/sf/image295.png)
+![](assets/sf/image295.png)
 *Adding test steps*
 
 A § (paragraph) separated input value can be entered for the user action *Go to row*. The paragraph sign serves as a separator to specify a composite primary key. For example: `10§2`
@@ -118,7 +118,7 @@ Just as with recording, the end product should be started in developer mode. The
 
 The GUI tries to execute test cases as fast as possible. However, this can no longer be followed by eye. It is therefore possible to follow the waiting times between the steps via the test console settings. In this way, the tester can monitor the progress of the test. Additionally, you can indicate which messages should be captured. The test results are fed back by default to the Software Factory. This can be disabled manually.
 
-![](../assets/sf/image296.png)
+![](assets/sf/image296.png)
 *Overview of test cases with the underlying test steps*
 
 ### Results
@@ -127,7 +127,7 @@ In the Software Factory, the results of the execution of one or more test cases 
 
 Furthermore, the test coverage analysis and the test run analysis can be used to gain more insight into the testing. For example, it is possible to analyze which test cases have been executed, the duration of the runs and what the results of the test cases were.
 
-![](../assets/sf/image299.png)
+![](assets/sf/image299.png)
 *Overview of the test run results*
 
 

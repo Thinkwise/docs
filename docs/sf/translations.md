@@ -4,9 +4,9 @@ title: Translations
 
 All strings that are used in the user interfaces can be translated, such as labels, buttons, tables and columns. For every translatable string, a *translation object* is generated for which a translation can be entered in the *Translations* screen or the *Translation* tab page found in many other screens.
 
-To manually generate translation objects for new objects, execute the *Generate translation objects* ![](../assets/sf/image214.png)task.
+To manually generate translation objects for new objects, execute the *Generate translation objects* ![](assets/sf/image214.png)task.
 
-![](../assets/sf/translations.png)
+![](assets/sf/translations.png)
 
 *Translations screen*
 

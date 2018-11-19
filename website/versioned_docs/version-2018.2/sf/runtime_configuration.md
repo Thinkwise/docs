@@ -10,5 +10,5 @@ A runtime configuration provides the environment in which an application is star
 
 Runtime configurations can have different [extended properties](extended_properties) and [file storage locations](../kb/file_storage) than the default configuration. Settings that deviate from the default configuration are shown in bold.
 
-![1537777102204](../assets/sf/1537777102204.png)
+![1537777102204](assets/sf/1537777102204.png)
 *Runtime configuration overview*

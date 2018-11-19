@@ -7,14 +7,14 @@ original_id: screenshots
 Screenshots for Mobile app submission in the App Store and Google Play can be made using the Thinkwise viewer.
 
 1. Start the viewer in debug mode using `debug.bat`
-1. Click the *Toggle device toolbar* icon - ![1538559504333](../assets/sf/1538559504333.png)
+1. Click the *Toggle device toolbar* icon - ![1538559504333](assets/sf/1538559504333.png)
 1. Select an existing device or add a new device using *Edit...*
-1. Optionally select an orientation using the *Rotate* icon - ![1538559533885](../assets/sf/1538559533885.png)
-1. Open the menu - ![1538559584191](../assets/sf/1538559584191.png)
+1. Optionally select an orientation using the *Rotate* icon - ![1538559533885](assets/sf/1538559533885.png)
+1. Open the menu - ![1538559584191](assets/sf/1538559584191.png)
 1. Take a screenshot using *Capture full size
    screenshot*
 
-![1538559702239](../assets/sf/1538559702239.png)
+![1538559702239](assets/sf/1538559702239.png)
 
 ## Required images
 

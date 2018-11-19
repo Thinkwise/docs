@@ -28,14 +28,14 @@ The data and information from the base projects will be copied into the current 
 
 After the base projects have been copied, the dynamic and static control procedures are executed. 
 
-![1537187079301](../assets/sf/1537187079301.png)
+![1537187079301](assets/sf/1537187079301.png)
 *Generation definition*
 
 Only one generation for each project version can be carried out at the same time. This avoids conflicts during the generation. If during a generation a second generation is started, a message is displayed that the generation of the respective project version is locked.
 
 If desired, the project version lock can be removed via the *Reset lock* task in the ribbon or via the context menu.
 
-![](../assets/sf/image307.png)
+![](assets/sf/image307.png)
 
 ## 2. Validate definition
 
@@ -47,7 +47,7 @@ See [Validation](validation.html) for more information about the validation.
 
 After the definition has been generated and validated, the actual source code can be generated.
 
-![](../assets/sf/image308.png)*Generate source code*
+![](assets/sf/image308.png)*Generate source code*
 
 The generated code is stored in the Software Factory. The code can also be written to disk:
 
@@ -90,7 +90,7 @@ It is possible to use the *Smart* generation first and subsequently expand or re
 
 The program objects' filters determine the level of detail where you can view and enable or disable the code. The most detailed level might cost some time to load, depending on the size of the model.
 
-![](../assets/sf/image309.png)
+![](assets/sf/image309.png)
 *Checking and unchecking components on manual generation*
 
 It is possible to group the tree with program objects for each model object. In this way, all code of a view or a table can quickly be  executed.
@@ -112,7 +112,7 @@ To execute the code:
 3.  Execute the code by clicking the *Execute* button.
 4.  In order to effect any offline (JavaScript) logic, press the *Offline logic* button at the bottom.
 
-![1537187969469](../assets/sf/1537187969469.png)
+![1537187969469](assets/sf/1537187969469.png)
 *Execute source code*
 
 When the generation has been executed out and all code has been executed and/or compiled, the end product is ready to be used. 

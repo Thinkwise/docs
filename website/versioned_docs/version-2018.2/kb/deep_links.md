@@ -10,14 +10,14 @@ A deep link is a link which does not just point to the location of an applicatio
 
 Deep linking can be turned on for any process flow by simply selecting a process flow, navigating to the *Deep linking* tab and checking the *Deep linking allowed* box.
 
-![Enabling deep linking for a process flow.](../assets/sf/image248.png)
+![Enabling deep linking for a process flow.](assets/sf/image248.png)
 *Deep linking*
 
 ### Using variables in a deep link
 
 It is possible to provide values for variables in the deep link to allow more dynamic scenarios to be implemented, such as navigating to a specific record. If the variable needs to be allowed in a deep link, simply check the 'Available in deep link' box for the variable. Alternatively, check the 'Mandatory in deep link' box, if deep link needs to be mandatory for all new process flows.
 
-![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/deep_link2.png](../assets/sf/image249.png)
+![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2017/12/deep_link2.png](assets/sf/image249.png)
 *Process variable*
 
 **Preparing and validating deep links**

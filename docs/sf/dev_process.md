@@ -29,7 +29,7 @@ The *Projects* menu contains information about all available projects, versions 
 
 The *Overview* screen contains all projects that have been produced in the Software Factory. New projects are also created here. Along with the basic information about the project, the versions and branches of the projects can also be created and viewed here. *Full model* gives access to the complete model of a specific project version. With *Merging*, conflicts between branches can be analyzed and resolved before a branch is merged. The *Difference analysis* provides an overview of all the differences between two project versions.
 
-![](../assets/sf/image9.png)
+![](assets/sf/image9.png)
 *Project overview screen*
 
 ## Specification
@@ -38,10 +38,10 @@ The business processes and requirements are specified during the analysis phase,
 
 The requirements are used to continuously monitor the scope of the project. The *Design specifications* provide a to-do list for the modeling phase. The Software Factory automatically maintains the traceability between the requirements and the model. It is therefore strongly recommended to specify the requirements within the Software Factory, even though this is not compulsory.
 
-![](../assets/sf/image10.png)
+![](assets/sf/image10.png)
 *Process analysis - Requirements*
 
-![](../assets/sf/image11.png)
+![](assets/sf/image11.png)
 *Process analysis - BPMN diagram*
 
 ## Data
@@ -55,7 +55,7 @@ The following components are specified during the data modeling phase:
 
 These components form the basis for the database without it being necessary to program them.
 
-![](../assets/sf/image12.png)
+![](assets/sf/image12.png)
 *Data model design*
 
 ## User interface
@@ -66,14 +66,14 @@ During this phase the user interface of the application is modeled. A demo can b
 
 In this phase, process flows are added to guide the users through the applications' processes. Tasks can be created to automate user actions and custom designed reports can be added to generate, print and email documents.
 
-![process_flow](../assets/sf/process_flow.png)
+![process_flow](assets/sf/process_flow.png)
 *Process flow diagram*
 
 ## Business logic
 
 This phase of the project consists of defining the business logic. Business logic that can't be modelled is created using source code templates. These templates are woven into the logic concepts in the end product based on the model definitions.
 
-![](../assets/sf/image14.png)
+![](assets/sf/image14.png)
 *Business logic code template*
 
 ## Quality control
@@ -82,7 +82,7 @@ This phase of the project consists of defining the business logic. Business logi
 
 The programmed templates can be reviewed by a co-developer to ensure a high quality.
 
-![code review](../assets/sf/code_review.png)
+![code review](assets/sf/code_review.png)
 *Code review*
 
 ### Test cases
@@ -97,19 +97,19 @@ A test case is coupled to the templates that are then used for testing. Checks a
 
 Test cases only need entering once and can subsequently be executed automatically with every new project version. This guarantees that existing functionality continues to work despite any additions and/or modifications.
 
-![](../assets/sf/image15.png)
+![](assets/sf/image15.png)
 *Overview of the Test cases screen with a number of test suites*
 
 ### Validation
 
 The project can be validated completely or per component with the Validator. The Software Factory is delivered with hundreds of standard validations, however, company specific validations can also be added. Executing the validations automatically guarantees the quality of the models.
 
-![](../assets/sf/image13.png)
+![](assets/sf/image13.png)
 *Validations executed for one of the modelers*
 
 ## Deployment
 
 The end product is taken into use during this phase. This phase has a special place within the entire project. Where logically the creation phase would be the last phase, since the end product is taken into production during this phase, this does not have to be the last phase with the Software Factory. An application can already be created after modeling and validating the data model.
 
-![](../assets/sf/image17.png)
+![](assets/sf/image17.png)
 *Generating source code during the code generation*

@@ -7,7 +7,7 @@ original_id: validation
 Thinkwise provides a comprehensive set of validations with the Software factory. Validations are carried out on the model to check for errors. These errors are pre-defined and specified in a base project. Consider, for instance, a requirement that a primary key always has to be at the top in a table and that each table has to have a standard sort sequence. It is also possible to create your own, company or product-specific validations.
 
 ![
-1537185483996](../assets/sf/1537185483996.png)
+1537185483996](assets/sf/1537185483996.png)
 *Validation screen*
 
 Every screen in the Software Factory has a *Validations* tab page where the validations that are specific for modeler can be executed. The *Validation* screen allows you to perform a full validation of your application before deployment.
@@ -28,11 +28,11 @@ After execution, an icon indicates the status of each validation:
 
 |           Pictogram            | Status      | Description                       |
 | :----------------------------: | :---------- | --------------------------------- |
-| ![](../assets/sf/image256.png) | OK          | No problems found                 |
-| ![](../assets/sf/image257.png) | Information | Informational, no action required |
-| ![](../assets/sf/image258.png) | Warning     | Possible problem                  |
-| ![](../assets/sf/image259.png) | Error       | Problem must be resolved          |
-| ![](../assets/sf/image260.png) | Unknown     | Validation not executed           |
+| ![](assets/sf/image256.png) | OK          | No problems found                 |
+| ![](assets/sf/image257.png) | Information | Informational, no action required |
+| ![](assets/sf/image258.png) | Warning     | Possible problem                  |
+| ![](assets/sf/image259.png) | Error       | Problem must be resolved          |
+| ![](assets/sf/image260.png) | Unknown     | Validation not executed           |
 
 ### Filters
 

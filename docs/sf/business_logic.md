@@ -6,7 +6,7 @@ Business logic of the application that cannot be modeled can be added using code
 
 Business functionality can be integrated into various business logic concepts.
 
-![](../assets/sf/image266.png)
+![](assets/sf/image266.png)
 *Schematic overview of the various business logic concepts*
 
 Explanation of the different concepts:
@@ -144,7 +144,7 @@ where project_id = @project_id
 
 This is presented as follows in the end product:
 
-![](../assets/sf/image268.png)
+![](assets/sf/image268.png)
 
 ### Process
 

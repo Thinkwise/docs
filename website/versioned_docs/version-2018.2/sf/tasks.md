@@ -6,7 +6,7 @@ original_id: tasks
 
 A task represents business logic that can be executed manually by the user. A task can be linked to one or more tables and will be displayed in the ribbon, the context menu and possibly in the task bar. Columns of the table can be linked to the parameters of the task. The values of the linked columns of the active record are then passed on to the relevant parameters.
 
-![](../assets/sf/image191.png)
+![](assets/sf/image191.png)
 *An example task popup*
 
 In addition, a reference can be established from a parameter to a look-up table. In this way, a parameter gets a drop-down list and a button in order to be able to select another value in the pop-up.
@@ -54,14 +54,14 @@ Represents a dummy task, which can be used to in a process flow or to display a 
 
 If *Ask confirmation* is checked, a [message](messages#message-options) can be selected that is displayed before executing the task. The task is executed when a message option with a status code of zero or higher is chosen.
 
-![](../assets/sf/image193.png)
+![](assets/sf/image193.png)
 *Task with confirmation message*
 
 ### Progress
 
 When performing long-running tasks or tasks in combination with multi-selection, a progress dialogue is displayed. In addition, the progress percentage can also be displayed from (SQL Server) stored procedures while a procedure is being executed.
 
-![](../assets/sf/image196.png)
+![](assets/sf/image196.png)
 *Progress Percentage of executing a task*
 
 To display the percentage, the procedure 'tsf_send_progress' should be called from the SQL code:
@@ -88,7 +88,7 @@ The progress in percentages. By setting the percentage to *-1*, the progress bar
 
 Tasks can take a long time to process. There are four options to give instructions about what to do with these tasks.
 
-![](../assets/sf/image197.png)
+![](assets/sf/image197.png)
 *Task with await result options*
 
 1.  Yes - The user has to wait for the result and a progress indicator is shown.
@@ -102,12 +102,12 @@ For Web, this means that the long-term actions no longer cause a request timeout
 
 After creating a task, parameters can be added to the task that define the input values for the task. Parameters are in a specific sequence and are linked to a domain for the data type and the control.
 
-![](../assets/sf/image194.png)
+![](assets/sf/image194.png)
 *Parameter settings when creating a task*
 
 Task parameters can be formatted in the same way as forms of tables are formatted. Column type, sequence number, label width, field width, field height, number of positions further, field in next group, field in next column and field in next tab are available for this. 
 
-![](../assets/sf/image195.png)
+![](assets/sf/image195.png)
 
 *Task parameter settings*
 

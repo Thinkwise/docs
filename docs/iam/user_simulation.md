@@ -10,10 +10,10 @@ When a user with *Simulator* rights logs on to the application, a button is disp
 
 To simulate a user, enter your own credentials and then click the button to reveal the user simulation input field.
 
-![](../assets/iam_admin/image7.png)
+![](assets/iam_admin/image7.png)
 
 Enter the name of the user you want to simulate and press *OK*.
 
-![](../assets/iam_admin/image8.png)
+![](assets/iam_admin/image8.png)
 
 If you are allowed to simulate the specified user, the user interface will now load the rights and user preferences of that user.

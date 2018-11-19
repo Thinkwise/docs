@@ -4,7 +4,7 @@ title: Developer mode
 
 When the end product is started in [developer mode](configuration_file#execution-mode), extra options become available in the *Developer* ribbon tab page. 
 
-![1537780143381](../assets/sf/1537780143381.png)
+![1537780143381](assets/sf/1537780143381.png)
 *Developer ribbon*
 
 These options are:
@@ -19,7 +19,7 @@ These options are:
 
 - Location (*Alt+F1*) - Shows detailed information of the current screen and the focused component.
 
-  ![](../assets/sf/image312.png)
+  ![](assets/sf/image312.png)
   *Location popup*
 
 - Translate - Switches between translated and untranslated mode.

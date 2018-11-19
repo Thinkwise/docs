@@ -10,22 +10,22 @@ When a new menu is created, menu groups must first be created within this menu. 
 
 The image below shows an example of a tree menu on the left and a quick launch menu on the right.
 
-![1538567977479](../assets/sf/1538567977479.png)
+![1538567977479](assets/sf/1538567977479.png)
 *Overview of the tree menu and quick launch menu*
 
 By setting the *Show filter* checkbox in the Menu tab, it is possible to show a filter bar on these menus. This makes it is easy to find a desired menu item in the menu.
 
-![](../assets/sf/image106.png)
+![](assets/sf/image106.png)
 *Setting the filter option*
 
-![](../assets/sf/image107.png)
+![](assets/sf/image107.png)
 *Filtering in the menu*
 
 ## Tiles menu
 
 For the tiles menu, along with creating the groups with items, the size at which the items must be displayed can also be defined. A choice can be made from four sizes.
 
-![](../assets/sf/image108.png)
+![](assets/sf/image108.png)
 *Tile sizes*
 
 During set up, the groups and items are created, and it is indicated how large the items have to be while in addition, a different image can be selected for each tile. This can be done in the *Tile group* tab page. Subsequently, the GUI will itself organize the items from top left to bottom right according to the room that the screen has available.
@@ -38,34 +38,34 @@ In this way, for example, a different menu can be created for Mobile for which t
 
 The platforms are initially determined in the Software Factory, but can also be authorized later in the Intelligent Application Manager. It is therefore possible to make a GUI application for specific user groups available via Windows, Web or Mobile.
 
-![](../assets/sf/image109.png)
+![](assets/sf/image109.png)
 *Platform tab page*
 
 ## Accessible objects
 
 Via the *Accessible objects* tab page, the developer can see via which routes a specific object, task or report can be accessed in the system. This can also support the developer when checking authorization, for instance, whether a table is accessible that should not be accessible.
 
-![](../assets/sf/image110.png)
+![](assets/sf/image110.png)
 *Accessible objects tab page*
 
-By clicking on the *Investigate accessible objects*![](../assets/sf/image111.png) task, the pop-up below opens. It can be indicated here for which platform the shortest path has to be determined to a table, report, task or variant.
+By clicking on the *Investigate accessible objects*![](assets/sf/image111.png) task, the pop-up below opens. It can be indicated here for which platform the shortest path has to be determined to a table, report, task or variant.
 
-![](../assets/sf/image112.png)
+![](assets/sf/image112.png)
 *Task to determine the shortest path to an object*
 
 The result then shows via which steps the object can be accessed.
 
-![](../assets/sf/image113.png)
+![](assets/sf/image113.png)
 *Steps when determining the shortest path*
 
-By clicking on the table, information about this table appears on the right, and this can be modified. An additional function that becomes available when this table is selected is the *Expand* ![](../assets/sf/image114.png) task. By clicking on this, the following tasks, details, look-ups and reports of the selected table are displayed.
+By clicking on the table, information about this table appears on the right, and this can be modified. An additional function that becomes available when this table is selected is the *Expand* ![](assets/sf/image114.png) task. By clicking on this, the following tasks, details, look-ups and reports of the selected table are displayed.
 
-![](../assets/sf/image115.png)
+![](assets/sf/image115.png)
 *Expanding a path*
 
 Sometimes you know up to what level you want to expand. If this is the case, it is possible to insert the depth in the pop-up.
 
 It is possible to expand to up to nine levels. However, when a new level would cause the amount of nodes introduced in the tree to be more than 1000, the expansion will be stopped at the current level.
 
-![](../assets/sf/image116.png)
+![](assets/sf/image116.png)
 *Investigate reachable objects*

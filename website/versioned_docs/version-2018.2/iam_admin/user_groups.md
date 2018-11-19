@@ -12,7 +12,7 @@ It is not uncommon to have different types of groups, with users being a member 
 
 The *User groups* screen shows an overview of the available user groups. New user groups can be created by clicking the *Add* button in the ribbon or below the form. 
 
-![1537871291126](../assets/sf/1537871291126.png)
+![1537871291126](assets/sf/1537871291126.png)
 
 Different types of user groups are available:
 
@@ -30,7 +30,7 @@ The *Authorization* tab page of the *User groups* screen shows an overview of al
 
 A checkbox next to the application indicates if any roles are assigned to the user group.
 
-![](../assets/iam_admin/image12.png)
+![](assets/iam_admin/image12.png)
 *Linking roles to user groups*
 
 ### Users
@@ -39,7 +39,7 @@ The *Users* tab page shows a list of all users that are members of the selected 
 
 When adding a user to a group, it is possible to define the start and end date of the group membership. The user will only be granted the user group rights while the current date is within the membership period.
 
-![](../assets/iam_admin/image13.png)
+![](assets/iam_admin/image13.png)
 *User group user*
 
 ### Group owners

@@ -6,12 +6,12 @@ original_id: reports
 
 Reports have a similar structure to tasks but instead of starting a task, a report is printed, previewed or exported. The reports themselves can be created with a reporting tool, such as DevExpress Reports, Crystal Reports, i-net Clear Reports, SQL Server Reporting Services (SSRS) or Word.
 
-![](../assets/sf/image199.png)
+![](assets/sf/image199.png)
 *Reports screen*
 
 The structure of reports is analogous to that of tasks. Parameters are defined for a report, and look-up functionality is provided through references.
 
-![](../assets/sf/image200.png)
+![](assets/sf/image200.png)
 *Example report popup*
 
 ## Creating a report
@@ -38,7 +38,7 @@ DevExpress Reports can display any styled and formatted text, such as RTF and HT
 
 The same as for [tasks](tasks#windows-command) but with the name of the parameter in the *File specification* field. For example, to link in an existing pdf as a report.
 
-![](../assets/sf/image201.png)
+![](assets/sf/image201.png)
 *General settings when creating a report*
 
 #### GUI code
@@ -89,7 +89,7 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 - Select the correct document to which the Macro must be linked:
 
-![](../assets/sf/image202.png)
+![](assets/sf/image202.png)
 *Available options of macros in a drop down list*
 
 - Click on the *Create* button
@@ -160,7 +160,7 @@ Depending on the environment in which the reports are generated, these can be ex
 
 Local reports work in the same way as other report types, such as Crystal Reports. The report is generated on the basis of the RDL file that is specified for the report in the file specification field, for which use is made of the end application database connection. This means that the connection string that is specified as Datasource for any Data Sets is ignored in the RDL file.
 
-![](../assets/sf/image203.png)
+![](assets/sf/image203.png)
 *Specify SSRS (local) file specification*
 
 ##### SSRS (Server)
@@ -171,7 +171,7 @@ The report server can run in *native mode* or *SharePoint*. Native mode is the d
 
 Reports that are generated on a report server use the connection string that is assigned for each Datasource to retrieve the Data Seta. Ensure that the reports that are used in a test environment have the correct connection string when this is rolled out to the live environment.
 
-![](../assets/sf/image204.png)
+![](assets/sf/image204.png)
 *Specify SSRS (Server) file specification*
 
 Local SSRS reports in an SF application support the following report (export) actions:
@@ -241,7 +241,7 @@ A report consists of the following basic components:
 
 Creating report parameters works in the same way as creating task parameters. An additional feature for reports is to link parameters to properties of the report (for instance the *action*, *printer* and *export location*).
 
-![](../assets/sf/image205.png)
+![](assets/sf/image205.png)
 *Example of report parameters*
 
 By linking a report parameter to a report property, these properties can be used in defaults and layouts and also be placed on the right location in the correct group.
@@ -294,7 +294,7 @@ A report can be included in several menus. If a report is linked to a table, it 
 
 When the report is fully defined within the Software Factory, a preview can be viewed on the screen in the user interface.
 
-![](../assets/sf/image206.png)
+![](assets/sf/image206.png)
 *Example of a report preview*
 
 

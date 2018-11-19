@@ -8,10 +8,10 @@ A domain always contains a data type and possibly a length and precision. A doma
 
 Several default settings for columns can also be provided. An example of this is the *Mandatory* field. If this is checked, new columns created with this domain are also mandatory by default. You can still uncheck this option on a per column basis.
 
-![](../assets/sf/domains_2.png)
+![](assets/sf/domains_2.png)
 *Overview of the Domains screen*
 
-![](../assets/sf/image86.png)
+![](assets/sf/image86.png)
 *Adding elements to a domain*
 
 ## Controls
@@ -68,7 +68,7 @@ Domain elements have to be defined for the *COMBO* and *RADIO BUTTON* controls. 
 
 If you select the IMAGE_COMBO control, an image must be added to the elements. This replaces the text.
 
-![](../assets/sf/image189.png)
+![](assets/sf/image189.png)
 *An example of using images in domain elements*
 
 ### Control action buttons
@@ -79,5 +79,5 @@ Some fields are always read only, used only to show data. The *Show action butto
 - When editable
 - Always
 
-![](../assets/sf/image87.png)
+![](assets/sf/image87.png)
 *Control with action button Always*

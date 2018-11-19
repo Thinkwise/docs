@@ -52,5 +52,5 @@ It's always possible to start and complete transactions manually in code. Using 
 
 Depending on the type of subroutine and the platform of the subroutine, various options are available to change the behaviour of the subroutine.
 
-![1538567977479](../assets/sf/subroutine_option.png)
+![1538567977479](assets/sf/subroutine_option.png)
 *A procedure on SQL Server using a subroutine option to always execute as a system administrator*

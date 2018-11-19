@@ -6,9 +6,9 @@ original_id: themes
 
 The theme (style) of the user interface is also defined in the model. The theme is related to colors, fonts and images and is defined for all components of the user interface.
 
-To apply themes that transcend a project, it is possible to *Import* and *Export* themes using the ![](../assets/sf/image215.png) tasks. The export task generates XML for a theme; the import task can import this XML or read the theme from another project version in the same Software Factory.
+To apply themes that transcend a project, it is possible to *Import* and *Export* themes using the ![](assets/sf/image215.png) tasks. The export task generates XML for a theme; the import task can import this XML or read the theme from another project version in the same Software Factory.
 
-![](../assets/sf/image216.png)
+![](assets/sf/image216.png)
 *Themes*
 
 ## General
@@ -19,7 +19,7 @@ The general theme settings, such as the background color and the scrollbar, are 
 
 When tabs are opened from the menu, they can be active (selected) or inactive (not selected). The tab colors in this instance and the colors when you move over the tab can be set here.
 
-![](../assets/sf/image218.png)
+![](assets/sf/image218.png)
 *Tab in theme*
 
 ### Tab
@@ -30,7 +30,7 @@ Where in the document component, the tab color can be set for colors opened from
 
 There can be chosen from the following options:
 
-![](../assets/sf/image219.png)
+![](assets/sf/image219.png)
 *header method options*
 
 - Default - The default is unchanged.
@@ -39,24 +39,24 @@ There can be chosen from the following options:
 
 - Manual - Manual padding in pixels around the header text.
 
-![](../assets/sf/image220.png)
+![](assets/sf/image220.png)
 *Tab with manual height*
 
 #### Tab lines
 
 It is possible to set the color of tab content lines and tab header lines.
 
-![](../assets/sf/image221.png)
+![](assets/sf/image221.png)
 *Tab with transparent lines*
 
 #### Disabled tabs
 
 Disabled tabs are styled by the GUI, by default. It is possible to manually style these tabs in the SF.
 
-![](../assets/sf/image222.png)
+![](assets/sf/image222.png)
 *Disabled tab Code changelog*
 
-![](../assets/sf/image223.png)
+![](assets/sf/image223.png)
 *Tab color settings theme*
 
 The colors for the lines surrounding the tabs can be modified here. It is, for example, possible to make the tab header color a dark gray and the content border white (same as the background color). This significantly reduces the amount of lines on the screen in nested tabs.
@@ -65,16 +65,16 @@ The colors for the lines surrounding the tabs can be modified here. It is, for e
 
 The color is set for the background of the application on the background tab. This background is displayed when no tabs are open. You can also set an image as a full screen background image by expanding it to full screen size. Be aware that this might cause some distortion of the image.
 
-![](../assets/sf/image224.png)
+![](assets/sf/image224.png)
 *Add an image in the theme*
 
 ### Document
 
 The background colors, which are displayed when a tab is opened, can be defined here (shown in violet in the figure below).
 
-![](../assets/sf/image225.png)
+![](assets/sf/image225.png)
 
-![](../assets/sf/image226.png)
+![](assets/sf/image226.png)
 *Document theme settings and the result*
 
 The splitter color, which is visible for example between a grid, a form and an image, can also be set here.
@@ -91,14 +91,14 @@ This is used to indicate the background color and the color of the scrollbar.
 
 The colors for the top and bottom of the application can be selected for the mobile application.
 
-![](../assets/sf/image227.png)
+![](assets/sf/image227.png)
 *Setting the theme for mobile*
 
 ### Application list
 
 This is where the colors of the applications at the bottom of the menu are styled.
 
-![](../assets/sf/image228.png)
+![](assets/sf/image228.png)
 *Application list style*
 
 ### Splash screen
@@ -107,7 +107,7 @@ Setting the colors and logo for the splash screen is something that takes place 
 
 However, you can specify here which components should and should not be displayed on the splash screen. The 'Button' component has not yet been implemented in the current Software Factory generation.
 
-![](../assets/sf/image229.png
+![](assets/sf/image229.png
 *Setting splash theme*
 
 ### Badge
@@ -122,12 +122,12 @@ In the navigation section, it is possible to set every style option related to n
 
 When the colors are set for the ribbon, you can choose to set a general background color. In addition, you can set a mouseover color for a segment or for just a button
 
-![](../assets/sf/image230.png)
+![](assets/sf/image230.png)
 *Theme settings for the ribbon*
 
 > The color that is selected for the ribbon will appear behind an icon of a task, pre-filter, etc. in the ribbon within the work area.
 
-![](../assets/sf/image231.png)
+![](assets/sf/image231.png)
 
 ### Quickbar
 
@@ -147,7 +147,7 @@ The settings for the tile menu, tile groups and individual tiles can be specifie
 
 The changes made in the menu component will affect the bar above the ribbon of the application which hold the name of the application.
 
-![](../assets/sf/image232.png)
+![](assets/sf/image232.png)
 *Bar above the ribbon of the application*
 
 ## Components
@@ -160,7 +160,7 @@ When setting up the grid, various components can be modified for a grid view. Fo
 
 > If transparent is chosen in the 'line' component, the rows in the grid will be colored alternately in the color of the background and in a shade darker.
 
-![](../assets/sf/image233.png)
+![](assets/sf/image233.png)
 *Grid view with alternating colors*
 
 In the following sub tabs, you can specify the group colors, row colors and the focus cell colors. These can be set for the active row, the selected row and for a mouse over.
@@ -169,15 +169,15 @@ In the following sub tabs, you can specify the group colors, row colors and the 
 
 It is possible to style the grid aggregation (summary), for example:
 
-![](../assets/sf/image234.png)
+![](assets/sf/image234.png)
 
 ### Form
 
 A color can be set for the background and the border of the form. In addition, the lines that appear under a group label can also be modified.
 
-![](../assets/sf/image235.png)
+![](assets/sf/image235.png)
 
-![](../assets/sf/image236.png)
+![](assets/sf/image236.png)
 
 It is possible to set border color, background color and font color of form fields in edit and non-edit mode.
 
@@ -199,10 +199,10 @@ As shown in previous paragraphs, there are many different options available when
 
 The figures below show an example of a strong visual theme and a minimalist theme.
 
-![](../assets/sf/image237.png)
+![](assets/sf/image237.png)
 *A theme that is out of balance.*
 
-![](../assets/sf/image238.png)
+![](assets/sf/image238.png)
 *A minimalist theme*
 
 ## Colors and Fonts used
@@ -211,7 +211,7 @@ When creating a theme, it is recommended to use a limited set of colors. In the 
 
 A color can be changed using the *Update color* task or by dragging the column to the preferred color. The same overview is available for the fonts used.
 
-![](../assets/sf/image239.png)
+![](assets/sf/image239.png)
 
-![](../assets/sf/image241.png)
+![](assets/sf/image241.png)
 *Fonts and colors used in a Theme*

@@ -13,14 +13,14 @@ Synchronization
 
 To synchronize a project version, start the *Synchronize* task from the *Model* menu.
 
-![](../assets/iam_dev/image7.png)
+![](assets/iam_dev/image7.png)
 *Synchronize*
 
 The following pop-up is shown. Click the *Connect* button to establish a connection with the Software Factory in which the project that has to be synchronized is located.
 
 After the connection has been established, select the required project and project version.
 
-![](../assets/iam_dev/image9.png)
+![](assets/iam_dev/image9.png)
 *Synchronize task popup*
 
 By default, the synchronization will be applied to the current Intelligent Application Manager. It is also possible to save the synchronization to file, by checking the *Save to file* option. This allows you to script the synchronization for future use. The generated SQL script can be executed manually on any Intelligent Application Manager database.
@@ -33,7 +33,7 @@ Click the *Synchronize* button to start the synchronization. The Intelligent App
 
 Any error messages must be resolved before it is allowed to synchronize the project version.
 
-![](../assets/iam_dev/image10.png)
+![](assets/iam_dev/image10.png)
 *Validation*
 
 > Only use the Force synchronization* option when you know what you are doing.
@@ -51,7 +51,7 @@ The *Projects* screen contains an overview of all the projects that have been sy
 
 After synchronization, run the *Relink files* task on a project version to update all file references in a Software Factory model to the desired configuration for the production environment.
 
-![](../assets/iam_dev/image13.png)
+![](assets/iam_dev/image13.png)
 *Relink files*
 
 ### Project owners

@@ -15,7 +15,7 @@ Roles can be added or modified using the *Role rights* screen. After selecting a
 
 When a new project version is synchronized in the Intelligent Application Manager, for which an earlier version has already been configured, most of the roles of the previous version can be reused. This is done with the *Copy roles* task.
 
-![](../assets/iam_dev/image11.png)
+![](assets/iam_dev/image11.png)
 *Copy roles task*
 
 ### Import roles
@@ -30,21 +30,21 @@ To create a new role, click the *Add* button on the *Role*'s tab page. Add a nam
 
 Only use the *All rights* option for the administrator role. All other roles should provide a minimum set of rights required for the corresponding task or feature.
 
-![](../assets/iam_dev/image14.png)
+![](assets/iam_dev/image14.png)
 *Create a role*
 
 #### Setup
 
 Once a role has been created, it can be set up using the tab pages on the right. 
 
-![](../assets/iam_dev/image15.png)
+![](assets/iam_dev/image15.png)
 *Role rights*
 
 To assign rights to a role, select the required objects and click the *Assign rights* task. Select a preset or check the rights you want to assign to the object. 
 
 The *Assign rights* task also provides the option to assign rights to any child objects, for example the columns and details of a table, and to the parent objects required for this object, for example a task for its task parameters. 
 
-![](../assets/iam_dev/image17.png)
+![](assets/iam_dev/image17.png)
 *Assign rights task*
 
 The *Available* checkbox, visible in the grid for certain objects, indicates if the rights are granted to the required parent objects. The green, yellow and red icons indicate the *resolved* rights of an object, based on the granted rights and the availability.
@@ -58,14 +58,14 @@ Model rights
 
 The *Model rights* screen also allows for rights to be assigned to roles from a model perspective. Using the *Model* tab page you can select a model object and grant rights for this object to multiple roles.
 
-![](../assets/iam_dev/image18.png)
+![](assets/iam_dev/image18.png)
 *Model rights*
 
 ### New objects
 
 The *New objects* tab page shows the objects that are new in this project version compared to a previous version. Use the *Set previous version* task to configure the version to compare with.
 
-![](../assets/iam_dev/image19.png)
+![](assets/iam_dev/image19.png)
 *New objects*
 
 Click the *Go to object* task to find the selected object in the *Model* tab page. There you can assign the required rights for the object.

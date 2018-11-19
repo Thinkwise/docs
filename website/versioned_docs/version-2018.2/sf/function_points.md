@@ -10,7 +10,7 @@ With the Thinkwise platform, it is possible to automatically calculate the numbe
 
 The automated function point calculation of the Thinkwise Platform has been developed in collaboration with and verified by [QSM](http://www.qsm.com/), the leading authority on Quantitative Software Management. It satisfies the [Nesma](https://nesma.org/) counting practices at a global level.
 
-![1537781463608](../assets/sf/1537781463608.png)
+![1537781463608](assets/sf/1537781463608.png)
 *Example function point analysis*
 
 By analyzing the model, the function point analysis can determine exactly which data and transactional functions are offered to a user by the user interface. Points are assigned to each of these functions to calculate the total number of function points. 
