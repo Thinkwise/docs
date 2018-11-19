@@ -1,12 +1,25 @@
 var octo = require('@octopusdeploy\\octojs');
 var glob = require('glob');
+var argv = require('yargs').argv;
 
-if (!process.env.OCTOPUS_CLI_SERVER) {
-  throw new Error('Environment variable OCTOPUS_CLI_SERVER must be defined to use the octopush.js script.');
+if (process.env.OCTOPUS_CLI_SERVER) {
+  var octopusServer = process.env.OCTOPUS_CLI_SERVER;
+} else if (argv.octopusServer) {
+  var octopusServer = argv.octopusServer;
 }
 
-if (!process.env.OCTOPUS_CLI_API_KEY) {
-  throw new Error('Environment variable OCTOPUS_CLI_API_KEY must be defined to use the octopush.js script.');
+if (!octopusServer) {
+  throw new Error('No Octopus Deploy server specified. Set environment variable OCTOPUS_CLI_SERVER or pass --octopusServer=<value> to use the octopush.js script.');
+}
+
+if (process.env.OCTOPUS_CLI_API_KEY) {
+  var octopusApiKey = process.env.OCTOPUS_CLI_API_KEY;
+} else if (argv.octopusApiKey) {
+  var octopusApiKey = argv.octopusApiKey;
+}
+
+if (!octopusApiKey) {
+  throw new Error('No Octopus Deploy API key specified. Set environment variable OCTOPUS_CLI_API_KEY or pass --octopusApiKey=<value> to use the octopush.js script.');
 }
 
 // Push all zip files in the dist directory to the octopus server.
@@ -17,13 +30,13 @@ glob('./dist/*.zip', (err, files) => {
 
   files.forEach((path) => {
     octo.push(path, {
-      server: process.env.OCTOPUS_CLI_SERVER,
-      apiKey: process.env.OCTOPUS_CLI_API_KEY,
+      server: octopusServer,
+      apiKey: octopusApiKey,
       replace: true,
       verbose: true
       }, (err, result) => {
         if (err) {
-          console.error(err);
+          throw new Error(err.body.Errors);
         } else {
           console.log(result);
       }
