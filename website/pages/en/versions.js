@@ -38,7 +38,7 @@ function Versions() {
                   <a href="docs/sf/sf_general.html">Documentation</a>
                 </td>
                 <td>
-                  <a href="blog">Release notes</a>
+                  <a href="blog/">Release Notes</a>
                 </td>
               </tr>
             </tbody>
@@ -50,7 +50,7 @@ function Versions() {
           <table className="versions">
             <tbody>
               <tr>
-                <th>2018.3</th>
+                <th>master</th>
                 <td>
                   <a href="docs/next/sf/sf_general.html">Documentation</a>
                 </td>
