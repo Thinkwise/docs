@@ -10,8 +10,7 @@ There are a couple of prerequisites that need to be met before Indicium can be i
 
 ### .NET Framework
 
-Indicium is built with version 4.7.2 of the .NET Framework. As such, this is the minimum version of the .NET Framework that needs to be installed on the web server. If the web server has a lower version of the .NET Framework, or none at all, then use the following link to install the latest version of the .NET Framework: [https://www.microsoft.com/net/download/thank-you/net472](https://www.microsoft.com/net/download/thank-you/net472)
-
+Indicium is built with version 4.7.2 of the .NET Framework. As such, this is the minimum version of the .NET Framework that needs to be installed on the web server. If the web server has a lower version of the .NET Framework, or none at all, then use the following link to install the latest version of the .NET Framework: <https://www.microsoft.com/net/download/thank-you/net472>.
 ### .NET Core Windows Server Hosting Module
 
 To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open ‘Modules’ on a website in the IIS Manager.
@@ -19,7 +18,7 @@ To facilitate the integration of Indicium in IIS, it is necessary to install Mic
 ![AspNetCoreModule](assets/indicium/image%20%285%29.png)
 
 If the module has not been installed yet, then use this link to install it:
-<https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.5-windows-hosting-bundle-installer>
+<https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.5-windows-hosting-bundle-installer>.
 
 ### URL Rewrite Module
 
@@ -27,7 +26,7 @@ Finally, it is necessary to install Microsoft’s URL Rewrite Module for IIS. UR
 
 ![RewriteModule](assets/indicium/image%20%288%29.png)
 
-If the URL Rewrite module has not been installed yet, then use the link below to install it: [https://www.iis.net/downloads/microsoft/url-rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)
+If the URL Rewrite module has not been installed yet, then use the link below to install it: <https://www.iis.net/downloads/microsoft/url-rewrite>.
 
 ## Creating an Application Pool
 
@@ -58,9 +57,9 @@ Finally, create a new Web Application in the IIS Manager and choose an alias, th
 
 The Web Application will attempt to listen on port 80 by default. If this port is already in use, then it is necessary to choose another port.
 
-When done, the Web Application can be started. Open a browser and navigate to [https://server/indicium/api](https://server/indicium/api) to verify that Indicium is running and configured correctly.
+When done, the Web Application can be started. Open a browser and navigate to <https://server/indicium/> to verify that Indicium is running and configured correctly.
 
-![Check if Indicium is running](assets/indicium/image%20%287%29.png)
+![Check if Indicium is running](assets/indicium/image%20%287%29_2018_3.png)
 
 If you do not get a result like the image above, then please refer to [Troubleshooting](installation.md#troubleshooting-issues) below for steps to resolve your problem.
 
@@ -78,19 +77,37 @@ To enable the reset password feature, add the following template to the appsetti
 
 Now that the server has been configured, you can start a Mobile GUI against it \(provided that the targeted IAM database contains applications that are available for Mobile\).
 
-If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is ‘iam’, but it is best to double-check this by querying the gui_appl table.
+If you want to start the product(s) present in IAM, set the meta server URL to the root of the IAM application. For virtually all environments this will be <https://server/indicium/iam/iam/>.
+
+![Mobile GUI IAM meta source](assets/indicium/mobile_indicium_iam_2018_3.png)
+
+Starting a product present in the SF works the same but you need to specify the root URL of the SF application as the meta server URL. For most environments this will be <https://server/indicium/iam/sf/>.
+
+Furthermore, you'll need to provide the application ID or alias to start the correct runtime configuration. The application ID and alias can be found in the Software Factory at the desired runtime configuration. The runtime configuration must be activated for the user in the Software Factory to be able to start the product.
+
+![Mobile GUI SF meta source](assets/indicium/mobile_indicium_sf_2018_3.png)
+
+## Starting a Mobile GUI against Indicium (using a 2018.2 IAM or earlier)
+
+The API to start products against the Software Factory has been simplified with 2018.3. If Indicium is running against a 2018.2 IAM or earlier, the configuration for Mobile is a bit different. 
+
+If you want to start the product(s) present in IAM, set the meta server URL to the root of the IAM application using the 2018.2 URL segment structure. For most environments this will be <https://server/indicium/api/iam/>.
 
 ![Mobile GUI IAM meta source](assets/indicium/image%20%2811%29.png)
 
-Targeting an SF meta source works the same but you need to specify the root URL of the SF application as the meta server URL. Additionally, you will need to specify the project, project version and, if applicable, the runtime configuration.
+To start a product present in the SF, you need to specify the root URL of the SF application as the meta server URL using the 2018.2 URL segment structure. For most environments this will be <https://server/indicium/api/sf/>.
+
+Additionally, you will need to specify the project, project version and, if applicable, the runtime configuration.
 
 ![Mobile GUI SF meta source](assets/indicium/image.png)
+
+> These settings are only intended to be used with Indiciums running on a 2018.2 IAM. Usage of URLs with the /api/ segment on Indiciums running on a 2018.3 IAM or higher is strongly discouraged as support will be discontinued.
 
 ## Troubleshooting issues
 
 ### Startup errors
 
-If the root URL of Indicium \(e.g. [https://server/indicium/](https://server/indicium/)\) gives an error, then it will most likely state “An error occurred while starting the application” and/or show error code 502.21. With version 2.0.6+ of the AspNetCoreModule for IIS, the error page should include the cause of the error, which is typically informative enough to point you in the right direction. If not, then please follow the steps below in their stated order.
+If the root URL of Indicium \(e.g. <https://server/indicium/>) gives an error, then it will most likely state “An error occurred while starting the application” and/or show error code 502.21. With version 2.0.6+ of the AspNetCoreModule for IIS, the error page should include the cause of the error, which is typically informative enough to point you in the right direction. If not, then please follow the steps below in their stated order.
 
 #### JSON
 
@@ -98,7 +115,7 @@ Ensure that the JSON in the appsettings.json is valid. The most common mistakes 
 
 ![Invalid JSON](assets/indicium/image%20%282%29.png)
 
-If you want to be certain that the JSON is valid, then you can use this website to validate it (though it would be wise to clear any sensitive information first): [https://jsonlint.com](https://jsonlint.com/)
+If you want to be certain that the JSON is valid, then you can use this website to validate it (though it would be wise to clear any sensitive information first): <https://jsonlint.com/>.
 
 #### Connection
 
@@ -116,9 +133,11 @@ Gather the log files in the Logs folder in the root of Indicium and send them to
 
 If you are getting "401 - Unauthorized" results for a user \(i.e., if the browser keeps prompting you to log in\) and you are certain that the specified credentials are correct, then please check if the authentication method of the user is set correctly. In particular, when using domain credentials, the authentication method should be Windows, not RDBMS.
 
-### 402 - Application not found
+### 404 - Application not found
 
-If an application URL \(e.g., [https://server/indicium/api/myAppl](https://server/indicium/api/myAppl)\) gives the result “402 - Application not found”, and you are certain that the URL is correct, please ensure that the user that you are using to log in as has access to the application in IAM.
+If an application URL \(e.g.,<https://server/indicium/iam/myAppl/>\) gives the result "404 - Application not found", and you are certain that the URL is correct, please ensure that the user that you are using to log in as has access to the application in IAM.
+
+When accessing an application present in the Software Factory \(e.g., <https://server/indicium/sf/myAppl/>\), ensure the user logged on to Indicium has this application activated.
 
 ## Running Indicium in Development mode
 
