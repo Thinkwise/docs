@@ -50,7 +50,7 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/thinkwise.svg',
+  headerIcon: 'img/thinkwhite.png',
   footerIcon: 'img/thinkwise.svg',
   favicon: 'img/favicon.png',
 
