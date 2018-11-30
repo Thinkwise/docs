@@ -4,13 +4,13 @@
 - [ ] Hardware & Software requirements
 - [ ] Reference architectures
 - [x] Exchange
-- [ ] Previous release notes
-- [ ] Deployer?
+- [x] Previous release notes
+- [x] Deployer
 - [ ] GUI design
 - [ ] Guidelines
   - [ ] Data modeling
   - [ ] SQL
-- [ ] Overview document - Al engels
+- [ ] Overview document?
 - [ ] GUI manuals?
 - [ ] Reporting service
 - [ ] GUI reference card

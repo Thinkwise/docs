@@ -63,10 +63,13 @@ function Versions() {
               {versions.map(
                 version =>
                   version !== latestVersion && (
-                    <tr>
+                    <tr key={version}>
                       <th>{version}</th>
                       <td>
-                        <a href="">Documentation</a>
+                        <a
+                          href={`docs/${version}/sf/sf_general.html`}>
+                          Documentation
+                        </a>
                       </td>
                     </tr>
                   ),
