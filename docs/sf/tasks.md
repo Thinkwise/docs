@@ -106,7 +106,7 @@ Template-based tasks can be set to run as an atomic transaction. See [Subroutine
 
 After creating a task, parameters can be added to the task that define the input values for the task. Parameters are in a specific sequence and are linked to a domain for the data type and the control.
 
-![](assets/sf/image194.png)
+![](assets/sf/task_parmtr.png)
 *Parameter settings when creating a task*
 
 Task parameters can be formatted in the same way as forms of tables are formatted. Column type, sequence number, label width, field width, field height, number of positions further, field in next group, field in next column and field in next tab are available for this. 
