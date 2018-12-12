@@ -42,7 +42,7 @@ class Index extends React.Component {
               contents={[
                 {
                   content: `Learn how to create business applications with the Thinkwise Software Factory development environment.`,
-                  image: `${siteConfig.baseUrl}img/SF.png`,
+                  image: `${siteConfig.baseUrl}img/SF.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/sf/sf_general.html`,
                   imageAlt: 'Thinkwise Software Factory',
@@ -51,7 +51,7 @@ class Index extends React.Component {
                 },
                 {
                   content: `Manage your applications, users and preferences with the Thinkwise Intelligent Application Manager.`,
-                  image: `${siteConfig.baseUrl}img/IAM2.png`,
+                  image: `${siteConfig.baseUrl}img/IAM.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/iam/iam_general.html`,
                   imageAlt: 'Intelligent Application Manager',
@@ -60,7 +60,7 @@ class Index extends React.Component {
                 },
                 {
                   content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
-                  image: `${siteConfig.baseUrl}img/Indicium.png`,
+                  image: `${siteConfig.baseUrl}img/Indicium.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/indicium/indicium_general.html`,
                   imageAlt: 'Indicium Application Tier',
@@ -77,7 +77,7 @@ class Index extends React.Component {
               contents={[
                 {
                   content: `In-depth information on working with the Thinkwise Platform.`,
-                  image: `${siteConfig.baseUrl}img/Knowledge Base.png`,
+                  image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/kb/kb_general.html`,
                   imageAlt: 'Knowledge Base',
@@ -86,7 +86,7 @@ class Index extends React.Component {
                 },
                 {
                   content: `Become even better with Thinkwise. Follow online courses to learn all about the Thinkwise Platform.`,
-                  image: `${siteConfig.baseUrl}img/Learn.png`,
+                  image: `${siteConfig.baseUrl}img/Learn.jpg`,
                   imageAlign: 'top',
                   imageLink: 'https://thinkwisesoftware.docebosaas.com/learn',
                   imageAlt: 'Learn',
@@ -95,7 +95,7 @@ class Index extends React.Component {
                 },
                 {
                   content: `Coming soon!`, //Need more help? Join our community!`,
-                  image: `${siteConfig.baseUrl}img/Community.png`,
+                  image: `${siteConfig.baseUrl}img/Community.jpg`,
                   imageAlign: 'top',
                   //imageLink: 'https://www.thinkwisesoftware.com',
                   imageAlt: 'Community',
