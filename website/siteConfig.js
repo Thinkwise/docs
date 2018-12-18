@@ -102,10 +102,17 @@ const siteConfig = {
 
   algolia: {
     apiKey: '80fc82eb19522b03c3400dd67daefaa3',
-    indexName: 'thinkwise'
+    indexName: 'thinkwise',
+    algoliaOptions: {   
+      facetFilters: [ "version:VERSION" ] 
+    },
+    placeholder: ' '
   },
 
-  blogSidebarTitle: { default: 'Recent updates', all: 'All updates' },
+  blogSidebarTitle: { 
+    default: 'Recent updates', 
+    all: 'All updates' 
+  },
 
   //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
   enableUpdateTime: false,
