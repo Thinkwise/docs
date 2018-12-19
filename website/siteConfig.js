@@ -120,7 +120,12 @@ const siteConfig = {
   scrollToTop: true,
   scrollToTopOptions: {
     zIndex: 100,
-  }
+  },
+  
+  // Google analytics
+  gaTrackingId: 'UA-131222061-1',
+  gaGtag: true
+  
 };
 
 module.exports = siteConfig;
