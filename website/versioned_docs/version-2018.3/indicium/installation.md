@@ -63,7 +63,7 @@ When done, the Web Application can be started. Open a browser and navigate to <h
 
 ![Check if Indicium is running](assets/indicium/image%20%287%29_2018_3.png)
 
-If you do not get a result like the image above, then please refer to [Troubleshooting](installation.md#troubleshooting-issues) below for steps to resolve your problem.
+If you do not get a result like the image above, then please refer to [Troubleshooting](#troubleshooting-issues) below for steps to resolve your problem.
 
 ## Enable changing and resetting passwords
 
@@ -125,7 +125,7 @@ Ensure that the information in the appsettings.json is correct. Double-check the
 
 #### Prerequisites
 
-Double-check if the server has met the prerequisites mentioned in [Prerequisites](installation.md#prerequisites). Missing either of these would also cause this start up error.
+Double-check if the server has met the prerequisites mentioned in [Prerequisites](#prerequisites). Missing either of these would also cause this start up error.
 
 #### Log files
 

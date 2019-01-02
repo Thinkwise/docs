@@ -63,7 +63,7 @@ When done, the Web Application can be started. Open a browser and navigate to [h
 
 ![Check if Indicium is running](assets/indicium/image%20%287%29.png)
 
-If you do not get a result like the image above, then please refer to [Troubleshooting ](installation.md#troubleshooting-issues) below for steps to resolve your problem.
+If you do not get a result like the image above, then please refer to [Troubleshooting ](#troubleshooting-issues) below for steps to resolve your problem.
 
 ## Enable changing and resetting passwords
 
@@ -105,11 +105,11 @@ If you want to be certain that the JSON is valid, then you can use this website 
 
 Ensure that the information in the appsettings.json is correct. Double-check the server address and the database, and ensure that the Database Pool User has access to the configured IAM database. Also, ensure that the pool user is a user in IAM, that its authentication method is correct and that the user is a Main administrator in IAM.
 
-Furthermore, the permissions for this user should be applied to the IAM database as well. See [Creating the Web Application](installation.md#creating-the-web-application) for more information.
+Furthermore, the permissions for this user should be applied to the IAM database as well. See [Creating the Web Application](#creating-the-web-application) for more information.
 
 #### Prerequisites 
 
-Double-check if the server has met the prerequisites mentioned in [Prerequisites](installation.md#prerequisites). Missing either of these would also cause this start up error.
+Double-check if the server has met the prerequisites mentioned in [Prerequisites](#prerequisites). Missing either of these would also cause this start up error.
 
 #### Log files
 
