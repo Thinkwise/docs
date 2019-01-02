@@ -60,17 +60,9 @@ const siteConfig = {
     secondaryColor: '#2268A4',
   },
 
-  /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=Montserrat:400,400i,600"
+  ],  
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
