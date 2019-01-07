@@ -27,7 +27,9 @@ The following information needs to be provided to create a project. Blue fields 
 
   Base projects are projects that are only used by other projects. A base project contains certain details that are necessary for the correct operation of a project, a supplement or an addition, such as a standard layout or a requirements model. When the base project option is checked, it is possible to opt for immediate copying, which ensures that the data in the base project is copied to linked projects immediately. Furthermore, it can be indicated whether the base project has to be linked to new projects by default.
 
-  > Only base projects with the status *In production* are copied.
+  > Only base projects with the status *Production* are copied.
+
+- By default only one project version can have the status *Production*. When *Multiple live versions* is checked, it will be possible to have more production versions.
 
 - Company name and application title, displayed on the splash screen.
 
