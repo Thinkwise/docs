@@ -19,7 +19,8 @@ Critical hotfixes are provided for all supported versions. Non-critical hotfixes
 |          G9.8          |         Oct-2016         |       Dec-2018       |
 |         2017.1         |         Jun-2017         |       Jul-2019       |
 |         2018.1         |         Jan-2018         |       Nov-2019       |
-|         2018.2         |         May-2018         |                      |
+|         2018.2         |         May-2018         |       May-2020       |
+|         2018.3         |         Nov-2018         |                      |
 
 ### Runtime components
 
