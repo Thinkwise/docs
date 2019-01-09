@@ -292,7 +292,7 @@ A report can be included in several menus. If a report is linked to a table, it 
 
 When the report is fully defined within the Software Factory, a preview can be viewed on the screen in the user interface.
 
-![](assets\sf\image207.png)
+![](assets/sf/image207.png)
 *Example of a report preview*
 
 ### Await result
