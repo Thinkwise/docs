@@ -20,7 +20,7 @@ function Versions() {
   const latestVersion = versions[0];
   const repoUrl = `https://github.com/${siteConfig.organizationName}/${
     siteConfig.projectName
-  }`;
+    }`;
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer versionsContainer">
@@ -30,52 +30,22 @@ function Versions() {
           </header>
           <p>Select your Thinkwise Platform version.</p>
           <h3 id="latest">Current version</h3>
-          <table className="versions">
-            <tbody>
-              <tr>
-                <th>{latestVersion}</th>
-                <td>
-                  <a href="docs/sf/sf_general.html">Documentation</a>
-                </td>
-                <td>
-                  <a href="blog/">Release Notes</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
           <p>
-            This is the current version.
+            <a href="docs/sf/sf_general.html">{latestVersion}</a>
           </p>
           <h3 id="rc">Pre-release version</h3>
-          <table className="versions">
-            <tbody>
-              <tr>
-                <th>master</th>
-                <td>
-                  <a href="docs/next/sf/sf_general.html">Documentation</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 id="archive">Past Versions</h3>
-          <table className="versions">
-            <tbody>
-              {versions.map(
-                version =>
-                  version !== latestVersion && (
-                    <tr key={version}>
-                      <th>{version}</th>
-                      <td>
-                        <a
-                          href={`docs/${version}/sf/sf_general.html`}>
-                          Documentation
-                        </a>
-                      </td>
-                    </tr>
-                  ),
-              )}
-            </tbody>
-          </table>
+          <p>
+            <a href="docs/next/sf/sf_general.html">next</a>
+          </p>
+          <h3 id="archive">Previous versions</h3>
+          {versions.map(
+            version =>
+              version !== latestVersion && (
+                <p key={version}>
+                  <a href={`docs/${version}/sf/sf_general.html`}>{version}</a>
+                </p>
+              ),
+          )}
         </div>
       </Container>
     </div>
