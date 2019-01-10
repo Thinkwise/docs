@@ -1,6 +1,6 @@
 ---
 title: Lifecycle policy
-id: version-2018.3.0.1-lifecycle_policy
+id: version-2018.3.1-lifecycle_policy
 original_id: lifecycle_policy
 ---
 

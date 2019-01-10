@@ -1,6 +1,6 @@
 ---
 title: Maps component
-id: version-2018.3.0.1-maps
+id: version-2018.3.1-maps
 original_id: maps
 ---
 
