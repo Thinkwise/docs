@@ -339,7 +339,7 @@ The HTTP(S) connector provides the following input options with which several pr
 | ------------------- | ------------------------------------------------------------ |
 | URL                 | The complete url that will be used for the request.          |
 | HTTP method         | The HTTP method that will be used for the request, such as GET or POST. |
-| Headers             | Optional. The header that will be provided with the request. This input option must be completed in the following manner:<br>[ header1:value1;header2:value2 ] |
+| Headers             | Optional. The header that will be provided with the request. This input option must be completed in the following manner:<br>[ { "Key": "Header1", "Value": "Value1" }, { "Key": "Header2", "Value": "Value2" } ] |
 | Cookie              | Optional. A possible cookie that will be provided with the request. |
 | Content-Type        | Optional. The MIME type for the content that will be provided with the request. |
 | Content             | Optional. The content that will be sent with the request, for instance with a POST. |
