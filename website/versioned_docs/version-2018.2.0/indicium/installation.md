@@ -16,7 +16,7 @@ Indicium is built with version 4.6.1 of the .NET Framework. As such, this is the
 
 ### .NET Core Windows Server Hosting Module
 
-To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open ‘Modules’ on a website in the IIS Manager.
+To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open *Modules* on a website in the IIS Manager.
 
 ![AspNetCoreModule](assets/indicium/image%20%285%29.png)
 
@@ -32,7 +32,7 @@ If the URL Rewrite module has not been installed yet, then use the link below to
 
 ## Creating an Application Pool
 
-As stated earlier, Indicium is capable of hosting itself and IIS is merely used as a proxy to expose Indicium to the network and/or the internet. As such, all the heavy lifting is performed by Indicium’s own web server and the Application Pool in IIS does not even need to initialize a .NET runtime. Because of this, it is wise to select ‘No Managed Code’ when creating an Application Pool for Indicium, as it will positively affect the start up time.
+As stated earlier, Indicium is capable of hosting itself and IIS is merely used as a proxy to expose Indicium to the network and/or the internet. As such, all the heavy lifting is performed by Indicium’s own web server and the Application Pool in IIS does not even need to initialize a .NET runtime. Because of this, it is wise to select *No Managed Code* when creating an Application Pool for Indicium, as it will positively affect the start up time.
 
 ![Add Application Pool](assets/indicium/image%20%289%29.png)
 
@@ -79,7 +79,7 @@ To enable the reset password feature, add the following template to the appsetti
 
 Now that the server has been configured, you can start a Mobile GUI against it \(provided that the targeted IAM database contains applications that are available for Mobile\).
 
-If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is ‘iam’, but it is best to double-check this by querying the gui_appl table.
+If you want to target an IAM meta source, then set the meta server URL to the root of the IAM application. In other words, take the root URL of Indicium, add /api to it and then add the ID or the alias of the IAM application to it. As of version 2018.1 of IAM, the default alias of the IAM application is *iam*, but it is best to double-check this by querying the gui_appl table.
 
 ![Mobile GUI IAM meta source](assets/indicium/image%20%2811%29.png)
 

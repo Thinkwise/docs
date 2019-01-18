@@ -18,7 +18,7 @@ For sensitive columns, it is mandatory to select an anonymization type. There ar
 
 - Expression
 
-Foreign key columns are automatically anonymized based on the settings of the source column. They can be recognized by the icon as shown below and are hidden by the “undecided columns” prefilter.
+Foreign key columns are automatically anonymized based on the settings of the source column. They can be recognized by the icon as shown below and are hidden by the *Undecided columns* prefilter.
 
 ![https://office.thinkwisesoftware.com/blog/wp-content/uploads/2018/05/ak_icon.png](assets/sf/image98.png)
 
@@ -30,11 +30,11 @@ There are default sample data sets available that can be used to anonymize the d
 
 #### Random value
 
-When this option is used to anonymize the data, a random value is generated that meets the domain specifications. This is not user-friendly, and is thus not recommended to use this for acceptance test data. Note that when a random date is selected, this date can be *in the future* or *in the past*. If there are business rules that ensure a date in the past is used, it is better to select “Expression” and write your own query or use “Sample data set” and add a set with random dates in the past.
+When this option is used to anonymize the data, a random value is generated that meets the domain specifications. This is not user-friendly, and is thus not recommended to use this for acceptance test data. Note that when a random date is selected, this date can be *in the future* or *in the past*. If there are business rules that ensure a date in the past is used, it is better to select "Expression" and write your own query or use *Sample data set* and add a set with random dates in the past.
 
 #### Expression
 
-In certain cases, a value depends on the value of other columns or has to meet specific requirements. In that case, the option “Expression” can be used. For instance, if *end_date* is mandatory when *is_ended* is true, then a random *end_date* can be generated with the following query:
+In certain cases, a value depends on the value of other columns or has to meet specific requirements. In that case, the option *Expression* can be used. For instance, if *end_date* is mandatory when *is_ended* is true, then a random *end_date* can be generated with the following query:
 
 ```sql
 case

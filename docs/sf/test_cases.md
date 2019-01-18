@@ -24,7 +24,7 @@ Pay attention that when drawing up test cases it is not only the happy flow that
 
 The use of a *dedicated* test database presents all kinds of problems with, for example, time dependent data, upgrades and the development in several branches. It is also not viable to add all the required data for the tests by means of test cases/steps.
 
-The assumption is therefore that it has to be possible to use every production database as a test database. Static (master) data already exists in that case. Additional data needs to be created during the testing, possibly in separate test cases (with “Query” test steps).
+The assumption is therefore that it has to be possible to use every production database as a test database. Static (master) data already exists in that case. Additional data needs to be created during the testing, possibly in separate test cases (with "Query" test steps).
 
 It is also advised to delete or restore added or modified data, making it possible to rerun test cases on the same database. 
 

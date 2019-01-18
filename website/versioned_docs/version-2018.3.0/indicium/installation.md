@@ -15,7 +15,7 @@ There are a couple of prerequisites that need to be met before Indicium can be i
 Indicium is built with version 4.7.2 of the .NET Framework. As such, this is the minimum version of the .NET Framework that needs to be installed on the web server. If the web server has a lower version of the .NET Framework, or none at all, then use the following link to install the latest version of the .NET Framework: <https://www.microsoft.com/net/download/thank-you/net472>.
 ### .NET Core Windows Server Hosting Module
 
-To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open ‘Modules’ on a website in the IIS Manager.
+To facilitate the integration of Indicium in IIS, it is necessary to install Microsoft’s .NET Core Windows Server Hosting Module on the web server. This module enables IIS to take control of starting and stopping Indicium, amongst other things. To check if the module has already been installed, open *Modules* on a website in the IIS Manager.
 
 ![AspNetCoreModule](assets/indicium/image%20%285%29.png)
 
@@ -32,7 +32,7 @@ If the URL Rewrite module has not been installed yet, then use the link below to
 
 ## Creating an Application Pool
 
-As stated earlier, Indicium is capable of hosting itself and IIS is merely used as a proxy to expose Indicium to the network and/or the internet. As such, all the heavy lifting is performed by Indicium’s own web server and the Application Pool in IIS does not even need to initialize a .NET runtime. Because of this, it is wise to select ‘No Managed Code’ when creating an Application Pool for Indicium, as it will positively affect the start up time.
+As stated earlier, Indicium is capable of hosting itself and IIS is merely used as a proxy to expose Indicium to the network and/or the internet. As such, all the heavy lifting is performed by Indicium’s own web server and the Application Pool in IIS does not even need to initialize a .NET runtime. Because of this, it is wise to select *No Managed Code* when creating an Application Pool for Indicium, as it will positively affect the start up time.
 
 ![Add Application Pool](assets/indicium/image%20%289%29.png)
 

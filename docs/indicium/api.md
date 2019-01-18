@@ -30,7 +30,7 @@ In this template, &lt;web_app_root_url&gt; refers to the root URL of Indicium in
 * <https://server/indicium/iam/123/>
 * <https://server/indicium/iam/insights/>
 
-All requests that start with this base-URL will be subjected to authentication. The type of authentication used depends on the configuration of the user in question in IAM. All authentication follows the HTTP Basic authentication scheme, meaning that Indicium should only be exposed to the Internet over HTTPS.
+All requests that start with this base-URL will be subjected to authentication. The type of authentication used depends on the configuration of the user in question in IAM. All authentication follows the [HTTP Basic](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) authentication scheme, meaning that Indicium should only be exposed to the Internet over HTTPS.
 
 > Indicium running on a 2018.2 and earlier IAM must use `<web_app_root_url>/api/<appl>/` instead.
 

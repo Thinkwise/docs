@@ -390,8 +390,6 @@ If a tree is needed based on column grouping, the sorting used to group the data
 ![](assets/sf/image175.png)
 *Group data in a tree*
 
-There are also some changes to the user interface with regard to trees. These can be found in the chapter “Graphical User Interface (GUI)”
-
 ### Cubes
 
 This indicates whether a table or view is a cube and which options this offers. See [cubes].

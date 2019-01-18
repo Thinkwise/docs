@@ -112,11 +112,3 @@ A view is a logical table that can be accessed via a query. The desired sort seq
 ### Views over views
 
 Avoidance of the use of views within the query of a view should be attempted. Most RDBMSs have trouble optimizing this situation. This results in poor performance. In this case, it is better to write a separate view that only makes use of tables.
-
-### DB2 for IBM i
-
-The performance of ODBC connections and SQL on DB2 for IBM i can be improved with the following settings:
-
-1. Prestarted Jobs - Creating connections (jobs) takes a relatively long time on an IBM i. By using *Prestarted jobs* these connections are prepared in advance. Set up the System i so that enough prestarted jobs are always available. See: <http://pic.dhe.ibm.com/infocenter/iseries/v7r1m0/index.jsp?topic=%2Fddp%2Frbal1usepsj.htm>
-2. Separate sub-system - Query plans remain applicable as long as the environment variables (load, disk space, free memory) remain stable. It therefore makes sense to place the QZDASOINIT tasks in a separate sub-system, on the basis of, for example, an IP address. See: <http://pic.dhe.ibm.com/infocenter/iseries/v7r1m0/index.jsp?topic=%2Fddp%2Frbal1usepsj.htm>
-3. Plan cache - Increase the plan cache with the QQQOOOCACH command so that query plans remain available sufficiently long enough in the cache. See <http://pic.dhe.ibm.com/infocenter/iseries/v7r1m0/index.jsp?topic=%2Fddp%2Frbal1usepsj.htm>

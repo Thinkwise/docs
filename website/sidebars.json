@@ -96,6 +96,21 @@
       "indicium/api"
     ]
   },
+  "deployment": {
+    "Deployment": [
+      "deployment/deployment_general",
+      "deployment/windows_gui",
+      "deployment/web_gui",
+      "deployment/indicium",
+      "deployment/mobile_gui",
+      "deployment/iis",
+      "deployment/reporting",
+      "deployment/db2",
+      "deployment/encryption",
+      "deployment/adfs",
+      "deployment/integrated_security"
+    ]
+  },
   "kb": {
     "Knowledge base": [
       "kb/kb_general",

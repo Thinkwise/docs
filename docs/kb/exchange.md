@@ -20,7 +20,7 @@ The Thinkwise Exchange Connector works for both SQL Server and DB2 Thinkwise app
 
 The figure below shows an overview of the Thinkwise Exchange Connector.
 
-![1539086884933](assets/1539086884933.png)
+![1539086884933](assets/exchange/1539086884933.png)
 *Thinkwise Exchange Connector overview*
 
 The Thinkwise Exchange Connector is able to find the relevant Exchange server itself using the AutoDiscover Service. Synchronization is done using SOAP web services that enable communication between the Thinkwise Exchange Connector and the Exchange server.
@@ -108,7 +108,7 @@ The Exchange Connector works as follows:
 
 The following diagram shows the process of synchronizing an item from and to Exchange:
 
-![1539095681093](assets/1539095681093.png)
+![1539095681093](assets/exchange/1539095681093.png)
 
 ### Registering users
 
@@ -176,7 +176,7 @@ The following components are required before the Thinkwise Exchange Connector ca
     - Exchange listener: 8100
     - Telnet logging: 8888
 
-![1539086840478](assets/1539086840478.png)
+![1539086840478](assets/exchange/1539086840478.png)
 
 ## Installation
 
@@ -208,7 +208,7 @@ GO
 
 Two assemblies have to be installed on the database using an asymmetric key and a login on the database server. The required files are:
 
-![1539086818018](assets/1539086818018.png)
+![1539086818018](assets/exchange/1539086818018.png)
 
 These have to be created on the Master database. No existing login may be used. The *dll* and *pfx* files first have to be placed on the server in a folder that SQL Server can access. This folder has to have full access rights for everyone, as well.
 
@@ -277,7 +277,7 @@ More information on PERMISSION_SET access can be found [here](http://blogs.msdn.
 
 For DB2 Thinkwise applications that want to use the Exchange Connector, the supplied jar files have to be installed on the database server:
 
-![1539086796568](assets/1539086796568.png)
+![1539086796568](assets/exchange/1539086796568.png)
 
 The supplied jar files have been compiled with the target Java 1.6. If these are not yet available, they can be built with ant. Go with the command line to the DB2 folder where build.xml is located and call ant. These two jars are available in the out> target folder.
 
@@ -321,7 +321,7 @@ For DB2 applications, the *DB2_EXCHANGE_365* base project needs to be linked and
 
 Add the base project in the Software Factory:
 
-![1539086911630](assets/1539086911630.png)
+![1539086911630](assets/exchange/1539086911630.png)
 *Linking the base project*
 
 If the project has now been generated and executed, additional tables and procedures will have been added to the database. These are required to receive and manage the Exchange data that can come from the Thinkwise Exchange Connector.
@@ -338,12 +338,12 @@ Now that the base project is linked to the Thinkwise application, the Thinkwise 
 
 The Exchange Connector is installed with the MSI setup file supplied by Thinkwise. A connection string can be specified during the installation (this can also be done afterwards).
 
-![1539086938829](assets/1539086938829.png)
+![1539086938829](assets/exchange/1539086938829.png)
 *Exchange Sync Service*
 
 The credentials of the impersonation user have to be entered to install the service. The service is also started later with the same user.
 
-![1539086958513](assets/1539086958513.png)
+![1539086958513](assets/exchange/1539086958513.png)
 *Set Service Login*
 
 The service can be installed multiple times on the same server to monitor different databases. To do this, make a copy of the installation folder and adjust the configuration. With the following command, the service can be installed under a different name (as administrator):
@@ -405,7 +405,7 @@ The Thinkwise Exchange Connector is configured using the `ExchangeSyncService.ex
 
 The Exchange Connector can be monitored with Telnet. To do this, set up a connection with the Exchange Connector server to the port specified at installation or in the configuration file:
 
-![1539086983584](assets/1539086983584.png)
+![1539086983584](assets/exchange/1539086983584.png)
 *Setup a Telnet connection*
 
 With more advanced Telnet applications, such as PuTTy, this logging can also be written to a file.
@@ -424,7 +424,7 @@ If after testing it appears that everything is functioning properly, the Thinkwi
 
 The Thinkwise Exchange service can also be executed as a console application. This means that a command prompt opens and all actions that the Connector does are followed. This can be done by running `ExchangeSync.exe` under the account that has impersonation rights. However, it is necessary to set up the file `ExchangeSync.exe.config` correctly. These settings can be copied from the file `ExchangeSyncService.exe.config`
 
-![1539087005067](assets/1539087005067.png)
+![1539087005067](assets/exchange/1539087005067.png)
 *Starting a console application with impersonation*
 
 ## Business logic
@@ -703,7 +703,7 @@ If there are problems with the Thinkwise Exchange Connector, there may be a numb
 
 Verify that the ExhangeSyncService runs under Windows Services. If this is not the case, it can be (re)started using Windows Services or via the procedure described [here](#restart-the-connector).
 
-![1539087067418](assets/1539087067418.png)
+![1539087067418](assets/exchange/1539087067418.png)
 *ExchangeSyncService*
 
 ### Access Denied Exception

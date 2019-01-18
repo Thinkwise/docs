@@ -76,7 +76,7 @@ Optional parameter with which parameters in the translation can be filled when u
 
 For example, for SQL Server:
 
-> exec tsf_send_progress 'copy_customer', '\<text\>Thinkwise\</text\>', 82;
+`exec tsf_send_progress 'copy_customer', '<text>Thinkwise</text>', 82;`
 
 ##### Percentage
 
@@ -92,7 +92,7 @@ Tasks can take a long time to process. There are four options to give instructio
 1.  Yes - The user has to wait for the result and a progress indicator is shown.
 2.  Yes (no progress indicator) - The user has to wait for the result (the GUI freezes and hourglass is shown).
 3.  No - The action is executed in the background and the user can continue working.[12]
-4.  Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).<sup>1</sup> Reports executed in the background could be monitored in a new “Async action” dialog.
+4.  Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).<sup>1</sup> Reports executed in the background could be monitored in a new "Async action" dialog.
 
 For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
 

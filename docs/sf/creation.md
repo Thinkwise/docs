@@ -93,7 +93,7 @@ The program objects' filters determine the level of detail where you can view an
 
 It is possible to group the tree with program objects for each model object. In this way, all code of a view or a table can quickly be  executed.
 
-When performing a manual upgrade of an individual table, pay attention to the program objects in “Other” such as deleting dependent objects or renaming the old table.
+When performing a manual upgrade of an individual table, pay attention to the program objects in the *Other* group, such as deleting dependent objects or renaming the old table.
 
 ## 4. Execute source code
 
