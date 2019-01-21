@@ -101,3 +101,7 @@ article p img:not(:first-child) {
 article em {
     font-style: italic;
 }
+
+.blockContent a {
+    color: black;
+}

@@ -46,8 +46,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/sf/sf_general.html`,
                   imageAlt: 'Thinkwise Software Factory',
-                  title: 'Thinkwise Software Factory',
-                  //title: `[Thinkwise Software Factory](${siteConfig.baseUrl}docs/sf/sf_general.html)`,
+                  title: `[Thinkwise Software Factory](${siteConfig.baseUrl}docs/sf/sf_general.html)`,
                 },
                 {
                   content: `Manage your applications, users and preferences with the Thinkwise Intelligent Application Manager.`,
@@ -55,8 +54,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/iam/iam_general.html`,
                   imageAlt: 'Intelligent Application Manager',
-                  title: 'Intelligent Application Manager',
-                  //title: `[Intelligent Application Manager](${siteConfig.baseUrl}docs/iam/iam_general.html')`,
+                  title: `[Intelligent Application Manager](${siteConfig.baseUrl}docs/iam/iam_general.html')`,
                 },
                 {
                   content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
@@ -64,8 +62,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/indicium/indicium_general.html`,
                   imageAlt: 'Indicium Application Tier',
-                  title: 'Indicium Application Tier',
-                  //title: `[Indicium Application Tier](${siteConfig.baseUrl}docs/indicium/indicium_general.html)`,
+                  title: `[Indicium Application Tier](${siteConfig.baseUrl}docs/indicium/indicium_general.html)`,
                 },
               ]}
               layout="threeColumn"
@@ -81,8 +78,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/kb/kb_general.html`,
                   imageAlt: 'Knowledge Base',
-                  title: 'Knowledge Base',
-                  //title: `[Knowledge Base](${siteConfig.baseUrl}docs/kb/kb_general.html)`,
+                  title: `[Knowledge Base](${siteConfig.baseUrl}docs/kb/kb_general.html)`,
                 },
                 {
                   content: `Become even better with Thinkwise. Follow online courses to learn all about the Thinkwise Platform.`,
@@ -90,17 +86,15 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: 'https://thinkwisesoftware.docebosaas.com/learn',
                   imageAlt: 'Learn',
-                  title: 'Learn',
-                  //title: `[Learn](https://thinkwisesoftware.docebosaas.com/learn)`,
+                  title: `[Learn](https://thinkwisesoftware.docebosaas.com/learn)`,
                 },
                 {
-                  content: `Coming soon!`, //Need more help? Join our community!`,
+                  content: `Ask a question, submit your idea or get inspired by our blogs in the Thinkwise Community.`, //Need more help? Join our community!`,
                   image: `${siteConfig.baseUrl}img/Community.jpg`,
                   imageAlign: 'top',
-                  //imageLink: 'https://www.thinkwisesoftware.com',
+                  imageLink: 'https://community.thinkwisesoftware.com',
                   imageAlt: 'Community',
-                  title: 'Community',
-                  //title: `[Community](https://www.thinkwisesoftware.com/)`,
+                  title: `[Community](https://community.thinkwisesoftware.com/)`,
                 },
               ]}
               layout="threeColumn"
