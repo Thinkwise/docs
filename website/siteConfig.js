@@ -80,7 +80,9 @@ const siteConfig = {
 
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js',
-    'https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js'],
+    'https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js',
+    '//embeddable-widgets.insided.com/thinkwise-en.insided-conversational.js'
+    ],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
