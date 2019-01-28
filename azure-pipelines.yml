@@ -25,4 +25,7 @@ steps:
     ProjectDirectory: website
     Arguments: 'run build'
 
-
+- script: (robocopy "Thinkwise Docs" "\\mars\docs2" /mir) ^& IF %ERRORLEVEL% LSS 8 SET ERRORLEVEL = 0
+  displayName: 'Copy website'
+  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
+  workingDirectory: website/build
