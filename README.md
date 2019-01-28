@@ -4,7 +4,7 @@ This project contains all platform related documentation, a knowledge base and i
 
 ## Build status
 
-[![Build status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Documentation-CI)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=57)
+[![Build Status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Thinkwise.docs?branchName=master)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=85?branchName=master)
 
 ## Code style
 
