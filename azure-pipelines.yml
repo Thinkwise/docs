@@ -6,9 +6,6 @@
 trigger:
 - master
 
-resources:
-- repo: self
-
 pool:
   name: Documentation
 
