@@ -21,13 +21,13 @@ For detailed requirements and instructions, see the [Docusaurus docs](https://do
 1. Install Docusaurus
 
    ```sh
-   npm install
+   yarn install
    ```
 
 2. Start the website
 
    ```sh
-   npm start
+   yarn start
    ```
 
 ## Guidelines
