@@ -25,4 +25,8 @@ steps:
     ProjectDirectory: website
     Arguments: 'run build'
 
-
+- script: |
+   robocopy "Thinkwise Docs" "//mars/c$/inetpub/wwwroot/docs2" /mir
+  workingDirectory: website/build
+  displayName: 'Copy website'
+  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
