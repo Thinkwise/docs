@@ -29,4 +29,4 @@ steps:
    robocopy "Thinkwise Docs" "//mars/c$/inetpub/wwwroot/docs2" /mir
   workingDirectory: website/build
   displayName: 'Copy website'
-  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
+#  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
