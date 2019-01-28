@@ -6,14 +6,28 @@
 trigger:
 - master
 
+resources:
+- repo: self
+
 pool:
-  vmImage: 'Ubuntu-16.04'
+  name: Documentation
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@2
+  displayName: 'Use Yarn 1.x'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn install'
+  inputs:
+    ProjectDirectory: website
+    Arguments: install
+
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn run build'
+  inputs:
+    ProjectDirectory: website
+    Arguments: 'run build'
+
+
