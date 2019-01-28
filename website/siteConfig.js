@@ -109,7 +109,8 @@ const siteConfig = {
     all: 'All updates' 
   },
 
-  //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
+  editUrl: 'https://github.com/Thinkwise/docs/blob/master/docs/',
+    
   enableUpdateTime: false,
   cleanUrl: false, // Setting this to True breaks relative urls like ../assets/sf/image.png
   scrollToTop: true,
