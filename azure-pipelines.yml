@@ -13,13 +13,11 @@ steps:
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@2
   displayName: 'Use Yarn 1.x'
 
-
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn install'
   inputs:
     ProjectDirectory: website
     Arguments: install
-
 
 - task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
   displayName: 'Yarn run build'
