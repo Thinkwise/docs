@@ -1,4 +1,4 @@
-## Thinkwise Platform Documentation
+test## Thinkwise Platform Documentation
 
 This project contains all platform related documentation, a knowledge base and information (blog posts) on new releases.
 
