@@ -415,6 +415,38 @@ The SMTP connector provides the following input options with which several prope
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Status code    | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (making a connection with server failed)<br>-3 - Unsuccessful (from address not entered)<br>-4 - Unsuccessful (one or more addressees could not be reached)<br>-5 - Unsuccessful (one or more attachments could not be deleted) |
 
+### DB connector
+
+The DB connector provides the following input options to establish a database connection.
+
+| Input options     |                                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Connection string | The connection string that includes the source database name, and other parameters needed to establish the initial connection, for example;<br>SQL Server standard: `"Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; User Id=myUsername; Password=myPassword;"`<br>SQL Server Trusted: `"Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; Trusted_Connection=True;"`<br>DB2 DSN: `"Dsn=myDsnName;Uid=myUsername;Pwd=myPassword"` |
+| SQL               | The SQL executed by this process action.                                                                                       |
+| Input parameters  | Optional. A list of parameters used by the SQL.                                                                                |
+
+| Output options    |                                                                                                                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (empty connection string)<br>-3 - Unsuccessful (no command text)<br>-4 - Unsuccessful (invalid parameter json structure) |
+| Result            | The result of the provided SQL.                                                                                                                                                                                                        |
+| Output parameters | The result of the output parameters of the provided SQL.                                                                                                                                                                               |
+| SQL info message  | Info messages thrown by the executed SQL.                                                                                                                                                                                              |
+| SQL error message | Error messages thrown by the executed SQL.                                                                                                                                                                                             |
+| SQL error code    | Error code thrown by the executed SQL.                                                                                                                                                                                                 |
+
+### Convert json to xml and xml to json
+
+The conversion between json and xml can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
+
+| Input options     |                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------- |
+| Convert input     | The input value that needs to be converted.                                               |
+
+| Output options    |                                                                                                                                                                                                                                        |
+| ----------------- | ----------------------------------------------------------------------------------------- |
+| Status code       | The status code of the executed action.<br>0 - Successful<br>-4 - Unsuccessful (no input) |
+| Convert output    | The converted output value.                                                               | 
+
 ### Read file from disk
 
 Files at locations within the local network can be read using this connector. This connector works on the basis of absolute, local file paths or UNC paths and gives as output the byte-representation of the file.
