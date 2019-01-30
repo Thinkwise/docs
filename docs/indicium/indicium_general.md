@@ -2,7 +2,7 @@
 title: General
 ---
 
-The Indicium application tier is a generic service tier application which uses model interpretation to provide the required logic and functionality. It replaces and expands the previous generated service tier and acts as a central hub for interfaces, business logic, workflow, analytics, security, reporting and much more.
+The Indicium Application Tier is a generic service tier application which uses model interpretation to provide the required logic and functionality. It replaces and expands the previous generated service tier and acts as a central hub for interfaces, business logic, workflow, analytics, security, reporting and much more.
 
  ![img](assets/sf/clip_image002.png)
 *Indicium Application Tier*
@@ -19,3 +19,5 @@ Default connectors and adapters are available to easily integrate with different
 - Third party applications (custom user interfaces, financial applications)
 
 Third party applications and services in turn can connect to Thinkwise applications with minimal effort using the provided web hooks and REST API. The Indicium application tier uses the [OData](http://www.odata.org/) protocol for its API, one of the most widely-used standards for RESTful web services.
+
+My fixes
