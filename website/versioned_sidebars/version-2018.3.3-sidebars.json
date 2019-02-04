@@ -1,0 +1,134 @@
+{
+  "version-2018.3.3-sf": {
+    "Software Factory": [
+      "version-2018.3.3-sf/sf_general",
+      "version-2018.3.3-sf/dev_process",
+      "version-2018.3.3-sf/naming",
+      "version-2018.3.3-sf/conventions"
+    ],
+    "Projects": [
+      "version-2018.3.3-sf/overview",
+      "version-2018.3.3-sf/full_model",
+      "version-2018.3.3-sf/merging",
+      "version-2018.3.3-sf/difference_analysis"
+    ],
+    "Specification": [
+      "version-2018.3.3-sf/process_analysis",
+      "version-2018.3.3-sf/modules",
+      "version-2018.3.3-sf/design"
+    ],
+    "Data": [
+      "version-2018.3.3-sf/domains",
+      "version-2018.3.3-sf/data_model",
+      "version-2018.3.3-sf/data_sensitivity",
+      "version-2018.3.3-sf/data_conversion",
+      "version-2018.3.3-sf/dynamic_model"
+    ],
+    "User Interface": [
+      "version-2018.3.3-sf/menus",
+      "version-2018.3.3-sf/screen_types",
+      "version-2018.3.3-sf/subjects",
+      "version-2018.3.3-sf/variants",
+      "version-2018.3.3-sf/cubes",
+      "version-2018.3.3-sf/themes",
+      "version-2018.3.3-sf/messages",
+      "version-2018.3.3-sf/translations",
+      "version-2018.3.3-sf/help",
+      "version-2018.3.3-sf/extenders"
+    ],
+    "Processes": [
+      "version-2018.3.3-sf/tasks",
+      "version-2018.3.3-sf/reports",
+      "version-2018.3.3-sf/custom_screens",
+      "version-2018.3.3-sf/process_flows",
+      "version-2018.3.3-sf/subroutines"
+    ],
+    "Business Logic": [
+      "version-2018.3.3-sf/business_logic",
+      "version-2018.3.3-sf/functionality",
+      "version-2018.3.3-sf/code_search",
+      "version-2018.3.3-sf/code_overview"
+    ],
+    "Quality": [
+      "version-2018.3.3-sf/code_review",
+      "version-2018.3.3-sf/test_cases",
+      "version-2018.3.3-sf/validation"
+    ],
+    "Deployment": [
+      "version-2018.3.3-sf/creation",
+      "version-2018.3.3-sf/runtime_configuration",
+      "version-2018.3.3-sf/configuration_file",
+      "version-2018.3.3-sf/extended_properties",
+      "version-2018.3.3-sf/developer_mode"
+    ],
+    "Analysis": [
+      "version-2018.3.3-sf/analysis",
+      "version-2018.3.3-sf/function_points"
+    ],
+    "Miscellaneous": [
+      "version-2018.3.3-sf/settings",
+      "version-2018.3.3-sf/advanced"
+    ]
+  },
+  "version-2018.3.3-iam": {
+    "Intelligent Application Manager": [
+      "version-2018.3.3-iam/iam_general",
+      "version-2018.3.3-iam/administrators",
+      "version-2018.3.3-iam/user_simulation"
+    ],
+    "Administrator's guide": [
+      "version-2018.3.3-iam_dev/model",
+      "version-2018.3.3-iam_dev/roles",
+      "version-2018.3.3-iam_dev/applications"
+    ],
+    "Manager's guide": [
+      "version-2018.3.3-iam_admin/admin_applications",
+      "version-2018.3.3-iam_admin/user_groups",
+      "version-2018.3.3-iam_admin/group_preferences",
+      "version-2018.3.3-iam_admin/users"
+    ]
+  },
+  "version-2018.3.3-indicium": {
+    "Indicium": [
+      "version-2018.3.3-indicium/indicium_general",
+      "version-2018.3.3-indicium/installation",
+      "version-2018.3.3-indicium/api",
+      "version-2018.3.3-indicium/fileapi"
+    ]
+  },
+  "version-2018.3.3-deployment": {
+    "Deployment": [
+      "version-2018.3.3-deployment/deployment_general",
+      "version-2018.3.3-deployment/windows_gui",
+      "version-2018.3.3-deployment/web_gui",
+      "version-2018.3.3-deployment/indicium",
+      "version-2018.3.3-deployment/mobile_gui",
+      "version-2018.3.3-deployment/iis",
+      "version-2018.3.3-deployment/reporting",
+      "version-2018.3.3-deployment/db2",
+      "version-2018.3.3-deployment/encryption",
+      "version-2018.3.3-deployment/adfs",
+      "version-2018.3.3-deployment/integrated_security"
+    ]
+  },
+  "version-2018.3.3-kb": {
+    "Knowledge base": [
+      "version-2018.3.3-kb/kb_general",
+      "version-2018.3.3-kb/universal_alpha",
+      "version-2018.3.3-kb/deep_links",
+      "version-2018.3.3-kb/deployer",
+      "version-2018.3.3-kb/exchange",
+      "version-2018.3.3-kb/file_storage",
+      "version-2018.3.3-kb/icons",
+      "version-2018.3.3-kb/iis_admin_api",
+      "version-2018.3.3-kb/lifecycle_policy",
+      "version-2018.3.3-kb/maps",
+      "version-2018.3.3-kb/olap",
+      "version-2018.3.3-kb/performance",
+      "version-2018.3.3-kb/report_mailer",
+      "version-2018.3.3-kb/screenshots",
+      "version-2018.3.3-kb/tags",
+      "version-2018.3.3-kb/username"
+    ]
+  }
+}
