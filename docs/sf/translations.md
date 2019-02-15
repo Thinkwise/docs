@@ -19,6 +19,7 @@ An object contains, at most, the following translations, depending on the type o
 - (Single) translation
 - Translation form
 - Translation grid
+- Translation card list
 - Plural translation
 - Tooltip text, shown when the mouse is moved over a field name, group name, tab or column. It is possible to use HTML to format the text.
 - [Help text](help)
