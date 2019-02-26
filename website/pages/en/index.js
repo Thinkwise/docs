@@ -54,7 +54,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/iam/iam_general.html`,
                   imageAlt: 'Intelligent Application Manager',
-                  title: `[Intelligent Application Manager](${siteConfig.baseUrl}docs/iam/iam_general.html')`,
+                  title: `[Intelligent Application Manager](${siteConfig.baseUrl}docs/iam/iam_general.html)`,
                 },
                 {
                   content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
