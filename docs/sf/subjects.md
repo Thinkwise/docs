@@ -226,7 +226,7 @@ Auto-refresh activates the ability to automatically refresh the subjects and var
 
 The options that are applicable for a column are given below.
 
-![](assets/sf/image163.png)
+![](assets/sf/image163_2019_1.png)
 *Overview of the Columns tab on the Subjects screen*
 
 Column
@@ -289,7 +289,7 @@ The settings for the grid, form and card list can be changed in the components s
 
 Below, you will find the options to configure the grid of a table.
 
-![](assets/sf/components_grid.png)
+![](assets/sf/components_grid_2019_1.png)
 *Overview of a Grid within Components for a selected table*
 
 #### Field order
@@ -298,7 +298,7 @@ The order of the fields may differ from the table definition. For each grid, a d
 
 #### Grid column type
 
-This option determines whether a column in the grid is regular, read only or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
+This option determines whether a column in the grid is editable, read only or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
 
 In addition, this option can never be set more freely than the definition in the column itself. For an example, see column type in columns.
 
