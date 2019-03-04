@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Thinkwise Platform' /* title for your website */,
+  title: 'Thinkwise Docs' /* title for your website */,
   tagline: 'Documentation',
   url: 'https://www.thinkwisesoftware.com' /* your website url */,
   baseUrl: '/docs/' /* base url for your project */,
@@ -109,7 +109,8 @@ const siteConfig = {
     all: 'All updates' 
   },
 
-  //editUrl: 'https://dev.azure.com/thinkwise/_git/Documentation?path=/docs/',
+  editUrl: 'https://github.com/Thinkwise/docs/blob/master/docs/',
+    
   enableUpdateTime: false,
   cleanUrl: false, // Setting this to True breaks relative urls like ../assets/sf/image.png
   scrollToTop: true,
@@ -119,8 +120,10 @@ const siteConfig = {
   
   // Google analytics
   gaTrackingId: 'UA-131222061-1',
-  gaGtag: true
+  gaGtag: true,
   
+  // Collapsible categories
+  docsSideNavCollapsible: true  
 };
 
 module.exports = siteConfig;

@@ -1,0 +1,40 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+variables:
+  sfversion: 2018.3
+
+trigger:
+- master
+
+pool:
+  name: Documentation
+
+steps:
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-installer-task.YarnInstaller@2
+  displayName: 'Use Yarn 1.x'
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn install'
+  inputs:
+    ProjectDirectory: website
+    Arguments: install
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn run version'
+  inputs:
+    ProjectDirectory: website
+    Arguments: 'run version $(sfversion)'    
+
+- task: geeklearningio.gl-vsts-tasks-yarn.yarn-task.Yarn@2
+  displayName: 'Yarn run build'
+  inputs:
+    ProjectDirectory: website
+    Arguments: 'run build'
+
+- script: (robocopy "Thinkwise Docs" "\\mars\docs" /mir) ^& IF %ERRORLEVEL% LSS 8 SET ERRORLEVEL = 0
+  displayName: 'Copy website'
+  condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI'))
+  workingDirectory: website/build

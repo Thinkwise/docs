@@ -4,7 +4,7 @@ This project contains all platform related documentation, a knowledge base and i
 
 ## Build status
 
-[![Build status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Documentation-CI)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=57)
+[![Build Status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Thinkwise.docs?branchName=master)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=85?branchName=master)
 
 ## Code style
 
@@ -21,13 +21,13 @@ For detailed requirements and instructions, see the [Docusaurus docs](https://do
 1. Install Docusaurus
 
    ```sh
-   npm install
+   yarn install
    ```
 
 2. Start the website
 
    ```sh
-   npm start
+   yarn start
    ```
 
 ## Guidelines
@@ -57,8 +57,6 @@ Using a relative path, e.g. `../assets/image.png` can also work but might break 
 
 See the [Docusaurus documentation](https://docusaurus.io/docs/en/doc-markdown#linking-to-images-and-other-assets) for more information.
 
-Use Visual Studio Code with the [vscode-markdown-paste-image](https://github.com/telesoho/vscode-markdown-paste-image) exension or [Typora](https://typora.io/) to auto copy images on paste.
-
 ## Converting Word documents
 
 ### Pandoc
@@ -69,16 +67,8 @@ Convert Word to Markdown:
 for file in *.docx; do echo $file; pandoc -s "$file" --extract-media="./${file%.*}/" -o "$file.md" -t gfm --columns=120; done
 ```
 
-Generate hashes for image filenames, convert the converted markdown one more time:
+To prevent duplicate image filenames, generate hashes by converting the converted markdown one more time:
 
 ```bash
 for file in *.md; do echo $file; pandoc -s "$file" --extract-media=./images -o "$file 2.md" -t gfm --columns=120; done
-```
-
-Find and replace the following strings to cleanup the output:
-
-```
-|$\n  - |- |
-|$\n      - |  - |
-|^\s*\d*\.\s*\#|#|
 ```
