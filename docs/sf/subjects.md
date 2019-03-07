@@ -242,7 +242,7 @@ This indicates, for instance, whether only capitals are permitted for the field.
 
 With this field, it is determined for a column whether the field is presented as:
 
-- Normal
+- Editable
 
 - Read only
 
@@ -330,7 +330,7 @@ Just as in the grid view, the order of the fields can be entered by means of the
 
 #### Form field type
 
-This option determines whether a field in the form is normal, read only or hidden. This option can never be set more freely than the definition in the column itself. For an example, see type of column in columns.
+This option determines whether a field in the form is editable, read only or hidden. This option can never be set more freely than the definition in the column itself. For an example, see type of column in columns.
 
 #### Field number of positions further
 
