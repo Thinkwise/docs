@@ -94,7 +94,6 @@ The parameters below can be used as extended properties in the Software Factory 
 | PrefilterLookupBehaviour*                           | Uses data or translated value for prefilter conditions       | transl<br>**data**                                           |
 | PreviewerToolbarVisible                             | Specifies whether the top toolbar in a previewer component is visible. | Yes<br>**No**                                                |
 | PrintPreviewMultipleRows* <br> (obsolete)           | Shows a print preview when executing a report on multiple rows | **Yes**<br>No                                                |
-| ProcessFlowContext                                  | Order in which details of the active table are searched      | **TopDown**<br>BreadthFirst<br>ActiveThenSiblings<br>ActiveThenChildren |
 | QuickbarDisplay                                     | Determines the initial state of the Quickbar. The option 'opened' will cause the default behavior (visible quickbar), 'closed' will collapse the quickbar but leave it expandable, and 'hidden' will remove the quickbar entirely. | **opened**<br>closed<br>hidden                               |
 | RefreshLookupsOn- <br> TabSwitch                    | Refreshes lookup data when switching between detail tab pages. |                                                              |
 | RefreshOnTabSwitch                                  | Refreshes data when switching between detail tab pages.      | Yes<br>**No**                                                |
