@@ -93,7 +93,8 @@
     "Indicium": [
       "indicium/indicium_general",
       "indicium/installation",
-      "indicium/api"
+      "indicium/api",
+      "indicium/fileapi"
     ]
   },
   "deployment": {
@@ -118,6 +119,7 @@
       "kb/deep_links",
       "kb/deployer",
       "kb/exchange",
+      "kb/objectmodel_extender_template",
       "kb/file_storage",
       "kb/icons",
       "kb/iis_admin_api",

@@ -25,7 +25,7 @@ Icons in the *Functionality screen* indicate the development and review status o
 | ![](assets/sf/image288.png) | Waiting for review, developed by current developer           |
 | ![](assets/sf/image289.png) | Ready for review, developed by another developer             |
 
-Any comments made by the reviewer are also available in the *Functionality screen*, linked to the changelog. The developer can choose to resolve the comments or mark the comment as *won't fix* and optionally explain the decision made by replying with a comment. When done, the developer can set the procedure to review again.
+Any comments made by the reviewer are also available in the *Functionality screen*, linked to the changelog. The developer can choose to resolve the comments or mark the comment as *won't fix* and optionally explain the decision made by replying with a comment. When done, the developer can set the procedure to review again. If there are any unresolved comments when the developer tries to set the procedure to review, a warning message will be shown to alert the developer.
 
 ![](assets/sf/image284.png)
 *Review comments*

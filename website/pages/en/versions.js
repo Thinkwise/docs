@@ -29,14 +29,14 @@ function Versions() {
             <h1>Thinkwise Platform Documentation</h1>
           </header>
           <p>Select your Thinkwise Platform version.</p>
-          <h3 id="latest">Current version</h3>
+          <h3 id="latest">Latest version</h3>
           <p>
             <a href="docs/sf/sf_general.html">{latestVersion}</a>
           </p>
-          <h3 id="rc">Pre-release version</h3>
+          {/* <h3 id="rc">Pre-release version</h3>
           <p>
             <a href="docs/next/sf/sf_general.html">next</a>
-          </p>
+          </p> */}
           <h3 id="archive">Previous versions</h3>
           {versions.map(
             version =>

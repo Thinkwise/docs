@@ -17,7 +17,7 @@ Validations may be conducted at various levels by means of the following tasks:
 - Execute all validations
 - Execute validation group - executes all validations of the selected validation group
 - Execute selected validation - executes the selected validation
-- Approve validation message - approve a validation message so it will be hidden from the list of messages (allowed for information and warning messages only)
+- Approve validation message - approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
 - Undo approval 
 
 ### Status
