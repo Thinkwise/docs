@@ -703,20 +703,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@octopusdeploy/octojs@0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@octopusdeploy/octojs/-/octojs-0.1.3.tgz#c40ecee21f98b49620506c370150cb5ece6da9ef"
-  integrity sha512-StCgsW9hMa/NhLs+XgzT+MFP1jCGWpvXVzVJLHz3g8Mm9UNYwZ+2ZQOARoNYJsFO05sQggoPSiDQoGi1pRUFEg==
-  dependencies:
-    archiver "^2.1.1"
-    commander "^2.15.1"
-    globby "^8.0.1"
-    is-glob "^4.0.0"
-    parse-gitignore "^0.4.0"
-    request "^2.83.0"
-    semver "^5.5.0"
-    stream-to-buffer "^0.1.0"
-
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
