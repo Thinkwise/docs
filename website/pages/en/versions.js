@@ -33,10 +33,6 @@ function Versions() {
           <p>
             <a href="docs/sf/sf_general.html">{latestVersion}</a>
           </p>
-          {/* <h3 id="rc">Pre-release version</h3>
-          <p>
-            <a href="docs/next/sf/sf_general.html">next</a>
-          </p> */}
           <h3 id="archive">Previous versions</h3>
           {versions.map(
             version =>
@@ -46,6 +42,10 @@ function Versions() {
                 </p>
               ),
           )}
+          <h3 id="rc">Next version</h3>
+          <p>
+            <a href="docs/next/sf/sf_general.html">next</a>
+          </p>
         </div>
       </Container>
     </div>
