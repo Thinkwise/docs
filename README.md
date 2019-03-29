@@ -1,10 +1,11 @@
 ## Thinkwise Platform Documentation
 
 This project contains all platform related documentation, a knowledge base and information (blog posts) on new releases.
+<https://office.thinkwisesoftware.com/docs/>
 
 ## Build status
 
-[![Build Status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/Thinkwise.docs?branchName=master)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=85?branchName=master)
+[![Build Status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/GitHub?branchName=master)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=92&branchName=master)
 
 ## Code style
 
@@ -50,25 +51,10 @@ Start with level two `##` heading and always increment headings by one level.
 
 ### Images
 
-Images are stored in the `/docs/assets` folder and must be referenced like this: `assets/image.png`.
-Bug for blog posts: <https://github.com/facebook/Docusaurus/issues/1114>
-
-Using a relative path, e.g. `../assets/image.png` can also work but might break when the current documentation is versioned using docusaurus.
+Images are stored in the `/docs/assets` folder and must be referenced like this: `assets/image.png`. Don't use relative paths like `../assets/image.png` as this breaks the versioning.
 
 See the [Docusaurus documentation](https://docusaurus.io/docs/en/doc-markdown#linking-to-images-and-other-assets) for more information.
 
-## Converting Word documents
+### Preview changes
 
-### Pandoc
-
-Convert Word to Markdown:
-
-```bash
-for file in *.docx; do echo $file; pandoc -s "$file" --extract-media="./${file%.*}/" -o "$file.md" -t gfm --columns=120; done
-```
-
-To prevent duplicate image filenames, generate hashes by converting the converted markdown one more time:
-
-```bash
-for file in *.md; do echo $file; pandoc -s "$file" --extract-media=./images -o "$file 2.md" -t gfm --columns=120; done
-```
+To preview changes, select the _Next_ version from the versions page.
