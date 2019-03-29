@@ -9,11 +9,9 @@ It is important for the developer to closely assess the tasks or activities, so 
 
 Roles are often named after the corresponding activity, such as *Approve hours* or *Report a ticket*.
 
-## Role rights
+Roles can be added or modified using the *Roles* screen.
 
-Roles can be added or modified using the *Role rights* screen.
-
-### Create roles
+## Create roles
 
 To create a new role, click the *Add* button on the *Role*'s tab page. Add a name and description to the role and click *Save*.
 
@@ -22,7 +20,7 @@ Only use the *All rights* option for the administrator role. All other roles sho
 ![](assets/sf/create_role.png)
 *Create a role*
 
-### Setup a role
+## Setup a role
 
 Once a role has been created, it can be set up using the tab pages on the right.
 
