@@ -13,13 +13,6 @@ Roles are often named after the corresponding activity, such as *Approve hours* 
 
 Roles can be added or modified using the *Role rights* screen. After selecting a project version, it is possible to create new roles or to copy existing roles from a previous project version or import roles from another Intelligent Application Manager (e.g., to copy role rights from an acceptance environment to the production environment).
 
-### Copy roles
-
-When a new project version is synchronized in the Intelligent Application Manager, for which an earlier version has already been configured, most of the roles of the previous version can be reused. This is done with the *Copy roles* task.
-
-![](assets/sf/copy_roles.png)
-*Copy roles task*
-
 ### Import roles
 
 When use is made of different IAMs, for example for a DTAP environment, it is possible to copy the roles created in one IAM to another IAM using the *Import roles* task. It is also possible to save this import to disk, for example to copy the roles to an IAM that is not directly accessible.
