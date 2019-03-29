@@ -6,7 +6,7 @@ An application in the Intelligent Application Manager is a combination of a proj
 
 Roles are distinct tasks or activities within an application. They are often named after the corresponding activity, like *Approve hours* or *Report a ticket*.
 
-Applications and roles are created by the application **administrator**. The application **manager** is responsible for granting users access to those applications, by creating users and user groups and assigning roles for specific applications to those user groups. 
+Applications are created by the application **administrator**. The application **manager** is responsible for granting users access to those applications, by creating users and user groups and assigning roles for specific applications to those user groups. 
 
 ![1537868299574](assets/sf/1537868299574.png)
 *Authorization overview*

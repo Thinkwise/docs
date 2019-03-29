@@ -55,6 +55,10 @@
       "sf/test_cases",
       "sf/validation"
     ],
+    "Access Control": [
+      "sf/roles",
+      "sf/model_rights"
+    ],
     "Deployment": [
       "sf/creation",
       "sf/runtime_configuration",
@@ -78,8 +82,7 @@
       "iam/user_simulation"
     ],
     "Administrator's guide": [
-      "iam_dev/model",
-      "iam_dev/roles",
+      "iam_dev/synchronization",
       "iam_dev/applications"
     ],
     "Manager's guide": [
