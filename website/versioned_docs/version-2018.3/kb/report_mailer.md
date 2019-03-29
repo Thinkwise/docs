@@ -23,7 +23,7 @@ An overview of the parameters that can be used:
 | save_mail             | false         | boolean   | Tries to save the email in the Drafts folder if this parameter is set to true.<br>NOTE: If open_in_outlook is also set to true then this parameter will be ignored! |
 | html                  | false         | boolean   | This parameter converts the format of the email to HTML if it is set to true. |
 | priority              | 1             | integer   | This parameter indicates the urgency of the email.<br>Possible values:<br> 0 = low urgency<br/>1 = normal urgency<br/>2 = high urgency. |
-| email                 |               | string    | Email address to which the email has to be sent. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
+| e_mail                |               | string    | Email address to which the email has to be sent. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | cc                    |               | string    | CC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | bcc                   |               | string    | BCC email address for the email. (The TSFReportMailer can be sent to multiple email addresses, which have to be separated by a semicolon.) |
 | body                  |               | string    | If HTML tags are used for the actual message of the email, then the html parameter has to be set to true. |

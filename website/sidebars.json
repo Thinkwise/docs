@@ -100,6 +100,7 @@
   "deployment": {
     "Deployment": [
       "deployment/deployment_general",
+      "deployment/system_requirements",
       "deployment/windows_gui",
       "deployment/web_gui",
       "deployment/indicium",
@@ -119,6 +120,7 @@
       "kb/deep_links",
       "kb/deployer",
       "kb/exchange",
+      "kb/objectmodel_extender_template",
       "kb/file_storage",
       "kb/icons",
       "kb/iis_admin_api",
