@@ -10,7 +10,8 @@ The process of development with the Thinkwise Software Factory consists of the f
 - [User interface](menus.html) - setting up the user interface of the application
 - [Processes](tasks.html) - features to support the processes of your business
 - [Business logic](functionality.html) - creating the required functionality
-- [Quality control](code_review.html) - [review](code_review.html), [test](test_cases.html) and [validate](validation.html) the model and business logic
+- [Quality](code_review.html) - [review](code_review.html), [test](test_cases.html) and [validate](validation.html) the model and business logic
+- [Access Control](roles) - configure roles and assign permissions
 - [Deployment](creation.html) - putting the end product into production
 
 The menu within the Software Factory is built up in the same manner and therefore corresponds with the structure of the manual.
@@ -76,7 +77,7 @@ This phase of the project consists of defining the business logic. Business logi
 ![](assets/sf/image14.png)
 *Business logic code template*
 
-## Quality control
+## Quality
 
 ### Review
 
@@ -106,6 +107,14 @@ The project can be validated completely or per component with the Validator. The
 
 ![](assets/sf/image13.png)
 *Validations executed for one of the modelers*
+
+## Access Control
+
+Permissions are managed in the Thinkwise Platform using Role Based Access Control.
+Roles can be created and configured in the Software Factory and assigned to user groups in the Intelligent Application Manager.
+
+![](assets/sf/assign_rights.png)
+*Assigning permissions to roles*
 
 ## Deployment
 
