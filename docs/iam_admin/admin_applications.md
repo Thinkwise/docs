@@ -50,4 +50,3 @@ go
 grant alter any login to [login_name]
 go
 ```
-

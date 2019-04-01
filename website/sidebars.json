@@ -62,6 +62,8 @@
     "Deployment": [
       "sf/creation",
       "sf/runtime_configuration",
+      "sf/synchronization",
+      "sf/deployment_package",
       "sf/configuration_file",
       "sf/extended_properties",
       "sf/developer_mode"
@@ -82,7 +84,7 @@
       "iam/user_simulation"
     ],
     "Administrator's guide": [
-      "iam_dev/synchronization",
+      "iam_dev/projects",
       "iam_dev/applications"
     ],
     "Manager's guide": [
