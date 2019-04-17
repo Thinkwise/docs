@@ -140,19 +140,15 @@ The `drop_date` and the `resource_id` parameter will automatically be filled wit
 
 ### Timescales and format
 
-The scheduler can show as much timescales as required. 
-In the figure 3 timescales are shown in the blue square; month, week and day timescales. 
+The scheduler can show as much timescales as required.
+In the figure 3 timescales are shown in the blue square; month, week and day timescales.
 They can be added in the extender properties:
 
-![](assets/sf/timescales.md)
+![](assets/sf/timescales.png)
 
 Also the datetime format for each timescale can be provided:
 
 ![](assets/sf/timeformat.png)
-
-### Custom scales
-
-### View types
 
 ### Min and max dates
 
@@ -167,7 +163,7 @@ Example:
 
 ![](assets/sf/min_max.png)
 
-### Other settings
+### Global settings
 
 Global settings for the scheduler are:
 
