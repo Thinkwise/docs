@@ -4,7 +4,7 @@ title: Administrator roles
 
 The Intelligent Application Manager provides different levels of authority to ensure the security of your applications.
 
-For example, only administrators are allowed to synchronize new project versions, while an application manager is responsible for creating user groups and users for a subset of applications. 
+For example, only administrators are allowed to create new applications, while an application manager is responsible for creating user groups and users for a subset of applications. 
 
 A user can be assigned IAM administrator rights using the *Administrator* tab page in the *User* screen. The following administrator roles are available:
 
