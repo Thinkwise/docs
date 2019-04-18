@@ -29,7 +29,7 @@ Example:
 
 ![](assets/sf/resource_table.png)
 
-## Tasks
+## Tasks/appointments
 
 The second mandatory table or view is used to represent the tasks (also called appointments) in the scheduler, shown by the green square.
 The task table or view can have the following columns:
@@ -56,7 +56,7 @@ Example:
 
 ## Work times
 
-The third optional table or view is used to represent worktimes, shown by the yellow square. 
+The third optional table or view is used to represent worktimes, shown by the yellow square.
 They color the background cells with a given color from a start to end date. Columns in this table or view can be the following:
 
 - `resource_id` (mandatory, determines at which resource the worktime is linked)
@@ -97,6 +97,7 @@ The `appointment_id` parameter will automatically be filled with the `task_id` o
 
 The Resize appointment task makes it possible to execute a task when an appointment is resized.
 A task in the model is needed with at least three parameters:
+
 - `appointment_id`
 - `start_date`
 - `end_date`
@@ -180,9 +181,9 @@ Global settings for the scheduler are:
 - HTML in resource tooltip (enable HTML support (limited) for the tooltip on an appointment)
 - Show zoom control (set true to show a zoom control)
 - Remove timescale on zoom out (set true to remove the bottom timescale when zooming out to increase the range of the visible date in the scheduler)
-- Show weekend on workweek view (Show additional weekend days when viewing the workweek view) 
+- Show weekend on workweek view (Show additional weekend days when viewing the workweek view)
 - Active header color (Color of the active timescales)
-- Timecell background color (Background color for all timecells other than selected from the worktimes table or view) 
+- Timecell background color (Background color for all timecells other than selected from the worktimes table or view)
 
 ### Windows settings
 
