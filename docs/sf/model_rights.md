@@ -10,6 +10,7 @@ The *Model rights* screen allows for rights to be assigned to roles from a model
 ## New objects
 
 The *New objects* tab page shows the objects that are new in this project version compared to the previous version. Use the *Update previous version* task to configure the version to compare with.
+This is the same version that is used for the data conversion.
 
 ![](assets/sf/new_objects.png)
 *New objects*

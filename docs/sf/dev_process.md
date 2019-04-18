@@ -11,7 +11,7 @@ The process of development with the Thinkwise Software Factory consists of the f
 - [Processes](tasks.html) - features to support the processes of your business
 - [Business logic](functionality.html) - creating the required functionality
 - [Quality](code_review.html) - [review](code_review.html), [test](test_cases.html) and [validate](validation.html) the model and business logic
-- [Access Control](roles) - configure roles and assign permissions
+- [Access Control](roles) - configuring roles and assigning permissions
 - [Deployment](creation.html) - putting the end product into production
 
 The menu within the Software Factory is built up in the same manner and therefore corresponds with the structure of the manual.
