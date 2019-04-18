@@ -16,8 +16,10 @@ Clicking the *Create deployment package* task will:
 - generate the manifest for the Thinkwise Deployment Center
 - copy all assets used by the project version, like reports and icons
 
-![](assets/sf/create_deployment_package.png)
+Only assets within the project version folder are copied. Assets outside this folder can't be deployed correctly by the Deployment Center.
 
-> Creating a deployment package can take a while, so please be patient!
+> Please note that creating a deployment package can take a while.
+
+![](assets/sf/create_deployment_package.png)
 
 The *History* tab page shows a list of previously created deployment packages.
