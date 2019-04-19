@@ -14,7 +14,7 @@ On synchronization, the tasks first check if there are any unsolved validation m
 
 ![](assets/sf/synchronization_task.png)
 
-If the synchronization fails or is aborted, the *Reset synchronization lock* task can be used to manually reset the synchronization status for a project version.
+If a synchronization aborted unexpectedly, the *Reset synchronization lock* task can be used to manually reset the synchronization status for a project version.
 
 The *History* tab page shows a list of all previous synchronizations.
 
