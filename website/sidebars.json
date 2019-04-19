@@ -34,8 +34,7 @@
       "sf/themes",
       "sf/messages",
       "sf/translations",
-      "sf/help",
-      "sf/extenders"
+      "sf/help"      
     ],
     "Processes": [
       "sf/tasks",
@@ -73,8 +72,17 @@
       "sf/function_points"
     ],
     "Miscellaneous": [
+      {
+        "type": "subcategory",
+        "label": "Extenders",
+        "ids": [
+          "sf/extenders",
+          "sf/resource_scheduler",
+          "sf/maps"
+        ]        
+      },
       "sf/settings",
-      "sf/advanced"
+      "sf/advanced"      
     ]
   },
   "iam": {

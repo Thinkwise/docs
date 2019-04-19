@@ -44,7 +44,7 @@ function Versions() {
           )}
           <h3 id="rc">Next version</h3>
           <p>
-            <a href="docs/next/sf/sf_general.html">next</a>
+            <a href="docs/next/sf/sf_general.html">Next</a>
           </p>
         </div>
       </Container>
