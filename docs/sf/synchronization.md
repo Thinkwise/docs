@@ -10,7 +10,7 @@ To synchronize a project version to IAM, open the *Synchronization to IAM* scree
 
 Two tasks are available to either synchronize directly into an IAM database or to create a synchronization script to manually synchronize the model to, for example, a remote IAM server.
 
-On synchronization, the tasks first check if there are any unsolved validation messages and if there are any roles present in the project version you want to synchronize. If no roles are present, create new roles or import these roles from (an upgraded) IAM.
+On synchronization, the tasks first check if there are any unsolved validation messages and if there are any roles present in the project version you want to synchronize. If no roles are present, create new roles or import these roles from (an upgraded) IAM using the *Import roles* task.
 
 ![](assets/sf/synchronization_task.png)
 
