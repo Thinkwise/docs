@@ -14,7 +14,7 @@ A command-line installer is available for automated deployments.
 
 > The Deployment Center can also be used to install applications **created with** the Thinkwise Platform. More information can be found [here](deployer).
 
-## IAM
+## Intelligent Application Manager
 
 Start by installing the Intelligent Application Manager for the Thinkwise application or the Software Factory development environment.
 It is also possible to upgrade or apply hotfixes to an existing IAM installation.
@@ -39,7 +39,7 @@ In the IAM, use the *Import license* task in the *Settings* menu to import the d
 
 ![](assets/deployment/TSF_dotNET_2019-04-25_08-39-33.png)
 
-## SF
+## Software Factory
 
 When installing a development environment, continue with the Software Factory installation.
 
