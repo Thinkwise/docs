@@ -1,5 +1,5 @@
 ---
-title: installation
+title: Installation
 ---
 
 The Thinkwise Platform can be easily installed using the Thinkwise Deployment Center.
@@ -32,10 +32,10 @@ The Deployment Center comes without a Thinkwise Platform license. Therefor, when
 
 ![](assets/deployment/TSF_dotNET_2019-04-25_08-38-10.png)
 
-To update the license, log on to the Thinkwise Community Portal (through the Web interface) and navigate to *Software > Thinkwise Products*.
-Click on the *Download licenses* task to download a license XML file.
+To update the license, log on to the Thinkwise Community Portal (through the [Web interface](https://office.thinkwisesoftware.com/tcp)) and navigate to *Software > Thinkwise Products*.
+Click on the *Download licenses* task to download a Thinkwise license file.
 
-In IAM, use the *Import license* task in the *Settings* menu to import the downloaded license file in the IAM. After restarting the IAM, the license is activated.
+In the IAM, use the *Import license* task in the *Settings* menu to import the downloaded license file in the IAM. After restarting the IAM, the license is activated.
 
 ![](assets/deployment/TSF_dotNET_2019-04-25_08-39-33.png)
 
@@ -43,11 +43,13 @@ In IAM, use the *Import license* task in the *Settings* menu to import the downl
 
 When installing a development environment, continue with the Software Factory installation.
 
-As the model of the Software Factory development environment needs to be added to an IAM, the first step is to connect with a database server and select an IAM database to use.
-In most cases, this is the IAM databases created in the previous chapter.
+As the model of the Software Factory development environment needs to be added to an IAM, the first step is to connect with a database server and select the IAM database to use.
+In most cases, this is the IAM databases created in the previous step.
+
 After installing the Software Factory, the previously created IAM shortcut can be used to start the development environment.
 
 ## Other components
 
-The Deployment Center can also be used to manually install or update the user interfaces or the Indicium Application Tier.
+The Deployment Center can also be used to manually install or update the Windows, Web and Mobile user interfaces or the Indicium Application Tier.
+
 Note that to be able to install the Web GUI or Indicium using the Deployment Center, the [IIS Administration API](iis_admin_api) needs to be installed on the web server.
