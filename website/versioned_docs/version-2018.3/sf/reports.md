@@ -248,7 +248,7 @@ By linking a report parameter to a report property, these properties can be used
 
 A choice can be made from the following properties within Windows:
 
-|Property|Description|Domain|
+|Property|Description|Datatype|
 |--- |--- |--- |
 |Action|This is the default action that has to be carried out for the report, e.g., print preview or export to pdf. These parameters receive as default the value as specified with the report.|Integer|
 |File specification|A report can even be specified with this. So, for example, in the default, depending on the current row, another report can be opened.|String|
@@ -260,13 +260,9 @@ A choice can be made from the following properties within Windows:
 |Export location|This is the location where the file is stored when the choice is made for the action 'Export to'|String|
 
 
-The web only supports the *Action* and *Compress* properties.
+The web GUI only supports the *Action* and *Compress* properties.
 
-If a report does not have any property parameters, then all properties will be displayed (as was also the case in previous versions). If at least one property parameter is modeled, then only the modeled properties will be displayed. The others will be hidden.
-
-For *action*, *printer name* and *paper tray name*, the control of the domain is ignored and the control will be used that belongs with the property.
-
-> Look in the end product under the default properties to fill in the default value of printer and paper tray name.
+If a report does not have any property parameters, then all properties will be displayed at the top of the parameter dialog. For each property parameter modeled in the sf, the default parameter at the top is removed and the parameter is added as a normal parameter in the form. This way it can be manipulated with a default and/or layout procedure, but also a default value can be set for the parameter.
 
 ## Report look-ups
 
