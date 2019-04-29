@@ -109,6 +109,7 @@
     "Deployment": [
       "deployment/deployment_general",
       "deployment/system_requirements",
+      "deployment/installation",
       "deployment/windows_gui",
       "deployment/web_gui",
       "deployment/indicium",
@@ -118,7 +119,8 @@
       "deployment/db2",
       "deployment/encryption",
       "deployment/adfs",
-      "deployment/integrated_security"
+      "deployment/integrated_security",
+      "deployment/deployer"
     ]
   },
   "kb": {
@@ -126,7 +128,6 @@
       "kb/kb_general",
       "kb/universal_alpha",
       "kb/deep_links",
-      "kb/deployer",
       "kb/exchange",
       "kb/objectmodel_extender_template",
       "kb/file_storage",

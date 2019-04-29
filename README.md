@@ -7,6 +7,8 @@ This project contains all platform related documentation, a knowledge base and i
 
 [![Build Status](https://dev.azure.com/thinkwise/Documentation/_apis/build/status/GitHub?branchName=master)](https://dev.azure.com/thinkwise/Documentation/_build/latest?definitionId=92&branchName=master)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c420caa-76fe-4666-8584-c3258d07a869/deploy-status)](https://app.netlify.com/sites/thinkwise-docs/deploys)
+
 ## Code style
 
 Please use the [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint) extension.
