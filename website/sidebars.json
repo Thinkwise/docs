@@ -34,8 +34,7 @@
       "sf/themes",
       "sf/messages",
       "sf/translations",
-      "sf/help",
-      "sf/extenders"
+      "sf/help"      
     ],
     "Processes": [
       "sf/tasks",
@@ -67,8 +66,17 @@
       "sf/function_points"
     ],
     "Miscellaneous": [
+      {
+        "type": "subcategory",
+        "label": "Extenders",
+        "ids": [
+          "sf/extenders",
+          "sf/resource_scheduler",
+          "sf/maps"
+        ]        
+      },
       "sf/settings",
-      "sf/advanced"
+      "sf/advanced"      
     ]
   },
   "iam": {
@@ -101,6 +109,7 @@
     "Deployment": [
       "deployment/deployment_general",
       "deployment/system_requirements",
+      "deployment/installation",
       "deployment/windows_gui",
       "deployment/web_gui",
       "deployment/indicium",
@@ -110,7 +119,8 @@
       "deployment/db2",
       "deployment/encryption",
       "deployment/adfs",
-      "deployment/integrated_security"
+      "deployment/integrated_security",
+      "deployment/deployer"
     ]
   },
   "kb": {
@@ -118,7 +128,6 @@
       "kb/kb_general",
       "kb/universal_alpha",
       "kb/deep_links",
-      "kb/deployer",
       "kb/exchange",
       "kb/objectmodel_extender_template",
       "kb/file_storage",

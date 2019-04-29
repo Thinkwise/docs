@@ -52,7 +52,7 @@ which locations the application can upload files.
 ## Creating the Web Application
 
 Copy the Indicium binaries and other files to the desired location on the web server. Typically, this location will be something like
-C:\inetpub\wwwroot\indicium. Next, open the appsettings.json file with a text editor \(as Administrator\) to configure the connection to the IAM database.
+`C:\inetpub\wwwroot\indicium`. Next, open the `appsettings.json` file with a text editor \(as Administrator\) to configure the connection to the IAM database.
 
 Indicium handles authentication and authorization internally and will perform all database traffic with a single user, the Database Pool user. If you do not
 want the Database Pool User to be the same as the Application Pool user in IIS, then you can choose to override it by means of the PoolUserName and PoolPassword
@@ -65,7 +65,25 @@ database. Users using RDBMS authentication do need to be created since they will
 > Double quotes (`"`) and backslashes (`\`)  in the appsettings.json file, for instance in usernames or the server address, need to be escaped by an extra
 > backslash. For example: `server\instance` should be `server\\instance`.
 
-![Appsettings.json](assets/indicium/image%20%2810%29.png)
+```json
+{
+    "Logging": {
+        "IncludeScopes": false,
+        "LogLevel": {
+            "Default": "Information",
+            "System": "Information",
+            "Microsoft": "Warning",
+            "Indicium": "Debug"
+        }
+    },
+    "IAMConnection": {
+        "PoolUserName": "[username]",
+        "PoolPassword": "[password]",
+        "Server": "[server]",
+        "Database": "[iam_database]"
+    }
+}
+```
 
 Finally, create a new Web Application in the IIS Manager and choose an alias, the created Application Pool and the physical path to Indicium.
 
@@ -85,13 +103,37 @@ If you do not get a result like the image above, then please refer to [Troublesh
 As of version 2018.2.1, Indicium supports changing and resetting passwords for users with IAM authentication. However, for resetting passwords to work, Indicium
 needs to be able to send emails to users, which requires some additional configuration.
 
-To enable the reset password feature, add the following template to the appsettings.json file and fill it out.
+To enable the reset password feature, add the following template to the `appsettings.json` file and fill it out.
 
-![Email settings template](assets/indicium/image%20%284%29.png)
-
+```json
+    "Email": {
+        "SmtpServer": "[server]",
+        "SmtpPort": 25,
+        "UseSSL": true,
+        "SmtpUsername": "[username]",
+        "SmtpPassword": "[password]",
+        "PasswordResetTemplate": {
+            "FromEmail": "[email]",
+            "FromDisplay": "[name]",
+            "Title": "Password reset token",
+            "Body": "Your password reset token is <b>{resetToken}</b>."
+        }
+    }
+```
 > The reset password feature also requires the email address of users to be configured in IAM.
 
 For instructions on how to start a Mobile GUI against Indicium, see [here](mobile_gui).
+
+## Enable Cross-Origin Resource Sharing (CORS)
+
+By default, the Indicium Application Tier only allows requests coming from the same origin (domain). To enable cross-origin requests, add the allowed origin(s) to the `appsettings.json` file:
+
+```json
+    "AllowedOrigins": [
+        "[https://www.mydomain.com]",
+        "[https://www.otherdomain.com]"
+    ]
+```
 
 ## Troubleshooting issues
 
