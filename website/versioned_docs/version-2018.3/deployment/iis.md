@@ -194,7 +194,7 @@ advises that recycling be done at a fixed time, for example, daily or weekly at 
 >   Why 29 hours? *Wade suggested 29 hours for the simple reason that it is the smallest prime number over 24. He wanted
 >   a staggered and non-repeating pattern that does not occur more frequently than once per day. In Wade's words:'you
 >   don't get a resonate pattern'. The default has been 1740 minutes (29 hours) ever since!*
->   (Source: <http://weblogs.asp.net/owscott/why-is-the-iis-default-app-pool-recycle-set-to-1740-minutes>)
+>   (Source: <https://weblogs.asp.net/owscott/why-is-the-iis-default-app-pool-recycle-set-to-1740-minutes>)
 
 This setting can be configured by clicking on the Application Pool in IIS and then right-clicking on the *Recycling*
 button.
@@ -208,7 +208,7 @@ After a manual or automatic recycle of the Application Pool, IIS provides variou
 in order to warm up the application before the first user sends a request. In this way, the first request is just as
 fast as all other requests. The *Application Initialization* feature can be enabled through *Windows Features*.
 
-![http://weblog.west-wind.com/images/2013Windows-Live-Writer/Use-IIS-Application-Initi.NET-Apps-alive_14732/WindowsFeatures_2.png](assets/deployment/9d06f00047110b384f5d81252c7d976d41000db8.png)
+![https://weblog.west-wind.com/images/2013Windows-Live-Writer/Use-IIS-Application-Initi.NET-Apps-alive_14732/WindowsFeatures_2.png](assets/deployment/9d06f00047110b384f5d81252c7d976d41000db8.png)
 *Enable Application Initialization*
 
 See <http://www.iis.net/learn/get-started/whats-new-in-iis-8/iis-80-application-initialization> for more information.
