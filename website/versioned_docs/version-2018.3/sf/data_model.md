@@ -236,7 +236,7 @@ Validating the data model is possible in the *Validation* tab. Through this, err
 
 ### Starting the application
 
-When the data model is completed, the database can be created. This is described in [Creation](creation.html). Since there is still no user interface set up, there is nothing visible in the end product. The tables are accessible after the menu has been set up.
+When the data model is completed, the database can be created or upgraded. This is described in [Creation](creation.html). When there is no user interface set up, there is nothing visible in the end product. Tables are accessible after a menu has been set up.
 
 Starting the user interface is possible once the database has been created or by using the *Mock Database Provider* to display a preview without an end product database.
 
