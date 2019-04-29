@@ -64,6 +64,8 @@ In the following section Strong and Weak entities form the basis of many of the 
 3.	Have the name of one table combined with the name of the other table
     + If another name is more suitable, then this table should probably be a Strong or Weak Entity
 
+![](assets/guidelines_data_modeling/link_table.png)
+
 ### Guidelines Inheritance tables (One to One Relationship (1 : 0..1))
 1.	Target table has his own name. This means that his name is not derived from the ‘parent’ entity
 2.	The number of primary key columns is equal to the ‘parent’
