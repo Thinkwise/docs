@@ -1,5 +1,5 @@
 ---
-title: Unit Test
+title: Unit Tests
 ---
 
 Unit tests can be written for the following logic concepts: defaults, layouts, contexts and badges. The following image shows the unit test screen. This is the place to create, maintain and execute unit tests.
