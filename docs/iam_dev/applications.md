@@ -44,22 +44,13 @@ go
 
 In the *Translations* tab page, it is possible to provide a translation and a tooltip for every application language.
 
+### File paths
+
+The *[Relink files](projects#relink-files)* task can be used to update all file references in a project version (e.g. icons and reports) to the required location for the production environment.
+
 ## Copy an application
 
 It is also possible to copy an existing application, including its translations, settings, user preferences and authorization using the *Copy application* task.
 
 ![1537863288816](assets/sf/1537863288816.png)
 *Copy application task*
-
-#### Create deployment scripts
-
-A task is provided in the Applications screen to automatically create the required scripts to install an Application with the Thinkwise Deployment Center.
-
-![deployment_center](..\assets\iam_dev\create_scripts_for_deployment_center.png)
-*Task 'Create scripts for Deployment Center'*
-
-This task performs the following actions:
-
-- Copy the *install* and *upgrade* scripts to create or upgrade the application database
-- Create scripts to provide IAM with the model, roles, user groups and application
-- Create scripts to apply the rights to the application database

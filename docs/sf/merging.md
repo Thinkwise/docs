@@ -73,7 +73,7 @@ This enables the modifications from the branch or from the trunk to be carried o
 
 With the task *Compare code*, it is possible to compare and merge the different values of a column for the conflicts *Dual change* and *Dual addition* with an external comparison table (WinMerge or KDiff3). After saving the file in the comparison tool, the merged text is transferred to the pop-up. By clicking on *OK*, the value is stored with the branch and the processing set to *Only carry out branch*.
 
-![](assets/sf/image51_2018_3.png)
+![](assets/sf/image51_2019_1.png)
 *A conflict comparison during a merge session*
 
 ## Execute merge session
