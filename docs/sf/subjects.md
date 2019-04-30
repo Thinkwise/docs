@@ -115,11 +115,11 @@ This system is known within Thinkwise as *deep joining*.
 
 It can be indicated by how a look-up presentation field has to be displayed:
 
-- Auto complete; when typing the next record that satisfies what is being typed is displayed automatically.
-- Combo box; a value from a grid can be selected.
-- Suggestion (contains); this option is still being developed and is currently only available for mobile.
-- Suggestion (starts with); this option is still being developed and is currently only available for mobile.
-- Source (readonly); the field is readonly and a value cannot be entered manually.
+- Auto complete; when typing, the first record that satisfies what is being typed is displayed automatically.
+- Combo (alphabetical); a value from a combo box can be selected. The list is sorted alphabetically.
+- Combo (sorted); a value from a combo box can be selected. The list is sorted according to the default sorting of the look-up subject.
+- Suggestion (contains); when typing, several values containing the input will be presented.
+- Suggestion (starts with); when typing, several values starting with the input text will be presented.
 
 Furthermore, it can be indicated whether the data must be refreshed when opening the combo box.
 
