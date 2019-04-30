@@ -146,7 +146,8 @@
       "kb/report_service/intro",
       "kb/report_service/architecture",
       "kb/report_service/configuration",
-      "kb/report_service/logging"
+      "kb/report_service/logging",
+      "kb/report_service/example"
     ]
   }
 }
