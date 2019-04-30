@@ -103,14 +103,14 @@ Thinkwise will inform its customers when an Internet Information Services versio
 
 The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more. 
 
-(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201808-201808-bar))
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201903-201903-bar))
 
 | **Browser version** | **Market share** |
 | :-----------------: | :--------------: |
-|    Chrome (all)     |       68%        |
-|     Firefox 5+      |       11%        |
-|       IE 11.0       |        6%        |
-|     Safari 11.1     |        3%        |
+|    Chrome (all)     |       70%        |
+|     Firefox 5+      |       10%        |
+|       IE 11.0       |        5%        |
+|     Safari 11.1     |        4%        |
 |       Edge 17       |        3%        |
 |      Opera 15+      |        2%        |
 
@@ -118,22 +118,18 @@ The Thinkwise Web user interface supports browser versions with a **market share
 
 The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more. 
 
-(Source: [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [iOS](http://gs.statcounter.com/ios-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar), [Android](http://gs.statcounter.com/android-version-market-share/mobile-tablet/worldwide/#monthly-201808-201808-bar))
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar), [iOS](http://gs.statcounter.com/ios-version-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar), [Android](http://gs.statcounter.com/android-version-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar))
 
 | **Mobile OS version** | **Market share**  |
 | :-------------------: | :---------------: |
-|       iOS 11.4        |        32%        |
-|       iOS 11.3        |        4%         |
-|       iOS 11.2        |        4%         |
-|       iOS 10.3        |        3%         |
-|        iOS 9.3        | 2% <sup>(1)</sup> |
-|      Android 8.1      |        2%         |
-|      Android 8.0      |        6%         |
-|      Android 7.1      |        5%         |
-|      Android 7.0      |        11%        |
-|      Android 6.0      |        11%        |
-|      Android 5.1      |        7%         |
-|      Android 5.0      |        2%         |
+|       iOS 12.1        |        37%        |
+|       iOS 11.4        |        3%         |
+|       iOS 10.3        |        2%         |
+|      Android 9.0      |        4%         |
+|      Android 8.1      |        9%         |
+|      Android 8.0      |        9%         |
+|      Android 7.1      |        4%         |
+|      Android 7.0      |        6%         |
+|      Android 6.0      |        8%         |
+|      Android 5.1      |        5%         |
 |      Android 4.4      |        3%         |
-
-<sup>(1)</sup> *Not supported due to technical limitations*
