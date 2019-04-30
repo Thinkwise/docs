@@ -51,6 +51,7 @@
     ],
     "Quality": [
       "sf/code_review",
+      "sf/unit_test",
       "sf/test_cases",
       "sf/validation"
     ],
