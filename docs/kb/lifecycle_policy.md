@@ -135,5 +135,4 @@ The Thinkwise Mobile user interface supports mobile operating system versions wi
 |      Android 5.1      |        7%         |
 |      Android 5.0      |        2%         |
 |      Android 4.4      |        3%         |
-
 <sup>(1)</sup> *Not supported due to technical limitations*
