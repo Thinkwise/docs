@@ -5,40 +5,42 @@ title: Example
 The intent of this section is to provide a basic example of how to make a Software Factory application compatible with the reporting service.
 The provided example should be considered a reference to help with implementing report service compatibility in ones own application instead of being the standard implementation.
 
-The example uses an empty Software Factory project called REPORTING_SERVICE_APP which sole purpose is to only contain the things needed to provide compatibility with the reporting service.
+The example uses an empty Software Factory project called REPORTING_SERVICE_APP which sole purpose is to only contain the basis needed to provide compatibility with the reporting service.
 
-It will contain only two tables:
+Two tables will be added to the project:
+
 * **rpt_queue**, which holds the queue information that [rpt_get_reports](architecture#rpt_get_reports) requires for each report and a way for [rpt_set_report](architecture#rpt_set_report) to update the status.
 * **rpt_parmtrs**, which holds the information about parameters values to use for a report to be retrieved by [rpt_get_parmtrs](architecture#rpt_get_parmtrs).
 
-
 ## Domains
-Following that the tables need to be able to contain all the information needed by the service's [subroutines](architecture#stored-procedure-specifications) domains must be added to adhere to those specifications.
+Following that the tables need to contain all the information needed by the service's [subroutines](architecture#stored-procedure-specifications) domains must be added to adhere to those specifications.
 
 The rpt_queue table is a combination of [rpt_get_reports](architecture#rpt_get_reports) and [rpt_set_report](architecture#rpt_set_report).
 
-To make things simple a domain is added for each of the return columns expected by the service from [rpt_get_reports](architecture#rpt_get_reports).
+To keep things simple, a domain is added for each of the return columns expected by the service from [rpt_get_reports](architecture#rpt_get_reports).
 
 ![rpt_get_reports domains](assets/report_service/domain.png)
 *Domains needed for rpt_get_reports.*
 
-To keep track of the status for a record so it can be updated by [rpt_set_report](architecture#rpt_set_report) two more domains are needed.
+To keep track of the status for a record so it can be updated by [rpt_set_report](architecture#rpt_set_report), two more domains are needed.
 One to hold the current status value and another to show the message returned by the service.
 
 ![rpt_set_report domains](assets/report_service/domain_status.png)
 *Domains needed for rpt_set_report.*
 
-Domain elements are added to the rpt_status domain to represent the possible status values that the service returns.
+Domain elements are added to the rpt_status domain to represent the possible status values that the service uses.
 
 ![rpt_status domain elements](assets/report_service/domain_status_elements.png)
 *Domain elements which represent the service's status values.*
 
-Note that the value 1 has not been defined since it represents a deprecated queued/processing status.
+Note that no element for the value 1 has been defined.
+This is because it represents a deprecated queued/processing status.
 
-The value to represent an ignored state is also not part the service's status values and is only used here so that when records are manually added they will not immediately be queued by the service.
+The value to represent an ignored state is also not part the service's status values.
+It is only used here so that when records are manually added in the application they will not immediately be queued by the service.
 
 Domains for the columns used in [rpt_get_parmtrs](architecture#rpt_get_parmtrs) could also be added but, since the input parameter is the id of a report, rpt_id can be used instead.
-Since the other two columns (parmtr_id and parmtr_value) are supposed to be the same data type as rpt_id, this example will use that domain for those as well.
+Because the other two columns (parmtr_id and parmtr_value) are supposed to be the same data type as rpt_id, this example will use that domain for those as well.
 
 ## Data model
 After adding the domains, the tables and columns of the data model can be created.
@@ -49,18 +51,18 @@ The rpt_queue table is added with the following columns.
 *rpt_queue columns.*
 
 Note that most of the column names match with the ones expected in the result set of [rpt_get_reports](architecture#rpt_get_reports).
-This is done to make implementing said subroutine more easy later in the example.
+This is done to make implementing said subroutine easier later in the example.
 
-The columns *report_status* and *report_message* are used to store the data sent through [rpt_set_report](architecture#rpt_set_report) and to queue the record itself.
+The columns *report_status* and *report_message* are used to store the data sent through [rpt_set_report](architecture#rpt_set_report) and to queue the record for processing.
 
-The rpt_parmtrs table is added with these columns and a foreign key to rpt_queue's report_id column.
+The rpt_parmtrs table is added with the columns below and a foreign key to rpt_queue's report_id column.
 
 ![rpt_parmtrs columns](assets/report_service/data_model_rpt_parmtrs.png)
 *rpt_parmtrs columns.*
 
-Once again both the names of both the parmtr_id and parmtr_value columns match with what is expected in the result set of [rpt_get_parmtrs](architecture#rpt_get_parmtrs) to make the eventual implementation easier.
+Once again, both the names of both the parmtr_id and parmtr_value columns match with what is expected in the result set of [rpt_get_parmtrs](architecture#rpt_get_parmtrs) to make the eventual implementation easier.
 
-The full data model should now look like below.
+The full data model now looks like the one below.
 
 ![full report queue data model](assets/report_service/data_model.png)
 *Full report queue data model.*
@@ -80,7 +82,7 @@ First, the subroutine definitions need to be added to the project.
 *Subroutine definition for rpt_set_report.*
 
 > Note that the return value of the subroutine type 'Procedure' is always set to None even though rpt_get_reports and rpt_get_parmtrs are supposed to return a table.
-> This setting has no effect on the way the report service calls these procedures so leaving it on None is OK.
+> This setting has no effect on the way the report service processes these procedures so leaving it on None is OK.
 
 After adding the subroutine definitions a control procedure is added for each of them.
 
@@ -258,9 +260,9 @@ go
 ```
 
 ## Testing
-Now that all subroutines have been implemented it is time to test if it works with the reporting service.
+Now that all subroutines have been implemented it is time to test if the application works with the reporting service.
 
-To aid in this the example will use a report built using Crystal Reports selects a record from the report queue itself.
+To aid in this, the example will use a report built using Crystal Reports that selects a record from the report queue itself.
 To select the right record in the queue table, the report contains a parameter called *report_id*.
 
 The example has added the rpt_queue table to a menu so that records can be added to the queue by using, for example, the Windows GUI.
@@ -271,7 +273,7 @@ The example has added the rpt_queue table to a menu so that records can be added
 > This record is set-up to export the Crystal Reports rpt file at 'D:\\Software_Fabriek\\Reports\example.rpt' to a PDF file that is saved to 'D:\\ReportingTest\\example_report.pdf'.
 > Printing the report is being skipped.
 
-Because the report needs a parameter value for report_id that is also added through the detail tab.
+Because the report needs a parameter value for report_id, that is also added through the detail tab.
 
 ![example report record parameter](assets/report_service/example_report_queue_record_parameter.png)
 *Adding the report_id parameter.*
