@@ -168,7 +168,7 @@ If a template has parameters, these are automatically created on the *Parameters
 
 If a new template has been woven or the template source code has been changed, then the source code of the program objects have to be regenerated. This can be done by clicking on the *Generate code* button in the *Result* tab page.
 
-![](assets/sf/image279.png)
+![](assets/sf/image279_2019_1.png)
 *Result tab page*
 
 The generated program objects can subsequently be deployed to the database by clicking the *Execute* button. 

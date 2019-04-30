@@ -78,7 +78,7 @@ An overview of all tables is accessible via the *Tables* tab page.
 
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
-![](assets/sf/image90.png)
+![](assets/sf/image90_2019_1.png)
 *Columns tab page*
 
 ### General
