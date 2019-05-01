@@ -1,5 +1,5 @@
 ---
-title: Unit Tests
+title: Unit tests
 ---
 
 Unit tests can be written for the following logic concepts: 
@@ -17,7 +17,7 @@ The list on the left side shows all the objects for which unit tests can be crea
 
 After selecting the correct object and logic type a unit test can be created. A title and description can be filled as well as if the unit test should succeed or not, with the *Should abort* checkbox. After saving, parameters can be added. 
 
-A distinction is made between input and output parameters. Thhe output parameters will be checked after the unit test has been executed. In addition, the expected messages can be specified. These will also be checked after performing a unit test.
+A distinction is made between input and output parameters. The output parameters will be checked after the unit test has been executed. In addition, the expected messages can be specified. These will also be checked after performing a unit test.
 
 The *Overview* tab page shows an overview of all unit tests for the selected project version. By selecting one or multiple rows the unit tests can be executed.
 
