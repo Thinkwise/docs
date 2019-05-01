@@ -2,7 +2,7 @@
 title: Unit tests
 ---
 
-Unit tests can be written for the following logic concepts: 
+A unit test is a way of testing an individual unit of software. A unit is the smallest piece of code that can be logically isolated in a system. The purpose is to validate that each unit of the software performs as designed. In most programming languages, that is a function, a subroutine or a method. In the Software Factory unit tests can be written for the following logic concepts:
 
 - defaults
 - layouts
