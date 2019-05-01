@@ -30,9 +30,3 @@ Unit tests can also be created, maintained or executed from the *Functionality m
 The list shows all the unit tests that are directly connected with the program objects on the result page. For example, when a default procedure is created for *Employee* to combine the first and last name to display name, the written unit test that validates the email address is also shown in the list. 
 
 Also, all unit tests are shown that have the selected control procedure linked as primarily.
-
-## Creation
-
-After an upgrade, all unit tests can also be executed from the *Creation* screen as a regression test. This to ensure that further changes have not broken any units that were already tested. 
-
-![](assets/sf/unit_test_execute.png)
