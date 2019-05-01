@@ -14,7 +14,9 @@ The functionality screen consists of six components:
 
 - Result - This is where the program objects, which make use of the template, are (re)generated and can be applied. You can also perform a static code analysis of the generated program objects.
 
-- Test cases - Here you can create test cases for your business logic. See [test cases](test_cases).
+- Unit tests - The place to create, maintain and run unit tests. See [unit tests](unit_test)
+
+- Process tests - Here you can create test cases for your business logic. See [test cases](test_cases).
 
 - Validation - This tab shows any validation messages regarding the selected business logic. 
 
