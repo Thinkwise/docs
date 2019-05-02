@@ -113,7 +113,7 @@ Select one of the predefined User preferences configurations or create a new con
 ![](assets/iam_admin/image18.png)
 *User preferences configuration*
 
-### Period
+### Time period
 
 By specifying a period, it is possible to set a start and end date for a user. Access to all of the application will automatically be denied when the end date is reached.
 
