@@ -43,15 +43,3 @@ When adding a user to a group, it is possible to define the start and end date o
 ### Group owners
 
 Additional [group owners](../iam/administrators), who can add existing users to a user group, can be added to a user group in the *Group owners* tab page.
-
-
-
-
-
-
-
-
-
-> 
-
-

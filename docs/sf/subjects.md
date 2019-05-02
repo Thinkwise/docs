@@ -115,15 +115,11 @@ This system is known within Thinkwise as *deep joining*.
 
 It can be indicated by how a look-up presentation field has to be displayed:
 
-- Auto complete; when typing the next record that satisfies what is being typed is displayed automatically.
-
-- Combo box; a value from a grid can be selected.
-
-- Suggestion (contains); this option is still being developed and is currently only available for mobile.
-
-- Suggestion (starts with); this option is still being developed and is currently only available for mobile.
-
-- Source (read only); the field is read only and a value cannot be entered manually.
+- Auto complete; when typing, the first record that satisfies what is being typed is displayed automatically.
+- Combo (alphabetical); a value from a combo box can be selected. The list is sorted alphabetically.
+- Combo (sorted); a value from a combo box can be selected. The list is sorted according to the default sorting of the look-up subject.
+- Suggestion (contains); when typing, several values containing the input will be presented.
+- Suggestion (starts with); when typing, several values starting with the input text will be presented.
 
 Furthermore, it can be indicated whether the data must be refreshed when opening the combo box.
 
@@ -226,7 +222,7 @@ Auto-refresh activates the ability to automatically refresh the subjects and var
 
 The options that are applicable for a column are given below.
 
-![](assets/sf/image163.png)
+![](assets/sf/image163_2019_1.png)
 *Overview of the Columns tab on the Subjects screen*
 
 Column
@@ -242,15 +238,13 @@ This indicates, for instance, whether only capitals are permitted for the field.
 
 With this field, it is determined for a column whether the field is presented as:
 
-- Normal
-
-- Read only
-
+- Editable
+- Readonly
 - Hidden
 
 The type can be defined differently in the grid and the form. However, this can never be more freely than with the definition of the column.
 
-> The field *added_by* is set to read only. It is possible to hide this in the grid. It is, however, not possible to make this normal in the form.
+> The field *added_by* is set to readonly. It is possible to hide this in the grid. It is, however, not possible to make this normal in the form.
 
 ##### Use when inserting
 
@@ -289,7 +283,7 @@ The settings for the grid, form and card list can be changed in the components s
 
 Below, you will find the options to configure the grid of a table.
 
-![](assets/sf/components_grid.png)
+![](assets/sf/components_grid_2019_1.png)
 *Overview of a Grid within Components for a selected table*
 
 #### Field order
@@ -298,7 +292,7 @@ The order of the fields may differ from the table definition. For each grid, a d
 
 #### Grid column type
 
-This option determines whether a column in the grid is regular, read only or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
+This option determines whether a column in the grid is editable, readonly or hidden. Normal only applies if the user switches the grid to *edit mode* (in other words, if they select the option *Edit in grid*).
 
 In addition, this option can never be set more freely than the definition in the column itself. For an example, see column type in columns.
 
@@ -330,7 +324,7 @@ Just as in the grid view, the order of the fields can be entered by means of the
 
 #### Form field type
 
-This option determines whether a field in the form is normal, read only or hidden. This option can never be set more freely than the definition in the column itself. For an example, see type of column in columns.
+This option determines whether a field in the form is editable, readonly or hidden. This option can never be set more freely than the definition in the column itself. For an example, see type of column in columns.
 
 #### Field number of positions further
 
@@ -444,7 +438,6 @@ When creating a prefilter, some standard things can be defined:
 Prefilters within a table can be grouped together to display them logically. Both the groups and the prefilters within a group can be put into a sequence. When prefilters are grouped, they can be displayed in two ways in the context menu:
 
 - Via a sub-menu in the context menu.
-
 - Through the use of separators in the context menu.
 
 Only separators are used in the ribbon, which is also the case for the sub-menus.
