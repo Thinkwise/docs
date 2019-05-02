@@ -1,5 +1,5 @@
 ---
-title: Test cases
+title: Process tests
 ---
 
 The integrated test automation tooling in the Thinkwise Software Factory allows you to test the coded business logic in, for example, templates, view definitions, prefilters and expression fields. 
