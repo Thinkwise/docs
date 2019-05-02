@@ -126,7 +126,9 @@ In the following section Strong and Weak entities form the basis of many of the 
 ### Primary keys
 
 1. Name primary key column is table name + `_id`
-2. Type of column is preferably an identity with a BIGINT as the data type. Only primary key columns that are not foreign keys may be an identity column. 
+2. Type of column is preferably an identity with an INT as the data type.
+   For tables with more than 2 billion expected rows or data mutations, use BIGINT.
+   Only primary key columns that are not foreign keys may be an identity column.
 
 ### Foreign keys
 
