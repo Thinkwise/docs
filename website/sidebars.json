@@ -22,8 +22,8 @@
       "sf/data_model",
       "sf/data_sensitivity",
       "sf/data_conversion",
-      "sf/dynamic_model"
-
+      "sf/dynamic_model",
+      "sf/guidelines_data_modeling"
     ],
     "User Interface": [
       "sf/menus",
