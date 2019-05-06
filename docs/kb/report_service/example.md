@@ -328,7 +328,7 @@ The above configuration will try to connect to a SQL Server database called REPO
 All that is left is to start up the service and see if it works.
 
 ![reporting service console output](assets/report_service/console_output.png)
-**
+*Output from the Reporting service console.*
 
 As shown in the output, the example_report record gets retrieved after it has been queued in the database.
 The parameters for the example_report record are then retrieved.
