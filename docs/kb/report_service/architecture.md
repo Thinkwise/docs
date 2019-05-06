@@ -37,7 +37,8 @@ Instead of allowing this behaviour, a design choice was made to terminate the se
 ## Stored procedure specifications
 This section covers the specification to which implementations of the rpt_get_reports, rpt_get_parmtrs and rpt_set_report stored procedures must abide to correctly work with the Thinkwise Reporting Service.
 
-> *rpt_get_reports* and *rpt_get_parmtrs* are required to return a table via a select statement. <br/><br/>
+> *rpt_get_reports* and *rpt_get_parmtrs* are required to return a table via a select statement.
+>
 > When adding these procedures as [subroutines](../../sf/subroutines.html) one might notice that the *Return value* option will be automatically set to *None*.
 > This option has no affect on the reporting service implementation, just add the select statement through a control template and the service will be able to use the returned data set.
 
@@ -95,6 +96,8 @@ Unlike *rpt_get_reports* and *rpt_get_parmtrs* this procedure should not have an
 
 It is however important to design your report queue (the returned result of *rpt_get_reports*) to not return reports that have been processed to avoid continually processing the same reports.
 
-> **Updating the status of a reports is seen as one of the most critical parts of the entire service process.**<br/><br/>
-> **Should enough errors occur inside the implementation of this procedure, the service will eventually stop entirely.**<br/><br/>
-> **If this happens the service must be started back up manually after the problem occuring inside the procedure has been fixed.**
+> Updating the status of a reports is seen as one of the most critical parts of the entire service process.
+>
+> Should enough errors occur inside the implementation of this procedure, the service will eventually stop entirely.
+>
+> If this happens the service must be started back up manually after the problem occuring inside the procedure has been fixed.
