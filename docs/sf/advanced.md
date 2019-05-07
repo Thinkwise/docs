@@ -140,3 +140,7 @@ Overview with control procedures and the duration to generate them. If generatio
 ### Validation log
 
 Overview with validations and the duration to execute them. If validation is slow, this can be used to find the slowed validation and try to increase their performance.
+
+### Synchronization history
+
+Overview with synchronizations and the corresponding status and types.
