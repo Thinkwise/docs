@@ -137,10 +137,10 @@ Overview of the available printer types.
 
 Overview with control procedures and the duration to generate them. If generation is slow, this can be used to find the slowed control procedures and try to increase their performance.
 
-### Validation log
+#### Validation log
 
 Overview with validations and the duration to execute them. If validation is slow, this can be used to find the slowed validation and try to increase their performance.
 
-### Synchronization history
+#### Synchronization history
 
 Overview with synchronizations and the corresponding status and types.
