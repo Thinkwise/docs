@@ -144,16 +144,10 @@
       "kb/olap",
       "kb/performance",
       "kb/report_mailer",
+      "kb/report_service",
       "kb/screenshots",
       "kb/tags",
       "kb/username"
-    ],
-    "Reporting service": [
-      "kb/report_service/intro",
-      "kb/report_service/architecture",
-      "kb/report_service/configuration",
-      "kb/report_service/logging",
-      "kb/report_service/example"
     ]
   }
 }
