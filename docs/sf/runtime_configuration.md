@@ -24,3 +24,11 @@ For the Universal user interface and the Indicium application tier, runtime conf
 
 ![1537777102204](assets/sf/user_runtime_configurations.png)
 *Active runtime configurations per user*
+
+The order in which active runtime configurations are shown can be modified here as well.
+
+## Role simulation
+
+Developers can choose to simulate a role. This can be set in the *Runtime configurations* screen at *Personal settings* or at the overview of runtime configurations per user. When the application is started or the model is refreshed, the rights of this role will be applied.
+
+While this setting is configurable in the *Runtime configurations* screen, this setting will affect **all** runtime configurations of this user for a project version.

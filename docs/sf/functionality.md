@@ -14,7 +14,9 @@ The functionality screen consists of six components:
 
 - Result - This is where the program objects, which make use of the template, are (re)generated and can be applied. You can also perform a static code analysis of the generated program objects.
 
-- Test cases - Here you can create test cases for your business logic. See [test cases](test_cases).
+- Unit tests - The place to create, maintain and run unit tests. See [unit tests](unit_test)
+
+- Process tests - Here you can create test cases for your business logic. See [test cases](test_cases).
 
 - Validation - This tab shows any validation messages regarding the selected business logic. 
 
@@ -168,7 +170,7 @@ If a template has parameters, these are automatically created on the *Parameters
 
 If a new template has been woven or the template source code has been changed, then the source code of the program objects have to be regenerated. This can be done by clicking on the *Generate code* button in the *Result* tab page.
 
-![](assets/sf/image279.png)
+![](assets/sf/image279_2019_1.png)
 *Result tab page*
 
 The generated program objects can subsequently be deployed to the database by clicking the *Execute* button. 
