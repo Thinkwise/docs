@@ -476,7 +476,7 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 >  If the application is started in developer mode, the resulting query can be viewed in the debug screen.
 
-![](assets/2019_1_subjects_prefilters.png)
+![](assets/subjects_prefilters.png)
 *Setting a prefilter with a query*
 
 ### Conditional formatting
@@ -514,14 +514,14 @@ Furthermore, you can specify the tab control ID. You have the choice from the ta
 
 This is where the tasks are linked to a table. How to create tasks is described in paragraph 0.
 
-![](assets/2019_1_subjects_tasks.png)
+![](assets/subjects_tasks.png)
 *Overview of the links for a task*
 
 ### Reports
 
 This is where the reports are linked to a table. How to create reports is described in paragraph 7.7.
 
-![](assets/2019_1_subjects_reports.png)
+![](assets/subjects_reports.png)
 *Overview of report links for a table*
 
 ### Drag drop
