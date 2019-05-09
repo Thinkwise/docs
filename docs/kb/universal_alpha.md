@@ -16,7 +16,7 @@ There are a few prerequisites to be able to run Universal as GUI for a model.
 
 As of Alpha 0.57, Universal uses a dedicated version of Indicium. Make sure to download and install **Indicium Universal**.
 
-The easiest way to run Universal is to deploy it on the same server as Indicium. Browser security prohibits Universal from interacting with Indicium by default. If required, Indicium settings can be configured to this scenario.
+The easiest way to run Universal is to deploy it on the same server as Indicium. Browser security prohibits Universal from interacting with Indicium by default. If required, Indicium settings can be configured to support this scenario.
 
 Since this is an Alpha version, no compatibility plan is in place just yet. Universal only supports 2018.3 and future versions. Ensure you have the latest hotfixes applied and the latest version of Indicium installed. 
 
