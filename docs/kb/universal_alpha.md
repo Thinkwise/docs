@@ -14,13 +14,15 @@ The Alpha version is deployed as a web application. Universal can be downloaded 
 
 There are a few prerequisites to be able to run Universal as GUI for a model.
 
-Universal must be deployed on the same server as Indicium. Browser security prohibits us from deploying this otherwise. An update for Indicium is pending to allow Indicium and Universal to be deployed on different servers.
+As of Alpha 0.57, Universal uses a dedicated version of Indicium. Make sure to download and install **Indicium Universal**.
+
+The easiest way to run Universal is to deploy it on the same server as Indicium. Browser security prohibits Universal from interacting with Indicium by default. If required, Indicium settings can be configured to this scenario.
 
 Since this is an Alpha version, no compatibility plan is in place just yet. Universal only supports 2018.3 and future versions. Ensure you have the latest hotfixes applied and the latest version of Indicium installed. 
 
 Applying further hotfixes or installing a subsequent version of Indicium might require an updated version of Universal as well.
 
-The latest Alpha version of Universal, along with the latest version of Indicium and the most recently published hotfixes can be found in the Thinkwise Community Portal.
+The latest Alpha version of Universal, along with the latest version of Indicium Universal and the most recently published hotfixes can be found in the Thinkwise Community Portal.
 
 >It is strongly discouraged to run the Alpha version of Universal on production environments!
 
@@ -75,13 +77,14 @@ The user can log in using the credentials used as configured in the IAM_DEV.
 
 ### Troubleshooting
 
-- Download the latest Indicium version, Universal version and run all upgrades and hotfixes on the SF and IAM.
-- Ensure Universal and Indicium are on the same server. The server name for both URLs must be the same.
+- Download the latest Indicium Universal version, Universal version and run all upgrades and hotfixes on the SF and IAM.
+- Try running Universal and Indicium on the same server. The server name for both URLs must be the same.
 - Use fully qualified server names, like `server.thinkwisesoftware.com/indicium` instead of `server/indicium`.
 - Test access to Indicium by accessing the URL directly with the used credentials.
-- Clear the cache of your browser. If possible, update your browser or switch to a recommended browser.
+- Clear the cache of your browser. Alternatively, try incognito mode. 
+- If possible, update your browser or switch to a recommended browser.
 - Ensure the user has access to the application in the Intelligent Application Manager or runtime configuration in the Software Factory.
-- Ensure a list bar menu is available to the user.
+- Ensure a list bar menu or tile menu is available to the user.
 - Run the _Correct foreign key casing_ task in the Software Factory and re-synchronize with IAM if needed to prevent casing issues.
 - Validate the model. Universal is sensitive to incorrect models.
 
