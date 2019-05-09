@@ -144,15 +144,10 @@ In the following section Strong and Weak entities form the basis of many of the 
 
 ### Datatypes
 
-1. Use DATETIME2, not DATETIME
-2. Use VARCHAR unless the character set needs to be extended. Then a NVARCHAR can be used.
-   - Using NVARCHAR has some issues:
-     - Strings are VARCHAR unless you put N in front: `N'This is NVARCHAR'`
-     - Joining or filtering NVARCHAR with VARCHAR columns, constants or variables has a performance hit
-     - Primary key and index length limits will be exceeded sooner
-     - Sorting is slower
-3. Identity: use INT or BIGINT
-4. Use NUMERIC for numbers with digits after the decimal point
+1. Use [DATETIME2](https://docs.microsoft.com/en-us/sql/t-sql/data-types/datetime2-transact-sql) instead of DATETIME
+2. Use [NVARCHAR](https://docs.microsoft.com/en-us/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql) instead of VARCHAR, unless performance is a key factor 
+3. Use [INT or BIGINT](https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql) for identities
+4. Use [NUMERIC](https://docs.microsoft.com/en-us/sql/t-sql/data-types/numeric-types) for numbers with digits after the decimal point
 5. Don’t use CHAR, FLOAT, NCHAR without a specific reason
 
 ### Example
