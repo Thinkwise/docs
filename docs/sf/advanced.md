@@ -37,6 +37,10 @@ Re-imports master data and base projects. Only execute this task if instructed b
 
 Maintenance task to optimize SQL Server indexes and statistics.
 
+#### Clean up redundant rights
+
+Maintenance task to clean up rights that are no longer used. Use this for example if a role has changed to "all rights" or when model objects are granted but not available. The granted will be removed because since they are not available the granted will have no use.
+
 ### Model
 
 #### Application languages
