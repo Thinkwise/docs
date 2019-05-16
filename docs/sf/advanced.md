@@ -39,7 +39,7 @@ Maintenance task to optimize SQL Server indexes and statistics.
 
 #### Clean up redundant rights
 
-Maintenance task to clean up rights that are no longer used. Use this for example if a role has changed to "all rights" or when model objects are granted but not available. The granted will be removed because since they are not available the granted will have no use.
+Maintenance task to clean up rights that are no longer used. Use this for example if a role has changed to "all rights" or when model objects are granted but not available. Objects that are not available will not be shown, therefore the granted will have no effect and will be deleted. 
 
 ### Model
 
