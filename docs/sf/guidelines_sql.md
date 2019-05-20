@@ -27,7 +27,7 @@ In this document you will find guidelines per SQL topic. Each guideline is then 
 3. Give every column in the select an alias. Align AS under each other.
 4. Give each table in the FROM clause an alias (without AS).
 5. FROM: The alias = first letter of the table + first letters after every _. If this is not sufficient, then add a number or choose another meaningful alias.
-6. Place nog empty lines inside a query.
+6. Place no empty lines inside a query.
 
 ### Example
 
@@ -47,8 +47,8 @@ from sales_invoice si
 ### Guidelines
 
 1. Align ORDER BY left under SELECT
-3. Place columns in the ORDER BY under each other, left aligned
-2. Put comma’s in the ORDER BY in front
+2. Place columns in the ORDER BY under each other, left aligned
+3. Put commas in the ORDER BY in front
 
 ### Example
 
@@ -200,7 +200,7 @@ from project p
 ### Guidelines
 
 1. Align UNION and UNION ALL left under SELECT.
-2. The are no empty lines between UNION and the two queries.
+2. No empty lines between UNION and the two queries.
 
 ### Example
 
@@ -609,7 +609,7 @@ from sales_invoice si
 4. Align FETCH left.
 5. In a fetch, place all column on the same line, unless there are too many parameters. In that case, place them under eachother.
 6. Align CLOSE left.
-7. Align DEALLOCATE.
+7. Align DEALLOCATE left.
 
 ### Example
 
@@ -649,7 +649,7 @@ deallocate countries
 2. Align COMMIT TRAN left.
 3. Align ROLLBACK TRAN left.
 4. Don't give the transaction a name, unless you need to work with nested transactions.
-5. Align the code withoin the transcation to the left
+5. Align the code within the transaction to the left
 
 ### Example
 
@@ -757,9 +757,9 @@ end catch
 
 ### Guidelines
 
-1. Place first parameter after the procedure name
+1. Place the first parameter after the procedure name
 2. Place parameters under each other, comma in front
-3. Place OUTPUT after parameter, align OUTPUTs with each other
+3. Place OUTPUT after the parameter, align OUTPUTs with each other
 
 ### Example
 
