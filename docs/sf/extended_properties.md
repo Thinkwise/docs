@@ -130,7 +130,6 @@ The parameters below can be used as extended properties in the Software Factory 
 | UseUsrLibl*                                         | Sets connection string LibraryList using [database], *USRLIBL for IBM i DB2 connections | **Yes**<br>No                                                |
 | UseWindowsCulture                                   | Uses the region and language settings of the operating system (Windows) for displaying and editing values instead of the settings derived from the application language ID from the meta source. (Dates, times, numbers etc.) | Yes<br>**No**                                                |
 | WebGuiURL                                           | Specifies the web gui base url so a deeplink URL can be created in the Windows GUI                                                                                                                                                                                     |
-| PreviewerWebCacheAgeDays                           | Number of days that documents, loaded with the web previewer, should be cached.
-0 or lower will not disable the cache, but will clean all documents when the screen containing the previewer is closed.                                                                                    |      
+| PreviewerWebCacheAgeDays                           | Number of days that documents, loaded with the web previewer, should be cached. 0 or lower will not disable the cache, but will clean all documents when the screen containing the previewer is closed.                                                                                    |      
 
 |
