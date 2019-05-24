@@ -172,8 +172,6 @@ Reports that are generated on a report server use the connection string that is 
 ![](assets/sf/image204.png)
 *Specify SSRS (Server) file specification*
 
-Local SSRS reports in an SF application support the following report (export) actions:
-
 ##### Installation
 
 To use reports that are created for SSRS using the Thinkwise Software Factory with a GUI version 2017.1.11 or lower, the following software must be installed on the computer of the user for the Windows GUI or the webserver on which the ASP GUI runs:
