@@ -287,6 +287,4 @@ Reports can take a while to process. There are four options to give instructions
 3. No - The action is executed in the background and the user can continue working.
 4. Optional - The user has to wait (option 1) but has the possibility to continue the action in the background (option 3).
 
-For Web, this means that the long-term actions no longer cause a request timeout from IIS. (Default after 90 seconds)
-
 The display parameter can be used to distinguish between multiple instances of a report in the async action dialog.
