@@ -24,30 +24,30 @@ The basic data for a report can be entered in the settings, such as the type of 
 - GUI code
 - Microsoft Word
 
-#### Crystal Reports
+### Crystal Reports
 
 A report in Crystal Reports can make use of views, but SQL queries can also be specified in the report. CR reports can be developed with the Crystal Reports Designer or with Visual Studio.
 
-#### DevExpress Reports
+### DevExpress Reports
 
 DevExpress Reports can display any styled and formatted text, such as RTF and HTML, from your end product. The DevExpress Report Designer is free of charge and can be downloaded from TCP.
 
-#### Windows command
+### Windows command
 
 The same as for [tasks](tasks#windows-command) but with the name of the parameter in the *File specification* field. For example, to link in an existing pdf as a report.
 
 ![](assets/sf/image201.png)
 *General settings when creating a report*
 
-#### GUI code
+### GUI code
 
 This option allows *custom tasks*, such as the [TSFReportMailer](../kb/report_mailer), to be linked in as a report. The name of the custom task should be entered in the *File specification* field.
 
-#### Microsoft Word
+### Microsoft Word
 
 To generate reports in Word, a macro and a template have to be created in Word. Word does not work in web and is not always reliable because of the macros.
 
-##### Create a template
+#### Create a template
 
 - Open Microsoft Word
 
@@ -75,7 +75,7 @@ To generate reports in Word, a macro and a template have to be created in Word. 
 
 - Click *Normal Word Document*
 
-##### Create a macro:
+#### Create a macro
 
 - Go to the *View* tab
 
@@ -140,7 +140,7 @@ ActiveDocument.MailMerge.Execute
 Application.Quit (False)
 ```
 
-#### SSRS
+### SSRS
 
 SSRS stands for SQL Server Reporting Services and is a (server-based) report generation system of Microsoft SQL Server. Reports can be drawn up with this system so that information from tables from one or more databases can be presented in an orderly fashion.
 
@@ -154,14 +154,14 @@ There are two ways to deploy the RDL files:
 
 Depending on the environment in which the reports are generated, these can be exported in various formats.
 
-##### SSRS (Local)
+#### SSRS (Local)
 
 Local reports work in the same way as other report types, such as Crystal Reports. The report is generated on the basis of the RDL file that is specified for the report in the file specification field, for which use is made of the end application database connection. This means that the connection string that is specified as Datasource for any Data Sets is ignored in the RDL file.
 
 ![](assets/sf/image203.png)
 *Specify SSRS (local) file specification*
 
-##### SSRS (Server)
+#### SSRS (Server)
 
 In this variant, the reports are generated on a report server. The relative path to the report on the server must be specified in the file specification field. The location of the report server has to be passed on to the GUI via the INI parameter `ssrsreportserver`.
 
@@ -172,21 +172,7 @@ Reports that are generated on a report server use the connection string that is 
 ![](assets/sf/image204.png)
 *Specify SSRS (Server) file specification*
 
-##### Installation
-
-To use reports that are created for SSRS using the Thinkwise Software Factory with a GUI version 2017.1.11 or lower, the following software must be installed on the computer of the user for the Windows GUI or the webserver on which the ASP GUI runs:
-
-- Microsoft SQL Server CLR Types (SQLSysClrTypes.msi)
-    <https://www.microsoft.com/en-us/download/details.aspx?id=42295>
-
-- Microsoft Report Viewer 2015 Runtime
-    <https://www.microsoft.com/en-us/download/details.aspx?id=45496>
-
-The SQLSysClrTypes installer needs to be implemented before the report viewer runtime is run. If the computer on which the work is done contains its own SQL Server instance, the CLR types can be omitted.
-
-The above is not necessary when use is made of a GUI with version 2017.1.12 or higher. With these versions, the runtime for SSRS is included as default with the GUI itself.
-
-##### Oracle and DB2
+#### Oracle and DB2
 
 Reports made with SSRS can also retrieve data from Oracle and DB2 databases, provided that the correct software is available for this on the system on which the report is generated.
 
@@ -196,11 +182,13 @@ For Oracle connections, the Oracle Client needs to be present on the system.
 
 Connections to DB2 databases are created in SSRS via OLE DB. The ADO.NET bindings, which can be installed via the IBM Client Access, are required for this.
 
-##### Report Builder
+#### Report Builder
 
 The Microsoft SQL Server Report Builder software to develop reports can be downloaded from this page:
 
 - <https://www.microsoft.com/en-us/download/details.aspx?id=42301>
+
+A report consists of the following basic components:
 
 | Component       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -209,9 +197,6 @@ The Microsoft SQL Server Report Builder software to develop reports can be downl
 | Images          | Illustrations that can be used within the report.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Data sources    | A Data source describes a connection to a database. A connection string can even be typed in or one can be built via a dialogue. Furthermore, for example, a login method can be selected to be used when setting up the connection.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Data Sets       | A Data Set contains the resulting set of a query or stored procedure on a Data source.<br>These can be used, for instance, to fill tables and graphs within the report.<br>When using a stored procedure, parameters are automatically added to the report for both SQL Server and Oracle and DB2 connections.<br>For a query within the Data Set itself, a parameter name with the correct prefix ("@"/":") can be indicated with SQL Server and Oracle connections. During the testing of the query, the Report Builder will automatically add these parameters to the report.<br>With DB2, use is made of an OLE DB connection. Therefore, the user has to mark parameters in the query with a question mark. This then has to be assigned to a parameter within the report on the Parameters screen of the Data Set. |
-
-
-A report consists of the following basic components:
 
 ## Report parameters
 
