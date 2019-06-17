@@ -775,7 +775,7 @@ After this, the file will be compiled and there will then be a new `.class` file
 
 ### AutoDiscover does not work
 
-If AutoDiscover does not work even though all settings are correct, Windows Firewall may block the calls from the Connector. In this case, either the Windows Firewall has to be disabled or a rule added that gives the Connector access. When using Office 365, it is mandatory to fill the `StaticEwsUrl` as indicated in the Connector configuration.
+If AutoDiscover does not work even though all settings are correct, Windows Firewall may block the calls from the Connector. In this case, either the Windows Firewall has to be disabled or a rule added that gives the Connector access. When using Office 365, it is mandatory to fill the `StaticEwsUrl` as indicated in the Connector configuration. The value is always the same for Office 365: `https://outlook.office365.com/ews/Exchange.asmx`
 
 ### Other issues
 
