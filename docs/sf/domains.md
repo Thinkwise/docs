@@ -33,7 +33,6 @@ Using a control, you can specify how a column should be displayed in the user in
 | FILE                 | When entering or modifying a file,   location can be selected. | All         | VARCHAR                | VARCHAR2              | VARCHAR               |
 | FILE_UPLOAD          | Uploading and downloading a file.   The default value of the column is the standard file location for the Windows   GUI. The File storage folder is used for the Web GUI if files are uploaded. | All         | VARCHAR                | VARCHAR2              | VARCHAR               |
 | FOLDER               | Selecting and opening a   folder.                            | Windows/Web | VARCHAR                | VARCHAR2              | VARCHAR               |
-| FONT                 | Selecting a font.                                            | Windows/Web | VARCHAR                | VARCHAR2              | VARCHAR               |
 | GOOGLE_MAPS          | Opening Google maps based on a   location.                   | Windows/Web | VARCHAR                | VARCHAR2              | VARCHAR               |
 | GROUP HEADER LABEL   | Creates a header label from your   own data                  | All         | VARCHAR                | VARCHAR2              | VARCHAR               |
 | GROUP HEADER ICON    | Creates an icon in front of the   group header label         | All         | VARCHAR                | VARCHAR2              | VARCHAR               |
