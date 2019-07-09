@@ -3,215 +3,247 @@ title: SQL formatting guidelines
 sidebar_label: 📖 Guidelines
 ---
 
-There are many good ways to format SQL code. At Thinkwise every software factory developer must format SQL code in the same way. In this section you will find guidelines to do this.
-Advantages are
+Well formatted code is easier to read and to maintain, resulting in a higher overall quality.
+There are many good ways to format SQL code, however. This document provides some guidelines we use at Thinkwise to write legible and structured SQL code.
 
-1. A clear structure
-   - This makes the code less complex
-   - The quality becomes higher
-2. A recognizable layout
-   - Code is easier to maintain
-   - Developers who are working with SQL for the first time can immediately write SQL according to these guidelines and no longer have to create a style themselves.
+The guidelines are structured per statement. All guidelines are clarified with an example.
 
-In this document you will find guidelines per SQL topic. Each guideline is then clarified with an example.
+## General
+
+- Always use 4 spaces instead of tabs
+- Always indent using a multiple of 4 spaces
+- Always align opening and closing parentheses `(` and `)`
 
 ## SELECT
 
 ### Guidelines
 
-1. Align left
-   - SELECT
-   - FROM
-   - WHERE
-2. Place comma’s in the select in front
-3. Give every column in the select an alias. Align AS under each other.
-4. Give each table in the FROM clause an alias (without AS).
-5. FROM: The alias = first letter of the table + first letters after every _. If this is not sufficient, then add a number or choose another meaningful alias.
-6. Place no empty lines inside a query.
+1. Keywords (`select`, `from`, `where`, `order by`) are left aligned
+1. The select list is placed under the `select` keyword and indented using 4 spaces
+1. Commas are placed in front of column names
+1. An alias is provided for all columns without a clear name (constants, functions, composite columns), using the `as` keyword
+1. An alias is provided for all tables, consisting of the first letter of every subname, without using the `as` keyword.
+   If this is not sufficient, add a number or choose another meaningfull alias.
+1. Do not use empty lines inside a query
 
 ### Example
 
 ```sql
-select si.sales_invoice_id as sales_invoice_id
-      ,si.customer_id      as customer_id
-      ,si.invoice_date     as invoice_date
-      ,getdate()           as due_date
-      ,si.amount_excl_vat  as amount_excl_vat
-      ,si.amount_incl_vat  as amount_incl_vat
-      ,si.invoice_status   as invoice_status
+select
+    si.sales_invoice_id
+    ,si.customer_id
+    ,si.invoice_date
+    ,getdate() as due_date
+    ,si.amount_excl_vat
+    ,si.amount_incl_vat
+    ,1 as invoice_status
 from sales_invoice si
 ```
 
-## ORDER BY
+## ORDER BY and GROUP BY
 
 ### Guidelines
 
-1. Align ORDER BY left under SELECT
-2. Place columns in the ORDER BY under each other, left aligned
-3. Put commas in the ORDER BY in front
+1. The order by list is placed under the `order by` keyword and indented using 4 spaces
+1. Commas are placed in front of the column names
 
-### Example
+### Example ORDER BY
 
 ```sql
-select si.sales_invoice_id as sales_invoice_id
-      ,si.customer_id      as customer_id
-      ,si.invoice_date     as invoice_date
-      ,getdate()           as due_date
-      ,si.amount_excl_vat  as amount_excl_vat
-      ,si.amount_incl_vat  as amount_incl_vat
-      ,si.invoice_status   as invoice_status
+select
+    si.sales_invoice_id
+    ,si.customer_id
+    ,si.invoice_date
+    ,getdate() as due_date
+    ,si.amount_excl_vat
+    ,si.amount_incl_vat
+    ,1 as invoice_status
 from sales_invoice si
-order by si.customer_id
-        ,si.invoice_date
+order by
+    si.customer_id
+    ,si.invoice_date
 ```
 
-## WHERE
+### Example GROUP BY
+
+```sql
+select
+    p.project_id
+    ,h.date
+    ,avg(h.number_of_hours) as avg_number_of_hours
+from project p
+join hour h
+  on h.project_id  = p.project_id
+group by
+    p.project_id
+    ,p.description
+    ,h.date
+```
+
+## WHERE and HAVING
 
 ### Guidelines
 
-1. Align the WHERE left with SELECT and FROM.
-2. Align AND right under the WHERE.
-3. Align OR left on a new line, under the first column of the previous line.
-4. Always put parentheses around OR conditions. The conditions inside the parentheses are idented 4 spaces.
-5. = signs are aligned under each other.
+1. The `and` keyword is right aligned with the `where` keyword
+1. The `or` keyword is always placed on its own line, left aligned with the previous line
+1. Always use parentheses around `or` conditions
+1. Align the closing parentheses with the opening parentheses
+1. Indent conditions inside parentheses using a multiple of 4 spaces
+1. Align comparison operators (`=`, `<`, etc.) for conditions of the same level
 
-### Example
+### Example WHERE
 
 ```sql
-select si.sales_invoice_id as sales_invoice_id
-      ,si.customer_id      as customer_id
-      ,si.invoice_date     as invoice_date
-      ,getdate()           as due_date
-      ,si.amount_excl_vat  as amount_excl_vat
-      ,si.amount_incl_vat  as amount_incl_vat
-      ,si.invoice_status   as invoice_status
+select
+    si.sales_invoice_id
+    ,si.customer_id
+    ,si.invoice_date
+    ,getdate() as due_date
+    ,si.amount_excl_vat
+    ,si.amount_incl_vat
+    ,1 as invoice_status
 from sales_invoice si
 where si.invoice_date = '2019-1-1'
   and si.customer_id  = 15
   and (
-          si.invoice_status = 1
-          or
-          si.invoice_status = 2
+        si.invoice_status  = 1
+        or
+        si.amount_excl_vat > 10.000
       )
 ```
 
-## Calculated columns in queries
+### Example HAVING
+
+```sql
+select
+    p.project_id
+    ,h.date
+    ,avg(h.number_of_hours) as avg_number_of_hours
+    ,max(h.number_of_hours) as max_number_of_hours
+from project p
+join hour h
+  on h.project_id  = p.project_id
+group by
+    p.project_id
+    ,p.description
+    ,h.date
+having avg(h.number_of_hours) > 5
+   and max(h.number_of_hours) < 12
+```
+
+## Composite columns
 
 ### Guidelines
 
-1. Place calculations in the SELECT on one line, unless the calculation is to complex.
+1. Place calculations in the SELECT on one line, unless the the line is too long.
 
-### Example string concatenation
+### Example
 
 ```sql
-select e.last_name + ' ' + e.first_name  as name
-      ,e.email                           as email
+select
+    concat(e.last_name, ' ', e.first_name) as name
+    ,e.email
 from employee e
-```
-
-### Example calculation with numbers
-
-```sql
-select si.sales_invoice_id                      as sales_invoice_id
-      ,si.amount_incl_vat - si.amount_excl_vat  as vat
-from sales_invoice si
 ```
 
 ## CASE expressions
 
 ### Guidelines
 
-1. Align CASE and END left, under each other.
-2. Ident WHEN and ELSE 4 spaces to the right, aligned left, under each other.
-3. Place THEN to the right of WHEN. If possible, on the same line.
-4. Align THEN under each other.
+1. Align the `end` and the `case` keywords
+1. Indent the `when` and `else` expressions using 4 spaces
+1. Place the `then` expression on the same line as the `when`, unless the line is too long. Then place the `then` on the next line and indent using 4 spaces.
 
 ### Example Simple CASE
 
 ```sql
-select so.sales_order_id   as sales_order_id
-      ,case so.order_status
-           when 0 then 'not_approved'
-           when 1 then 'approved'
-           when 2 then 'sent'
-           else        'delivered'
-       end                 as order_status
+select
+    so.sales_order_id
+    ,case so.order_status
+        when 0 then 'not_approved'
+        when 1 then 'approved'
+        when 2 then 'sent'
+        else 'delivered'
+    end as order_status
 from sales_order so
 ```
 
 ### Example Searched CASE
 
 ```sql
-select so.sales_order_id   as sales_order_id
-      ,case
-           when so.order_status = 0 then 'not_approved'
-           when so.order_status = 1 then 'approved'
-           when so.order_status = 2 then 'sent'
-           else 'delivered'
-       end                 as order_status
+select
+    so.sales_order_id
+    ,case
+        when so.order_status = 0 or so.order_status is null
+            then 'not_approved'
+        when so.order_status = 1 then 'approved'
+        when so.order_status = 2 then 'sent'
+        else 'delivered'
+    end as order_status
 from sales_order so
 ```
 
-## JOIN, LEFT JOIN, CROSS JOIN
+## JOIN
 
 ### Guidelines
 
-1. Align the JOIN left aligned under the first table of the FROM. Align ON and AND right under the JOIN. Don't use the word INNER.
-2. Align the LEFT JOIN left under the first table of the FROM. Align ON and AND right under the LEFT. Don't use the word OUTER.
-3. Align = signs under each other.
-4. Inside a JOIN: Place the columns of the last joined table on the left of the equal-sign. Place the other columns on the right side.
-5. Align the CROSS JOIN left under the first table of the FROM.
+1. Left align the `join`, `left join` and  keyword
+1. Right align the `on` and `and` conditions with the `join` keyword
+1. Align comparison operators (`=`, `<`, etc.) for join conditions
+1. Place the columns of the joined table to the left of the comparison operator
+1. Prevent the use of right joins
+1. Don't use `inner` for inner joins or `outer` for left joins
 
-### Example JOIN
-
-```sql
-select p.description     as project
-      ,sp.name           as sub_project
-      ,h.number_of_hours as number_of_hours
-from project p
-     join sub_project sp
-       on sp.project_id = p.project_id
-     join hour h
-       on h.project_id     = sp.project_id
-      and h.sub_project_id = sp.sub_project_id
-```
-
-### Example LEFT JOIN
+### Example `join`
 
 ```sql
-select p.description     as project
-      ,sp.name           as sub_project
+select
+    p.description
+    ,sp.name
+    ,h.number_of_hours
 from project p
-     left join sub_project sp
-       on sp.project_id = p.project_id
+join sub_project sp
+  on sp.project_id = p.project_id
+join hour h
+  on h.project_id     = sp.project_id
+ and h.sub_project_id = sp.sub_project_id
 ```
 
-### Example CROSS JOIN
+### Example `left join`
 
 ```sql
-select p.description     as project
-      ,sp.name           as sub_project
+select
+    p.description
+    ,sp.name
 from project p
-     cross join sub_project sp
+left join sub_project sp
+  on sp.project_id = p.project_id
 ```
 
-## UNION and UNION ALL
+## UNION (ALL)
 
 ### Guidelines
 
-1. Align UNION and UNION ALL left under SELECT.
-2. No empty lines between UNION and the two queries.
+1. Left align the `union` keyword
+1. Place empty lines before and after the `union` keyword
+1. Add comments to describe the select statements
 
 ### Example
 
 ```sql
-select si.sales_invoice_id     as sales_invoice_id
-      ,'Approved'              as status
+--Approved sales invoices
+select
+    si.sales_invoice_id
+    ,'Approved' as status
 from sales_invoice si
 where si.invoice_status = 1 --Approved
+
 union all
-select si.sales_invoice_id     as sales_invoice_id
-      ,'Not Approved'          as status
+
+--Not approved sales invoices
+select
+    si.sales_invoice_id
+    ,'Not Approved' as status
 from sales_invoice si
 where si.invoice_status = 0 --Not approved
 ```
@@ -220,89 +252,99 @@ where si.invoice_status = 0 --Not approved
 
 ### Guidelines
 
-1. Put the function call, including parameters, on one line. When there are too many parameters, the parameters are left aligned on the next line under each other and idented 4 spaces.
+1. Place function calls on a single line, unless the line is too long. Then place the parameters on a new line, indented with a multiple of 4 spaces.
+1. Align the opening and closing parentheses
 
 ### Example FUNCTION with few parameters
 
 ```sql
-select si.sales_invoice_id                         as sales_invoice_id
-      ,si.invoice_date                             as invoice_date
-      ,si.due_date                                 as due_date
-      ,datediff(day, si.invoice_date, si.due_date) as number_of_days
+select
+    si.sales_invoice_id
+    ,si.invoice_date
+    ,si.due_date
+    ,datediff(day, si.invoice_date, si.due_date) as number_of_days
 from sales_invoice si
 ```
 
 ### Example FUNCTION with many parameters
 
 ```sql
-select si.sales_invoice_id                         as sales_invoice_id
-      ,si.invoice_date                             as invoice_date
-      ,si.due_date                                 as due_date
-      ,datediff(
-                   day
-                  ,si.invoice_date
-                  ,si.due_date
-               )                                   as number_of_days
+select
+    si.sales_invoice_id
+    ,si.invoice_date
+    ,si.due_date
+    ,datediff(
+                day
+                ,si.invoice_date
+                ,si.due_date
+             ) as number_of_days
 from sales_invoice si
-```
-
-## Group by and having
-
-### Guidelines
-
-1. Align GROUP BY left under SELECT.
-2. Put columns in GROUP BY under each other, place the comma in front.
-3. Align HAVING left under SELECT.
-4. Put conditions in the HAVING under each other, place the comma in front.
-5. Align AND and OR in the HAVING in the same way as in the WHERE.
-
-### Example
-
-```sql
-select p.project_id           as project_id
-      ,h.date                 as date
-      ,avg(h.number_of_hours) as avg_number_of_hours
-from project p
-     join hour h
-       on h.project_id  = p.project_id
-group by p.project_id
-        ,p.description
-        ,h.date
-having avg(h.number_of_hours) > 5
 ```
 
 ## Subqueries
 
 ### Guidelines
 
-1. Place subqueries in parentheses, on the next line and ident them 4 spaces.
-2. Align the parentheses under each other.
+1. Consider using APPLY instead of a subqueries to improve readability  
+   Use OUTER APPLY for INNER JOINS and CROSS APPLY for LEFT JOINS
+1. Place subqueries inside parentheses and indent using a multiple of 4 spaces
 
 ### Example subquery in SELECT
 
 ```sql
-select p.project_id           as project_id
-      ,(
-           select sum(h.number_of_hours)
-           from hour h
-           where h.project_id = p.project_id
-       )                      as number_of_hours
+select
+    p.project_id
+    ,(
+        select sum(h.number_of_hours)
+        from hour h
+        where h.project_id = p.project_id
+    ) as number_of_hours
 from project p
+```
+
+### Alternative using OUTER APPLY
+
+```sql
+select
+    p.project_id
+    ,s.number_of_hours
+from project p
+outer apply (
+                select sum(h.number_of_hours) as number_of_hours
+                from hour h
+                where h.project_id = p.project_id
+            ) s
 ```
 
 ### Example subquery in FROM
 
 ```sql
-select p.project_id           as project_id
-      ,h.number_of_hours
+select
+    p.project_id
+    ,h.number_of_hours
 from project p
-     join (
-              select h.project_id           as project_id
-                    ,sum(h.number_of_hours) as number_of_hours
-              from hour h
-              group by h.project_id
-          ) h
-       on h.project_id = p.project_id
+join (
+        select
+            h.project_id
+            ,sum(h.number_of_hours) as number_of_hours
+        from hour h
+        group by h.project_id
+     ) h
+  on h.project_id = p.project_id
+```
+
+### Alternative using CROSS APPLY
+
+```sql
+select
+    p.project_id
+    ,s.number_of_hours
+from project p
+cross apply (
+                select sum(h.number_of_hours) as number_of_hours
+                from hour h
+                where h.project_id = p.project_id
+            ) s
 ```
 
 ### Example subquery in WHERE
@@ -322,18 +364,19 @@ where p.finished   = 0
 
 ### Guidelines
 
+1. Use IN only with constant values, use EXISTS with subqueries
 1. Place subqueries in EXIST or IN are placed between parentheses, on the next line and ident them 4 spaces.
 2. Align the parentheses under each other.
 
 ### Example EXISTS
 
 ```sql
-select p.description  as description
+select p.description
 from project p
 where exists (
-                 select 1
-                 from sub_project sp
-                 where sp.project_id = p.project_id
+                select 1
+                from sub_project sp
+                where sp.project_id = p.project_id
              )
 ```
 
@@ -342,10 +385,7 @@ where exists (
 ```sql
 select p.description  as description
 from project p
-where p.project_id in (
-                          select sp.project_id
-                          from sub_project sp
-                      )
+where p.status in (1, 2, 3) --new, open, closed
 ```
 
 ## INSERT
@@ -353,7 +393,7 @@ where p.project_id in (
 ### Guidelines
 
 1. Use the insert statement without into.
-2. Always use a column list.
+2. Always use a column list
 3. Align the columns in a column list under each other, comma's in front.
 4. Align the parentheses of the column list left under INSERT.
 5. Ident the column list 4 spaces
@@ -362,27 +402,24 @@ where p.project_id in (
 ### Example
 
 ```sql
-insert project
+insert into project
 (
     customer_id
-   ,description
-   ,project_manager_id
-   ,hourly_rate
-   ,planned_start_date
-   ,planned_end_date
-   ,actual_start_date
-   ,finished
-   ,finished_on_date
+    ,description
+    ,planned_start_date
+    ,planned_end_date
+    ,actual_start_date
+    ,finished
+    ,finished_on_date
 )
-select p.customer_id          as customer_id
-      ,p.description          as description
-      ,p.project_manager_id   as project_manager_id
-      ,p.hourly_rate          as hourly_rate
-      ,p.planned_start_date   as planned_start_date
-      ,p.planned_end_date     as planned_end_date
-      ,null                   as actual_start_date
-      ,0                      as finished          -- 0 = no
-      ,null                   as finished_on_date
+select
+    p.customer_id
+    ,p.description
+    ,p.planned_start_date
+    ,p.planned_end_date
+    ,null as actual_start_date
+    ,0 as finished
+    ,null as finished_on_date
 from project p
 where p.project_id = 3
 ```
@@ -400,11 +437,11 @@ where p.project_id = 3
 
 ```sql
 update sp
-set finished         = p.finished
-   ,finished_on_date = p.finished_on_date
+set sp.finished       = p.finished
+    ,finished_on_date = p.finished_on_date
 from sub_project sp
-     join project p
-       on p.project_id = sp.project_id
+join project p
+  on p.project_id = sp.project_id
 where p.finished = 1
 ```
 
