@@ -101,11 +101,14 @@ This is where the colors of the applications at the bottom of the menu are style
 
 ### Splash screen
 
-Setting the colors and logo for the splash screen is something that takes place in the IAM. The reason for this is that when opening an application, this does not necessarily mean that only one application is opened. The splash screen does not therefore refer to one particular application.
+Setting the colors and logo for the splash screen is something that takes place in the IAM (*Global Settings*).
+The reason for this is that when opening an application, this does not necessarily mean that only one application is opened.
+The splash screen does not refer to one particular application.
 
-However, you can specify here which components should and should not be displayed on the splash screen. The 'Button' component has not yet been implemented in the current Software Factory generation.
+However, you can specify here which components should and should not be displayed on the splash screen.
+The 'Button' component has not yet been implemented in the current Software Factory generation.
 
-![](assets/sf/image229.png
+![](assets/sf/image229.png)
 *Setting splash theme*
 
 ### Badge

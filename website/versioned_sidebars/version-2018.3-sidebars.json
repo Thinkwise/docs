@@ -33,8 +33,7 @@
       "version-2018.3-sf/themes",
       "version-2018.3-sf/messages",
       "version-2018.3-sf/translations",
-      "version-2018.3-sf/help",
-      "version-2018.3-sf/extenders"
+      "version-2018.3-sf/help"
     ],
     "Processes": [
       "version-2018.3-sf/tasks",
@@ -66,6 +65,15 @@
       "version-2018.3-sf/function_points"
     ],
     "Miscellaneous": [
+      {
+        "type": "subcategory",
+        "label": "Extenders",
+        "ids": [
+          "version-2018.3-sf/extenders",
+          "version-2018.3-sf/resource_scheduler",
+          "version-2018.3-sf/maps"
+        ]
+      },
       "version-2018.3-sf/settings",
       "version-2018.3-sf/advanced"
     ]
@@ -99,6 +107,7 @@
   "version-2018.3-deployment": {
     "Deployment": [
       "version-2018.3-deployment/deployment_general",
+      "version-2018.3-deployment/system_requirements",
       "version-2018.3-deployment/windows_gui",
       "version-2018.3-deployment/web_gui",
       "version-2018.3-deployment/indicium",
@@ -118,6 +127,7 @@
       "version-2018.3-kb/deep_links",
       "version-2018.3-kb/deployer",
       "version-2018.3-kb/exchange",
+      "version-2018.3-kb/objectmodel_extender_template",
       "version-2018.3-kb/file_storage",
       "version-2018.3-kb/icons",
       "version-2018.3-kb/iis_admin_api",

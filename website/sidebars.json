@@ -22,8 +22,8 @@
       "sf/data_model",
       "sf/data_sensitivity",
       "sf/data_conversion",
-      "sf/dynamic_model"
-
+      "sf/dynamic_model",
+      "sf/guidelines_data_modeling"
     ],
     "User Interface": [
       "sf/menus",
@@ -51,12 +51,19 @@
     ],
     "Quality": [
       "sf/code_review",
+      "sf/unit_test",
       "sf/test_cases",
       "sf/validation"
+    ],
+    "Access Control": [
+      "sf/roles",
+      "sf/model_rights"
     ],
     "Deployment": [
       "sf/creation",
       "sf/runtime_configuration",
+      "sf/synchronization",
+      "sf/deployment_package",
       "sf/configuration_file",
       "sf/extended_properties",
       "sf/developer_mode"
@@ -86,8 +93,7 @@
       "iam/user_simulation"
     ],
     "Administrator's guide": [
-      "iam_dev/model",
-      "iam_dev/roles",
+      "iam_dev/projects",
       "iam_dev/applications"
     ],
     "Manager's guide": [
@@ -109,6 +115,7 @@
     "Deployment": [
       "deployment/deployment_general",
       "deployment/system_requirements",
+      "deployment/installation",
       "deployment/windows_gui",
       "deployment/web_gui",
       "deployment/indicium",
@@ -118,7 +125,8 @@
       "deployment/db2",
       "deployment/encryption",
       "deployment/adfs",
-      "deployment/integrated_security"
+      "deployment/integrated_security",
+      "deployment/deployer"
     ]
   },
   "kb": {
@@ -126,7 +134,6 @@
       "kb/kb_general",
       "kb/universal_alpha",
       "kb/deep_links",
-      "kb/deployer",
       "kb/exchange",
       "kb/objectmodel_extender_template",
       "kb/file_storage",
@@ -137,6 +144,7 @@
       "kb/olap",
       "kb/performance",
       "kb/report_mailer",
+      "kb/report_service",
       "kb/screenshots",
       "kb/tags",
       "kb/username"
