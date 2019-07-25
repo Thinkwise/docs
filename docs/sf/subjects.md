@@ -490,6 +490,13 @@ Under conditional formatting, it is indicated by how the cell or row will look i
 
 > Expression fields can be used to model conditional formatting based on queries, for example by checking whether a date has expired.
 
+#### Universal
+
+Additional columns were added for Universal. Here a distinction can be made between dark and light theme.
+
+![](assets/sf/universal_conditional_layout.png)
+*Conditional formatting for Universal*
+
 ## Links
 
 ### Table Look-ups
