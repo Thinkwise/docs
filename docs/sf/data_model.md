@@ -22,7 +22,7 @@ Diagrams, and therefore the data model, can be designed graphically via the *Des
 ![](assets/sf/image81_2018_3.png)
 *Tables and views in the Design tab page*
 
-This screen has a number of functions that help when designing the data model. A list is visible in the left hand column with all the tables and views. Besides this, there is a similar list with all the references. These can be checked and unchecked to use them within the diagram.
+This screen has a number of functions that help when designing the data model. A list is visible in the left hand column with all the tables and views. Besides this, there is a similar list with all the references. These can be checked and unchecked to use them within the diagram. In both lists it is possible to find objects using the find-option in the context menu (or by using the shortcut CTRL + F).
 
 Under this list, there is an overview of the diagram and there are a number of standard parameters that can be modified.
 
