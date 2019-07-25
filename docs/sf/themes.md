@@ -216,3 +216,18 @@ A color can be changed using the *Update color* task or by dragging the column t
 
 ![](assets/sf/image241.png)
 *Fonts and colors used in a Theme*
+
+# Universal
+
+Universal supports a dark and light theme. These themes consists of three colors to style te application.
+
+**Primary color** A primary color refers to a color that appears most frequently in the application.
+
+**Accent color** An accent color refers to a color used to accent key parts of the UI.
+
+**Warn color** A warn color refers to a color that is used to indicate feedback off incorrect usage of the application.
+
+A background image can be chosen for both dark and light theme. And the font family and font size for the application.
+
+![](assets/sf/universal.png)
+*Universal theme settings*
