@@ -4,7 +4,7 @@ sidebar_label: 📖 Guidelines
 ---
 
 Well formatted code is easier to read and to maintain, resulting in a higher overall quality.
-There are many good ways to format SQL code, however. This document provides some guidelines we use at Thinkwise to write legible and structured SQL code.
+There are many good ways to format SQL code. This document provides some guidelines we use at Thinkwise to write legible and structured SQL code.
 
 The guidelines are structured per statement. All guidelines are clarified with an example.
 
