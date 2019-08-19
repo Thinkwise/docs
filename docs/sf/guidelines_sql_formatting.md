@@ -1,6 +1,6 @@
 ---
 title: SQL formatting guidelines
-sidebar_label: 📖 Guidelines
+sidebar_label: 📖 SQL formatting
 ---
 
 Well formatted code is easier to read and to maintain, resulting in a higher overall quality.
