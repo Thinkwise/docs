@@ -339,7 +339,7 @@ The HTTP(S) connector provides the following input options with which several pr
 | ------------------- | ------------------------------------------------------------ |
 | URL                 | The complete url that will be used for the request.          |
 | HTTP method         | The HTTP method that will be used for the request, such as GET or POST. |
-| Headers             | Optional. The header that will be provided with the request. This input option must be completed in the following manner:<br>[ { "Key": "Header1", "Value": "Value1" }, { "Key": "Header2", "Value": "Value2" } ] |
+| Headers             | Optional. The header that will be provided with the request. This input option must be completed in the following manner:<br>`[ { "Key": "Header1", "Value": "Value1" }, { "Key": "Header2", "Value": "Value2" } ]` |
 | Cookie              | Optional. A possible cookie that will be provided with the request. |
 | Content-Type        | Optional. The MIME type for the content that will be provided with the request. |
 | Content             | Optional. The content that will be sent with the request, for instance with a POST. |
@@ -421,7 +421,7 @@ The DB connector provides the following input options to establish a database co
 
 | Input options     |                                                                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Connection string | The connection string that includes the source database name, and other parameters needed to establish the initial connection, for example;<br>SQL Server standard: `"Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; User Id=myUsername; Password=myPassword;"`<br>SQL Server Trusted: `"Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; Trusted_Connection=True;"`<br>DB2 standard: `Driver={iSeries Access ODBC Driver}; System=myServerAddress; DefaultLibraries=myDataBase; UserId=myUsername; Password=myPassword; CommitMode=2; QueryTimeout=0;`<br>DB2 DSN: `"Dsn=myDsnName;Uid=myUsername;Pwd=myPassword"` |
+| Connection string | The connection string that includes the source database name, and other parameters needed to establish the initial connection, for example;<br>SQL Server standard: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; User Id=myUsername; Password=myPassword;`<br>SQL Server Trusted: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; Trusted_Connection=True;`<br>DB2 standard: `Driver={iSeries Access ODBC Driver}; System=myServerAddress; DefaultLibraries=myDataBase; UserId=myUsername; Password=myPassword; CommitMode=2; QueryTimeout=0;`<br>DB2 DSN: `Dsn=myDsnName;Uid=myUsername;Pwd=myPassword` |
 | SQL               | The SQL executed by this process action.                                                                                       |
 | Input parameters  | Optional. A list of parameters used by the SQL.                                                                                |
 
@@ -449,7 +449,9 @@ The conversion between json and xml can be done with this connector. SQL Server 
 
 ### Read file from disk
 
-Files at locations within the local network can be read using this connector. This connector works on the basis of absolute, local file paths or UNC paths and gives as output the byte-representation of the file.
+Files at locations within the local network can be read using this connector.
+This connector works on the basis of absolute, local file paths or UNC paths and gives as output the byte-representation of the file.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options |                                                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------- |
@@ -462,7 +464,9 @@ Files at locations within the local network can be read using this connector. Th
 
 ### Write file to disk
 
-Files can be written to a location within the local network using this connector. This connector works on the basis of absolute, local file paths or UNC paths, and expects the data of the file in the form of text or binary data.
+Files can be written to a location within the local network using this connector.
+This connector works on the basis of absolute, local file paths or UNC paths, and expects the data of the file in the form of text or binary data.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
@@ -478,7 +482,9 @@ Files can be written to a location within the local network using this connector
 
 ### Move file on disk
 
-Files from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
+Files from locations within the local network can be moved to other locations within the local network using this connector.
+The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
@@ -492,7 +498,9 @@ Files from locations within the local network can be moved to other locations wi
 
 ### Copy file on disk
 
-Files from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
+Files from locations within the local network can be copied to other locations within the local network using this connector.
+The source path and the target path are provided by means of input options and have to have the form of an absolute, local file path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
@@ -506,7 +514,9 @@ Files from locations within the local network can be copied to other locations w
 
 ### Delete file from disk
 
-A file at a location within the local network can be deleted using this connector. The path to the file is provided by means of an input option and has to have the form of an absolute, local file path or UNC path.
+A file at a location within the local network can be deleted using this connector.
+The path to the file is provided by means of an input option and has to have the form of an absolute, local file path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options |                                                                                                    |
 | ------------- | -------------------------------------------------------------------------------------------------- |
@@ -518,7 +528,10 @@ A file at a location within the local network can be deleted using this connecto
 
 ### Create folder on disk
 
-A folder can be created on a location within the local network using this connector. The path to the file that has to be created is provided by means of an input option and has to have the form of an absolute, local file path or UNC path. In addition, it can also be indicated whether the provided folder structure has to exist or may be created.
+A folder can be created on a location within the local network using this connector.
+The path to the file that has to be created is provided by means of an input option and has to have the form of an absolute, local file path or UNC path.
+In addition, it can also be indicated whether the provided folder structure has to exist or may be created.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
@@ -531,7 +544,9 @@ A folder can be created on a location within the local network using this connec
 
 ### Move folder on disk
 
-Folders from locations within the local network can be moved to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
+Folders from locations within the local network can be moved to other locations within the local network using this connector.
+The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
@@ -545,7 +560,9 @@ Folders from locations within the local network can be moved to other locations 
 
 ### Copy folder on disk
 
-Folders from locations within the local network can be copied to other locations within the local network using this connector. The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
+Folders from locations within the local network can be copied to other locations within the local network using this connector.
+The source path and the target path are provided by means of input options and have to have the form of an absolute, local path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options           |                                                              |
 | ----------------------- | ------------------------------------------------------------ |
@@ -560,7 +577,9 @@ Folders from locations within the local network can be copied to other locations
 
 ### Delete folder from disk
 
-A folder on a location within the local network can be deleted using this connector. The path to folder is provided by means of an input option and has to have the form of an absolute, local path or UNC path.
+A folder on a location within the local network can be deleted using this connector.
+The path to folder is provided by means of an input option and has to have the form of an absolute, local path or UNC path.
+The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Input options                 |                                                              |
 | ----------------------------- | ------------------------------------------------------------ |

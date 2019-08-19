@@ -431,6 +431,8 @@ The Thinkwise Exchange service can also be executed as a console application. Th
 
 Below are a number of sample templates that can be used to provide the required business logic for the Exchange connector. These templates can be created in the Software Factory and have to be adapted to your application. For example, the correct name for the tables must be selected.
 
+> ⚠ Exchange item IDs are case sensitive! When comparing item IDs on SQL Server, use a case sensitive collation, for example Latin1_General_CS_AS.
+
 These procedures return the following information about the call to the Exchange Connector:
 
 1. An `exit_code` which indicates whether the procedure has been carried out successfully, see below.
@@ -664,6 +666,8 @@ deallocate attachment_cursor
 
 When working with the Thinkwise Exchange Connector, please consider the following points of attention:
 
+- ⚠ Exchange item IDs are case sensitive. When comparing item IDs on SQL Server, use a case sensitive collation, for example Latin1_General_CS_AS.
+
 - Define body fields on SQL Server as VARCHAR(MAX) or NVARCHAR(MAX), especially when using HTML. For DB2, use VARGRAPHIC or DBCLOB for characters.
 
 - The EWS certificate must be valid.
@@ -690,8 +694,6 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 
   - NULL: leave value unchanged
   - Empty string: clear value
-
-- Exchange item IDs are case sensitive. When comparing item IDs on SQL Server, use a case sensitive collation, for example Latin1_General_CS_AS.
 
 - For appointments with required or optional attendees: the appointments are created with the same app_item_id. It is therefore necessary to filter on `exh_user` in the `from_exh` procedures.
 
@@ -775,7 +777,7 @@ After this, the file will be compiled and there will then be a new `.class` file
 
 ### AutoDiscover does not work
 
-If AutoDiscover does not work even though all settings are correct, Windows Firewall may block the calls from the Connector. In this case, either the Windows Firewall has to be disabled or a rule added that gives the Connector access. When using Office 365, it is mandatory to fill the `StaticEwsUrl` as indicated in the Connector configuration.
+If AutoDiscover does not work even though all settings are correct, Windows Firewall may block the calls from the Connector. In this case, either the Windows Firewall has to be disabled or a rule added that gives the Connector access. When using Office 365, it is mandatory to fill the `StaticEwsUrl` as indicated in the Connector configuration. The value is always the same for Office 365: `https://outlook.office365.com/ews/Exchange.asmx`
 
 ### Other issues
 
