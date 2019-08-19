@@ -8,7 +8,7 @@ There are many good ways to format SQL code. This document provides some guideli
 
 The guidelines are structured per statement. All guidelines are clarified with an example.
 
-## General
+## General guidelines
 
 - Use 4 spaces instead of tabs
 - Indent using a multiple of 4 spaces
@@ -17,8 +17,6 @@ The guidelines are structured per statement. All guidelines are clarified with a
 - Do not use empty lines inside a statement
 
 ## SELECT
-
-### Guidelines
 
 1. Left align the `select`, `from`, `where`, `order by`, `having` and `group by` keywords.
 1. Place the select list under the `select` keyword and indented using 4 spaces.
@@ -42,8 +40,6 @@ from sales_invoice si
 ```
 
 ## ORDER BY and GROUP BY
-
-### Guidelines
 
 1. The *order by* or *group by* list is placed under the `order by` or `group by` keyword and indented using 4 spaces
 1. Commas are placed in front of the column names
@@ -83,8 +79,6 @@ group by
 ```
 
 ## WHERE and HAVING
-
-### Guidelines
 
 1. Place `and` keywords in front of the condition.
 1. Right align the top level `and` keywords with the `where` or `having` keyword.
@@ -136,8 +130,6 @@ having avg(h.number_of_hours) > 5
 
 ## Calculated columns
 
-### Guidelines
-
 1. Place calculations in column list on one line, unless the the line is too long.
 
 ### Example calculated column
@@ -150,8 +142,6 @@ from employee e
 ```
 
 ## CASE expressions
-
-### Guidelines
 
 1. Align the `end` and the `case` keywords
 1. Indent the `when` and `else` expressions using 4 spaces
@@ -190,8 +180,6 @@ from sales_order so
 
 ## JOIN
 
-### Guidelines
-
 1. Prevent the use of right joins
 1. Don't use `inner` for inner joins or `outer` for left joins
 1. Left align the `join`, `left join` or `cross join` keyword
@@ -227,8 +215,6 @@ left join sub_project sp
 
 ## UNION
 
-### Guidelines
-
 1. Left align the `union` or `union all` keyword
 1. Place empty lines before and after the `union` keyword
 1. Add comments to describe the select statements
@@ -254,8 +240,6 @@ where si.invoice_status = 0 --Not approved
 ```
 
 ## FUNCTIONS
-
-### Guidelines
 
 1. Place function calls on a single line, unless the line is too long.
 1. Indent the parameters relative to the function name, using a multiple of 4 spaces.
@@ -289,8 +273,6 @@ from sales_invoice si
 ```
 
 ## Subqueries
-
-### Guidelines
 
 1. Consider using `APPLY` instead of a subqueries to improve readability. Use `OUTER APPLY` for INNER JOINS and `CROSS APPLY` for LEFT JOINS.
 1. Indent subqueries relative to the opening parentheses in SELECT statements or to the `APPLY` keyword, using a multiple of 4 spaces.
@@ -389,8 +371,6 @@ where p.finished   = 0
 
 ## IN and EXISTS
 
-### Guidelines
-
 1. Use `IN` with constant values only and `EXISTS` with subqueries.
 1. Indent subqueries relative to the `EXISTS` keyword, using a multiple of 4 spaces.
 
@@ -415,8 +395,6 @@ where p.status in (1, 2, 3) --new, open, closed
 ```
 
 ## INSERT
-
-### Guidelines
 
 1. Don't use the `into` keyword.
 1. Always use a column list.
@@ -463,8 +441,6 @@ values (
 
 ## UPDATE
 
-### Guidelines
-
 1. Use a from-clause with joins instead of subqueries.
 1. Always use the alias of the table to update in the `update` statement.
 1. Left align the `set` keyword with the `update` keyword.
@@ -485,8 +461,6 @@ where p.finished = 1
 
 ## DELETE
 
-### Guidelines
-
 1. Use a from-clause with joins instead of subqueries.
 1. Always use the alias of the table to delete from in the `delete` statement.
 
@@ -501,8 +475,6 @@ where p.finished = 1
 ```
 
 ## DECLARE variables
-
-### Guidelines
 
 1. Place the DECLARE at the top of the code template.
 1. Place the variable list under the `declare` keyword and indented using 4 spaces.
@@ -519,8 +491,6 @@ declare
 ```
 
 ## IF and WHILE statements
-
-### Guidelines
 
 1. Always use `BEGIN` and `END` in an IF or WHILE statement.
 1. Left align the `IF`, `WHILE`, `BEGIN` and `END` keywords.
@@ -576,8 +546,6 @@ end
 
 ## Table variables and temporary tables
 
-### Guidelines
-
 1. Place the column list under the `select` keyword and indented using 4 spaces.
 1. Place commas in front of the column names
 1. Left align the data types for all variables.
@@ -607,8 +575,6 @@ declare @project table (
 
 ## Common table expressions (CTEs)
 
-### Guidelines
-
 1. Left align the `with`, `as` and `select`, `update` or `insert` keywords.
 1. Place the column list under the `with` keyword and indented using 4 spaces.
 1. Place commas in front of the column names
@@ -636,8 +602,6 @@ left join sales_invoice_vat siv
 ```
 
 ## CURSOR
-
-### Guidelines
 
 1. Place the cursor parameters on the same line as the `declare` keyword.
 1. Left align the `declare` and `select` keywords
@@ -674,8 +638,6 @@ deallocate countries
 
 ## Transactions
 
-### Guidelines
-
 1. Left align the `begin tran`, `commit tran` and `rollback tran` keywords.
 1. Left align the code within the transaction.
 1. Don't name the transation unless there are nested transactions.
@@ -709,8 +671,6 @@ commit tran
 ```
 
 ## TRY CATCH
-
-### Guidelines
 
 1. Left align the `begin try`, `end try`, `begin catch` and `end catch` keywords.
 1. Indent the code within the try and catch using 4 spaces.
@@ -750,9 +710,7 @@ begin catch
 end catch
 ```
 
-## Procedure call
-
-### Guidelines
+## Procedure calls
 
 1. Place the parameters on the same line unless there are many parameters. Then place the parameters under the `exec` keyword and indented using 4 spaces.
 2. Place commas in front of the parameters.
@@ -776,8 +734,6 @@ exec task_kopieer_project
 ```
 
 ## Comments
-
-### Guidelines
 
 1. Use `--` for single line comments and `/* ... */` for multiline comments.
    > To quickly comment or uncomment a block of code for debugging purposes, select the code and use your editors' shortcut.  
