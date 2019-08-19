@@ -48,7 +48,8 @@
       "sf/functionality",
       "sf/code_search",
       "sf/code_overview",
-      "sf/guidelines_control_procs"
+      "sf/guidelines_control_procs",
+      "sf/guidelines_sql_coding"
     ],
     "Quality": [
       "sf/code_review",
