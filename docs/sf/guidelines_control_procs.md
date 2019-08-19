@@ -3,22 +3,21 @@ title: Control procedure guidelines
 sidebar_label: 📖 Control procedures
 ---
 
-The purpose of the guidelines for control procedures is to provide directions for structure and naming.
+These guidelines provide directions for naming and structuring control procedures and templates.
 
 ### Control procedures
 
-1.	The control procedure id describes the activity of the template(s)
-2.	The control procedure id should not be a table, view or task.
-    - Examples of a table: default_sales_order, layout_country, trigger_project
-3.	Don’t use meta information in the name
-    -	Examples of meta information: Default, task, table.
+1. The control procedure id describes the purpose of its templates.
+1. The control procedure id should not only contain the name of a table, view or task.  
+   - Examples: `default_sales_order`, `layout_country`, `trigger_project`
+1. The control procedure id should not contain any meta information, like the code group name or abbreviation.  
+   - Examples: `default`, `task`, `table`.
 
 ### Templates
 
-1.	The template id describes the activity of the template.
-2.	Don’t use meta information in the template id
-    - Examples of meta information: Default, task, table.
-3.	If a control procedure has one template, the name of the template should be the same as the control procedure.
-4.	If a control procedure has more than one template, the name of all templates must be different from the control procedure.
-5.	A template should be atomic. This means that the template should contain exactly one functionality.
-6.	A template may not depend on another template.
+1. The template id describes the purpose of the template.
+2. The template id should not contain any meta information.
+3. If a control procedure has only one template, the template id should be the same as the control procedure id.
+4. If a control procedure has more than one template, the template id of all templates should be different from the control procedure id.
+5. A template should be atomic, meaning that it should contain exactly one piece of functionality.
+6. A template may not depend on another template.
