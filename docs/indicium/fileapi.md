@@ -1,8 +1,8 @@
 ---
-title: File Api
+title: File API
 ---
 
-Indicium's file api allows for files to be streamed to the client. This enhances Indicium's filestorage capabilities:
+Indicium's file API allows for files to be streamed to the client. This enhances Indicium's filestorage capabilities:
 
 - The binary data is no longer part of the JSON payload
 - Allows the use of local (browser) caching
@@ -42,7 +42,7 @@ This will reduce the response size drastically and improves performance.
 
 ## Caching
 
-The File Api uses two caching methods. Regular _browser caching_ by including an [`Etag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header in the
+The File API uses two caching methods. Regular _browser caching_ by including an [`Etag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header in the
 response, where the Etag is the the requested file's hashcode. For following requests which contain the Etag header, Indicium
 will verify the Etag, via the `If-None-Match` header against the current file hashcode. When the file did not change
 Indicium will respond with a `304 Not Modified` statuscode.
