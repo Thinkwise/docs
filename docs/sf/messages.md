@@ -77,11 +77,11 @@ The following XML elements with associated attributes are recognized:
 
 <task taskid="task_id" transl=""></task>
 
-<taskparam taskid="task_id" taskparam="task_parmtr_id" transl=""></task>
+<taskparam taskid="task_id" taskparamid="task_parmtr_id" transl=""></task>
 
 <report reportid="report_id" transl=""></report>
 
-<reportparam reportid="report_id" reportparam="report_parmtr_id" transl=""></report>
+<reportparam reportid="report_id" reportparamid="report_parmtr_id" transl=""></report>
 ```
 
 

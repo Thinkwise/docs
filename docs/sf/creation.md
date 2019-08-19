@@ -58,7 +58,7 @@ The generated code is stored in the Software Factory. The code can also be writt
 
 There are three options for generating the code, depending on the situation.
 
-##### Complete
+##### Full
 
 This option is desired when the end product database still has to be created or still has to be brought in line with the model, and the end product database does not correspond with a previous version of the model.
 
