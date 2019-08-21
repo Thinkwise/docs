@@ -1,6 +1,6 @@
 ---
 title: Data modeling guidelines
-sidebar_label: 📖 Guidelines
+sidebar_label: 📖 Data modeling
 ---
 
 Data modeling was originally intended as a tool for database design, but has become a fundamental requirements technique for business analysts, as it is relevant for anyone working with data structures, application logic, user interfaces and business processes.
