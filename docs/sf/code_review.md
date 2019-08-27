@@ -6,9 +6,11 @@ The *Code review* screen shows the control procedures and templates marked for r
 
 The *Changes* tab page shows the control procedure code and/or template code that has changed. Using the *Compare control procedure* and *Compare template* tasks, you can preview the changes using an external compare tool like *WinMerge*.
 
-You can add comments to inform the developer of any errors or possible optimizations in the code.
+Comments can be added to inform the developer of any errors or possible optimizations in the code.
 
 Tasks are available to approve or disapprove the changes. When approved, the control procedure will be set to completed. When disapproved, a comment will be required as review feedback, and the control procedure will be set back to development.
+
+The control procedure can be assigned to a reviewer with the *Assign to reviewer* task.
 
 ![1536918582963](assets/sf/1536918582963.png)
 *Code review*

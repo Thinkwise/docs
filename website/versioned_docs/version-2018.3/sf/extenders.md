@@ -1,5 +1,5 @@
 ---
-title: Extenders
+title: General
 id: version-2018.3-extenders
 original_id: extenders
 ---
