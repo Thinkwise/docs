@@ -31,7 +31,7 @@ The *Overview* tab page shows an overview of all unit tests for the selected pro
 
 Unit tests can also be created, maintained or executed from the *Functionality modeler*. 
 
-![](assets/sf/unit_test_functionality.png)
+![](assets/sf/unit_test_functionality_2.png)
 
 The list shows all the unit tests that are directly connected with the program objects on the result page. For example, when a default procedure is created for *Employee* to combine the first and last name to display name, the written unit test that validates the email address is also shown in the list. 
 
