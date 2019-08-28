@@ -13,8 +13,8 @@ A unit test is a way of testing an individual unit of software. A unit is the sm
 
 The image below shows the unit test screen. This is the place to create, maintain and execute unit tests.
 
-![This image shows the unit test screen](assets/sf/unit_test_overview_2.png "Unit test screen")
-*Unit test screen*
+![This image shows the unit test screen](assets/sf/unit_test_overview_2.png "Unit tests")
+*Unit tests*
 
 The list on the left shows all the objects for which unit tests can be created. Badges are used to show the amount of existing unit tests. 
 
