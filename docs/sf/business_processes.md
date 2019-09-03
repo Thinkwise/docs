@@ -54,6 +54,8 @@ The arrow can be used to navigate to the selected requirement or the selected wo
 
 To find out which [features](features) and [iterations](iterations) share the same underlying requirements and/or underlying work, the *Related features* and *Related iterations* details can be used in the *Impact analysis* tab.
 
+![](assets/sf/impact_analysis_business_process_to_iteration.png)
+
 The arrow can be used to navigate to the node in the feature or iteration tree, respectively.
 
 ### Tags
