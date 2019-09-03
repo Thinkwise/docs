@@ -8,6 +8,8 @@ The business process is structured  as a tree, with the main process node in the
 
 [Requirements](requirements) can be placed under any in the business process tree. [Work](work) can be placed under business processes or can be linked to a requirement.
 
+The work and requirements are shared between the Business processes, [Features](features) and [Iterations](iterations).
+
 ### Adding nodes
 
 When adding a new node in the tree, the type of node will be determined by the node that was selected. 
@@ -70,9 +72,15 @@ The *Unassigned* node is used to group requirements and work that have not yet b
 
 Drag-drop can be used to reposition nodes. The dragged node will be positioned as a child of the drop target node.
 
+### Status
+
+The status of the business processes is aggregated from the underlying requirements and work. 
+
+> For more information, see the documentation on requirements and work.
+
 ### Roles
 
-The *Specification analysis* role can be used to manage all specifications  in the Software Factory.
+The *Specification analysis* role can be used to manage all specifications in the Software Factory.
 
 The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
 
