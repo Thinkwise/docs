@@ -130,7 +130,9 @@ This is by design for the current Alpha version but candidate to be revised. Eit
 
 ### Theme
 
-Universal is outfitted with a light and dark theme, highlighted by accent colors. The light switch in the title bar can be used by the user to switch between these modes. The developer can influence the theme using extended properties in 2018.3. This will be formalized in the future.
+Universal is outfitted with a light and dark theme, highlighted by accent colors. The light switch in the title bar can be used by the user to switch between these modes. The developer can influence the theme using extended properties in 2018.3. 
+
+Using extended properties to influence the theme is no longer possible in 2019.2 and up, where these theme settings have been formalized.
 
 The following colors can be set by the developer:
 | Extended property  | Description                                               | Example                |
