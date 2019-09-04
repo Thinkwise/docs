@@ -4,7 +4,7 @@ title: Features
 
 Using a more functional approach instead of a process-oriented approach, the feature tree allows [Requirements](requirements) and [Work](work) to be categorized in a feature tree.
 
-A feature tree can have the various applications defined at the top-level, with modules and sub-modules, bundling the requirements and work in features at the lowest level. The granularity and the depth is completely up to the analysts.
+A feature tree can be configured freely. For instance, the feature tree can have various *applications* defined at the top-level, with *modules* and *sub-modules*, bundling the requirements and work in *features* at the lowest level. The granularity and the depth is completely up to the analysts.
 
 The work and requirements are shared between the [Business processes](business_processes), Features and [Iterations](iterations).
 

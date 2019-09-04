@@ -2,13 +2,11 @@
 title: Iterations
 ---
 
-Focusing on the implementation process, the iteration tree allows [Work](work) to be planned.
+Focusing on the implementation process, the iteration tree allows [Work](work) to be planned. Iterations can be divided into sub-iterations as many times as desired. For instance, the iteration tree could be used to create top-level iterations as *phases*, sub-level iterations as *releases* and sub-sub-level iterations as *sprints*.
 
-> TODO:
+The work and requirements are shared between the [business processes](business_processes), [Features](features) and iterations.
 
-The work and requirements are shared between the [Business processes](business_processes), [Features](features) and Iterations.
-
-Leaf nodes in the iteration tree can be used as [Kanban boards](kanban_board).
+The lowest level nodes in the iteration tree can be used as [Kanban boards](kanban_board).
 
 ### Adding nodes
 
