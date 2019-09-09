@@ -17,7 +17,7 @@ User groups are linked to roles on the *Authorization* tab page of the *Applicat
 
 To grant a user group access to the application, select a user group from the list and then check the roles to which this user group needs access on the right of the screen. 
 
-![1537869015632](assets/sf/1537869015632.png)
+![image22](assets/iam/image22.png)
 *Linking roles to user groups*
 
 ### Apply rights

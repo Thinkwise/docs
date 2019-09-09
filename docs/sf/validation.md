@@ -4,8 +4,7 @@ title: Validation
 
 Thinkwise provides a comprehensive set of validations with the Software factory. Validations are carried out on the model to check for errors. These errors are pre-defined and specified in a base project. Consider, for instance, a requirement that a primary key always has to be at the top in a table and that each table has to have a standard sort sequence. It is also possible to create your own, company or product-specific validations.
 
-![
-1537185483996](assets/sf/1537185483996.png)
+![validations](assets/sf/validations.png)
 *Validation screen*
 
 Every screen in the Software Factory has a *Validations* tab page where the validations that are specific for modeler can be executed. The *Validation* screen allows you to perform a full validation of your application before deployment.
@@ -48,5 +47,11 @@ Prefilters are provided to filter the validation messages:
 
 To assist in resolving validation messages, it is possible to assign messages to specific developers. Filters are available to show own or unassigned validation messages.
 
-![
-assign_validation](assets/sf/assign_validation.png)
+![assign_validation](assets/sf/assign_validation.png)
+
+## Validation assignments
+
+The *Assignments* tab page shows a cube with the number of validations that are assigned to a developer.
+
+![validation_assignments](assets/sf/validation_assignments.png)
+*Validation assignments*
