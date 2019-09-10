@@ -2,11 +2,11 @@
 title: Iterations
 ---
 
-Focusing on the implementation process, the iteration tree allows [Work](work) to be planned. Iterations can be divided into sub-iterations as many times as desired. For instance, the iteration tree could be used to create top-level iterations as *phases*, sub-level iterations as *releases* and sub-sub-level iterations as *sprints*.
+Focusing on the implementation process, the iteration tree allows [work](work) to be planned. Iterations can be divided into sub-iterations as many times as desired. For instance, the iteration tree could be used to create top-level iterations as *phases*, sub-level iterations as *releases* and sub-sub-level iterations as *sprints*.
 
-The work and requirements are shared between the [business processes](business_processes), [Features](features) and iterations.
+The work and [requirement](requirements) are shared between the [business processes](business_processes), [features](features) and iterations. Requirements can be assigned to iterations to quickly assign all underlying work to this iteration.
 
-The lowest level nodes in the iteration tree can be used as [Kanban boards](kanban_board).
+The lowest level nodes in the iteration tree can be used as [kanban boards](kanban_board).
 
 ### Adding nodes
 
@@ -55,7 +55,7 @@ To quickly and freely categorize iterations, tags are available.
 
 ### Unplanned nodes
 
-The *Unplanned* node is used to group requirements and work that have not yet been assigned to an iteration that can function as a kanban board. Ideally, no work is present in an unplanned node.
+The *Unplanned* nodes are used to group requirements and work that have not yet been assigned to an iteration that can function as a kanban board. Ideally, no work is present in an unplanned node.
 
 ### Drag-drop
 

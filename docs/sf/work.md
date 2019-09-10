@@ -14,7 +14,8 @@ When a work item is linked to a requirement, it will be placed at the same [busi
 
 A work item can be explicitly assigned to a _different_ business process, feature or iteration than the requirement. This exception will remain intact even when the requirement is moved to a different business process, feature or iteration. When a work item has a different assignment, the value will be highlighted. Tasks are available to restore the *business process*, *feature* or *iteration* of the work item to match the requirement.
 
-> TODO: Image of conditional layout applied on work
+![](assets/sf/work-iteration-link.png)
+*An example of a work item assigned to a different iteration than the requirement. The task can be used to quickly re-align the iteration with the requirement.*
 
 ### Work status
 
@@ -28,7 +29,7 @@ One default status is required and can be set using the corresponding task.
 
 A work status can be configured to correspond to a certain lane in the [kanban board](kanban_board) by specifying the *Kanban sequence no*. When left empty, work with this status will not show up in the kanban board.
 
-> TODO: Image of work status
+![](assets/sf/work-status.png)
 
 ### Tags
 

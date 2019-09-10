@@ -2,11 +2,11 @@
 title: Features
 ---
 
-Using a more functional approach instead of a process-oriented approach, the feature tree allows [Requirements](requirements) and [Work](work) to be categorized in a feature tree.
+Using a more functional approach instead of a process-oriented approach, the feature tree allows [requirements](requirements) and [work](work) to be categorized in a feature tree.
 
 A feature tree can be configured freely. For instance, the feature tree can have various *applications* defined at the top-level, with *modules* and *sub-modules*, bundling the requirements and work in *features* at the lowest level. The granularity and the depth are completely up to the analysts.
 
-The work and requirements are shared between the [Business processes](business_processes), Features and [Iterations](iterations).
+The work and requirements are shared between the [business processes](business_processes), features and [oterations](iterations).
 
 ### Adding nodes
 
@@ -42,8 +42,6 @@ The *Linked requirements* and *Linked work* details show the requirements and th
 The *Impact analysis* tab can also be used to get an overview of all underlying requirements and all underlying work for a certain feature. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
 
 The arrow can be used to navigate to the selected requirement or the selected work in the feature tree.
-
-> TODO: Images?
 
 To find out which [business processes](business_processes) and [iterations](iterations) share the same underlying requirements and/or underlying work, the *Related business processes* and *Related iterations* details can be used in the *Impact analysis* tab.
 
