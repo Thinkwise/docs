@@ -25,9 +25,9 @@ When work is linked to a requirement, repositioning the requirement will also re
 
 | Icon | Work state |
 | ---- | ---------- |
-| ![](assets/icons8-briefcase_blue.svg)| The work is not linked to a requirement, placed freely in the iteration tree |
-| ![](assets/icons8-briefcase-blue-linked-orange.svg) | The work is linked to a requirement and is in sync when it comes to positioning in the iteration tree |
-| ![](assets/icons8-briefcase-blue-warn-orange.svg) | The work is linked to a requirement but is manually placed elsewhere in the iteration tree |
+| ![](assets/sf/icons8-briefcase_blue.svg)| The work is not linked to a requirement, placed freely in the iteration tree |
+| ![](assets/sf/icons8-briefcase-blue-linked-orange.svg) | The work is linked to a requirement and is in sync when it comes to positioning in the iteration tree |
+| ![](assets/sf/icons8-briefcase-blue-warn-orange.svg) | The work is linked to a requirement but is manually placed elsewhere in the iteration tree |
 
 ### Attachments
 
