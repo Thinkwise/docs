@@ -2,13 +2,13 @@
 title: Business Processes
 ---
 
-Business processes can be defined in the Software Factory to gain deeper understanding of the scope and context of the application(s) that will be built. Business processes should contain as little implementation details about the actual solution as possible.
+Business processes can be defined in the Software Factory to gain a deeper understanding of the scope and context of the application(s) that will be built. Business processes should contain as little implementation details about the actual solution as possible.
 
 The business process is structured  as a tree, with the main process node in the root. Child nodes in the tree represent sub-processes. The leaf nodes in the tree generally represent user activities. Elementary activities performed by a user.
 
 [Requirements](requirements) can be placed under any in the business process tree. [Work](work) can be placed under business processes or can be linked to a requirement.
 
-The work and requirements are shared between the Business processes, [Features](features) and [Iterations](iterations).
+The work and requirements are shared between the business processes, [features](features) and [iterations](iterations).
 
 ### Adding nodes
 
@@ -44,9 +44,23 @@ Activity, Gateway, Intermediate, Start and End nodes can be right-clicked to app
 
 When a node is selected, you can change the name or the description by typing directly.
 
-Nodes can be placed in lane, which allows you to assign responsibility for activities to a certain department, user or user group.
+Nodes can be placed in a lane, which allows you to assign responsibility for activities to a certain department, user or user group.
 
 A *Pool (Black Box)* or *Call Activity* can be used to indicate a message triggering another process or a sub-process being reused. The name or ID of the referred process node can be typed in to formally link the pool. Changing the name of the referred process will also update all diagrams where the process is used.
+
+When viewing the business processes as a stakeholder, the diagram will be read-only. A task is available to navigate to related *Pool (Black Box)* or *Call Activity* business processes.
+
+### Attachments
+
+To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
+
+### Discussion
+
+The discussion for every business process can be used to leave comments regarding business processes.
+
+### Linked requirements and linked work
+
+The *Linked requirements* and *Linked work* details show the requirements and the work that is directly linked to the business process.
 
 ### Impact analysis
 
@@ -77,13 +91,3 @@ Drag-drop can be used to reposition nodes. The dragged node will be positioned a
 The status of the business processes is aggregated from the underlying requirements and work. 
 
 > For more information, see the documentation on requirements and work.
-
-### Roles
-
-The *Specification analysis* role can be used to manage all specifications in the Software Factory.
-
-The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
-
-The *Specification review* role can access the Software Factory via a Web GUI. 
-
-The diagrams can be published to make them available for stakeholders. Whenever a diagram can be published, the *Publish all diagrams* task becomes available to the analysts.

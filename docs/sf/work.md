@@ -4,25 +4,25 @@ title: Work
 
 Development teams can leverage *Work* to describe, plan and keep track of development activities.
 
-Work describes what changes to a model need to be done, be it new parts of a model, updates to a model or removing unused parts of the model. Additionaly, work can be used to describe other development activities such as testing and deployment.
+A work item describes what changes to a model need to be done, be it new parts of a model, updates to a model or removing unused parts of the model. Additionaly, work can be used to describe other development activities such as testing and deployment.
 
 ### Links
 
 [Requirements](requirements) generally lead to work. When a requirement is not yet implemented, work can be used to describe how the requirement will be implemented. When a requirement is changed, work can be used to describe the required changes in a model.
 
-When work is linked to a requirement, it will be placed at the same [business process](business_processes), [feature](features) and [iteration](iterations) of this requirement by default. Moving the requirement to a different business process, feature or iteration will also update the linked work.
+When a work item is linked to a requirement, it will be placed at the same [business process](business_processes), [feature](features) and [iteration](iterations) of this requirement by default. Moving the requirement to a different business process, feature or iteration will also update the linked work.
 
-Work can be explicitly assigned to a _different_ business process, feature or iteration than the requirement. This exception will remain intact even when the requirement is moved to a different business process, feature or iteration.
+A work item can be explicitly assigned to a _different_ business process, feature or iteration than the requirement. This exception will remain intact even when the requirement is moved to a different business process, feature or iteration. When a work item has a different assignment, the value will be highlighted. Tasks are available to restore the *business process*, *feature* or *iteration* of the work item to match the requirement.
 
 > TODO: Image of conditional layout applied on work
 
 ### Work status
 
-To keep track of the implementation progress, work has a *Work status*. A task can be used to update the status of work.
+To keep track of the implementation progress, each work item has a *Work status*. A task can be used to update the status of a work item.
 
-The values for work status can be configured freely in the Software Factory. An order number can be specified which decides the ordering of the various statusses in the combobox when changing the status.
+The values for work status can be configured freely in the *Advanced menu* under *Master data* - *Specification*. An order number can be specified which decides the ordering of the various statusses in the combobox when changing the status.
 
-Additionaly, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items to requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
+Additionaly, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items linked to a requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
 
 One default status is required and can be set using the corresponding task.
 
@@ -36,7 +36,7 @@ To quickly and freely categorize work, tags are available.
 
 ### Attachments
 
-Files can be uploaded as attachments to work.
+Files can be uploaded as attachments to a work item.
 
 ### Log
 

@@ -29,6 +29,14 @@ When work is linked to a requirement, repositioning the requirement will also re
 | ![](assets/icons8-briefcase-blue-linked-orange.svg) | The work is linked to a requirement and is in sync when it comes to positioning in the iteration tree |
 | ![](assets/icons8-briefcase-blue-warn-orange.svg) | The work is linked to a requirement but is manually placed elsewhere in the iteration tree |
 
+### Attachments
+
+To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
+
+### Linked requirements and linked work
+
+The *Linked requirements* and *Linked work* details show the requirements and the work that is directly linked to the iteration.
+
 ### Impact analysis
 
 The *Impact analysis* tab can also be used to get an overview of all underlying requirements and all underlying work for a certain iteration. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
@@ -58,11 +66,3 @@ Drag-drop can be used to reposition nodes. The dragged node will be positioned a
 The status of the iterations is aggregated from the underlying requirements and work. 
 
 > For more information, see the documentation on requirements and work.
-
-### Roles
-
-The *Specification analysis* role can be used to manage all specifications in the Software Factory.
-
-The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
-
-The *Specification review* role can access the Software Factory via a Web GUI.

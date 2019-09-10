@@ -4,7 +4,7 @@ title: Features
 
 Using a more functional approach instead of a process-oriented approach, the feature tree allows [Requirements](requirements) and [Work](work) to be categorized in a feature tree.
 
-A feature tree can be configured freely. For instance, the feature tree can have various *applications* defined at the top-level, with *modules* and *sub-modules*, bundling the requirements and work in *features* at the lowest level. The granularity and the depth is completely up to the analysts.
+A feature tree can be configured freely. For instance, the feature tree can have various *applications* defined at the top-level, with *modules* and *sub-modules*, bundling the requirements and work in *features* at the lowest level. The granularity and the depth are completely up to the analysts.
 
 The work and requirements are shared between the [Business processes](business_processes), Features and [Iterations](iterations).
 
@@ -28,6 +28,14 @@ When work is linked to a requirement, repositioning the requirement will also re
 | ![](assets/icons8-briefcase_blue.svg)| The work is not linked to a requirement, placed freely in the feature tree |
 | ![](assets/icons8-briefcase-blue-linked-orange.svg) | The work is linked to a requirement and is in sync when it comes to positioning in the feature tree |
 | ![](assets/icons8-briefcase-blue-warn-orange.svg) | The work is linked to a requirement but is manually placed elsewhere in the feature tree |
+
+### Attachments
+
+To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
+
+### Linked requirements and linked work
+
+The *Linked requirements* and *Linked work* details show the requirements and the work that is directly linked to the feature.
 
 ### Impact analysis
 
@@ -58,11 +66,3 @@ Drag-drop can be used to reposition nodes. The dragged node will be positioned a
 The status of the features is aggregated from the underlying requirements and work. 
 
 > For more information, see the documentation on requirements and work.
-
-### Roles
-
-The *Specification analysis* role can be used to manage all specifications in the Software Factory.
-
-The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
-
-The *Specification review* role can access the Software Factory via a Web GUI.
