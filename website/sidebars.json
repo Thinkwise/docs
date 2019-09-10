@@ -59,7 +59,8 @@
     ],
     "Access Control": [
       "sf/roles",
-      "sf/model_rights"
+      "sf/model_rights",
+      "sf/module_authorization"
     ],
     "Deployment": [
       "sf/creation",
