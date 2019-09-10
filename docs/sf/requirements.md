@@ -25,7 +25,11 @@ Specifying the business process is a great way to help identify requirements. An
 
 When an existing system will be replaced, the feature tree will be a good way to traverse this system and find out what the requirements for each feature are. Existing data models can be cross-referenced to see if no features are missing. These two approaches are not mutually exclusive.
 
-The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
+Every new requirements should introduce [work](work). When the requirment changes, any work for which no development has been done can be updated accordingly. When work has already started or has already been completed, a new work item should be created to update the software accordingly.
+
+After all work for a requirement has been completed, the stakeholders can verify this via an *acceptance test*. The results of these test can be registered in the *discussion* and the *acceptance status* can be updated accordingly. Both errors in the implementation or errors in the initial requirement specification can lead to new work.
+
+> The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* status and *acceptance* status of requirements.
 
 ### Requirement in the Software Factory
 

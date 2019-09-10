@@ -45,8 +45,6 @@ The arrow can be used to navigate to the selected requirement or the selected wo
 
 To find out which [business processes](business_processes) and [features](features) share the same underlying requirements and/or underlying work, the *Related business processes* and *Related features* details can be used in the *Impact analysis* tab.
 
-> TODO: Images?
-
 The arrow can be used to navigate to the node in the business process or feature tree, respectively.
 
 ### Tags
