@@ -2,10 +2,10 @@
 title: Help
 ---
 
-Pressing the F1 key in a Thinkwise user interface opens the application's *Help* dialog, where information about the current subject or field can be found. A user can only access the help text for objects they are able to access in the application. 
+Pressing the F1 key in a Thinkwise user interface opens the application's *Help* dialog, where information about the current subject or field can be found. A user can only access the help text for objects they are able to access in the application.
 
-![](assets/sf/image16.png)
-*Help dialog of the Software Factory application*
+![](assets/sf/image302.png)
+*An example of a help text*
 
 ## Creating help texts
 
@@ -17,11 +17,6 @@ The user interfaces automatically combine the help text of, for instance, the co
 *Providing help text in English for the *project* table*
 
 The input fields of the help texts are a *rich text* data type, providing the possibility to use formatting options such as **bold**, *italic* and <span class="underline">underlined</span>. It is also possible to add images, which are stored in the HTML. 
-
-![](assets/sf/image302.png)
-*An example of a help text*
-
-> Users only have access to the help text of objects for which they are authorized.
 
 ## Creating the table of contents
 
