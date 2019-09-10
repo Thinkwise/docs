@@ -2,7 +2,7 @@
 title: Data sets
 ---
 
-Data sets are collections of data that can be used for testing purposes or to populate tables with initial data.
+Data sets are collections of data that can be used for testing purposes.
 
 ![This image shows the data sets screen](assets/sf/data_sets_overview.png "Data sets")
 *Data sets*
