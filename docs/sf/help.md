@@ -9,7 +9,9 @@ Pressing the F1 key in a Thinkwise user interface opens the application's *Help*
 
 ## Creating help texts
 
-The help text for an object, like a table, task, report, column or parameter, can be specified at the translation of the object to which this help text applies. The user interfaces automatically combine the help text of, for instance, the columns of a table to create the table's help text.
+The help text for an object, like a table, task, column or [conditional layout](subjects.html#conditional-formatting), can be specified at the translation of the object to which this help text applies.
+
+The user interfaces automatically combine the help text of, for instance, the columns of a table to create the table's help text. 
 
 ![1537880754985](assets/sf/1537880754985.png)
 *Providing help text in English for the *project* table*
@@ -18,6 +20,8 @@ The input fields of the help texts are a *rich text* data type, providing the po
 
 ![](assets/sf/image302.png)
 *An example of a help text*
+
+> Users only have access to the help text of objects for which they are authorized.
 
 ## Creating the table of contents
 
