@@ -223,7 +223,7 @@ A color can be changed using the *Update color* task or by dragging the column t
 ![](assets/sf/image241.png)
 *Fonts and colors used in a Theme*
 
-### Universal theme
+## Universal theme
 
 For *universal* themes, the default mode can be set to either *Dark* or *Light*.
 Because a user can switch between the dark and light mode, settings are available for both the dark and light mode of the theme.
