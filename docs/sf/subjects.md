@@ -498,7 +498,7 @@ The Thinkwise platform will automatically generate an overview of the conditiona
 
 #### Universal
 
-Additional columns were added for Universal. Here a distinction can be made between dark and light theme.
+The Thinkwise _Universal_ user interface uses different conditional layout settings than the classic user interfaces. Instead of choosing a font, containing the font face, size, color and style, the text can be styled independently of the chosen font using separate color and style settings for light and dark themes.
 
 ![](assets/sf/universal_conditional_layout.png)
 *Conditional formatting for Universal*
