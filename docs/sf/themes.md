@@ -238,5 +238,5 @@ Three colors are available to style an application:
 - **Accent color** - The accent color refers to the color used to accent key parts of the user interface.
 - **Warn color** - The warn color refers to the color that is used to indicate feedback or warnings.
 
-![](assets/sf/universal.png)
+![](assets/sf/universal_theme.png)
 *Universal theme settings*
