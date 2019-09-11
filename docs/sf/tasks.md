@@ -123,6 +123,8 @@ By specifying a task reference (between task and table and corresponding column 
 
 Just as with columns, the task parameters can be given a background color or a different font. Since a task does not have a grid, this will only be applied to form parameters.
 
+More information on conditional layouts can be found [here](subjects.html#conditional-formatting).
+
 ## Table tasks
 
 A task can be linked to one or more tables. In these tables, the task will be displayed in the ribbon, the context menu and possibly the task bar. Columns in the table can also be linked to parameters of the task. The value of the field of the active record is passed on to the parameter as a default value.
