@@ -259,6 +259,8 @@ The underlying column comparison (Report reference columns) is created automatic
 
 Just as with columns, the task parameters can be given a background color or a different font. Since a task does not have a grid, this will only be applied to form parameters.
 
+More information on conditional layouts can be found [here](subjects.html#conditional-formatting).
+
 ## Table reports
 
 The report can be linked to one or more tables. The report is displayed in the context menu for these tables. Columns in the table can also be linked to parameters of the report. The value of the field of the active record is passed on to the parameter as a default value.
