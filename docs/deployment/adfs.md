@@ -53,27 +53,27 @@ For ADFS support, it is necessary to configure ADFS in web.config. Below, fragme
             <add name="SessionAuthenticationModule" type="System.IdentityModel.Services.SessionAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />
         </modules>
         ...
-        <system.identityModel>
-            <identityConfiguration>
-                <audienceUris>
-                    <add value="https://[Website-URL]" />
-                </audienceUris>
-                <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-                    <trustedIssuers>
-                    <add thumbprint="2451468b00bb58ab7bc7d5c9528b5e8b6cdc70bd" name="https://[ADFS-server-URL]/adfs/ls/" />
-                    </trustedIssuers>
-                </issuerNameRegistry>
-                <certificateValidation certificateValidationMode="None" />
-            </identityConfiguration>
-        </system.identityModel>
-        <system.identityModel.services>
-            <federationConfiguration>
-                <cookieHandler requireSsl="false" />
-                <wsFederation passiveRedirectEnabled="false" issuer="https://[ADFS-server-URL]/" realm="https://[Website-URL]/" reply="https://[Website-URL]/" requireHttps="false" />
-            </federationConfiguration>
-        </system.identityModel.services>
-        ...
     </system.webServer>
+    ...
+    <system.identityModel>
+        <identityConfiguration>
+            <audienceUris>
+                <add value="https://[Website-URL]" />
+            </audienceUris>
+            <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <trustedIssuers>
+                <add thumbprint="2451468b00bb58ab7bc7d5c9528b5e8b6cdc70bd" name="https://[ADFS-server-URL]/adfs/ls/" />
+                </trustedIssuers>
+            </issuerNameRegistry>
+            <certificateValidation certificateValidationMode="None" />
+        </identityConfiguration>
+    </system.identityModel>
+    <system.identityModel.services>
+        <federationConfiguration>
+            <cookieHandler requireSsl="false" />
+            <wsFederation passiveRedirectEnabled="false" issuer="https://[ADFS-server-URL]/" realm="https://[Website-URL]/" reply="https://[Website-URL]/" requireHttps="false" />
+        </federationConfiguration>
+    </system.identityModel.services>
 </configuration>
 
 ```
@@ -126,3 +126,5 @@ Here, add a new *Rule*. The Web GUI uses this to extract the user name of the lo
 With this, the ADFS server has been configured so that the Web GUI can communicate with it.
 
 Now go to the `AutoLogin.aspx` page of the Web GUI and check if the user is redirected to the main page.
+
+Hint: Keep track of the Windows events viewer at both ends, web-server and ADFS server, when running into errors while trying to login via ADFS. 
