@@ -26,7 +26,7 @@ The *History* tab page shows a list of previously created deployment packages.
 
 ## Modules
 
-Starting with version 2019.2 of the Software Factory, if a project version contains any modules a list of available modules will be shown. By checking the modules they can be included or excluded from the deployment package.
+If a project version contains any modules, a list of available modules will be shown. By checking the modules they can be included or excluded from the deployment package.
 
 The *Roles* tab shows all roles and any modules they are included in. A checkmark in front of the role indicates if it will be included in the deployment package.
 
