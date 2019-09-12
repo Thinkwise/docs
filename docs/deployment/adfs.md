@@ -127,4 +127,4 @@ With this, the ADFS server has been configured so that the Web GUI can communica
 
 Now go to the `AutoLogin.aspx` page of the Web GUI and check if the user is redirected to the main page.
 
-Hint: Keep track of the Windows events viewer at both ends, web-server and ADFS server, when running into errors while trying to login via ADFS. 
+> When running into errors while trying to login via ADFS, be sure to check the Windows Event Viewer of both the web server and ADFS server.
