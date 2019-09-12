@@ -74,6 +74,7 @@ For ADFS support, it is necessary to configure ADFS in web.config. Below, fragme
             <wsFederation passiveRedirectEnabled="false" issuer="https://[ADFS-server-URL]/" realm="https://[Website-URL]/" reply="https://[Website-URL]/" requireHttps="false" />
         </federationConfiguration>
     </system.identityModel.services>
+    ...
 </configuration>
 
 ```
