@@ -481,14 +481,20 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 ### Conditional formatting
 
-In the grid and the form, the format of a cell or a row may be affected by specified conditions. Conditional formatting refers to the font and the color of the font and background.
+In grids and forms, the font and background color of fields can be adjusted based on specific conditions using *conditional layouts*.
+You can choose to modify the background color and/or the font style and color of a specific column or, when no column is selected, the entire row.
 
-Under conditional formatting, it is indicated by how the cell or row will look if all conditions are met. You can choose to modify the background color and/or the font. The definitions then still need to be configured.
+A conditional layout contains zero or more conditions that determine when the layout is applied.
 
 ![](assets/sf/image180.png)
-*Set conditional formatting for a table in Data*
+*Set conditional layout for a table*
 
-> Expression fields can be used to model conditional formatting based on queries, for example by checking whether a date has expired.
+The Thinkwise platform will automatically generate an overview of the conditional layouts of a subject in the help text (based on the visible columns for the user) for conditional layouts that have a help text entered.
+
+![](assets/sf/conditional_formatting_help.png)
+*Conditional layouts in the help text of the Software Factory*
+
+> Expression fields can be used to model conditional layouts based on queries, for example by checking whether a date has expired.
 
 ## Links
 
