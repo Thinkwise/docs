@@ -39,6 +39,8 @@ The unzipped Universal folder can be placed next to Indicium. A common location 
 
 The Universal folder should __not__ be converted to an application, as it is a static website. No application pool is required.
 
+> Important: Careful when deploying two Universal instances on the same (sub)domain. When two Universal instances are deployed on the same (sub)domain, browsers will share the cache containing the Indicium URL, platform and application between the two Universal instances. The login configuration of the Universal instance accessed as second will be **ignored** as it will automatically login using  the Indicium used by the first Universal instance. This will be resolved in a future release.
+
 ### Accessing Universal
 
 Universal can be accessed using a browser to access the location of the web application. In the example above, this would be https://tsf-pc/universal.
@@ -78,10 +80,10 @@ The user can log in using the credentials used as configured in the IAM_DEV.
 ### Troubleshooting
 
 - Download the latest Indicium Universal version, Universal version and run all upgrades and hotfixes on the SF and IAM.
-- Try running Universal and Indicium on the same server. The server name for both URLs must be the same.
-- Use fully qualified server names, like `server.thinkwisesoftware.com/indicium` instead of `server/indicium`.
+- Try running Universal and Indicium on the same server. The domain name for both URLs must be the same.
+- Use fully qualified domain names, like `server.thinkwisesoftware.com/indicium` instead of `server/indicium`.
 - Test access to Indicium by accessing the URL directly with the used credentials.
-- Clear the cache of your browser. Alternatively, try incognito mode. 
+- Clear the cache of your browser. Alternatively, try incognito mode.
 - If possible, update your browser or switch to a recommended browser.
 - Ensure the user has access to the application in the Intelligent Application Manager or runtime configuration in the Software Factory.
 - Ensure a list bar menu or tile menu is available to the user.
