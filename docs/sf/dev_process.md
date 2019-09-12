@@ -34,14 +34,6 @@ The requirements are used to continuously monitor the scope of the project. *Wor
 ![](assets/sf/image10_20192.png)
 *Process analysis - Requirements*
 
-### Specification roles
-
-The *Specification analysis* role can be used to manage all specifications in the Software Factory.
-
-The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
-
-The *Specification review* role can access the Software Factory via a Web GUI.
-
 ## Projects
 
 Application development in the Software Factory is done on a project basis, with every project containing one or more project versions.

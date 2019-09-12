@@ -15,7 +15,15 @@ The specification of Requirements in the Software Factory is based on two standa
 
 An analyst should always strive to keep the requirements independent of the implementation. However, when there are explicit demands regarding the implementation, these should be described or included as attachments as they become part of the basis for the agreement between business and IT.
 
-### Requirement analysis
+### Roles used in requirement analysis
+
+The *Specification analysis* role can be used to manage all specifications in the Software Factory.
+
+The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
+
+The *Specification review* role can access the Software Factory via a Web GUI.
+
+## Requirement analysis
 
 The first step in requirement analysis and specification is identification of the stakeholders. Key stakeholders can be granted access to the Software Factory in the role of *Specification review*. 
 
@@ -29,9 +37,7 @@ Every new requirements should introduce [work](work). When the requirment change
 
 After all work for a requirement has been completed, the stakeholders can verify this via an *acceptance test*. The results of these test can be registered in the *discussion* and the *acceptance status* can be updated accordingly. Both errors in the implementation or errors in the initial requirement specification can lead to new work.
 
-> The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* status and *acceptance* status of requirements.
-
-### Requirement in the Software Factory
+## Requirements in the Software Factory
 
 In the Software Factory, the term *requirements* is only used for a subset of requirements that can be found in literature, namely **system requirements**. The system requirements answer the *how*-question. *How* will the system support a certain user activity? *How* will the system support a certain feature?
 
@@ -41,13 +47,25 @@ System requirements can be split into two types: functional and non-functional r
 - Functional requirements describe actual functionality that the system provides. These should be the vast majority of the system requirements.
 - Non-functional requirements are used to describe other aspects such as performance, ease-of-use. Non-functional requirements are difficult to test, try to set realistic and measurable targets in advance.
 
-### Target audience 
+## Target audience 
 
 Requirements should be readable by non-technical stakeholders, so refrain from using technical terms such as *tables*, *columns* and *triggers*. The requirements should answer  *how* the system should support the user, not *how* a developer would implement this.
 
 In some cases, the stakeholders can express strong opinions about *how* a developer should implement this. While is discouraged to include implementation details in the requirements, if these are demands made by the business, these solutions become part of the requirements as they are part of the agreement between business and IT. Attachments can be used to upload state flow diagrams, entity relationship diagrams, wireframes or mock-ups that convey the desired solution.
 
-### Forbidden words
+A formal example of a requirement can be: *The system must allow customers to change their invoicing address. This form of self-service reduces workload for the service department*. The requirement contains the functionality, the role that can use the functionality and the rationale for the requirement.
+
+However, an analyist is free to use a specification method of their own liking. User stories such as *As a customer, I want to be able to change my own invoicing address so I don't have to call the service department* would convey the desired functionality just as well.
+
+### Roles
+
+The *Specification analysis* role can be used to manage all specifications in the Software Factory.
+
+The *Specification review* role can be granted to stakeholders, allowing them read-only access to the specifications. Stakeholders can participate in discussions regarding requirements and can change the *specification* state and *acceptance* state of requirements.
+
+The *Specification review* role can access the Software Factory via a Web GUI.
+
+## Forbidden words
 
 Clarity and unambiguity are important when drawing up requirements. All stakeholders should interpret the requirements in the same manner. To avoid the use of vague or technical words, a list of forbidden words can be registered. These words will light up in the requirements description.
 
@@ -56,7 +74,7 @@ Clarity and unambiguity are important when drawing up requirements. All stakehol
 
 The list of forbidden words can be accessed from the *Advanced menu* under *Master data* - *Specification*.
 
-### Requirement status
+## Requirement status
 
 Requirements have two types of statusses, one for the requirement itself, the *Specification status*, and one for the acceptance of the implementation by stakeholdres, the *Acceptance status*.
 
@@ -66,11 +84,11 @@ Additionaly, a *Progress* value can be defined for each status. This value will 
 
 A default specification status and a default acceptance status are required. These can be set using the corresponding tasks.
 
-### Discussion
+## Discussion
 
 The discussion for every business process can be used to leave comments regarding requirements.
 
-### Linked work
+## Linked work
 
 The *Linked work* detail show the work that is directly linked to this requirement. Linked work will be linked to the same *business process*, *feature* and *iteration* as the requirement.
 
@@ -78,6 +96,6 @@ When work is linked to a requirement, changing the *business process*, *feature*
 
 A work item can be explicitly assigned to a _different_ business process, feature or iteration than the requirement. This exception will remain intact even when the requirement is moved to a different business process, feature or iteration. When a work item has a different assignment, the value will be highlighted. Tasks are available to restore the *business process*, *feature* or *iteration* of the work item to match the requirement.
 
-### Log
+## Log
 
 All changes done to the requirement and the requirement attachments will be logged.

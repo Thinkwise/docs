@@ -9,8 +9,9 @@ Every leaf-level [iteration](iterations) that is currently active is available a
 A prefilter can be turned off to show the kanban boards for past and future iterations. 
 
 ![](assets/sf/kanban.png)
+*A kanban board*
 
-### Lanes
+## Lanes
 
 The configuration of lanes in the kanban board is determined by the [work](work) status. 
 
@@ -18,12 +19,15 @@ Each individual work status can be configured to correspond to a certain lane in
 
 Multiple work statusses can use the same *Kanban sequence no*. This way, work with multiple statusses can be placed in the same lane.
 
-### Work details
+![](assets/sf/work-status-list.png)
+*An example work status configuration. Six of the statusses are included in 4 kanban lanes.*
+
+## Work details
 
 The zoom button at the bottom of each lane can be used to further inspect the selected work in this lane. This will open a new floating document or will reuse an earlier opened work document.
 
 Attachments, the work log, the linked [requirement](requirements), [business process](business_processes), [feature](features) and iteration are all available here.
 
-### Drag-drop
+## Drag-drop
 
 The developer can drag-drop work from one lane to another to change the status. When a lane represents more than 1 status, the developer will be asked to provide the new status.

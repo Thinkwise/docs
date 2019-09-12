@@ -4,13 +4,15 @@ title: Business Processes
 
 Business processes can be defined in the Software Factory to gain a deeper understanding of the scope and context of the application(s) that will be built. Business processes should contain as little implementation details about the actual solution as possible.
 
-The business process is structured  as a tree, with the main process node in the root. Child nodes in the tree represent sub-processes. The leaf nodes in the tree generally represent user activities. Elementary activities performed by a user.
+The business process is structured as a tree, with the main process node in the root. Child nodes in the tree represent sub-processes. The leaf nodes in the tree generally represent user activities. These activities are performed by a single user at a certain point in time.
 
-[Requirements](requirements) can be placed under any in the business process tree. [Work](work) can be placed under business processes or can be linked to a requirement.
+> It is discouraged to split up user activities further into elementary actions or work instructions in these diagrams. After all, the work instructions are dependent on the implementation. A user activity should correspond to a single [role](roles).
+
+[Requirements](requirements) can be placed under any business process node in the business process tree. [Work](work) can be placed under business processes or can be linked to a requirement.
 
 The work and requirements are shared between the business processes, [features](features) and [iterations](iterations).
 
-### Adding nodes
+## Adding nodes
 
 When adding a new node in the tree, the type of node will be determined by the node that was selected. 
 - When a business process node was selected, a new business process node will be created. 
@@ -21,7 +23,7 @@ The new node will be placed next to the previously selected node by default, wit
 
 Alternatively, new child nodes at a certain location can be added via the *Sub-business processes*, *Linked requirements* or *Linked work* tab.
 
-### Work state
+## Work state
 
 When work is linked to a requirement, repositioning the requirement will also reposition the work. However, the work can be placed at a different location in the business process tree while retaining its link with the requirement. The work will receive a different icon and a task will be available to move the work to the same location in the business process tree as its requirement.
 
@@ -31,7 +33,7 @@ When work is linked to a requirement, repositioning the requirement will also re
 | ![](assets/sf/icons8-briefcase-blue-linked-orange.svg) | The work is linked to a requirement and is in sync when it comes to positioning in the business process tree |
 | ![](assets/sf/icons8-briefcase-blue-warn-orange.svg) | The work is linked to a requirement but is manually placed elsewhere in the business process tree |
 
-### Designing business processes
+## Designing business processes
 
 When a business process node is selected, the *Designer* tab can be used to create a [BPMN 2.0](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) model of this process.
 
@@ -50,43 +52,43 @@ A *Pool (Black Box)* or *Call Activity* can be used to indicate a message trigge
 
 When viewing the business processes as a stakeholder, the diagram will be read-only. A task is available to navigate to related *Pool (Black Box)* or *Call Activity* business processes.
 
-### Attachments
+## Attachments
 
 To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
 
-### Discussion
+## Discussion
 
 The discussion for every business process can be used to leave comments regarding business processes.
 
-### Linked requirements and linked work
+## Linked requirements and linked work
 
 The *Linked requirements* and *Linked work* details show the requirements and the work that is directly linked to the business process.
 
-### Impact analysis
+## Impact analysis
 
-The *Impact analysis* tab can also be used to get an overview of all underlying requirements and all underlying work for a certain business process. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
+The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain business process. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
 
-The arrow can be used to navigate to the selected requirement or the selected work in the business process tree.
+The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the selected requirement or the selected work in the business process tree.
 
 To find out which [features](features) and [iterations](iterations) share the same underlying requirements and/or underlying work, the *Related features* and *Related iterations* details can be used in the *Impact analysis* tab.
 
 ![](assets/sf/impact_analysis_business_process_to_iteration.png)
 
-The arrow can be used to navigate to the node in the feature or iteration tree, respectively.
+The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the node in the feature or iteration tree, respectively.
 
-### Tags
+## Tags
 
 To quickly and freely categorize business processes, tags are available.
 
-### Unassigned node
+## Unassigned node
 
 The *Unassigned* node is used to group requirements and work that have not yet been assigned to a business process.
 
-### Drag-drop
+## Drag-drop
 
 Drag-drop can be used to reposition nodes. The dragged node will be positioned as a child of the drop target node.
 
-### Status
+## Status
 
 The status of the business processes is aggregated from the underlying requirements and work. 
 
