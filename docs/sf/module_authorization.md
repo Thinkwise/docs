@@ -4,7 +4,7 @@ title: Modules
 
 Modules provide a way to easily deploy groups of roles. By using the *modules* screen, modules can be created or edited. By dragging and dropping roles from the list of available roles onto the list of included roles (or using the arrow button at the top of the lists) roles can be added to the module.
 
->Any roles that are not assigned to a module will always be deployed by default.
+> Any roles that are not assigned to a module will always be deployed by default.
 
 ![Module modeler](assets/sf/module_authorization.png)
 
