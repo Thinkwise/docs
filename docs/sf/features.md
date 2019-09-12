@@ -41,11 +41,11 @@ The *Linked requirements* and *Linked work* details show the requirements and th
 
 The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain feature. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-features.
 
-The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the selected requirement or the selected work in the feature tree.
+> The ![](assets/sf/icons8-right.svg) *arrow* can be used to navigate to the selected requirement or the selected work in the feature tree.
 
 To find out which [business processes](business_processes) and [iterations](iterations) share the same underlying requirements and/or underlying work, the *Related business processes* and *Related iterations* details can be used in the *Impact analysis* tab.
 
-The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the node in the business process or iteration tree, respectively.
+> The ![](assets/sf/icons8-right.svg) *arrow* can be used to navigate to the node in the business process or iteration tree, respectively.
 
 ## Tags
 
