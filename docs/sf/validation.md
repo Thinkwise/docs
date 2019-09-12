@@ -51,7 +51,7 @@ To assist in resolving validation messages, it is possible to assign messages to
 
 ## Validation assignments
 
-The *Assignments* tab page shows a cube with the number of validations that are assigned to a developer.
+The *Assignments* tab page shows an overview of the validation messages that are assigned to a developer.
 
 ![validation_assignments](assets/sf/validation_assignments.png)
 *Validation assignments*
