@@ -26,7 +26,7 @@ Multiple work statusses can use the same *Kanban sequence no*. This way, work wi
 
 The zoom button at the bottom of each lane can be used to further inspect the selected work in this lane. This will open a new floating document or will reuse an earlier opened work document.
 
-Attachments, the work log, the linked [requirement](requirements), [business process](business_processes), [feature](features) and iteration are all available here.
+Attachments, the work log, the linked [requirement](requirements), [business process](business_processes), [feature](features) and [iteration](iterations) are all available here.
 
 ## Drag-drop
 

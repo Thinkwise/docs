@@ -6,7 +6,7 @@ Using a more functional approach instead of a process-oriented approach, the fea
 
 A feature tree can be configured freely. For instance, the feature tree can have various *applications* defined at the top-level, with *modules* and *sub-modules*, bundling the requirements and work in *features* at the lowest level. The granularity and the depth are completely up to the analysts.
 
-The work and requirements are shared between the [business processes](business_processes), features and [oterations](iterations).
+The work and requirements are shared between the [business processes](business_processes), features and [iterations](iterations).
 
 ## Adding nodes
 
@@ -31,7 +31,7 @@ When work is linked to a requirement, repositioning the requirement will also re
 
 ## Attachments
 
-To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
+To supplement the description of features, attachments can be added. These attachments will be stored in the database.
 
 ## Linked requirements and linked work
 
@@ -39,7 +39,7 @@ The *Linked requirements* and *Linked work* details show the requirements and th
 
 ## Impact analysis
 
-The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain feature. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
+The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain feature. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-features.
 
 The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the selected requirement or the selected work in the feature tree.
 
@@ -59,8 +59,8 @@ The *Unassigned* node is used to group requirements and work that have not yet b
 
 Drag-drop can be used to reposition nodes. The dragged node will be positioned as a child of the drop target node.
 
-## Status
+## Progress
 
-The status of the features is aggregated from the underlying requirements and work. 
+The progress of the features is aggregated using the status of the underlying requirements and work. 
 
-> For more information, see the documentation on requirements and work.
+> For more information, see the documentation on [requirements](requirements) and [work](work).

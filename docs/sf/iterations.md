@@ -11,7 +11,7 @@ The leaf nodes in the iteration tree can be used as [kanban boards](kanban_board
 ## Adding nodes
 
 When adding a new node in the tree, the type of node will be determined by the node that was selected. 
-- When a iteration node was selected, a new iteration node will be created. 
+- When an iteration node was selected, a new iteration node will be created. 
 - When a requirement node was selected, a requirement node will be created.
 - When a work node was selected, a work node will be created.
 
@@ -31,7 +31,7 @@ When work is linked to a requirement, repositioning the requirement will also re
 
 ## Attachments
 
-To supplement the description of business processes, attachments can be added. These attachments will be stored in the database.
+To supplement the description of business iterations, attachments can be added. These attachments will be stored in the database.
 
 ## Linked requirements and linked work
 
@@ -39,7 +39,7 @@ The *Linked requirements* and *Linked work* details show the requirements and th
 
 ## Impact analysis
 
-The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain iteration. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-processes.
+The *Impact analysis* tab can be used to get an overview of all underlying requirements and all underlying work for a certain iteration. These overviews differ from the *Linked requirements* and *Linked work* details as they also include the requirements and work of all sub-iterations.
 
 The ![](assets/sf/icons8-right.svg)*arrow* can be used to navigate to the selected requirement or the selected work in the iteration tree.
 
@@ -59,8 +59,8 @@ The *Unplanned* nodes are used to group requirements and work that have not yet 
 
 Drag-drop can be used to reposition nodes. The dragged node will be positioned as a child of the drop target node.
 
-## Status
+## Progress
 
-The status of the iterations is aggregated from the underlying requirements and work. 
+The progress of the iterations is aggregated using the status of the underlying requirements and work. 
 
-> For more information, see the documentation on requirements and work.
+> For more information, see the documentation on [requirements](requirements) and [work](work).

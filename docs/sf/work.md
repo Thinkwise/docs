@@ -4,7 +4,7 @@ title: Work
 
 Development teams can leverage *Work* to describe, plan and keep track of development activities.
 
-A work item describes what changes to a model need to be done, be it new parts of a model, updates to a model or removing unused parts of the model. Additionaly, work can be used to describe other development activities such as testing and deployment.
+A work item describes what changes to a model need to be done, be it new parts of a model, updates to a model or removing unused parts of the model. Additionally, work can be used to describe other development activities such as testing and deployment.
 
 ## Links
 
@@ -21,9 +21,9 @@ A work item can be explicitly assigned to a _different_ business process, featur
 
 To keep track of the implementation progress, each work item has a *Work status*. The task ![](assets/sf/icons8-maintenance.svg)*Move work status to state* can be used to update the status of a work item.
 
-The values for work status can be configured freely in the *Advanced menu* under *Master data* - *Specification*. An order number can be specified which decides the ordering of the various statusses in the combobox when changing the status.
+The values for work status can be configured freely in the *Advanced menu* under *Master data* - *Specification*. An order number can be specified which decides the ordering of the various statuses in the combobox when changing the status.
 
-Additionaly, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items linked to a requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
+Additionally, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items linked to a requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
 
 One default status is required and can be set using the task ![](assets/sf/icons8-tick-box.svg)*Set as default status*.
 

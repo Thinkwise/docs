@@ -33,7 +33,7 @@ Specifying the business process is a great way to help identify requirements. An
 
 When an existing system will be replaced, the feature tree will be a good way to traverse this system and find out what the requirements for each feature are. Existing data models can be cross-referenced to see if no features are missing. These two approaches are not mutually exclusive.
 
-Every new requirements should introduce [work](work). When the requirment changes, any work for which no development has been done can be updated accordingly. When work has already started or has already been completed, a new work item should be created to update the software accordingly.
+Every new requirements should introduce [work](work). When the requirement changes, any work for which no development has been done can be updated accordingly. When work has already started or has already been completed, a new work item should be created to update the software accordingly.
 
 After all work for a requirement has been completed, the stakeholders can verify this via an *acceptance test*. The results of these test can be registered in the *discussion* and the *acceptance status* can be updated accordingly. Both errors in the implementation or errors in the initial requirement specification can lead to new work.
 
@@ -76,17 +76,17 @@ The list of forbidden words can be accessed from the *Advanced menu* under *Mast
 
 ## Requirement status
 
-Requirements have two types of statusses, one for the requirement itself, the *Specification status*, and one for the acceptance of the implementation by stakeholdres, the *Acceptance status*.
+Requirements have two types of statuses, one for the requirement itself, the *Specification status*, and one for the acceptance of the implementation by stakeholders, the *Acceptance status*.
 
-The values for specification staus and acceptance status can be changed in the *Advanced menu* under *Master data* - *Specification*. An order number can be specified which decides the ordering of the various statusses in the combobox when changing the status.
+The values for specification status and acceptance status can be changed in the *Advanced menu* under *Master data* - *Specification*. An order number can be specified which decides the ordering of the various statuses in the combobox when changing the status.
 
-Additionaly, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all requirements linked to a business process, feature or iteration. Requirements having a specification status or acceptance status with no progress value will be excluded from the calculation of the average specification progress or acceptance progress, respectively.
+Additionally, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all requirements linked to a business process, feature or iteration. Requirements having a specification status or acceptance status with no progress value will be excluded from the calculation of the average specification progress or acceptance progress, respectively.
 
 A default specification status and a default acceptance status are required. These can be set using the corresponding tasks.
 
 ## Discussion
 
-The discussion for every business process can be used to leave comments regarding requirements.
+The discussion tab page can be used to leave comments regarding requirements.
 
 ## Linked work
 

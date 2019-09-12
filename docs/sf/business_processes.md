@@ -88,8 +88,8 @@ The *Unassigned* node is used to group requirements and work that have not yet b
 
 Drag-drop can be used to reposition nodes. The dragged node will be positioned as a child of the drop target node.
 
-## Status
+## Progress
 
-The status of the business processes is aggregated from the underlying requirements and work. 
+The progress of the business processes is aggregated using the status of the underlying requirements and work. 
 
-> For more information, see the documentation on requirements and work.
+> For more information, see the documentation on [requirements](requirements) and [work](work).
