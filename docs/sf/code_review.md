@@ -70,7 +70,7 @@ The code analysis will check over 60 rules covering, for instance:
 
 ## Assignments
 
-The *Assignments* tab page shows a cube with the number of code reviews that are assigned to a developer.
+The *Assignments* tab page shows an overview of the code review tasks that are assigned to a developer.
 
 ![code_review_assignments](assets/sf/code_review_assignments.png)
 *Assignments*
