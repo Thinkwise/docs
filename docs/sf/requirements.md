@@ -33,7 +33,7 @@ Specifying the business process is a great way to help identify requirements. An
 
 When an existing system will be replaced, the feature tree will be a good way to traverse this system and find out what the requirements for each feature are. Existing data models can be cross-referenced to see if no features are missing. These two approaches are not mutually exclusive.
 
-Every new requirements should introduce [work](work). When the requirement changes, any work for which no development has been done can be updated accordingly. When work has already started or has already been completed, a new work item should be created to update the software accordingly.
+Every new requirement should introduce [work](work). When the requirement changes, any work for which no development has been done can be updated accordingly. When work has already started or has already been completed, a new work item should be created to update the software accordingly.
 
 After all work for a requirement has been completed, the stakeholders can verify this via an *acceptance test*. The results of these test can be registered in the *discussion* and the *acceptance status* can be updated accordingly. Both errors in the implementation or errors in the initial requirement specification can lead to new work.
 
@@ -51,7 +51,7 @@ System requirements can be split into two types: functional and non-functional r
 
 Requirements should be readable by non-technical stakeholders, so refrain from using technical terms such as *tables*, *columns* and *triggers*. The requirements should answer  *how* the system should support the user, not *how* a developer would implement this.
 
-In some cases, the stakeholders can express strong opinions about *how* a developer should implement this. While is discouraged to include implementation details in the requirements, if these are demands made by the business, these solutions become part of the requirements as they are part of the agreement between business and IT. Attachments can be used to upload state flow diagrams, entity relationship diagrams, wireframes or mock-ups that convey the desired solution.
+In some cases, the stakeholders can express strong opinions about *how* a developer should implement this. While it is discouraged to include implementation details in the requirements, if these are demands made by the business, these solutions become part of the requirements as they are part of the agreement between business and IT. Attachments can be used to upload state flow diagrams, entity relationship diagrams, wireframes or mock-ups that convey the desired solution.
 
 A formal example of a requirement can be: *The system must allow customers to change their invoicing address. This form of self-service reduces workload for the service department*. The requirement contains the functionality, the role that can use the functionality and the rationale for the requirement.
 
