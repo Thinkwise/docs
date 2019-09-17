@@ -21,7 +21,8 @@ Critical hotfixes are provided for all supported versions. Non-critical hotfixes
 |         2018.1         |         Jan-2018         |       Nov-2019       |
 |         2018.2         |         May-2018         |       May-2020       |
 |         2018.3         |         Nov-2018         |       Nov-2020       |
-|         2019.1         |         May-2019         |                      |
+|         2019.1         |         May-2019         |       Mar-2021       |
+|         2019.2         |         Sep-2019         |                      |
 
 ### Runtime components
 
@@ -101,35 +102,35 @@ Thinkwise will inform its customers when an Internet Information Services versio
 
 ### Browsers
 
-The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more. 
+The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more.
 
-(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201903-201903-bar))
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201908-201908-bar))
 
 | **Browser version** | **Market share** |
 | :-----------------: | :--------------: |
-|    Chrome (all)     |       70%        |
-|     Firefox 5+      |       10%        |
-|       IE 11.0       |        5%        |
-|     Safari 11.1     |        4%        |
-|       Edge 17       |        3%        |
+|    Chrome (all)     |       71%        |
+|     Firefox 5+      |        9%        |
+|       IE 11.0       |        4%        |
+|     Safari 12.1     |        3%        |
+|       Edge 18       |        3%        |
 |      Opera 15+      |        2%        |
 
 ### Mobile Operating Systems
 
-The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more. 
+The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more.
 
-(Source: [StatCounter Global Stats](http://gs.statcounter.com/os-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar), [iOS](http://gs.statcounter.com/ios-version-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar), [Android](http://gs.statcounter.com/android-version-market-share/mobile-tablet/worldwide/#monthly-201903-201903-bar))
+(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-201908-201908-bar) and
+and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/north-america/#monthly-201908-201908-bar))
 
-| **Mobile OS version** | **Market share**  |
-| :-------------------: | :---------------: |
-|       iOS 12.1        |        37%        |
-|       iOS 11.4        |        3%         |
-|       iOS 10.3        |        2%         |
-|      Android 9.0      |        4%         |
-|      Android 8.1      |        9%         |
-|      Android 8.0      |        9%         |
-|      Android 7.1      |        4%         |
-|      Android 7.0      |        6%         |
-|      Android 6.0      |        8%         |
-|      Android 5.1      |        5%         |
-|      Android 4.4      |        3%         |
+| **Mobile OS version** | **Market share** |
+| :-------------------: | :--------------: |
+|       iOS 12.4        |       35%        |
+|       iOS 12.3        |        6%        |
+|       iOS 12.1        |        2%        |
+|      Android 9.0      |       20%        |
+|      Android 8.1      |        5%        |
+|      Android 8.0      |        7%        |
+|      Android 7.1      |        5%        |
+|      Android 7.0      |        6%        |
+|      Android 6.0      |        4%        |
+|      Android 5.1      |        3%        |
