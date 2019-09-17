@@ -124,13 +124,14 @@ and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/nor
 
 | **Mobile OS version** | **Market share** |
 | :-------------------: | :--------------: |
-|       iOS 12.4        |       35%        |
-|       iOS 12.3        |        6%        |
+|       iOS 12.4        |       19%        |
+|       iOS 12.3        |       20%        |
+|       iOS 12.2        |        2%        |
 |       iOS 12.1        |        2%        |
-|      Android 9.0      |       20%        |
+|      Android 9.0      |       18%        |
 |      Android 8.1      |        5%        |
-|      Android 8.0      |        7%        |
-|      Android 7.1      |        5%        |
-|      Android 7.0      |        6%        |
+|      Android 8.0      |        8%        |
+|      Android 7.1      |        3%        |
+|      Android 7.0      |        5%        |
 |      Android 6.0      |        4%        |
 |      Android 5.1      |        3%        |
