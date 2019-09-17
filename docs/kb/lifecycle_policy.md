@@ -49,6 +49,7 @@ Thinkwise will inform its customers when a database management system version is
 |          2014          |         Jun-2014         |       Jul-2019       |                               |
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
+|        2019 RC         |         Aug-2019         |                      |                               |
 
 #### DB2 for IBM i
 
