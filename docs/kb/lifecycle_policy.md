@@ -120,7 +120,7 @@ The Thinkwise Web user interface supports browser versions with a **market share
 
 The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more.
 
-(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-201908-201908-bar) and
+(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-201908-201908-bar)
 and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/north-america/#monthly-201908-201908-bar))
 
 | **Mobile OS version** | **Market share** |
