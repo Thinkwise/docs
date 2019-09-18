@@ -23,19 +23,19 @@ The Software Factory is used during the development and test phase to develop an
 
 The Intelligent Application Manager manages all the models of applications that are in the acceptance and production phases. The application managers can also set up authorizations using IAM. The presentation for the user is again provided by the GUIs. End users can set up their own user preferences via the GUIs and get suggestions from IAM to optimize their user experience.
 
-The GUIs are available under Windows, Web and Mobile (smartphone and tablet). The capabilities of the various GUIs are very extensive and as good as identical, to the extent that this is technologically possible.
+The GUIs are available under Windows, Web and Mobile (smartphone and tablet). Theyuarn capabilities of the various GUIs are very extensive and as good as identical, to the extent that this is technologically possible.
 
 The modernization of software applications takes place with the Thinkwise Upcycler. This tool is only deployed by Thinkwise itself and is not described in this document.
 
 The positioning of the various Thinkwise products (Upcycler, SF, IAM and GUIs) is presented in the diagram below. Each product is discussed separately in the following chapters with the exception of the Upcycler.
 
-![](assets/overview/platform_architecture.png)
+![](assets/overview/platform_architecture.jpg)
 *Thinkwise Platform overview*
 
 Individual manuals are available for the SF, IAM and GUIs. The requirements for their installation are described in the online documentation.
 An example of a Legacy application that can be modernized to a Windows, Web and/or Mobile application using the Thinkwise Platform is given below:
 
-![](assets/overview/legacy_application.png)
+![](assets/overview/legacy_application.jpg)
 *Example of a legacy application*
 
 Subsequently the modernized screen in a Windows environment:
@@ -47,7 +47,7 @@ Subsequently the modernized screen in a Windows environment:
 
 **Thinkwise applications consist of a data tier, an application tier and a presentation tier (GUIs). The business logic, which contains customer-specific functionality, can be included in the data tier (in the form of SQL procedures, functions and triggers) but also in the application tier, using .NET or Java code. Depending on this choice the functionality is developed in SQL, C# or Java.**
 
-![](assets/overview/indicium_architecture.png)
+![](assets/overview/indicium_architecture.jpg)
 *Thinkwise Platform Architecture*
 
 ### Connectivity
@@ -111,12 +111,12 @@ The process of development with the SF consists of the following phases:
 
 This is presented in the figure below:
 
-![](assets/overview/development_process.png)
+![](assets/overview/development_process.jpg)
 *Development in three phases*
 
 These three phases  appear  again  in  the  user  interface  of  the  SF.  The  development  team has access to the components of these phases via the menu on the left-hand side of the screen.
 
-![](assets/overview/software_factory.png)
+![](assets/overview/software_factory.jpg)
 *Start screen of the Software Factory*
 
 ### Analysis
@@ -127,7 +127,7 @@ The business processes and requirements can be seen as a contract between the bu
 
 During the analysis phase, the function flow diagrams are designed first. The relationship between a business process and the functional entities, such as departments, are specified there. These functional entities are displayed on the horizontal strips. The function flow diagrams are often designed based on interviews with the interested parties of the project. Other elicitation methods can be applied such as analysis of the existing application, documentation, observation of end users, etc.
 
-![](assets/overview/business_process.png)
+![](assets/overview/business_process.jpg)
 *Example of a function flow diagam*
 
 #### Requirements
@@ -158,7 +158,7 @@ The following things are specified during the modeling phase:
 
 All these components form the basis for the application without it being necessary to have to program them. Only the model has to be created. This takes place based on the requirements as drawn up in the previous phase. The quality of the model is monitored with the Validator. Thinkwise provides hundreds of validation rules, but company specific validation rules can also be added.
 
-![](assets/overview/validation.png)
+![](assets/overview/validation.jpg)
 *Example validation rules*
 
 When the model is created, a demonstration can be given to the business to show at an early stage what the application will look like and how it will work. This demonstration helps build a bridge between the business and IT.
@@ -176,14 +176,14 @@ The GUI is also designed without programming. The design is flexible so that scr
 
 The GUI is multilingual and contains possibilities for integrated Business Intelligence, both pivot tables as well as graphs. In addition, graphical plans and geographic presentations are easy to integrate.
 
-![](assets/overview/screen_type.png)
+![](assets/overview/screen_type.jpg)
 *Modeling a screen type*
 
 #### Tasks
 
 Batch or interactive tasks (jobs) can be modeled, for instance, to execute a calculation or generate invoices. These tasks can be started automatically by a scheduler or manually via the GUIs. Interactive tasks can request the user for input before they start.
 
-![](assets/overview/task.png)
+![](assets/overview/task.jpg)
 *Example of a task popup*
 
 #### Reports
@@ -194,7 +194,7 @@ For the generation of reports, a connection can be made to various reporting too
 
 The Thinkwise GUIs include integrated Business Intelligence functionality for the presentation of interactive pivot tables and graphs, whereby operational management information can be made available in a simple manner. It is also possible to connect with Microsoft OLAP (SQL Server Analysis Services).
 
-![](assets/overview/bi.png)
+![](assets/overview/bi.jpg)
 *Example of integrated charts*
 
 #### Process flows
@@ -208,7 +208,7 @@ End users are automatically guided through the application with the help of proc
 
 Help text can also be defined in the SF, for each process as well as for each object. The help text can be set up fully multilingual. The GUIs are context sensitive and immediately display the relevant part of the help text.
 
-![](assets/overview/help.png)
+![](assets/overview/help.jpg)
 *Example of the help text*
 
 #### Dynamic model
@@ -248,12 +248,12 @@ A test case is linked to the templates that are then used for testing. Checks ar
 
 A test case can subsequently be executed automatically and the test results stored in the Software Factory.
 
-![](assets/overview/test_case_recorder.png)
+![](assets/overview/test_case_recorder.jpg)
 *Recording test cases via the GUI*
 
 The test results are also analyzed there.
 
-![](assets/overview/test_case_analysis.png)
+![](assets/overview/test_case_analysis.jpg)
 *Analysis of the test results*
 
 With test tooling, a test only needs to be specified once and can thereafter be executed automatically. This guarantees that existing functionality continues to work after any additions and modifications.
@@ -279,7 +279,7 @@ to work on the same application (within their own branch) without getting in eac
 
 Finally, the modifications and expansions of a branch are combined (merged) with the trunk (the production version). Conflicts can possibly occur during merging, but these are automatically detected by the Thinkwise Platform and presented to the developer.
 
-![](assets/overview/branching.png)
+![](assets/overview/branching.jpg)
 *Example of branching and merging*
 
 ## Intelligent Application Manager
@@ -289,7 +289,7 @@ Finally, the modifications and expansions of a branch are combined (merged) with
 Users get one user interface with which they can obtain access to all applications to which they
 are authorized. These applications can even be located on different servers and RDBMSs.
 
-![](assets/overview/iam.png)
+![](assets/overview/iam.jpg)
 *Start screen of the Intelligent Application Manager*
 
 The Intelligent Application Manager has the following components:
@@ -381,7 +381,7 @@ Extensive search and filter options are available using predefined filters, Exce
 The userinterface also supports drag-drop of rows and files, clipboard actions, window docking
 and multiple windows.
 
-![](assets/overview/windows.png)
+![](assets/overview/windows.jpg)
 *Example screen of the Windows GUI*
 
 #### Deployment
@@ -408,7 +408,7 @@ The web GUI does not require any browser plug-ins and supports the following bro
 
 The functionality of the Web GUI is identical to that of the Windows GUI.
 
-![](assets/overview/windows.png)
+![](assets/overview/windows.jpg)
 *Example screen of the Web GUI*
 
 ### Mobile devices
@@ -423,14 +423,14 @@ The Mobile GUI is suitable for Apple iOS and Google Android.
 
 An example of a tablet display is given below:
 
-![](assets/overview/tablet.png)
+![](assets/overview/tablet.jpg)
 *Example screen of the tablet GUI*
 
 #### Smartphone
 
 An example of a smartphone display is given below:
 
-![](assets/overview/smartphone.png)
+![](assets/overview/smartphone.jpg)
 *Example screen of the smartphone GUI*
 
 ## Appendices
@@ -462,7 +462,7 @@ The appendices consist of the following components:
 The following companies are some of our references.
 On our website you will find an extensive list of our customers.
 
-![](assets/overview/references.png)
+![](assets/overview/references.jpg)
 
 ### Productivity
 
