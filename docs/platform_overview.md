@@ -106,8 +106,8 @@ The Application Tier is developed with the .Net Core framework, making it cross 
 The process of development with the SF consists of the following phases:
 
 1. Analysis
-1. Modeling/Validating
-1. Development/Testing
+1. Modeling & Validating
+1. Development & Testing
 
 This is presented in the figure below:
 
@@ -225,7 +225,7 @@ As soon as a meta procedure is added, the aspect is automatically added and requ
 maintenance if the model is modified or extended.
 SQL must be programmed once for each meta procedure and requires knowledge of the SF database and its concepts.
 
-### Development/Testing
+### Development & Testing
 
 The last phase of the project consists of programming and testing the business logic.
 
@@ -477,28 +477,28 @@ From previous experiences, it is known how many hours on average are needed to d
 FPA is a objective method that does not require IT knowledge. With sufficient documentation,
 an FPA count for a system of 1000 development hours can be made in approximately 1 hour.
 
-| Market standards | Hours per function point |
-| ---------------- | :----------------------: |
-| Java             |           10,6           |
-| C#               |           15,5           |
-| SQL              |           10,8           |
-| ABAP             |           19,9           |
-| Other low-code   |           2.5            |
-*Market standard for each technology*
+| Programming language     | Hours per function point |
+| ------------------------ | :----------------------: |
+| Java                     |           10.6           |
+| C#                       |           15.5           |
+| SQL                      |           10.8           |
+| ABAP                     |           19.9           |
+| Other low-code platforms |           2.5            |
+*Market average for each technology*
 
 The Software Factory automatically counts the function points of an application. This point count is officially calibrated by the QSM authority. In addition, Thinkwise is a member of NESMA (Dutch Software Metrics Users Association).
 
-| Customer       | Hours per function point |Function points | Time in hours | 
-| -------------- | :----------------------: |:-------------: | :-----------: | 
-| Combifloat     |           0,25           |     5536       |     1401      | 
-| DinZ           |           0,10           |     53437      |     5312      | 
-| Foresight      |           0,10           |     8938       |      851      | 
-| Laura Metaal   |           0,14           |     15306      |     2124      | 
-| Manter         |           0,55           |     4604       |     2546      | 
-| Paul Meijering |           0,26           |     14318      |     3674      | 
-| Vacansoleil    |           0,39           |     16104      |     6243      | 
-| VDL            |           0,56           |     22563      |     12594     | 
-| WEC Lines      |           0,31           |     6730       |     2064      | 
+| Thinkwise Customer | Hours per function point | Function points | Time in hours |
+| ------------------ | :----------------------: | :-------------: | :-----------: |
+| Combifloat         |           0.25           |      5536       |     1401      |
+| DinZ               |           0.10           |      53437      |     5312      |
+| Foresight          |           0.10           |      8938       |      851      |
+| Laura Metaal       |           0.14           |      15306      |     2124      |
+| Manter             |           0.55           |      4604       |     2546      |
+| Paul Meijering     |           0.26           |      14318      |     3674      |
+| Vacansoleil        |           0.39           |      16104      |     6243      |
+| VDL                |           0.56           |      22563      |     12594     |
+| WEC Lines          |           0.31           |      6730       |     2064      |
 *Function Point measurements of Thinkwise projects*
 
 > The time spent in hours includes the design, development and test phase of the applications. The mentioned function points are based on one user interface technology only.
