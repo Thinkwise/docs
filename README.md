@@ -60,3 +60,4 @@ See the [Docusaurus documentation](https://docusaurus.io/docs/en/doc-markdown#li
 ### Preview changes
 
 To preview changes, select the _Next_ version from the versions page.
+A netlify preview is automatically created for every pull request.
