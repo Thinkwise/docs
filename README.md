@@ -45,7 +45,7 @@ Start every page with a [YAML front matter](http://assemble.io/docs/YAML-front-m
 
 ```yaml
 ---
-title: Title of the page
+title: Title of the page 
 ---
 ```
 
