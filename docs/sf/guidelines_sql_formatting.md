@@ -487,7 +487,7 @@ declare
     ,@tab_id          tab_id
 ```
 
-## IF and WHILE statements
+## IF and WHILE
 
 1. Always use `begin` and `end` in an if or while statement.
 1. Left align the `if`, `while`, `begin` and `end` keywords.
