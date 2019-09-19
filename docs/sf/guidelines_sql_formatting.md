@@ -10,20 +10,20 @@ The guidelines are structured per statement. All guidelines are clarified with a
 
 ## General guidelines
 
-- Use 4 spaces instead of tabs
-- Indent using a multiple of 4 spaces
-- Align opening and closing keywords (`begin` and `end`, `case` and `end`, etc.)
-- Align closing parantheses `)` with the keyword of the opening parantheses (`and`, `datediff`, etc.)
-- Do not use empty lines inside a statement
+- Use 4 spaces instead of tabs.
+- Indent using a multiple of 4 spaces.
+- Align opening and closing keywords (`begin` and `end`, `case` and `end`, etc.).
+- Do not use empty lines inside a single statement.
+- Place commas in front of the column names.
 
 ## SELECT
 
 1. Left align the `select`, `from`, `where`, `order by`, `having` and `group by` keywords.
-1. Place the select list under the `select` keyword and indented using 4 spaces.
-1. Place commas in front of the column names
-1. Provide an alias for all columns without a name (constants, functions, composite columns), using the `as` keyword
-1. Provide an alias for all tables, consisting of the first letter of every subname, without using the `as` keyword.
+1. Place the select list under the `select` keyword and indent using 4 spaces.
+1. Provide an alias for all columns without a name (constants, functions, composite columns), using the `as` keyword.
+1. Provide an alias for all tables, consisting of the first letter of every subname, *without* using the `as` keyword.
    If this is not sufficient, add a number or choose another meaningfull alias.
+1. Place composite or calculated columns on one line, unless the the line is too long.
 
 ### Example SELECT
 
@@ -39,10 +39,19 @@ select
 from sales_invoice si
 ```
 
+```sql
+select
+    concat(e.last_name, ' ', e.first_name) as name
+    ,e.email
+from employee e
+```
+
+> Some people prefer to provide an alias for *all* columns.
+> Be sure to left align the aliasses if you choose to do so.
+
 ## ORDER BY and GROUP BY
 
-1. The *order by* or *group by* list is placed under the `order by` or `group by` keyword and indented using 4 spaces
-1. Commas are placed in front of the column names
+1. Place the *order by* or *group by* list under the `order by` or `group by` keyword and indent using 4 spaces.
 
 ### Example ORDER BY
 
@@ -80,12 +89,12 @@ group by
 
 ## WHERE and HAVING
 
-1. Place `and` keywords in front of the condition.
 1. Right align the top level `and` keywords with the `where` or `having` keyword.
+1. Place `and` keywords in front of the condition.
 1. Place `or` keywords on a separate line, left aligned with the previous line.
 1. Always use parentheses around `or` conditions.
-1. Indent conditions inside parentheses using a multiple of 4 spaces.
-1. Align the closing parentheses with the opening parentheses.
+1. Indent conditions inside parentheses, using a multiple of 4 spaces.
+1. Left align the closing parentheses `)` with the condition (e.g. `and`) of the opening parentheses.
 1. Align comparison operators (`=`, `<`, etc.) for conditions of the same level.
 
 ### Example WHERE
@@ -128,24 +137,12 @@ having avg(h.number_of_hours) > 5
    and max(h.number_of_hours) < 12
 ```
 
-## Calculated columns
-
-1. Place calculations in column list on one line, unless the the line is too long.
-
-### Example calculated column
-
-```sql
-select
-    concat(e.last_name, ' ', e.first_name) as name
-    ,e.email
-from employee e
-```
-
 ## CASE expressions
 
-1. Align the `end` and the `case` keywords
-1. Indent the `when` and `else` expressions using 4 spaces
-1. Place the `then` expression on the same line as the `when`, unless the line is too long. Then place the `then` on the next line and indent using 4 spaces.
+1. Align the `case` and the `end` keywords.
+1. Indent the `when` and `else` expressions, using a multiple of 4 spaces.
+1. Place the `then` expression on the same line as the `when`, unless the line is too long.
+1. When the line is too long, place the `then` keyword on a new line and indent using 4 spaces.
 
 ### Example simple CASE
 
@@ -180,12 +177,12 @@ from sales_order so
 
 ## JOIN
 
-1. Prevent the use of right joins
-1. Don't use `inner` for inner joins or `outer` for left joins
-1. Left align the `join`, `left join` or `cross join` keyword
-1. Right align the `on` and `and` conditions with the `join` keyword
-1. Align comparison operators (`=`, `<`, etc.) for join conditions
-1. Place the columns of the joined table to the left of the comparison operator
+1. Prevent the use of right joins.
+1. Don't use `inner` for regular (inner) joins or `outer` for left joins.
+1. Left align the `join`, `left join` and `cross join` keywords.
+1. Right align the `on` and `and` keywords with the `join` keyword.
+1. Align comparison operators (`=`, `<`, etc.) for join conditions.
+1. Place the columns of the joined table on the left side of the comparison.
 
 ### Example JOIN
 
@@ -215,9 +212,9 @@ left join sub_project sp
 
 ## UNION
 
-1. Left align the `union` or `union all` keyword
-1. Place empty lines before and after the `union` keyword
-1. Add comments to describe the select statements
+1. Left align the `union` or `union all` keyword.
+1. Place empty lines before and after the `union` keyword.
+1. Use comments to describe the select statements.
 
 ### Example UNION ALL
 
@@ -239,11 +236,11 @@ from sales_invoice si
 where si.invoice_status = 0 --Not approved
 ```
 
-## FUNCTIONS
+## Functions
 
 1. Place function calls on a single line, unless the line is too long.
-1. Indent the parameters relative to the function name, using a multiple of 4 spaces.
-1. Left align the closing parentheses with the function name.
+1. When the line is too long, place the parameters on a new line and indent using 4 spaces
+1. Left align the closing parentheses `)` with the function name (e.g. `datediff`).
 
 ### Example FUNCTION
 
@@ -274,13 +271,13 @@ from sales_invoice si
 
 ## Subqueries
 
-1. Consider using `APPLY` instead of a subqueries to improve readability. Use `CROSS APPLY` for (inner) JOINS and `OUTER APPLY` for LEFT JOINS.
-1. Indent subqueries relative to the opening parentheses in SELECT statements or to the `APPLY` keyword, using a multiple of 4 spaces.
-1. Align the opening and closing parentheses in SELECT statements.
+1. Consider using `apply` instead of a subqueries to improve readability. Use `cross apply` for (inner) joins and `outer apply` for left joins.
+1. Indent subqueries relative to the opening parenthesis or the `apply` keyword, using a multiple of 4 spaces.
+1. Align the closing parentheses `)` with the opening parentheses `(`.
 
 ### Example subquery in SELECT
 
-> Use OUTER APPLY instead
+> 💡 Use OUTER APPLY instead
 
 ```sql
 select
@@ -309,7 +306,7 @@ outer apply (
 
 ### Example subquery in FROM
 
-> Use CROSS APPLY instead
+> 💡 Use CROSS APPLY instead
 
 ```sql
 select
@@ -371,8 +368,9 @@ where p.finished   = 0
 
 ## IN and EXISTS
 
-1. Use `IN` with constant values only and `EXISTS` with subqueries.
-1. Indent subqueries relative to the `EXISTS` keyword, using a multiple of 4 spaces.
+1. Use `in` with constant values only and `exists` with subqueries.
+1. Indent subqueries relative to the `exists` keyword, using a multiple of 4 spaces.
+1. Left align the closing parentheses `)` with the `exists` keyword.
 
 ### Example EXISTS
 
@@ -383,7 +381,7 @@ where exists (
         select 1
         from sub_project sp
         where sp.project_id = p.project_id
-    )
+      )
 ```
 
 ### Example IN
@@ -398,10 +396,9 @@ where p.status in (1, 2, 3) --new, open, closed
 
 1. Don't use the `into` keyword.
 1. Always use a column list.
+1. Place the column list under the `insert` keyword and indent using 4 spaces.
 1. Left align the closing parentheses with the `insert` keyword.
-1. Ident the column list using 4 spaces.
-1. Place commas in front of the column names.
-1. Left align the `select` or `values` part with the `insert` keyword.
+1. Left align the `select` or `values` keyword with the `insert` keyword.
 
 ### Example
 
@@ -444,10 +441,10 @@ values (
 1. Use a from-clause with joins instead of subqueries.
 1. Always use the alias of the table to update in the `update` statement.
 1. Left align the `set` keyword with the `update` keyword.
-1. Indent the column list using 4 spaces.
+1. Place the column list after the `set` keyword and indent using 4 spaces.
 1. Align the assignment operators `=` of the column list.
 
-### Example
+### Example UPDATE
 
 ```sql
 update sp
@@ -462,9 +459,9 @@ where p.finished = 1
 ## DELETE
 
 1. Use a from-clause with joins instead of subqueries.
-1. Always use the alias of the table to delete from in the `delete` statement.
+1. Always use the alias of the table in the `delete` statement.
 
-### Example
+### Example DELETE
 
 ```sql
 delete sp
@@ -476,9 +473,9 @@ where p.finished = 1
 
 ## DECLARE variables
 
-1. Place the DECLARE at the top of the code template.
-1. Place the variable list under the `declare` keyword and indented using 4 spaces.
-1. Place commas in front of the column names.
+1. Declare all variables at the top of the code template.
+1. Place the variable list under the `declare` keyword and indent using 4 spaces.
+1. Place commas in front of the variable names.
 1. Left align the data types for all variables.
 
 ### Example DECLARE
@@ -492,15 +489,16 @@ declare
 
 ## IF and WHILE statements
 
-1. Always use `BEGIN` and `END` in an IF or WHILE statement.
-1. Left align the `IF`, `WHILE`, `BEGIN` and `END` keywords.
-1. Don't use empty lines after the `BEGIN` and before the `END`. It is allowed to use empty lines between statements within `BEGIN` and `END`.
-1. Place `and` keywords in front of the condition.
+1. Always use `begin` and `end` in an if or while statement.
+1. Left align the `if`, `while`, `begin` and `end` keywords.
+1. Don't use empty lines after the `begin` and before the `end` keywords.
+1. Do use empty lines to separate statements betweend the `begin` and `end` statements.
 1. Left align top level `and` keywords with the first condition.
+1. Place `and` keywords in front of the condition.
 1. Place `or` keywords on a separate line, left aligned with the previous line.
 1. Always use parentheses around `or` conditions.
-1. Indent conditions inside parentheses using a multiple of 4 spaces.
-1. Align the closing parentheses with the opening parentheses.
+1. Indent conditions inside parentheses, using a multiple of 4 spaces.
+1. Align the closing parentheses `)` with the opening parentheses `(`.
 1. Align comparison operators (`=`, `<`, etc.) for conditions of the same level.
 
 ### Example IF
@@ -546,8 +544,8 @@ end
 
 ## Table variables and temporary tables
 
-1. Place the column list under the `select` keyword and indented using 4 spaces.
-1. Place commas in front of the column names
+1. Place the column list under the `select` keyword and indent using 4 spaces.
+1. Place commas in front of the column names.
 1. Left align the data types for all variables.
 
 ### Example temporary table
@@ -570,16 +568,13 @@ declare @project table (
 )
 ```
 
-
-
-
 ## Common table expressions (CTEs)
 
 1. Left align the `with`, `as` and `select`, `update` or `insert` keywords.
-1. Place the column list under the `with` keyword and indented using 4 spaces.
-1. Place commas in front of the column names
+1. Place the column list under the `with` keyword and indent using 4 spaces.
+1. Place commas in front of the column names.
 
-### Example
+### Example CTE
 
 ```sql
 ;with sales_invoice_vat (
@@ -604,10 +599,10 @@ left join sales_invoice_vat siv
 ## CURSOR
 
 1. Place the cursor parameters on the same line as the `declare` keyword.
-1. Left align the `declare` and `select` keywords
+1. Left align the `declare` and `select` keywords.
 1. Place all variables on the same line as the `fetch` keyword.
 
-### Example
+### Example CURSOR
 
 ```sql
 declare
@@ -642,7 +637,7 @@ deallocate countries
 1. Left align the code within the transaction.
 1. Don't name the transation unless there are nested transactions.
 
-### Example
+### Example transaction
 
 ```sql
 begin tran
@@ -673,7 +668,7 @@ commit tran
 ## TRY CATCH
 
 1. Left align the `begin try`, `end try`, `begin catch` and `end catch` keywords.
-1. Indent the code within the try and catch using 4 spaces.
+1. Indent the code within the try and catch, using a multiple of 4 spaces.
 
 ### Example TRY CATCH with transaction
 
@@ -712,11 +707,12 @@ end catch
 
 ## Procedure calls
 
-1. Place the parameters on the same line unless there are many parameters. Then place the parameters under the `exec` keyword and indented using 4 spaces.
-2. Place commas in front of the parameters.
-3. Align the `output` keywords.
+1. Place the parameters on the same line unless there are many parameters.
+1. When there are many parameters, place the parameters on a new line and indent using 4 spaces.
+1. Place commas in front of the parameters.
+1. Align the `output` keywords.
 
-### Example
+### Example procedure call
 
 ```sql
 exec task_kopieer_project @project_id
@@ -742,7 +738,7 @@ exec task_kopieer_project
 1. Don't describe what code used to do or what has changed.
 1. Don't leave commented-out code in templates.
 
-### Example
+### Example comments
 
 ```sql
 /*
