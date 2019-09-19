@@ -271,7 +271,7 @@ from sales_invoice si
 
 ## Subqueries
 
-1. Consider using `apply` instead of subqueries to improve readability. Use `cross apply` for (inner) joins and `outer apply` for left joins.
+1. Consider using `apply` instead of subqueries to improve readability. Use `cross apply` for regular (inner) joins and `outer apply` for left joins.
 1. Indent subqueries relative to the opening parenthesis or the `apply` keyword, using a multiple of 4 spaces.
 1. Align the closing parentheses `)` with the opening parentheses `(`.
 
