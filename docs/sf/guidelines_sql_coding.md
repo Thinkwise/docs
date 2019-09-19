@@ -12,7 +12,7 @@ The purpose of these guidelines is to provide Thinkwise Platform developer with 
 1. Avoid the use of `union` without `all`.
 1. Use `local static read_only forward_only` cursors.
 1. Use `begin` and `end` in IF and WHILE statements.
-1. Use `tsf_send_message` to send messages instead of `raiserror`
+1. Use `tsf_send_message` to send messages instead of `raiserror`.
 1. Only use `apply` when joining a table valued function or a subquery.
 1. Make sure every task and procedure containing a `begin tran` has corresponding `rollback tran` and `commit tran` statements.
 
