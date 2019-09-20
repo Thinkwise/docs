@@ -496,6 +496,13 @@ The Thinkwise platform will automatically generate an overview of the conditiona
 
 > Expression fields can be used to model conditional layouts based on queries, for example by checking whether a date has expired.
 
+#### Universal
+
+The Thinkwise _Universal_ user interface uses different conditional layout settings than the classic user interfaces. Instead of choosing a font, containing the font face, size, color and style, the text can be styled independently of the chosen font using separate color and style settings for light and dark themes.
+
+![](assets/sf/universal_conditional_layout.png)
+*Conditional formatting for Universal*
+
 ## Links
 
 ### Table Look-ups
