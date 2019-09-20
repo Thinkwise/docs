@@ -450,9 +450,9 @@ It is possible to indicate for each group which icon this group should be given 
 
 An enabled prefilter in an exclusive group can be locked or hidden, via settings in the model or rights. When this is the case, all other prefilters in this group will also be locked or hidden, as they cannot be activated.
 
-When multiple prefilters are enabled due to settings in the model or user preferences, the GUI will only enable the prefilter with the highest order number. When multiple enabled prefilters locked or hidden, no data will be shown.
+When multiple prefilters are enabled due to settings in the model or user preferences, the GUI will only enable the prefilter with the highest order number. When multiple enabled are prefilters locked or hidden, no data will be shown.
 
-Exclusive prefilter groups can be configured to be mandatory. The user will not be able to turn off the active prefilter. If no prefilter is enabled because of model settings, no data will be shown until a prefilter in the mandatory exclusive prefilter group is chosen.
+Exclusive prefilter groups can be configured to be mandatory. The user will not be able to turn off the active prefilter. If no prefilter is enabled because of model settings, no data will be shown until a prefilter in the mandatory exclusive prefilter group is activated.
 
 #### Default prefilter
 
