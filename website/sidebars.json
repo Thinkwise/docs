@@ -21,6 +21,7 @@
       "sf/domains",
       "sf/data_model",
       "sf/data_sensitivity",
+      "sf/data_sets",
       "sf/data_conversion",
       "sf/dynamic_model",
       "sf/guidelines_data_modeling"
@@ -49,7 +50,8 @@
       "sf/code_search",
       "sf/code_overview",
       "sf/guidelines_control_procs",
-      "sf/guidelines_sql_coding"
+      "sf/guidelines_sql_coding",
+      "sf/guidelines_sql_formatting"
     ],
     "Quality": [
       "sf/code_review",
@@ -59,7 +61,8 @@
     ],
     "Access Control": [
       "sf/roles",
-      "sf/model_rights"
+      "sf/model_rights",
+      "sf/module_authorization"
     ],
     "Deployment": [
       "sf/creation",

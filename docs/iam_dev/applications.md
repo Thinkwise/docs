@@ -8,13 +8,14 @@ An application in the Intelligent Application Manager is a combination of a proj
 
 A new application can be created via the applications screen.
 
-![1537862515112](assets/sf/1537862515112.png)
-
+![1537862515112](assets/iam_dev/application.png)
 *Create an application*
 
 The *Sequence number* determines the order in which the applications are listed in the user interfaces. An application will only show if the *Active* option is checked. Only activate an application after it has been set up completely.
 
 The *Environment* group shows for which platforms the application is available and the alias used for the Indicium OData API.
+
+The maximum number of sessions per user account can be set with the *Concurrent access* settings. This will limit the amount of users that can access the application using the same account. The claim timeout field determines the amount of minutes before a claim is automatically released when the application is not in use.
 
 ### Themes
 

@@ -19,3 +19,11 @@ If a synchronization aborted unexpectedly, the *Reset synchronization lock* task
 The *History* tab page shows a list of all previous synchronizations.
 
 ![](assets/sf/synchronization_history.png)
+
+## Modules
+
+If a project version contains any modules, a list of available modules will be shown. By checking the modules they can be included or excluded from synchronization.
+
+The *Roles* tab shows all roles and any modules they are included in. A checkmark in front of the role indicates if it will be synchronized.
+
+![](assets/sf/synchronization_modules.png)
