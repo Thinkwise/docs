@@ -150,7 +150,14 @@ This process action is named for completeness but will remain unchanged. This pr
 
 This process action returns a unique ID of the opened document as output parameter. This ensures that the new process actions for activating a document and closing a document can be correctly implemented. As soon as several documents of the same subject are open, it must be possible to activate or close a specific open document.
 
-This process action has no input parameters and returns the following output parameters.
+| Input parameters             |                                                                                                                             |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Try use an existing document | When set to Yes, the process flow will attempt to use an existing document. Documents in edit mode will not be a candidate. |
+| Open as floating document    | When set to Yes, the process flow will open a new document as floating if the GUI supports this.                           |
+
+Opening a new document can be used as a trigger for a new process flow. However, activating an existing document via the menu or otherwise will not trigger a new process flow. 
+
+Opening a new document can be modified by the process flow to try and use an existing document instead if the process action is configured to do this. Likewise, opening a non-floating document can be modified by the process flow to open as floating instead and vice-versa.
 
 | Output parameters |                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
