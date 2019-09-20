@@ -25,7 +25,7 @@ A cube is made up of cube fields that can be applied by the user. There are two 
 
 The task with which a cube can be created makes the best possible proposal, but the field definitions will still need to be verified. In any case, all ID columns that have no semantic value for the user must be removed from the cube. They then just provide the connection to the other subjects.
 
-![](assets/sf/image210.png)*Adding Cube Fields to the 'Cube Fields' tab*
+![](assets/sf/cube_fields.png)*Adding Cube Fields to the 'Cube Fields' tab*
 
 It is also important that the measured value(s) that are used in the cube are derived from the *Fact Table*. This is the data that provides the most detail.
 
