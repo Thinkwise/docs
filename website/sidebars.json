@@ -21,6 +21,7 @@
       "sf/domains",
       "sf/data_model",
       "sf/data_sensitivity",
+      "sf/data_sets",
       "sf/data_conversion",
       "sf/dynamic_model",
       "sf/guidelines_data_modeling"
