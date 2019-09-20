@@ -13,11 +13,12 @@ the Intelligent Application Manager and the various adaptive user interfaces.
 
 Applications developed within this environment are easily kept up-to-date both  technologically and functionally. The productivity of the development process amounts to 0.5 hours per func-tion point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
 
-The Thinkwise Platform consists of the three following components:
+The Thinkwise Platform consists of the following components:
 
 1. Software Factory (SF)
 1. Intelligent Application Manager (IAM)
 1. Abstract Graphical User Interfaces (GUIs)
+1. Indicium Application Tier
 
 The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The graphical user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
 
@@ -52,13 +53,13 @@ Subsequently the modernized screen in a Windows environment:
 
 ### Connectivity
 
-The Thinkwise Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to third party services and applications, like:
+The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
 
 - Artificial Intelligence services (Bots, Virtual Assistants, Machine Learning,
 Image recognition)
 - Big Data solutions (Search, Analytics, Internet of Things)
 - Office integration (Exchange, Office 365, SharePoint)
-- Third party applications (custom user interfaces, financial applications)
+- Third party applications (custom user interfaces, financial applications, Power BI)
 
 Third party applications and services in turn can connect to Thinkwise applications with minimal effort using the provided webhooks and REST API. The Thinkwise Application Tier uses the OData protocol for its API, one of the most widely used standards for RESTful web
 services.
@@ -80,7 +81,7 @@ Business Intelligence can then be applied to e-mails, appointments and tasks.
 
 #### Web services
 
-SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, it is also possible to make services available that can be called by other applications.
+SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, all data, processes and business logic of Thinkwise applications is available through web services and can be used by other applications and services.
 
 #### Maps
 
@@ -91,7 +92,7 @@ The GUIs can visualize geographic data such as locations and routes on maps from
 
 ### Security
 
-The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and SAML, Single Sign-on and multi-factor authentication.
+The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and ADFS, Single Sign-on and multi-factor authentication.
 
 The Thinkwise Intelligent Application Manager provides Role-based access control and entity-, row- and field-level authorization, while the Application Tier ensures that business rules are respected at all times, even when importing data or when interfacing with third party applications.
 
@@ -99,15 +100,21 @@ The Thinkwise Intelligent Application Manager provides Role-based access control
 
 The Thinkwise Platform is optimized for speed and scalability. The stateless Application Tier can easily be horizontally scaled for load balancing and failover purposes. This allows optimal use of the power of cloud platforms, such as Microsoft Azure, Amazon Web Services, Google Cloud or IBM Cloud.
 
-The Application Tier is developed with the .Net Core framework, making it cross platform and highly optimized for running in (Docker) containers.
+The Application Tier is developed with the .NET Core framework, making it cross platform and highly optimized for running in (Docker) containers.
 
 ## Software Factory
 
 The process of development with the SF consists of the following phases:
 
-1. Analysis
-1. Modeling & Validating
-1. Development & Testing
+1. Specification
+1. Modeling
+   1. Data
+   1. User Interface
+   1. Processes
+   1. Business Logic
+1. Quality control
+1. Access control
+1. Deployment
 
 This is presented in the figure below:
 
@@ -119,7 +126,7 @@ These three phases  appear  again  in  the  user  interface  of  the  SF.  The  
 ![](assets/overview/software_factory.jpg)
 *Start screen of the Software Factory*
 
-### Analysis
+### Specification
 
 The business processes and requirements can be seen as a contract between the business and the IT developers, with which the scope of the project is continually monitored.
 
