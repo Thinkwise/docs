@@ -1,5 +1,5 @@
 ---
-title: Business Processes
+title: Business processes
 ---
 
 Business processes can be defined in the Software Factory to gain a deeper understanding of the scope and context of the application(s) that will be built. Business processes should contain as little implementation details about the actual solution as possible.
