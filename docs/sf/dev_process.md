@@ -4,8 +4,8 @@ title: Development process
 
 The process of development with the Thinkwise Software Factory consists of the following phases, which are explained in more detail in the following pages:
 
+- [Specification](business_processes.html) - drawing up requirements and modeling the business process
 - [Projects](overview.html) - creating a project or project version
-- [Specification](process_analysis) - drawing up requirements and modeling the business process
 - [Data](data_model.html) - modeling the [domains](domains.html), [data model](data_model.html) and [data conversion](data_conversion.html)
 - [User interface](menus.html) - setting up the user interface of the application
 - [Processes](tasks.html) - features to support the processes of your business
@@ -22,6 +22,18 @@ The prototype serves as the basis for further development and adding functionali
 
 Help functionality that supports the developer with the development of a project is available within the Software Factory via the F1 key. All topics of the Software Factory are described within this functionality. As default, the help functionality opens with the component that is selected at that time.
 
+## Specification
+
+The requirements are specified during the analysis phase, using the *Business processes* screen to approach the requirements specification in a process oriented approach and/or the *Features* screen to approach the requirements using a functional approach.
+
+The requirements are used to continuously monitor the scope of the project. *Work* provides a to-do list for the modeling phase, where the *Iterations* screen can be used to plan the work. It is recommended to specify the requirements and the work within the Software Factory, even though this is not compulsory.
+
+![](assets/sf/image11_20192.png)
+*Process analysis - BPMN diagram*
+
+![](assets/sf/image10_20192.png)
+*Process analysis - Requirements*
+
 ## Projects
 
 Application development in the Software Factory is done on a project basis, with every project containing one or more project versions.
@@ -32,18 +44,6 @@ The *Overview* screen contains all projects that have been produced in the Softw
 
 ![](assets/sf/image9.png)
 *Project overview screen*
-
-## Specification
-
-The business processes and requirements are specified during the analysis phase, using the *Process analysis* screen.
-
-The requirements are used to continuously monitor the scope of the project. The *Design specifications* provide a to-do list for the modeling phase. The Software Factory automatically maintains the traceability between the requirements and the model. It is therefore strongly recommended to specify the requirements within the Software Factory, even though this is not compulsory.
-
-![](assets/sf/image10.png)
-*Process analysis - Requirements*
-
-![](assets/sf/image11.png)
-*Process analysis - BPMN diagram*
 
 ## Data
 

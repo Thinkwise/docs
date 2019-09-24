@@ -6,16 +6,19 @@
       "sf/naming",
       "sf/conventions"
     ],
+    "Specification": [
+      "sf/business_processes",
+      "sf/features",
+      "sf/iterations",
+      "sf/requirements",
+      "sf/work",
+      "sf/kanban_board"
+    ],
     "Projects": [
       "sf/overview",
       "sf/full_model",
       "sf/merging",
       "sf/difference_analysis"
-    ],
-    "Specification": [
-      "sf/process_analysis",
-      "sf/modules",
-      "sf/design"
     ],
     "Data": [
       "sf/domains",
