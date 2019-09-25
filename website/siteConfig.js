@@ -39,6 +39,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'platform_overview', label: 'Overview'},
     {doc: 'sf/sf_general', label: 'SF'},
     {doc: 'iam/iam_general', label: 'IAM'},
     {doc: 'indicium/indicium_general', label: 'Indicium'},

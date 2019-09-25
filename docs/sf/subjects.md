@@ -433,7 +433,7 @@ Prefilters are linked to a table. Prefilters can be defined in two ways.
 
 When creating a prefilter, some standard things can be defined:
 
-#### Prefilter group
+#### Prefilter groups
 
 Prefilters within a table can be grouped together to display them logically. Both the groups and the prefilters within a group can be put into a sequence. When prefilters are grouped, they can be displayed in two ways in the context menu:
 
@@ -442,9 +442,17 @@ Prefilters within a table can be grouped together to display them logically. Bot
 
 Only separators are used in the ribbon, which is also the case for the sub-menus.
 
+#### Exclusive prefilter groups
+
 It is possible to indicate for each group which icon this group should be given and whether the prefilters in this group are mutually exclusive.
 
 > A user cannot simultaneously filter on *Available* and *Not available*. If *Available* and *Not available* were both a status of one record, the user would never see any data when both prefilters were switched on.
+
+An enabled prefilter in an exclusive group can be locked or hidden, via settings in the model or rights. When this is the case, all other prefilters in this group will also be locked or hidden, as they cannot be activated.
+
+When multiple prefilters are enabled due to settings in the model or user preferences, the GUI will only enable the prefilter with the highest order number. When multiple enabled are prefilters locked or hidden, no data will be shown.
+
+Exclusive prefilter groups can be configured to be mandatory. The user will not be able to turn off the active prefilter. If no prefilter is enabled because of model settings, no data will be shown until a prefilter in the mandatory exclusive prefilter group is activated.
 
 #### Default prefilter
 
@@ -481,14 +489,27 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 ### Conditional formatting
 
-In the grid and the form, the format of a cell or a row may be affected by specified conditions. Conditional formatting refers to the font and the color of the font and background.
+In grids and forms, the font and background color of fields can be adjusted based on specific conditions using *conditional layouts*.
+You can choose to modify the background color and/or the font style and color of a specific column or, when no column is selected, the entire row.
 
-Under conditional formatting, it is indicated by how the cell or row will look if all conditions are met. You can choose to modify the background color and/or the font. The definitions then still need to be configured.
+A conditional layout contains zero or more conditions that determine when the layout is applied.
 
 ![](assets/sf/image180.png)
-*Set conditional formatting for a table in Data*
+*Set conditional layout for a table*
 
-> Expression fields can be used to model conditional formatting based on queries, for example by checking whether a date has expired.
+The Thinkwise platform will automatically generate an overview of the conditional layouts of a subject in the help text (based on the visible columns for the user) for conditional layouts that have a help text entered.
+
+![](assets/sf/conditional_formatting_help.png)
+*Conditional layouts in the help text of the Software Factory*
+
+> Expression fields can be used to model conditional layouts based on queries, for example by checking whether a date has expired.
+
+#### Universal
+
+The Thinkwise _Universal_ user interface uses different conditional layout settings than the classic user interfaces. Instead of choosing a font, containing the font face, size, color and style, the text can be styled independently of the chosen font using separate color and style settings for light and dark themes.
+
+![](assets/sf/universal_conditional_layout.png)
+*Conditional formatting for Universal*
 
 ## Links
 
