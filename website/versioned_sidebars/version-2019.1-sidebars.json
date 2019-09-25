@@ -1,0 +1,156 @@
+{
+  "version-2019.1-sf": {
+    "Software Factory": [
+      "version-2019.1-sf/sf_general",
+      "version-2019.1-sf/dev_process",
+      "version-2019.1-sf/naming",
+      "version-2019.1-sf/conventions"
+    ],
+    "Projects": [
+      "version-2019.1-sf/overview",
+      "version-2019.1-sf/full_model",
+      "version-2019.1-sf/merging",
+      "version-2019.1-sf/difference_analysis"
+    ],
+    "Specification": [
+      "version-2019.1-sf/process_analysis",
+      "version-2019.1-sf/modules",
+      "version-2019.1-sf/design"
+    ],
+    "Data": [
+      "version-2019.1-sf/domains",
+      "version-2019.1-sf/data_model",
+      "version-2019.1-sf/data_sensitivity",
+      "version-2019.1-sf/data_conversion",
+      "version-2019.1-sf/dynamic_model",
+      "version-2019.1-sf/guidelines_data_modeling"
+    ],
+    "User Interface": [
+      "version-2019.1-sf/menus",
+      "version-2019.1-sf/screen_types",
+      "version-2019.1-sf/subjects",
+      "version-2019.1-sf/variants",
+      "version-2019.1-sf/cubes",
+      "version-2019.1-sf/themes",
+      "version-2019.1-sf/messages",
+      "version-2019.1-sf/translations",
+      "version-2019.1-sf/help"
+    ],
+    "Processes": [
+      "version-2019.1-sf/tasks",
+      "version-2019.1-sf/reports",
+      "version-2019.1-sf/custom_screens",
+      "version-2019.1-sf/process_flows",
+      "version-2019.1-sf/subroutines"
+    ],
+    "Business Logic": [
+      "version-2019.1-sf/business_logic",
+      "version-2019.1-sf/functionality",
+      "version-2019.1-sf/code_search",
+      "version-2019.1-sf/code_overview",
+      "version-2019.1-sf/guidelines_control_procs",
+      "version-2019.1-sf/guidelines_sql_coding",
+      "version-2019.1-sf/guidelines_sql_formatting"
+    ],
+    "Quality": [
+      "version-2019.1-sf/code_review",
+      "version-2019.1-sf/unit_test",
+      "version-2019.1-sf/test_cases",
+      "version-2019.1-sf/validation"
+    ],
+    "Access Control": [
+      "version-2019.1-sf/roles",
+      "version-2019.1-sf/model_rights"
+    ],
+    "Deployment": [
+      "version-2019.1-sf/creation",
+      "version-2019.1-sf/runtime_configuration",
+      "version-2019.1-sf/synchronization",
+      "version-2019.1-sf/deployment_package",
+      "version-2019.1-sf/configuration_file",
+      "version-2019.1-sf/extended_properties",
+      "version-2019.1-sf/developer_mode"
+    ],
+    "Analysis": [
+      "version-2019.1-sf/analysis",
+      "version-2019.1-sf/function_points"
+    ],
+    "Miscellaneous": [
+      {
+        "type": "subcategory",
+        "label": "Extenders",
+        "ids": [
+          "version-2019.1-sf/extenders",
+          "version-2019.1-sf/resource_scheduler",
+          "version-2019.1-sf/maps"
+        ]
+      },
+      "version-2019.1-sf/settings",
+      "version-2019.1-sf/advanced"
+    ]
+  },
+  "version-2019.1-iam": {
+    "Intelligent Application Manager": [
+      "version-2019.1-iam/iam_general",
+      "version-2019.1-iam/administrators",
+      "version-2019.1-iam/user_simulation"
+    ],
+    "Administrator's guide": [
+      "version-2019.1-iam_dev/projects",
+      "version-2019.1-iam_dev/applications"
+    ],
+    "Manager's guide": [
+      "version-2019.1-iam_admin/admin_applications",
+      "version-2019.1-iam_admin/user_groups",
+      "version-2019.1-iam_admin/group_preferences",
+      "version-2019.1-iam_admin/users"
+    ]
+  },
+  "version-2019.1-indicium": {
+    "Indicium": [
+      "version-2019.1-indicium/indicium_general",
+      "version-2019.1-indicium/installation",
+      "version-2019.1-indicium/api",
+      "version-2019.1-indicium/fileapi"
+    ]
+  },
+  "version-2019.1-deployment": {
+    "Deployment": [
+      "version-2019.1-deployment/deployment_general",
+      "version-2019.1-deployment/system_requirements",
+      "version-2019.1-deployment/installation",
+      "version-2019.1-deployment/windows_gui",
+      "version-2019.1-deployment/web_gui",
+      "version-2019.1-deployment/indicium",
+      "version-2019.1-deployment/mobile_gui",
+      "version-2019.1-deployment/iis",
+      "version-2019.1-deployment/reporting",
+      "version-2019.1-deployment/db2",
+      "version-2019.1-deployment/encryption",
+      "version-2019.1-deployment/adfs",
+      "version-2019.1-deployment/integrated_security",
+      "version-2019.1-deployment/deployer"
+    ]
+  },
+  "version-2019.1-kb": {
+    "Knowledge base": [
+      "version-2019.1-kb/kb_general",
+      "version-2019.1-kb/universal_alpha",
+      "version-2019.1-kb/deep_links",
+      "version-2019.1-kb/exchange",
+      "version-2019.1-kb/objectmodel_extender_template",
+      "version-2019.1-kb/file_storage",
+      "version-2019.1-kb/icons",
+      "version-2019.1-kb/iis_admin_api",
+      "version-2019.1-kb/lifecycle_policy",
+      "version-2019.1-kb/maps",
+      "version-2019.1-kb/olap",
+      "version-2019.1-kb/performance",
+      "version-2019.1-kb/report_mailer",
+      "version-2019.1-kb/report_service",
+      "version-2019.1-kb/screenshots",
+      "version-2019.1-kb/tags",
+      "version-2019.1-kb/username"
+    ]
+  }
+}

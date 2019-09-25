@@ -6,21 +6,25 @@
       "sf/naming",
       "sf/conventions"
     ],
+    "Specification": [
+      "sf/business_processes",
+      "sf/features",
+      "sf/iterations",
+      "sf/requirements",
+      "sf/work",
+      "sf/kanban_board"
+    ],
     "Projects": [
       "sf/overview",
       "sf/full_model",
       "sf/merging",
       "sf/difference_analysis"
     ],
-    "Specification": [
-      "sf/process_analysis",
-      "sf/modules",
-      "sf/design"
-    ],
     "Data": [
       "sf/domains",
       "sf/data_model",
       "sf/data_sensitivity",
+      "sf/data_sets",
       "sf/data_conversion",
       "sf/dynamic_model",
       "sf/guidelines_data_modeling"
@@ -60,7 +64,8 @@
     ],
     "Access Control": [
       "sf/roles",
-      "sf/model_rights"
+      "sf/model_rights",
+      "sf/module_authorization"
     ],
     "Deployment": [
       "sf/creation",
