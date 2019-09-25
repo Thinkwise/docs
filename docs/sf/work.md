@@ -25,6 +25,8 @@ The values for work status can be configured freely in the *Advanced menu* under
 
 Additionally, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items linked to a requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
 
+It's also possible to define a status as 'inactive'. When a work item has an 'inactive' status it should indicate no more work is being performed on this work item. By default, inactive work items will not be shown in the business process, feature and iteration overviews or in the impact analysis tabs.
+
 > One default status is required and can be set using the ![](assets/sf/icons8-tick-box.svg)*Set as default status* task.
 
 A work status can be configured to correspond to a certain lane in the [kanban board](kanban_board) by specifying the *Kanban sequence no*. When left empty, work with this status will not show up in the kanban board.
