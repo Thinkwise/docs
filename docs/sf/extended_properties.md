@@ -8,7 +8,7 @@ The parameters below can be used as extended properties in the Software Factory 
 Some extended properties work for each application, other properties will influence the total GUI.
 A few properties only work when set in the global settings, they need to be loaded before the GUI is shown. These properties are marked as global exclusive.
 
-Application specific parameters can also be specified in the global configuration and will then be used all applications.
+Application specific parameters can also be specified in the global configuration and will then be used by all applications.
 
 
 | Parameter                                           | Description                                                  | Options                                                      | Scope                                                        |
