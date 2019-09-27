@@ -550,6 +550,17 @@ end
 1. Place commas in front of the column names.
 1. Left align the data types for all variables.
 
+### Example table variable
+
+> For table variables, use [domains](domains) as much as possible.
+
+```sql
+declare @project table (
+    project_id   project_id
+    ,description description
+)
+```
+
 ### Example temporary table
 
 ```sql
@@ -559,15 +570,6 @@ create table #project (
 )
 
 drop table #project
-```
-
-### Example table variable
-
-```sql
-declare @project table (
-    project_id   int
-    ,description varchar(200)
-)
 ```
 
 ## Common table expressions (CTEs)
@@ -736,7 +738,6 @@ exec task_kopieer_project
 1. Use `--` for single line comments and `/* ... */` for multiline comments.
    > To quickly comment or uncomment a block of code for debugging purposes, select the code and use your editors' shortcut.  
    > For SQL Server Management Studio and Azure Data Studio, this is `Ctrl+K,C` and `Ctrl+K,U`.
-1. Only add comments for non-trivial statements.
 1. Don't describe what code used to do or what has changed.
 1. Don't leave commented-out code in templates.
 
