@@ -492,7 +492,7 @@ declare
 1. Always use `begin` and `end` in an if or while statement.
 1. Left align the `if`, `while`, `begin` and `end` keywords.
 1. Don't use empty lines after the `begin` and before the `end` keywords.
-1. Do use empty lines to separate statements betweend the `begin` and `end` statements.
+1. **Do** use empty lines to separate statements within `begin` and `end` blocks.
 1. Left align top level `and` keywords with the first condition.
 1. Place `and` keywords in front of the condition.
 1. Place `or` keywords on a separate line, left aligned with the previous line.
@@ -513,6 +513,8 @@ if @project_id         = 1
    )
 begin
     set @project_vrs_id = 'DBA'
+    
+    set @project_status = 6
 end
 ```
 
