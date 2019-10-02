@@ -492,7 +492,7 @@ declare
 1. Always use `begin` and `end` in an if or while statement.
 1. Left align the `if`, `while`, `begin` and `end` keywords.
 1. Don't use empty lines after the `begin` and before the `end` keywords.
-1. Do use empty lines to separate statements betweend the `begin` and `end` statements.
+1. **Do** use empty lines to separate statements within `begin` and `end` blocks.
 1. Left align top level `and` keywords with the first condition.
 1. Place `and` keywords in front of the condition.
 1. Place `or` keywords on a separate line, left aligned with the previous line.
@@ -513,6 +513,8 @@ if @project_id         = 1
    )
 begin
     set @project_vrs_id = 'DBA'
+    
+    set @project_status = 6
 end
 ```
 
@@ -548,6 +550,17 @@ end
 1. Place commas in front of the column names.
 1. Left align the data types for all variables.
 
+### Example table variable
+
+> For table variables, use [domains](domains) as much as possible.
+
+```sql
+declare @project table (
+    project_id   project_id
+    ,description description
+)
+```
+
 ### Example temporary table
 
 ```sql
@@ -557,15 +570,6 @@ create table #project (
 )
 
 drop table #project
-```
-
-### Example table variable
-
-```sql
-declare @project table (
-    project_id   int
-    ,description varchar(200)
-)
 ```
 
 ## Common table expressions (CTEs)
@@ -734,7 +738,6 @@ exec task_kopieer_project
 1. Use `--` for single line comments and `/* ... */` for multiline comments.
    > To quickly comment or uncomment a block of code for debugging purposes, select the code and use your editors' shortcut.  
    > For SQL Server Management Studio and Azure Data Studio, this is `Ctrl+K,C` and `Ctrl+K,U`.
-1. Only add comments for non-trivial statements.
 1. Don't describe what code used to do or what has changed.
 1. Don't leave commented-out code in templates.
 
