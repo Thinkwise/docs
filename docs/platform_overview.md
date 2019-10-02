@@ -154,6 +154,9 @@ These functional entities are displayed on the horizontal strips. The function f
 The user and system requirements are subsequently specified for each process. Using the integrated stakeholder portal,
 stakeholders can review and comment on flow diagrams and requirements before accepting.
 
+![](assets/overview/requirement.png)
+*Example of a requirement*
+
 ### Features and iterations
 
 Requirements and work items can be organized using features and iterations. Features can help categorize the work more
@@ -166,22 +169,36 @@ Features and iterations can be configured completely to your wishes, for example
 Development teams can leverage work items to describe, plan and keep track of development activities.
 A work item describes what changes to a model or business logic need to be done. The kanban board allows developers to keep track of and update the status of their work.
 
-![](assets/sf/forbidden_word.png)
+![](assets/overview/kanban.png)
+*Work on the kanban board*
 
 ### Modeling & Validation
 
-The following things are specified during the modeling phase:
+During the modeling phase, the following models are specified:
 
-- Data model
+- Data
+  - Data model
+  - Dynamic model
 - User interface
-- Tasks
-- Reports
-- Business Intelligence
-- Process flows
-- Help
-- Dynamic model
+  - Menus
+  - Screen types
+  - Subjects
+  - Cubes (Business Intelligence)
+  - Themes
+  - Messages
+  - Translations
+  - Icons
+  - Help
+- Processes
+  - Process flows
+  - Tasks
+  - Reports
+  - Custom screens
 
-All these components form the basis for the application without it being necessary to have to program them. Only the model has to be created. This takes place based on the requirements as drawn up in the previous phase. The quality of the model is monitored with the Validator. Thinkwise provides hundreds of validation rules, but company specific validation rules can also be added.
+All these components form the basis for the application without it being necessary to have to program them. Only the model has to be created.
+This takes place based on the requirements and work as drawn up in the previous phase.
+
+The quality of the model is monitored with the Validator. Thinkwise provides hundreds of validation rules, but company specific validation rules can also be added.
 
 ![](assets/overview/validation.jpg)
 *Example validation rules*
@@ -256,22 +273,25 @@ The last phase of the project consists of programming and testing the business l
 
 #### Development
 
-Code templates are written according to the design specifications. This is the only component that is actually programmed. Templates are woven into the correct position in the business logic layer based on the definitions in the model.
+Code templates are written according to the design specifications. This is the only component that is actually programmed.
+Templates are woven into the correct position in the business logic layer, based on the definitions in the model.
 
 ![](assets/overview/logic_concepts.jpg)
 *Architecture of the programmed business logic*
 
 #### Testing
 
-The programmed templates can be tested automatically with test cases that are stored in the Software Factory. A test case can be created in three ways:
+The programmed templates can be tested automatically with unit tests and process tests, that are stored in the Software Factory.
+
+Unit tests can be used to test individual business rules. Any data that is required for a unit test (mock data) can be specified as part of the unit test.
+
+Process tests are used to test processes in the context of a user. Process tests can be created in three ways:
 
 1. Recorded via the GUI.
-2. Input via the Software Factory.
+2. Modelled via the Software Factory.
 3. Automatically derived from the existing model.
 
-A test case is linked to the templates that are then used for testing. Checks are included in a test case to examine whether the templates work correctly. It can also be easily checked whether each template appears in at least one test case.
-
-A test case can subsequently be executed automatically and the test results stored in the Software Factory.
+Process tests are executed by the GUI and the test results stored in the Software Factory.
 
 ![](assets/overview/test_case_recorder.jpg)
 *Recording test cases via the GUI*
@@ -281,13 +301,13 @@ The test results are also analyzed there.
 ![](assets/overview/test_case_analysis.jpg)
 *Analysis of the test results*
 
-With test tooling, a test only needs to be specified once and can thereafter be executed automatically. This guarantees that existing functionality continues to work after any additions and modifications.
-
-Naturally, these additions and modifications need to be included in the test cases.
+With the integrated test tooling, a test only needs to be specified once and can thereafter be executed automatically.
+This guarantees that existing functionality continues to work after any additions and modifications.
 
 ### Support
 
-Along with the development tools, Thinkwise also offers tools to analyze the model and convert it to an actual application. These tools can be found under the menus *System Administration*, *Deployment* and *Management*”.
+Along with the development tools, Thinkwise also offers tools to analyze the model and convert it to an actual application.
+These tools can be found under the *Projects*, *Deployment* and *Analysis* menus.
 
 #### Version control
 
@@ -302,7 +322,8 @@ Usually a DTAP street is used during development. DTAP stands for the Developmen
 A model for an application can be split into one or more branches. This allows different teams
 to work on the same application (within their own branch) without getting in each other’s way.
 
-Finally, the modifications and expansions of a branch are combined (merged) with the trunk (the production version). Conflicts can possibly occur during merging, but these are automatically detected by the Thinkwise Platform and presented to the developer.
+Finally, the modifications and expansions of a branch are combined (merged) with the trunk (the production version).
+Conflicts can possibly occur during merging, but these are automatically detected by the Thinkwise Platform and presented to the developer.
 
 ![](assets/overview/branching.jpg)
 *Example of branching and merging*
@@ -323,9 +344,9 @@ The Intelligent Application Manager has the following components:
 
 To include a new or existing project version as an application in the IAM, it is necessary to synchronize it with the SF. This means that the blueprint is copied from the SF to the IAM. As soon as this has taken place, the authorization for this application can be set up via the IAM.
 
-### Authorization 
+### Authorization
 
-Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that rights automatically expire after a period of time (for example with temporary contracts).
+Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts).
 
 Authorization can be defined down to field level and on cross-sections of data.
 
@@ -353,9 +374,10 @@ Through analysis of the user’s method of working, the user preferences for the
 >
 > The analysis can also be reason to provide the user with additional training.
 
-### Simulation for the help desk
+### Simulation to provide support
 
-Because the GUIs can differ for each user through authorization and user preferences, the help desk can look at the application based on the blueprint of a specific user. The help desk employee then sees the same GUI, data and user preferences, and can provide better support to the user.
+Because the GUIs can differ for each user through authorization and user preferences, support employees can start an application using the settings and authorization of a specific user.
+This way, the support employee can simulate the exact same The support desk employee then sees the same GUI and user preferences, and can provide better support to the user.
 
 ### Logging
 
@@ -368,20 +390,17 @@ All changes regarding authorization are logged automatically. This logging helps
 The GUI does not have to be programmed. It is completely built up during runtime on the basis of:
 
 1. Model
-  - contains the definition of the GUI.
-  - is defined in the SF and synchronized with IAM.
-
+   - contains the definition of the GUI.
+   - is defined in the SF and synchronized with IAM.
 2. Authorization
-  - omits everything for which a user is not authorized.
-  - is defined in the IAM.
-
-3. Lay-out
-  - consists of color scheme, logos, etc. and can, for instance, differ for users of a customer in a customer portal.
-  - is defined in the SF and selected in the IAM.
-
+   - omits everything for which a user is not authorized.
+   - is defined in the IAM.
+3. Theme
+   - consists of color scheme, logos, etc. and can, for instance, differ for users of a customer in a customer portal.
+   - is defined in the SF and selected in the IAM.
 4. User preferences
-  - provide an individual display of the things that a user is authorized for.
-  - is provided from the GUI and recorded in the IAM.
+   - provide an individual display of the things that a user is authorized for.
+   - is provided from the GUI and recorded in the IAM.
 
 The GUIs are fully multilingual and communicate with the same business logic layer.
 
@@ -468,19 +487,19 @@ The appendices consist of the following components:
 
 ### Factsheet
 
-| Group      | Property        | Values                    |
-| ---------------- | ---------------------- | -------------------------------------------- |
-| **Technology**  | RDBMS         | SQL server, Oracle, DB2           |
-|         | Business rules     | SQL, C#, Java, Javascript  (offline mobile) |
-|         | Modernized       | RPG, Cobol, Foxpro, Access,  Excel, VB6,  |
-| **Productivity** | ERP          | < 1.0 hour per function  point       |
-|         | Peripheral application | < 0.5 hour per function  point       |
-| **Connectivity** | Financial       | SAP, Exact, Navision, Muis,  AFAS, Davilex |
-|         | Email         | Exchange                   |
-|         | BPM          | BizzDesign                  |
-|         | Workflow        | Bonita                    |
-|         | Requirements      | CogNIAM                   |
-|         | Other         | Via web services               |
+| Group            | Property               | Values                                      |
+| ---------------- | ---------------------- | ------------------------------------------- |
+| **Technology**   | RDBMS                  | SQL server, Oracle, DB2                     |
+|                  | Business rules         | SQL, C#, Java, Javascript  (offline mobile) |
+|                  | Modernized             | RPG, Cobol, Foxpro, Access,  Excel, VB6,    |
+| **Productivity** | ERP                    | < 1.0 hour per function  point              |
+|                  | Peripheral application | < 0.5 hour per function  point              |
+| **Connectivity** | Financial              | SAP, Exact, Navision, Muis,  AFAS, Davilex  |
+|                  | Email                  | Exchange                                    |
+|                  | BPM                    | BizzDesign                                  |
+|                  | Workflow               | Bonita                                      |
+|                  | Requirements           | CogNIAM                                     |
+|                  | Other                  | Via web services                            |
 
 ### References
 
@@ -502,28 +521,28 @@ From previous experiences, it is known how many hours on average are needed to d
 FPA is a objective method that does not require IT knowledge. With sufficient documentation,
 an FPA count for a system of 1000 development hours can be made in approximately 1 hour.
 
-| Programming language   | Hours per function point |
+| Programming language     | Hours per function point |
 | ------------------------ | :----------------------: |
-| Java           |      10.6      |
-| C#            |      15.5      |
-| SQL           |      10.8      |
-| ABAP           |      19.9      |
-| Other low-code platforms |      2.5      |
+| Java                     |           10.6           |
+| C#                       |           15.5           |
+| SQL                      |           10.8           |
+| ABAP                     |           19.9           |
+| Other low-code platforms |           2.5            |
 *Market average for each technology*
 
 The Software Factory automatically counts the function points of an application. This point count is officially calibrated by the QSM authority. In addition, Thinkwise is a member of NESMA (Dutch Software Metrics Users Association).
 
 | Thinkwise Customer | Hours per function point | Function points | Time in hours |
 | ------------------ | :----------------------: | :-------------: | :-----------: |
-| Combifloat     |      0.25      |   5536    |   1401   |
-| DinZ        |      0.10      |   53437   |   5312   |
-| Foresight     |      0.10      |   8938    |   851   |
-| Laura Metaal    |      0.14      |   15306   |   2124   |
-| Manter       |      0.55      |   4604    |   2546   |
-| Paul Meijering   |      0.26      |   14318   |   3674   |
-| Vacansoleil    |      0.39      |   16104   |   6243   |
-| VDL        |      0.56      |   22563   |   12594   |
-| WEC Lines     |      0.31      |   6730    |   2064   |
+| Combifloat         |           0.25           |      5536       |     1401      |
+| DinZ               |           0.10           |      53437      |     5312      |
+| Foresight          |           0.10           |      8938       |      851      |
+| Laura Metaal       |           0.14           |      15306      |     2124      |
+| Manter             |           0.55           |      4604       |     2546      |
+| Paul Meijering     |           0.26           |      14318      |     3674      |
+| Vacansoleil        |           0.39           |      16104      |     6243      |
+| VDL                |           0.56           |      22563      |     12594     |
+| WEC Lines          |           0.31           |      6730       |     2064      |
 *Function Point measurements of Thinkwise projects*
 
 > The time spent in hours includes the design, development and test phase of the applications. The mentioned function points are based on one user interface technology only.
