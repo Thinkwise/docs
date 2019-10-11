@@ -64,7 +64,7 @@ A login screen will be shown where the URL to access Indicium can be configured.
 ![](assets/Universal-alpha-login.png)
 *Login screen of Universal*
 
-A modern browser is required to access Universal. A recent version of Chrome, Firefox or Safari mobile is required. Using Universal with IE is not supported. Edge is temporarily not supported as they are switching to a new Javascript engine.
+A modern browser is required to access Universal. A recent version of Chrome, Firefox or Safari mobile is required. Using Universal with IE is not supported. Edge is temporarily not supported as they are switching to a new JavaScript engine.
 
 > The application can be installed as a progressive web app (PWA) to run stand-alone on your desktop or mobile device. 
 > This is done through the browser, please check the instructions for installing PWA's for your browser, e.g. [Chrome](https://www.howtogeek.com/fyi/how-to-install-progressive-web-apps-pwas-in-chrome/), or device.
