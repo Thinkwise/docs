@@ -142,7 +142,7 @@ To enable SMS two-factor authentication, just add the following template to the 
   }
 }
 ```
-> Currently we only support Twilio to communicate as SMS provider. We will support more providers soon.
+> Currently we only support [Twilio](https://www.twilio.com/sms) to communicate as SMS provider. We will support more providers soon.
 
 ## Enable Cross-Origin Resource Sharing (CORS)
 
