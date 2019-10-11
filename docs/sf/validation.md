@@ -17,7 +17,8 @@ Validations may be conducted at various levels by means of the following tasks:
 - Execute validation group - executes all validations of the selected validation group
 - Execute selected validation - executes the selected validation
 - Approve validation message - approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
-- Undo approval 
+- Approve validation message temporarily - approve a validation message until a new project version is created. Alternatively, when working in a branch, the option to approve the validation message until the branch has been merged will be available.
+- Undo approval
 
 ### Status
 
@@ -36,7 +37,7 @@ After execution, an icon indicates the status of each validation:
 Prefilters are provided to filter the validation messages:
 
 - Hide approved messages - hides approved messages, default on
-- Info, warning and error - only shows messages at the *information* level and higher 
+- Info, warning and error - only shows messages at the *information* level and higher
 - Warning and error - only shows messages at the *warning* level and higher
 - Error - only shows *error* messages
 - New in this version - only shows messages that are new in this project version. For this filter to work, the previous project version must be validated.
