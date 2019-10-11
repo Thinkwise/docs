@@ -167,7 +167,7 @@ Features and iterations can be configured completely to your wishes, for example
 ### Work and kanban board
 
 Development teams can leverage work items to describe, plan and keep track of development activities.
-A work item describes what changes to a model or business logic need to be done. The kanban board allows developers to keep track of and update the status of their work.
+A work item describes what changes to a model or business logic need to be done. The kanban board allows developers to keep track of, and update the status of, their work.
 
 ![](assets/overview/kanban.png)
 *Work on the kanban board*
@@ -179,7 +179,7 @@ During the modeling phase, the following models are specified:
 - Data
   - Data model
   - Dynamic model
-- User interface
+- User Interface
   - Menus
   - Screen types
   - Subjects
@@ -212,7 +212,7 @@ The database of the application is designed using the data model which is presen
 ![](assets/overview/datamodel.jpg)
 *Example of a graphical data model in the Software Factory*
 
-#### User interface
+#### User Interface
 
 The GUI is also designed without programming. The design is flexible so that screens automatically adjust themselves to the various resolutions. By linking (self-designed) screen types to the subjects of your model, a GUI can quickly be developed for hundreds of objects.
 
@@ -291,7 +291,7 @@ Process tests are used to test processes in the context of a user. Process tests
 2. Modelled via the Software Factory.
 3. Automatically derived from the existing model.
 
-Process tests are executed by the GUI and the test results stored in the Software Factory.
+Process tests are executed by the GUI and the test results are stored in the Software Factory.
 
 ![](assets/overview/test_case_recorder.jpg)
 *Recording test cases via the GUI*
@@ -377,7 +377,7 @@ Through analysis of the user’s method of working, the user preferences for the
 ### Simulation to provide support
 
 Because the GUIs can differ for each user through authorization and user preferences, support employees can start an application using the settings and authorization of a specific user.
-This way, the support employee can simulate the exact same The support desk employee then sees the same GUI and user preferences, and can provide better support to the user.
+This way, the support desk employee sees the same GUI and user preferences, and can provide better support to the user.
 
 ### Logging
 
