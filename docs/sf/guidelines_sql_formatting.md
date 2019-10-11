@@ -22,7 +22,7 @@ The guidelines are structured per statement. All guidelines are clarified with a
 1. Place the select list under the `select` keyword and indent using 4 spaces.
 1. Provide an alias for all columns without a name (constants, functions, composite columns), using the `as` keyword.
 1. Provide an alias for all tables, consisting of the first letter of every subname, *without* using the `as` keyword.
-   If this is not sufficient, add a number or choose another meaningfull alias.
+   If this is not sufficient, add a number or choose another meaningful alias.
 1. Place composite or calculated columns on one line, unless the the line is too long.
 
 ### Example SELECT
@@ -47,7 +47,7 @@ from employee e
 ```
 
 > Some people prefer to provide an alias for *all* columns.
-> Be sure to left align the aliasses if you choose to do so.
+> Be sure to left align the aliases if you choose to do so.
 
 ## ORDER BY and GROUP BY
 
@@ -492,7 +492,7 @@ declare
 1. Always use `begin` and `end` in an if or while statement.
 1. Left align the `if`, `while`, `begin` and `end` keywords.
 1. Don't use empty lines after the `begin` and before the `end` keywords.
-1. Do use empty lines to separate statements betweend the `begin` and `end` statements.
+1. **Do** use empty lines to separate statements within `begin` and `end` blocks.
 1. Left align top level `and` keywords with the first condition.
 1. Place `and` keywords in front of the condition.
 1. Place `or` keywords on a separate line, left aligned with the previous line.
@@ -513,6 +513,8 @@ if @project_id         = 1
    )
 begin
     set @project_vrs_id = 'DBA'
+    
+    set @project_status = 6
 end
 ```
 
@@ -548,6 +550,17 @@ end
 1. Place commas in front of the column names.
 1. Left align the data types for all variables.
 
+### Example table variable
+
+> For table variables, use [domains](domains) as much as possible.
+
+```sql
+declare @project table (
+    project_id   project_id
+    ,description description
+)
+```
+
 ### Example temporary table
 
 ```sql
@@ -557,15 +570,6 @@ create table #project (
 )
 
 drop table #project
-```
-
-### Example table variable
-
-```sql
-declare @project table (
-    project_id   int
-    ,description varchar(200)
-)
 ```
 
 ## Common table expressions (CTEs)
@@ -635,7 +639,7 @@ deallocate countries
 
 1. Left align the `begin tran`, `commit tran` and `rollback tran` keywords.
 1. Left align the code within the transaction.
-1. Don't name the transation unless there are nested transactions.
+1. Don't name the transaction unless there are nested transactions.
 
 ### Example transaction
 
@@ -734,7 +738,6 @@ exec task_kopieer_project
 1. Use `--` for single line comments and `/* ... */` for multiline comments.
    > To quickly comment or uncomment a block of code for debugging purposes, select the code and use your editors' shortcut.  
    > For SQL Server Management Studio and Azure Data Studio, this is `Ctrl+K,C` and `Ctrl+K,U`.
-1. Only add comments for non-trivial statements.
 1. Don't describe what code used to do or what has changed.
 1. Don't leave commented-out code in templates.
 
