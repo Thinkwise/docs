@@ -52,7 +52,7 @@ When a new screen type is created, it can be designed on the *Design* tab. This 
 
 During the design of a screen type, various abstract components are available which can be dragged onto the work sheet.
 
-|                       Icon                       |   Component    | Explanatio                                                   |
+|                       Icon                       |   Component    | Explanation                                                  |
 | :----------------------------------------------: | :------------: | :----------------------------------------------------------- |
 | ![1538569785356](assets/sf/1538569785356.png) | Tab container  | The tab container ensures that several tabs can be used under which the details or other components can be classified. Empty tabs are removed by the user interface. |
 | ![1538569788467](assets/sf/1538569788467.png) |      Grid      | The data are displayed under each other in the grid and can be selected. The user interface will remove the grid if there can only be at most one line. |
@@ -131,7 +131,7 @@ These properties can both be set to false to hide their respective properties.
 
 When the screen is developed according to your wishes, it is possible to display a preview of the screen in the Software Factory.
 
-First, connect to an end product by clicking the *Connect* ![1538570361509](assets/sf/1538570361509.png) button. Then select the table which it needs to be connected to and click the *Preview* ![1538570462066](assets/sf/1538570462066.png) button. A new document will open inside the Software Factory developent environment, showing the screen type applied to the selected subject.
+First, connect to an end product by clicking the *Connect* ![1538570361509](assets/sf/1538570361509.png) button. Then select the table which it needs to be connected to and click the *Preview* ![1538570462066](assets/sf/1538570462066.png) button. A new document will open inside the Software Factory development environment, showing the screen type applied to the selected subject.
 
 ![](assets/sf/image144.png)
 

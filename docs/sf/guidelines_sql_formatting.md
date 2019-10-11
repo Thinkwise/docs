@@ -22,7 +22,7 @@ The guidelines are structured per statement. All guidelines are clarified with a
 1. Place the select list under the `select` keyword and indent using 4 spaces.
 1. Provide an alias for all columns without a name (constants, functions, composite columns), using the `as` keyword.
 1. Provide an alias for all tables, consisting of the first letter of every subname, *without* using the `as` keyword.
-   If this is not sufficient, add a number or choose another meaningfull alias.
+   If this is not sufficient, add a number or choose another meaningful alias.
 1. Place composite or calculated columns on one line, unless the the line is too long.
 
 ### Example SELECT
@@ -47,7 +47,7 @@ from employee e
 ```
 
 > Some people prefer to provide an alias for *all* columns.
-> Be sure to left align the aliasses if you choose to do so.
+> Be sure to left align the aliases if you choose to do so.
 
 ## ORDER BY and GROUP BY
 
@@ -639,7 +639,7 @@ deallocate countries
 
 1. Left align the `begin tran`, `commit tran` and `rollback tran` keywords.
 1. Left align the code within the transaction.
-1. Don't name the transation unless there are nested transactions.
+1. Don't name the transaction unless there are nested transactions.
 
 ### Example transaction
 
