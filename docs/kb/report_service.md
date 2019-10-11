@@ -74,7 +74,7 @@ The returned table must adhere to the following structure:
 > To maintain backwards compatibility with implementations for earlier versions of the service, some of these columns are considered optional.
 > Failing to return values for these optional columns will trigger the service to log a warning stating which value it substituted the missing value with.
 
-Column name | DataType | Description | Introduced in version | Backwards compatibillity value
+Column name | DataType | Description | Introduced in version | Backwards compatibility value
 ---|---|---|---|---
 ID | nvarchar | Should contain a unique id for a report.<br/><br/>**Note:** The column names are case sensitive so use **ID** and not **id**. | | |
 report_file_spec | nvarchar | The path where the report file is located on disk. For SSRS server reports this should specify the relative url to the report on the report server. | | |
