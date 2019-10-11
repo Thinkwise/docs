@@ -217,7 +217,7 @@ A choice can be made from the following properties within Windows:
 | Paper tray name    | The paper tray name to use.                                                                                                                                                                                          | String   |
 | Number of copies   | The number of copies to be printed.                                                                                                                                                                                  | Integer  |
 | Export location    | The location where the exported file is saved.                                                                                                                                                                       | String   |
-| Compress           | Indictes whether the exported file has to be compressed or not.                                                                                                                                                      | Boolean  |
+| Compress           | Indicates whether the exported file has to be compressed or not.                                                                                                                                                     | Boolean  |
 | Open after export  | Indicates whether the file has to be opened after export.                                                                                                                                                            | Boolean  |
 
 The web GUI only supports the *Action* and *Compress* properties.

@@ -19,7 +19,7 @@ For most environments this will be <https://server/indicium/iam/iam/>.
 
 ## SF configuration
 
-Starting a product present in the Software Factory development environmoent works the same but you need to specify the root URL of the SF application as the meta server URL. 
+Starting a product present in the Software Factory development environment works the same but you need to specify the root URL of the SF application as the meta server URL. 
 For most environments this will be <https://server/indicium/iam/sf/>.
 
 Furthermore, you'll need to provide the application ID or alias to start the correct runtime configuration. 
