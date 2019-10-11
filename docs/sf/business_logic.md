@@ -31,13 +31,13 @@ The following options can be set within a Default:
 
 The following context is provided when executing the Default logic:
 
-| Parameter          |                                                                                           |
-| ------------------ | ----------------------------------------------------------------------------------------- |
-| default_mode       | Indicates whether it concerns an insert (0) or an update (1)                              |
-| Import_mode        | Indicates whether it concerns an import or synchronization action                         |
-| cursor_from_col_id | The field that the user has left. The value is immediately null after adding or modifying |
-| cursor_to_col_id   | The field where the cursor must move to after leaving the default procedure              |
-| [col_id]           | All columns in the table, both input and output. Every value can therefore be modified    |
+| Parameter          |                                                                                                                  |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| default_mode       | Indicates whether it concerns an insert (0) or an update (1).                                                    |
+| import_mode        | Indicates what action is performed:<br>- 0 = regular, GUI action<br>- 1 = import row, executed once for the entire row (cursor_from_col_id is empty)<br>- 3 = import, executed for each column (cursor_from_col_id for each column) <br> Import_mode 1 is used when importing with the GUI and import_mode 3 is used for directly calling PUT, POST or PATCH on an entity via Indicium.  |
+| cursor_from_col_id | The field that triggered the default to be executed. When performing the add or modify action the value is null. |
+| cursor_to_col_id   | The field where the cursor must move to after leaving the default procedure.                                     |
+| [col_id]           | All columns in the table, both input and output. Every value can therefore be modified.                          |
 
 This Default template code ensures that the current date is set for the *activated_date* field when the *activated* field has just received the value 1.
 
@@ -60,14 +60,14 @@ A layout can be used to disable fields and operations, depending on the context.
 
 The following context is provided when executing the layout logic:
 
-| Parameter                                                                                                |                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| layout_mode                                                                                              | Indicates whether it concerns an insert (0) or an update (1)                                                                                                          |
-| import_mode                                                                                              | Indicates whether it concerns an import or synchronization action                                                                                                     |
-| add_button_type<br>update_button_type<br>delete_button_type<br>confirm_button_type<br>cancel_button_type | Indicates how the corresponding button should be displayed:<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden                                                        |
-| [col_id]                                                                                                 | All columns of a table. These values can be used to make decisions about the behavior                                                                                |
-| [col_id]_type                                                                                            | The type can be modified for each field:<br>- 0 = normal<br>- 1 = read only<br>- 2 = hidden within the form (space remains reserved)<br>- 3 = hidden outside the form |
-| [col_id]_mand                                                                                            | Whether fields are mandatory can be set for each field:<br>- 0 = optional<br>- 1 = mandatory                                                                          |
+| Parameter          |                                                                                                                                              |
+|--------------------| -------------------------------------------------------------------------------------------------------------------------------------------- |
+| layout_mode        | Indicates whether it concerns an insert (0) or an update (1).                                                                                |
+| import_mode        | Indicates what action is performed:<br>- 0 = regular, GUI action<br>- 1 = import row, executed once for the entire row (cursor_from_col_id is empty)<br>- 2 = export<br>- 3 = import, executed for each column (cursor_from_col_id for each column) <br> Import_mode 1 is used when importing with the GUI and import_mode 3 is used for directly calling PUT, POST or PATCH on an entity via Indicium.  |
+| add_button_type<br>update_button_type<br>delete_button_type<br>confirm_button_type<br>cancel_button_type  | Indicates how the corresponding button should be displayed:<br>- 0 = enabled<br>- 1 = disabled<br>- 2 = hidden |
+| [col_id]           | All columns of a table. These values can be used to make decisions about the behavior.                                                       |
+| [col_id]_type      | The type can be modified for each field:<br>- 0 = normal<br>- 1 = read only<br>- 2 = hidden within the form (space remains reserved)<br>- 3 = hidden outside the form |
+| [col_id]_mand      | Whether fields are mandatory can be set for each field:<br>- 0 = optional<br>- 1 = mandatory                                                 |
 
 The variables for type and mandatory only need to be set if the value differs from the default value of the meta-level. It is therefore not necessary to reset the value.
 
