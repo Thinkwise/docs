@@ -10,7 +10,6 @@ A few properties only work when set in the global settings, they need to be load
 
 Application specific parameters can also be specified in the global configuration and will then be used by all applications.
 
-
 | Parameter                                           | Description                                                  | Options                                                      | Scope                                                        |
 | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | AboutBackground                                     | Ribbon about tab content image bottom. Path to a custom image. Size: 380px |                                                |                                                              |

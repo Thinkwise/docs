@@ -11,7 +11,7 @@ the Intelligent Application Manager and the various adaptive user interfaces.
 
 **The Thinkwise Platform is an integrated software development environment to develop new software applications and modernize existing applications. These applications consist of a database, business logic, user interfaces and, if necessary, data interfaces to other applications.**
 
-Applications developed within this environment are easily kept up-to-date both  technologically and functionally. The productivity of the development process amounts to 0.5 hours per func-tion point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
+Applications developed within this environment are easily kept up-to-date both  technologically and functionally. The productivity of the development process amounts to 0.5 hours per function point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
 
 The Thinkwise Platform consists of the three following components:
 
@@ -23,7 +23,7 @@ The Software Factory is used during the development and test phase to develop an
 
 The Intelligent Application Manager manages all the models of applications that are in the acceptance and production phases. The application managers can also set up authorizations using IAM. The presentation for the user is again provided by the GUIs. End users can set up their own user preferences via the GUIs and get suggestions from IAM to optimize their user experience.
 
-The GUIs are available under Windows, Web and Mobile (smartphone and tablet). Theyuarn capabilities of the various GUIs are very extensive and as good as identical, to the extent that this is technologically possible.
+The GUIs are available under Windows, Web and Mobile (smartphone and tablet). The capabilities of the various GUIs are very extensive and as good as identical, to the extent that this is technologically possible.
 
 The modernization of software applications takes place with the Thinkwise Upcycler. This tool is only deployed by Thinkwise itself and is not described in this document.
 
@@ -446,7 +446,7 @@ The appendices consist of the following components:
 | Group            | Property               | Values                                       |
 | ---------------- | ---------------------- | -------------------------------------------- |
 | **Technology**   | RDBMS                  | SQL server, Oracle, DB2                      |
-|                  | Business rules         | SQL, C#, Java, Javascript   (offline mobile) |
+|                  | Business rules         | SQL, C#, Java, JavaScript   (offline mobile) |
 |                  | Modernized             | RPG, Cobol, Foxpro, Access,   Excel, VB6,    |
 | **Productivity** | ERP                    | < 1.0 hour per function   point              |
 |                  | Peripheral application | < 0.5 hour per function   point              |
