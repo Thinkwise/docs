@@ -2,28 +2,31 @@
 title: Thinkwise Platform Overview
 ---
 
-This document gives a high-level overview of the Thinkwise Platform, comprising the Software Factory development environment,
-the Intelligent Application Manager and the various adaptive user interfaces.
+This document provides a high-level overview of the Thinkwise Platform, comprising the Software Factory development environment,
+the Intelligent Application Manager, the Indicium Application Tier and the various adaptive user interfaces.
 
 ![](assets/overview/front.jpg)
 
 ## Introduction
 
-**The Thinkwise Platform is an integrated software development environment to develop new software applications and modernize existing applications. These applications consist of a database, business logic, user interfaces and, if necessary, data interfaces to other applications.**
+**The Thinkwise Platform is an integrated software development environment to develop new software applications and modernize existing applications.
+These applications consist of a database, business logic, service tier, user interfaces and, if necessary, data interfaces to other applications.**
 
-Applications developed within this environment are easily kept up-to-date both  technologically and functionally. The productivity of the development process amounts to 0.5 hours per func-tion point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
+Applications developed with the Thinkwise Platform environment are easily kept up-to-date both technologically and functionally.
+The productivity of the development process amounts to 0.5 hours per function point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
 
-The Thinkwise Platform consists of the three following components:
+The Thinkwise Platform consists of the following components:
 
 1. Software Factory (SF)
 1. Intelligent Application Manager (IAM)
 1. Abstract Graphical User Interfaces (GUIs)
+1. Indicium Application Tier
 
 The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The graphical user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
 
 The Intelligent Application Manager manages all the models of applications that are in the acceptance and production phases. The application managers can also set up authorizations using IAM. The presentation for the user is again provided by the GUIs. End users can set up their own user preferences via the GUIs and get suggestions from IAM to optimize their user experience.
 
-The GUIs are available under Windows, Web and Mobile (smartphone and tablet). Theyuarn capabilities of the various GUIs are very extensive and as good as identical, to the extent that this is technologically possible.
+The GUIs are available under Windows, Web and Mobile (smartphone and tablet). The capabilities of the various GUIs are very extensive and almost identical, to the extent that this is technologically possible.
 
 The modernization of software applications takes place with the Thinkwise Upcycler. This tool is only deployed by Thinkwise itself and is not described in this document.
 
@@ -32,55 +35,58 @@ The positioning of the various Thinkwise products (Upcycler, SF, IAM and GUIs) i
 ![](assets/overview/platform_architecture.jpg)
 *Thinkwise Platform overview*
 
-Individual manuals are available for the SF, IAM and GUIs. The requirements for their installation are described in the online documentation.
+Extensive online documentation is available for the Software Factory, Intelligent Application Manager, Application Tier and GUIs.
+The requirements for their installation are also described in the documentation.
+
 An example of a Legacy application that can be modernized to a Windows, Web and/or Mobile application using the Thinkwise Platform is given below:
 
 ![](assets/overview/legacy_application.jpg)
 *Example of a legacy application*
 
-Subsequently the modernized screen in a Windows environment:
+Subsequently, the modernized screen in a Windows environment:
 
 ![](assets/overview/modernized_application.jpg)
 *Example of a modernized application*
 
 ## Architecture
 
-**Thinkwise applications consist of a data tier, an application tier and a presentation tier (GUIs). The business logic, which contains customer-specific functionality, can be included in the data tier (in the form of SQL procedures, functions and triggers) but also in the application tier, using .NET or Java code. Depending on this choice the functionality is developed in SQL, C# or Java.**
+**Thinkwise applications consist of a data tier, an application tier and a presentation tier (GUIs).
+The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
+procedures, functions and triggers. The use of C# or Java-based logic is also possible.**
 
 ![](assets/overview/indicium_architecture.jpg)
 *Thinkwise Platform Architecture*
 
 ### Connectivity
 
-The Thinkwise Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to third party services and applications, like:
+The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
 
 - Artificial Intelligence services (Bots, Virtual Assistants, Machine Learning,
 Image recognition)
 - Big Data solutions (Search, Analytics, Internet of Things)
 - Office integration (Exchange, Office 365, SharePoint)
-- Third party applications (custom user interfaces, financial applications)
+- Third party applications (custom user interfaces, financial applications, Power BI)
 
 Third party applications and services in turn can connect to Thinkwise applications with minimal effort using the provided webhooks and REST API. The Thinkwise Application Tier uses the OData protocol for its API, one of the most widely used standards for RESTful web
 services.
 
 Here are a few examples:
 
-#### Exchange
+#### Exchange Connector
 
-An application can synchronize appointments, tasks, e-mails and contacts with Exchange.
+Thinkwise applications can synchronize appointments, tasks, e-mails and contacts with Exchange.
 
 ![](assets/overview/exchange.jpg)
 *Architecture of the Exchange connector*
 
 Incoming and outgoing e-mails can be enriched in the application so that the exchange with a customer or supplier is fully and quickly transparent.
-
-Appointments and tasks can be made in the application, then dealt with in Outlook (via Exchange) whereupon the new status is passed on to the application.
+Appointments and tasks can be made in the application, then dealt with in Outlook whereupon any changes are passed on to the application.
 
 Business Intelligence can then be applied to e-mails, appointments and tasks.
 
 #### Web services
 
-SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, it is also possible to make services available that can be called by other applications.
+SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, all data, processes and business logic of Thinkwise applications is available through web services and can be used by other applications and services.
 
 #### Maps
 
@@ -91,72 +97,108 @@ The GUIs can visualize geographic data such as locations and routes on maps from
 
 ### Security
 
-The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and SAML, Single Sign-on and multi-factor authentication.
+The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and ADFS, Single Sign-on and multi-factor authentication.
 
-The Thinkwise Intelligent Application Manager provides Role-based access control and entity-, row- and field-level authorization, while the Application Tier ensures that business rules are respected at all times, even when importing data or when interfacing with third party applications.
+The Thinkwise Intelligent Application Manager provides role-based access control and entity-, row- and field-level
+authorization, while the Application Tier ensures that business rules are respected at all times, even when bulk
+importing data or when interfacing with third party applications.
 
 ### Scalability
 
 The Thinkwise Platform is optimized for speed and scalability. The stateless Application Tier can easily be horizontally scaled for load balancing and failover purposes. This allows optimal use of the power of cloud platforms, such as Microsoft Azure, Amazon Web Services, Google Cloud or IBM Cloud.
 
-The Application Tier is developed with the .Net Core framework, making it cross platform and highly optimized for running in (Docker) containers.
+The Application Tier is developed with the .NET Core framework, making it cross platform and highly optimized for running in (Docker) containers.
 
 ## Software Factory
 
 The process of development with the SF consists of the following phases:
 
-1. Analysis
-1. Modeling & Validating
-1. Development & Testing
+1. Specification
+1. Modeling
+   1. Data
+   1. User Interface
+   1. Processes
+   1. Business Logic
+1. Quality control
+1. Access control
+1. Deployment
 
 This is presented in the figure below:
 
 ![](assets/overview/development_process.jpg)
-*Development in three phases*
+*Development in multiple phases*
 
-These three phases  appear  again  in  the  user  interface  of  the  SF.  The  development  team has access to the components of these phases via the menu on the left-hand side of the screen.
+These phases correspond to the menu in the Software Factory development environment.
+The development team has access to the components of these phases via the menu on the left-hand side of the screen.
 
 ![](assets/overview/software_factory.jpg)
 *Start screen of the Software Factory*
 
-### Analysis
+### Specification
 
-The business processes and requirements can be seen as a contract between the business and the IT developers, with which the scope of the project is continually monitored.
+*Business processes* can be defined in the Software Factory to gain a deeper understanding of the scope and context of the application(s) that will be built.
+*Requirements* can be seen as a contract between the business and the developers, with which the scope of the project is
+continuously monitored. *Work items* are created for requirements to guide the developers during the development phase.
 
 #### Business processes
 
-During the analysis phase, the function flow diagrams are designed first. The relationship between a business process and the functional entities, such as departments, are specified there. These functional entities are displayed on the horizontal strips. The function flow diagrams are often designed based on interviews with the interested parties of the project. Other elicitation methods can be applied such as analysis of the existing application, documentation, observation of end users, etc.
+During the analysis phase, the function flow diagrams are designed first. The relationship between a business process
+and the functional entities, such as departments, are specified there.
+These functional entities are displayed on the horizontal strips. The function flow diagrams are often designed based on interviews with the interested parties of the project. Other elicitation methods can be applied such as analysis of the existing application, documentation, observation of end users, etc.
 
 ![](assets/overview/business_process.jpg)
 *Example of a function flow diagam*
 
 #### Requirements
 
-The user and system requirements are subsequently specified for each process.
+The user and system requirements are subsequently specified for each process. Using the integrated stakeholder portal,
+stakeholders can review and comment on flow diagrams and requirements before accepting.
 
-The function flow diagrams and requirements must be accepted by the stakeholders before the
-next phase is started. This may be done module by module.
+![](assets/overview/requirement.png)
+*Example of a requirement*
 
-#### Design
+### Features and iterations
 
-Translating the system requirements to an application can be done in multiple ways. Design is used to describe how the system should be implemented in a technical way. Design decisions can be recorded here for future reference.
+Requirements and work items can be organized using features and iterations. Features can help categorize the work more
+efficiently while iterations facilitate the planning process.
+Features and iterations can be configured completely to your wishes, for example using *applications*, *modules* and *sub-modules* to group features or by using *releases* and
+*sprints* as iterations.
 
-The paragraphs of design specifications can be used throughout the modeling process as a to-do list. The SF automatically maintains the traceability between the design specifications and the model.
+### Work and kanban board
+
+Development teams can leverage work items to describe, plan and keep track of development activities.
+A work item describes what changes to a model or business logic need to be done. The kanban board allows developers to keep track of, and update the status of, their work.
+
+![](assets/overview/kanban.png)
+*Work on the kanban board*
 
 ### Modeling & Validation
 
-The following things are specified during the modeling phase:
+During the modeling phase, the following models are specified:
 
-- Data model
-- User interface
-- Tasks
-- Reports
-- Business Intelligence
-- Process flows
-- Help
-- Dynamic model
+- Data
+  - Data model
+  - Dynamic model
+- User Interface
+  - Menus
+  - Screen types
+  - Subjects
+  - Cubes (Business Intelligence)
+  - Themes
+  - Messages
+  - Translations
+  - Icons
+  - Help
+- Processes
+  - Process flows
+  - Tasks
+  - Reports
+  - Custom screens
 
-All these components form the basis for the application without it being necessary to have to program them. Only the model has to be created. This takes place based on the requirements as drawn up in the previous phase. The quality of the model is monitored with the Validator. Thinkwise provides hundreds of validation rules, but company specific validation rules can also be added.
+All these components form the basis for the application without it being necessary to have to program them. Only the model has to be created.
+This takes place based on the requirements and work as drawn up in the previous phase.
+
+The quality of the model is monitored with the Validator. Thinkwise provides hundreds of validation rules, but company specific validation rules can also be added.
 
 ![](assets/overview/validation.jpg)
 *Example validation rules*
@@ -170,7 +212,7 @@ The database of the application is designed using the data model which is presen
 ![](assets/overview/datamodel.jpg)
 *Example of a graphical data model in the Software Factory*
 
-#### User interface
+#### User Interface
 
 The GUI is also designed without programming. The design is flexible so that screens automatically adjust themselves to the various resolutions. By linking (self-designed) screen types to the subjects of your model, a GUI can quickly be developed for hundreds of objects.
 
@@ -231,22 +273,25 @@ The last phase of the project consists of programming and testing the business l
 
 #### Development
 
-Code templates are written according to the design specifications. This is the only component that is actually programmed. Templates are woven into the correct position in the business logic layer based on the definitions in the model.
+Code templates are written according to the design specifications. This is the only component that is actually programmed.
+Templates are woven into the correct position in the business logic layer, based on the definitions in the model.
 
 ![](assets/overview/logic_concepts.jpg)
 *Architecture of the programmed business logic*
 
 #### Testing
 
-The programmed templates can be tested automatically with test cases that are stored in the Software Factory. A test case can be created in three ways:
+The programmed templates can be tested automatically with unit tests and process tests, that are stored in the Software Factory.
+
+Unit tests can be used to test individual business rules. Any data that is required for a unit test (mock data) can be specified as part of the unit test.
+
+Process tests are used to test processes in the context of a user. Process tests can be created in three ways:
 
 1. Recorded via the GUI.
-2. Input via the Software Factory.
+2. Modelled via the Software Factory.
 3. Automatically derived from the existing model.
 
-A test case is linked to the templates that are then used for testing. Checks are included in a test case to examine whether the templates work correctly. It can also be easily checked whether each template appears in at least one test case.
-
-A test case can subsequently be executed automatically and the test results stored in the Software Factory.
+Process tests are executed by the GUI and the test results are stored in the Software Factory.
 
 ![](assets/overview/test_case_recorder.jpg)
 *Recording test cases via the GUI*
@@ -256,13 +301,13 @@ The test results are also analyzed there.
 ![](assets/overview/test_case_analysis.jpg)
 *Analysis of the test results*
 
-With test tooling, a test only needs to be specified once and can thereafter be executed automatically. This guarantees that existing functionality continues to work after any additions and modifications.
-
-Naturally, these additions and modifications need to be included in the test cases.
+With the integrated test tooling, a test only needs to be specified once and can thereafter be executed automatically.
+This guarantees that existing functionality continues to work after any additions and modifications.
 
 ### Support
 
-Along with the development tools, Thinkwise also offers tools to analyze the model and convert it to an actual application. These tools can be found under the menus *System Administration*, *Deployment* and *Management*”.
+Along with the development tools, Thinkwise also offers tools to analyze the model and convert it to an actual application.
+These tools can be found under the *Projects*, *Deployment* and *Analysis* menus.
 
 #### Version control
 
@@ -277,7 +322,8 @@ Usually a DTAP street is used during development. DTAP stands for the Developmen
 A model for an application can be split into one or more branches. This allows different teams
 to work on the same application (within their own branch) without getting in each other’s way.
 
-Finally, the modifications and expansions of a branch are combined (merged) with the trunk (the production version). Conflicts can possibly occur during merging, but these are automatically detected by the Thinkwise Platform and presented to the developer.
+Finally, the modifications and expansions of a branch are combined (merged) with the trunk (the production version).
+Conflicts can possibly occur during merging, but these are automatically detected by the Thinkwise Platform and presented to the developer.
 
 ![](assets/overview/branching.jpg)
 *Example of branching and merging*
@@ -298,9 +344,9 @@ The Intelligent Application Manager has the following components:
 
 To include a new or existing project version as an application in the IAM, it is necessary to synchronize it with the SF. This means that the blueprint is copied from the SF to the IAM. As soon as this has taken place, the authorization for this application can be set up via the IAM.
 
-### Authorization 
+### Authorization
 
-Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that rights automatically expire after a period of time (for example with temporary contracts).
+Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts).
 
 Authorization can be defined down to field level and on cross-sections of data.
 
@@ -328,9 +374,10 @@ Through analysis of the user’s method of working, the user preferences for the
 >
 > The analysis can also be reason to provide the user with additional training.
 
-### Simulation for the help desk
+### Simulation to provide support
 
-Because the GUIs can differ for each user through authorization and user preferences, the help desk can look at the application based on the blueprint of a specific user. The help desk employee then sees the same GUI, data and user preferences, and can provide better support to the user.
+Because the GUIs can differ for each user through authorization and user preferences, support employees can start an application using the settings and authorization of a specific user.
+This way, the support desk employee sees the same GUI and user preferences, and can provide better support to the user.
 
 ### Logging
 
@@ -345,15 +392,12 @@ The GUI does not have to be programmed. It is completely built up during runtime
 1. Model
    - contains the definition of the GUI.
    - is defined in the SF and synchronized with IAM.
-
 2. Authorization
    - omits everything for which a user is not authorized.
    - is defined in the IAM.
-
-3. Lay-out
+3. Theme
    - consists of color scheme, logos, etc. and can, for instance, differ for users of a customer in a customer portal.
    - is defined in the SF and selected in the IAM.
-
 4. User preferences
    - provide an individual display of the things that a user is authorized for.
    - is provided from the GUI and recorded in the IAM.
@@ -443,19 +487,19 @@ The appendices consist of the following components:
 
 ### Factsheet
 
-| Group            | Property               | Values                                       |
-| ---------------- | ---------------------- | -------------------------------------------- |
-| **Technology**   | RDBMS                  | SQL server, Oracle, DB2                      |
-|                  | Business rules         | SQL, C#, Java, Javascript   (offline mobile) |
-|                  | Modernized             | RPG, Cobol, Foxpro, Access,   Excel, VB6,    |
-| **Productivity** | ERP                    | < 1.0 hour per function   point              |
-|                  | Peripheral application | < 0.5 hour per function   point              |
-| **Connectivity** | Financial              | SAP, Exact, Navision, Muis,   AFAS, Davilex  |
-|                  | Email                  | Exchange                                     |
-|                  | BPM                    | BizzDesign                                   |
-|                  | Workflow               | Bonita                                       |
-|                  | Requirements           | CogNIAM                                      |
-|                  | Other                  | Via web services                             |
+| Group            | Property               | Values                                      |
+| ---------------- | ---------------------- | ------------------------------------------- |
+| **Technology**   | RDBMS                  | SQL server, Oracle, DB2                     |
+|                  | Business rules         | SQL, C#, Java, Javascript (offline mobile)  |
+|                  | Modernized             | RPG, Cobol, Foxpro, Access, Excel, VB6      |
+| **Productivity** | ERP                    | < 1.0 hour per function point               |
+|                  | Peripheral application | < 0.5 hour per function point               |
+| **Connectivity** | Financial              | SAP, Exact, Navision, Muis, AFAS, Davilex   |
+|                  | Email                  | Exchange                                    |
+|                  | BPM                    | BizzDesign                                  |
+|                  | Workflow               | Bonita                                      |
+|                  | Requirements           | CogNIAM                                     |
+|                  | Other                  | Via web services                            |
 
 ### References
 

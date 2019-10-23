@@ -2,7 +2,7 @@
 title: Configuring IIS
 ---
 
-The Thinkwise Web GUI runs on IIS version 8 or up (10 is adviced) and requires the .NET Framework 4.7 as well as the ASP.NET Framework. 
+The Thinkwise Web GUI runs on IIS version 8 or up (10 is advised) and requires the .NET Framework 4.7 as well as the ASP.NET Framework. 
 
 An IIS version is included with the standard installation of Windows on a server or PC. Different versions of IIS are
 released with the different versions of Windows. Checking the installed IIS version can be done by typing

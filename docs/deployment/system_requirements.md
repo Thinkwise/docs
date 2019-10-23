@@ -73,7 +73,7 @@ The Windows GUI is a desktop client and requires the Microsoft .NET Framework. M
 
 The Windows GUI is compatible with 32 and 64-bit environments.
 
-#### Terminal Services and Virtualisation
+#### Terminal Services and Virtualization
 
 The Windows GUI is also suitable for use via Remote Desktop Services or in combination with Desktop (VDI) or Application Virtualization, such as:
 
@@ -120,11 +120,11 @@ In addition to the above information you should also take into account the provi
 
 The Thinkwise Mobile GUI makes use of the PhoneGap/Cordova platform and is therefore suitable for use on all major mobile operating systems.
 
-The minimum hardware requirements are very much dependent on the application, but a minimum of 1 GB RAM is adviced.
+The minimum hardware requirements are very much dependent on the application, but a minimum of 1 GB RAM is advised.
 
 ## Reporting
 
-The Thinkwise Platform supports various reporting solutions for creating integrated reports. Some of these solutions require addional report designer licenses and runtime components to be installed.
+The Thinkwise Platform supports various reporting solutions for creating integrated reports. Some of these solutions require additional report designer licenses and runtime components to be installed.
 
 | Reporting solution  |       Designer        | Requires runtime |
 | ------------------- | :-------------------: | :--------------: |
