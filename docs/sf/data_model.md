@@ -80,6 +80,7 @@ An overview of all tables is accessible via the *Tables* tab page.
 ### Memory optimized
 
 It is possible to specify if the database management system should keep a table into memory to optimize performance. Available options are:
+
 - No
 - Yes (durable)
 - Yes (transient) - *only available for SQL server projects*
@@ -92,6 +93,9 @@ For Oracle project, the option CACHE will be used. More information about this o
 
 ### Sytem versioning
 
+It's possible to enable a system-versioned temporal table for a table defined in the Software Factory. When enabled the Software Factory will create a history table with the name *[table_id]_history* and add the columns *tsf_valid_from* and *tsf_valid_to* to the table. These columns are hidden so the table definition won't change on the database.
+
+This is only implemented for SQL Server, more information can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
 
 
 ## Columns
