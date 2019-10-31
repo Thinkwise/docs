@@ -124,6 +124,26 @@ To enable the reset password feature, add the following template to the `appsett
 
 For instructions on how to start a Mobile GUI against Indicium, see [here](mobile_gui).
 
+## SMS Two-Factor Authentication
+
+As of version 2019.2.1, Indicium supports SMS authentication. This feature is especially useful for users with old mobile devices and no internet. Configure a user in IAM to have Password and SMS login verification. Enter the phone number of a phone you have access to and make sure you're using the international number format (e.g. +311234....). Also ensure the provider phone number is a global SMS-capable number so it can send messages internationally.
+
+To enable SMS two-factor authentication, just add the following template to the `appsettings.json` file and fill it out.
+
+```json
+"SMS": {
+  "Username": "[AccountSID]",
+  "Password": "[AuthToken]",
+  "FromPhoneNumber": "[PhoneNumberProvider]",
+  "DefaultTwoFactorTokenTemplate": "Your validation code is {twoFactorToken}.",
+  "TwoFactorTokenTemplates": {
+    "NL": "Uw validatiecode is {twoFactorToken}",
+    "ENG": "Your validation code is {twoFactorToken}."
+  }
+}
+```
+> Currently we only support [Twilio](https://www.twilio.com/sms) to communicate as SMS provider. We will support more providers soon.
+
 ## Enable Cross-Origin Resource Sharing (CORS)
 
 By default, the Indicium Application Tier only allows requests coming from the same origin (domain). To enable cross-origin requests, add the allowed origin(s) to the `appsettings.json` file:
