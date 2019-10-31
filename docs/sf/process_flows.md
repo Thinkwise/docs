@@ -464,9 +464,9 @@ The DB connector provides the following input options to establish a database co
 | SQL error message | Error message thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error message.|
 | SQL error code    | Error code throw nwhen opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error code.|
 
-### Convert JSON to xml and xml to JSON
+### Convert JSON to XML and XML to JSON
 
-The conversion between JSON and xml can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
+The conversion between JSON and XML can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
 
 | Input options     |                                                                                           |
 | ----------------- | ----------------------------------------------------------------------------------------- |
