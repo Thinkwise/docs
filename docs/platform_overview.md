@@ -19,24 +19,24 @@ The Thinkwise Platform consists of the following components:
 
 1. Software Factory (SF)
 1. Intelligent Application Manager (IAM)
-1. Abstract Graphical User Interfaces (GUIs)
+1. Abstract User Interfaces (UIs)
 1. Indicium Application Tier
 1. Upcycler
 
-The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The graphical user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
+The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
 
-The Intelligent Application Manager manages all the models of applications that are in the acceptance and production phases. The application managers can also set up authorizations using IAM. The presentation for the user is again provided by the GUIs. End users can set up their own user preferences via the GUIs and get suggestions from IAM to optimize their user experience.
+The Intelligent Application Manager manages all the models of applications that are in the acceptance and production phases. The application managers can also set up authorizations using IAM. The presentation for the user is again provided by the user interfaces. End users can set up their own user preferences via the user interfaces and get suggestions from IAM to optimize their user experience.
 
-The GUIs are available under Windows, Web and Mobile (smartphone and tablet). The capabilities of the various GUIs are very extensive and almost identical, to the extent that this is technologically possible.
+The user interfaces are available under Windows, Web and Mobile (smartphone and tablet). The capabilities of the various user interfaces are very extensive and almost identical, to the extent that this is technologically possible.
 
 The modernization of software applications takes place with the Thinkwise Upcycler. This tool is only deployed by Thinkwise itself and is not described in this document.
 
-The positioning of the various Thinkwise products (Upcycler, SF, IAM and GUIs) is presented in the diagram below. Each product is discussed separately in the following chapters with the exception of the Upcycler.
+The positioning of the various Thinkwise products (Upcycler, SF, IAM and user interfaces) is presented in the diagram below. Each product is discussed separately in the following chapters with the exception of the Upcycler.
 
 ![](assets/overview/platform_architecture.jpg)
 *Thinkwise Platform overview*
 
-Extensive online documentation is available for the Software Factory, Intelligent Application Manager, Application Tier and GUIs.
+Extensive online documentation is available for the Software Factory, Intelligent Application Manager, Application Tier and user interfaces.
 The requirements for their installation are also described in the documentation.
 
 An example of a Legacy application that can be modernized to a Windows, Web and/or Mobile application using the Thinkwise Platform is given below:
@@ -51,7 +51,7 @@ Subsequently, the modernized screen in a Windows environment:
 
 ## Architecture
 
-**Thinkwise applications consist of a data tier, an application tier and a presentation tier (GUIs).
+**Thinkwise applications consist of a data tier, an application tier and a presentation tier (user interfaces).
 The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
 procedures, functions and triggers. The use of C# or Java-based logic is also possible.**
 
@@ -91,7 +91,7 @@ SOAP and JSON/REST services can be called, for instance, to retrieve distances, 
 
 #### Maps
 
-The GUIs can visualize geographic data such as locations and routes on maps from various providers, such as Google Maps, MapQuest and Here Maps.
+The user interfaces can visualize geographic data such as locations and routes on maps from various providers, such as Google Maps, MapQuest and Here Maps.
 
 ![](assets/overview/maps.jpg)
 *Example of maps integration*
@@ -215,27 +215,27 @@ The database of the application is designed using the data model which is presen
 
 #### User Interface
 
-The GUI is also designed without programming. The design is flexible so that screens automatically adjust themselves to the various resolutions. By linking (self-designed) screen types to the subjects of your model, a GUI can quickly be developed for hundreds of objects.
+The user interface is also designed without programming. The design is flexible so that screens automatically adjust themselves to the various resolutions. By linking (self-designed) screen types to the subjects of your model, a user interface can quickly be developed for hundreds of objects.
 
-The GUI is multilingual and contains possibilities for integrated Business Intelligence, both pivot tables as well as graphs. In addition, graphical plans and geographic presentations are easy to integrate.
+The user interface is multilingual and contains possibilities for integrated Business Intelligence, both pivot tables as well as graphs. In addition, graphical plans and geographic presentations are easy to integrate.
 
 ![](assets/overview/screen_type.jpg)
 *Modeling a screen type*
 
 #### Tasks
 
-Batch or interactive tasks (jobs) can be modeled, for instance, to execute a calculation or generate invoices. These tasks can be started automatically by a scheduler or manually via the GUIs. Interactive tasks can request the user for input before they start.
+Batch or interactive tasks (jobs) can be modeled, for instance, to execute a calculation or generate invoices. These tasks can be started automatically by a scheduler or manually via the user interfaces. Interactive tasks can request the user for input before they start.
 
 ![](assets/overview/task.jpg)
 *Example of a task popup*
 
 #### Reports
 
-For the generation of reports, a connection can be made to various reporting tools, such as DevExpress Reports, Crystal Reports, Microsoft Word, SQL Server Reports and i-net Clear Reports. These reports can be viewed, printed, mailed and exported to various formats automatically or via the GUIs.
+For the generation of reports, a connection can be made to various reporting tools, such as DevExpress Reports, Crystal Reports, Microsoft Word, SQL Server Reports and i-net Clear Reports. These reports can be viewed, printed, mailed and exported to various formats automatically or via the user interfaces.
 
 #### Business Intelligence
 
-The Thinkwise GUIs include integrated Business Intelligence functionality for the presentation of interactive pivot tables and graphs, whereby operational management information can be made available in a simple manner. It is also possible to connect with Microsoft OLAP (SQL Server Analysis Services).
+The Thinkwise user interfaces include integrated Business Intelligence functionality for the presentation of interactive pivot tables and graphs, whereby operational management information can be made available in a simple manner. It is also possible to connect with Microsoft OLAP (SQL Server Analysis Services).
 
 ![](assets/overview/bi.jpg)
 *Example of integrated charts*
@@ -249,20 +249,20 @@ End users are automatically guided through the application with the help of proc
 
 #### Help
 
-Help text can also be defined in the SF, for each process as well as for each object. The help text can be set up fully multilingual. The GUIs are context sensitive and immediately display the relevant part of the help text.
+Help text can also be defined in the SF, for each process as well as for each object. The help text can be set up fully multilingual. The user interfaces are context sensitive and immediately display the relevant part of the help text.
 
 ![](assets/overview/help.jpg)
 *Example of the help text*
 
 #### Dynamic model
 
-By including meta procedures in the generation process, the model can be automatically extended. This particularly concerns aspects of the data model and GUI model that form a main theme throughout the application.
+By including meta procedures in the generation process, the model can be automatically extended. This particularly concerns aspects of the data model and user interfaces model that form a main theme throughout the application.
 
 The following are examples of this:
 
-1. Adding trace columns (added on/by, changed on/by) to all tables and display on a separate tab in the GUI.
+1. Adding trace columns (added on/by, changed on/by) to all tables and display on a separate tab in the user interfaces.
 2. Add an update counter column to tables which are updated.
-3. Create indices on standard forms of the GUI
+3. Create indices on standard forms of the user interfaces
 
 As soon as a meta procedure is added, the aspect is automatically added and requires no more
 maintenance if the model is modified or extended.
@@ -288,14 +288,14 @@ Unit tests can be used to test individual business rules. Any data that is requi
 
 Process tests are used to test processes in the context of a user. Process tests can be created in three ways:
 
-1. Recorded via the GUI.
+1. Recorded via the user interfaces.
 2. Modelled via the Software Factory.
 3. Automatically derived from the existing model.
 
-Process tests are executed by the GUI and the test results are stored in the Software Factory.
+Process tests are executed by the user interfaces and the test results are stored in the Software Factory.
 
 ![](assets/overview/test_case_recorder.jpg)
-*Recording test cases via the GUI*
+*Recording test cases via the user interfaces*
 
 The test results are also analyzed there.
 
@@ -363,7 +363,7 @@ Everything a user can do with regard to user preferences can be authorized.
 ### Self-learning
 
 For each user, the application manager can specify whether specific (or all) actions of the user
-are registered in the GUI.
+are registered in the user interfaces.
 
 Through analysis of the user’s method of working, the user preferences for the user in question can be optimized automatically by IAM.
 
@@ -377,8 +377,8 @@ Through analysis of the user’s method of working, the user preferences for the
 
 ### Simulation to provide support
 
-Because the GUIs can differ for each user through authorization and user preferences, support employees can start an application using the settings and authorization of a specific user.
-This way, the support desk employee sees the same GUI and user preferences, and can provide better support to the user.
+Because the user interfaces can differ for each user through authorization and user preferences, support employees can start an application using the settings and authorization of a specific user.
+This way, the support desk employee sees the same user interfaces and user preferences, and can provide better support to the user.
 
 ### Logging
 
@@ -386,12 +386,12 @@ All changes regarding authorization are logged automatically. This logging helps
 
 ## User Interfaces
 
-**The GUIs are available in various technologies such as Windows, Web and mobile devices. These can also be deployed alongside each other in one application. Thinkwise ensures that the GUIs will also become available for future technologies so that the applications automatically remain up-to-date.**
+**The user interfaces are available in various technologies such as Windows, Web and mobile devices. These can also be deployed alongside each other in one application. Thinkwise ensures that the user interfaces will also become available for future technologies so that the applications automatically remain up-to-date.**
 
-The GUI does not have to be programmed. It is completely built up during runtime on the basis of:
+The user interfaces does not have to be programmed. It is completely built up during runtime on the basis of:
 
 1. Model
-   - contains the definition of the GUI.
+   - contains the definition of the user interfaces.
    - is defined in the SF and synchronized with IAM.
 2. Authorization
    - omits everything for which a user is not authorized.
@@ -401,17 +401,17 @@ The GUI does not have to be programmed. It is completely built up during runtime
    - is defined in the SF and selected in the IAM.
 4. User preferences
    - provide an individual display of the things that a user is authorized for.
-   - is provided from the GUI and recorded in the IAM.
+   - is provided from the user interface and recorded in the IAM.
 
-The GUIs are fully multilingual and communicate with the same business logic layer.
+The user interfaces are fully multilingual and communicate with the same business logic layer.
 
-A brief summary of the functionality for each type of GUI is given below. A comprehensive description is given in the various manuals. The screen examples come from the Insights application that is used by Thinkwise for training purposes.
+A brief summary of the functionality for each type of user interface is given below. A comprehensive description is given in the various manuals. The screen examples come from the Insights application that is used by Thinkwise for training purposes.
 
 ### Windows
 
 #### Functionality
 
-The Windows GUI provides a wide range of default functionality, available through the integrated ribbon, button bars and the context menu.
+The Windows user interface provides a wide range of default functionality, available through the integrated ribbon, button bars and the context menu.
 
 Data can be visualized in hierarchically structured screens with multiple subjects, using grids, forms, maps, charts and pivottables, document previews, dashboards, gantt charts and more.
 
@@ -427,21 +427,21 @@ The userinterface also supports drag-drop of rows and files, clipboard actions, 
 and multiple windows.
 
 ![](assets/overview/windows.jpg)
-*Example screen of the Windows GUI*
+*Example screen of the Windows user interface*
 
 #### Deployment
 
-The Windows GUI can be deployed centrally with the help of the Thinkwise Clickstart tool.
-If the GUI is started on a desktop, it is first checked whether a newer version is available centrally. If this is the case then this version is copied to the client and only then started up.
+The Windows user interface can be deployed centrally with the help of the Thinkwise Clickstart tool.
+If the user interface is started on a desktop, it is first checked whether a newer version is available centrally. If this is the case then this version is copied to the client and only then started up.
 
-A new version is only required if Thinkwise has expanded the standard GUI functionality,
+A new version is only required if Thinkwise has expanded the standard user interface functionality,
 and not if the application itself has been modified. This takes place via the model.
 
-The Windows GUI can also be run under Citrix, Terminal Server and VDI.
+The Windows user interface can also be run under Citrix, Terminal Server and VDI.
 
 ### Web
 
-The web GUI does not require any browser plug-ins and supports the following browsers:
+The web user interface does not require any browser plug-ins and supports the following browsers:
 
 1. Internet Explorer (version 11 or higher)
 2. Mozilla Firefox
@@ -451,32 +451,32 @@ The web GUI does not require any browser plug-ins and supports the following bro
 
 #### Functionality
 
-The functionality of the Web GUI is identical to that of the Windows GUI.
+The functionality of the Web user interface is identical to that of the Windows user interface.
 
 ![](assets/overview/windows.jpg)
-*Example screen of the Web GUI*
+*Example screen of the Web user interface*
 
 ### Mobile devices
 
-**The User Experience of working with a mobile device is completely different (for example swiping) than working with Windows or Web GUI. To optimally use the smaller screen the GUI utilizes a different screen structure. It is however driven by the exact same model.**
+**The User Experience of working with a mobile device is completely different (for example swiping) than working with Windows or Web user interface. To optimally use the smaller screen the user interface utilizes a different screen structure. It is however driven by the exact same model.**
 
-In addition, the GUI for the mobile devices contains possibilities for working offline. The data can be stored locally and synchronized with the central application as soon as the device is online again. If business logic is required in the offline mode, this is programmed separately, as the central set of rules is not accessible.
+In addition, the user interface for the mobile devices contains possibilities for working offline. The data can be stored locally and synchronized with the central application as soon as the device is online again. If business logic is required in the offline mode, this is programmed separately, as the central set of rules is not accessible.
 
-The Mobile GUI is suitable for Apple iOS and Google Android.
+The Mobile user interface is suitable for Apple iOS and Google Android.
 
 #### Tablet
 
 An example of a tablet display is given below:
 
 ![](assets/overview/tablet.jpg)
-*Example screen of the tablet GUI*
+*Example screen of the tablet user interface*
 
 #### Smartphone
 
 An example of a smartphone display is given below:
 
 ![](assets/overview/smartphone.jpg)
-*Example screen of the smartphone GUI*
+*Example screen of the smartphone user interface*
 
 ## Appendices
 
