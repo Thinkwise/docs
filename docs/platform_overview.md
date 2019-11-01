@@ -15,13 +15,21 @@ These applications consist of a database, business logic, service tier, user int
 Applications developed with the Thinkwise Platform environment are easily kept up-to-date both technologically and functionally.
 The productivity of the development process amounts to 0.5 hours per function point where currently the market average for traditional software development is 8 to 10 hours per function point and the market average for other low-code platforms is approximately 2.5 hours per function point (see 6.3).
 
+### Thinkwise Platform components
+
 The Thinkwise Platform consists of the following components:
 
 1. Software Factory (SF)
 1. Intelligent Application Manager (IAM)
-1. Abstract User Interfaces (UIs)
+1. Abstract User Interfaces
 1. Indicium Application Tier
 1. Upcycler
+
+The positioning of the various Thinkwise components is presented in the diagram below.
+The components that are included in the Thinkwise Platform are shown in **blue**. The **green** components are created by the developer or application manager using the Thinkwise Platform, while the parts in **gray** are created automatically by the Thinkwise Platform.
+
+![](assets/overview/platform_architecture.jpg)
+*Thinkwise Platform overview*
 
 The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
 
@@ -31,13 +39,11 @@ The user interfaces are available under Windows, Web and Mobile (smartphone and 
 
 The modernization of software applications takes place with the Thinkwise Upcycler. This tool is only deployed by Thinkwise itself and is not described in this document.
 
-The positioning of the various Thinkwise products (Upcycler, SF, IAM and user interfaces) is presented in the diagram below. Each product is discussed separately in the following chapters with the exception of the Upcycler.
+Each product is discussed separately in the following chapters.
 
-![](assets/overview/platform_architecture.jpg)
-*Thinkwise Platform overview*
+Extensive [online documentation](https://office.thinkwisesoftware.com/docs/) is available for the Software Factory, Intelligent Application Manager, user interfaces and Indicium Application Tier. The requirements for their installation are also described in the documentation.
 
-Extensive online documentation is available for the Software Factory, Intelligent Application Manager, Application Tier and user interfaces.
-The requirements for their installation are also described in the documentation.
+### Examples
 
 An example of a Legacy application that can be modernized to a Windows, Web and/or Mobile application using the Thinkwise Platform is given below:
 
@@ -48,6 +54,18 @@ Subsequently, the modernized screen in a Windows environment:
 
 ![](assets/overview/modernized_application.jpg)
 *Example of a modernized application*
+
+### Application architecture
+
+Thinkwise applications consist of a data tier, an application tier (Indicium Application Tier) and a presentation tier (user interfaces).
+
+In addition to the Thinkwise user interfaces, it is also possible to connect custom built or third party user interfaces or applications to the Thinkwise API to access the data, processes and business logic of Thinkwise applications.
+
+The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
+procedures. Through the Thinkwise Application Tier, it is also possible to connect external services to integrate external or custom built business logic in a wide range of programming languages and protocols.
+
+![](assets/overview/application_architecture.jpg)
+*Thinkwise Application Architecture*
 
 ## Software Factory
 
@@ -419,16 +437,15 @@ An example of a smartphone display is given below:
 
 ## Indicium Application Tier
 
-**Thinkwise applications consist of a data tier, an application tier and a presentation tier (user interfaces).
-The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
-procedures, functions and triggers. The use of C# or Java-based logic is also possible.**
+**The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform.  
+It provides secure access to the data, processes and business logic of Thinkwise applications through an open REST API.**
 
 ![](assets/overview/indicium_architecture.jpg)
-*Thinkwise Platform Architecture*
+*Thinkwise Indicium Application Tier*
 
 ### Connectivity
 
-The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
+The Thinkwise Indicium Application Tier provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
 
 - Artificial Intelligence services (Bots, Virtual Assistants, Machine Learning,
 Image recognition)
@@ -446,7 +463,7 @@ Here are a few examples:
 Thinkwise applications can synchronize appointments, tasks, e-mails and contacts with Exchange.
 
 ![](assets/overview/exchange.jpg)
-*Architecture of the Exchange connector*
+*The Thinkwise Exchange connector*
 
 Incoming and outgoing e-mails can be enriched in the application so that the exchange with a customer or supplier is fully and quickly transparent.
 Appointments and tasks can be made in the application, then dealt with in Outlook whereupon any changes are passed on to the application.
