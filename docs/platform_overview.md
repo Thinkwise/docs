@@ -21,6 +21,7 @@ The Thinkwise Platform consists of the following components:
 1. Intelligent Application Manager (IAM)
 1. Abstract Graphical User Interfaces (GUIs)
 1. Indicium Application Tier
+1. Upcycler
 
 The Software Factory is used during the development and test phase to develop an application on the basis of a model (blueprint). The graphical user interfaces interpret the model during runtime so that the user can work directly with the application. Once the development is completed, the model is transferred to the Intelligent Application Manager in the production environment.
 
