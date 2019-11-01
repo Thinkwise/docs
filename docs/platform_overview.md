@@ -49,67 +49,6 @@ Subsequently, the modernized screen in a Windows environment:
 ![](assets/overview/modernized_application.jpg)
 *Example of a modernized application*
 
-## Architecture
-
-**Thinkwise applications consist of a data tier, an application tier and a presentation tier (user interfaces).
-The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
-procedures, functions and triggers. The use of C# or Java-based logic is also possible.**
-
-![](assets/overview/indicium_architecture.jpg)
-*Thinkwise Platform Architecture*
-
-### Connectivity
-
-The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
-
-- Artificial Intelligence services (Bots, Virtual Assistants, Machine Learning,
-Image recognition)
-- Big Data solutions (Search, Analytics, Internet of Things)
-- Office integration (Exchange, Office 365, SharePoint)
-- Third party applications (custom user interfaces, financial applications, Power BI)
-
-Third party applications and services in turn can connect to Thinkwise applications with minimal effort using the provided webhooks and REST API. The Thinkwise Application Tier uses the OData protocol for its API, one of the most widely used standards for RESTful web
-services.
-
-Here are a few examples:
-
-#### Exchange Connector
-
-Thinkwise applications can synchronize appointments, tasks, e-mails and contacts with Exchange.
-
-![](assets/overview/exchange.jpg)
-*Architecture of the Exchange connector*
-
-Incoming and outgoing e-mails can be enriched in the application so that the exchange with a customer or supplier is fully and quickly transparent.
-Appointments and tasks can be made in the application, then dealt with in Outlook whereupon any changes are passed on to the application.
-
-Business Intelligence can then be applied to e-mails, appointments and tasks.
-
-#### Web services
-
-SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, all data, processes and business logic of Thinkwise applications is available through web services and can be used by other applications and services.
-
-#### Maps
-
-The user interfaces can visualize geographic data such as locations and routes on maps from various providers, such as Google Maps, MapQuest and Here Maps.
-
-![](assets/overview/maps.jpg)
-*Example of maps integration*
-
-### Security
-
-The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and ADFS, Single Sign-on and multi-factor authentication.
-
-The Thinkwise Intelligent Application Manager provides role-based access control and entity-, row- and field-level
-authorization, while the Application Tier ensures that business rules are respected at all times, even when bulk
-importing data or when interfacing with third party applications.
-
-### Scalability
-
-The Thinkwise Platform is optimized for speed and scalability. The stateless Application Tier can easily be horizontally scaled for load balancing and failover purposes. This allows optimal use of the power of cloud platforms, such as Microsoft Azure, Amazon Web Services, Google Cloud or IBM Cloud.
-
-The Application Tier is developed with the .NET Core framework, making it cross platform and highly optimized for running in (Docker) containers.
-
 ## Software Factory
 
 The process of development with the SF consists of the following phases:
@@ -477,6 +416,67 @@ An example of a smartphone display is given below:
 
 ![](assets/overview/smartphone.jpg)
 *Example screen of the smartphone user interface*
+
+## Indicium Application Tier
+
+**Thinkwise applications consist of a data tier, an application tier and a presentation tier (user interfaces).
+The business logic, which contains customer-specific functionality, is included in the data tier in the form of SQL
+procedures, functions and triggers. The use of C# or Java-based logic is also possible.**
+
+![](assets/overview/indicium_architecture.jpg)
+*Thinkwise Platform Architecture*
+
+### Connectivity
+
+The Thinkwise Indicium Application Tier is the central integration hub of the Thinkwise Platform and provides a solution for all integration challenges. With automated processes and a range of default connectors, the Thinkwise Platform can connect to a wide range of third party services and applications, like:
+
+- Artificial Intelligence services (Bots, Virtual Assistants, Machine Learning,
+Image recognition)
+- Big Data solutions (Search, Analytics, Internet of Things)
+- Office integration (Exchange, Office 365, SharePoint)
+- Third party applications (custom user interfaces, financial applications, Power BI)
+
+Third party applications and services in turn can connect to Thinkwise applications with minimal effort using the provided webhooks and REST API. The Thinkwise Application Tier uses the OData protocol for its API, one of the most widely used standards for RESTful web
+services.
+
+Here are a few examples:
+
+#### Exchange Connector
+
+Thinkwise applications can synchronize appointments, tasks, e-mails and contacts with Exchange.
+
+![](assets/overview/exchange.jpg)
+*Architecture of the Exchange connector*
+
+Incoming and outgoing e-mails can be enriched in the application so that the exchange with a customer or supplier is fully and quickly transparent.
+Appointments and tasks can be made in the application, then dealt with in Outlook whereupon any changes are passed on to the application.
+
+Business Intelligence can then be applied to e-mails, appointments and tasks.
+
+#### Web services
+
+SOAP and JSON/REST services can be called, for instance, to retrieve distances, postal codes and CoC details. Furthermore, all data, processes and business logic of Thinkwise applications is available through web services and can be used by other applications and services.
+
+#### Maps
+
+The user interfaces can visualize geographic data such as locations and routes on maps from various providers, such as Google Maps, MapQuest and Here Maps.
+
+![](assets/overview/maps.jpg)
+*Example of maps integration*
+
+### Security
+
+The Thinkwise Platform is designed with security in mind, following the Security by Design principles. It provides controls to protect the confidentiality and integrity of information and to ensure the availability to authorized users. The Thinkwise Platform supports different authentication protocols, like OpenID and ADFS, Single Sign-on and multi-factor authentication.
+
+The Thinkwise Intelligent Application Manager provides role-based access control and entity-, row- and field-level
+authorization, while the Application Tier ensures that business rules are respected at all times, even when bulk
+importing data or when interfacing with third party applications.
+
+### Scalability
+
+The Thinkwise Platform is optimized for speed and scalability. The stateless Application Tier can easily be horizontally scaled for load balancing and failover purposes. This allows optimal use of the power of cloud platforms, such as Microsoft Azure, Amazon Web Services, Google Cloud or IBM Cloud.
+
+The Application Tier is developed with the .NET Core framework, making it cross platform and highly optimized for running in (Docker) containers.
 
 ## Appendices
 
