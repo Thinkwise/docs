@@ -69,7 +69,7 @@ procedures. Through the Thinkwise Application Tier, it is also possible to conne
 
 ## Software Factory
 
-The process of development with the SF consists of the following phases:
+The process of development with the Software Factory consists of the following phases:
 
 1. Specification
 1. Modeling
@@ -107,6 +107,8 @@ These functional entities are displayed on the horizontal strips. The function f
 ![](assets/overview/business_process.jpg)
 *Example of a function flow diagam*
 
+[*Documentation* ![](assets/overview/link.svg)](sf/business_processes)
+
 #### Requirements
 
 The user and system requirements are subsequently specified for each process. Using the integrated stakeholder portal,
@@ -115,12 +117,15 @@ stakeholders can review and comment on flow diagrams and requirements before acc
 ![](assets/overview/requirement.png)
 *Example of a requirement*
 
+[*Documentation* ![](assets/overview/link.svg)](sf/requirements)
+
 ### Features and iterations
 
 Requirements and work items can be organized using features and iterations. Features can help categorize the work more
 efficiently while iterations facilitate the planning process.
-Features and iterations can be configured completely to your wishes, for example using *applications*, *modules* and *sub-modules* to group features or by using *releases* and
-*sprints* as iterations.
+Features and iterations can be configured completely to your wishes, for example using *applications*, *modules* and *sub-modules* to group features or by using *releases* and *sprints* as iterations.
+
+[*Documentation* ![](assets/overview/link.svg)](sf/features)
 
 ### Work and kanban board
 
@@ -130,7 +135,9 @@ A work item describes what changes to a model or business logic need to be done.
 ![](assets/overview/kanban.png)
 *Work on the kanban board*
 
-### Modeling & Validation
+[*Documentation* ![](assets/overview/link.svg)](sf/work)
+
+### Modeling and Validation
 
 During the modeling phase, the following models are specified:
 
@@ -206,7 +213,7 @@ End users are automatically guided through the application with the help of proc
 
 #### Help
 
-Help text can also be defined in the SF, for each process as well as for each object. The help text can be set up fully multilingual. The user interfaces are context sensitive and immediately display the relevant part of the help text.
+Help text can also be defined in the Software Factory, for each process as well as for each object. The help text can be set up fully multilingual. The user interfaces are context sensitive and immediately display the relevant part of the help text.
 
 ![](assets/overview/help.jpg)
 *Example of the help text*
@@ -221,11 +228,10 @@ The following are examples of this:
 2. Add an update counter column to tables which are updated.
 3. Create indices on standard forms of the user interfaces
 
-As soon as a meta procedure is added, the aspect is automatically added and requires no more
-maintenance if the model is modified or extended.
-SQL must be programmed once for each meta procedure and requires knowledge of the SF database and its concepts.
+As soon as a meta procedure is added, the aspect is automatically added and requires no more maintenance if the model is modified or extended.
+SQL code must be programmed once for each meta procedure and requires knowledge of the Software Factory metadata and its concepts.
 
-### Development & Testing
+### Development and Testing
 
 The last phase of the project consists of programming and testing the business logic.
 
@@ -269,11 +275,11 @@ These tools can be found under the *Projects*, *Deployment* and *Analysis* menus
 
 #### Version control
 
-The continued development of the model of an application takes place in the SF on a version by version basis. By performing a difference analysis between two versions, it is automatically determined what must be modified in the database and business logic. The data in the database is retained and will automatically be converted to the new structure.
+The continued development of the model of an application takes place in the Software Factory on a version by version basis. By performing a difference analysis between two versions, it is automatically determined what must be modified in the database and business logic. The data in the database is retained and will automatically be converted to the new structure.
 
 #### DTAP
 
-Usually a DTAP street is used during development. DTAP stands for the Development - Test - Acceptance - Production process of which every version must pass through. By working in versions the Thinkwise Platform is extremely suitable for this.
+Usually a DTAP street is used during development. DTAP stands for the Development - Test - Acceptance - Production process of which every version must pass through. By working in versions and utilizing *Runtime configurations*, the Thinkwise Platform is extremely suitable for this.
 
 #### Working in teams
 
@@ -495,12 +501,16 @@ The Thinkwise Platform is optimized for speed and scalability. The stateless App
 
 The Application Tier is developed with the .NET Core framework, making it cross platform and highly optimized for running in (Docker) containers.
 
+## Upcycler
+
+> VK
+
 ## Appendices
 
 The appendices consist of the following components:
 
 1. A summary of important properties in the factsheet.
-2. A selection of reference customers that have purchased an application that is built with the SF or have themselves purchased a license for the SF.
+2. A selection of reference customers that have purchased an application that is built with the Thinkwise Platform or have purchased a license for the Thinkwise Platform.
 3. An overview of the measured productivity.
 
 ### Factsheet
