@@ -90,7 +90,7 @@ class Index extends React.Component {
                 },
                 {
                   title: `[Upcycler](https://thinkwisesoftware.docebosaas.com/learn)`,
-                  content: `The Thinkwise Platform Upcycler.`,
+                  content: `Modernise your legacy software with the Thinkwise Upcycler.`,
                   image: `${siteConfig.baseUrl}img/Upcycler.jpg`,
                   imageAlign: 'top',
                   imageLink: 'https://thinkwisesoftware.docebosaas.com/learn',
