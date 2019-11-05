@@ -96,7 +96,9 @@ The development team has access to the components of these phases via the menu o
 
 *Business processes* can be defined in the Software Factory to gain a deeper understanding of the scope and context of the application(s) that will be built.
 *Requirements* can be seen as a contract between the business and the developers, with which the scope of the project is
-continuously monitored. *Work items* are created for requirements to guide the developers during the development phase.
+continuously monitored. *Work items* are created for requirements to guide the developers during the development phase. [![](assets/overview/link.svg)](sf/business_processes)
+
+[*Documentation* ![](assets/overview/link.svg)](sf/business_processes)
 
 #### Business processes
 
@@ -107,8 +109,6 @@ These functional entities are displayed on the horizontal strips. The function f
 ![](assets/overview/business_process.jpg)
 *Example of a function flow diagam*
 
-[*Documentation* ![](assets/overview/link.svg)](sf/business_processes)
-
 #### Requirements
 
 The user and system requirements are subsequently specified for each process. Using the integrated stakeholder portal,
@@ -117,15 +117,11 @@ stakeholders can review and comment on flow diagrams and requirements before acc
 ![](assets/overview/requirement.png)
 *Example of a requirement*
 
-[*Documentation* ![](assets/overview/link.svg)](sf/requirements)
-
 ### Features and iterations
 
 Requirements and work items can be organized using features and iterations. Features can help categorize the work more
 efficiently while iterations facilitate the planning process.
 Features and iterations can be configured completely to your wishes, for example using *applications*, *modules* and *sub-modules* to group features or by using *releases* and *sprints* as iterations.
-
-[*Documentation* ![](assets/overview/link.svg)](sf/features)
 
 ### Work and kanban board
 
@@ -134,8 +130,6 @@ A work item describes what changes to a model or business logic need to be done.
 
 ![](assets/overview/kanban.png)
 *Work on the kanban board*
-
-[*Documentation* ![](assets/overview/link.svg)](sf/work)
 
 ### Modeling and Validation
 
@@ -503,7 +497,20 @@ The Application Tier is developed with the .NET Core framework, making it cross 
 
 ## Upcycler
 
-> VK
+With the Thinkwise Upcycler, a model can be derived from your existing legacy application and imported into the Software Factory.
+Depending on the legacy technology and the available metadata, the derived model already contains tables, columns, domains, controls,
+references, translations, screen types, and more.
+
+The upcycler will also determine which parts of the legacy software are not used anymore and eliminate those parts automatically.
+Next to that, the remaining model can be enriched by analyzing the data combined with the best practices of Thinkwise.
+
+If your legacy software didn’t enforce referential integrity, there may be inconsistencies in your data.
+The Upcycler will automatically detect any data inconsistencies, so these issues can be resolved immediately.
+
+Because the data model has been derived from your legacy software. the Thinkwise Software Factory is able to automatically transform
+and import the data from your legacy application into your new Thinkwise application.
+
+The Upcycler supports the modernisation of more than 30 legacy technologies.
 
 ## Appendices
 

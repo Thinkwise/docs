@@ -73,7 +73,15 @@
     background: #000000;
 }
 
+/* Image in a link */
+
+.post p a img:only-child {
+    outline: 0px;
+    display: inline;
+}
+
 /* Images and captions */
+
 .post p img:first-child,
 article p img:first-child {
     outline: 1px solid #dddddd;
@@ -105,6 +113,8 @@ article em {
 .blockContent a {
     color: black;
 }
+
+/* Index page containers */
 
 .container.paddingTop {
     padding-top: 30px;
