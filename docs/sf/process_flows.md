@@ -434,7 +434,7 @@ The DB connector provides the following input options to establish a database co
 | Parameters  | Optional. An alternative to _Parameters (JSON)_. A comma-separated list of process flow variables to be used as parameters. The command parameter name and datatype will be based on the process variable. |
 | Input parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be input for the command(s). The value will automatically be mapped from the process variable. |
 | Output parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be output in the command(s). <br> Note: the output value will **not** automatically be mapped back to the process variable. |
-| Command delimiter (regex) | Optional. A C# regular expression used to instruct the connector to execute multiple sequential commands on the same connection.<br>For example: `;[^;]*(?:\z\|--go\r\n\|--go\n\|--GO\r\n\|--GO\n)`<br> The _SQL_ value will be split into multiple commands using this regular expression.
+| Command delimiter (regex) | Optional. A C# regular expression used to instruct the connector to execute multiple sequential commands on the same connection.<br> The _SQL_ value will be split into multiple commands using this regular expression.
 | Continue on error | Optional. Use in conjunction with _Command delimiter (regex)_. If an error occurs during command execution, the next command can be executed or the execution can be halted based on this setting.<br>**Yes**<br>**No** (default)
 
 **Parameters (JSON) example**:
@@ -454,6 +454,11 @@ The DB connector provides the following input options to establish a database co
 }]
 ```
 
+**Command delimiter (regex) example**:
+```
+;[^;]*(?:\z|--go\r\n|--go\n|--GO\r\n|--GO\n)
+```
+This example regular expression will split the commands using a semicolon followed by `--GO` in various casings. This is the command delimiting style used by the Software Factory for generated DB2 code.
 
 | Output options    |                                                                                                                                                                                                                                        |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
