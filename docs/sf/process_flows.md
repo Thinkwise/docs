@@ -430,20 +430,48 @@ The DB connector provides the following input options to establish a database co
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Connection string | The connection string that includes the source database name, and other parameters needed to establish the initial connection, for example;<br>SQL Server standard: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; User Id=myUsername; Password=myPassword;`<br>SQL Server Trusted: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; Trusted_Connection=True;`<br>DB2 standard: `Driver={iSeries Access ODBC Driver}; System=myServerAddress; DefaultLibraries=myDataBase; UserId=myUsername; Password=myPassword; CommitMode=2; QueryTimeout=0;`<br>DB2 DSN: `Dsn=myDsnName;Uid=myUsername;Pwd=myPassword` |
 | SQL               | The SQL executed by this process action.                                                                                       |
-| Input parameters  | Optional. A list of parameters used by the SQL.                                                                                |
+| Parameters (JSON) | Optional. A JSON-formatted list of parameters. See example below.
+| Parameters  | Optional. An alternative to _Parameters (JSON)_. A comma-separated list of process flow variables to be used as parameters. The command parameter name and datatype will be based on the process variable. |
+| Input parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be input for the command(s). The value will automatically be mapped from the process variable. |
+| Output parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be output in the command(s). <br> Note: the output value will **not** automatically be mapped back to the process variable. |
+| Command delimiter (regex) | Optional. A C# regular expression used to instruct the connector to execute multiple sequential commands on the same connection.<br> The _SQL_ value will be split into multiple commands using this regular expression.
+| Continue on error | Optional. Use in conjunction with _Command delimiter (regex)_. If an error occurs during command execution, the next command can be executed or the execution can be halted based on this setting.<br>**Yes**<br>**No** (default)
+
+**Parameters (JSON) example**:
+```
+[{
+	"Name": "V_param",
+	"Value": "test",
+	"Type": "VarChar",
+	"Output": true,
+	"Size": 100
+},
+{
+	"Name": "V_param2",
+	"Value": 0,
+	"Type": "Int",
+	"Output": true
+}]
+```
+
+**Command delimiter (regex) example**:
+```
+;[^;]*(?:\z|--go\r\n|--go\n|--GO\r\n|--GO\n)
+```
+This example regular expression will split the commands using a semicolon followed by `--GO` in various casings. This is the command delimiting style used by the Software Factory for generated DB2 code.
 
 | Output options    |                                                                                                                                                                                                                                        |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (empty connection string)<br>-3 - Unsuccessful (no command text)<br>-4 - Unsuccessful (invalid parameter json structure) |
-| Result            | The result of the provided SQL.                                                                                                                                                                                                        |
-| Output parameters | The result of the output parameters of the provided SQL.                                                                                                                                                                               |
-| SQL info message  | Info messages thrown by the executed SQL.                                                                                                                                                                                              |
-| SQL error message | Error messages thrown by the executed SQL.                                                                                                                                                                                             |
-| SQL error code    | Error code thrown by the executed SQL.                                                                                                                                                                                                 |
+| Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (empty connection string)<br>-3 - Unsuccessful (no command text)<br>-4 - Unsuccessful (invalid parameter JSON structure)<br>-5 - Unsuccessful (cannot combine JSON parameters with mapped process variable parameters)<br>-6 - Unsuccessful (input or output parameter was not found as mapped process variable parameter)<br>-7 - Unsuccessful (mapped process variable parameter was not set as input or output)<br>-8 - Unsuccessful (mapped process variable parameter was not found as process variable)<br>-9 - Unsuccessful (could not parse command delimiter regex) |
+| Result            | A JSON-formatted list containing the results of the executed command.<br> When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding results. |
+| Output parameters | A JSON-formatted list of the output parameter and output parameter values of the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding output parameters and output parameter values.|
+| SQL info message  | A JSON-formatted list of info messages thrown by the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding info messages.|
+| SQL error message | Error message thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error message.|
+| SQL error code    | Error code thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error code.|
 
-### Convert json to xml and xml to json
+### Convert JSON to XML and XML to JSON
 
-The conversion between json and xml can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
+The conversion between JSON and XML can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
 
 | Input options     |                                                                                           |
 | ----------------- | ----------------------------------------------------------------------------------------- |
