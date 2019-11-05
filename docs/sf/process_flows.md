@@ -467,7 +467,7 @@ This example regular expression will split the commands using a semicolon follow
 | Output parameters | A JSON-formatted list of the output parameter and output parameter values of the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding output parameters and output parameter values.|
 | SQL info message  | A JSON-formatted list of info messages thrown by the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding info messages.|
 | SQL error message | Error message thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error message.|
-| SQL error code    | Error code throw nwhen opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error code.|
+| SQL error code    | Error code thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error code.|
 
 ### Convert JSON to XML and XML to JSON
 
