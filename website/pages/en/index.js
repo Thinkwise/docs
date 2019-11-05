@@ -25,6 +25,14 @@ class Button extends React.Component {
   }
 }
 
+class Title extends React.Component {
+  render() {
+    return (
+      <div><h1>Header</h1></div>
+    )
+  }
+}
+
 Button.defaultProps = {
   target: '_self',
 };
@@ -35,15 +43,15 @@ class Index extends React.Component {
     //const pinnedUsersToShowcase = siteConfig.users.filter(user => user.pinned);
 
     return (
-        <div className="mainContainer">
-          <Container>
+      <div className="mainContainer">
+          <Container padding={['','']}>
             <GridBlock
               align="center"
               contents={[
                 {
-                  title: `[Overview](${siteConfig.baseUrl}docs/platform_overview.html)`,
+                  title: `[Thinkwise Platform Overview](${siteConfig.baseUrl}docs/platform_overview.html)`,
                   content: 'A high level overview of the Thinkwise Platform.',
-                  image: `${siteConfig.baseUrl}img/Indicium.jpg`,
+                  image: `${siteConfig.baseUrl}img/Overview.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/platform_overview.html`,
                   imageAlt: 'Overview',
@@ -64,6 +72,14 @@ class Index extends React.Component {
                   imageLink: `${siteConfig.baseUrl}docs/iam/iam_general.html`,
                   imageAlt: 'Intelligent Application Manager',
                 },
+              ]}
+              layout="threeColumn"
+            />
+            </Container>
+            <Container background='light' padding={['top','']}>
+            <GridBlock
+              align="center"
+              contents={[
                 {
                   title: `[Indicium Application Tier](${siteConfig.baseUrl}docs/indicium/indicium_general.html)`,
                   content: 'Work with the OData API of the Thinkwise Indicium Application Tier.',
@@ -72,17 +88,10 @@ class Index extends React.Component {
                   imageLink: `${siteConfig.baseUrl}docs/indicium/indicium_general.html`,
                   imageAlt: 'Indicium Application Tier',
                 },
-              ]}
-              layout="fourColumn"
-            />
-            <br />
-            <GridBlock
-              align="center"
-              contents={[
                 {
                   title: `[Upcycler](https://thinkwisesoftware.docebosaas.com/learn)`,
                   content: `The Thinkwise Platform Upcycler.`,
-                  image: `${siteConfig.baseUrl}img/Learn.jpg`,
+                  image: `${siteConfig.baseUrl}img/Upcycler.jpg`,
                   imageAlign: 'top',
                   imageLink: 'https://thinkwisesoftware.docebosaas.com/learn',
                   imageAlt: 'Upcycler',
@@ -98,23 +107,17 @@ class Index extends React.Component {
                 {
                   title: `[Releases](${siteConfig.baseUrl}docs/kb/kb_general.html)`,
                   content: `Learn about Thinkwise Platform releases and updates.`,
-                  image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
+                  image: `${siteConfig.baseUrl}img/Releases.jpg`,
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/kb/kb_general.html`,
                   imageAlt: 'Releases',
-                },
-                {
-                  title: `[Knowledge Base](${siteConfig.baseUrl}docs/kb/kb_general.html)`,
-                  content: `In-depth information on working with the Thinkwise Platform.`,
-                  image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
-                  imageAlign: 'top',
-                  imageLink: `${siteConfig.baseUrl}docs/kb/kb_general.html`,
-                  imageAlt: 'Knowledge Base',
-                },        
+                },      
               ]}
               layout="fourColumn"
             />
-            {/* <GridBlock
+            </Container>
+            <Container padding={['top','']}>              
+            <GridBlock
               align="center"
               contents={[
                 {
@@ -124,7 +127,7 @@ class Index extends React.Component {
                   imageAlign: 'top',
                   imageLink: `${siteConfig.baseUrl}docs/kb/kb_general.html`,
                   imageAlt: 'Knowledge Base',
-                },
+                },  
                 {
                   title: `[Learn](https://thinkwisesoftware.docebosaas.com/learn)`,
                   content: `Become even better with Thinkwise. Follow online courses to learn all about the Thinkwise Platform.`,
@@ -142,41 +145,9 @@ class Index extends React.Component {
                   imageAlt: 'Community',
                 },
               ]}
-              layout="fourColumn"
-            />         */}
-          </Container>  
-            <Container background="light" padding={['top', 'bottom']}>
-              <GridBlock
-                align="left"
-                contents={[
-                  {
-                    title: `[Community](https://community.thinkwisesoftware.com/)`,
-                    content: `Ask a question, submit your idea or get inspired by our blogs in the Thinkwise Community.`, 
-                    image: `${siteConfig.baseUrl}img/Community.jpg`,
-                    imageAlign: 'right',
-                    imageLink: 'https://community.thinkwisesoftware.com',
-                    imageAlt: 'Community',
-                  },
-                ]}
-                layout="twoColumn"
-              /> 
+              layout="threeColumn"
+            />        
           </Container>
-            <Container padding={['top', 'bottom']}>
-              <GridBlock
-                align="left"
-                contents={[
-                  {
-                    title: `[Learn](https://thinkwisesoftware.docebosaas.com/learn)`,
-                    content: `Become even better with Thinkwise. Follow online courses to learn all about the Thinkwise Platform.`,
-                    image: `${siteConfig.baseUrl}img/Learn.jpg`,
-                    imageAlign: 'left',
-                    imageLink: 'https://thinkwisesoftware.docebosaas.com/learn',
-                    imageAlt: 'Learn',
-                  },
-                ]}
-                layout="twoColumn"
-              />            
-            </Container>
         </div>
     );
   }
