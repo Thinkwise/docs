@@ -46,7 +46,7 @@ class Index extends React.Component {
 
     return (
       <div className="mainContainer">
-        {/* <Title /> */}
+        <Title />
         <Container padding={['top']}>
           <GridBlock
             align="center"
