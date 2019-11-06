@@ -18,7 +18,7 @@ The ID of the variant of the table or view to which this Maps configuration appl
 
 **Initial latitude/longitude/zoom level** (optional)
 
-The intitial center coordinates and zoom level of the map.
+The initial center coordinates and zoom level of the map.
 
 **Geocoder** (optional)
 
