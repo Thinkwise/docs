@@ -102,7 +102,7 @@ class Index extends React.Component {
               {
                 title: `[Deployment](${siteConfig.baseUrl}docs/deployment/deployment_general.html)`,
                 content: `Deploying the Thinkwise Platform and applications.`,
-                image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
+                image: `${siteConfig.baseUrl}img/Deployment.jpg`,
                 imageAlign: 'top',
                 imageLink: `${siteConfig.baseUrl}docs/deployment/deployment_general.html`,
                 imageAlt: 'Deployment',
