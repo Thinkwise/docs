@@ -28,7 +28,7 @@ incorrect version number and may have to be renamed.
 ## Previous versions
 
 Versions of the Thinkwise Windows and Web user interfaces *before 2019.2.15*, the Indicium application tier *before 2019.2.5* and the Thinkwise Reporting service *before 4.0* require
-service pack **21** of the Crystel Reports Runtime Engine, due to Crystal Reports [compatibility issues](https://wiki.scn.sap.com/wiki/display/BOBJ/Crystal+Reports%2C+Developer+for+Visual+Studio+Downloads).
+service pack **21** of the Crystal Reports Runtime Engine, due to Crystal Reports [compatibility issues](https://wiki.scn.sap.com/wiki/display/BOBJ/Crystal+Reports%2C+Developer+for+Visual+Studio+Downloads).
 
 Downloads are available for [32 Bit](http://downloads.businessobjects.com/akdlm/cr4vs2010/CRforVS_redist_install_32bit_13_0_20.zip) and [64 Bit](http://downloads.businessobjects.com/akdlm/cr4vs2010/CRforVS_redist_install_64bit_13_0_20.zip).
 
