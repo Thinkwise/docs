@@ -43,8 +43,8 @@ const siteConfig = {
     {doc: 'sf/sf_general', label: 'SF'},
     {doc: 'iam/iam_general', label: 'IAM'},
     {doc: 'indicium/indicium_general', label: 'Indicium'},
-    {doc: 'deployment/deployment_general', label: 'Deployment'},
-    {doc: 'kb/kb_general', label: 'Knowledge base'},
+    // {doc: 'deployment/deployment_general', label: 'Deployment'},
+    // {doc: 'kb/kb_general', label: 'Knowledge base'},
     //{page: 'help', label: 'Help'}
     {blog: true, label: 'Releases'},
   ],
