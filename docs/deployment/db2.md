@@ -28,7 +28,7 @@ Troubleshooting instructions are available here: <http://www-01.ibm.com/support/
 In order to be able to use the expired password functionality for IBM i DB2, it is necessary that service pack `SI44594_64a` or higher is
 installed. You can download the latest service pack [here](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20i%20Technology%20Updates/page/IBM%20i%20Access%20for%20Windows%20-%20Service%20Packs).
 
-## Logging & Tracing
+## Logging and tracing
 
 Logging and tracing DB2 connections can be enabled in the registry using the following keys (32/64 bit):
 
