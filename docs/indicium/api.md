@@ -89,6 +89,10 @@ execute functions and procedures on the database.
 > literals can only occur between the parentheses `( )` after the name of an entity and in the value of the `$filter`
 > query string parameter.
 
+### Subroutines
+
+For security reasons, subroutines are not exposed by the Indicium OData API by default. To expose a subroutine using Indicium, enable the `API` option of the subroutine in the Software Factory. The service name of a subroutine and its parameters can be changed using the `Alias` settings.
+
 ## Supported OData operations
 
 Indicium supports the following OData operations and query string options in the URL:
