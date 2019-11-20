@@ -45,7 +45,7 @@ where they only have to fill in their domain account once as long as the browser
 To be able to fully automatically log in, without manually entering the domain account on your own PC, you should give
 the web server's URL permission to be allowed to use this in your favorite browser.
 
-### IE & Edge
+### IE and Edge
 
 Open *Internet Options* from the browser or Windows settings.
 
