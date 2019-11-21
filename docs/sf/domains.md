@@ -61,7 +61,7 @@ Using a control, you can specify how a column should be displayed in the user in
 
 ### Domain elements
 
-Domain elements have to be defined for the *COMBO* and *RADIO BUTTON* controls. The user can choose from these elements for a column with this domain. The element ID is used in the translation module to translate the elements. The database value is the value that is stored in the database (often numerically, but this is not mandatory).
+Domain elements have to be defined for the *COMBO* and *RADIO BUTTON* controls. The user can choose from these elements for a column with this domain. The element ID is used in the translation module to translate the elements. The database value is the value that is stored in the database (often numerically, but this is not mandatory). It is possible to setup in which order the domain elements should be sorted: the order number (default value) or the translation.
 
 > The domain *gender* has the elements *unknown*, *man* and *woman* with database values 0, 1 and 2. Instead of displaying this as text in a combo box, an icon of a man and woman can now be displayed in the combo box.
 
