@@ -67,21 +67,21 @@ database. Users using RDBMS authentication do need to be created since they will
 
 ```json
 {
-    "Logging": {
-        "IncludeScopes": false,
-        "LogLevel": {
-            "Default": "Information",
-            "System": "Information",
-            "Microsoft": "Warning",
-            "Indicium": "Debug"
-        }
-    },
-    "IAMConnection": {
-        "PoolUserName": "[username]",
-        "PoolPassword": "[password]",
-        "Server": "[server]",
-        "Database": "[iam_database]"
+  "Logging": {
+    "IncludeScopes": false,
+    "LogLevel": {
+      "Default": "Information",
+      "System": "Information",
+      "Microsoft": "Warning",
+      "Indicium": "Debug"
     }
+  },
+  "MetaSourceConnection": {
+    "Server": "[server]",
+    "Database": "[iam_database]",
+    "PoolUserName": "[username]",
+    "PoolPassword": "[password]"
+  }
 }
 ```
 
@@ -106,19 +106,21 @@ needs to be able to send emails to users, which requires some additional configu
 To enable the reset password feature, add the following template to the `appsettings.json` file and fill it out.
 
 ```json
-    "Email": {
-        "SmtpServer": "[server]",
-        "SmtpPort": 25,
-        "UseSSL": true,
-        "SmtpUsername": "[username]",
-        "SmtpPassword": "[password]",
-        "PasswordResetTemplate": {
-            "FromEmail": "[email]",
-            "FromDisplay": "[name]",
-            "Title": "Password reset token",
-            "Body": "Your password reset token is <b>{resetToken}</b>."
-        }
+{
+  "Email": {
+    "SmtpServer": "[server]",
+    "SmtpPort": 25,
+    "UseSSL": true,
+    "SmtpUsername": "[username]",
+    "SmtpPassword": "[password]",
+    "PasswordResetTemplate": {
+      "FromEmail": "[email]",
+      "FromDisplay": "[name]",
+      "Title": "Password reset token",
+      "Body": "Your password reset token is <b>{resetToken}</b>."
     }
+  }
+}
 ```
 > The reset password feature also requires the email address of users to be configured in IAM.
 
@@ -131,14 +133,16 @@ As of version 2019.2.1, Indicium supports SMS authentication. This feature is es
 To enable SMS two-factor authentication, just add the following template to the `appsettings.json` file and fill it out.
 
 ```json
-"SMS": {
-  "Username": "[AccountSID]",
-  "Password": "[AuthToken]",
-  "FromPhoneNumber": "[PhoneNumberProvider]",
-  "DefaultTwoFactorTokenTemplate": "Your validation code is {twoFactorToken}.",
-  "TwoFactorTokenTemplates": {
-    "NL": "Uw validatiecode is {twoFactorToken}",
-    "ENG": "Your validation code is {twoFactorToken}."
+{
+  "SMS": {
+    "Username": "[AccountSID]",
+    "Password": "[AuthToken]",
+    "FromPhoneNumber": "[PhoneNumberProvider]",
+    "DefaultTwoFactorTokenTemplate": "Your validation code is {twoFactorToken}.",
+    "TwoFactorTokenTemplates": {
+      "NL": "Uw validatiecode is {twoFactorToken}",
+      "ENG": "Your validation code is {twoFactorToken}."
+    }
   }
 }
 ```
@@ -149,10 +153,12 @@ To enable SMS two-factor authentication, just add the following template to the 
 By default, the Indicium Application Tier only allows requests coming from the same origin (domain). To enable cross-origin requests, add the allowed origin(s) to the `appsettings.json` file:
 
 ```json
-    "AllowedOrigins": [
-        "[https://www.mydomain.com]",
-        "[https://www.otherdomain.com]"
-    ]
+{
+  "AllowedOrigins": [
+      "[https://www.mydomain.com]",
+      "[https://www.otherdomain.com]"
+  ]
+}
 ```
 
 ## Reverse Proxy Settings
