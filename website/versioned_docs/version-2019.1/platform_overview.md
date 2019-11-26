@@ -145,7 +145,7 @@ Translating the system requirements to an application can be done in multiple wa
 
 The paragraphs of design specifications can be used throughout the modeling process as a to-do list. The SF automatically maintains the traceability between the design specifications and the model.
 
-### Modeling & Validation
+### Modeling and Validation
 
 The following things are specified during the modeling phase:
 
@@ -227,7 +227,7 @@ As soon as a meta procedure is added, the aspect is automatically added and requ
 maintenance if the model is modified or extended.
 SQL must be programmed once for each meta procedure and requires knowledge of the SF database and its concepts.
 
-### Development & Testing
+### Development and Testing
 
 The last phase of the project consists of programming and testing the business logic.
 
