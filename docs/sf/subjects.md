@@ -359,6 +359,14 @@ Mainly, but not only, for Mobile, the screen type for column display is called *
 ![Kaartlijst](assets/sf/image172.png)
 *Example of a card list screen type*
 
+The card list will be displayed by mobile if one of the following conditions are met:
+- The device screen width is 800 pixels or more and..
+  - There is no form, card list or grid configured for the screentype. A form and card list will be shown next to each other.
+  - Combined, there are more than 2 form, card list or grid components configured for the screentype. A form and card list will be shown next to each other.
+- The device screen width is smaller than 800 pixels and..
+  - There is a form and grid configured for the screentype. A card list will be shown.
+  - There is a card list configured for the screentype, but no form. A card list will be shown.
+
 ### Tree
 
 A tree view can be created just by using a screen type which contains a TreeView component and altering some settings for the subject.
