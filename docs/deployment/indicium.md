@@ -185,9 +185,10 @@ Double-check if the server has met the prerequisites mentioned in [Prerequisites
 #### Insufficient access to certificate store
 
 The following error indicates insufficient access rights to the windows certificate store for the application pool identity. 
-Right click on your application pool and go into 'Advanced Settings', make sure that the correct identity is set. Please note that 'Load User Profile' should also be set to **True**
 
 ```System.Security.Cryptography.CryptographicException: The system cannot find the file specified.```
+
+Right click on your application pool and go into 'Advanced Settings' and make sure that the correct identity is set. Please note that 'Load User Profile' should also be set to **True**
 
 #### Log files
 
