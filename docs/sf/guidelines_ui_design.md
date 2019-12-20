@@ -4,8 +4,8 @@ sidebar_label: 📖 User interface design
 ---
 
 This document offers guidance for designing and modeling applications in the Thinkwise Software Factory. The focus is on the User Interface and User Experience (UI/UX) of the intended application. This section explains how concepts from the TSF can best be applied in end applications (Do's) and how they should not (Don’ts/Instead of).
-This document does not go into the various concepts and theories of graphic design in depth. However, this document will provide references to this so that the reader can learn more about the different backgrounds of the graphic design. 
-It is assumed that the reader of this document is familiar with the concept of the TSF and knows the concepts described in this document.
+This document does not go into the various concepts and theories of graphic design in depth. However, this document will provide references to this so that the reader can learn more about the different backgrounds of the graphic design.
+It is assumed that the reader of this document is familiar with the concept of the Thinkwise Platform and knows the concepts described in this document.
 
 ## Use of color
 
@@ -20,7 +20,7 @@ Focal points:
 - Make sure that users with color blindness can use the application.
 - Use of signal colors (see also conditional formatting section):
   - Red colors are usually used when something is wrong, critical or very important.
-  - Orange colors can be used as a signaling color if the priority is not very high but attention is needed. 
+  - Orange colors can be used as a signaling color if the priority is not very high but attention is needed.
   - Green colors are usually used to indicate that something is good.
 
 ## Typography
@@ -57,7 +57,7 @@ Focal points:
 
 - Do not use icons that contain many elements, more than 2 colors or texts; keep it simple. Too many elements on an icon make it unreadable with a smaller display.
 
-  A good example of this are 'Material' icons (see also https://icons8.com/icons/material or https://material.io/resources/icons/).
+  A good example of this are 'Material' icons (see also <https://icons8.com/icons/material> or <https://material.io/resources/icons/>).
 
   ![](assets/sf/ui_design_icons.png)
   
@@ -118,15 +118,15 @@ Focal points:
   
   ![](assets/sf/ui_design_checkbox.png)
   
-  - **Radio button**: apply with a limited (maximum of 4) number of items, where one item is selected. The advantage is that all items are immediately visible. This way, users can quickly compare the options. Icons can be used for the items instead of text if desired. 
+  - **Radio button**: apply with a limited (maximum of 4) number of items, where one item is selected. The advantage is that all items are immediately visible. This way, users can quickly compare the options. Icons can be used for the items instead of text if desired.
   
   ![](assets/sf/ui_design_radio.png)
   
-  - **Dropdown (default)**: apply with a smaller collection of items, where all items are displayed in the dropdown. All items are loaded when a form is opened. This can have an adverse effect on performance. An 'erroneous' selection is deleted when leaving the dropdown. 
+  - **Dropdown (default)**: apply with a smaller collection of items, where all items are displayed in the dropdown. All items are loaded when a form is opened. This can have an adverse effect on performance. An 'erroneous' selection is deleted when leaving the dropdown.
   
   ![](assets/sf/ui_design_combo.png)
   
-  - **Dropdown (suggestion)**: apply to a larger collection of items. The items that can be selected are displayed based on the input. These items are determined in real-time (so the dropdown is not fully loaded in advance). An 'erroneous' input remains visible, with the text being given a predetermined color to indicate that an invalid value has been entered. 
+  - **Dropdown (suggestion)**: apply to a larger collection of items. The items that can be selected are displayed based on the input. These items are determined in real-time (so the dropdown is not fully loaded in advance). An 'erroneous' input remains visible, with the text being given a predetermined color to indicate that an invalid value has been entered.
   
   ![](assets/sf/ui_design_suggestion.png)
   
@@ -157,7 +157,7 @@ Focal points:
   - Use grouped tabs to avoid having too many tabs next to each other. In the example below, stam is a grouped tab. The underlying tabs (medewerkers, adressen, externe toegang and kenmerken) are also related to the topic and could just as easily have been displayed on the top line. However, the coherence would then be lacking and (too) many tabs would be displayed at the main level.
   
     ![](assets/sf/ui_design_tabs_4.png)
-    
+
 ## Conditional layout
 
 With a conditional layout, data that meets certain criteria can be emphasized through deviating colors use and/or deviating fonts.
@@ -175,7 +175,7 @@ Prefilters, tasks and reports can be opened from the ribbon. These can also be i
 
 Focal points:
 
-- Always make toolbars part of the screen types. 
+- Always make toolbars part of the screen types.
 - Use a minimum size of 24px by 24px for the toolbars.
 - Ensure consistency within the different screen types. Always position the toolbars in the same way and in the same order, using the same size. Do not, for instance, reverse the position of the prefilters and tasks in other screen types. This creates confusion for the user.
 - Visually distinguish between prefilters, tasks and reports. For example, by applying different icon packs or shapes in the icons. See also the icons section.
