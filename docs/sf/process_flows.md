@@ -50,6 +50,12 @@ If a process action has been completed and several parallel process steps follow
 
 Process flow starting points determine for which variants a process flow is enabled.
 
+### Process schedules
+
+The execution of a process flow can be planned and will be executed by Indicium. This is only possible when the process flow uses process actions that do not require user input. These include the connectors. One or more schedules can be made for a process flow. One of these schedules can be marked as the default schedule with which the process flow is executed. The application manager in IAM can choose to deviate from this. Schedules cannot be created in IAM.
+
+*Process flow schedule*
+
 ## Process actions
 
 The following process actions are available:
