@@ -24,7 +24,7 @@ After selecting the correct object and logic type a unit test can be created. A 
 ![This image shows the assertion query in the unit test screen](assets/sf/unit_test_assertion_query.png "Assertion query")
 *Assertion query*
 
-When a unit test is created, parameters can be added, for which a distinction is made between input and output parameters. The output parameters will be checked after the unit test has been executed. In addition, the expected messages can be specified. These will also be checked after performing a unit test. When specific data is needed to meet certain conditions in the code, the best practice will be that the unit test doesn't rely on live data. Instead, data sets can be chosen as mock data, which will guarantee that the necessary data is present for the test.
+When a unit test is created, parameters can be added, for which a distinction is made between input, output and row filter.The row filters are used in the where clause when testing update or delete triggers. The output parameters will be checked after the unit test has been executed. In addition, the expected messages can be specified. These will also be checked after performing a unit test. When specific data is needed to meet certain conditions in the code, the best practice will be that the unit test doesn't rely on live data. Instead, data sets can be chosen as mock data, which will guarantee that the necessary data is present for the test.
 
 ![This image shows the mock data selection as detail of the unit test](assets/sf/unit_test_mock_data.png "Mock data")
 *Mock data*
