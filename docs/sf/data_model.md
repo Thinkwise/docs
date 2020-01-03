@@ -74,7 +74,31 @@ Adding new tables, views and snapshots can be done using the tab *Tables* next t
 
 An overview of all tables is accessible via the *Tables* tab page.
 
-![](assets/sf/image89_2018_3.png)*Overview of the 'Tables' tab*
+![](assets/sf/image89_2018_3.png)
+*Overview of the 'Tables' tab*
+
+### Memory optimized
+
+It is possible to specify if the database management system should keep a table into memory to optimize performance. Available options are:
+
+- No
+- Yes (durable)
+- Yes (transient) - *only available for SQL server projects*
+
+More information about memory optimized tables in SQL server can be found see [here](https://docs.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects?view=sql-server-ver15).
+
+For DB2 projects, the property KEEPINMEM will be used. More information about this property can be found [here](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/cl/chglf.htm).
+
+For Oracle project, the option CACHE will be used. More information about this option can be found [here](https://docs.oracle.com/cd/B28359_01/server.111/b28286/statements_7002.htm#i2215507).
+
+### Sytem versioning
+
+It's possible to enable a system-versioned temporal table for a table defined in the Software Factory. When enabled, the Software Factory will create a history table with the name *[table_id]_history* and add the columns *tsf_valid_from* and *tsf_valid_to* to the table. These columns are hidden so the table definition won't change on the database.
+
+This is only implemented for SQL Server, more information can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
+
+
+## Columns
 
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
