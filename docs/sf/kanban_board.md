@@ -8,7 +8,7 @@ Every leaf-level [iteration](iterations) that is currently active is available a
 
 A prefilter can be turned off to show the kanban boards for past and future iterations. 
 
-![](assets/sf/kanban.png)
+![](assets/sf/kanban-2.png)
 *A kanban board*
 
 ## Lanes
