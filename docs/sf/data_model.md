@@ -93,7 +93,7 @@ For Oracle project, the option CACHE will be used. More information about this o
 
 ### Sytem versioning
 
-It's possible to enable a system-versioned temporal table for a table defined in the Software Factory. When enabled the Software Factory will create a history table with the name *[table_id]_history* and add the columns *tsf_valid_from* and *tsf_valid_to* to the table. These columns are hidden so the table definition won't change on the database.
+It's possible to enable a system-versioned temporal table for a table defined in the Software Factory. When enabled, the Software Factory will create a history table with the name *[table_id]_history* and add the columns *tsf_valid_from* and *tsf_valid_to* to the table. These columns are hidden so the table definition won't change on the database.
 
 This is only implemented for SQL Server, more information can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
 
