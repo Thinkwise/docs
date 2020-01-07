@@ -38,7 +38,8 @@
       "sf/themes",
       "sf/messages",
       "sf/translations",
-      "sf/help"      
+      "sf/help",
+      "sf/guidelines_ui_design"
     ],
     "Processes": [
       "sf/tasks",
@@ -140,7 +141,7 @@
   "kb": {
     "Knowledge base": [
       "kb/kb_general",
-      "kb/universal_alpha",
+      "kb/universal_beta",
       "kb/deep_links",
       "kb/exchange",
       "kb/objectmodel_extender_template",

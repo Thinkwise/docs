@@ -211,7 +211,7 @@ passwords back-to-back, a captcha can be used at log in so that the log in proce
 ![](assets/deployment/82284e897204ed22ac24dc98a1e8a12e39a59fb5.png)
 *Captcha*
 
-Use the *LoginCaptchaNoise* and *ResetPasswordCaptchaNoise* [extended properties](https://office.thinkwisesoftware.com/docs/docs/sf/configuration_file.html#other-parameters) to enable the Captcha for login and password reset.
+Use the *LoginCaptchaNoise* and *ResetPasswordCaptchaNoise* [extended properties](../sf/configuration_file#other-parameters) to enable the Captcha for login and password reset.
 
 ### Session timeout
 

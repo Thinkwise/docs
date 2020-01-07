@@ -73,7 +73,15 @@
     background: #000000;
 }
 
+/* Image in a link */
+
+.post p a img:only-child {
+    outline: 0px;
+    display: inline;
+}
+
 /* Images and captions */
+
 .post p img:first-child,
 article p img:first-child {
     outline: 1px solid #dddddd;
@@ -104,4 +112,44 @@ article em {
 
 .blockContent a {
     color: black;
+}
+
+/* Index page containers */
+
+.container.paddingTop {
+    padding-top: 30px;
+}
+
+div.title {
+    background-image: url(https://uploads-eu-west-1.insided.com/thinkwise-en/attachment/2ddb6422-d6a1-40ef-b130-ce99c290a702_thumb.png);
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;   
+    align-items: center; 
+}
+
+div.title h1 {
+    padding-top: 55px;
+    color: #fff;    
+    text-align: center;
+    font-size: 34px;
+    font-family: Open Sans,Montserrat Alternates,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+}
+
+.mainContainer {
+    padding-top: 0px;
+}
+
+.container.mainContainer {
+    padding-top: 40px;
 }
