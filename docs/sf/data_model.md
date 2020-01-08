@@ -93,23 +93,27 @@ For Oracle project, the option CACHE will be used. More information about this o
 
 ### Sytem versioning
 
-SQL Server 2016 introduced support for temporal tables (also known as system-versioned temporal tables) as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011.
+SQL Server 2016 introduced support for temporal tables (also known as system-versioned temporal tables) as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal tables is a database feature that was introduced in ANSI SQL 2011. System versioned tables are tables whose data is maintained in the history tables. This history is maintained by SQL Server itself. 
 
-System versioned tables are tables whose data is maintained in the history tables. This history is maintained by SQL Server itself. All you need is to specify two additional datetime2 columns (tsf_valid_from and tsf_valid_to in applications created with the Software Factory) and a clause with these two columns as:
+In the Software Factory you can activate system versioning by switching on the field System versioning in Tables. This is the only setting that needs to be done by the developer. Since this would cause a datamodel change, the Software Factory will generate code in the CREATE and UPGRADE scripts. The two date fields (*tsf_valid_from* and *tsf_valid_to*) are generated in the script automatically, as hidden fields. However, the Software Factory will NOT create these columns in the Column list in the Software Factory itself. When enabled, the Software Factory will also create a history table with the name *[table_id]_history*. It will also appear in the CREATE and UPGRADE script, and again, you will not find it in the list of tables in the Software Factory. Because of the absence of this table, the settings in Data conversion for the original table will also apply to the history table.
 
-```sql
-PERIOD FOR SYSTEM_TIME(tsf_valid_from, tsf_valid_to)
-```
-
-When you want to name the history table by yourself, you can add the following code: 
+When you want to query data from a table for a certain point in time, you can use *for system_time as of*. For example:
 
 ```sql
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.custimer_history))
+select *
+from customer
+for system_time as of '2019-09-01 T10:00:00.0000000'
 ```
 
-In the Software Factory you can activate system versioning by switching on the field System versioning in Tables. This is the only setting that needs to be done by the developer. Since this would cause a datamodel change, the Software Factory will generate code in the CREATE and UPGRADE scripts. The two date fields (tsf_valid_from and tsf_valid_to) are generated in the script automatically, as hidden fields. However, the Software Factory will NOT create these columns in the Column list in the Software Factory itself. When enabled, the Software Factory will also create a history table with the name *[table_id]_history*. It will also appear in the CREATE and UPGRADE script, and again, you will not find it in the list of tables in the Software Factory. Because of the absence of this table, the settings in Data conversion for the original table will also apply to the history table.
+You will notice that in the result of this example columns *tsf_valid_from* and *tsf_valid_to* are not shown. That's because they are hidden. If you need to see the values of these columns, you have to make these columns explicit in the select list. For example:
 
-This is only implemented for SQL Server, more information can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
+```sql
+select customer_name, tsf_valid_from, tsf_valid_to
+from customer
+for system_time as of '2019-09-01 T10:00:00.0000000'
+```
+
+In the Software Factory this is only implemented for SQL Server. More information about system versioning can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
 
 ## Columns
 
