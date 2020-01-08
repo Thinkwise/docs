@@ -45,11 +45,16 @@ Thinkwise will inform its customers when a database management system version is
 | **SQL Server version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :--------------------: | :----------------------: | :------------------: | :---------------------------: |
 |        2008 R2         |         Jul-2010         |       Jul-2014       |           Oct-2018            |
-|          2012          |         May-2012         |       Jul-2017       |                               |
-|          2014          |         Jun-2014         |       Jul-2019       |                               |
+|          2012          |         May-2012         |       Jul-2017       |          Jan-2020\*           |
+|          2014          |         Jun-2014         |       Jul-2019       |          Jan-2020\*           |
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
 |        2019 RC         |         Aug-2019         |                      |                               |
+
+> \* This currently only applies to the Software Factory development environment.
+> For end products, including the Thinkwise Intelligent Application Manager, SQL Server 2012 and 2014 are still supported **for a limited time**.
+>
+> More information can be found [here](https://community.thinkwisesoftware.com/blogs-21/end-of-sql-server-2012-2014-support-820).
 
 #### DB2 for IBM i
 
@@ -127,9 +132,9 @@ The Thinkwise Universal user interface is currently in Beta and supports the fol
 |       Chrome        |
 |     Firefox 5+      |
 |      Safari 13      |
-|    Microsoft Edge*    |
+|  Microsoft Edge\*   |
 
-(*) Only the new [Chromium-based](https://go.microsoft.com/fwlink/?linkid=2069324&Channel=Stable&language=en) Edge browser is supported.
+(\*) Only the new [Chromium-based](https://go.microsoft.com/fwlink/?linkid=2069324&Channel=Stable&language=en) Edge browser is supported.
 
 ### Mobile Operating Systems
 
