@@ -155,8 +155,8 @@ By default, the Indicium Application Tier only allows requests coming from the s
 ```json
 {
   "AllowedOrigins": [
-      "[https://www.mydomain.com]",
-      "[https://www.otherdomain.com]"
+    "[https://www.mydomain.com]",
+    "[https://www.otherdomain.com]"
   ]
 }
 ```
