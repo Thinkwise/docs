@@ -19,7 +19,7 @@ The image below shows the unit test screen. This is the place to create, maintai
 
 The list on the left shows all the objects for which unit tests can be created. Badges are used to show the amount of existing unit tests. 
 
-After selecting the correct object and logic type a unit test can be created. A title and description can be filled as well as if the unit test should succeed or not, with the *Should abort* checkbox. Certain unit tests (e.g., tasks and triggers) may require that the outcome of the unit test must be verified by queries, also known as assertion. When *Use assertion query* is checked, an assertion query field will appear. This field is filled with an example query by default, showing how the assertion result can be thrown when certain conditions are met.
+After selecting the correct object and logic type a unit test can be created. A title and description can be filled as well as if the unit test should succeed or not, with the *Should abort* checkbox. Certain unit tests (e.g., tasks and triggers) may require that the outcome of the unit test must be verified by queries, also known as assertions. When *Use assertion query* is checked, an assertion query field will appear. This field is filled with an example query by default, showing how the assertion result can be thrown when certain conditions are met.
 
 ![This image shows the assertion query in the unit test screen](assets/sf/unit_test_assertion_query.png "Assertion query")
 *Assertion query*
