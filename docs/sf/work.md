@@ -35,9 +35,10 @@ A work status can be configured to correspond to a certain lane in the [kanban b
 ## Planning
 
 ### Linking (planned) project versions
+
 In order to plan when a work item will be developed a project and project version can be assigned to it. This does not need to be an existing project or project version but can also be a project or project version intended to be created in the future. Note that any name chosen here is not binding and only serves as an indication that the work will take place in a future project version.
 
-A project version can be linked by using the task ![](assets/sf/icons8-group-of-projects-link.svg)*Link (planned) project version*, or by filling the *(Planned) project* and *(Planned) project version* fields in the form.
+A project version can be linked by using the task ![](assets/sf/icons8-group-of-projects-link.svg) *Link (planned) project version*, or by filling the *(Planned) project* and *(Planned) project version* fields in the form.
 
 ![](assets/sf/link_planned_project_vrs.png)
 *Link (planned) project version task*
@@ -46,7 +47,7 @@ Checking the checkboxes in the task pop-up indicates that a future planned proje
 
 ### Creating new project versions
 
-If a work item is linked to a planned project version, this project version can be created directly from the *Work* screen. To do this use the task ![](assets/sf/icons8-add-new.svg)*Create project version or branch*.
+If a work item is linked to a planned project version, this project version can be created directly from the *Work* screen. To do this, use the task ![](assets/sf/icons8-add-new.svg) *Create project version or branch*.
 
 ![](assets/sf/create_new_project_vrs.png)
 *Create new project version or branch task*
