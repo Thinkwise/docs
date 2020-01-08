@@ -43,3 +43,5 @@ When starting the ClickStart executable (TSF_CS.exe), the settings from the *cli
 | Title                | The title of the ClickStart window, for example, *Thinkwise ClickStart* |
 
 For a complete overview of the available settings, see the *clickstart_sample.ini* file provided with the Windows user interface.
+
+> The use of Clickstart is not recommended for terminal server (or virtual app) environments.

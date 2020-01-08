@@ -424,7 +424,7 @@ The SMTP connector provides the following input options with which several prope
 
 ### DB connector
 
-The DB connector provides the following input options to establish a database connection.
+The DB connector provides the following input options to establish a database connection. The command executed by the DB connector has no limit to the wait time, no timeout will occur.
 
 | Input options     |                                                                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |

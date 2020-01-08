@@ -35,6 +35,8 @@ Subroutines are generally used internally by the application and will not be acc
 
 Operation-typed subroutines are always exposed as web services, not through Indicium but through a generated Java or C# SOAP service tier.
 
+An alias can be specified for subroutines and subroutine parameters to supply a different API service name and parameter names, for example if you don't want to use the Thinkwise naming convention (lowercase words separated by underscores) for your third party API.
+
 ## Atomic transaction
 
 One of the settings you can change is to run a procedure-based subroutine as an atomic transaction.
