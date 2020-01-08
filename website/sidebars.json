@@ -45,7 +45,7 @@
       "sf/tasks",
       "sf/reports",
       "sf/custom_screens",
-      "sf/process_flows",
+      "sf/process_flows"
     ],
     "Business Logic": [
       "sf/business_logic",
