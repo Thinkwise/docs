@@ -51,7 +51,7 @@ Process flow starting points determine for which variants a process flow is enab
 
 ### Process schedules
 
-The execution of a process flow can be planned and will be executed by Indicium. This is only possible when the process flow uses process actions that do not require user input. These include the connectors. One or more schedules can be made for a process flow. One of these schedules can be marked as the default schedule with which the process flow is executed. The application manager in IAM can choose to deviate from this. Schedules cannot be created in IAM.
+A process flow can be scheduled for execution by the Indicium service tier. This is only possible when the process flow only uses process actions that do not require user input. These include, for example, the available connectors and adapters. One or more schedules can be defined for a process flow. One of these schedules can be marked as the default schedule with which the process flow is executed. The application manager can choose to deviate from this default schedule in IAM.
 
 ![](assets/sf/process_flow_schedule.png)
 *Process flow schedule*
