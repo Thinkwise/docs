@@ -188,15 +188,7 @@ These headers include:
 
 To make an Indicium installation aware that it is going to be used in a reverse proxy setup, some settings must be added to the `appsettings.json` configuration file.
 
-These settings must be added to a `ReverseProxy` section on the root level of the config file:
-
-```json
-{
-  "ReverseProxy": {
-  }
-}
-```
-
+These settings must be added to a `ReverseProxy` section on the root level of the config file.
 The reverse proxy feature must also be explicitly enabled by setting `Enabled` to `true`:
 
 ```json
