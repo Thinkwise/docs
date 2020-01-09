@@ -44,12 +44,12 @@
       "sf/tasks",
       "sf/reports",
       "sf/custom_screens",
-      "sf/process_flows",
-      "sf/subroutines"
+      "sf/process_flows"
     ],
     "Business Logic": [
       "sf/business_logic",
       "sf/functionality",
+      "sf/subroutines",
       "sf/code_search",
       "sf/code_overview",
       "sf/guidelines_control_procs",
