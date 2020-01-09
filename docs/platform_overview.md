@@ -216,7 +216,7 @@ End users are automatically guided through the application with the help of proc
 ![](assets/overview/process_flow.jpg)
 *Example of a process flow*
 
-Scheduling of process flows allows applications autonomically operate on the background without requiring any user interaction.
+Scheduling of process flows allows applications to autonomically operate on the background without requiring any user interaction.
 
 #### Help
 
@@ -329,7 +329,7 @@ To include a new or existing project version as an application in the IAM, it is
 
 Users of the Thinkwise platform can be authenticated using the Active Directory, the RDBMS or using an account provided by IAM.
 
-Two-factor authentication using e-mail, SMS or TOTP as an extra layer for authentication.
+Two-factor authentication using e-mail, SMS or TOTP can be leveraged as an extra layer of protection.
 
 The Thinkwise Platform can be used as OpenID provider. This will allow users of third-party web applications to login using the same credentials they use to access Thinkwise applications.
 
