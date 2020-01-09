@@ -12,7 +12,8 @@
       "sf/iterations",
       "sf/requirements",
       "sf/work",
-      "sf/kanban_board"
+      "sf/kanban_board",
+      "sf/specification_review"
     ],
     "Projects": [
       "sf/overview",
