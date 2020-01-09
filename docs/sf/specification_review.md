@@ -16,11 +16,16 @@ The stakeholders can participate in the discussion around business processes, re
 - Won't fix
 - Resolved
 
+The status of a comment can be changed via tasks.
+
 > To install a Web GUI for the Software Factory, you can use the same INI as the Windows GUI.
 
 ## Business process diagram review
 
 While reviewing, the discussion is directly visible under the diagram.
+
+![](assets/sf/diagram-review.png)
+*Discussion of a business process diagram*
 
 Double-clicking in the diagram to navigate to a sub-process is currently not possible while reviewing a diagram. Navigation to sub-processes can be done via the tree. Navigation to a *Call activity* or *Pool (black box)* can be done via the button above the tree.
 
@@ -31,6 +36,9 @@ When the diagram has not been published by the analysts after modifications have
 While the specifications are in flux, the stakeholders can have a hard time providing feedback as every refresh can change the set of specifications. In those scenarios, it can be desirable to review the specifications for a fixed point in time, instead of seeing the live version.
 
 Baselines provide a way of identification for a point in time so the stakeholders and analysts are on the same page when it comes to interpreting feedback on a baseline.
+
+![](assets/sf/baseline.png)
+*A set of baselines*
 
 A baseline can be created by specifying a point in time, a version and a description. The baseline can be assigned to users in the Software Factory via the task *Link user to baseline*. When assigned, the users will see the specifications at this point in time. This includes everything that can be viewed via the review menu. The specifications, the status and progress, positioning, attachments and diagrams will all be shown as they were at the point in time of the baseline. 
 
