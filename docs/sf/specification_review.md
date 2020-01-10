@@ -2,12 +2,12 @@
 title: Specification review
 ---
 
-The Software Factory is shipped with a role which allow stakeholders to review the requirements. The role `Specification review` grants access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
+The Software Factory is shipped with a role which allow stakeholders to review the requirements. The role `Specification review` can be granted to stakeholders in IAM, granting access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
 
 ![](assets/sf/specification_review_menu.png)
 *Specification review menu*
 
-Stakeholders must be registered as a `User` in the Software Factory to be able to see any of the specifications. The users can be found in the Settings menu group.
+Stakeholders must also be registered as a user in the Software Factory to be able to see any of the specifications. The users can be found in the [settings](settings) menu group. The user name of the account in IAM must be set as RDBMS user.
 
 The stakeholders will be able to view the business processes, features, iterations, requirements and work. Attachments, tags and the diagrams can also be viewed. The stakeholders cannot modify any of this data.
 
