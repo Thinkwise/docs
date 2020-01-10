@@ -55,6 +55,9 @@ When accessing screens via the review menu, the user can always see which baseli
 
 The set of specifications to review can be limited to a subset for every user by the analyst. By default, the stakeholder has access to all specifications. When specification access is limited, the analyst will have to white-list the business processes, features and iterations the stakeholder has access to.
 
+![](assets/sf/stakeholder-specification-access.png)
+*Configured specification access for a stakeholder, limiting the review to certain business processes, features and iterations*
+
 The specification trees used for granting access correspond to the baseline or the arbitrary point in time configured for the user.
 
 Underlying requirements and work will be visible for the granted business processes, features and iterations and all recursively underlying sub-processes, sub-features and sub-iterations.
