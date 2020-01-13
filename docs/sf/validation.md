@@ -14,11 +14,11 @@ Every screen in the Software Factory has a *Validations* tab page where the vali
 Validations may be conducted at various levels by means of the following tasks:
 
 - Execute all validations
-- Execute validation group - executes all validations of the selected validation group
-- Execute selected validation - executes the selected validation
-- Approve validation message - approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
-- Temporarily approve validation message - approve the validation message (similar to the *Approve validation message* task) until either the project version is copied to a new project version or (when working in a branch) until the branch is merged back to the trunk.
-- Undo approval
+- Execute validation group - Executes all validations of the selected validation group.
+- Execute selected validation - Executes the selected validation.
+- Approve validation message - Approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
+- Temporarily approve validation message - Approve the validation message (similar to the *Approve validation message* task) until either the project version is copied to a new project version or (when working in a branch) until the branch is merged back to the trunk.
+- Undo approval - Removes approval from a previously approved validation message.
 
 ### Status
 
@@ -36,13 +36,13 @@ After execution, an icon indicates the status of each validation:
 
 Prefilters are provided to filter the validation messages:
 
-- Hide approved messages - hides approved messages, default on
-- Info, warning and error - only shows messages at the *information* level and higher 
-- Warning and error - only shows messages at the *warning* level and higher
-- Error - only shows *error* messages
-- New in this version - only shows messages that are new in this project version. For this filter to work, the previous project version must be validated.
-- Assigned to me - only shows messages assigned to the current user.
-- Unassigned - only shows messages that are not assigned to anyone.
+- Hide approved messages - Hides approved messages, default on.
+- Info, warning and error - Only shows messages at the *information* level and higher.
+- Warning and error - Only shows messages at the *warning* level and higher.
+- Error - Only shows *error* messages.
+- New in this version - Only shows messages that are new in this project version. For this filter to work, the previous project version must be validated.
+- Assigned to me - Only shows messages assigned to the current user.
+- Unassigned - Only shows messages that are not assigned to anyone.
 
 ### Assign to developer
 
