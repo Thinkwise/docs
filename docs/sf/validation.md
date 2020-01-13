@@ -18,7 +18,7 @@ Validations may be conducted at various levels by means of the following tasks:
 - Execute selected validation - Executes the selected validation.
 - Approve validation message - Approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
 - Temporarily approve validation message - Approve the validation message (similar to the *Approve validation message* task) until either the project version is copied to a new project version or (when working in a branch) until the branch is merged back to the trunk.
-- Undo approval - Removes approval from a previously approved validation message.
+- Undo approval - Removes (temporary) approval from a previously approved validation message.
 
 ### Status
 
