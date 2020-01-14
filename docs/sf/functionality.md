@@ -146,7 +146,7 @@ A parameter value can also be empty and by checking the *Ignore if empty* check 
 
 Templates can be assigned to one or more logic concepts in the *Assigning* tab page. The left column shows all the program objects available for the selected concept. After selecting a program object, the contents of the program object (*program object items*) are displayed on the bottom right. By using the arrow down button, the template can be woven into the program object.
 
- ![](assets/sf/image274.png)
+ ![](assets/sf/icons8-below.svg)
 
 Logic concepts can be disabled through the settings found in tables, tasks, reports and process actions. This applies for default, layout, context and process program objects.
 
