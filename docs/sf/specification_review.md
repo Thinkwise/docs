@@ -2,12 +2,12 @@
 title: Specification review
 ---
 
-The Software Factory is shipped with a role which allow stakeholders to review the requirements. The role `Specification review` can be granted to stakeholders in IAM, granting access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
+The Software Factory is shipped with a role which allow stakeholders to review the requirements. The role `Specification review` can be granted to stakeholders in IAM. This role grants access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
 
 ![](assets/sf/specification_review_menu.png)
 *Specification review menu*
 
-Stakeholders must also be registered as a user in the Software Factory to be able to see any of the specifications. The users can be found in the [settings](settings) menu group. The user name of the account in IAM must be set as RDBMS user.
+Stakeholders must also be registered as a user in the Software Factory to be able to see any of the specifications. The users can be found in the [Settings](settings) menu group. The user name of the account in IAM must be set as RDBMS user.
 
 The stakeholders will be able to view the business processes, features, iterations, requirements and work. Attachments, tags and the diagrams can also be viewed. The stakeholders cannot modify any of this data.
 
@@ -37,12 +37,14 @@ While the specifications are in flux, the stakeholders can have a hard time prov
 
 Baselines provide a way of identification for a point in time so the stakeholders and analysts are on the same page when it comes to interpreting feedback on a baseline.
 
+Baselines can be accessed by analysist and developers from the specification menu group.
+
 ![](assets/sf/baseline.png)
 *A set of baselines*
 
 A baseline can be created by specifying a point in time, a version and a description. The baseline can be assigned to users in the Software Factory via the task *Link user to baseline*. When assigned, the users will see the specifications at this point in time. This includes everything that can be viewed via the review menu. The specifications, the status and progress, positioning, attachments and diagrams will all be shown as they were at the point in time of the baseline. 
 
-The only exception is the discussion, which always shows the actual comments. When a comment is added while reviewing a point in time, this information will be shared.
+The only exception is the discussion, which always shows all comments. When a comment is added while reviewing a point in time, this information will be added to the new comment.
 
 ![](assets/sf/baseline-comment.png)
 *A review comment including baseline information*
@@ -53,7 +55,7 @@ When accessing screens via the review menu, the user can always see which baseli
 
 ## Limited specification access
 
-The set of specifications to review can be limited to a subset for every user by the analyst. By default, the stakeholder has access to all specifications. When specification access is limited, the analyst will have to white-list the business processes, features and iterations the stakeholder has access to.
+The specifications to review can be limited by the analyst. This is user-specific, every stakeholder can be configured to have access to a different subset of specifications. By default, the stakeholder has access to all specifications. When specification access is limited, the analyst will have to white-list the business processes, features and iterations the stakeholder has access to.
 
 ![](assets/sf/stakeholder-specification-access.png)
 *Configured specification access for a stakeholder, limiting the review to certain business processes, features and iterations*
