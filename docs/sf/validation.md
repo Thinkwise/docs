@@ -35,10 +35,10 @@ After execution, an icon indicates the status of each validation:
 
 Prefilters are provided to filter the validation messages:
 
-- Hide approved messages - hides approved messages, default on
-- Info, warning and error - only shows messages at the *information* level and higher 
-- Warning and error - only shows messages at the *warning* level and higher
-- Error - only shows *error* messages
+- Hide approved messages - hides approved messages, default on.
+- Info, warning and error - only shows messages at the *information* level and higher.
+- Warning and error - only shows messages at the *warning* level and higher.
+- Error - only shows *error* messages.
 - New in this version - only shows messages that are new in this project version. For this filter to work, the previous project version must be validated.
 - Assigned to me - only shows messages assigned to the current user.
 - Unassigned - only shows messages that are not assigned to anyone.
