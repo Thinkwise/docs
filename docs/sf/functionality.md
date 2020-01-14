@@ -75,7 +75,7 @@ begin
   
   if @finished = 1 and @finished_date is null
   begin
-  	set @finished_date = getdate();
+    set @finished_date = getdate();
   end
 
   /* Business logic to fill trace columns */
@@ -102,7 +102,7 @@ The step-by-step plan for creating functionality is discussed in the following p
 
 A new control procedure can be created under the *Control procedure* tab. It is subsequently indicated how this procedure should be assigned: static or via SQL.
 
-Thinkwise recommends entering the name of the developer when creating a control procedure so that if there are any questions about the development, the right developer will always be easily accessible. The developer tests their own template and sets it to complete when it is complete. Since a developer only works on one template at a time, each developer only has one template at the most *under development*. The exception is a group of templates that form a logical unit. The review checkmark is subsequently checked by the project manager. They determine who tests which templates.
+Thinkwise recommends entering the name of the developer when creating a control procedure so that if there are any questions about the development, the right developer will always be easily accessible. The developer tests their own template and sets it to complete when it is complete. The review checkmark is subsequently checked by the project manager. They determine who tests which templates.
 
 ### 2. Add a template
 
@@ -110,7 +110,7 @@ Most procedures have one template for weaving. Hence, the template ID and descri
 
 The source code is subsequently defined in the Code tab of the form.
 
-![](assets/sf/image271.png)
+![](assets/sf/templates.png)
 *Adding code to the Template tab*
 
 The code can be written directly in the Template tab and will be displayed as is usual with an editor such as Notepad++ or SQL Server Management Studio. If the preference is to work directly in the editor itself, you can click on the button next to the code template. A linked editor will open. Changes to the file are automatically reported back to the Software Factory.
@@ -152,7 +152,7 @@ Logic concepts can be disabled through the settings found in tables, tasks, repo
 
 Disabled concepts are displayed in italics. No code is generated for disabled logic concepts and they are not used in the end product. When assigning a template to a disabled concept, this concept will be automatically enabled.
 
-![](assets/sf/image275.png)
+![](assets/sf/assigning.png)
 *Assigning control procedure templates*
 
 A template can be assigned to the same program object item more than once. To do this, the program object item ID of the existing assignment first has to be modified. This can be done in the list of program object items. Also, the sequence of the templates can be changed here by changing the sequence number.
@@ -170,7 +170,7 @@ If a template has parameters, these are automatically created on the *Parameters
 
 If a new template has been woven or the template source code has been changed, then the source code of the program objects have to be regenerated. This can be done by clicking on the *Generate code* button in the *Result* tab page.
 
-![](assets/sf/image279_2019_1.png)
+![](assets/sf/result.png)
 *Result tab page*
 
 The generated program objects can subsequently be deployed to the database by clicking the *Execute* button.
@@ -195,7 +195,9 @@ After creating or modifying business logic, the control procedure can be marked 
 
 This will set the status of the control procedure to *Review* and create a changelog record. The code changelogs, including the code changes, can be found in the *Code changelog* tab page.
 
-![](assets/sf/image283.png)
+If for any reason the control procedure needs more time in development the task *Set status to development* can be used to revert the status back to development.
+
+![](assets/sf/changelog.png)
 *Changelog tab page*
 
 Any changes made to the code, while the status of the control procedure is set to review, will directly be pushed to the changelog and a changelog update message will be added in the comments tab page.
