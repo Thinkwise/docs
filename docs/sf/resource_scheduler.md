@@ -128,7 +128,7 @@ The `date` and the `resource_id` parameter will automatically be filled with the
 ### Drop external row
 
 The External drop task makes it possible to execute a task when a row is dragged onto the scheduler, e.g. a row dragged from a grid.
-Drag drop functionality can be used in the same way as dragging from one grid to another. More information can be found [here](https://office.thinkwisesoftware.com/docs/docs/next/sf/subjects.html#drag-drop).
+Drag drop functionality can be used in the same way as dragging from one grid to another. More information can be found [here](subjects#drag-drop).
 
 A task in the model is needed with at least two parameters:
 

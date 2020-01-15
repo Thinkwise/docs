@@ -45,11 +45,16 @@ Thinkwise will inform its customers when a database management system version is
 | **SQL Server version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :--------------------: | :----------------------: | :------------------: | :---------------------------: |
 |        2008 R2         |         Jul-2010         |       Jul-2014       |           Oct-2018            |
-|          2012          |         May-2012         |       Jul-2017       |                               |
-|          2014          |         Jun-2014         |       Jul-2019       |                               |
+|          2012          |         May-2012         |       Jul-2017       |          Jan-2020\*           |
+|          2014          |         Jun-2014         |       Jul-2019       |          Jan-2020\*           |
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
 |        2019 RC         |         Aug-2019         |                      |                               |
+
+> \* This currently only applies to the Software Factory development environment.
+> For end products, including the Thinkwise Intelligent Application Manager, SQL Server 2012 and 2014 are still supported **for a limited time**.
+>
+> More information can be found [here](https://community.thinkwisesoftware.com/blogs-21/end-of-sql-server-2012-2014-support-820).
 
 #### DB2 for IBM i
 
@@ -103,18 +108,33 @@ Thinkwise will inform its customers when an Internet Information Services versio
 
 ### Browsers
 
+#### Thinkwise Web User Interface
+
 The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more.
 
 (Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201908-201908-bar))
 
 | **Browser version** | **Market share** |
 | :-----------------: | :--------------: |
-|    Chrome (all)     |       71%        |
+|       Chrome        |       69%        |
 |     Firefox 5+      |        9%        |
 |       IE 11.0       |        4%        |
-|     Safari 12.1     |        3%        |
-|       Edge 18       |        3%        |
+|      Safari 13      |        4%        |
+|       Edge 18       |        4%        |
 |      Opera 15+      |        2%        |
+
+#### Thinkwise Universal User Interface
+
+The Thinkwise Universal user interface is currently in Beta and supports the following browsers:
+
+| **Browser version** |
+| :-----------------: |
+|       Chrome        |
+|     Firefox 5+      |
+|      Safari 13      |
+|  Microsoft Edge\*   |
+
+(\*) Only the new [Chromium-based](https://go.microsoft.com/fwlink/?linkid=2069324&Channel=Stable&language=en) Edge browser is supported.
 
 ### Mobile Operating Systems
 

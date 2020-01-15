@@ -149,7 +149,7 @@ that the user stops clicking within the application. The session timeout can be 
 ![](assets/deployment/72f53ce201d1fa8f05ca1e566ac797fcf7fd9552.png)
 *Setting up the session timeout*
 
-## Performance & Tuning
+## Performance and tuning
 
 ### Compression
 
