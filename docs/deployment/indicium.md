@@ -24,7 +24,7 @@ website in the IIS Manager.
 ![AspNetCoreModule](assets/indicium/image%20%285%29.png)
 
 If the module has not been installed yet, then use this link to install it:
-<https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-2.1.7-windows-hosting-bundle-installer>.
+<https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-2.2.7-windows-hosting-bundle-installer>.
 
 ### URL Rewrite Module
 
