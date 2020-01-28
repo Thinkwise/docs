@@ -83,11 +83,14 @@ Example:
 ## Scheduler color webservice
 
 A webservice is available for obtaining the correct color to use when working with colors in the scheduler.
-The webservice may recieve 2 types of colors, hexadecimal colors and rgb colors.
+The webservice can recieve 2 types of colors, hexadecimal colors and rgb colors.
 
 The following URL can be called for getting the right color:
+
 https://schedulercolor.thinkwise.app?hex=FFCCBB
+
 or
+
 https://schedulercolor.thinkwise.app?rgb=255,0,23
 
 The result will give the correct negative int which can be used in your table/view color columns.
