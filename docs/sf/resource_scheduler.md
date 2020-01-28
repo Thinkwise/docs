@@ -17,7 +17,7 @@ The resource table or view should have the following columns:
 - `resource_id` (mandatory, unique)
 - `name` (mandatory)
 - `parent` resource id (optional)
-- `color` (optional, forecolor of the resource)
+- `color` (optional, forecolor of the resource. Get the correct color [here](resource_scheduler#scheduler-color-webservice))
 - `back_color` (optional, back color of the resource which will color the entire row)
 
 The same settings are shown in the extender properties, among some other options:
@@ -39,8 +39,8 @@ The task table or view can have the following columns:
 - `resource_id` (mandatory, determines at which resource the task is linked)
 - `start_date` (mandatory)
 - `end_date` (mandatory)
-- `color` (color of the appointment, these are negative integers, a color pick app is available)
-- `percentage` (progress of the task from 0 to 100, shown in the top of task 6)
+- `color` (mandatory, color of the appointment. Get the correct color [here](resource_scheduler#scheduler-color-webservice))
+- `percentage` (optional, progress of the task from 0 to 100, shown in the top of task 6)
 
 The same settings are shown in the extender properties, among some other options:
 
@@ -62,7 +62,7 @@ They color the background cells with a given color from a start to end date. Col
 - `resource_id` (mandatory, determines at which resource the worktime is linked)
 - `start_date` (mandatory)
 - `end_date` (mandatory)
-- `color` (mandatory)
+- `color` (mandatory, color of the timecell. Get the correct color [here](resource_scheduler#scheduler-color-webservice))
 
 The same settings are shown in the extender properties, among some other options:
 
@@ -71,10 +71,26 @@ The same settings are shown in the extender properties, among some other options
 - Selection limited by resources (optional, true if the visible resources should be included in the where clause of the worktimes query to improve performance)
 - Disabled days (optional, add multiple for each day that has to be shown with another color, e.g. weekend days)
 - Disabled days color (optional, the color for the disabled days)
+- Disabled hours (optional, add multiple for each hour that has to be shown with another color, e.g. work hours)
+- Disabled hours color (optional, the color for the disabled hours)
+- Hidden days (optional, add multiple for each day that has to be hidden, e.g. weekend days)
+- Hidden hours (optional, add multiple for each hour that has to be hidden, e.g. night hours)
 
 Example:
 
 ![](assets/sf/worktimes_table.png)
+
+## Scheduler color webservice
+
+A webservice is available for obtaining the correct color to use when working with colors in the scheduler.
+The webservice may recieve 2 types of colors, hexadecimal colors and rgb colors.
+
+The following URL can be called for getting the right color:
+https://schedulercolor.thinkwise.app?hex=FFCCBB
+or
+https://schedulercolor.thinkwise.app?rgb=255,0,23
+
+The result will give the correct negative int which can be used in your table/view color columns.
 
 ## Tasks
 
