@@ -51,6 +51,9 @@ The only exception is the discussion, which always shows all comments. When a co
 
 When accessing screens via the review menu, the user can always see which baseline is currently active in the breadcrumb. 
 
+![](assets/sf/specification_review_baseline-breadcrumb.png)
+*Reviewing a baseline reveals the date and version of the baseline in the breadcrumb*
+
 > Instead of a baseline, users can also be configured to see the review screens for an arbitrary point in time. This can be leveraged by analysts to choose the correct point in time for a new baseline.
 
 ## Limited specification access
