@@ -27,7 +27,7 @@ While reviewing, the discussion is directly visible under the diagram.
 ![](assets/sf/diagram-review.png)
 *Discussion of a business process diagram*
 
-Double-clicking in the diagram to navigate to a sub-process is currently not possible while reviewing a diagram. Navigation to sub-processes can be done via the tree. Navigation to a *Call activity* or *Pool (black box)* can be done via the button above the tree.
+Double-clicking in the diagram to navigate to a sub-process is currently not possible while reviewing a diagram. Navigation to sub-processes can be done via the tree. Navigation to a *Call activity* or *Pool (black box)* can be done via the button above the tree (![](assets/sf/icons8-right.svg)).
 
 When the diagram has not been published by the analysts after modifications have been made to the diagram, the diagram will include a warning text to indicate this.
 
