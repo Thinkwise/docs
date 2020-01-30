@@ -2,7 +2,7 @@
 title: Specification review
 ---
 
-The Software Factory is shipped with a role which allow stakeholders to review the requirements. The role `Specification review` can be granted to stakeholders in IAM. This role grants access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
+The Software Factory is shipped with a role which allows stakeholders to review the requirements. The role `Specification review` can be granted to stakeholders in IAM. This role grants access to a review menu which can be accessed via the Windows GUI as well as the Web GUI.
 
 ![](assets/sf/specification_review_menu.png)
 *Specification review menu*
