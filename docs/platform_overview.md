@@ -41,7 +41,7 @@ The modernization of software applications takes place with the Thinkwise Upcycl
 
 Each product is discussed separately in the following chapters.
 
-Extensive [online documentation](https://office.thinkwisesoftware.com/docs/) is available for the Software Factory, Intelligent Application Manager, user interfaces and Indicium Application Tier. The requirements for their installation are also described in the documentation.
+Extensive [online documentation](https://docs.thinkwisesoftware.com/) is available for the Software Factory, Intelligent Application Manager, user interfaces and Indicium Application Tier. The requirements for their installation are also described in the documentation.
 
 ### Examples
 

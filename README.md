@@ -1,7 +1,7 @@
 ## Thinkwise Platform Documentation
 
 This project contains all platform related documentation, a knowledge base and information (blog posts) on new releases.
-<https://office.thinkwisesoftware.com/docs/>
+<https://docs.thinkwisesoftware.com/>
 
 ## Build status
 
