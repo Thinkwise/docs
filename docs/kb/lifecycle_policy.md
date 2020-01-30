@@ -49,7 +49,7 @@ Thinkwise will inform its customers when a database management system version is
 |          2014          |         Jun-2014         |       Jul-2019       |          Jan-2020\*           |
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
-|        2019 RC         |         Aug-2019         |                      |                               |
+|          2019          |         Aug-2019         |                      |                               |
 
 > \* This currently only applies to the Software Factory development environment.
 > For end products, including the Thinkwise Intelligent Application Manager, SQL Server 2012 and 2014 are still supported **for a limited time**.
