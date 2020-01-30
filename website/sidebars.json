@@ -99,7 +99,8 @@
     "Intelligent Application Manager": [
       "iam/iam_general",
       "iam/administrators",
-      "iam/user_simulation"
+      "iam/user_simulation",
+      "iam/openid"
     ],
     "Administrator's guide": [
       "iam_dev/projects",
