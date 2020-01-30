@@ -50,3 +50,11 @@ go
 grant alter any login to [login_name]
 go
 ```
+
+## Preferences
+
+### Application preferences
+
+It is possible to hide columns, task parameters and report parameters application wide through application preferences. This therefore applies to all users in all user groups.
+
+![](assets/iam_admin/image22.png)
