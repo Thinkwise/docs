@@ -39,7 +39,8 @@
       "sf/themes",
       "sf/messages",
       "sf/translations",
-      "sf/help"      
+      "sf/help",
+      "sf/guidelines_ui_design"
     ],
     "Processes": [
       "sf/tasks",
