@@ -100,7 +100,7 @@ The step-by-step plan for creating functionality is discussed in the following p
 
 ### 1. Create a control procedure
 
-A new control procedure can be created under the *Control procedure* tab. It is subsequently indicated how this procedure should be assigned: static or via SQL.
+A new control procedure can be created under the *Control procedure* tab. It is subsequently indicated how this procedure should be assigned: static or via SQL. It is possible to switch the assignment type of a control procedure: static to dynamic (control procedure code will be added) or dynamic to static (static assignments will be added).
 
 Thinkwise recommends entering the name of the developer when creating a control procedure so that if there are any questions about the development, the right developer will always be easily accessible. The developer tests their own template and sets it to complete when it is complete. The review checkmark is subsequently checked by the project manager. They determine who tests which templates.
 

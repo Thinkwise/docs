@@ -2,7 +2,7 @@
 title: Validation
 ---
 
-Thinkwise provides a comprehensive set of validations with the Software factory. Validations are carried out on the model to check for errors. These errors are pre-defined and specified in a base project. Consider, for instance, a requirement that a primary key always has to be at the top in a table and that each table has to have a standard sort sequence. It is also possible to create your own, company or product-specific validations.
+Thinkwise provides a comprehensive set of validations with the Software factory. Validations are carried out on the model to check for errors. These errors are pre-defined and specified in a base project. Consider, for instance, a requirement that a primary key always has to be at the top in a table and that each table has to have a standard sort sequence. It is also possible to create your own company or product-specific validations.
 
 ![validations](assets/sf/validations.png)
 *Validation screen*
@@ -14,10 +14,11 @@ Every screen in the Software Factory has a *Validations* tab page where the vali
 Validations may be conducted at various levels by means of the following tasks:
 
 - Execute all validations
-- Execute validation group - executes all validations of the selected validation group
-- Execute selected validation - executes the selected validation
-- Approve validation message - approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
-- Undo approval 
+- Execute validation group - Executes all validations of the selected validation group.
+- Execute selected validation - Executes the selected validation.
+- Approve validation message - Approve a validation message so it will be hidden from the list of messages. By default, error messages cannot be approved, whereas warning or information messages can be approved. When creating your own validations it is possible to deviate from this behaviour, by setting the checkbox ‘Allow approve’.
+- Temporarily approve validation message - Approve the validation message (similar to the *Approve validation message* task) until either the project version is copied to a new project version or (when working in a branch) until the branch is merged back to the trunk.
+- Undo approval - Removes (temporary) approval from a previously approved validation message.
 
 ### Status
 

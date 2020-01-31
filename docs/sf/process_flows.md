@@ -21,7 +21,6 @@ Variables can be used to store data produced by process actions and retain this 
 A new process action is created by clicking on the button in the top right or via the context menu.
 
 ![](assets/sf/image243.png)
-
 After clicking the button, the *Process actions* tab opens to create the new process action.
 
 Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does, and they can be assigned a constant value or a Variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
@@ -49,6 +48,13 @@ If a process action has been completed and several parallel process steps follow
 ### Starting points
 
 Process flow starting points determine for which variants a process flow is enabled.
+
+### Process schedules
+
+A process flow can be scheduled for execution by the Indicium service tier. This is only possible when the process flow only uses process actions that do not require user input. These include, for example, the available connectors and adapters. One or more schedules can be defined for a process flow. One of these schedules can be marked as the default schedule with which the process flow is executed. The application manager can choose to deviate from this default schedule in IAM.
+
+![](assets/sf/process_flow_schedule.png)
+*Process flow schedule*
 
 ## Process actions
 
