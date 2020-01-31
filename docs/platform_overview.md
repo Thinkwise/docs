@@ -216,6 +216,8 @@ End users are automatically guided through the application with the help of proc
 ![](assets/overview/process_flow.jpg)
 *Example of a process flow*
 
+Scheduling of process flows allows applications to autonomically operate on the background without requiring any user interaction.
+
 #### Help
 
 Help text can also be defined in the Software Factory, for each process as well as for each object. The help text can be set up fully multilingual. The user interfaces are context sensitive and immediately display the relevant part of the help text.
@@ -325,12 +327,14 @@ To include a new or existing project version as an application in the IAM, it is
 
 ### Authorization
 
-Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts).
-
-Authorization can be defined down to field level and on cross-sections of data.
+Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts). Authorization can be defined down to field level and on cross-sections of data.
+<a href="sf/roles" target="_blank">![](assets/overview/link.svg)</a>
 
 The users can be authenticated via Active Directory, the RDBMS, IAM authentication or Open ID.
-<a href="sf/roles" target="_blank">![](assets/overview/link.svg)</a>
+
+Two-factor authentication using e-mail, SMS or TOTP can be leveraged as an extra layer of protection.
+
+The Thinkwise Platform can be used as OpenID provider. This will allow users of third-party web applications to login using the same credentials they use to access Thinkwise applications.
 
 ### User preferences
 

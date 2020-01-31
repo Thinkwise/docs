@@ -127,7 +127,7 @@ More information on conditional layouts can be found [here](subjects.html#condit
 
 ## Table tasks
 
-A task can be linked to one or more tables. In these tables, the task will be displayed in the ribbon, the context menu and possibly the task bar. Columns in the table can also be linked to parameters of the task. The value of the field of the active record is passed on to the parameter as a default value.
+A task can be linked to one or more tables. In these tables, the task will be displayed in the ribbon, the context menu and possibly the task bar. Using the checkbox *Enable table task in empty subject* it is possible to setup whether a table task should be enabled by the GUI when there are no records present in the screen. Columns in the table can also be linked to parameters of the task. The value of the field of the active record is passed on to the parameter as a default value.
 
 ### Grouping of tasks
 

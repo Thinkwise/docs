@@ -1,5 +1,7 @@
 ---
 title: Kanban Board
+id: version-2019.2-kanban_board
+original_id: kanban_board
 ---
 
 The kanban board allows developers to keep track of the status of their [work](work). Accessible from the menu, the kanban board opens as a floating document by default, as developers will often keep the kanban board opened and visible while working in the various modelers.
@@ -8,7 +10,7 @@ Every leaf-level [iteration](iterations) that is currently active is available a
 
 A prefilter can be turned off to show the kanban boards for past and future iterations. 
 
-![](assets/sf/kanban-2.png)
+![](assets/sf/kanban.png)
 *A kanban board*
 
 ## Lanes
@@ -17,10 +19,10 @@ The configuration of lanes in the kanban board is determined by the [work](work)
 
 Each individual work status can be configured to correspond to a certain lane in by specifying the *Kanban sequence no*. When left empty, work with this status will not show up in the kanban board. The kanban boards require a minimum of 2 lanes to function and can have up to 5 lanes.
 
-Multiple work statuses can use the same *Kanban sequence no*. This way, work with multiple statuses can be placed in the same lane.
+Multiple work statusses can use the same *Kanban sequence no*. This way, work with multiple statusses can be placed in the same lane.
 
 ![](assets/sf/work-status-list.png)
-*An example work status configuration. Six of the statuses are included in 4 kanban lanes.*
+*An example work status configuration. Six of the statusses are included in 4 kanban lanes.*
 
 ## Work details
 
