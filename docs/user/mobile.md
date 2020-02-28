@@ -169,8 +169,6 @@ means of the cross (X) icon on the bottom right, next to the edit icon.
 It is possible to request data for a specific record by clicking on a row in the
 grid view. The form view will then open.
 
-![](assets/mobile/image18.png)
-
 ![](assets/mobile/image19.png)
 *Opening the form view*
 
@@ -182,7 +180,7 @@ to return from the form to the grid, but also from the grid to the start screen.
 
 ### Opening underlying data
 
-It may happen that data is available 'underneath' other data. For example, a
+It may happen that data is available via other data. For example, a
 customer could also be linked to contacts, projects or sales invoices. These can
 be accessed in the detail menu that can be opened via the *detail menu* button
 ![](assets/mobile/image21.png). This will then be displayed on the screen as a
