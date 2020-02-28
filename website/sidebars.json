@@ -163,6 +163,7 @@
   },
   "user": {
     "User manuals": [
+      "user/winweb",
       "user/mobile"
     ]
   }
