@@ -1,5 +1,6 @@
 ---
 title: Mobile GUI User Manual
+sidebar_label: Mobile
 ---
 
 The purpose of this user manual is to assist the user in learning how to work
@@ -22,7 +23,7 @@ The app can be opened from the list with apps. It is necessary to log in to be
 able to use the app. Enter the user name and password and hit 'Login'. When the
 login details are correct, the contents of the app are displayed.
 
-![](assets/user/image6.png)
+![](assets/mobile/image6.png)
 
 ### Logging in using TOTP
 
@@ -32,7 +33,7 @@ Mobile GUI by using the following steps.
 
 While setting up TOTP in the Mobile GUI, you will be shown the following screen.
 
-![](assets/user/image9.png)
+![](assets/mobile/image9.png)
 *Setting up TOTP on the mobile GUI*
 
 Copy the text code from the Mobile GUI in the authenticator app to connect the
@@ -40,13 +41,13 @@ authenticator with the application. This makes sure that this authenticator will
 be recognized in the future, when logging in on the Mobile or Web GUI. It is
 possible to use any TOTP app from the Apple or Google store.
 
-![](assets/user/image10.png)
+![](assets/mobile/image10.png)
 *Example of an authenticator app "Google authenticator"*
 
 The TOTP app will generate a 6 digit key. This key needs to be entered in the
 Mobile GUI.
 
-![](assets/user/image11.png)
+![](assets/mobile/image11.png)
 *Entering the 6 digit key*
 
 Now the connection is completed. In the future when logging into the Mobile or
@@ -58,7 +59,7 @@ authenticator app you connected to the GUI in the previous steps.
 When the program starts, a screen similar to the one shown in the following
 example is displayed.
 
-![](assets/user/image12.png)
+![](assets/mobile/image12.png)
 *Main screen*
 
 Each screen consists of three parts.
@@ -93,13 +94,13 @@ The quick launch toolbar can be used to start the various parts of the program
 such as a work screen, a task and a report. These components are grouped
 logically.
 
-![](assets/user/image14.png)
+![](assets/mobile/image14.png)
 *Quick launch toolbar with collapsed quick launch toolbar groups*
 
 By clicking open a quick launch toolbar group, the components of that group that
 can be started will be displayed.
 
-![](assets/user/image15.png)
+![](assets/mobile/image15.png)
 *Quick launch toolbar for the expanded quick launch toolbar group 'Sales'*
 
 #### Tiles menu
@@ -110,14 +111,14 @@ tilegroups as tiles. When a tilegroup has just one item, the item will be shown
 as tile instead of the group. Tilegroups have a list icon at the top left to
 distinguish them, as can be seen in the screenshot underneath.
 
-![](assets/user/image16.png)
+![](assets/mobile/image16.png)
 *Tilegroups*
 
 When the user has clicked a tilegroup, the items within this group will be
 shown. Just like the quick launch toolbar, various parts of the program can be
 started by clicking a tile item.
 
-![](assets/user/image17.png)
+![](assets/mobile/image17.png)
 *Tile items*
 
 ## Screen components
@@ -135,7 +136,7 @@ components can be found from chapter 5 onwards.
 The grid contains a summary of the data displayed in a table. These are shown in
 rows. You can navigate through the data by clicking on one of the rows.
 
-![](assets/user/image18.png)
+![](assets/mobile/image18.png)
 *Grid view*
 
 ### Form
@@ -143,7 +144,7 @@ rows. You can navigate through the data by clicking on one of the rows.
 The form contains the data of the currently selected row. Using the form it is
 possible to update and delete this row or add a new row.
 
-![](assets/user/image19.png)
+![](assets/mobile/image19.png)
 *Form View*
 
 ## Grid features
@@ -151,7 +152,7 @@ possible to update and delete this row or add a new row.
 All functionality in the grid section of the screen are dealt with in this
 chapter.
 
-![](assets/user/image18.png)
+![](assets/mobile/image18.png)
 *Grid view*
 
 The grid shows the data of a subject. Since on a mobile device there is not
@@ -168,13 +169,13 @@ means of the cross (X) icon on the bottom right, next to the edit icon.
 It is possible to request data for a specific record by clicking on a row in the
 grid view. The form view will then open.
 
-![](assets/user/image19.png)
+![](assets/mobile/image19.png)
 *Opening the form view*
 
 ##### Return to previous screen
 
 It is always possible to return to the previous screen by means of the *return*
-button ![](assets/user/image20.png). This button therefore makes it possible
+button ![](assets/mobile/image20.png). This button therefore makes it possible
 to return from the form to the grid, but also from the grid to the start screen.
 
 ### Opening underlying data
@@ -182,10 +183,10 @@ to return from the form to the grid, but also from the grid to the start screen.
 It may happen that data is available via other data. For example, a
 customer could also be linked to contacts, projects or sales invoices. These can
 be accessed in the detail menu that can be opened via the *detail menu* button
-![](assets/user/image21.png). This will then be displayed on the screen as a
+![](assets/mobile/image21.png). This will then be displayed on the screen as a
 popup.
 
-![](assets/user/image22.png)
+![](assets/mobile/image22.png)
 *The detail menu*
 
 ### Searching in the grid
@@ -194,7 +195,7 @@ It is possible to search for data in the grid view. To do this, click on the
 search bar above the grid. The search request can be entered here. A message
 will appear on the screen when no data is available.
 
-![](assets/user/image18.png)
+![](assets/mobile/image18.png)
 *Searching in the grid*
 
 ### Deleting data
@@ -206,52 +207,52 @@ the finger pressed on the data and swiping to the right. The delete button now
 appears on the right side of the record. This button will not appear when
 deleting records is not allowed by the developer.
 
-![](assets/user/image23.png)
+![](assets/mobile/image23.png)
 *Deleting data from the grid*
 
 ## Form features
 
 The form contains the data that is selected from the grid view
 
-![](assets/user/image19.png)
+![](assets/mobile/image19.png)
 *Form View*
 
 ### Navigation
 
 ##### Adding data
 
-Add data in the form using the *plus button* ![](assets/user/image24.png) on the top right of the screen.
+Add data in the form using the *plus button* ![](assets/mobile/image24.png) on the top right of the screen.
 
 ##### Editing data
 
-Edit data using the *pen icon* ![](assets/user/image25.png) at the bottom right
+Edit data using the *pen icon* ![](assets/mobile/image25.png) at the bottom right
 of the screen.
 
 ##### Deleting data
 
-Deleting data in the form is done with the *cross icon* ![](assets/user/image26.png) on the bottom right of the
+Deleting data in the form is done with the *cross icon* ![](assets/mobile/image26.png) on the bottom right of the
 screen. It is possible that data cannot be deleted, for example when other data
 depends on it.
 
 ##### Navigating through the data
 
 It is possible to return to the grid with the
-*return button* ![](assets/user/image27.png) in the form bar.
+*return button* ![](assets/mobile/image27.png) in the form bar.
 
 ##### Refreshing the data
 
 Refreshing the data that is currently being
-displayed is done with the *refresh button* ![](assets/user/image28.png) on the bottom left of the screen.
+displayed is done with the *refresh button* ![](assets/mobile/image28.png) on the bottom left of the screen.
 
 ##### Display details
 
-It is possible to open related details using the *menu icon* ![](assets/user/image29.png).
+It is possible to open related details using the *menu icon* ![](assets/mobile/image29.png).
 
 ##### Enable / disable prefilters
 
  t is possible that the developer has
 predefined a number of filters for each subject. These filters, called
-'prefilters', can be enabled and disabled via the *prefilters button* ![](assets/user/image30.png). This allows quick
+'prefilters', can be enabled and disabled via the *prefilters button* ![](assets/mobile/image30.png). This allows quick
 filtering of information. This is discussed in more detail in the following
 paragraphs.
 
@@ -261,13 +262,13 @@ Various input fields are used within the app, each of which have their own
 function. The input fields can also include various states, these states consist
 of:
 
-![](assets/user/image31.png)
+![](assets/mobile/image31.png)
 *Optional input field*
 
-![](assets/user/image32.png)
+![](assets/mobile/image32.png)
 *Required input field*
 
-![](assets/user/image33.png)
+![](assets/mobile/image33.png)
 *Read-only input field*
 
 ##### Default input
@@ -278,7 +279,7 @@ input field is different depending on the type of data that must be entered. A
 number input is used for numbers and a date input for dates. The cross icon can
 be pressed to empty the input field. These are also explained below.
 
-![](assets/user/image31.png)
+![](assets/mobile/image31.png)
 *Default input*
 
 ##### Select data
@@ -286,9 +287,9 @@ be pressed to empty the input field. These are also explained below.
 When a drop down is available, this can be seen by a downwards arrow icon in the
 field.
 
-![](assets/user/image32.png)  
+![](assets/mobile/image32.png)  
 
-![](assets/user/image34.png)
+![](assets/mobile/image34.png)
 *Data grid*
 
 ##### Date input
@@ -297,9 +298,9 @@ If the date is clicked on in the date input field, the date picker will open.
 The date picker provides the possibility to select a date. The date picker can
 be emptied in one go by pressing the cross icon.
 
-![](assets/user/image35.png)  
+![](assets/mobile/image35.png)  
 
-![](assets/user/image36.png)
+![](assets/mobile/image36.png)
 *Date input*
 
 ##### Select data from a lookup
@@ -308,10 +309,10 @@ When a lookup is available, this can be seen by right facing arrow icon in the
 field. A list will appear on the screen when this field is selected. This will
 only happen on a screen with both a list and a form visible.
 
-![](assets/user/image37.png)
+![](assets/mobile/image37.png)
 *Lookup field*
 
-![](assets/user/image38.png)
+![](assets/mobile/image38.png)
 *Tablet view of a lookup list*
 
 ##### Flip switch
@@ -319,10 +320,10 @@ only happen on a screen with both a list and a form visible.
 It may be necessary to confirm or deny something with the help of a flip switch.
 The following two options are possible:
 
-![](assets/user/image39.png)
+![](assets/mobile/image39.png)
 *No, negation*
 
-![](assets/user/image40.png)
+![](assets/mobile/image40.png)
 *Yes, confirmation*
 
 ### Adding data
@@ -332,39 +333,39 @@ has been made available by the developer. When data is being added, there are a
 number of other options (icons) available. These will be explained in more
 detail in this paragraph based on the figure below.
 
-![](assets/user/image43.png)
+![](assets/mobile/image43.png)
 *Adding data in the form*
 
-- Press the *cross* ![](assets/user/image44.png) to empty the input field
-- Press the *checkmark* ![](assets/user/image45.png) at the bottom or at the top of the screen to save the data
-- Press the *cancel icon* ![](assets/user/image46.png) at the bottom of the screen to cancel the input of data
-- Press the *return icon* ![](assets/user/image47.png) at the top left of the screen to return to the previous screen
+- Press the *cross* ![](assets/mobile/image44.png) to empty the input field
+- Press the *checkmark* ![](assets/mobile/image45.png) at the bottom or at the top of the screen to save the data
+- Press the *cancel icon* ![](assets/mobile/image46.png) at the bottom of the screen to cancel the input of data
+- Press the *return icon* ![](assets/mobile/image47.png) at the top left of the screen to return to the previous screen
 
 ##### Popup with cancel or delete
 
 If the action is cancelled during the addition of data, it is possible that a
 confirmation popup appears. This can also occur when deleting a record.
 
-![](assets/user/image48.png)
+![](assets/mobile/image48.png)
 
-![](assets/user/image23.png)
+![](assets/mobile/image23.png)
 *Cancelling or deleting a record*
 
 ### Prefiltering the data
 
 As indicated, it is possible that developers have predefined a number of
 filters, which can be enabled or disabled by the user. When these are available,
-they can be found under the *star icon* ![](assets/user/image49.png). 
+they can be found under the *star icon* ![](assets/mobile/image49.png). 
 
 When pressed, a popup opens with the available prefilters. By selecting one the data
 will be filtered. It is possible that prefilters are enabled as default and
 cannot be disabled by the user. This is chosen by the developer and can only be
 enabled or disabled by the developer.
 
-![](assets/user/image50.png)
+![](assets/mobile/image50.png)
 *Selecting prefilters*
 
 ## Logging out
 
 In the action bar of the *main menu* it is
-possible to close the application by clicking on the *Log out* icon ![](assets/user/image13.png).
+possible to close the application by clicking on the *Log out* icon ![](assets/mobile/image13.png).
