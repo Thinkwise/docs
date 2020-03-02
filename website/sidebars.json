@@ -160,5 +160,11 @@
       "kb/tags",
       "kb/username"
     ]
+  },
+  "user": {
+    "User manuals": [
+      "user/winweb",
+      "user/mobile"
+    ]
   }
 }
