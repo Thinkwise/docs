@@ -1541,8 +1541,8 @@ The editing or deleting of an own prefilter, also takes place via the
 To support the user even better it is possible to call up a help document. In
 this document the developer can specify what the various components within the
 application are used for. The help can be accessed in two ways, via the menu bar
-under the 'Help' ![](assets/winweb/image145.png) button at the top right of
-the screen and by pressing the 'F1' key at an arbitrary place in the
+under the *Help* ![](assets/winweb/image145.png) button at the top right of
+the screen and by pressing the `F1` key at an arbitrary place in the
 application.
 
 ### Help via the menu bar
@@ -1552,9 +1552,9 @@ point for the user to search for himself via the content or via the search
 option. This method is particularly easy when general information about the
 program is sought.
 
-### Help via 'F1'
+### Help via F1
 
-The help via the 'F1' key, the so-called context-sensitive help, leads the user
+The help via the `F1` key, the so-called context-sensitive help, leads the user
 directly to the subject which is selected at that time. A specific explanation
 can be found here about the field that is selected. When a tab and not a field
 is selected then the help for the entire table is displayed. If there is no help
