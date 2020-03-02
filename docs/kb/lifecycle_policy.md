@@ -112,15 +112,15 @@ Thinkwise will inform its customers when an Internet Information Services versio
 
 The Thinkwise Web user interface supports browser versions with a **market share of 2%** or more.
 
-(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-201908-201908-bar))
+(Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-202002-202002-bar))
 
 | **Browser version** | **Market share** |
 | :-----------------: | :--------------: |
 |       Chrome        |       69%        |
-|     Firefox 5+      |        9%        |
-|       IE 11.0       |        4%        |
-|      Safari 13      |        4%        |
-|       Edge 18       |        4%        |
+|     Firefox 5+      |       10%        |
+|      Safari 13      |        6%        |
+|  Microsoft Edge 18  |        4%        |
+|       IE 11.0       |        3%        |
 |      Opera 15+      |        2%        |
 
 #### Thinkwise Universal User Interface
@@ -132,27 +132,26 @@ The Thinkwise Universal user interface is currently in Beta and supports the fol
 |       Chrome        |
 |     Firefox 5+      |
 |      Safari 13      |
-|  Microsoft Edge\*   |
+|   Microsoft Edge    |
 
-(\*) Only the new [Chromium-based](https://go.microsoft.com/fwlink/?linkid=2069324&Channel=Stable&language=en) Edge browser is supported.
+(\*) Only the [new Chromium-based](https://www.microsoft.com/en-us/edge) Edge browser is supported.
 
 ### Mobile Operating Systems
 
-The Thinkwise Mobile user interface supports mobile operating system versions with a **market share of 2%** or more.
+The Thinkwise Mobile user interface supports iOS and Android operating systems versions with a **market share of 2%** or more in Europe and North America.
 
-(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-201908-201908-bar)
-and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/north-america/#monthly-201908-201908-bar))
+(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-202002-202002-bar)
+and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/north-america/#monthly-202002-202002-bar))
 
 | **Mobile OS version** | **Market share** |
 | :-------------------: | :--------------: |
-|       iOS 12.4        |       19%        |
-|       iOS 12.3        |       20%        |
-|       iOS 12.2        |        2%        |
-|       iOS 12.1        |        2%        |
-|      Android 9.0      |       18%        |
-|      Android 8.1      |        5%        |
-|      Android 8.0      |        8%        |
-|      Android 7.1      |        3%        |
-|      Android 7.0      |        5%        |
-|      Android 6.0      |        4%        |
-|      Android 5.1      |        3%        |
+|       iOS 13.3        |       38%        |
+|       iOS 12.4        |        4%        |
+|     Android 10.0      |        7%        |
+|      Android 9.0      |       23%        |
+|      Android 8.1      |        4%        |
+|      Android 8.0      |        5%        |
+|      Android 7.1      |        2%        |
+|      Android 7.0      |        4%        |
+|      Android 6.0      |        3%        |
+|      Android 5.1      |        2%        |
