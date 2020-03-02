@@ -3,22 +3,21 @@ title: Windows and Web GUI User Manual
 sidebar_label: Windows and Web
 ---
 
-The purpose of this user manual is to assist you, as user, in learning how to work
-with a software application developed with the help of the Thinkwise Software
-Factory. We will guide you step by step through all parts of the program so that
-you can become familiar with all the possibilities.
+The purpose of this user manual is to assist the user in learning how to work
+with a software application developed with the Thinkwise Platform.
+This guide takes the reader step by step through all parts of the
+program so that they can become familiar with all the possibilities.
 
 This manual only deals with the standard Thinkwise capabilities such as the
-maintenance of data. Specific process flows, calculations and controls fall
-outside the context of this document. The screen prints that serve as examples,
-will be different from what you see on your screen. This makes no difference
-since the basic Thinkwise functionality works exactly the same in all cases.
+maintenance of data. Specific calculations and controls fall outside the context
+of this document. The screenshots that serve as examples are taken from a
+standard Thinkwise application. The basic Thinkwise functionality works exactly
+the same in all applications.
 
-The examples of the screen prints are based on the 'Project Portal' application
-that is included as standard with the Thinkwise Software. Furthermore the screen
-prints of the user interface are produced with the Windows user interface. It
-can be that you are using the web or mobile user interface that differs in
-detail from the Windows interface.
+The examples of the screen prints are based on the 'Insights' application
+that is included as standard with the Thinkwise Platform.
+Furthermore, the screen prints of the user interface are mostly created using the Windows user interface. It
+can be that you are using the Web user interface, which differs in detail from the Windows interface.
 
 ## Logging in
 
