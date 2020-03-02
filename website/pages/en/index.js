@@ -147,8 +147,16 @@ class Index extends React.Component {
                 imageLink: 'https://community.thinkwisesoftware.com',
                 imageAlt: 'Community',
               },
+              {
+                title: `[User Manuals](${siteConfig.baseUrl}docs/user/winweb.html)`,
+                content: `User manuals for end users of the Thinkwise Windows, Web and Mobile user interfaces.`,
+                image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
+                imageAlign: 'top',
+                imageLink: `${siteConfig.baseUrl}docs/user/winweb.html`,
+                imageAlt: 'User Manuals',
+              },
             ]}
-            layout="threeColumn"
+            layout="fourColumn"
           />
         </Container>
       </div>
