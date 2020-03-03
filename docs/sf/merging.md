@@ -25,7 +25,7 @@ If multiple branches need to be created from the same trunk version, the snapsho
 
 ## Creating a merge session
 
-As soon as the branch project is satisfactorily completed and tested, it can be combined again with the trunk. This can be done in the *Merging* screen. A merge can be started with the help of the *Start merge session* task.
+As soon as the branch project is satisfactorily completed and tested, it can be combined again with the trunk. This can be done in the *Merging* screen. A merge can be started with the help of the *Create merge session* task.
 
 ![](assets/sf/image41_2018_3.png)
 *Pop-up for starting a Merge session*
