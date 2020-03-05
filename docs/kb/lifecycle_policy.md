@@ -14,15 +14,13 @@ Critical hotfixes are provided for all supported versions. Non-critical hotfixes
 
 | **SF and IAM version** | **Lifecycle Start Date** | **Support End Date** |
 | :--------------------: | :----------------------: | :------------------: |
-|          G9.6          |         Jan-2016         |       Jan-2018       |
-|          G9.7          |         Jul-2016         |       Apr-2018       |
-|          G9.8          |         Oct-2016         |       Dec-2018       |
 |         2017.1         |         Jun-2017         |       Jul-2019       |
 |         2018.1         |         Jan-2018         |       Nov-2019       |
-|         2018.2         |         May-2018         |       May-2020       |
-|         2018.3         |         Nov-2018         |       Nov-2020       |
-|         2019.1         |         May-2019         |       Mar-2021       |
-|         2019.2         |         Sep-2019         |                      |
+|         2018.2         |         May-2018         |      _May-2020_      |
+|         2018.3         |         Nov-2018         |      _Nov-2020_      |
+|         2019.1         |         May-2019         |      _Mar-2021_      |
+|         2019.2         |         Sep-2019         |      _Aug-2021_      |
+|         2020.1         |         Feb-2020         |                      |
 
 ### Runtime components
 
@@ -49,10 +47,10 @@ Thinkwise will inform its customers when a database management system version is
 |          2014          |         Jun-2014         |       Jul-2019       |          Jan-2020\*           |
 |          2016          |         Jun-2016         |       Jul-2021       |                               |
 |          2017          |         Sep-2017         |       Oct-2022       |                               |
-|          2019          |         Aug-2019         |                      |                               |
+|          2019          |         Aug-2019         |       Jul-2025       |                               |
 
 > \* This currently only applies to the Software Factory development environment.
-> For end products, including the Thinkwise Intelligent Application Manager, SQL Server 2012 and 2014 are still supported **for a limited time**.
+> For end products, including the Thinkwise Intelligent Application Manager, SQL Server 2012 and 2014 support ends **June 2020**.
 >
 > More information can be found [here](https://community.thinkwisesoftware.com/blogs-21/end-of-sql-server-2012-2014-support-820).
 
@@ -72,9 +70,10 @@ Thinkwise will inform its customers when a database management system version is
 
 | **Oracle Database version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :-------------------------: | :----------------------: | :------------------: | :---------------------------: |
-|            12.1             |         Jul-2013         |       Jul-2018       |                               |
-|            12.2             |         Sep-2016         |       Mar-2022       |                               |
+|           12c R1            |         Jul-2013         |       Jul-2018       |                               |
+|           12c R2            |         Sep-2016         |       Mar-2022       |                               |
 |             18c             |         Feb-2018         |                      |                               |
+|             19c             |         Apr-2019         |                      |                               |
 
 ### .NET Framework
 
@@ -102,9 +101,11 @@ Thinkwise will inform its customers when an Internet Information Services versio
 | :------------------------------: | :----------------------: | :------------------: | :---------------------------: |
 |          7.0 (2008 SP2)          |         Apr-2009         |       Jan-2015       |           Oct-2018            |
 |        7.5 (2008 R2 SP1)         |         Feb-2011         |       Jan-2015       |           Oct-2018            |
-|            8.0 (2012)            |         Oct-2012         |       Oct-2018       |                               |
-|          8.5 (2012 R2)           |         Nov-2013         |       Oct-2018       |                               |
-|            10 (2016)             |         Oct-2016         |       Nov-2022       |                               |
+|            8.0 (2012)            |         Oct-2012         |       Oct-2018       |              \*               |
+|          8.5 (2012 R2)           |         Nov-2013         |       Oct-2018       |              \*               |
+|           10.0 (2016)            |         Oct-2016         |       Nov-2022       |                               |
+
+> \* We strongly advice IIS 10.0 due to the [support](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-10/http2-on-iis) for HTTP/2.
 
 ### Browsers
 
@@ -114,14 +115,16 @@ The Thinkwise Web user interface supports browser versions with a **market share
 
 (Source: [StatCounter Global Stats](http://gs.statcounter.com/browser-version-partially-combined-market-share/desktop/worldwide/#monthly-202002-202002-bar))
 
-| **Browser version** | **Market share** |
-| :-----------------: | :--------------: |
-|       Chrome        |       69%        |
-|     Firefox 5+      |       10%        |
-|      Safari 13      |        6%        |
-|  Microsoft Edge 18  |        4%        |
-|       IE 11.0       |        3%        |
-|      Opera 15+      |        2%        |
+| **Browser version** |
+| :-----------------: |
+|       Chrome        |
+|     Firefox 5+      |
+|      Safari 13      |
+|       Edge 18       |
+|       IE 11.0       |
+|      Opera 15+      |
+
+> The [Chromium-based](https://www.microsoft.com/en-us/edge) Edge browser is also supported.
 
 #### Thinkwise Universal User Interface
 
@@ -132,26 +135,32 @@ The Thinkwise Universal user interface is currently in Beta and supports the fol
 |       Chrome        |
 |     Firefox 5+      |
 |      Safari 13      |
-|   Microsoft Edge    |
+|      Edge 79+       |
 
-(\*) Only the [new Chromium-based](https://www.microsoft.com/en-us/edge) Edge browser is supported.
+> Only the [Chromium-based](https://www.microsoft.com/en-us/edge) Edge browser is supported.
 
 ### Mobile Operating Systems
 
-The Thinkwise Mobile user interface supports iOS and Android operating systems versions with a **market share of 2%** or more in Europe and North America.
+The Thinkwise Mobile user interface supports the latest versions of iOS and Android and previous versions with a **market share of 4%** or more
+for the respective operating systems in either Europe or North America.
 
-(Source: StatCounter Mobile OS Market Share for [Europe](http://gs.statcounter.com/os-market-share/mobile-tablet/europe/#monthly-202002-202002-bar)
-and [North America](https://gs.statcounter.com/os-market-share/mobile-tablet/north-america/#monthly-202002-202002-bar))
+(Source: StatCounter Mobile OS Market Share for iOS in
+[North America](https://gs.statcounter.com/ios-version-market-share/mobile-tablet/north-america/#monthly-202002-202002-bar)
+and [Europe](https://gs.statcounter.com/android-version-market-share/mobile-tablet/north-america/#monthly-202002-202002-bar)
+and Android in
+[North America](https://gs.statcounter.com/android-version-market-share/mobile-tablet/north-america/#monthly-202002-202002-bar)
+and [Europe](https://gs.statcounter.com/android-version-market-share/mobile-tablet/europe/#monthly-202002-202002-bar).)
 
-| **Mobile OS version** | **Market share** |
-| :-------------------: | :--------------: |
-|       iOS 13.3        |       38%        |
-|       iOS 12.4        |        4%        |
-|     Android 10.0      |        7%        |
-|      Android 9.0      |       23%        |
-|      Android 8.1      |        4%        |
-|      Android 8.0      |        5%        |
-|      Android 7.1      |        2%        |
-|      Android 7.0      |        4%        |
-|      Android 6.0      |        3%        |
-|      Android 5.1      |        2%        |
+| **Mobile OS version** |
+| :-------------------: |
+|       iOS 13.3        |
+|       iOS 12.4        |
+|     Android 10.0      |
+|      Android 9.0      |
+|      Android 8.1      |
+|      Android 8.0      |
+|      Android 7.1      |
+|      Android 7.0      |
+|      Android 6.0      |
+|      Android 5.1      |
+
