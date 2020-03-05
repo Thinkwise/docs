@@ -70,9 +70,10 @@ Thinkwise will inform its customers when a database management system version is
 
 | **Oracle Database version** | **Lifecycle Start Date** | **Support End Date** | Thinkwise<br>Support End Date |
 | :-------------------------: | :----------------------: | :------------------: | :---------------------------: |
-|            12.1             |         Jul-2013         |       Jul-2018       |                               |
-|            12.2             |         Sep-2016         |       Mar-2022       |                               |
+|           12c R1            |         Jul-2013         |       Jul-2018       |                               |
+|           12c R2            |         Sep-2016         |       Mar-2022       |                               |
 |             18c             |         Feb-2018         |                      |                               |
+|             19c             |         Apr-2019         |                      |                               |
 
 ### .NET Framework
 
