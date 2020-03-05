@@ -163,3 +163,4 @@ and [Europe](https://gs.statcounter.com/android-version-market-share/mobile-tabl
 |      Android 7.0      |
 |      Android 6.0      |
 |      Android 5.1      |
+
