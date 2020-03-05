@@ -149,8 +149,8 @@ class Index extends React.Component {
               },
               {
                 title: `[User Manuals](${siteConfig.baseUrl}docs/user/winweb.html)`,
-                content: `User manuals for end users of the Thinkwise Windows, Web and Mobile user interfaces.`,
-                image: `${siteConfig.baseUrl}img/Knowledge Base.jpg`,
+                content: `Extensive manuals for end users of the Thinkwise Windows, Web and Mobile user interfaces.`,
+                image: `${siteConfig.baseUrl}img/Manuals.jpg`,
                 imageAlign: 'top',
                 imageLink: `${siteConfig.baseUrl}docs/user/winweb.html`,
                 imageAlt: 'User Manuals',
