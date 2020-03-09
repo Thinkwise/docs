@@ -102,7 +102,7 @@ The step-by-step plan for creating functionality is discussed in the following p
 
 A new control procedure can be created under the *Control procedure* tab. It is subsequently indicated how this procedure should be assigned: static or via SQL.
 
-Thinkwise recommends entering the name of the developer when creating a control procedure so that if there are any questions about the development, the right developer will always be easily accessible. The developer tests their own template and sets it to complete when it is complete. The review checkmark is subsequently checked by the project manager. They determine who tests which templates.
+When a control procedure is created or edited, the name of the developer will automatically be filled in the *Developer* field. If any questions arise about the development, this will allow them to be directed at the right developer.
 
 ### 2. Add a template
 
