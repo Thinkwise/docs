@@ -139,19 +139,6 @@ The Thinkwise Universal user interface is currently in Beta and supports the fol
 
 > Only the [Chromium-based](https://www.microsoft.com/en-us/edge) Edge browser is supported.
 
-#### Thinkwise Universal User Interface
-
-The Thinkwise Universal user interface is currently in Beta and supports the following browsers:
-
-| **Browser version** |
-| :-----------------: |
-|       Chrome        |
-|     Firefox 5+      |
-|      Safari 13      |
-|    Microsoft Edge*    |
-
-(*) Only the new [Chromium-based](https://go.microsoft.com/fwlink/?linkid=2069324&Channel=Stable&language=en) Edge browser is supported.
-
 ### Mobile Operating Systems
 
 The Thinkwise Mobile user interface supports the latest versions of iOS and Android and previous versions with a **market share of 4%** or more
@@ -176,4 +163,3 @@ and [Europe](https://gs.statcounter.com/android-version-market-share/mobile-tabl
 |      Android 7.0      |
 |      Android 6.0      |
 |      Android 5.1      |
-
