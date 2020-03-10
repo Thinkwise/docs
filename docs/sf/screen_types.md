@@ -145,4 +145,20 @@ The *Screen components* tab displays an overview of the components on the select
 
 The height or width of components can be set to a fixed number of pixels or a percentage. Depending on the orientation of the component, the width or height including units (pixels or percentage) need to be modified, and the option *Fix on resize* needs to be on.
 
+### Breakpoints
+
+Responsive screen type design means to design screen types that work well on mobile, tablet, *and* desktop devices. Using breakpoints in combination with screen types, a responsive screen can be setup. Breakpoints are the point at which your GUI will respond by changing the screen type to present the data with the best possible layout. 
+
+For every screen type one or more breakpoints can be defined. A breakpoint consists of a Breakpoint in pixels and a Breakpoint screen type. When the width of a screen type becomes smaller than the defined number of pixels in Breakpoint, then the screen type will change to the Breakpoint screen type.
+
+It is even possible to define more breakpoints:
+
+| Breakpoint (px) | Breakpoint screen type |
+| --------------- | ---------------------- |
+| 600             | master_detail          |
+| 400             | card_list_form         |
+| 200             | card_list_only         |
+
+In this situation the screen type in the GUI becomes *master_detail* when the number of pixels is between 400 and 600.  When the screen is made smaller, between 200 and 400 pixels, the GUI switches the screen type to *card_list_form*. And when the screen is smaller than 200 pixels, the GUI will show screen type *card_list_only*.
+
 
