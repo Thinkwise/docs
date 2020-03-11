@@ -442,8 +442,8 @@ These procedures return the following information about the call to the Exchange
 
 Possible exit codes:
 
-| Exit code | Cause                                                                                                              |
-| --------- | ------------------------------------------------------------------------------------------------------------------ |
+| Exit&nbsp;code | Cause                                                                                                              |
+| :---------: | ------------------------------------------------------------------------------------------------------------------ |
 | **0**     | The procedure has been executed without any problem. It is possible to use the output value.                       |
 | **1**     | A general error has occurred. Check the value of the `error_message` for more information.                         |
 | **521**   | The Exchange Connector is offline. Check if the Exchange Service is running and if it can connect to the database. |
@@ -705,13 +705,15 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 
 - To test the AutoDiscover and impersonation account, use this online Microsoft tool: <https://www.testexchangeconnectivity.com/>
 
-- When viewing the log feed via the console or via a TCP connection, filters can be placed on the type of message by typing the letters of the required messages:
-
-  - **E**rrors
-  - **W**arnings
-  - **A**ctions
-  - **M**essages
-
+- When viewing the log feed via the console or via a TCP connection, filters can be placed on the type of message by typing the first character(s) of the requested  messages:
+  
+  | Character | Filter |
+  | :---: | --- | 
+  | E | Errors |
+  | W | Warnings | 
+  | A | Actions | 
+  | M | Messages | 
+  
   For example:
 
   - `ew <enter>`
@@ -720,12 +722,12 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 
 - In the event of a crash or a crash of the Exchange Connector, create a memory dump of the ExchangeSyncService process (via the task manager) to assist Thinkwise in debugging the error.
 
-- The Exchange Connector distinguishes between NULL and an empty string:
+- The Exchange Connector distinguishes between `NULL` and an empty string `''`:
 
-  - NULL: leave value unchanged
+  - `NULL`: leave value unchanged
   - Empty string: clear value
 
-- For appointments with required or optional attendees: the appointments are created with the same app_item_id. It is therefore necessary to filter on `exh_user` in the `from_exh` procedures.
+- For appointments with required or optional attendees: the appointments are created with the same *app_item_id*. It is therefore necessary to filter on `exh_user` in the `from_exh` procedures.
 
 ## Troubleshooting
 
