@@ -20,8 +20,8 @@ The Thinkwise Exchange Connector works for both SQL Server and DB2 Thinkwise app
 
 The figure below shows an overview of the Thinkwise Exchange Connector.
 
-![1539086884933](assets/exchange/1539086884933.png)
-_Thinkwise Exchange Connector overview_
+![](assets/exchange/1538730475285.png)
+*Thinkwise Exchange Connector overview*
 
 The Thinkwise Exchange Connector is able to find the relevant Exchange server itself using the AutoDiscover Service. Synchronization is done using SOAP web services that enable communication between the Thinkwise Exchange Connector and the Exchange server.
 
