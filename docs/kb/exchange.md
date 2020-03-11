@@ -21,7 +21,7 @@ The Thinkwise Exchange Connector works for both SQL Server and DB2 Thinkwise app
 The figure below shows an overview of the Thinkwise Exchange Connector.
 
 ![1539086884933](assets/exchange/1539086884933.png)
-*Thinkwise Exchange Connector overview*
+_Thinkwise Exchange Connector overview_
 
 The Thinkwise Exchange Connector is able to find the relevant Exchange server itself using the AutoDiscover Service. Synchronization is done using SOAP web services that enable communication between the Thinkwise Exchange Connector and the Exchange server.
 
@@ -78,7 +78,7 @@ To retrieve the binary data from an attachment, a separate call to the Thinkwise
 
 To determine the attachment name and attachment ID for this, a table-valued function `exh_split_attachment_info` is generated when the Exchange 365 base project is linked. This function splits the above attachment string into a table with two columns, after which a cursor can be walked through, for example.
 
-It is not yet possible to *add* an attachment to an item.
+It is not yet possible to _add_ an attachment to an item.
 
 ## Operation
 
@@ -131,7 +131,7 @@ end
 
 With the `exh_sync_item` stored procedure, it is possible to re-synchronize (part of) the Exchange items to the database (for example, after long-term disruptions or for new users).
 
-This stored procedure can be given a user name for which the items have to be synchronized. It can also be indicated which items should be synchronized: Agenda items (0), contacts (1), emails (2) or tasks (3). In addition, it can be indicated between which dates these items should fall and whether additional, modified  or removed items have to be included.
+This stored procedure can be given a user name for which the items have to be synchronized. It can also be indicated which items should be synchronized: Agenda items (0), contacts (1), emails (2) or tasks (3). In addition, it can be indicated between which dates these items should fall and whether additional, modified or removed items have to be included.
 
 For example:
 
@@ -182,12 +182,31 @@ The following components are required before the Thinkwise Exchange Connector ca
 
 A number of components are required for the installation of the Thinkwise Exchange Connector:
 
+- Exchange base project
 - Assemblies on the database (SQL Server Thinkwise applications)
 - Java files on database server (DB2 Thinkwise applications)
-- Exchange base project
 - Exchange Connector service
 
 The installation of each part is explained in the chapters below.
+
+### Exchange base project
+
+The Exchange Connector datamodel and business logic is added to an application by including the `SQLSERVER_EXCHANGE_365` or `DB2_EXCHANGE_365` base project to your project version, depending on the database management system that is used.
+
+> ⚠ Always use the **`EXCHANGE_365`** base project, also for local Exchange servers. The `EXCHANGE` base projects is deprecated and included for backward compatibility only.
+
+New tables and business logic is added on generation, which influences the existing database of the Thinkwise application. Make sure to create a new project version before adding the base project, for the Thinkwise platform to be able to upgrade the existing database.
+
+Add the base project in the Software Factory:
+
+![1539086911630](assets/exchange/1539086911630.png)
+_Linking the base project_
+
+After generating the project version, additional tables and procedures will have been added to the model. These are required to receive and manage the Exchange data that can come from the Thinkwise Exchange Connector.
+
+The base project does not provide the tables to actually store the synchronized data, it only contains a temporary table that is emptied after each action with the Thinkwise Exchange Connector. So, for example, the email items themselves have to be created with a table with, for instance, the name `email_item`. This should contain the same columns as the temporary table, which can easily be copied in the SF.
+
+The table can then be filled with the synchronized data by creating code templates and assinging these templates to the `exh_from_exh_` stored procedures.
 
 ### Assemblies (SQL Server)
 
@@ -210,7 +229,7 @@ Two assemblies have to be installed on the database using an asymmetric key and 
 
 ![1539086818018](assets/exchange/1539086818018.png)
 
-These have to be created on the Master database. No existing login may be used. The *dll* and *pfx* files first have to be placed on the server in a folder that SQL Server can access. This folder has to have full access rights for everyone, as well.
+These have to be created on the Master database. No existing login may be used. The _dll_ and _pfx_ files first have to be placed on the server in a folder that SQL Server can access. This folder has to have full access rights for everyone, as well.
 
 ```sql
 USE master
@@ -224,7 +243,7 @@ CREATE LOGIN SQLTCPExhItemSender FROM ASYMMETRIC KEY SQLTCPExhItemSender
 GO
 ```
 
- Provide external access for the created login.
+Provide external access for the created login.
 
 ```sql
 USE master
@@ -283,7 +302,7 @@ The supplied jar files have been compiled with the target Java 1.6. If these are
 
 To install the jar files, perform the steps in the example below. In this example, EXH_300 is used as the schema where the files are to be installed.
 
-1. Copy the jar-files to the database server (for example  `Root/home/EXH_300`).
+1. Copy the jar-files to the database server (for example `Root/home/EXH_300`).
 2. Open a SQL window to execute queries.
 3. Call the `sqlj.install_jar` procedure to install the jar-files in the schema.
 
@@ -311,25 +330,6 @@ Root/QIBM/UserData/OS400/SQLLib/Function/jar/EXH_300
 
 > The jar files at this location should not be deleted manually. Use `sqlj.remove_jar` for this. For more information, see [this](https://publib.boulder.ibm.com/iseries/v5r2/ic2924/index.htm?info/rzaha/jsqlrout.htm) link.
 
-### Exchange base project
-
-The Exchange connector is added to a project by including the EXCHANGE base project in your application.
-
-Additional tables are generated by adding the base project, which influences the existing database of the Thinkwise application. Before the base project can be added, a new project version first has to be created for the project (see Software Factory manual).
-
-For DB2 applications, the *DB2_EXCHANGE_365* base project needs to be linked and for SQL Server applications, the *SQLSERVER_EXCHANGE_365* base project.
-
-Add the base project in the Software Factory:
-
-![1539086911630](assets/exchange/1539086911630.png)
-*Linking the base project*
-
-If the project has now been generated and executed, additional tables and procedures will have been added to the database. These are required to receive and manage the Exchange data that can come from the Thinkwise Exchange Connector.
-
-The base project does not provide the tables to actually store the synchronized data, it only contains a temporary table that is emptied after each action with the Thinkwise Exchange Connector. So, for example, the email items themselves have to be created with a table with, for instance, the name `email_item`. This should contain the same columns as the temporary table, which can easily be copied in the SF.
-
-The table can then be filled with the synchronized data by filling in the `exh_from_exh_` stored procedures.
-
 ### Exchange Connector service
 
 Now that the base project is linked to the Thinkwise application, the Thinkwise Exchange Connector can be installed. The necessary steps are explained in the following subchapters.
@@ -339,12 +339,12 @@ Now that the base project is linked to the Thinkwise application, the Thinkwise 
 The Exchange Connector is installed with the MSI setup file supplied by Thinkwise. A connection string can be specified during the installation (this can also be done afterwards).
 
 ![1539086938829](assets/exchange/1539086938829.png)
-*Exchange Sync Service*
+_Exchange Sync Service_
 
 The credentials of the impersonation user have to be entered to install the service. The service is also started later with the same user.
 
 ![1539086958513](assets/exchange/1539086958513.png)
-*Set Service Login*
+_Set Service Login_
 
 The service can be installed multiple times on the same server to monitor different databases. To do this, make a copy of the installation folder and adjust the configuration. With the following command, the service can be installed under a different name (as administrator):
 
@@ -406,7 +406,7 @@ The Thinkwise Exchange Connector is configured using the `ExchangeSyncService.ex
 The Exchange Connector can be monitored with Telnet. To do this, set up a connection with the Exchange Connector server to the port specified at installation or in the configuration file:
 
 ![1539086983584](assets/exchange/1539086983584.png)
-*Setup a Telnet connection*
+_Setup a Telnet connection_
 
 With more advanced Telnet applications, such as PuTTy, this logging can also be written to a file.
 
@@ -420,12 +420,12 @@ It will process the data according to its own implementation and store it, for e
 
 #### Implementation
 
-If after testing it appears that everything is functioning properly, the Thinkwise Exchange Connector can be put into use. The ExchangeSync service can be set to *Auto start* in the Windows services configuration so that it always starts when the server starts.
+If after testing it appears that everything is functioning properly, the Thinkwise Exchange Connector can be put into use. The ExchangeSync service can be set to _Auto start_ in the Windows services configuration so that it always starts when the server starts.
 
 The Thinkwise Exchange service can also be executed as a console application. This means that a command prompt opens and all actions that the Connector does are followed. This can be done by running `ExchangeSync.exe` under the account that has impersonation rights. However, it is necessary to set up the file `ExchangeSync.exe.config` correctly. These settings can be copied from the file `ExchangeSyncService.exe.config`
 
 ![1539087005067](assets/exchange/1539087005067.png)
-*Starting a console application with impersonation*
+_Starting a console application with impersonation_
 
 ## Business logic
 
@@ -438,42 +438,65 @@ These procedures return the following information about the call to the Exchange
 1. An `exit_code` which indicates whether the procedure has been carried out successfully, see below.
 2. An `output_value` that returns the result of the call, for example the Exchange `item id` after synchronizing an item to Exchange.
 
-3. An `error_message`  containing the message in case of an error.
+3. An `error_message` containing the message in case of an error.
 
 Possible exit codes:
 
-| Exit code | Cause                                                        |
-| --------- | ------------------------------------------------------------ |
-| **0**     | The procedure has been executed without any problem. It is possible to use the output value. |
-| **1**     | A general error has occurred. Check the value of the `error_message` for more information. |
+| Exit code | Cause                                                                                                              |
+| --------- | ------------------------------------------------------------------------------------------------------------------ |
+| **0**     | The procedure has been executed without any problem. It is possible to use the output value.                       |
+| **1**     | A general error has occurred. Check the value of the `error_message` for more information.                         |
 | **521**   | The Exchange Connector is offline. Check if the Exchange Service is running and if it can connect to the database. |
-| **522**   | Connecting to the Exchange Service failed. Check the value of the `error_message` for more information. |
+| **522**   | Connecting to the Exchange Service failed. Check the value of the `error_message` for more information.            |
 
 ### User registration
 
 The Exchange Connector retrieves the users that need to be synchronized from the end product by calling the stored procedure `exh_get_users`. It is important that the watermark from the `exh_watermark` table is also returned.
 
+To add this code to the `exh_get_users` stored procedure, create a new control procedure `exh_get_users` for the _procedures_ code group and add a template to the following:
+
 ```sql
 select
-    u.exh_user,
+    u.exh_user, -- email address of the user
     w.exh_watermark_calendar,
     w.exh_watermark_contact,
     w.exh_watermark_email,
     w.exh_watermark_task,
-    u.sync_calendar,
-    u.sync_contact,
-    u.sync_email,
-    u.sync_task
+    1 as sync_calendar,
+    1 as sync_contact,
+    1 as sync_email,
+    1 as sync_task
 from [my_user_table] u
 left join exh_watermark w
   on w.exh_user = u.exh_user
 ```
 
+Next, assign this template to the `proc_exh_get_users` program object.
+
 ### From Exchange to the database
 
-The Exchange Connector calls the `exh_from_exh` stored procedures for new or changed items.
+The Exchange Connector calls the `exh_from_exh_[action]_[type]` stored procedures for new or changed items.
 
-#### Create and update
+Available actions and item types (any combination is allowed):
+
+| Actions |  Types   |
+| :-----: | :------: |
+|   add   | calendar |
+|   chg   | contact  |
+|   del   |  email   |
+|         |   task   |
+
+A list of available fields for every item type can be found in the `exh_temp_[type]_item` tables that are added to the applications model after generation.
+
+To assign code templates to these stored procedures, create a new control procedure `exh_from_exh` for the _procedures_ code group and add templates for adding/changing and deleting Exchange items.
+
+#### Adding and changing items
+
+The same template can be used for adding and changing items.
+
+Assign this template to the `proc_exh_from_exh_add_[type]` and the `proc_exh_from_exh_chg_[type]` program objects.
+
+For example, to store _calendar_ items in table `my_calendar_table`:
 
 ```sql
 if exists (
@@ -518,18 +541,23 @@ end
 
 #### Delete
 
- ```sql
+Deleting items can be achieved using the following template:
+
+```sql
 delete from [my_calendar_table]
 where @exh_user = exh_user
-  and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id)
-       or (exh_item_id is null and exh_app_item_id = @exh_app_item_id))
- ```
+ and ((exh_item_id collate Latin1_General_CS_AS = @exh_item_id)
+      or (exh_item_id is null and exh_app_item_id = @exh_app_item_id))
+```
+
+Assign this template to the `proc_exh_from_exh_del_[type]` program objects.
 
 ### From the database to Exchange
 
-To sync database records to Exchange, call the `exh_to_exh` procedures, for example from triggers.
+To sync database records to Exchange, call the `exh_to_exh_[action]_[type]` procedures, for example from within a trigger.
 
-#### Create, update and delete
+The same parameterized template can be used for adding, changing and deleting items on the Exchange server.
+Assign this template to your own triggers or stored procedures.
 
 ```sql
 declare @exit_code int;
@@ -603,11 +631,11 @@ Attachments added to items in Exchange are sent to the final application databas
 <Attachment name 1>: <attachment id 1>; <attachment name 2>: <attachment id 2>;
 ```
 
-To retrieve the actual (binary) data from the attachment, the `sendGetAttachment` procedure again has to make a call to the Exchange Connector.
+To retrieve the actual (binary) data from the attachment, use the `sendGetAttachment` procedure to call the Exchange Connector.
 
-To call this procedure, it is necessary to provide the user, item ID and attachment ID of the attachment.
+To execute this procedure, it is necessary to provide the user, item ID and attachment ID of the attachment.
 
-For SQL Server, there is also a `saveAttachment` procedure to assist in writing the data to a file. Keep in mind that this is done from the database server. If a user were allowed to fill this in and store the attachment somewhere on the C: \ drive, this would happen on the server and not on the user's computer.
+For SQL Server, there is a `saveAttachment` procedure available to assist in writing the data to a file. Keep in mind that this is done from the database server. If a user were allowed to fill this in and store the attachment somewhere on the C: \ drive, this would happen on the server and not on the user's computer.
 
 ```sql
 declare @exchange_ip_address nvarchar(20)
@@ -644,6 +672,7 @@ begin
 
     if (@exit_code = 0)
     begin
+        -- Store the byte_array in the database or write it to an actual file
         exec saveAttachment @save_directory, @exh_attachment_name,
             @byte_array, @overwrite, null
     end
@@ -677,6 +706,7 @@ When working with the Thinkwise Exchange Connector, please consider the followin
 - To test the AutoDiscover and impersonation account, use this online Microsoft tool: <https://www.testexchangeconnectivity.com/>
 
 - When viewing the log feed via the console or via a TCP connection, filters can be placed on the type of message by typing the letters of the required messages:
+
   - **E**rrors
   - **W**arnings
   - **A**ctions
@@ -706,11 +736,11 @@ If there are problems with the Thinkwise Exchange Connector, there may be a numb
 Verify that the ExhangeSyncService runs under Windows Services. If this is not the case, it can be (re)started using Windows Services or via the procedure described [here](#restart-the-connector).
 
 ![1539087067418](assets/exchange/1539087067418.png)
-*ExchangeSyncService*
+_ExchangeSyncService_
 
 ### Access Denied Exception
 
-If the following Access Denied Exception occurs, the *http-service endpoint* is not correctly registered:
+If the following Access Denied Exception occurs, the _http-service endpoint_ is not correctly registered:
 
 ```sh
 An unhandled exception of type System.ServiceModel.AddressAccessDeniedException
@@ -736,25 +766,25 @@ During the execution of the work, any errors are shown in the console window whi
 - [Exchange Webservice ServiceErrors](https://msdn.microsoft.com/en-us/library/microsoft.exchange.webservices.data.serviceerror.aspx)
 - [Exchange Webservice ResponseCodes](https://docs.microsoft.com/en-us/exchange/client-developer/web-service-reference/responsecode)
 
-| Error                                                        | Cause/solution                                               |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| A communication error occurred.                              | No connection can be made to the database. Check whether the database can be reached with the connection string specified in App.config and restart the Exchange Connector. |
-| Access is denied. Check credentials and try again.           | The user or the impersonation user does not have the correct rights. |
-| Alternative contact folder could not be found. Unable to create subfolder. The user account does not have the right to create subfolders. | The public contacts folder cannot be found and created. This message can be ignored. |
-| DB Connection lost.                                          | The connection to the database has been lost. Check the status of the final application database and restart the Exchange link. |
-| DBHandler.ProcessItem: CHG/ADD/DEL Shared.CalendarItem       | The appointment cannot be saved or deleted. The complete error provides more information about the cause, for example, if the table is locked. |
-| ExchangeHandler.ProcessItem: CHG Shared.ContactItem 1881 The Id is invalid. | The contacts are not yet synchronized with the Exchange servers, so the IDs are incorrect. This message can be ignored. |
-| Failed to resubscribe user.                                  | The user cannot be logged on to Exchange. Check that the Exchange server is online, the user's email address is correct and restart the Exchange link. |
-| No user was specified for add/chg/del action ...             | Exchange tries to modify an item without the user being specified. |
-| Unknown user.                                                | The user is not known to Exchange. Check the email address and restart the Exchange Connector. |
-| Mailbox move in progress. Try again later.                   | A mailbox move is in progress. Wait until the move is completed and try again. |
-| Object cannot be deleted.                                    | The item cannot be deleted. This message can be ignored.    |
-| The Autodiscover service couldn't be located.                | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector. |
-| The Autodiscover service returned an error.                  | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector. |
-| The operation has timed out.                                 | Cannot connect to the Exchange server. Check the Exchange Server and restart the Exchange Connector. |
-| The specified object was not found in the store.             | The appointment, email or contact person has been removed again after adding or changing. This message can be ignored. |
-| The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. | There is a problem with the network, for example the certificates. Restore this and restart the Exchange Connector. |
-| Too many automatic redirections were attempted.              | There is a problem with the network, for example the load balancing. Restore this and restart the Exchange Connector. |
+| Error                                                                                                                                     | Cause/solution                                                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A communication error occurred.                                                                                                           | No connection can be made to the database. Check whether the database can be reached with the connection string specified in App.config and restart the Exchange Connector. |
+| Access is denied. Check credentials and try again.                                                                                        | The user or the impersonation user does not have the correct rights.                                                                                                        |
+| Alternative contact folder could not be found. Unable to create subfolder. The user account does not have the right to create subfolders. | The public contacts folder cannot be found and created. This message can be ignored.                                                                                        |
+| DB Connection lost.                                                                                                                       | The connection to the database has been lost. Check the status of the final application database and restart the Exchange link.                                             |
+| DBHandler.ProcessItem: CHG/ADD/DEL Shared.CalendarItem                                                                                    | The appointment cannot be saved or deleted. The complete error provides more information about the cause, for example, if the table is locked.                              |
+| ExchangeHandler.ProcessItem: CHG Shared.ContactItem 1881 The Id is invalid.                                                               | The contacts are not yet synchronized with the Exchange servers, so the IDs are incorrect. This message can be ignored.                                                     |
+| Failed to resubscribe user.                                                                                                               | The user cannot be logged on to Exchange. Check that the Exchange server is online, the user's email address is correct and restart the Exchange link.                      |
+| No user was specified for add/chg/del action ...                                                                                          | Exchange tries to modify an item without the user being specified.                                                                                                          |
+| Unknown user.                                                                                                                             | The user is not known to Exchange. Check the email address and restart the Exchange Connector.                                                                              |
+| Mailbox move in progress. Try again later.                                                                                                | A mailbox move is in progress. Wait until the move is completed and try again.                                                                                              |
+| Object cannot be deleted.                                                                                                                 | The item cannot be deleted. This message can be ignored.                                                                                                                    |
+| The Autodiscover service couldn't be located.                                                                                             | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector.                                                                          |
+| The Autodiscover service returned an error.                                                                                               | The Autodiscover service is not correctly set up. Restore this and restart the Exchange Connector.                                                                          |
+| The operation has timed out.                                                                                                              | Cannot connect to the Exchange server. Check the Exchange Server and restart the Exchange Connector.                                                                        |
+| The specified object was not found in the store.                                                                                          | The appointment, email or contact person has been removed again after adding or changing. This message can be ignored.                                                      |
+| The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.                              | There is a problem with the network, for example the certificates. Restore this and restart the Exchange Connector.                                                         |
+| Too many automatic redirections were attempted.                                                                                           | There is a problem with the network, for example the load balancing. Restore this and restart the Exchange Connector.                                                       |
 
 ### File not found (DB2)
 
