@@ -497,7 +497,7 @@ Of course, multiple columns can be specified for each prefilter in order to make
 
 #### Access control
 
-It is possible to indicate per role that a prefilter is intended to authorize data. In this case, the checkbox *Data authorization prefilter* can be checked at the *Model rights* screen. As a result, the prefilter cannot be disabled by users in this role.
+It is possible to indicate per role that a prefilter is intended to authorize data. In this case, the checkbox *Data authorization prefilter* can be checked in the *Model rights* screen. As a result, the prefilter cannot be disabled by users assigned to this role.
 
 ![](assets/sf/subjects_prefilter_model_rights.png)
 *Setting the role rights for prefilters*
