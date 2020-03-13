@@ -1591,6 +1591,8 @@ large data volumes.
 
 ### Shortcuts
 
+> Some of the shortcuts may be blocked or result in different behavior when using the Web GUI, depending on the browser that is used.
+
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shortcut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |                 |                                                                                                                                                                                                              |
 | :------------------------------------------------------------------: | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |   ![](assets/winweb/image147.png) ![](assets/winweb/image148.png)    | **Objective**   | **Next row**                                                                                                                                                                                                 |
@@ -1682,9 +1684,9 @@ large data volumes.
 |![](assets/winweb/image147.png)  ![](assets/winweb/image168.png)|**Objective**|Copy to the clipboard to then paste into another program|
 ||**Description**|It is possible to copy data from a grid to the clipboard. By selecting the rows that are required to be copied from the solution. If the rows are consecutive and it is necessary to select several rows, than it is possible to hold down the Shift key. If thie rows are not consecutive then it is useful to hold the Ctrl key.|
 ||**When**|With the help of this shortcut it is possible to copy specific data to another program.|
-|![](assets/winweb/image147.png)  ![](assets/winweb/image159.png)|**Objective**|Automatic alignment of columns|
-||**Description**|With the help of this shortcut it is possible to automatically give all columns on the screen the maximum required width.|
-||**When**|With the help of this shortcut it is possible, when a column has too little space, to completely display the data that is in this column. For example with a long street name that does not fit in the field it is possible to automatically adjust the width for all columns so that the long street name becomes completely visible again.|
+|![](assets/winweb/image147.png)  ![](assets/winweb/image159.png) ![](assets/winweb/image150.png) |**Objective**|Automatically resize grid columns|
+||**Description**|With the help of this shortcut it is possible to automatically give all columns on the screen the required width.|
+||**When**|With the help of this shortcut it is possible, when a column has too little space, to completely display the data that is in this column. For example with a long street name that does not fit in the field it is possible to automatically adjust the width for all columns so that the long street name becomes completely visible.|
 |![](assets/winweb/image169.png) <br/> ![](assets/winweb/image159.png)  ![](assets/winweb/image169.png)|**Objective**|Switch between components|
 ||**Description**|To switch between the various components (Grid, form, tabs)|
 ||**When**|If, for instance, it is necessary to switch between grid and form.|
