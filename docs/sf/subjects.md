@@ -495,13 +495,6 @@ Of course, multiple columns can be specified for each prefilter in order to make
 ![](assets/sf/subjects_prefilters.png)
 *Setting a prefilter with a query*
 
-#### Access control
-
-It is possible to indicate per role that a prefilter is intended to authorize data. In this case, the checkbox *Data authorization prefilter* can be checked at the *Model rights* screen. As a result, the prefilter cannot be disabled by users in this role.
-
-![](assets/sf/subjects_prefilter_rights.png)
-*Setting the role rights for prefilters*
-
 ### Conditional formatting
 
 In grids and forms, the font and background color of fields can be adjusted based on specific conditions using *conditional layouts*.
