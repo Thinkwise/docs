@@ -23,6 +23,8 @@ The Thinkwise Platform provides four authentication types: RDBMS, Windows, Kerbe
 
 IAM authentication is intended to simplify the administration of large numbers of Intelligent Application Manager users. IAM authentication users are only registered in the Intelligent Application Manager and not in the database. During login, the account details are validated in the Intelligent Application Manager. The password is securely stored in the IAM database. The *Update password* task can be used by an administrator to set or update this password.
 
+> To specify a different authentication type for an application database, set the *Authentication* [extended property](../sf/extended_properties) of the application in IAM.
+
 ### Login
 
 The *Login verification* option determines if a user is required to use two-factor authentication:
