@@ -8,6 +8,12 @@ A process action can, for instance, be related to updating a record, executing a
 
 A process flow will start if the user completes an action that is linked to the start action and no other process flow is active within the same screen.
 
+> That the *Add record* and *Modify record* process actions will only trigger a process flow when adding or
+> modifying records in a *Form* component with 'auto-save' disabled.
+>
+> Components that always automatically save changes on navigation or other user actions, such as the *Grid*,
+> do not support these process action triggers, because the user action will often conflict with subsequent steps of the process flow.
+
 ## Creating a process flow
 
 The *Process flows* tab page shows an overview of the available process flows. New process flows can also be created here. The *Design* tab page shows a graphical representation of the selected process flow.
