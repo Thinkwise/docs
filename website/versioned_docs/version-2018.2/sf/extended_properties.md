@@ -14,8 +14,6 @@ The parameters below can be used as extended properties in the Software Factory 
 | AboutIcon                                           |                                                              |                                                              |
 | AboutLogo                                           |                                                              |                                                              |
 | AllowChangePassword                                 | Determines if users with RDBMS login are allowed to change their password<br>Note: only available for SQL Server now. | **Yes**<br>No                                                |
-| AllowGridGrouping <br> (obsolete)                   | Determines if the GUI should allow the grid rows to be grouped using the columns | Yes<br>**No**                                                |
-| AllowMenuFilter<br>(obsolete)                       | Enables a menu filter for every application where this property is set to true | Yes<br>**No**                                                |
 | AllowMultipleDefault- <br> Prefilters* (obsolete)   |                                                              |                                                              |
 | AllowNullMandCheckbox*                              | Mandatory fields without a default value will be represented as null in the Grid and Form while adding a new row. | **Yes**<br>No                                                |
 | AllowWildcards*                                     | Allows the use of wildcards * and ? in search and filter fields, including the combined filter. | Yes<br>**No**                                                |
