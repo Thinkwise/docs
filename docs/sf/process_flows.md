@@ -399,7 +399,7 @@ The FTP(S) connector provides the following input options with which several pro
 | Username            | Optional. The user name that will be used for the authentication, if applicable. |
 | Password            | Optional. The password that will be used for the authentication, if applicable. |
 | Timeout             | Optional. An integer that indicates the timeout of the request in milliseconds. Default is endless. |
-| Use passive mode    | Optional. **No** `ftp_passive_off` if it is necessary to wait for a connection, **Yes (default)** `ftp_passive_on` if the connection itself must be established. |
+| Use passive mode    | Optional. <br>**No** `ftp_passive_off` if it is necessary to wait for a connection. <br> **Yes (default)** `ftp_passive_on` if the connection itself must be established. |
 
 | Output options     |                                                                                                                                                                       |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -432,7 +432,7 @@ The SMTP connector provides the following input options with which several prope
 | Allow HTML            | Optional. Indicates whether the content of the message can be interpreted as HTML.<br>**No (default)** `smtp_body_html_off`<br>**Yes** `smtp_body_html_on` |
 | Attachments           | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. |
 | Deletable attachments | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. These files will be deleted after transmission of the email. |
-| Priority              | Optional. Gives the priority of the email to be sent.<br>**Low* `smtp_msg_priority_low`<br>**Normal (default)** `smtp_msg_priority_normal`<br>**High** `smtp_msg_priority_high` |
+| Priority              | Optional. Gives the priority of the email to be sent.<br>**Low** `smtp_msg_priority_low`<br>**Normal (default)** `smtp_msg_priority_normal`<br>**High** `smtp_msg_priority_high` |
 | Signature             | Optional. The signature that is placed under the email to be sent. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                               |
