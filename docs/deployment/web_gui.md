@@ -1,5 +1,5 @@
 ---
-title: Web
+title: Web GUI
 ---
 
 The Thinkwise Web GUI is an ASP.NET application and runs on Microsoft Internet Information Services (IIS).

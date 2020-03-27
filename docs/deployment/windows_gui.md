@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Windows GUI
 ---
 
 The Thinkwise Windows GUI is launched by double clicking the shortcut to the Windows GUI executable. 

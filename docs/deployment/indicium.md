@@ -1,5 +1,5 @@
 ---
-title: Indicium
+title: Indicium Service Tier
 ---
 
 Indicium is a .NET Core application which means that it is capable of hosting itself with a built-in web server. However, for security and management reasons,

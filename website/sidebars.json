@@ -129,6 +129,7 @@
       "deployment/installation",
       "deployment/windows_gui",
       "deployment/web_gui",
+      "deployment/universal",
       "deployment/indicium",
       "deployment/mobile_gui",
       "deployment/iis",
@@ -143,7 +144,6 @@
   "kb": {
     "Knowledge base": [
       "kb/kb_general",
-      "kb/universal_beta",
       "kb/deep_links",
       "kb/exchange",
       "kb/objectmodel_extender_template",
