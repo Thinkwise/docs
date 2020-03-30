@@ -1,5 +1,5 @@
 ---
-title: Mobile
+title: Mobile GUI
 ---
 
 Once the Indicium application tier has been configured, you can start a Mobile GUI against it 
