@@ -327,7 +327,8 @@ To include a new or existing project version as an application in the IAM, it is
 
 ### Authorization
 
-Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts). Authorization can be defined down to field level and on cross-sections of data. <a href="sf/roles" target="_blank">![](assets/overview/link.svg)</a>
+Authorization is linked to roles and user groups using Role Based Access Control. A user group contains several users, but a user may also be a member of several user groups. If required, a membership is time-related so that access rights automatically expire after a period of time (for example with temporary contracts). Authorization can be defined down to field level and on cross-sections of data.
+<a href="sf/roles" target="_blank">![](assets/overview/link.svg)</a>
 
 Users can be authenticated via Active Directory, the RDBMS, IAM authentication or Open ID.
 
@@ -440,7 +441,7 @@ The functionality of the Web user interface is identical to that of the Windows 
 ![](assets/overview/windows.jpg)
 *Example screen of the Web user interface*
 
-### Mobile devices
+### Mobile
 
 **The User Experience of working with a mobile device is completely different (for example swiping) than working with Windows or Web user interface. To optimally use the smaller screen the user interface utilizes a different screen structure. It is however driven by the exact same model.**
 
@@ -462,6 +463,24 @@ An example of a smartphone display is given below:
 
 ![](assets/overview/smartphone.jpg)
 *Example screen of the smartphone user interface*
+
+### Universal
+
+The Thinkwise Universal user interface is the latest Thinkwise interface, providing an ultra-modern user experience on mobile devices, desktop and web.
+It has been redesigned from the ground up, along with the Indicium service tier, with an emphasis on performance, security and user experience.
+
+The Universal user interface is a [Progressive Web App (PWA)](https://ymedialabs.com/progressive-web-apps), built using [React](https://reactjs.org/) and following the [Material Design](https://material.io/) guidelines, a comprehensive guide for visual, motion, and interaction design across platforms.
+
+![](assets/overview/tablet_universal.jpg)
+*Example screen of the Universal user interface on a tablet*
+
+The Universal user interface is a fully responsive Web App that runs on any device and automatically adapts to the device's characteristics, such as the screen size and input method. The Universal user interface is deployed as a web application but, being a Progressive Web App, it can be easily installed to the user's device, just like a native desktop or mobile app. It can leverage native device features, such as the camera and location services, and can even work offline.
+
+![](assets/overview/smartphone_universal.png)
+*Example screen of the Universal user interface on a smartphone in a light and dark theme*
+
+Currently, the Universal user interface is in beta. It can already be used for basic Thinkwise applications, but not all functions provided by the other Thinkwise user interfaces are available yet. A new version of the Universal user interface with additional features is released every three weeks, and by the end of 2020, the Universal user interface will include all features of the current user interfaces.
+<a href="deployment/universal" target="_blank">![](assets/overview/link.svg)</a>
 
 ## Indicium Application Tier
 
