@@ -35,7 +35,7 @@ Indicium is mandatory to use the Universal GUI and most Indicium installations a
 
 The unzipped Universal GUI folder can be placed next to Indicium. A common location for the Universal GUI would be in the `inetpub\wwwroot` folder.
 
-![](assets/universal-alpha-install.png)
+![](assets/deployment/universal-alpha-install.png)
 *Location of the Universal GUI on an IIS server, next to Indicium*
 
 the Universal GUI folder should __not__ be converted to an application, as it is a static website. No application pool is required.
@@ -49,7 +49,7 @@ IIS is not configured by default to serve certain types of static content. Confi
 | .json      | application/json  |
 | .woff2     | font/woff2        |
 
-![](assets/universal-mime-types.png)
+![](assets/deployment/universal-mime-types.png)
 *The .json extension configured to be served by IIS*
 
 If this is not configured properly, the application will not have the correct fonts and will not load the correct configuration.
@@ -60,7 +60,7 @@ The Universal GUI can be accessed using a browser to access the location of the 
 
 A login screen will be shown where the URL to access Indicium can be configured.
 
-![](assets/universal-alpha-login.png)
+![](assets/deployment/universal-alpha-login.png)
 *Login screen of the Universal GUI*
 
 A modern browser is required to access the Universal GUI. A recent version of Chrome, Firefox, Edge or Safari mobile is required. Using the Universal GUI with IE is not supported.
