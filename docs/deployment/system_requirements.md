@@ -68,7 +68,7 @@ The Windows GUI is a desktop client and requires the Microsoft .NET Framework. M
 | ---------- | --------------------- |
 | Processor  | 1 GHz                 |
 | Memory     | 2 GB RAM              |
-| Disk space | 200 MB free           |
+| Disk space | 800 MB free           |
 | Monitor    | 1600 x 900 resolution |
 
 The Windows GUI is compatible with 32 and 64-bit environments.
