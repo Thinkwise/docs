@@ -37,9 +37,24 @@ The initial center coordinates and zoom level of the map.
 
 **Geocoder** (optional)
 
+The name of the Geocoder to use, for example `MapQuest`.
 A geocoder is a third-party service that can translate an address to coordinates. If you want to mark points on the map and you only have addresses, then this is a mandatory setting for you. We support several geocoders, such as Google Maps, and most of them require an API key. There is often a price plan associated with an API key that requires you to pay depending on how much you will use the geocoder.
 
-**Popup HTML template** (optional, but it’s recommended to use either this or the *Popup HTML column*)
+**Popup HTML column** (optional)
+
+The HTML column to be used to create the popup balloon of markers.
+This can be, for example, an expression field containing the title and a BASE64 encoded image:
+
+```sql
+'<div>
+    <h1>' + t1.title_column + '</h1>
+    <img src="data:image/png;base64,' + cast('' as xml).value('xs:base64Binary(xs:hexBinary(sql:column("t1.image_data")))', 'nvarchar(max)') + '"/>
+</div>'
+```
+
+**Popup HTML template** (optional)
+
+> It is recommended to use the Popup HTML column instead.
 
 The value of this property should be an HTML template that will be used to construct the HTML shown in the popup balloon when selecting. Only one template can be defined, but values of columns and images can be parameterized through *Column template mappings* and *Image template mappings*.
 
