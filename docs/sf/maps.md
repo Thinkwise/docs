@@ -6,6 +6,21 @@ The Maps component creates a visual representation of a single data set, i.e. a 
 
 Configuring a Maps component for a certain subject is done by means of an Extender in the SF. It’s important to know that each record in a subject represents a single entity on the Maps component. How that entity is visualized and how it can be interacted with is determined by the Extender properties.
 
+## Addresses and coordinates
+
+The maps component can use both adresses and coordinates to determine the position of markers.
+
+Addresses have the obvious advantage of being more usable than coordinates, whereas coordinates take much less time to process.
+
+The maps component uses a Geocoder service to translate adresses to coordinates for records that don't have any coordinates yet.
+To prevent reaching the request limit of the GeoCoder and increase the performance in general, addresses which have been translated will be written back to the database by means of an update-statement. This will only be done if the table or view has a longitude and latitude column as well. Developers should keep the following points in mind with regard to this feature:
+
+- When using a view, the view must have a defined primary key in order for the GUI to be able to update a record with coordinates.
+- When using a view, it may be necessary to write an update-trigger which will channel the coordinates to the correct location.
+- An update-trigger should be written on the table which contains the address. This trigger should clear the coordinates if the address is updated.
+
+It is strongly recommended to add columns for the coordinates when using a GUI which supports the features above, especially in situations with more than a hundred addresses.
+
 ## Global settings
 
 **Table** (required)
