@@ -8,6 +8,12 @@ A process action can, for instance, be related to updating a record, executing a
 
 A process flow will start if the user completes an action that is linked to the start action and no other process flow is active within the same screen.
 
+> That the *Add record* and *Modify record* process actions will only trigger a process flow when adding or
+> modifying records in a *Form* component with 'auto-save' disabled.
+>
+> Components that always automatically save changes on navigation or other user actions, such as the *Grid*,
+> do not support these process action triggers, because the user action will often conflict with subsequent steps of the process flow.
+
 ## Creating a process flow
 
 The *Process flows* tab page shows an overview of the available process flows. New process flows can also be created here. The *Design* tab page shows a graphical representation of the selected process flow.
@@ -21,10 +27,9 @@ Variables can be used to store data produced by process actions and retain this 
 A new process action is created by clicking on the button in the top right or via the context menu.
 
 ![](assets/sf/image243.png)
-
 After clicking the button, the *Process actions* tab opens to create the new process action.
 
-Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does, and they can be assigned a constant value or a Variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
+Each process action has its own set of input and output parameters. Input parameters provide a way to configure at runtime what a process action does, and they can be assigned a constant value or a variable. Output parameters provide a way to store user input and/or other data produced by the process action in variables.
 
 ![](assets/sf/image254.png)
 *Output parameters*
@@ -50,9 +55,21 @@ If a process action has been completed and several parallel process steps follow
 
 Process flow starting points determine for which variants a process flow is enabled.
 
+### Process schedules
+
+A process flow can be scheduled for execution by the Indicium service tier. This is only possible when the process flow only uses process actions that do not require user input. These include, for example, the available connectors and adapters. One or more schedules can be defined for a process flow. One of these schedules can be marked as the default schedule with which the process flow is executed. The application manager can choose to deviate from this default schedule in IAM.
+
+![](assets/sf/process_flow_schedule.png)
+*Process flow schedule*
+
 ## Process actions
 
-The following process actions are available:
+The following paragraphs list the available process actions with their input and output parameters.
+The input parameters of a process action can be assigned using a constant value or a variable. The value of output parameters can be stored in process flow variables.
+
+The string value of any enumerations, that can be used to set the parameter using a string variable, is displayed in `code`.
+
+> Variables can have any datatype, as long as the relevant data of the input or output parameter can be converted to the datatype.
 
 ### Activate document
 
@@ -78,8 +95,8 @@ In addition, it is possible to control the way in which the row has to be search
 | Input parameters             |                                                              |
 | ---------------------------- | ------------------------------------------------------------ |
 | [COL]                        | The value of a column of the subject in question. This parameter is present for every column of the subject. |
-| Filter record when not found | Optional. Indicates whether an attempt must be made to filter on the row if the row cannot be found.<br>**No (default)**<br>**Yes** |
-| Search mode                  | Optional. The manner in which the row will be searched for.<br>**From top to bottom (default)** - From top to bottom<br>**From bottom to top** - From bottom to top<br>**Down from current record** - From the current row downwards<br>**Up from current record** - From the current row upwards |
+| Filter record when not found | Optional. Indicates whether an attempt must be made to filter on the row if the row cannot be found.<br>**No (default)** `row_try_filter_row_off` <br>**Yes**  `row_try_filter_row_on` |
+| Search mode                  | Optional. The manner in which the row will be searched for.<br>**From top to bottom (default)** `go_to_row_search_top_down` - From top to bottom<br>**From bottom to top** `go_to_row_search_bot_up` - From bottom to top<br>**Down from current record** `go_to_row_search_cur_down` - From the current row downwards<br>**Up from current record** `go_to_row_search_cur_up` - From the current row upwards |
 
 | Output parameters |                                                                                                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -110,10 +127,10 @@ Filter values on columns of a specific subject can be set with this process acti
 | Input parameters   |                                                              |
 | ------------------ | ------------------------------------------------------------ |
 | [COL]              | Optional. The filter value that must be set on the column in question as an *equal to* filter condition. This parameter is present for every column of the subject. |
-| Disable prefilters | Optional. Indicates whether the prefilters must be disabled for this filter action.<br>**No (default)**<br>**Yes** |
-| Case sensitive     | Optional. Indicates whether the filter conditions are case sensitive.<br>**No**<br>**Yes**<br>The default depends on the rdbms used. |
-| Ignore diacritics  | Optional. Indicates whether letters with diacritics must be treated as normal letters.<br>**No**<br>**Yes**<br>The default depends on the application settings. |
-| Allow wildcards    | Optional. Indicates whether it is permitted to use wild cards in filter conditions.<br>**No**<br>**Yes**<br>The default depends on the application settings. |
+| Disable prefilters | Optional. Indicates whether the prefilters must be disabled for this filter action.<br>**No (default)** `filter_disable_prfltr_off` <br>**Yes** `filter_disable_prfltr_off`  |
+| Case sensitive     | Optional. Indicates whether the filter conditions are case sensitive.<br>**No** `filter_case_sens_off` <br>**Yes** `filter_case_sens_on` <br>The default depends on the rdbms used. |
+| Ignore diacritics  | Optional. Indicates whether letters with diacritics must be treated as normal letters.<br>**No** `filter_ignore_diacrts_off` <br>**Yes** `filter_ignore_diacrts_on` <br>The default depends on the application settings. |
+| Allow wildcards    | Optional. Indicates whether it is permitted to use wild cards in filter conditions.<br>**No** `filter_allow_wildcard_off` <br>**Yes** `filter_allow_wildcard_on` <br>The default depends on the application settings. |
 
 | Output parameters |                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
@@ -152,10 +169,10 @@ This process action returns a unique ID of the opened document as output paramet
 
 | Input parameters             |                                                                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Try use an existing document | When set to Yes, the process flow will attempt to use an existing document. Documents in edit mode will not be a candidate. |
-| Open as floating document    | When set to Yes, the process flow will open a new document as floating if the GUI supports this.                           |
+| Try use an existing document | **No (default)** `open_doc_existing_no` - The process flow will open a new document. <br> **Yes** `open_doc_existing_yes` - The process flow will attempt to use an existing document. Documents in edit mode will not be a candidate.  |
+| Open as floating document    | **No (default)** `open_doc_floating_no` - The process flow will open a docked document. <br> **Yes** `open_doc_floating_yes` - The process flow will open a new document as floating if the GUI supports this.                           |
 
-Opening a new document can be used as a trigger for a new process flow. However, activating an existing document via the menu or otherwise will not trigger a new process flow. 
+Opening a new document can be used as a trigger for a new process flow. However, activating an existing document via the menu or otherwise will not trigger a new process flow.
 
 Opening a new document can be modified by the process flow to try and use an existing document instead if the process action is configured to do this. Likewise, opening a non-floating document can be modified by the process flow to open as floating instead and vice-versa.
 
@@ -345,12 +362,12 @@ The HTTP(S) connector provides the following input options with which several pr
 | Input options       |                                                              |
 | ------------------- | ------------------------------------------------------------ |
 | URL                 | The complete url that will be used for the request.          |
-| HTTP method         | The HTTP method that will be used for the request, such as GET or POST. |
+| HTTP method         | The HTTP method that will be used for the request.<br>`http_method_delete`<br> `http_method_get`<br> `http_method_head`<br> `http_method_options`<br> `http_method_patch`<br> `http_method_post`<br> `http_method_put`<br> `http_method_trace`<br>  |
 | Headers             | Optional. The header that will be provided with the request. This input option must be completed in the following manner:<br>`[ { "Key": "Header1", "Value": "Value1" }, { "Key": "Header2", "Value": "Value2" } ]` |
 | Cookie              | Optional. A possible cookie that will be provided with the request. |
-| Content-Type        | Optional. The MIME type for the content that will be provided with the request. |
+| Content-Type        | Optional. The [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for the content that will be provided with the request. |
 | Content             | Optional. The content that will be sent with the request, for instance with a POST. |
-| Authentication type | Optional. The authentication type that will be used for the request.<br>**None (default)** - No authentication<br>**Basic** - Basic authentication<br>**Digest** - Digest authentication<br>**Windows (Negotiate)** - Negotiate (NTLM/Kerberos) |
+| Authentication type | Optional. The authentication type that will be used for the request.<br>**None (default)** `http_auth_none` - No authentication<br>**Basic** `http_auth_basic` - Basic authentication<br>**Digest** `http_auth_digest` - Digest authentication<br>**Windows (Negotiate)** `http_auth_negotiate` - Negotiate (NTLM/Kerberos) |
 | http_con_username   | Optional. The user name that will be used for the authentication, if applicable. |
 | Password            | Optional. The password that will be used for the authentication, if applicable. |
 | Timeout             | Optional. An integer that indicates the timeout of the request in milliseconds. Default is 100,000. |
@@ -361,8 +378,8 @@ The HTTP(S) connector provides the following input options with which several pr
 | HTTP status code    | The HTTP status code of the response. For example 200, 403, 404, 500, etc.                                                                                                                                                                          |
 | Headers             | The headers of the response. The headers will be mutually separated by semi-colons. For each header, the key and the value will be separated by a colon.                                                                                             |
 | Set-Cookie          | The HTTP Cookie that possibly returns with the response.                                                                                                                                                                                            |
-| Content-Type        | The MIME type for the content that was returned with the response.                                                                                                                                                                                  |
-| Content encoding    | The encoding that is used for the content in the response.                                                                                                                                                                                          |
+| Content-Type        | The [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for the content that was returned with the response.                                                                                                                                                                                  |
+| Content encoding    | The [encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding) that is used for the content in the response.                                                                                                                                                                                          |
 | Content-Length      | The length of the content of the response.                                                                                                                                                                                                          |
 | Content-Disposition | Possibly contains a suggestion for a file name.                                                                                                                                                                                                     |
 | Content             | The content of the response.                                                                                                                                                                                                                        |
@@ -374,15 +391,15 @@ The FTP(S) connector provides the following input options with which several pro
 | Input options       |                                                              |
 | ------------------- | ------------------------------------------------------------ |
 | URL                 | The complete URL that will be used for the request.          |
-| FTP method          | The FTP method that will be used for the request. <br />ftp_method_appe - Append a file<br/>ftp_method_dele - Delete a file<br/>ftp_method_retr - Download a file<br/>ftp_method_mdtm - Retrieve the date-time stamp of a file<br/>ftp_method_list - Get a detailed list of files<br/>ftp_method_nlist - Get a short list of files<br/>ftp_method_mkd - Create a directory<br/>ftp_method_pwd - Print the name of the current working directory<br/>ftp_method_rmd - Remove a directory<br/>ftp_method_rename - Rename a directory<br/>ftp_method_size - Retrieve the size of a file<br/>ftp_method_stor - Upload a file<br/>ftp_method_stou - Upload a file with a unique name<br />For more information, see: <https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequestmethods.ftp> |
+| FTP method          | The FTP method that will be used for the request. <br>`ftp_method_appe` - Append a file<br>`ftp_method_dele` - Delete a file<br>`ftp_method_retr` - Download a file<br>`ftp_method_mdtm` - Retrieve the date-time stamp of a file<br>`ftp_method_list` - Get a detailed list of files<br>`ftp_method_nlist` - Get a short list of files<br>`ftp_method_mkd` - Create a directory<br>`ftp_method_pwd` - Print the name of the current working directory<br>`ftp_method_rmd` - Remove a directory<br>`ftp_method_rename` - Rename a directory<br>`ftp_method_size` - Retrieve the size of a file<br>`ftp_method_stor` - Upload a file<br>`ftp_method_stou` - Upload a file with a unique name<br>For more information, see: <https://docs.microsoft.com/en-us/dotnet/api/system.net.webrequestmethods.ftp> |
 | New file name       | Optional. In the case of a RenameFile action, this input option can be used to provide the new name for the file. |
 | File data           | Optional. The content that will be sent with the request, for example, with an UploadFile action. |
-| Use SSL             | Optional. Indicates whether SSL has to be used for the request.<br>Possible values:<br>**Yes**<br>**No (default)** |
+| Use SSL             | Optional. Indicates whether SSL has to be used for the request.<br>Possible values:<br>**Yes** `smtp_ssl_on`<br>**No (default)** `smtp_ssl_off`|
 | Authentication type | Optional. The authentication type that will be used for the request.<br>**None (default)** - No authentication<br>**Basic** - Basic authentication |
 | Username            | Optional. The user name that will be used for the authentication, if applicable. |
 | Password            | Optional. The password that will be used for the authentication, if applicable. |
 | Timeout             | Optional. An integer that indicates the timeout of the request in milliseconds. Default is endless. |
-| Use passive mode    | Optional. **No** if it is necessary to wait for a connection, **Yes** if the connection itself must be established. Default is **Yes**. |
+| Use passive mode    | Optional. <br> **No** `ftp_passive_off` if it is necessary to wait for a connection. <br> **Yes (default)** `ftp_passive_on` if the connection itself must be established. |
 
 | Output options     |                                                                                                                                                                       |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -411,11 +428,11 @@ The SMTP connector provides the following input options with which several prope
 | BCC recipients        | Optional. A list of email addresses separated by semi-colons. These addresses appear in the BCC field of the email. |
 | Subject               | The subject with which the email will be sent.              |
 | Message               | Optional. The message of the email.                         |
-| Message encoding      | Optional. The encoding for the message of the email.<br>**ASCII**<br>**UTF8 (default)**<br>**UTF16**<br>**UTF32** |
-| Allow HTML            | Optional. Indicates whether the content of the message can be interpreted as HTML.<br>**No (default)**<br>**Yes** |
+| Message encoding      | Optional. The encoding for the message of the email.<br>**ASCII** `smtp_enc_ascii`<br>**UTF8 (default)** `smtp_enc_utf8`<br>**UTF16** `smtp_enc_utf16`<br>**UTF32** `smtp_enc_utf32` |
+| Allow HTML            | Optional. Indicates whether the content of the message can be interpreted as HTML.<br>**No (default)** `smtp_body_html_off`<br>**Yes** `smtp_body_html_on` |
 | Attachments           | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. |
 | Deletable attachments | Optional. A list of file paths separated by semi-colons. The files will be read in and added as an attachment to the email. These files will be deleted after transmission of the email. |
-| Priority              | Optional. Gives the priority of the email to be sent.<br>**Low**<br>**Normal (default)**<br>**High** |
+| Priority              | Optional. Gives the priority of the email to be sent.<br>**Low** `smtp_msg_priority_low`<br>**Normal (default)** `smtp_msg_priority_normal`<br>**High** `smtp_msg_priority_high` |
 | Signature             | Optional. The signature that is placed under the email to be sent. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                               |
@@ -430,20 +447,51 @@ The DB connector provides the following input options to establish a database co
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Connection string | The connection string that includes the source database name, and other parameters needed to establish the initial connection, for example;<br>SQL Server standard: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; User Id=myUsername; Password=myPassword;`<br>SQL Server Trusted: `Driver={SQL Server}; Server=myServerAddress; Database=myDataBase; Trusted_Connection=True;`<br>DB2 standard: `Driver={iSeries Access ODBC Driver}; System=myServerAddress; DefaultLibraries=myDataBase; UserId=myUsername; Password=myPassword; CommitMode=2; QueryTimeout=0;`<br>DB2 DSN: `Dsn=myDsnName;Uid=myUsername;Pwd=myPassword` |
 | SQL               | The SQL executed by this process action.                                                                                       |
-| Input parameters  | Optional. A list of parameters used by the SQL.                                                                                |
+| Parameters (JSON) | Optional. A JSON-formatted list of parameters. See example below.
+| Parameters  | Optional. An alternative to _Parameters (JSON)_. A comma-separated list of process flow variables to be used as parameters. The command parameter name and datatype will be based on the process variable. |
+| Input parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be input for the command(s). The value will automatically be mapped from the process variable. |
+| Output parameters  | Optional. Use in conjunction with _Parameters_. A comma-separated list of parameters marked to be output in the command(s). <br> Note: the output value will **not** automatically be mapped back to the process variable. |
+| Command delimiter (regex) | Optional. A C# regular expression used to instruct the connector to execute multiple sequential commands on the same connection.<br> The _SQL_ value will be split into multiple commands using this regular expression.
+| Continue on error | Optional. Use in conjunction with _Command delimiter (regex)_. If an error occurs during command execution, the next command can be executed or the execution can be halted based on this setting.<br>**Yes** `continue_on_error_yes` <br>**No (default)** `continue_on_error_no` |
+
+#### Parameters (JSON) example
+
+```json
+[{
+  "Name": "V_param",
+  "Value": "test",
+  "Type": "VarChar",
+  "Output": true,
+  "Size": 100
+},
+{
+  "Name": "V_param2",
+  "Value": 0,
+  "Type": "Int",
+  "Output": true
+}]
+```
+
+#### Command delimiter (regex) example
+
+```
+;[^;]*(?:\z|--go\r\n|--go\n|--GO\r\n|--GO\n)
+```
+
+This example regular expression will split the commands using a semicolon followed by `--GO` in various casings. This is the command delimiting style used by the Software Factory for generated DB2 code.
 
 | Output options    |                                                                                                                                                                                                                                        |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (empty connection string)<br>-3 - Unsuccessful (no command text)<br>-4 - Unsuccessful (invalid parameter json structure) |
-| Result            | The result of the provided SQL.                                                                                                                                                                                                        |
-| Output parameters | The result of the output parameters of the provided SQL.                                                                                                                                                                               |
-| SQL info message  | Info messages thrown by the executed SQL.                                                                                                                                                                                              |
-| SQL error message | Error messages thrown by the executed SQL.                                                                                                                                                                                             |
-| SQL error code    | Error code thrown by the executed SQL.                                                                                                                                                                                                 |
+| Status code       | The status code of the executed action.<br>0 - Successful<br>-1 - Unsuccessful (unknown)<br>-2 - Unsuccessful (empty connection string)<br>-3 - Unsuccessful (no command text)<br>-4 - Unsuccessful (invalid parameter JSON structure)<br>-5 - Unsuccessful (cannot combine JSON parameters with mapped process variable parameters)<br>-6 - Unsuccessful (input or output parameter was not found as mapped process variable parameter)<br>-7 - Unsuccessful (mapped process variable parameter was not set as input or output)<br>-8 - Unsuccessful (mapped process variable parameter was not found as process variable)<br>-9 - Unsuccessful (could not parse command delimiter regex) |
+| Result            | A JSON-formatted list containing the results of the executed command.<br> When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding results. |
+| Output parameters | A JSON-formatted list of the output parameter and output parameter values of the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding output parameters and output parameter values.|
+| SQL info message  | A JSON-formatted list of info messages thrown by the executed command.<br> When using a _Command delimiter_: A JSON-formatted nested list of executed commands with corresponding info messages.|
+| SQL error message | Error message thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error message.|
+| SQL error code    | Error code thrown when opening the connection or by the executed command.<br>When using a _Command delimiter_: A JSON-formatted list of executed commands with corresponding error code.|
 
-### Convert json to xml and xml to json
+### Convert JSON to XML and XML to JSON
 
-The conversion between json and xml can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
+The conversion between JSON and XML can be done with this connector. SQL Server offers built-in support for JSON starting with version 2016.
 
 | Input options     |                                                                                           |
 | ----------------- | ----------------------------------------------------------------------------------------- |
@@ -452,7 +500,7 @@ The conversion between json and xml can be done with this connector. SQL Server 
 | Output options    |                                                                                                                                                                                                                                        |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | Status code       | The status code of the executed action.<br>0 - Successful<br>-4 - Unsuccessful (no input) |
-| Convert output    | The converted output value.                                                               | 
+| Convert output    | The converted output value.                                                               |
 
 ### Read file from disk
 
@@ -479,9 +527,9 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | ------------------------- | ------------------------------------------------------------ |
 | File location             | The path to the file that must be created. The path must be an absolute local path or a UNC path. |
 | File data                 | The binary data (bytes) of the file.                         |
-| Write mode                | The mode that determines how certain situations must be dealt with:<br>**New file (default)** - There may not be a file present at the specified location.<br>**Overwrite file** - There may be a file present at the specified location, this will be overwritten.<br>**Append file** - There must be a file present at the specified location, this will be extended. |
-| Create all subdirectories | Indicates whether the entire folder structure has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
-| Encoding                  | Indicates the encoding to use.                               |
+| Write mode                | The mode that determines how certain situations must be dealt with:<br>**New file (default)** `disk_write_mode_new` - There may not be a file present at the specified location.<br>**Overwrite file** `disk_write_mode_overwrite` - There may be a file present at the specified location, this will be overwritten.<br>**Append file** `disk_write_mode_append` - There must be a file present at the specified location, this will be extended. |
+| Create all subdirectories | Indicates whether the entire folder structure has to be created or that all higher level folders have to exist.<br>**No** `disk_create_all_dirs_off` - All higher level folders have to exist already.<br>**Yes (default)** `disk_create_all_dirs_on` - The complete folder structure will be created. |
+| Encoding                  | Indicates the encoding to use.<br>`disk_enc_ansi_lat1`<br>`disk_enc_us_ascii`<br>`disk_enc_utf_16`<br>`disk_enc_utf_32`<br>`disk_enc_utf_8`<br> |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -497,7 +545,7 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | ------------------------- | ------------------------------------------------------------ |
 | From file location        | The path to the file that has to be moved. This path has to be an absolute local path or a UNC path. |
 | To file location          | The path to the location the file has to be moved to. This path has to be an absolute local path or a UNC path. |
-| Create all subdirectories | Indicates whether the entire folder structure of *To file location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
+| Create all subdirectories | Indicates whether the entire folder structure of *To file location* has to be created or that all higher level folders have to exist.<br>**No** `disk_create_all_dirs_off` - All higher level folders have to exist already.<br>**Yes (default)** `disk_create_all_dirs_on` - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -517,7 +565,7 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 
 | Output options |                                                              |
 | -------------- | ------------------------------------------------------------ |
-| Status code    | The status code of the executed action.  <br>0 - Successful  <br/>-1 - Unsuccessful (unknown)  <br/>-2 - Unsuccessful (no source path specified)  <br/>-3 - Unsuccessful (no target path specified)  <br/>-4 - Unsuccessful (one of the specified paths is too long)  <br/>-5 - Unsuccessful (one of the specified paths is invalid)  <br/>-6 - Unsuccessful (source path not found)  <br/>-7 - Unsuccessful (source disk not found)  <br/>-8 - Unsuccessful (target path not found)  <br/>-9 - Unsuccessful (target disk not found)  <br/>-10 - Unsuccessful (target file already exists)  <br/>-11 - Unsuccessful (access refused) |
+| Status code    | The status code of the executed action.  <br>0 - Successful  <br>-1 - Unsuccessful (unknown)  <br>-2 - Unsuccessful (no source path specified)  <br>-3 - Unsuccessful (no target path specified)  <br>-4 - Unsuccessful (one of the specified paths is too long)  <br>-5 - Unsuccessful (one of the specified paths is invalid)  <br>-6 - Unsuccessful (source path not found)  <br>-7 - Unsuccessful (source disk not found)  <br>-8 - Unsuccessful (target path not found)  <br>-9 - Unsuccessful (target disk not found)  <br>-10 - Unsuccessful (target file already exists)  <br>-11 - Unsuccessful (access refused) |
 
 ### Delete file from disk
 
@@ -543,7 +591,7 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | Input options             |                                                              |
 | ------------------------- | ------------------------------------------------------------ |
 | Directory location        | The path to the folder that has to be created. This path has to be an absolute local path or a UNC path. |
-| Create all subdirectories | Indicates whether the entire folder structure from *Directory location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
+| Create all subdirectories | Indicates whether the entire folder structure from *Directory location* has to be created or that all higher level folders have to exist.<br>**No** `disk_create_all_dirs_off` - All higher level folders have to exist already.<br>**Yes (default)** `disk_create_all_dirs_on` - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -559,7 +607,7 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | ----------------------- | ------------------------------------------------------------ |
 | From folder location    | The path to the folder that has to be moved. This path has to be an absolute local path or a UNC path. |
 | To folder location      | The path to the location the folder has to be moved to. This path has to be an absolute local path or a UNC path. |
-| Create target directory | Indicates whether the entire folder structure of *To folder location* has to be created or that all higher level folders have to exist.<br>**No** - All higher level folders have to exist already.<br>**Yes (default)** - The complete folder structure will be created. |
+| Create target directory | Indicates whether the entire folder structure of *To folder location* has to be created or that all higher level folders have to exist.<br>**No** `disk_create_all_dirs_off` - All higher level folders have to exist already.<br>**Yes (default)** `disk_create_all_dirs_on` - The complete folder structure will be created. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -576,11 +624,11 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | From folder location    | The path to the folder that has to be moved. This path has to be an absolute local path or a UNC path. |
 | To folder location      | The path to the location the folder has to be moved to. This path has to be an absolute local path or a UNC path. |
 | Create target directory | Indicates whether the entire parent folder structure of *To folder location* has to be created or that all higher level folders of the target path have to exist. <br>**No**  - All higher level folders have to exist already. <br>**Yes (default)** - The complete target folder structure will be created. |
-| Existing file strategy  | Determines the strategy of dealing with existing files at the target location. <br>**Skip existing files** - Ignore existing files in the target location <br>**Overwrite existing files** - Overwrite existing files in the target location<br>**Abort action (default)** - Abort the process action if a file already exists in the target location. |
+| Existing file strategy  | Determines the strategy of dealing with existing files at the target location. <br>**Skip existing files** `disk_exist_skip` - Ignore existing files in the target location <br>**Overwrite existing files** `disk_exist_overwrite` - Overwrite existing files in the target location<br>**Abort action (default)** `disk_exist_abort` - Abort the process action if a file already exists in the target location. |
 
 | Output options |                                                              |
 | -------------- | ------------------------------------------------------------ |
-| Status code    | The status code of the executed action.  <br/>0 - Successful <br/>-1 - Unsuccessful (unknown) <br/>-2 - Unsuccessful (no source path specified) <br/>-3 - Unsuccessful (no target path specified) <br/>-4 - Unsuccessful (one of the specified paths is too long) <br/>-5 - Unsuccessful (one of the specified paths is invalid) <br/>-6 - Unsuccessful (source path not found) <br/>-7 - Unsuccessful (source disk not found) <br/>-8 - Unsuccessful (target path not found) <br/>-9 - Unsuccessful (target disk not found) <br/>-10 - Unsuccessful (file already exists in target folder) <br/>-11 - Unsuccessful (access refused) |
+| Status code    | The status code of the executed action.  <br>0 - Successful <br>-1 - Unsuccessful (unknown) <br>-2 - Unsuccessful (no source path specified) <br>-3 - Unsuccessful (no target path specified) <br>-4 - Unsuccessful (one of the specified paths is too long) <br>-5 - Unsuccessful (one of the specified paths is invalid) <br>-6 - Unsuccessful (source path not found) <br>-7 - Unsuccessful (source disk not found) <br>-8 - Unsuccessful (target path not found) <br>-9 - Unsuccessful (target disk not found) <br>-10 - Unsuccessful (file already exists in target folder) <br>-11 - Unsuccessful (access refused) |
 
 ### Delete folder from disk
 
@@ -591,7 +639,7 @@ The use of environment variables, like `%TEMP%` or `%APPDATA%`, is supported.
 | Input options                 |                                                              |
 | ----------------------------- | ------------------------------------------------------------ |
 | Folder location               | The path to the folder that has to be deleted. This path has to be an absolute local path or a UNC path. |
-| Delete all directory contents | Indicates whether the process action may or may not delete sub-folders within the specified path.<br>**No (default)** - All higher level folders have to exist already.<br>**Yes** - The complete folder structure will be created. |
+| Delete all directory contents | Indicates whether the process action may or may not delete sub-folders and files within the specified path.<br>**No (default)** `disk_delete_recursive_off` - No content will be deleted.<br>**Yes** `disk_delete_recursive_on` - All folder content will be deleted. |
 
 | Output options |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

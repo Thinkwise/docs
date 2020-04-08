@@ -25,12 +25,45 @@ The values for work status can be configured freely in the *Advanced menu* under
 
 Additionally, a *Progress* value can be defined for each status. This value will be used when determining the average progress of all work items linked to a requirement, business process, feature or iteration. Work having a status with no progress value will be excluded from this calculation.
 
+It's also possible to define a status as *inactive*. When a work item has an *inactive* status it should indicate no more work is being performed on this work item. By default, inactive work items will not be shown in the business process, feature and iteration overviews or in the impact analysis tabs.
+
 > One default status is required and can be set using the ![](assets/sf/icons8-tick-box.svg)*Set as default status* task.
 
 A work status can be configured to correspond to a certain lane in the [kanban board](kanban_board) by specifying the *Kanban sequence no*. When left empty, work with this status will not show up in the kanban board.
 
 ![](assets/sf/work-status.png)
 *A configured work status*
+
+## Planning
+
+### Linking (planned) project versions
+
+In order to plan when a work item will be developed, a project and project version can be assigned to it. This does not need to be an existing project or project version but can also be a project or project version intended to be created in the future. Note that any name chosen here is not binding and only serves as an indication that the work will take place in a future project version.
+
+A project version can be linked by using the task ![](assets/sf/icons8-group-of-projects-link.svg)*Link (planned) project version*, or by filling the *(Planned) project* and *(Planned) project version* fields in the form.
+
+![](assets/sf/link_planned_project_vrs.png)
+*Link (planned) project version task*
+
+Checking the checkboxes in the task pop-up indicates that a future planned project version should be used.
+
+### Creating new project versions
+
+If a work item is linked to a planned project version, this project version can be created directly from the *Work* screen. To do this, use the task ![](assets/sf/icons8-add-new.svg)*Create project version or branch*.
+
+![](assets/sf/create_new_project_vrs.png)
+*Create new project version or branch task*
+
+The task provides three options for creating new project versions:
+
+* Create new project:
+  * This creates a new project.
+* Copy existing project version:
+  * This will create a copy of an existing project version.
+* Create a new branch:
+  * Creates a new branch based on the specified project and project version.
+
+The task will become unavailable once the linked project version has been created or when work is linked to an already existing project version.
 
 ## Tags
 

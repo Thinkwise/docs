@@ -74,7 +74,48 @@ Adding new tables, views and snapshots can be done using the tab *Tables* next t
 
 An overview of all tables is accessible via the *Tables* tab page.
 
-![](assets/sf/image89_2018_3.png)*Overview of the 'Tables' tab*
+![](assets/sf/image89_2018_3.png)
+*Overview of the 'Tables' tab*
+
+### Memory optimized
+
+It is possible to specify if the database management system should keep a table into memory to optimize performance. Available options are:
+
+- No
+- Yes (durable)
+- Yes (transient) - *only available for SQL server projects*
+
+More information about memory optimized tables in SQL server can be found see [here](https://docs.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects?view=sql-server-ver15).
+
+For DB2 projects, the property KEEPINMEM will be used. More information about this property can be found [here](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/cl/chglf.htm).
+
+For Oracle project, the option CACHE will be used. More information about this option can be found [here](https://docs.oracle.com/cd/B28359_01/server.111/b28286/statements_7002.htm#i2215507).
+
+### Sytem versioning
+
+SQL Server 2016 introduced support for temporal tables (also known as system-versioned temporal tables) as a database feature. That brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal tables is a database feature that was introduced in ANSI SQL 2011. System versioned tables are tables whose data is maintained in the history tables. This history is maintained by SQL Server itself. 
+
+In the Software Factory you can activate system versioning by switching on the field *System versioning* in *Tables*. This is the only setting that needs to be done by the developer. Since this would cause a datamodel change, the Software Factory will generate code in the CREATE and UPGRADE scripts. The two date fields (*tsf_valid_from* and *tsf_valid_to*) are generated in the script automatically, as hidden fields. However, the Software Factory will NOT create these columns in the Column list in the Software Factory itself. When enabled, the Software Factory will create a history table with the name *[table_id]_history*. It will appear in the CREATE and UPGRADE script too, and again, you will not find it in the list of tables in the Software Factory. Because of the absence of this table, the settings in Data conversion for the original table will also apply to the history table.
+
+When you want to query data from a table for a certain point in time, you can use *for system_time as of*. For example:
+
+```sql
+select *
+from customer
+for system_time as of '2019-09-01 T10:00:00.0000000'
+```
+
+You will notice that in the result of this example columns *tsf_valid_from* and *tsf_valid_to* are not shown. That's because they are hidden. If you need to see the values of these columns, you have to make these columns explicit in the select list. For example:
+
+```sql
+select customer_name, tsf_valid_from, tsf_valid_to
+from customer
+for system_time as of '2019-09-01 T10:00:00.0000000'
+```
+
+In the Software Factory this is only implemented for SQL Server. More information about system versioning can be found [here](https://docs.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver15).
+
+## Columns
 
 The columns are defined within a table under the *columns* tab. A column has the following properties:
 
