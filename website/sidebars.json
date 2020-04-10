@@ -152,6 +152,7 @@
       "kb/iis_admin_api",
       "kb/lifecycle_policy",
       "kb/maps",
+      "kb/microsoft_graph",
       "kb/olap",
       "kb/performance",
       "kb/report_mailer",
